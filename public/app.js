@@ -32,12 +32,91 @@
   };
 
   const MAX_COMPARE = 3;
+  const mobileMq = window.matchMedia('(max-width: 768px)');
   const icons = window.PrincipalityIcons;
   const compareDialog = document.getElementById('compare-dialog');
 
   const topicAudio = document.getElementById('topic-audio');
   const coreAudio = document.getElementById('core-audio');
   const coreDialog = document.getElementById('core-prayer-dialog');
+
+  function isMobileLayout() {
+    return mobileMq.matches;
+  }
+
+  function setDetailSheetOpen(open) {
+    const panel = document.getElementById('detail-panel');
+    const backdrop = document.getElementById('detail-backdrop');
+    if (!panel) return;
+    panel.classList.toggle('is-open', open);
+    if (backdrop) {
+      backdrop.hidden = !open;
+      backdrop.classList.toggle('is-visible', open);
+      backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+    if (isMobileLayout()) {
+      requestAnimationFrame(() => syncGraphSize?.());
+      setTimeout(() => syncGraphSize?.(), 280);
+    }
+  }
+
+  function openDetailSheet() {
+    if (isMobileLayout()) setDetailSheetOpen(true);
+  }
+
+  function closeDetailSheet() {
+    setDetailSheetOpen(false);
+  }
+
+  function setControlsDrawerOpen(open) {
+    const legend = document.getElementById('legend-panel');
+    const backdrop = document.getElementById('legend-backdrop');
+    const btn = document.getElementById('open-controls');
+    legend?.classList.toggle('is-open', open);
+    if (backdrop) {
+      backdrop.hidden = !open;
+      backdrop.classList.toggle('is-visible', open);
+      backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+    btn?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function dismissDetailSelection() {
+    if (state.viewMode === 'constellation' && state.selectedId) {
+      closeConstellationDetail();
+      return;
+    }
+    state.selectedId = null;
+    showEmptyDetail();
+    document.getElementById('graph-hint')?.classList.remove('hidden');
+    refreshGraph();
+    applyGraphView();
+  }
+
+  function updateGraphHintForLayout() {
+    const hint = document.getElementById('graph-hint');
+    if (!hint) return;
+    hint.textContent = isMobileLayout()
+      ? 'Tap a Principality to explore. Pinch to zoom; drag to pan.'
+      : 'Click a Principality to reveal its character. Drag the map to pan; use the slider below to zoom.';
+  }
+
+  function initMobileUi() {
+    updateGraphHintForLayout();
+
+    document.getElementById('open-controls')?.addEventListener('click', () => {
+      const legend = document.getElementById('legend-panel');
+      setControlsDrawerOpen(!legend?.classList.contains('is-open'));
+    });
+
+    document.getElementById('legend-backdrop')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+    });
+
+    document.getElementById('close-detail')?.addEventListener('click', dismissDetailSelection);
+
+    document.getElementById('detail-backdrop')?.addEventListener('click', dismissDetailSelection);
+  }
 
   function t(key) {
     return lib.uiString(key);
@@ -667,7 +746,7 @@
     .d3VelocityDecay(0.35)
     .warmupTicks(120)
     .cooldownTicks(280)
-    .enableZoomInteraction(false)
+    .enableZoomInteraction(isMobileLayout())
     .enablePanInteraction(true)
     .enablePointerInteraction(true)
     .onNodeHover(node => {
@@ -892,6 +971,7 @@
     document.getElementById('detail-content').classList.add('hidden');
     document.getElementById('detail-prayer-section').classList.add('hidden');
     topicAudio.pause();
+    closeDetailSheet();
   }
 
   function compareSet() {
@@ -1143,8 +1223,8 @@
     });
 
     const topicsSection = document.getElementById('detail-topics-section');
-    const topicList = conn.topics.slice(0, 50);
-    document.getElementById('detail-topic-count').textContent = conn.topics.length > 50 ? `(showing 50 of ${conn.topics.length})` : `(${conn.topics.length})`;
+    const topicList = conn.topics;
+    document.getElementById('detail-topic-count').textContent = `(${conn.topics.length})`;
     const topicsEl = document.getElementById('detail-topics');
     topicsEl.innerHTML = topicList.map(t => {
       const dotColor = t.fruitId ? colors.resolveFruit(t.fruitId) : (t.rootId ? colors.resolveRoot(t.rootId) : colors.PRINCIPALITY_COLOR);
@@ -1164,6 +1244,7 @@
     }
 
     applyGraphView();
+    openDetailSheet();
   }
 
   function showQuote(principality) {
@@ -1258,6 +1339,19 @@
   syncGraphSize();
   refreshGraph();
   bindZoomSlider();
+  initMobileUi();
+  mobileMq.addEventListener('change', () => {
+    Graph.enableZoomInteraction(isMobileLayout());
+    updateGraphHintForLayout();
+    setControlsDrawerOpen(false);
+    if (!isMobileLayout()) {
+      closeDetailSheet();
+    } else if (state.selectedId) {
+      openDetailSheet();
+    }
+    syncGraphSize();
+    applyGraphView(0, 0);
+  });
   renderComparePanel();
   colors.renderLegend(document.getElementById('color-legend'));
 

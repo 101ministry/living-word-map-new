@@ -12,6 +12,7 @@
 <body>
   <div id="app">
     <header class="header">
+      <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Filters and legend" aria-expanded="false" aria-controls="legend-panel">☰</button>
       <div class="header-brand">
         <h1>Living Word Map</h1>
         <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
@@ -32,8 +33,10 @@
       </div>
     </header>
 
+    <div id="legend-backdrop" class="drawer-backdrop" hidden aria-hidden="true"></div>
+
     <main class="main">
-      <aside class="legend" aria-label="Legend">
+      <aside class="legend" id="legend-panel" aria-label="Legend">
         <h2>Layers</h2>
         <ul>
           <li><span class="dot principality"></span> Principality</li>
@@ -73,7 +76,13 @@
         </div>
       </section>
 
+      <div id="detail-backdrop" class="detail-backdrop" hidden aria-hidden="true"></div>
+
       <aside class="detail-panel" id="detail-panel">
+        <div class="detail-sheet-header">
+          <div class="detail-sheet-handle" aria-hidden="true"></div>
+          <button type="button" id="close-detail" class="detail-close-btn">← Map</button>
+        </div>
         <div class="detail-empty" id="detail-empty">
           <p class="detail-empty-title">Select a node</p>
           <p>Click any Principality to hear its voice — themes, statements, and every topic bound to it through shared roots and fruits.</p>

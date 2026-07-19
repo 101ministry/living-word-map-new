@@ -41,9 +41,24 @@ function Normalize-Principality([string]$name) {
         'Treachery' = 'Treachery Against Others'
         'Jealousy' = 'Jealousy'
         'Using and Abusing Others Verbally, Physically, Emotionally and Spiritually' = 'Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally'
+        'Spirit Spouse' = 'Spirit Spouse Gods'
+        'Spirit Spouse Gods' = 'Spirit Spouse Gods'
     }
     if ($map.ContainsKey($name)) { return $map[$name] }
     return $name
+}
+
+function Resolve-PrincipalityFromFruit([string]$fruit) {
+    if (-not $fruit) { return $null }
+    $f = $fruit.Trim().TrimEnd('.')
+    $map = @{
+        'Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality, and Confusing Preferences with Stewardship' = 'Spirit Spouse Gods'
+    }
+    if ($map.ContainsKey($f)) { return $map[$f] }
+    foreach ($key in $map.Keys) {
+        if ($f.StartsWith($key)) { return $map[$key] }
+    }
+    return $null
 }
 
 function Normalize-TopicKey([string]$text) {
@@ -435,15 +450,19 @@ foreach ($block in $metadataBlocks) {
     $principality = $null
 
     if ($b -match 'FRUITS of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
-        $fruit = $matches[1].Trim()
-        $principality = Normalize-Principality $matches[2].Trim()
+        $fruit = $matches[1].Trim().TrimEnd('.')
+        $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
     } elseif ($b -match 'because of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
-        $fruit = $matches[1].Trim()
-        $principality = Normalize-Principality $matches[2].Trim()
+        $fruit = $matches[1].Trim().TrimEnd('.')
+        $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
+    } elseif ($b -match 'because FRUITS of\s+(.+?)(?:,\s*which I will forgive)?\.\s*') {
+        $fruit = $matches[1].Trim().TrimEnd('.')
+        $principality = Resolve-PrincipalityFromFruit $fruit
     } elseif ($b -match 'because of FRUITS of\s+(.+?)(?:\s|$|\.)') {
-        $fruit = $matches[1].Trim()
+        $fruit = $matches[1].Trim().TrimEnd('.')
+        if (-not $principality) { $principality = Resolve-PrincipalityFromFruit $fruit }
     } elseif ($b -match 'parent Principality of\s+(.+?)(?:\s|$|\.)') {
-        $principality = Normalize-Principality $matches[1].Trim()
+        $principality = Normalize-Principality $matches[1].Trim().TrimEnd('.')
     }
 
     $metadataByNumber[$num] = @{
