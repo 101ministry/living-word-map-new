@@ -551,6 +551,36 @@ button:hover, select:hover {
   opacity: 0;
 }
 
+.graph-tooltip {
+  position: fixed;
+  z-index: 25;
+  max-width: min(92vw, 320px);
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(10, 11, 15, 0.94);
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  color: var(--quote);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.graph-tooltip.hidden {
+  display: none;
+}
+
+.graph-tooltip-code {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(201, 162, 39, 0.15);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .graph-zoom-bar {
   position: absolute;
   left: 0;

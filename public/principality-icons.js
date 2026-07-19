@@ -1,4 +1,33 @@
 (() => {
+  const ABBREV_BY_ID = {
+    'jealousy': 'JE',
+    'slothfulness': 'SL',
+    'haughtiness': 'HA',
+    'lies': 'LI',
+    'bondage': 'BN',
+    'idolatry': 'ID',
+    'error': 'ER',
+    'fear': 'FR',
+    'divination': 'DV',
+    'heaviness': 'HV',
+    'anti-christ': 'AC',
+    'deaf-dumb': 'DD',
+    'perversion': 'PE',
+    'whoredom': 'WH',
+    'infirmity': 'IF',
+    'shedding-of-innocent-blood': 'SB',
+    'treachery-against-others': 'TR',
+    'using-and-abusing-others-emotionally-physically-spiritually-and-verbally': 'UA',
+    'trading-floor-transactions-with-demons': 'TF',
+    'gluttony': 'GL',
+    'self-righteousness': 'SR',
+    'sexual-perversion': 'SP',
+    'rebellion': 'RB',
+    'destructive-attitudes-against-god': 'DA',
+    'destructive-identities-against-god': 'DI',
+    'spirit-spouse-gods': 'SS',
+  };
+
   function hashHue(str) {
     let h = 0;
     for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
@@ -9,12 +38,17 @@
     if (!name) return '?';
     const words = name.replace(/^The Principality of\s+/i, '').trim().split(/\s+/);
     if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
-    return (words[0][0] + words[1][0]).toUpperCase();
+    return (words[0][0] + words[words.length > 1 ? 1 : 0][0]).toUpperCase();
+  }
+
+  function getAbbrev(id, name) {
+    if (id && ABBREV_BY_ID[id]) return ABBREV_BY_ID[id];
+    return initials(name);
   }
 
   function svgDataUrl(id, name) {
     const hue = hashHue(id);
-    const label = initials(name);
+    const label = getAbbrev(id, name);
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
       <defs>
         <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -90,7 +124,7 @@
         ctx.font = `${Math.max(10, size * 0.28)}px Georgia, serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(initials(name), x, y + size * 0.04);
+        ctx.fillText(getAbbrev(id, name), x, y + size * 0.04);
       }
 
       if (compare) {
@@ -110,6 +144,15 @@
 
     thumbSrc(id, name) {
       return svgDataUrl(id, name);
+    },
+
+    abbrev(id, name) {
+      return getAbbrev(id, name);
+    },
+
+    label(id, name) {
+      const code = getAbbrev(id, name);
+      return name ? `${code} — ${name}` : code;
     },
   };
 })();

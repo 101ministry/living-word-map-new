@@ -325,6 +325,7 @@
     const item = lookups[type]?.[id];
     if (!item) return id;
     if (type === 'topic') return `#${item.number} ${item.name}`;
+    if (type === 'principality' && icons) return icons.label(id, item.name);
     return item.name;
   }
 
@@ -698,7 +699,11 @@
   const Graph = ForceGraph()(container)
     .backgroundColor('#0a0b0f')
     .nodeId('id')
-    .nodeLabel(node => nodeLabel(asNodeId(node)))
+    .nodeLabel(node => {
+      const id = asNodeId(node);
+      if (nodeType(id) === 'principality') return '';
+      return nodeLabel(id);
+    })
     .nodeVal(node => nodeSize(asNodeId(node)))
     .nodeRelSize(4)
     .showPointerCursor(false)
@@ -905,8 +910,35 @@
 
   container.addEventListener('mousemove', ev => {
     if (!(ev.target instanceof HTMLCanvasElement)) return;
-    if (pickPrincipalityAtScreen(ev.clientX, ev.clientY)) {
+    const tooltip = document.getElementById('graph-tooltip');
+    const hit = pickPrincipalityAtScreen(ev.clientX, ev.clientY);
+    if (hit) {
       container.style.cursor = 'pointer';
+      const id = asNodeId(hit);
+      const p = lookups.principality[id];
+      if (tooltip && p) {
+        const code = icons?.abbrev(id, p.name) || '';
+        tooltip.innerHTML = `<span class="graph-tooltip-code">${code}</span>${p.name}`;
+        tooltip.classList.remove('hidden');
+        tooltip.setAttribute('aria-hidden', 'false');
+        const offset = 14;
+        tooltip.style.left = `${Math.min(ev.clientX + offset, window.innerWidth - tooltip.offsetWidth - 8)}px`;
+        tooltip.style.top = `${Math.max(ev.clientY + offset, 8)}px`;
+      }
+      return;
+    }
+    if (tooltip) {
+      tooltip.classList.add('hidden');
+      tooltip.setAttribute('aria-hidden', 'true');
+    }
+    container.style.cursor = 'grab';
+  });
+
+  container.addEventListener('mouseleave', () => {
+    const tooltip = document.getElementById('graph-tooltip');
+    if (tooltip) {
+      tooltip.classList.add('hidden');
+      tooltip.setAttribute('aria-hidden', 'true');
     }
   });
 
