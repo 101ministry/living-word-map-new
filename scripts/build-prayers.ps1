@@ -56,6 +56,16 @@ $corePrayer = @{
 
 # --- Parse topic prayers ---
 $prayersRaw = Read-Utf8 $PrayersFile
+. (Join-Path $PSScriptRoot 'fix-compiled-prayer-numbering.ps1')
+$prayerFileStatus = Test-CompiledPrayers $prayersRaw
+if ($prayerFileStatus.Count -ne 666 -or $prayerFileStatus.Unnumbered -gt 0) {
+    Write-Host "Aligning compiled prayers (guile #607, stupor #654): $($prayerFileStatus.Count) numbered, $($prayerFileStatus.Unnumbered) unnumbered"
+    $prayersRaw = Repair-CompiledPrayers $prayersRaw
+    $prayerFileStatus = Test-CompiledPrayers $prayersRaw
+    if ($prayerFileStatus.Count -ne 666) {
+        throw "Compiled prayers must contain 666 numbered entries after alignment (got $($prayerFileStatus.Count))."
+    }
+}
 $blocks = [regex]::Split($prayersRaw, '(?=\d{3}\.\s*PLEASE NOTE:)')
 $topicPrayers = @{}
 
@@ -71,10 +81,10 @@ foreach ($block in $blocks) {
     }
 
     $spiritName = $null
-    if ($b -match 'thought suggestions of\s+(?:interacting with the spirit of\s+)?([^,\r\n]+?)(?:,|\s+from a root)') {
-        $spiritName = ($matches[1] -replace ',+$', '').Trim()
-    } elseif ($b -match 'spirit of\s+(?:interacting with the spirit of\s+)?([^,\r\n]+?)(?:,|\s+from a root)') {
-        $spiritName = ($matches[1] -replace ',+$', '').Trim()
+    if ($b -match 'thought suggestions of\s+(?:interacting with the spirit of\s+)?([^,\r\n]+?)(?:,\s*|\s+from a root|\.\s*(?:\r?\n|$))') {
+        $spiritName = ($matches[1] -replace ',+$', '').Trim().TrimEnd('.')
+    } elseif ($b -match 'spirit of\s+(?:interacting with the spirit of\s+)?([^,\r\n]+?)(?:,\s*|\s+from a root|\.\s*(?:\r?\n|$))') {
+        $spiritName = ($matches[1] -replace ',+$', '').Trim().TrimEnd('.')
     }
 
     $lines = ($b -split '\r?\n') | ForEach-Object { $_.TrimEnd() }
