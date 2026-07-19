@@ -88,7 +88,7 @@
                           "openCorePrayer":  "Prière centrale",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Audio recording coming soon â€” read the prayer aloud.",
-                          "translationComingSoon":  "Traduction en cours. Anglais affiché jusqu\u0027à achèvement.",
+                          "translationComingSoon":  "666 prières disponibles en français.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Langue de prière",
@@ -272,7 +272,7 @@
                           "name":  "French",
                           "native":  "Français",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "bn",

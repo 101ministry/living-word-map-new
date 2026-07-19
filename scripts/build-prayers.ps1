@@ -147,10 +147,14 @@ Write-Utf8Json (Join-Path $prayersDir 'en.json') $enPayload
 $enJs = "window.PRAYER_EN = $($enPayload | ConvertTo-Json -Depth 6 -Compress);"
 [System.IO.File]::WriteAllText((Join-Path $prayersDir 'en.js'), $enJs, [System.Text.UTF8Encoding]::new($false))
 
-# Generate Spanish translation source from English
+# Generate translated prayer sources from English
 $buildEs = Join-Path $PSScriptRoot 'build-es-prayers.ps1'
 if (Test-Path $buildEs) {
     & $buildEs -EnglishFile (Join-Path $prayersDir 'en.json')
+}
+$buildFr = Join-Path $PSScriptRoot 'build-fr-prayers.ps1'
+if (Test-Path $buildFr) {
+    & $buildFr -EnglishFile (Join-Path $prayersDir 'en.json')
 }
 
 # Other languages — load translated packs from data/translations when present
