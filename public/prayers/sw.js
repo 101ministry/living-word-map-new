@@ -1,1 +1,8 @@
-window.PRAYER_SW = {"complete":false,"corePrayer":null,"topics":{},"language":"sw"};
+window.PRAYER_SW = {
+    "complete":  false,
+    "corePrayer":  null,
+    "topics":  {
+
+               },
+    "language":  "sw"
+};

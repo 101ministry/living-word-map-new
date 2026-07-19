@@ -1,1 +1,8 @@
-window.PRAYER_KO = {"complete":false,"corePrayer":null,"topics":{},"language":"ko"};
+window.PRAYER_KO = {
+    "complete":  false,
+    "corePrayer":  null,
+    "topics":  {
+
+               },
+    "language":  "ko"
+};

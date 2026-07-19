@@ -1,0 +1,114 @@
+{
+  "zh": {
+    "prayerLanguageLabel": "祷告语言",
+    "mapLanguageNote": "地图标签仍为英文。此选项用于祷告文本和音频。",
+    "translationComingSoon": "翻译进行中。完成前显示英文。",
+    "openCorePrayer": "核心祷告",
+    "prayerTitle": "祷告",
+    "prayerLanguageReady": "祷告已加载"
+  },
+  "hi": {
+    "prayerLanguageLabel": "प्रार्थना भाषा",
+    "mapLanguageNote": "मानचित्र अंग्रेज़ी में रहता है। यह प्रार्थना पाठ और ऑडियो के लिए है।",
+    "translationComingSoon": "अनुवाद प्रगति पर है। पूर्ण होने तक अंग्रेज़ी दिखाई देगी।",
+    "openCorePrayer": "मुख्य प्रार्थना",
+    "prayerTitle": "प्रार्थना",
+    "prayerLanguageReady": "प्रार्थनाएँ लोड हुईं"
+  },
+  "es": {
+    "prayerLanguageLabel": "Idioma de oración",
+    "mapLanguageNote": "El mapa permanece en inglés. Esto aplica al texto y audio de oración.",
+    "translationComingSoon": "664 oraciones disponibles en español.",
+    "openCorePrayer": "Oración central",
+    "prayerTitle": "Oración",
+    "prayerLanguageReady": "Oraciones cargadas"
+  },
+  "ar": {
+    "prayerLanguageLabel": "لغة الصلاة",
+    "mapLanguageNote": "تبقى تسميات الخريطة بالإنجليزية. هذا يخص نص الصلاة والصوت.",
+    "translationComingSoon": "الترجمة قيد التقدم. يُعرض الإنجليزية حتى اكتمالها.",
+    "openCorePrayer": "الصلاة الأساسية",
+    "prayerTitle": "صلاة",
+    "prayerLanguageReady": "تم تحميل الصلوات"
+  },
+  "fr": {
+    "prayerLanguageLabel": "Langue de prière",
+    "mapLanguageNote": "La carte reste en anglais. Ceci règle le texte et l'audio des prières.",
+    "translationComingSoon": "Traduction en cours. Anglais affiché jusqu'à achèvement.",
+    "openCorePrayer": "Prière centrale",
+    "prayerTitle": "Prière",
+    "prayerLanguageReady": "Prières chargées"
+  },
+  "bn": {
+    "prayerLanguageLabel": "প্রার্থনার ভাষা",
+    "mapLanguageNote": "মানচিত্রের লেবেল ইংরেজিতে থাকে। এটি প্রার্থনার পাঠ ও অডিওর জন্য।",
+    "translationComingSoon": "অনুবাদ চলছে। সম্পূর্ণ না হওয়া পর্যন্ত ইংরেজি দেখানো হবে।",
+    "openCorePrayer": "মূল প্রার্থনা",
+    "prayerTitle": "প্রার্থনা",
+    "prayerLanguageReady": "প্রার্থনা লোড হয়েছে"
+  },
+  "pt": {
+    "prayerLanguageLabel": "Idioma da oração",
+    "mapLanguageNote": "O mapa permanece em inglês. Isto define texto e áudio da oração.",
+    "translationComingSoon": "Tradução em andamento. Inglês exibido até concluir.",
+    "openCorePrayer": "Oração central",
+    "prayerTitle": "Oração",
+    "prayerLanguageReady": "Orações carregadas"
+  },
+  "ru": {
+    "prayerLanguageLabel": "Язык молитвы",
+    "mapLanguageNote": "Подписи карты остаются на английском. Это для текста и аудио молитв.",
+    "translationComingSoon": "Перевод в процессе. До завершения показывается английский.",
+    "openCorePrayer": "Основная молитва",
+    "prayerTitle": "Молитва",
+    "prayerLanguageReady": "Молитвы загружены"
+  },
+  "ur": {
+    "prayerLanguageLabel": "دعا کی زبان",
+    "mapLanguageNote": "نقشے کے لیبل انگریزی میں رہتے ہیں۔ یہ دعا کے متن اور آڈیو کے لیے ہے۔",
+    "translationComingSoon": "ترجمہ جاری ہے۔ مکمل ہونے تک انگریزی دکھائی جائے گی۔",
+    "openCorePrayer": "مرکزی دعا",
+    "prayerTitle": "دعا",
+    "prayerLanguageReady": "دعائیں لوڈ ہو گئیں"
+  },
+  "id": {
+    "prayerLanguageLabel": "Bahasa doa",
+    "mapLanguageNote": "Label peta tetap dalam bahasa Inggris. Ini untuk teks dan audio doa.",
+    "translationComingSoon": "Terjemahan sedang berlangsung. Inggris ditampilkan hingga selesai.",
+    "openCorePrayer": "Doa inti",
+    "prayerTitle": "Doa",
+    "prayerLanguageReady": "Doa dimuat"
+  },
+  "de": {
+    "prayerLanguageLabel": "Gebetssprache",
+    "mapLanguageNote": "Kartenbeschriftungen bleiben auf Englisch. Dies gilt für Gebetstext und Audio.",
+    "translationComingSoon": "Übersetzung in Arbeit. Bis zur Fertigstellung wird Englisch angezeigt.",
+    "openCorePrayer": "Kerngebet",
+    "prayerTitle": "Gebet",
+    "prayerLanguageReady": "Gebete geladen"
+  },
+  "ja": {
+    "prayerLanguageLabel": "祈りの言語",
+    "mapLanguageNote": "地図のラベルは英語のままです。祈りの文と音声に適用されます。",
+    "translationComingSoon": "翻訳作業中。完成まで英語を表示します。",
+    "openCorePrayer": "中心の祈り",
+    "prayerTitle": "祈り",
+    "prayerLanguageReady": "祈りを読み込みました"
+  },
+  "sw": {
+    "prayerLanguageLabel": "Lugha ya maombi",
+    "mapLanguageNote": "Lebo za ramani hubaki kwa Kiingereza. Hii huweka maandishi na sauti ya maombi.",
+    "translationComingSoon": "Tafsiri inaendelea. Kiingereza kinaonyeshwa hadi ikamilike.",
+    "openCorePrayer": "Maombi kuu",
+    "prayerTitle": "Maombi",
+    "prayerLanguageReady": "Maombi yamepakiwa"
+  },
+  "ko": {
+    "prayerLanguageLabel": "기도 언어",
+    "mapLanguageNote": "지도 라벨은 영어로 유지됩니다. 기도 본문과 오디오에 적용됩니다.",
+    "translationComingSoon": "번역 진행 중입니다. 완료 전까지 영어가 표시됩니다.",
+    "openCorePrayer": "핵심 기도",
+    "prayerTitle": "기도",
+    "prayerLanguageReady": "기도가 로드됨"
+  }
+}

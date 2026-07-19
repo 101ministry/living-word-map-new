@@ -805,8 +805,36 @@ button:hover, select:hover {
   color: var(--accent);
 }
 
+.language-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  max-width: 13rem;
+}
+
+.language-control label {
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 #language-select {
-  max-width: 11rem;
+  width: 100%;
+  max-width: 13rem;
+}
+
+.language-status {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+  max-width: 13rem;
+}
+
+.language-status.is-fallback {
+  color: var(--accent);
 }
 
 .prayer-note {

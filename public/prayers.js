@@ -71,9 +71,14 @@
       return lang?.complete === true;
     },
 
-    uiString(key) {
-      const strings = this.catalog?.ui?.en || {};
-      return strings[key] || key;
+    uiString(key, lang = this.currentLang) {
+      const en = this.catalog?.ui?.en || {};
+      const localized = this.catalog?.ui?.[lang] || {};
+      return localized[key] || en[key] || key;
+    },
+
+    languageMeta(code = this.currentLang) {
+      return this.catalog?.languages?.find(l => l.code === code) || null;
     },
 
     async loadLanguage(code) {

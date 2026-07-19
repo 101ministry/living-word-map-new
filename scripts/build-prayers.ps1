@@ -137,11 +137,19 @@ Write-Utf8Json (Join-Path $prayersDir 'en.json') $enPayload
 $enJs = "window.PRAYER_EN = $($enPayload | ConvertTo-Json -Depth 6 -Compress);"
 [System.IO.File]::WriteAllText((Join-Path $prayersDir 'en.js'), $enJs, [System.Text.UTF8Encoding]::new($false))
 
-# Other languages — preserve existing translations, otherwise create empty shells
+# Generate Spanish translation source from English
+$buildEs = Join-Path $PSScriptRoot 'build-es-prayers.ps1'
+if (Test-Path $buildEs) {
+    & $buildEs -EnglishFile (Join-Path $prayersDir 'en.json')
+}
+
+# Other languages — load translated packs from data/translations when present
+$translationsDir = Join-Path $PSScriptRoot '..\data\translations'
 foreach ($lang in $languages) {
     if ($lang.code -eq 'en') { continue }
 
     $jsonPath = Join-Path $prayersDir "$($lang.code).json"
+    $translationSource = Join-Path $translationsDir "$($lang.code)-prayers.json"
     $stub = @{
         language = $lang.code
         complete = $false
@@ -149,7 +157,24 @@ foreach ($lang in $languages) {
         topics = @{}
     }
 
-    if (Test-Path $jsonPath) {
+    if (Test-Path -LiteralPath $translationSource) {
+        try {
+            $translated = Get-Content -LiteralPath $translationSource -Raw -Encoding UTF8 | ConvertFrom-Json
+            $stub = @{
+                language = $lang.code
+                complete = [bool]$translated.complete
+                corePrayer = $translated.corePrayer
+                topics = @{}
+            }
+            if ($translated.topics) {
+                foreach ($prop in $translated.topics.PSObject.Properties) {
+                    $stub.topics[$prop.Name] = $prop.Value
+                }
+            }
+        } catch {
+            Write-Warning "Could not read translation $translationSource"
+        }
+    } elseif (Test-Path $jsonPath) {
         try {
             $existing = Get-Content $jsonPath -Raw | ConvertFrom-Json
             if ($existing.corePrayer -or ($existing.topics -and ($existing.topics.PSObject.Properties | Measure-Object).Count -gt 0)) {
@@ -171,7 +196,8 @@ foreach ($lang in $languages) {
     }
 
     Write-Utf8Json $jsonPath $stub
-    $stubJs = "window.PRAYER_$($lang.code.ToUpper()) = $($stub | ConvertTo-Json -Depth 6 -Compress);"
+    $jsonRaw = Read-Utf8 $jsonPath
+    $stubJs = "window.PRAYER_$($lang.code.ToUpper()) = $jsonRaw;"
     [System.IO.File]::WriteAllText((Join-Path $prayersDir "$($lang.code).js"), $stubJs, [System.Text.UTF8Encoding]::new($false))
 }
 
@@ -244,34 +270,68 @@ $indexJs = "window.PRAYER_INDEX = $($prayerIndex | ConvertTo-Json -Depth 4 -Comp
 
 # Language catalog for the app
 $langItems = @($languages | ForEach-Object {
+    $code = $_.code
+    $complete = [bool]$_.complete
+    $translationSource = Join-Path $PSScriptRoot "..\data\translations\$code-prayers.json"
+    if (Test-Path -LiteralPath $translationSource) {
+        try {
+            $translated = Get-Content -LiteralPath $translationSource -Raw -Encoding UTF8 | ConvertFrom-Json
+            $complete = [bool]$translated.complete
+        } catch { }
+    }
     [PSCustomObject]@{
-        code = $_.code
+        code = $code
         name = $_.name
         native = $_.native
         rtl = [bool]$_.rtl
-        complete = [bool]$_.complete
+        complete = $complete
     }
 })
+
+$uiEnglish = [ordered]@{
+    prayerTitle = 'Prayer'
+    corePrayerTitle = 'Prayer of Freedom'
+    corePrayerHint = 'Prayed after forgiving all people tied to a root spirit. Speak out loud.'
+    spokenNote = 'These prayers are to be spoken, not simply read silently.'
+    openCorePrayer = 'Core Prayer'
+    listenPrayer = 'Listen'
+    audioComingSoon = 'Audio recording coming soon — read the prayer aloud.'
+    translationComingSoon = 'Translation in progress. English shown until this language is complete.'
+    noPrayer = 'No prayer found for this topic.'
+    languageLabel = 'Language'
+    prayerLanguageLabel = 'Prayer language'
+    mapLanguageNote = 'Map labels stay in English. This sets prayer text and audio.'
+    prayerLanguageReady = 'Prayers loaded'
+}
+
+$uiOverridesPath = Join-Path $PSScriptRoot '..\data\languages-ui-overrides.json'
+$uiOverrideRoot = $null
+if (Test-Path -LiteralPath $uiOverridesPath) {
+    $uiOverrideRoot = Read-Utf8 $uiOverridesPath | ConvertFrom-Json
+}
+
+$uiByLang = [ordered]@{}
+foreach ($lang in $languages) {
+    $code = $lang.code
+    $merged = [ordered]@{}
+    foreach ($entry in $uiEnglish.GetEnumerator()) {
+        $merged[$entry.Key] = $entry.Value
+    }
+    if ($uiOverrideRoot -and $uiOverrideRoot.PSObject.Properties.Name -contains $code) {
+        $uiOverrideRoot.$code.PSObject.Properties | ForEach-Object {
+            $merged[$_.Name] = $_.Value
+        }
+    }
+    $uiByLang[$code] = [PSCustomObject]$merged
+}
+
 $catalog = [PSCustomObject]@{
     defaultLanguage = 'en'
     audioConvention = [PSCustomObject]@{
         core = 'audio/{lang}/core.mp3'
         topic = 'audio/{lang}/{number}.mp3'
     }
-    ui = [PSCustomObject]@{
-        en = [PSCustomObject]@{
-            prayerTitle = 'Prayer'
-            corePrayerTitle = 'Prayer of Freedom'
-            corePrayerHint = 'Prayed after forgiving all people tied to a root spirit. Speak out loud.'
-            spokenNote = 'These prayers are to be spoken, not simply read silently.'
-            openCorePrayer = 'Core Prayer'
-            listenPrayer = 'Listen'
-            audioComingSoon = 'Audio recording coming soon — read the prayer aloud.'
-            translationComingSoon = 'Translation in progress. English shown until this language is complete.'
-            noPrayer = 'No prayer found for this topic.'
-            languageLabel = 'Language'
-        }
-    }
+    ui = [PSCustomObject]$uiByLang
     languages = [object[]]$langItems
 }
 $catalogJson = $catalog | ConvertTo-Json -Depth 6 -Compress:$false

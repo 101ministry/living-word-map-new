@@ -43,6 +43,65 @@
     return lib.uiString(key);
   }
 
+  function updateLanguageStatus() {
+    const statusEl = document.getElementById('language-status');
+    const meta = lib.languageMeta(state.language);
+    if (!statusEl || !meta) return;
+
+    statusEl.textContent = lib.isComplete(state.language)
+      ? `${meta.native} — ${t('prayerLanguageReady')}`
+      : `${meta.native} — ${t('mapLanguageNote')}`;
+    statusEl.classList.toggle('is-fallback', !lib.isComplete(state.language));
+  }
+
+  async function refreshLanguageUi() {
+    document.getElementById('language-label').textContent = t('prayerLanguageLabel');
+    document.getElementById('open-core-prayer').textContent = t('openCorePrayer');
+    document.getElementById('core-prayer-title').textContent = t('corePrayerTitle');
+
+    const prayerHeading = document.querySelector('#detail-prayer-section h3');
+    if (prayerHeading) prayerHeading.textContent = t('prayerTitle');
+
+    const topicAudioLabel = document.getElementById('topic-audio-label');
+    if (topicAudioLabel && !topicAudio.src) topicAudioLabel.textContent = t('listenPrayer');
+
+    updateLanguageStatus();
+
+    if (state.selectedId && nodeType(state.selectedId) === 'topic') {
+      await renderTopicPrayer(lookups.topic[state.selectedId]);
+    }
+
+    if (coreDialog.open) {
+      await refreshCorePrayerDialog();
+    }
+  }
+
+  async function refreshCorePrayerDialog() {
+    const prayer = await lib.getCorePrayer(state.language);
+    document.getElementById('core-prayer-title').textContent = prayer?.title || t('corePrayerTitle');
+    document.getElementById('core-prayer-instruction').textContent = prayer?.instruction || t('corePrayerHint');
+
+    const fallbackEl = document.getElementById('core-prayer-fallback');
+    const textEl = document.getElementById('core-prayer-text');
+
+    if (!prayer) {
+      fallbackEl.classList.add('hidden');
+      textEl.textContent = t('noPrayer');
+    } else {
+      if (prayer.fallback) {
+        fallbackEl.textContent = t('translationComingSoon');
+        fallbackEl.classList.remove('hidden');
+      } else {
+        fallbackEl.classList.add('hidden');
+      }
+      textEl.textContent = prayer.text;
+    }
+
+    const audioPath = lib.coreAudioPath(prayer?.fallback ? 'en' : state.language);
+    setupAudioPlayer(coreAudio, document.getElementById('core-audio-btn'),
+      document.getElementById('core-audio-label'), document.getElementById('core-audio-status'), audioPath);
+  }
+
   function setDocumentDirection(lang) {
     document.documentElement.dir = lib.isRtl(lang) ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
@@ -121,30 +180,7 @@
   }
 
   async function openCorePrayer() {
-    const prayer = await lib.getCorePrayer(state.language);
-    document.getElementById('core-prayer-title').textContent = prayer?.title || t('corePrayerTitle');
-    document.getElementById('core-prayer-instruction').textContent = prayer?.instruction || t('corePrayerHint');
-
-    const fallbackEl = document.getElementById('core-prayer-fallback');
-    const textEl = document.getElementById('core-prayer-text');
-
-    if (!prayer) {
-      fallbackEl.classList.add('hidden');
-      textEl.textContent = t('noPrayer');
-    } else {
-      if (prayer.fallback) {
-        fallbackEl.textContent = t('translationComingSoon');
-        fallbackEl.classList.remove('hidden');
-      } else {
-        fallbackEl.classList.add('hidden');
-      }
-      textEl.textContent = prayer.text;
-    }
-
-    const audioPath = lib.coreAudioPath(prayer?.fallback ? 'en' : state.language);
-    setupAudioPlayer(coreAudio, document.getElementById('core-audio-btn'),
-      document.getElementById('core-audio-label'), document.getElementById('core-audio-status'), audioPath);
-
+    await refreshCorePrayerDialog();
     coreDialog.showModal();
   }
 
@@ -169,12 +205,10 @@
       } catch (err) {
         console.warn(err);
       }
-      if (state.selectedId && nodeType(state.selectedId) === 'topic') {
-        await renderTopicPrayer(lookups.topic[state.selectedId]);
-      }
+      await refreshLanguageUi();
     });
 
-    document.getElementById('open-core-prayer').textContent = t('openCorePrayer');
+    await refreshLanguageUi();
   }
 
   document.getElementById('open-core-prayer').addEventListener('click', openCorePrayer);

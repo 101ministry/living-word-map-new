@@ -17,7 +17,11 @@
         <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
       </div>
       <div class="header-controls">
-        <select id="language-select" aria-label="Prayer language"></select>
+        <div class="language-control">
+          <label id="language-label" for="language-select">Prayer language</label>
+          <select id="language-select" aria-describedby="language-status"></select>
+          <p id="language-status" class="language-status" aria-live="polite"></p>
+        </div>
         <button id="open-core-prayer" type="button" class="btn-accent">Core Prayer</button>
         <input type="search" id="search" placeholder="Search principalities, roots, fruits, topics…" autocomplete="off" />
         <select id="view-mode" aria-label="View mode">
