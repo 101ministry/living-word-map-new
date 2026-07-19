@@ -208,7 +208,7 @@ window.LANGUAGE_CATALOG = {
                           "openCorePrayer":  "Maombi kuu",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Audio recording coming soon â€” read the prayer aloud.",
-                          "translationComingSoon":  "Tafsiri inaendelea. Kiingereza kinaonyeshwa hadi ikamilike.",
+                          "translationComingSoon":  "Maombi 666 yanapatikana kwa Kiswahili.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Lugha ya maombi",
@@ -328,7 +328,7 @@ window.LANGUAGE_CATALOG = {
                           "name":  "Swahili",
                           "native":  "Kiswahili",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "ko",
