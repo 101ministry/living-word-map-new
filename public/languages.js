@@ -73,7 +73,7 @@ window.LANGUAGE_CATALOG = {
                           "openCorePrayer":  "الصلاة الأساسية",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Audio recording coming soon â€” read the prayer aloud.",
-                          "translationComingSoon":  "الترجمة قيد التقدم. يُعرض الإنجليزية حتى اكتمالها.",
+                          "translationComingSoon":  "666 صلاة متاحة بالعربية.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "لغة الصلاة",
@@ -265,7 +265,7 @@ window.LANGUAGE_CATALOG = {
                           "name":  "Arabic",
                           "native":  "العربية",
                           "rtl":  true,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "fr",
