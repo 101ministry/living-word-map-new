@@ -104,7 +104,7 @@
 104. Feelings Of Stress
 105. Feelings Of Tension
 106. Being Tormented
-107. Feeling Tormented    
+107. Feeling Tormented
 108. Astrology
 109. Having Gone To A Medium
 110. Using A Crystal Ball
@@ -129,7 +129,7 @@
 129. Being In Wicca
 130. Being In Witchcraft
 131. Involvement In Any Kind Of Satanic Ritual Abuse
-132. Involvement In Any Kind Of Sexual Ritual Abuse    
+132. Involvement In Any Kind Of Sexual Ritual Abuse
 133. Abnormal Grief
 134. Abnormal Mourning
 135. Being Defiled
@@ -140,10 +140,10 @@
 140. Frustration
 141. Loneliness
 142. Sadness
-143. Self-pity
+143. 1Self-pity
 144. Shame
 145. Unjustified Feelings Of Guilt
-146. Having A Wounded Spirit    
+146. Having A Wounded Spirit
 147. Blaspheming The Holy Spirit And Gifts Of The Spirit
 148. Opposition To God’s Word
 149. Condemnation Of God’s Word
@@ -156,7 +156,7 @@
 156. Creating Church Splits
 157. Calling Out “False Doctrines” Because I Disagree With Them
 158. Calling Out “False Teachers” Because I Disagree With Them
-159. Feeling Like Giving Up On Christianity    
+159. Feeling Like Giving Up On Christianity
 160. Prone To Accidents
 161. Prone To Drowning
 162. Prone To House Fires
@@ -175,7 +175,7 @@
 175. Having Suicidal Thoughts
 176. Attempting Suicide
 177. Thinking I Am Dumb
-178. Thinking I Am Stupid    
+178. Thinking I Am Stupid
 179. Believing False Teachers
 180. Believing False Doctrines
 181. Having Multi-Partner Sex
@@ -184,7 +184,7 @@
 184. Polygamy
 185. Sadomasochism
 186. Sexual Deviations
-187. Twisted Thinking    
+187. Twisted Thinking
 188. Adultery
 189. Bestiality
 190. Exhibitionism
@@ -199,7 +199,7 @@
 199. Being Raped
 200. Raping Someone Else
 201. Seduction
-202. Prostitution    
+202. Prostitution
 203. Having Allergies
 204. Having Arthritis
 205. Having Asthma
@@ -237,7 +237,7 @@
 237. Shedding Of Innocent Blood Through The Use Of Human Trafficking
 238. The Use Of Slave Trading
 239. The Use Of Slave Ownership
-240. Use Of Cruel Oppression Of People    
+240. Use Of Cruel Oppression Of People
 241. Treachery Against Others
 242. False Accusation Against Anyone
 243. Broken Covenants
@@ -275,7 +275,7 @@
 275. Securing Wealth By A Lying Tongue
 276. Taking The Fields Of The Orphans And Widows
 277. Charging Excessive Interest For Loans
-278. Using A Corrupt Judicial System To Destroy Another’s Life    
+278. Using A Corrupt Judicial System To Destroy Another’s Life
 279. Sexual Abuse
 280. Walking In Hatred
 281. Strife
@@ -299,7 +299,7 @@
 299. Delighting In The Destruction Of Another
 300. Purposeful Lying To Destroy Another’s Life
 301. Human Trafficking
-302. Slavery    
+302. Slavery
 303. Worshipping Idols And Expecting Them To Save You
 304. Trading Floor Transaction With Demons For Power
 305. Trading Floor Transaction With Demons For Money
@@ -322,7 +322,7 @@
 322. Idolizing The Works Of One’s Hands
 323. Idolizing One’s Self
 324. Hiding Envy Behind The Cloak Of Insecurity And Failure
-325. Needing The Worship Of Others    
+325. Needing The Worship Of Others
 326. Being Greedy For Food
 327. Being Greedy For Chocolate Or Attention
 328. Being Addicted To Drugs
@@ -331,7 +331,7 @@
 331. Participating In Drunkenness
 332. Orgies
 333. Gambling
-334. Worldliness    
+334. Worldliness
 335. Shameful Compromise In The Face Of Danger, Difficulty, Or Opposition
 336. Being A Coward Who Justifies Actions And Wickedness
 337. Evading Responsibility For Actions
@@ -357,7 +357,7 @@
 357. Being A Respecter Of Persons
 358. Showing Partiality To The Rich And Powerful
 359. Making Rash Vows To God And Others
-360. Believing Religious Lies Like Infant Baptism Has Made You Righteous Before God    
+360. Believing Religious Lies Like Infant Baptism Has Made You Righteous Before God
 361. Bastard Children Born Outside The Protection Of Marriage
 362. Being Polluted By The Leaven Of The Herodians
 363. Participating In Fornication
@@ -370,12 +370,12 @@
 370. Participating In Lesbianism
 371. Participating In Gender Confusion
 372. Participating In Pornography
-373. Serving the spirit spouse gods and inviting others to do the same
+373. Serving the Spirit Spouse gods and Inviting Others to Do the Same
 374. Using Women As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions
 375. Using Children As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions
 376. Using Men As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions
 377. Using Filthy Language
-378. Participating In Masochism, Sadism, And Wicked Imaginations    
+378. Participating In Masochism, Sadism, And Wicked Imaginations
 379. Participating In Witchcraft Through The Control And Manipulation Of Another’s Will
 380. Being Stubborn
 381. Emasculation Of Men Through Female Domination
@@ -468,7 +468,7 @@
 468. Familiar Identity Of Doctrinal Error
 469. Familiar Identity Of Doctrinal Obsession
 470. Familiar Identity Of Dominance
-471. Familiar Identity Of Doom And Gloom  
+471. Familiar Identity Of Doom And Gloom
 472. Familiar Identity Of Doubt And Unbelief
 473. Familiar Identity Of Dread
 474. Familiar Identity Of Early Death
@@ -634,14 +634,14 @@
 634. Spirit Of Physical Abuse
 635. Spirit Of Pornography
 636. Spirit Of Practices Of Sexual And Sensual Activities (Sex Therapists)
-637. Spirit Of Pre-occupations
-638. Spirit Of Pride
-639. Spirit Of Promiscuity
-640. Spirit Of Prostitution (Harlotry) (Whoredoms) (Sex-trafficking)
-641. Spirit Of Python
-642. Spirit Of Rebellion
-643. Spirit Of Ritual Sex
-644. Spirit of Somnophilia
+637. Spirit of Somnophilia
+638. Spirit Of Pre-occupations
+639. Spirit Of Pride
+640. Spirit Of Promiscuity
+641. Spirit Of Prostitution (Harlotry) (Whoredoms) (Sex-trafficking)
+642. Spirit Of Python
+643. Spirit Of Rebellion
+644. Spirit Of Ritual Sex
 645. Spirit Of Seduction
 646. Spirit Of Self-adoration
 647. Spirit Of Self-idolatry
@@ -662,5 +662,5 @@
 662. Spirit Of Voyeurism
 663. Spirit Of Vulgarity
 664. Spirit Of Witchcraft
-665. Spirit of Fan-Fiction Writing to write up a personal narrative to worship.
+665. Spirit of Writing Fan-fiction Stories to Create and Worship your Own Narrative
 666. Spirit Of “Love” That Keeps Loving Relationships From Forming And Keeps People Single
