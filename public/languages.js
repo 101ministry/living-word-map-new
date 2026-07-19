@@ -178,7 +178,7 @@ window.LANGUAGE_CATALOG = {
                           "openCorePrayer":  "Kerngebet",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Audio recording coming soon â€” read the prayer aloud.",
-                          "translationComingSoon":  "Übersetzung in Arbeit. Bis zur Fertigstellung wird Englisch angezeigt.",
+                          "translationComingSoon":  "666 Gebete auf Deutsch verfügbar.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Gebetssprache",
@@ -314,7 +314,7 @@ window.LANGUAGE_CATALOG = {
                           "name":  "German",
                           "native":  "Deutsch",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "ja",

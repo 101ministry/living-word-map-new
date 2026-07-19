@@ -156,6 +156,10 @@ $buildFr = Join-Path $PSScriptRoot 'build-fr-prayers.ps1'
 if (Test-Path $buildFr) {
     & $buildFr -EnglishFile (Join-Path $prayersDir 'en.json')
 }
+$buildDe = Join-Path $PSScriptRoot 'build-de-prayers.ps1'
+if (Test-Path $buildDe) {
+    & $buildDe -EnglishFile (Join-Path $prayersDir 'en.json')
+}
 
 # Other languages — load translated packs from data/translations when present
 $translationsDir = Join-Path $PSScriptRoot '..\data\translations'
