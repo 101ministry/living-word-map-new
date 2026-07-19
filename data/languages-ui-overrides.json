@@ -11,7 +11,7 @@
   "hi": {
     "prayerLanguageLabel": "प्रार्थना भाषा",
     "mapLanguageNote": "मानचित्र अंग्रेज़ी में रहता है। यह प्रार्थना पाठ और ऑडियो के लिए है।",
-    "translationComingSoon": "अनुवाद प्रगति पर है। पूर्ण होने तक अंग्रेज़ी दिखाई देगी।",
+    "translationComingSoon": "666 प्रार्थनाएँ हिन्दी में उपलब्ध हैं।",
     "openCorePrayer": "मुख्य प्रार्थना",
     "prayerTitle": "प्रार्थना",
     "prayerLanguageReady": "प्रार्थनाएँ लोड हुईं",
@@ -47,7 +47,7 @@
   "bn": {
     "prayerLanguageLabel": "প্রার্থনার ভাষা",
     "mapLanguageNote": "মানচিত্রের লেবেল ইংরেজিতে থাকে। এটি প্রার্থনার পাঠ ও অডিওর জন্য।",
-    "translationComingSoon": "অনুবাদ চলছে। সম্পূর্ণ না হওয়া পর্যন্ত ইংরেজি দেখানো হবে।",
+    "translationComingSoon": "৬৬৬টি প্রার্থনা বাংলায় উপলব্ধ।",
     "openCorePrayer": "মূল প্রার্থনা",
     "prayerTitle": "প্রার্থনা",
     "prayerLanguageReady": "প্রার্থনা লোড হয়েছে",
@@ -56,7 +56,7 @@
   "pt": {
     "prayerLanguageLabel": "Idioma da oração",
     "mapLanguageNote": "O mapa permanece em inglês. Isto define texto e áudio da oração.",
-    "translationComingSoon": "Tradução em andamento. Inglês exibido até concluir.",
+    "translationComingSoon": "666 orações disponíveis em português.",
     "openCorePrayer": "Oração central",
     "prayerTitle": "Oração",
     "prayerLanguageReady": "Orações carregadas",
@@ -74,7 +74,7 @@
   "ur": {
     "prayerLanguageLabel": "دعا کی زبان",
     "mapLanguageNote": "نقشے کے لیبل انگریزی میں رہتے ہیں۔ یہ دعا کے متن اور آڈیو کے لیے ہے۔",
-    "translationComingSoon": "ترجمہ جاری ہے۔ مکمل ہونے تک انگریزی دکھائی جائے گی۔",
+    "translationComingSoon": "۶۶۶ دعائیں اردو میں دستیاب ہیں۔",
     "openCorePrayer": "مرکزی دعا",
     "prayerTitle": "دعا",
     "prayerLanguageReady": "دعائیں لوڈ ہو گئیں",
@@ -83,7 +83,7 @@
   "id": {
     "prayerLanguageLabel": "Bahasa doa",
     "mapLanguageNote": "Label peta tetap dalam bahasa Inggris. Ini untuk teks dan audio doa.",
-    "translationComingSoon": "Terjemahan sedang berlangsung. Inggris ditampilkan hingga selesai.",
+    "translationComingSoon": "666 doa tersedia dalam bahasa Indonesia.",
     "openCorePrayer": "Doa inti",
     "prayerTitle": "Doa",
     "prayerLanguageReady": "Doa dimuat",
@@ -101,7 +101,7 @@
   "ja": {
     "prayerLanguageLabel": "祈りの言語",
     "mapLanguageNote": "地図のラベルは英語のままです。祈りの文と音声に適用されます。",
-    "translationComingSoon": "翻訳作業中。完成まで英語を表示します。",
+    "translationComingSoon": "666件の祈りが日本語で利用できます。",
     "openCorePrayer": "中心の祈り",
     "prayerTitle": "祈り",
     "prayerLanguageReady": "祈りを読み込みました",
@@ -119,7 +119,7 @@
   "ko": {
     "prayerLanguageLabel": "기도 언어",
     "mapLanguageNote": "지도 라벨은 영어로 유지됩니다. 기도 본문과 오디오에 적용됩니다.",
-    "translationComingSoon": "번역 진행 중입니다. 완료 전까지 영어가 표시됩니다.",
+    "translationComingSoon": "666개의 기도가 한국어로 제공됩니다.",
     "openCorePrayer": "핵심 기도",
     "prayerTitle": "기도",
     "prayerLanguageReady": "기도가 로드됨",

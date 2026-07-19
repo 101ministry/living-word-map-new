@@ -43,7 +43,7 @@
                           "openCorePrayer":  "मुख्य प्रार्थना",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "ऑडियो रिकॉर्डिंग जल्द आ रही है, अभी के लिए प्रार्थना ज़ोर से पढ़ें।",
-                          "translationComingSoon":  "अनुवाद प्रगति पर है। पूर्ण होने तक अंग्रेज़ी दिखाई देगी।",
+                          "translationComingSoon":  "666 प्रार्थनाएँ हिन्दी में उपलब्ध हैं।",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "प्रार्थना भाषा",
@@ -103,7 +103,7 @@
                           "openCorePrayer":  "মূল প্রার্থনা",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "অডিও রেকording শীঘ্রই আসবে, এখনের জন্য প্রার্থনা জোরে পড়ুন।",
-                          "translationComingSoon":  "অনুবাদ চলছে। সম্পূর্ণ না হওয়া পর্যন্ত ইংরেজি দেখানো হবে।",
+                          "translationComingSoon":  "৬৬৬টি প্রার্থনা বাংলায় উপলব্ধ।",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "প্রার্থনার ভাষা",
@@ -118,7 +118,7 @@
                           "openCorePrayer":  "Oração central",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Gravação de áudio em breve; por enquanto leia a oração em voz alta.",
-                          "translationComingSoon":  "Tradução em andamento. Inglês exibido até concluir.",
+                          "translationComingSoon":  "666 orações disponíveis em português.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Idioma da oração",
@@ -148,7 +148,7 @@
                           "openCorePrayer":  "مرکزی دعا",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "آڈیو ریکارڈنگ جلد آ رہی ہے، فی الحال دعا بلند آواز میں پڑھیں۔",
-                          "translationComingSoon":  "ترجمہ جاری ہے۔ مکمل ہونے تک انگریزی دکھائی جائے گی۔",
+                          "translationComingSoon":  "۶۶۶ دعائیں اردو میں دستیاب ہیں۔",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "دعا کی زبان",
@@ -163,7 +163,7 @@
                           "openCorePrayer":  "Doa inti",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Rekaman audio segera hadir; untuk saat ini bacakan doa dengan suara keras.",
-                          "translationComingSoon":  "Terjemahan sedang berlangsung. Inggris ditampilkan hingga selesai.",
+                          "translationComingSoon":  "666 doa tersedia dalam bahasa Indonesia.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Bahasa doa",
@@ -193,7 +193,7 @@
                           "openCorePrayer":  "中心の祈り",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "音声録音は近日公開予定です。今は祈りを声に出して読んでください。",
-                          "translationComingSoon":  "翻訳作業中。完成まで英語を表示します。",
+                          "translationComingSoon":  "666件の祈りが日本語で利用できます。",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "祈りの言語",
@@ -223,7 +223,7 @@
                           "openCorePrayer":  "핵심 기도",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "오디오 녹음은 곧 제공됩니다. 지금은 기도를 소리 내어 읽으세요.",
-                          "translationComingSoon":  "번역 진행 중입니다. 완료 전까지 영어가 표시됩니다.",
+                          "translationComingSoon":  "666개의 기도가 한국어로 제공됩니다.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "기도 언어",
@@ -251,7 +251,7 @@
                           "name":  "Hindi",
                           "native":  "हिन्दी",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "es",
@@ -279,14 +279,14 @@
                           "name":  "Bengali",
                           "native":  "বাংলা",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "pt",
                           "name":  "Portuguese",
                           "native":  "Português",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "ru",
@@ -300,14 +300,14 @@
                           "name":  "Urdu",
                           "native":  "اردو",
                           "rtl":  true,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "id",
                           "name":  "Indonesian",
                           "native":  "Bahasa Indonesia",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "de",
@@ -321,7 +321,7 @@
                           "name":  "Japanese",
                           "native":  "日本語",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "sw",
@@ -335,7 +335,7 @@
                           "name":  "Korean",
                           "native":  "한국어",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       }
                   ]
 }

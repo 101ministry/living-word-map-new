@@ -173,8 +173,18 @@ if (Test-Path $buildAr) {
     & $buildAr -EnglishFile (Join-Path $prayersDir 'en.json')
 }
 
-# Other languages — load translated packs from data/translations when present
 $translationsDir = Join-Path $PSScriptRoot '..\data\translations'
+$buildLang = Join-Path $PSScriptRoot 'build-lang-prayers.ps1'
+if (Test-Path $buildLang) {
+    foreach ($code in @('hi', 'bn', 'pt', 'ur', 'id', 'ja', 'ko')) {
+        $phrases = Join-Path $translationsDir "$code-phrases.json"
+        if (Test-Path -LiteralPath $phrases) {
+            & $buildLang -LangCode $code -EnglishFile (Join-Path $prayersDir 'en.json')
+        }
+    }
+}
+
+# Other languages — load translated packs from data/translations when present
 foreach ($lang in $languages) {
     if ($lang.code -eq 'en') { continue }
 
