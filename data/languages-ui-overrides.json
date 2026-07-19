@@ -5,7 +5,8 @@
     "translationComingSoon": "翻译进行中。完成前显示英文。",
     "openCorePrayer": "核心祷告",
     "prayerTitle": "祷告",
-    "prayerLanguageReady": "祷告已加载"
+    "prayerLanguageReady": "祷告已加载",
+    "audioComingSoon": "音频录制即将推出，目前请大声朗读祷告。"
   },
   "hi": {
     "prayerLanguageLabel": "प्रार्थना भाषा",
@@ -13,7 +14,8 @@
     "translationComingSoon": "अनुवाद प्रगति पर है। पूर्ण होने तक अंग्रेज़ी दिखाई देगी।",
     "openCorePrayer": "मुख्य प्रार्थना",
     "prayerTitle": "प्रार्थना",
-    "prayerLanguageReady": "प्रार्थनाएँ लोड हुईं"
+    "prayerLanguageReady": "प्रार्थनाएँ लोड हुईं",
+    "audioComingSoon": "ऑडियो रिकॉर्डिंग जल्द आ रही है, अभी के लिए प्रार्थना ज़ोर से पढ़ें।"
   },
   "es": {
     "prayerLanguageLabel": "Idioma de oración",
@@ -21,7 +23,8 @@
     "translationComingSoon": "666 oraciones disponibles en español.",
     "openCorePrayer": "Oración central",
     "prayerTitle": "Oración",
-    "prayerLanguageReady": "Oraciones cargadas"
+    "prayerLanguageReady": "Oraciones cargadas",
+    "audioComingSoon": "Grabación de audio próximamente; por ahora lee la oración en voz alta."
   },
   "ar": {
     "prayerLanguageLabel": "لغة الصلاة",
@@ -29,7 +32,8 @@
     "translationComingSoon": "666 صلاة متاحة بالعربية.",
     "openCorePrayer": "الصلاة الأساسية",
     "prayerTitle": "صلاة",
-    "prayerLanguageReady": "تم تحميل الصلوات"
+    "prayerLanguageReady": "تم تحميل الصلوات",
+    "audioComingSoon": "التسجيل الصوتي قريباً، في الوقت الحالي اقرأ الصلاة بصوت عالٍ."
   },
   "fr": {
     "prayerLanguageLabel": "Langue de prière",
@@ -37,7 +41,8 @@
     "translationComingSoon": "666 prières disponibles en français.",
     "openCorePrayer": "Prière centrale",
     "prayerTitle": "Prière",
-    "prayerLanguageReady": "Prières chargées"
+    "prayerLanguageReady": "Prières chargées",
+    "audioComingSoon": "Enregistrement audio bientôt disponible; pour l'instant, lisez la prière à voix haute."
   },
   "bn": {
     "prayerLanguageLabel": "প্রার্থনার ভাষা",
@@ -45,7 +50,8 @@
     "translationComingSoon": "অনুবাদ চলছে। সম্পূর্ণ না হওয়া পর্যন্ত ইংরেজি দেখানো হবে।",
     "openCorePrayer": "মূল প্রার্থনা",
     "prayerTitle": "প্রার্থনা",
-    "prayerLanguageReady": "প্রার্থনা লোড হয়েছে"
+    "prayerLanguageReady": "প্রার্থনা লোড হয়েছে",
+    "audioComingSoon": "অডিও রেকording শীঘ্রই আসবে, এখনের জন্য প্রার্থনা জোরে পড়ুন।"
   },
   "pt": {
     "prayerLanguageLabel": "Idioma da oração",
@@ -53,7 +59,8 @@
     "translationComingSoon": "Tradução em andamento. Inglês exibido até concluir.",
     "openCorePrayer": "Oração central",
     "prayerTitle": "Oração",
-    "prayerLanguageReady": "Orações carregadas"
+    "prayerLanguageReady": "Orações carregadas",
+    "audioComingSoon": "Gravação de áudio em breve; por enquanto leia a oração em voz alta."
   },
   "ru": {
     "prayerLanguageLabel": "Язык молитвы",
@@ -61,7 +68,8 @@
     "translationComingSoon": "666 молитв доступно на русском языке.",
     "openCorePrayer": "Основная молитва",
     "prayerTitle": "Молитва",
-    "prayerLanguageReady": "Молитвы загружены"
+    "prayerLanguageReady": "Молитвы загружены",
+    "audioComingSoon": "Аудиозапись скоро будет доступна; пока что читайте молитву вслух."
   },
   "ur": {
     "prayerLanguageLabel": "دعا کی زبان",
@@ -69,7 +77,8 @@
     "translationComingSoon": "ترجمہ جاری ہے۔ مکمل ہونے تک انگریزی دکھائی جائے گی۔",
     "openCorePrayer": "مرکزی دعا",
     "prayerTitle": "دعا",
-    "prayerLanguageReady": "دعائیں لوڈ ہو گئیں"
+    "prayerLanguageReady": "دعائیں لوڈ ہو گئیں",
+    "audioComingSoon": "آڈیو ریکارڈنگ جلد آ رہی ہے، فی الحال دعا بلند آواز میں پڑھیں۔"
   },
   "id": {
     "prayerLanguageLabel": "Bahasa doa",
@@ -77,7 +86,8 @@
     "translationComingSoon": "Terjemahan sedang berlangsung. Inggris ditampilkan hingga selesai.",
     "openCorePrayer": "Doa inti",
     "prayerTitle": "Doa",
-    "prayerLanguageReady": "Doa dimuat"
+    "prayerLanguageReady": "Doa dimuat",
+    "audioComingSoon": "Rekaman audio segera hadir; untuk saat ini bacakan doa dengan suara keras."
   },
   "de": {
     "prayerLanguageLabel": "Gebetssprache",
@@ -85,7 +95,8 @@
     "translationComingSoon": "666 Gebete auf Deutsch verfügbar.",
     "openCorePrayer": "Kerngebet",
     "prayerTitle": "Gebet",
-    "prayerLanguageReady": "Gebete geladen"
+    "prayerLanguageReady": "Gebete geladen",
+    "audioComingSoon": "Audioaufnahme demnächst verfügbar; lesen Sie vorerst das Gebet laut vor."
   },
   "ja": {
     "prayerLanguageLabel": "祈りの言語",
@@ -93,7 +104,8 @@
     "translationComingSoon": "翻訳作業中。完成まで英語を表示します。",
     "openCorePrayer": "中心の祈り",
     "prayerTitle": "祈り",
-    "prayerLanguageReady": "祈りを読み込みました"
+    "prayerLanguageReady": "祈りを読み込みました",
+    "audioComingSoon": "音声録音は近日公開予定です。今は祈りを声に出して読んでください。"
   },
   "sw": {
     "prayerLanguageLabel": "Lugha ya maombi",
@@ -101,7 +113,8 @@
     "translationComingSoon": "Maombi 666 yanapatikana kwa Kiswahili.",
     "openCorePrayer": "Maombi kuu",
     "prayerTitle": "Maombi",
-    "prayerLanguageReady": "Maombi yamepakiwa"
+    "prayerLanguageReady": "Maombi yamepakiwa",
+    "audioComingSoon": "Rekodi ya sauti inakuja hivi karibuni; kwa sasa soma sala kwa sauti."
   },
   "ko": {
     "prayerLanguageLabel": "기도 언어",
@@ -109,6 +122,7 @@
     "translationComingSoon": "번역 진행 중입니다. 완료 전까지 영어가 표시됩니다.",
     "openCorePrayer": "핵심 기도",
     "prayerTitle": "기도",
-    "prayerLanguageReady": "기도가 로드됨"
+    "prayerLanguageReady": "기도가 로드됨",
+    "audioComingSoon": "오디오 녹음은 곧 제공됩니다. 지금은 기도를 소리 내어 읽으세요."
   }
 }
