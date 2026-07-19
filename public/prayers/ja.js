@@ -1,0 +1,1 @@
+window.PRAYER_JA = {"complete":false,"corePrayer":null,"topics":{},"language":"ja"};

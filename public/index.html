@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Word Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header-brand">
+        <h1>Living Word Map</h1>
+        <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
+      </div>
+      <div class="header-controls">
+        <select id="language-select" aria-label="Prayer language"></select>
+        <button id="open-core-prayer" type="button" class="btn-accent">Core Prayer</button>
+        <input type="search" id="search" placeholder="Search principalities, roots, fruits, topics…" autocomplete="off" />
+        <select id="view-mode" aria-label="View mode">
+          <option value="constellation">Constellation</option>
+          <option value="explore">Explore All</option>
+        </select>
+        <button id="reset-view" type="button">Reset</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="legend" aria-label="Legend">
+        <h2>Layers</h2>
+        <ul>
+          <li><span class="dot principality"></span> Principality</li>
+          <li><span class="dot root"></span> Root</li>
+          <li><span class="dot fruit"></span> Fruit</li>
+          <li><span class="dot topic"></span> Topic</li>
+        </ul>
+        <div class="filters">
+          <h2>Filter</h2>
+          <label><input type="checkbox" id="show-principalities" checked /> Principalities</label>
+          <label><input type="checkbox" id="show-roots" checked /> Roots</label>
+          <label><input type="checkbox" id="show-fruits" checked /> Fruits</label>
+          <label><input type="checkbox" id="show-topics" /> Topics</label>
+        </div>
+        <div class="compare-panel">
+          <h2>Compare <span class="legend-hint">up to 3</span></h2>
+          <p class="compare-note">Pick up to 3 Principalities. Ctrl+click a tile on the map to add it here.</p>
+          <div id="compare-slots" class="compare-slots" aria-live="polite"></div>
+          <ul id="compare-picker" class="compare-picker" aria-label="Principalities to compare"></ul>
+          <div class="compare-actions">
+            <button type="button" id="open-compare" class="btn-accent" disabled>Compare</button>
+            <button type="button" id="clear-compare" class="text-btn">Clear</button>
+          </div>
+        </div>
+        <div id="color-legend" class="color-legend" aria-label="Root and fruit color key"></div>
+      </aside>
+
+      <section class="graph-panel">
+        <div id="graph"></div>
+        <div id="graph-hint" class="graph-hint">Click a Principality to reveal its character. Drag the map to pan; use the slider below to zoom.</div>
+        <div class="graph-zoom-bar" aria-label="Graph magnification">
+          <label for="graph-zoom">Magnification</label>
+          <button type="button" id="graph-zoom-out" class="graph-zoom-btn" aria-label="Zoom out">−</button>
+          <input type="range" id="graph-zoom" min="0" max="100" value="50" aria-valuemin="0" aria-valuemax="100" />
+          <button type="button" id="graph-zoom-in" class="graph-zoom-btn" aria-label="Zoom in">+</button>
+          <span id="graph-zoom-label" class="graph-zoom-label">1.0×</span>
+        </div>
+      </section>
+
+      <aside class="detail-panel" id="detail-panel">
+        <div class="detail-empty" id="detail-empty">
+          <p class="detail-empty-title">Select a node</p>
+          <p>Click any Principality to hear its voice — themes, statements, and every topic bound to it through shared roots and fruits.</p>
+        </div>
+        <article class="detail-content hidden" id="detail-content">
+          <header class="detail-header">
+            <span class="detail-type" id="detail-type"></span>
+            <h2 id="detail-title"></h2>
+            <p class="detail-meta" id="detail-meta"></p>
+          </header>
+          <section class="detail-section" id="detail-character-section">
+            <h3>Character</h3>
+            <p id="detail-character"></p>
+          </section>
+          <section class="detail-section" id="detail-quote-section">
+            <h3>Voice</h3>
+            <blockquote id="detail-quote"></blockquote>
+            <button type="button" id="next-quote" class="text-btn">Another statement →</button>
+          </section>
+          <section class="detail-section" id="detail-themes-section">
+            <h3>Core Themes</h3>
+            <ul id="detail-themes" class="tag-list"></ul>
+          </section>
+          <section class="detail-section" id="detail-manifestations-section">
+            <h3>Manifestations</h3>
+            <p class="detail-section-note">From the master principality list — additive to roots &amp; fruits.</p>
+            <ul id="detail-manifestations" class="tag-list"></ul>
+          </section>
+          <section class="detail-section" id="detail-connections-section">
+            <h3>Connections</h3>
+            <div id="detail-connections"></div>
+          </section>
+          <section class="detail-section" id="detail-topics-section">
+            <h3>Topics <span id="detail-topic-count"></span></h3>
+            <ul id="detail-topics" class="topic-list"></ul>
+          </section>
+          <section class="detail-section hidden" id="detail-prayer-section">
+            <h3>Prayer</h3>
+            <p class="prayer-note" id="prayer-note"></p>
+            <p class="prayer-fallback hidden" id="prayer-fallback"></p>
+            <div class="audio-player" id="topic-audio-player">
+              <audio id="topic-audio" preload="none"></audio>
+              <button type="button" id="topic-audio-btn" class="audio-btn" disabled>
+                <span class="audio-icon">▶</span>
+                <span id="topic-audio-label">Listen</span>
+              </button>
+              <span class="audio-status" id="topic-audio-status"></span>
+            </div>
+            <div class="prayer-text" id="prayer-text"></div>
+          </section>
+        </article>
+      </aside>
+    </main>
+  </div>
+
+  <dialog id="compare-dialog" class="compare-dialog">
+    <form method="dialog" class="compare-dialog-inner">
+      <header class="compare-dialog-header">
+        <div>
+          <h2>Principality Comparison</h2>
+          <p class="compare-dialog-meta">Shared themes and connections appear once; unique traits stay in each column.</p>
+        </div>
+        <button type="submit" class="dialog-close" aria-label="Close">×</button>
+      </header>
+      <div id="compare-shared" class="compare-shared"></div>
+      <div id="compare-results" class="compare-grid"></div>
+    </form>
+  </dialog>
+
+  <dialog id="core-prayer-dialog" class="prayer-dialog">
+    <form method="dialog" class="prayer-dialog-inner">
+      <header class="prayer-dialog-header">
+        <div>
+          <h2 id="core-prayer-title">Prayer of Freedom</h2>
+          <p id="core-prayer-instruction" class="prayer-dialog-meta"></p>
+        </div>
+        <button type="submit" class="dialog-close" aria-label="Close">×</button>
+      </header>
+      <p class="prayer-fallback hidden" id="core-prayer-fallback"></p>
+      <div class="audio-player" id="core-audio-player">
+        <audio id="core-audio" preload="none"></audio>
+        <button type="button" id="core-audio-btn" class="audio-btn" disabled>
+          <span class="audio-icon">▶</span>
+          <span id="core-audio-label">Listen</span>
+        </button>
+        <span class="audio-status" id="core-audio-status"></span>
+      </div>
+      <div class="prayer-text prayer-text-scroll" id="core-prayer-text"></div>
+    </form>
+  </dialog>
+
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/force-graph.min.js"></script>
+  <script src="color-scheme.js"></script>
+  <script src="principality-icons.js"></script>
+  <script src="data.js"></script>
+  <script src="languages.js"></script>
+  <script src="prayer-index.js"></script>
+  <script src="prayers/en.js"></script>
+  <script src="prayers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

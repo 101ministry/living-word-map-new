@@ -1,0 +1,1 @@
+window.PRAYER_ID = {"complete":false,"corePrayer":null,"topics":{},"language":"id"};

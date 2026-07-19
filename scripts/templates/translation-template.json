@@ -1,0 +1,25 @@
+{
+  "language": "es",
+  "complete": false,
+  "corePrayer": {
+    "title": "Oración de Libertad",
+    "instruction": "Ora en voz alta después de perdonar a todas las personas vinculadas a un espíritu raíz.",
+    "text": ""
+  },
+  "topics": {
+    "1": {
+      "number": 1,
+      "spirit": "anger",
+      "note": "NOTA: ESTAS ORACIONES DEBEN SER PROCLAMADAS, NO LEÍDAS EN SILENCIO.",
+      "text": ""
+    }
+  }
+}
+
+Replace empty "text" fields with translated prayer content, then run:
+  powershell -File scripts/build-prayers-import.ps1 -Language es -InputFile path/to/es.json
+
+Or paste the full translated JSON into public/prayers/es.json and run build-prayers.ps1
+(which regenerates es.js from es.json if you add import logic).
+
+For now, edit public/prayers/es.json directly and re-run scripts/build-prayers.ps1.

@@ -1,0 +1,1 @@
+window.PRAYER_ES = {"complete":false,"corePrayer":null,"topics":{},"language":"es"};

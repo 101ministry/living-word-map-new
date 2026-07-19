@@ -1,0 +1,148 @@
+# Principality Strong's anchor mapping — for lexicon-informed character voices
+#
+# Format (same section headers as PRINCIPALITY-MEMBERSHIPS.txt):
+#   - One Strong's number per line: G#### (Greek NT) or H#### (Hebrew OT)
+#   - Optional pinned verses (as many as you want): @ John 2:17
+#       Use several @ lines to layer tone — e.g. holy zeal vs. sinful envy for one lemma.
+#       Tie a verse to a specific Strong's: @ G2205 John 2:17   or   @ H7068 Exod 20:5
+#       If no Strong's prefix, the verse applies to the whole principality section.
+#   - Optional note on same line after # : G2205  # zelos — zeal / jealousy
+#   - Blank lines and lines starting with # are ignored
+#
+# You supply anchors only. Verse usages are resolved at build time from open
+# morphological datasets (OpenScriptures morphhb + Greek NT tagging).
+#
+# Aim for 3–5 Strong's numbers per principality (primary + secondary shades).
+
+[PRINCIPALITY OF JEALOUSY]
+
+G2205   # zelos — zeal / jealousy
+H7068   # qinah
+@ G2205 John 2:17      # holy zeal — one layer
+@ G2205 Acts 5:17       # religious envy — another layer
+@ G2205 Gal 5:20        # work of the flesh
+@ H7068 Exod 20:5       # OT covenant jealousy
+
+
+[PRINCIPALITY OF SLEEP-SLUMBER]
+H7423   # rmiyah — slackness / laziness
+G3636   # oknéros — slothful / lazy / idle
+@ H7423 Proverbs 10:4      # slack / slothful / lazy
+@ H7423 Jeremiah 48:10     # cursed is the one who does the LORD's work negligently
+@ G3636 Matthew 25:26      # wicked lazy slave
+
+
+[PRINCIPALITY OF HAUGHTINESS]
+H7311   # rum — exalted / presumptuously / go up / be lifted / be lofty / breed worms
+G5244   # huperephanos — proud / arrogant / haughty
+@ H7311 Proverbs 6:17      # haughty eyes and a proud heart
+@ H7311 Isaiah 3:16      # The women of Zion are haughty, walking along with outstretched necks, flirting with their eyes, strutting with swaying hips
+@ G5244 Romans 1:30      # haters of God, insolent, haughty, boastful, inventors of evil
+@ G5244 James 4:6      # God sets Himself against the haughty
+
+
+[PRINCIPALITY OF LIES]
+H3577   # kazab — lie / falsehood / deceit
+H8767   # sheqer — falsehood / lie / deception / deceit
+G5574   # pseudomai — to lie / to speak falsely / to deceive
+@ H3577 Zephaniah 3:13       # The remnant of Isarel will no longer do wrong or speak lies
+@ H8767 Exodus 20:16      # You shall not bear false witness
+@ G5574 Acts 5:3      # Ananias, how is it that Satan has so filled your heart that you have lied to the Holy Spirit
+@ G5574 Colossians 3:9      # Do not lie to one another, since you have taken off your old self with its practices
+
+
+[PRINCIPALITY OF BONDAGE]
+H7617   # shabah — take captive / carry away captive / bring into bondage
+G1398   # douleuo — serve as a slave / be in bondage / be subject to / be enslaved
+@ H7617 Jeremiah 15:2      # those for captivity, to captivity
+@ H7617 Isaiah 5:13      # My people go into captivity for lack of knowledge
+@ G1398 Titus 3:3      # enslaved to various passions and pleasures
+
+
+[PRINCIPALITY OF IDOLATRY]
+H5647   # abad — serve / worship / labor for / become a servant / be in service to
+H6456   # pesel — carved image / idol /graven image / false god
+G1495   # eidolon — idol / image / false god / object of worship
+G1496   # eidololatreia — idolatry / idol worship / false worship / worship of images
+@ H5647 Joshua 24:15      # choose this day whom you will serve
+@ H6456 Deuteronomy 27:15      # Cursed is the man who makes a carved image
+@ G1495 1 Corinthians 10:14     # flee from idolatry
+@ G1496 Colossians 3:5      # covetousness, which is idolatry
+
+
+[PRINCIPALITY OF ERROR]
+H8582   # ta'ah — wander / stagger / go astray / be led astray / be seduced
+H7686   # shagah — err / go astray / wander / be deceived / stray from the right path
+G4105   # planao — lead astray / deceive / cause to wander / go astray
+G4106   # plane — error / deception/ delusion/ wandering / straying from truth
+@ H8582 Ezekiel 34:6      # My sheep wandered through all the mountains
+@ H7686 Isaiah 28:7      # they err in vision, they stumble in judgment
+@ G4105 Matthew 24:4      # See that no one leads you astray
+@ G4106 Ephesians 4:14      # carried about by every wind of doctrin, by the trickery of men, by the crafitness in deceitful schemes
+
+
+[PRINCIPALITY OF FEAR]
+H3372   # yare — fear / be afraid / dread / stand in awe / revere
+H6343   # pachad — terror / dread / fear / sudden fear / trembling
+G1167   # deilia — cowardice / timidity / fearfulness / shrinking back
+G5401   # phobos — fear / terror / dread / alarm / reverence
+@H3372      # The fear of man brings a snare
+@H6343      # fear came upon me, and trembling
+@G1167 2 Timothy 1:7      # God has not given us a spirit of fear, but of power and love and a sound mind
+@G1167 Matthew 8:26      # Why are you fearful, O you of little faith?
+@G5401 Hebrews 2:15      # who through fear of death were subject to lifelong bondage
+@G5401 1 John 4:18      # There is no fear in love, but perfect love casts out fear
+
+
+[PRINCIPALITY OF DIVINATION]
+
+
+[SPIRIT OF HEAVINESS]
+
+
+[SPIRIT OF ANTI-CHRIST]
+
+
+[PRINCIPALITY OF DEAF & DUMB]
+
+
+[PRINCIPALITY OF PERVERSION]
+
+
+[PRINCIPALITY OF WHOREDOM]
+
+
+[PRINCIPALITY OF INFIRMITY]
+
+
+[PRINCIPALITY OF SHEDDING OF INNOCENT BLOOD]
+
+
+[PRINCIPALITY OF TREACHERY AGAINST OTHERS]
+
+
+[PRINCIPALITY OF USING AND ABUSING OTHERS EMOTIONALLY, PHYSICALLY, SPIRITUALLY, AND VERBALLY]
+
+
+[PRINCIPALITY OF TRADING FLOOR TRANSACTIONS WITH DEMONS]
+
+
+[PRINCIPALITY OF GLUTTONY]
+
+
+[PRINCIPALITY OF SELF RIGHTEOUSNESS]
+
+
+[PRINCIPALITY OF SEXUAL PERVERSION]
+
+
+[PRINCIPALITY OF REBELLION]
+
+
+[PRINCIPALITY OF DESTRUCTIVE ATTITUDES AGAINST GOD]
+
+
+[PRINCIPALITY OF DESTRUCTIVE IDENTITIES AGAINST GOD]
+
+
+[PRINCIPALITY OF SPIRIT SPOUSE GODS]

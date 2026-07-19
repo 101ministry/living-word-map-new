@@ -1,0 +1,1 @@
+window.PRAYER_RU = {"complete":false,"corePrayer":null,"topics":{},"language":"ru"};

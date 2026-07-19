@@ -1,0 +1,1 @@
+window.PRAYER_UR = {"complete":false,"corePrayer":null,"topics":{},"language":"ur"};
