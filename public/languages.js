@@ -133,7 +133,7 @@ window.LANGUAGE_CATALOG = {
                           "openCorePrayer":  "Основная молитва",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "Audio recording coming soon â€” read the prayer aloud.",
-                          "translationComingSoon":  "Перевод в процессе. До завершения показывается английский.",
+                          "translationComingSoon":  "666 молитв доступно на русском языке.",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Язык молитвы",
@@ -293,7 +293,7 @@ window.LANGUAGE_CATALOG = {
                           "name":  "Russian",
                           "native":  "Русский",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "ur",
