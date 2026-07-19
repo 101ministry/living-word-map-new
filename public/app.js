@@ -184,6 +184,12 @@
     coreDialog.showModal();
   }
 
+  function languageOptionLabel(lang) {
+    if (!lang?.name) return lang?.native || lang?.code || '';
+    if (!lang.native || lang.name === lang.native) return lang.name;
+    return `${lang.name} / ${lang.native}`;
+  }
+
   async function initLanguageSelector() {
     const catalog = await lib.init();
     state.language = lib.currentLang;
@@ -192,7 +198,7 @@
     const select = document.getElementById('language-select');
     select.innerHTML = catalog.languages.map(lang => {
       const status = lang.complete ? '' : ' ◦';
-      return `<option value="${lang.code}">${lang.native}${status}</option>`;
+      return `<option value="${lang.code}">${languageOptionLabel(lang)}${status}</option>`;
     }).join('');
     select.value = state.language;
 
