@@ -14,6 +14,7 @@ if errorlevel 1 (
   echo.
   echo build-prayers.ps1 failed — opening site with last built prayers if available.
 )
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\build-videos.ps1" -SkipCaptions
 
 echo.
 echo Starting local server (Brave works best over http://localhost, not file://)...

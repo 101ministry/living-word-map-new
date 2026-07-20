@@ -35,6 +35,7 @@
 
     <div id="legend-backdrop" class="drawer-backdrop" hidden aria-hidden="true"></div>
 
+    <div class="workspace">
     <main class="main">
       <aside class="legend" id="legend-panel" aria-label="Legend">
         <h2>Layers</h2>
@@ -120,6 +121,11 @@
             <h3>Topics <span id="detail-topic-count"></span></h3>
             <ul id="detail-topics" class="topic-list"></ul>
           </section>
+          <section class="detail-section hidden" id="detail-teaching-section">
+            <h3>Teaching Video</h3>
+            <p class="detail-section-note" id="detail-teaching-note"></p>
+            <button type="button" id="detail-watch-teaching" class="btn-accent">Watch teaching ↓</button>
+          </section>
           <section class="detail-section hidden" id="detail-prayer-section">
             <h3>Prayer</h3>
             <p class="prayer-note" id="prayer-note"></p>
@@ -137,6 +143,27 @@
         </article>
       </aside>
     </main>
+    </div>
+
+    <section class="teaching-panel" id="teaching-panel" aria-label="Teaching videos">
+      <header class="teaching-header">
+        <div>
+          <h2 id="teaching-series-title">Teaching Videos</h2>
+          <p class="teaching-subtitle">Repentance Project 3.0 — expounding on prayer topics. Scroll down from the map to watch; click a topic timestamp to jump in the video and on the map.</p>
+        </div>
+        <button type="button" id="teaching-jump-map" class="text-btn">Back to map ↑</button>
+      </header>
+      <div class="teaching-layout">
+        <div class="teaching-player-wrap">
+          <div id="teaching-player" class="teaching-player" aria-label="YouTube video player"></div>
+          <div id="teaching-video-picker" class="teaching-video-picker" role="tablist" aria-label="Select day"></div>
+        </div>
+        <aside class="teaching-chapters-wrap">
+          <p id="teaching-chapter-meta" class="teaching-chapter-meta"></p>
+          <ul id="teaching-chapters" class="teaching-chapters"></ul>
+        </aside>
+      </div>
+    </section>
   </div>
 
   <dialog id="compare-dialog" class="compare-dialog">
@@ -184,6 +211,8 @@
   <script src="prayer-index.js"></script>
   <script src="prayers/en.js"></script>
   <script src="prayers.js"></script>
+  <script src="videos.js"></script>
   <script src="app.js"></script>
+  <script src="teaching-videos.js"></script>
 </body>
 </html>

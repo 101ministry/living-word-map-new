@@ -1268,11 +1268,30 @@
     });
 
     const prayerSection = document.getElementById('detail-prayer-section');
+    const teachingSection = document.getElementById('detail-teaching-section');
+    const teachingNote = document.getElementById('detail-teaching-note');
+    const watchTeachingBtn = document.getElementById('detail-watch-teaching');
     if (type === 'topic') {
       await renderTopicPrayer(item);
+      const videoEntry = window.VIDEO_DATA?.topicIndex?.[String(item.number)];
+      if (videoEntry && teachingSection) {
+        teachingSection.classList.remove('hidden');
+        const dayLabel = `Day ${videoEntry.day}${videoEntry.part > 1 ? ` Part ${videoEntry.part}` : ''}`;
+        const timeLabel = videoEntry.startSeconds
+          ? ` at ${window.TeachingVideos?.formatTime(videoEntry.startSeconds) || ''}`
+          : '';
+        teachingNote.textContent = `Teaching video: ${dayLabel}${timeLabel}`;
+        watchTeachingBtn.onclick = () => {
+          window.TeachingVideos?.openTopicVideo(item.number);
+          document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+      } else if (teachingSection) {
+        teachingSection.classList.add('hidden');
+      }
     } else {
       prayerSection.classList.add('hidden');
       topicAudio.pause();
+      teachingSection?.classList.add('hidden');
     }
 
     applyGraphView();
@@ -1407,4 +1426,18 @@
   initLanguageSelector().catch(err => {
     console.error('Language catalog failed to load:', err);
   });
+
+  function selectTopicByNumber(number, { scrollTeaching = true } = {}) {
+    const topic = topics.find(t => t.number === number);
+    if (!topic) return;
+    selectNode(`topic-${topic.id}`);
+    if (scrollTeaching && window.TeachingVideos?.openTopicVideo(number)) {
+      document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  window.LivingWordMap = {
+    selectTopicByNumber,
+    selectNode,
+  };
 })();
