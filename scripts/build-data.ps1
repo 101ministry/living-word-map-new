@@ -65,9 +65,41 @@ function Normalize-TopicKey([string]$text) {
     if (-not $text) { return '' }
     $t = $text.ToLower()
     $t = $t -replace '^(spirit of|familiar identity of|interacting with the spirit of)\s+', ''
-    $t = $t -replace '^(being|having|using|going to|reading|playing with|participating in)\s+', ''
+    $t = $t -replace '^(being in|being|having|using|going to|reading|playing with|participating in)\s+', ''
+    $t = $t -replace '-', ''
     $t = $t -replace '[^a-z0-9]+', ' '
     return ($t.Trim() -replace '\s+', ' ')
+}
+
+function Get-TopicKind([string]$text) {
+    if (-not $text) { return 'plain' }
+    $t = $text.ToLower().Trim()
+    if ($t -match '^(spirit of|interacting with the spirit of)\b') { return 'spirit' }
+    if ($t -match '^(being in|being)\b') { return 'being' }
+    if ($t -match '^familiar identity of\b') { return 'familiar' }
+    return 'plain'
+}
+
+function Parse-FruitList([string]$text) {
+    if (-not $text) { return @() }
+    $t = $text.Trim().TrimEnd('.')
+    $t = $t -replace '\s*\(think [^)]+\)', ''
+    $t = $t -replace '\s+with the parent Principality of.+$', ''
+    $t = $t -replace '\s+with Using and Abusing.+$', ''
+    $t = $t.Trim().TrimEnd('.')
+
+    if ($t -match '^(.+),\s*and\s+(.+)$') {
+        $last = $Matches[2].Trim()
+        $rest = $Matches[1]
+        $items = @($rest -split ',\s*' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+        if ($last) { $items += $last }
+        return @($items | Select-Object -Unique)
+    }
+
+    $simple = @($t -split ',\s*' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+    if ($simple.Count -gt 1) { return $simple }
+
+    return @($t)
 }
 
 function Resolve-PrincipalityName([string]$header, [string[]]$knownNames) {
@@ -380,8 +412,11 @@ foreach ($line in ($chartRaw -split '\r?\n')) {
 }
 
 $chartKeyToNum = @{}
+$chartKindByNum = @{}
 foreach ($entry in $chartNames.GetEnumerator()) {
     $key = Normalize-TopicKey $entry.Value
+    $kind = Get-TopicKind $entry.Value
+    $chartKindByNum[[int]$entry.Key] = $kind
     if ($key -and -not $chartKeyToNum.ContainsKey($key)) {
         $chartKeyToNum[$key] = @()
     }
@@ -390,13 +425,9 @@ foreach ($entry in $chartNames.GetEnumerator()) {
 
 function Find-TopicNumbersByLabel([string]$label) {
     $key = Normalize-TopicKey $label
-    if ($key -and $chartKeyToNum.ContainsKey($key)) {
-        return $chartKeyToNum[$key]
-    }
-    foreach ($entry in $chartKeyToNum.GetEnumerator()) {
-        if ($entry.Key -eq $key -or $entry.Key.Contains($key) -or $key.Contains($entry.Key)) {
-            return $entry.Value
-        }
+    if (-not $key) { return @() }
+    if ($chartKeyToNum.ContainsKey($key)) {
+        return @($chartKeyToNum[$key])
     }
     return @()
 }
@@ -447,20 +478,17 @@ foreach ($block in $metadataBlocks) {
     }
 
     $fruit = $null
+    $fruits = @()
     $principality = $null
 
-    if ($b -match 'FRUITS of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
-        $fruit = $matches[1].Trim().TrimEnd('.')
-        $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
+    if ($b -match '(?is)FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
     } elseif ($b -match 'because of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
         $fruit = $matches[1].Trim().TrimEnd('.')
+        $fruits = @($fruit)
         $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
-    } elseif ($b -match 'because FRUITS of\s+(.+?)(?:,\s*which I will forgive)?\.\s*') {
-        $fruit = $matches[1].Trim().TrimEnd('.')
-        $principality = Resolve-PrincipalityFromFruit $fruit
-    } elseif ($b -match 'because of FRUITS of\s+(.+?)(?:\s|$|\.)') {
-        $fruit = $matches[1].Trim().TrimEnd('.')
-        if (-not $principality) { $principality = Resolve-PrincipalityFromFruit $fruit }
     } elseif ($b -match 'parent Principality of\s+(.+?)(?:\s|$|\.)') {
         $principality = Normalize-Principality $matches[1].Trim().TrimEnd('.')
     }
@@ -469,6 +497,7 @@ foreach ($block in $metadataBlocks) {
         metaName = $metaName
         root = $root
         fruit = $fruit
+        fruits = $fruits
         principality = $principality
     }
 }
@@ -537,7 +566,13 @@ for ($num = 1; $num -le 666; $num++) {
     $name = if ($chartNames.ContainsKey($num)) { $chartNames[$num] } else { "Topic $num" }
     $meta = $metadataByNumber[$num]
     $root = if ($meta) { $meta.root } else { $null }
-    $fruit = if ($meta) { $meta.fruit } else { $null }
+    $fruitNames = @()
+    if ($meta -and $meta.fruits -and $meta.fruits.Count -gt 0) {
+        $fruitNames = @($meta.fruits)
+    } elseif ($meta -and $meta.fruit) {
+        $fruitNames = @($meta.fruit)
+    }
+    $fruit = if ($fruitNames.Count -gt 0) { $fruitNames[0] } else { $null }
 
     $principalityNames = [System.Collections.Generic.List[string]]::new()
     if ($meta -and $meta.principality) { [void]$principalityNames.Add($meta.principality) }
@@ -547,22 +582,27 @@ for ($num = 1; $num -le 666; $num++) {
         }
     }
 
+    $rootNames = @()
+    if ($root) { $rootNames = @($root) }
+    $rootIds = @($rootNames | ForEach-Object { Slugify $_ })
+    $fruitIds = @($fruitNames | ForEach-Object { Slugify $_ })
+
     $principalityIds = @($principalityNames | ForEach-Object { Slugify $_ })
     $principality = if ($principalityNames.Count -gt 0) { $principalityNames[0] } else { $null }
     $principalityId = if ($principalityIds.Count -gt 0) { $principalityIds[0] } else { $null }
 
-    if ($root) {
-        $rootId = Slugify $root
+    foreach ($rName in $rootNames) {
+        $rootId = Slugify $rName
         if (-not $rootsMap.ContainsKey($rootId)) {
-            $rootsMap[$rootId] = @{ id = $rootId; name = $root; topicIds = @() }
+            $rootsMap[$rootId] = @{ id = $rootId; name = $rName; topicIds = @() }
         }
         $rootsMap[$rootId].topicIds += $num
     }
 
-    if ($fruit) {
-        $fruitId = Slugify $fruit
+    foreach ($fName in $fruitNames) {
+        $fruitId = Slugify $fName
         if (-not $fruitsMap.ContainsKey($fruitId)) {
-            $fruitsMap[$fruitId] = @{ id = $fruitId; name = $fruit; topicIds = @() }
+            $fruitsMap[$fruitId] = @{ id = $fruitId; name = $fName; topicIds = @() }
         }
         $fruitsMap[$fruitId].topicIds += $num
     }
@@ -586,11 +626,16 @@ for ($num = 1; $num -le 666; $num++) {
         id = $num
         number = $num
         name = $name
+        kind = if ($chartKindByNum.ContainsKey($num)) { $chartKindByNum[$num] } else { Get-TopicKind $name }
         metaName = if ($meta) { $meta.metaName } else { $null }
         root = $root
-        rootId = if ($root) { Slugify $root } else { $null }
+        roots = @($rootNames)
+        rootId = if ($rootIds.Count -gt 0) { $rootIds[0] } else { $null }
+        rootIds = @($rootIds)
         fruit = $fruit
-        fruitId = if ($fruit) { Slugify $fruit } else { $null }
+        fruits = @($fruitNames)
+        fruitId = if ($fruitIds.Count -gt 0) { $fruitIds[0] } else { $null }
+        fruitIds = @($fruitIds)
         principality = $principality
         principalityId = $principalityId
         principalities = @($principalityNames)
@@ -651,24 +696,30 @@ foreach ($topic in $topics) {
     foreach ($principalityId in $topic.principalityIds) {
         $edges += @{ source = "topic-$($topic.id)"; target = $principalityId; type = 'belongs_to' }
     }
-    if ($topic.rootId) {
-        $edges += @{ source = "topic-$($topic.id)"; target = $topic.rootId; type = 'has_root' }
+    foreach ($rootId in $topic.rootIds) {
+        if ($rootId) {
+            $edges += @{ source = "topic-$($topic.id)"; target = $rootId; type = 'has_root' }
+        }
     }
-    if ($topic.fruitId) {
-        $edges += @{ source = "topic-$($topic.id)"; target = $topic.fruitId; type = 'has_fruit' }
+    foreach ($fruitId in $topic.fruitIds) {
+        if ($fruitId) {
+            $edges += @{ source = "topic-$($topic.id)"; target = $fruitId; type = 'has_fruit' }
+        }
     }
 }
 
 # Cross-links: root <-> principality when they share topics
 $rootPrincipalityPairs = @{}
 foreach ($topic in $topics) {
-    if (-not $topic.rootId) { continue }
-    foreach ($principalityId in $topic.principalityIds) {
-        $key = "$($topic.rootId)|$principalityId"
-        if (-not $rootPrincipalityPairs.ContainsKey($key)) {
-            $rootPrincipalityPairs[$key] = 0
+    foreach ($rootId in $topic.rootIds) {
+        if (-not $rootId) { continue }
+        foreach ($principalityId in $topic.principalityIds) {
+            $key = "$rootId|$principalityId"
+            if (-not $rootPrincipalityPairs.ContainsKey($key)) {
+                $rootPrincipalityPairs[$key] = 0
+            }
+            $rootPrincipalityPairs[$key]++
         }
-        $rootPrincipalityPairs[$key]++
     }
 }
 foreach ($key in $rootPrincipalityPairs.Keys) {
@@ -679,13 +730,15 @@ foreach ($key in $rootPrincipalityPairs.Keys) {
 # Cross-links: fruit <-> principality
 $fruitPrincipalityPairs = @{}
 foreach ($topic in $topics) {
-    if (-not $topic.fruitId) { continue }
-    foreach ($principalityId in $topic.principalityIds) {
-        $key = "$($topic.fruitId)|$principalityId"
-        if (-not $fruitPrincipalityPairs.ContainsKey($key)) {
-            $fruitPrincipalityPairs[$key] = 0
+    foreach ($fruitId in $topic.fruitIds) {
+        if (-not $fruitId) { continue }
+        foreach ($principalityId in $topic.principalityIds) {
+            $key = "$fruitId|$principalityId"
+            if (-not $fruitPrincipalityPairs.ContainsKey($key)) {
+                $fruitPrincipalityPairs[$key] = 0
+            }
+            $fruitPrincipalityPairs[$key]++
         }
-        $fruitPrincipalityPairs[$key]++
     }
 }
 foreach ($key in $fruitPrincipalityPairs.Keys) {
@@ -696,10 +749,14 @@ foreach ($key in $fruitPrincipalityPairs.Keys) {
 # Cross-links: root <-> fruit when they co-occur on topics (AnyType-style shared-detail links)
 $rootFruitPairs = @{}
 foreach ($topic in $topics) {
-    if ($topic.rootId -and $topic.fruitId) {
-        $key = "$($topic.rootId)|$($topic.fruitId)"
-        if (-not $rootFruitPairs.ContainsKey($key)) { $rootFruitPairs[$key] = 0 }
-        $rootFruitPairs[$key]++
+    foreach ($rootId in $topic.rootIds) {
+        if (-not $rootId) { continue }
+        foreach ($fruitId in $topic.fruitIds) {
+            if (-not $fruitId) { continue }
+            $key = "$rootId|$fruitId"
+            if (-not $rootFruitPairs.ContainsKey($key)) { $rootFruitPairs[$key] = 0 }
+            $rootFruitPairs[$key]++
+        }
     }
 }
 foreach ($key in $rootFruitPairs.Keys) {
@@ -720,6 +777,8 @@ $stats = @{
     principalitiesWithTranscriptVoices = $principalitiesWithTranscriptVoices
     transcriptQuoteCount = $transcriptQuoteTotal
     multiPrincipalityTopicCount = @($topics | Where-Object { $_.principalityIds.Count -gt 1 }).Count
+    multiFruitTopicCount = @($topics | Where-Object { $_.fruitIds.Count -gt 1 }).Count
+    topicLiteralEdgeCount = @($edges | Where-Object { $_.type -in @('has_root','has_fruit','belongs_to') }).Count
     membershipLabelsMatched = $membershipLabelsMatched
     membershipLabelsUnmatched = $membershipLabelsUnmatched
     membershipSource = [System.IO.Path]::GetFileName($MembershipFile)

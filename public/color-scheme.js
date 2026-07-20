@@ -104,6 +104,43 @@
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
+  function matchFamilyByName(name, families) {
+    if (!name) return null;
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return matchFamily(slug, families);
+  }
+
+  function resolveRootByName(name) {
+    const family = matchFamilyByName(name, ROOT_FAMILIES);
+    if (family) return family.color;
+    return resolveRoot(slugifyName(name));
+  }
+
+  function resolveFruitByName(name) {
+    const family = matchFamilyByName(name, FRUIT_FAMILIES);
+    if (family) return family.color;
+    return resolveFruit(slugifyName(name));
+  }
+
+  function slugifyName(name) {
+    return String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+
+  function linkColor(type, targetId, lookups) {
+    if (type === 'has_root') {
+      const item = lookups?.root?.[targetId];
+      return withAlpha(resolveRoot(item || targetId), 0.9);
+    }
+    if (type === 'has_fruit') {
+      const item = lookups?.fruit?.[targetId];
+      return withAlpha(resolveFruit(item || targetId), 0.88);
+    }
+    if (type === 'belongs_to') {
+      return withAlpha(PRINCIPALITY_COLOR, 0.85);
+    }
+    return 'rgba(255,255,255,0.12)';
+  }
+
   function matchFamily(slug, families) {
     if (!slug) return null;
     const s = slug.toLowerCase();
@@ -172,7 +209,10 @@
     }
     if (lookups.topic[id]) {
       const t = lookups.topic[id];
-      const fill = t.fruitId ? resolveFruit(t.fruitId) : (t.rootId ? resolveRoot(t.rootId) : TOPIC_DEFAULT);
+      const fillId = t.fruitIds?.[0] || t.fruitId || t.rootIds?.[0] || t.rootId;
+      const fill = t.fruitIds?.length || t.fruitId
+        ? resolveFruit(t.fruitIds?.[0] || t.fruitId)
+        : (t.rootIds?.length || t.rootId ? resolveRoot(t.rootIds?.[0] || t.rootId) : TOPIC_DEFAULT);
       return { fill: withAlpha(fill, 0.85), stroke: nodeStroke(fill) };
     }
     return { fill: TOPIC_DEFAULT, stroke: 'rgba(255,255,255,0.15)' };
@@ -194,7 +234,9 @@
       return { borderColor: withAlpha(c, 0.55), color: isLightColor(c) ? c : withAlpha(c, 0.95) };
     }
     if (key === 'topic' && item) {
-      const c = item.fruitId ? resolveFruit(item.fruitId) : resolveRoot(item.rootId);
+      const fruitId = item.fruitIds?.[0] || item.fruitId;
+      const rootId = item.rootIds?.[0] || item.rootId;
+      const c = fruitId ? resolveFruit(fruitId) : resolveRoot(rootId);
       return { borderColor: withAlpha(c, 0.45), color: c || TOPIC_DEFAULT };
     }
     return {};
@@ -222,6 +264,9 @@
     PRINCIPALITY_COLOR,
     resolveRoot,
     resolveFruit,
+    resolveRootByName,
+    resolveFruitByName,
+    linkColor,
     varyColor,
     withAlpha,
     isLightColor,

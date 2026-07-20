@@ -18,14 +18,37 @@ function Normalize-TopicText([string]$text) {
     return $t.Trim()
 }
 
+function Normalize-TopicKey([string]$text) {
+    if (-not $text) { return '' }
+    $t = $text.ToLower()
+    $t = $t -replace '[\u201c\u201d\u2018\u2019''"]', ' '
+    $t = $t -replace '^(spirit of|familiar identity of|interacting with the spirit of)\s+', ''
+    $t = $t -replace '^(being in|being|having|using|going to|reading|playing with|participating in)\s+', ''
+    $t = $t -replace '-', ''
+    $t = $t -replace '[^a-z0-9]+', ' '
+    return ($t.Trim() -replace '\s+', ' ')
+}
+
+function Get-TopicKind([string]$text) {
+    if (-not $text) { return 'plain' }
+    $t = $text.ToLower().Trim()
+    if ($t -match '^(spirit of|interacting with the spirit of)\b') { return 'spirit' }
+    if ($t -match '^spirit [a-z]' -and $t -notmatch '^spirit of\b') { return 'spirit' }
+    if ($t -match '^(being in|being)\b') { return 'being' }
+    if ($t -match '^familiar identity of\b') { return 'familiar' }
+    return 'plain'
+}
+
 function Get-ChartTopics([string]$chartPath) {
     $topics = @()
     Get-Content -LiteralPath $chartPath | ForEach-Object {
         if ($_ -match '^\s*(\d{3})\.\s*(.+?)\s*$') {
+            $name = $Matches[2].Trim()
             $topics += [pscustomobject]@{
                 number = [int]$Matches[1]
-                name   = $Matches[2].Trim()
-                norm   = Normalize-TopicText $Matches[2]
+                name   = $name
+                norm   = Normalize-TopicKey $name
+                kind   = Get-TopicKind $name
             }
         }
     }
@@ -37,96 +60,148 @@ function Strip-Emoji([string]$text) {
     return ($text -replace '[^\x00-\x7F]+', ' ' -replace '\s+', ' ').Trim()
 }
 
+function Clean-SpiritTail([string]$phrase) {
+    if (-not $phrase) { return '' }
+    $phrase = ($phrase -split ', from a')[0]
+    $phrase = ($phrase -split ' from a ')[0]
+    $phrase = ($phrase -split ', with the')[0]
+    $phrase = ($phrase -split ' with the root')[0]
+    $phrase = ($phrase -split ' with .*root')[0]
+    $phrase = ($phrase -split ' and its')[0]
+    $phrase = ($phrase -split ';')[0]
+    $phrase = ($phrase -split ' is happening')[0]
+    return $phrase.Trim()
+}
+
 function Extract-SpiritPhrase([string]$line) {
     $line = Strip-Emoji $line.Trim()
     if (-not $line -or $line -match '^(because|happening because)' ) { return $null }
 
-    if ($line -match '(?i)^interacting with (?:the )?(?:spirit of |spirit )?(.+)$') {
-        $phrase = $Matches[1]
-        $phrase = ($phrase -split ', from a')[0]
-        $phrase = ($phrase -split ' from a ')[0]
-        $phrase = ($phrase -split ', with the')[0]
-        $phrase = ($phrase -split ' with the root')[0]
-        $phrase = ($phrase -split ' with .*root')[0]
-        $phrase = ($phrase -split ' and its')[0]
-        $phrase = ($phrase -split ';')[0]
-        $phrase = ($phrase -split ' is happening')[0]
-        return $phrase.Trim()
+    if ($line -match '(?i)^interacting with (?:the )?spirit of (.+)$') {
+        return Clean-SpiritTail ("spirit of " + $Matches[1])
+    }
+    if ($line -match '(?i)^interacting with (?:the )?spirit (.+)$') {
+        return Clean-SpiritTail ("spirit of " + $Matches[1])
+    }
+    if ($line -match '(?i)^interacting with (?:the )?(.+)$') {
+        return Clean-SpiritTail $Matches[1]
     }
     if ($line -match '(?i)^spirit of (.+)$') {
-        $phrase = $Matches[1]
-        $phrase = ($phrase -split ' with the root')[0]
-        $phrase = ($phrase -split ' with .*root')[0]
-        $phrase = ($phrase -split ';')[0]
-        $phrase = ($phrase -split ' is happening')[0]
-        return $phrase.Trim()
+        return Clean-SpiritTail ("spirit of " + $Matches[1])
     }
     if ($line -match '(?i)^interacting with (?:the )?(.+?) spirit\b') {
-        return $Matches[1].Trim()
+        return Clean-SpiritTail ("spirit of " + $Matches[1])
     }
     if ($line -match '(?i)^interacting with (disembodied .+)$') {
-        $phrase = ($Matches[1] -split ', with the')[0]
-        return $phrase.Trim()
+        return Clean-SpiritTail $Matches[1]
+    }
+    if ($line -match '(?i)^being in (.+)$') {
+        return Clean-SpiritTail ("being in " + $Matches[1])
+    }
+    if ($line -match '(?i)^being (.+)$') {
+        return Clean-SpiritTail ("being " + $Matches[1])
+    }
+    if ($line -match '(?i)^familiar identity of (.+)$') {
+        return Clean-SpiritTail ("familiar identity of " + $Matches[1])
     }
     if ($line -match '(?i)^([a-z][^,]+),\s*with the\b') {
-        return $Matches[1].Trim()
+        return Clean-SpiritTail $Matches[1]
     }
     if ($line -match '(?i)^([a-z][^,]+),\s*from a root\b') {
-        return $Matches[1].Trim()
+        return Clean-SpiritTail $Matches[1]
     }
     if ($line -match '(?i)^([a-z][^,]+)\s+from a root\b') {
-        return $Matches[1].Trim()
+        return Clean-SpiritTail $Matches[1]
     }
     return $null
 }
 
-function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0) {
+function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbers = $null) {
     if (-not $phrase) { return $null }
-    $norm = Normalize-TopicText $phrase
+
+    $phraseKind = Get-TopicKind $phrase
+    $norm = Normalize-TopicKey $phrase
     if (-not $norm) { return $null }
 
+    # Known full-phrase anchors (Spirit Spouse block)
     if ($norm -like '*keeps loving relationships*' -or $norm -like '*keeps people single*') {
         return ($allTopics | Where-Object { $_.number -eq 666 } | Select-Object -First 1)
     }
-    if ($norm -like '*fan fiction*' -or $norm -like '*fan fiction*') {
+    if ($norm -like '*fanfiction*' -or $norm -like '*fan fiction*') {
         return ($allTopics | Where-Object { $_.number -eq 665 } | Select-Object -First 1)
     }
-
-    $candidates = @()
-    foreach ($t in $allTopics) {
-        $score = 0
-        if ($t.norm -eq $norm) { $score += 200 }
-        elseif ($t.norm -like "*$norm*") { $score += 80 + $norm.Length }
-        elseif ($norm -like "*$($t.norm)*" -and $t.norm.Length -gt 4) { $score += 60 + $t.norm.Length }
-
-        $words = @($norm -split '\s+' | Where-Object { $_.Length -gt 2 })
-        foreach ($w in $words) {
-            if ($t.norm -like "*$w*") { $score += 8 }
-        }
-
-        if ($t.norm -like 'spirit of*' -or $t.norm -like 'spirit of *') { $score += 25 }
-        if ($day -ge 1 -and $day -le 8 -and $t.number -ge 574) { $score += 40 }
-        if ($day -ge 9 -and $t.number -le 250) { $score += 25 }
-
-        if ($score -gt 0) {
-            $candidates += [pscustomobject]@{ topic = $t; score = $score }
-        }
+    if ($norm -like 'disembodied spirits*unsaved family*') {
+        return ($allTopics | Where-Object { $_.number -eq 574 } | Select-Object -First 1)
     }
 
-    if ($candidates.Count -eq 0) { return $null }
-    return ($candidates | Sort-Object { -$_.score }, { $_.topic.number } | Select-Object -First 1).topic
+    $aliasNorm = @{
+        'feeling i can t change' = 'thinking i can t change'
+    }
+    if ($aliasNorm.ContainsKey($norm)) {
+        $norm = $aliasNorm[$norm]
+    }
+
+    $pool = $allTopics
+    if ($day -ge 1 -and $day -le 8) {
+        $pool = @($allTopics | Where-Object { $_.number -ge 574 })
+    } elseif ($day -ge 9) {
+        $pool = @($allTopics | Where-Object { $_.number -le 573 })
+    }
+
+    function Select-Unused($candidates) {
+        if (-not $candidates -or $candidates.Count -eq 0) { return $null }
+        if ($usedNumbers) {
+            $unused = @($candidates | Where-Object { -not $usedNumbers.Contains($_.number) } | Sort-Object number)
+            if ($unused.Count -gt 0) { return $unused[0] }
+        }
+        if ($candidates.Count -eq 1) { return $candidates[0] }
+        return ($candidates | Sort-Object number | Select-Object -First 1)
+    }
+
+    # Exact chart key match (required - never match on shared words alone)
+    $exact = @($pool | Where-Object { $_.norm -eq $norm })
+    if ($exact.Count -ge 1) {
+        $picked = Select-Unused $exact
+        if ($picked) { return $picked }
+    }
+
+    if ($exact.Count -gt 1 -and $phraseKind -ne 'plain') {
+        $kindMatch = @($exact | Where-Object { $_.kind -eq $phraseKind })
+        $picked = Select-Unused $kindMatch
+        if ($picked) { return $picked }
+    }
+
+    # Spirit-of phrase must not match "being in" topics (e.g. witchcraft #130 vs #664)
+    if ($phraseKind -eq 'spirit') {
+        $spiritMatch = @($pool | Where-Object { ($_.kind -eq 'spirit' -or ($_.kind -eq 'plain' -and $_.name -match '(?i)^spirit ')) -and ($_.norm -eq $norm -or $_.norm -eq "spirit $norm" -or $_.norm -like "*$norm") })
+        $picked = Select-Unused $spiritMatch
+        if ($picked) { return $picked }
+        return $null
+    }
+    if ($phraseKind -eq 'being') {
+        $beingMatch = @($pool | Where-Object { $_.kind -eq 'being' -and ($_.norm -eq $norm -or $_.norm -like "*$norm") })
+        $picked = Select-Unused $beingMatch
+        if ($picked) { return $picked }
+        return $null
+    }
+
+    return $null
 }
 
 function Parse-Presentation([string]$path, $allTopics) {
     $raw = Get-Content -LiteralPath $path -Raw
     $dayMap = @{}
     $currentDay = $null
+    $usedByDay = @{}
 
     foreach ($line in ($raw -split "`r?`n")) {
         if ($line -match '(?i)^DAY\s+(\d+)\s*$') {
             $currentDay = [int]$Matches[1]
             if (-not $dayMap.ContainsKey($currentDay)) {
                 $dayMap[$currentDay] = @()
+            }
+            if (-not $usedByDay.ContainsKey($currentDay)) {
+                $usedByDay[$currentDay] = [System.Collections.Generic.HashSet[int]]::new()
             }
             continue
         }
@@ -135,8 +210,9 @@ function Parse-Presentation([string]$path, $allTopics) {
         $phrase = Extract-SpiritPhrase $line
         if (-not $phrase) { continue }
 
-        $topic = Match-ChartTopic $phrase $allTopics $currentDay
+        $topic = Match-ChartTopic $phrase $allTopics $currentDay $usedByDay[$currentDay]
         if ($topic) {
+            [void]$usedByDay[$currentDay].Add($topic.number)
             $dayMap[$currentDay] += [pscustomobject]@{
                 phrase = $phrase
                 number = $topic.number

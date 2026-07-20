@@ -161,6 +161,25 @@ button:hover, select:hover {
   cursor: pointer;
 }
 
+.filter-subsection {
+  margin: 0.75rem 0 1rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+}
+
+.filter-subsection h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.filter-subsection label {
+  font-size: 0.8rem;
+}
+
 .compare-panel {
   margin-bottom: 1rem;
   padding-bottom: 0.85rem;

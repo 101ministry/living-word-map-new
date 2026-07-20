@@ -25,7 +25,16 @@
     selectedId: null,
     quoteIndex: 0,
     viewMode: 'constellation',
-    show: { principality: true, root: true, fruit: true, topic: false },
+    show: {
+      principality: true,
+      root: true,
+      fruit: true,
+      topic: false,
+      topicRoot: true,
+      topicFruit: true,
+      topicPrincipality: true,
+      aggregateLinks: true,
+    },
     highlightIds: new Set(),
     compareIds: [],
     language: 'en',
@@ -304,6 +313,37 @@
     return [];
   }
 
+  function topicRootIds(topic) {
+    if (topic?.rootIds?.length) return topic.rootIds;
+    if (topic?.rootId) return [topic.rootId];
+    return [];
+  }
+
+  function topicFruitIds(topic) {
+    if (topic?.fruitIds?.length) return topic.fruitIds;
+    if (topic?.fruitId) return [topic.fruitId];
+    return [];
+  }
+
+  function topicMatchesRoot(topic, id) {
+    return topicRootIds(topic).includes(id);
+  }
+
+  function topicMatchesFruit(topic, id) {
+    return topicFruitIds(topic).includes(id);
+  }
+
+  function topicMatchesNode(topic, id) {
+    return topicHasPrincipality(topic, id)
+      || topicMatchesRoot(topic, id)
+      || topicMatchesFruit(topic, id)
+      || `topic-${topic.id}` === id;
+  }
+
+  function uniqueLookupItems(ids, lookup) {
+    return [...new Set(ids)].map(id => lookup[id]).filter(Boolean);
+  }
+
   function topicHasPrincipality(topic, id) {
     return topicPrincipalityIds(topic).includes(id);
   }
@@ -451,8 +491,16 @@
           break;
         }
       }
-      if (!anchor && topic.rootId && nodeById[topic.rootId]?.x != null) anchor = nodeById[topic.rootId];
-      if (!anchor && topic.fruitId && nodeById[topic.fruitId]?.x != null) anchor = nodeById[topic.fruitId];
+      if (!anchor) {
+        for (const rid of topicRootIds(topic)) {
+          if (nodeById[rid]?.x != null) { anchor = nodeById[rid]; break; }
+        }
+      }
+      if (!anchor) {
+        for (const fid of topicFruitIds(topic)) {
+          if (nodeById[fid]?.x != null) { anchor = nodeById[fid]; break; }
+        }
+      }
 
       const seed = hashId(node.id);
       const angle = (seed % 360) * (Math.PI / 180);
@@ -602,7 +650,7 @@
 
     const topicLimit = state.viewMode === 'constellation' ? 0 : (state.show.topic ? topics.length : 0);
     const visibleTopics = state.selectedId && state.viewMode === 'constellation'
-      ? topics.filter(t => topicHasPrincipality(t, state.selectedId) || t.rootId === state.selectedId || t.fruitId === state.selectedId || `topic-${t.id}` === state.selectedId)
+      ? topics.filter(t => topicMatchesNode(t, state.selectedId))
       : topics.slice(0, topicLimit);
 
     if (state.selectedId && state.viewMode === 'constellation') {
@@ -619,7 +667,21 @@
       });
     }
 
+    const showTopicLinks = state.show.topic || (state.selectedId && state.viewMode === 'constellation');
+    const allowedLinkTypes = new Set();
+    if (state.show.aggregateLinks) {
+      allowedLinkTypes.add('root_principality');
+      allowedLinkTypes.add('fruit_principality');
+      allowedLinkTypes.add('root_fruit');
+    }
+    if (showTopicLinks) {
+      if (state.show.topicRoot) allowedLinkTypes.add('has_root');
+      if (state.show.topicFruit) allowedLinkTypes.add('has_fruit');
+      if (state.show.topicPrincipality) allowedLinkTypes.add('belongs_to');
+    }
+
     edges.forEach(e => {
+      if (!allowedLinkTypes.has(e.type)) return;
       if (nodeIds.has(e.source) && nodeIds.has(e.target)) {
         links.push({ source: e.source, target: e.target, type: e.type });
       }
@@ -738,12 +800,17 @@
       if (state.highlightIds.size && !(state.highlightIds.has(s) && state.highlightIds.has(t))) {
         return 'rgba(255,255,255,0.03)';
       }
+      if (l.type) {
+        const targetId = t.startsWith('topic-') ? s : t;
+        return colors.linkColor(l.type, targetId, lookups);
+      }
       return 'rgba(255,255,255,0.12)';
     })
     .linkWidth(l => {
       const s = typeof l.source === 'object' ? l.source.id : l.source;
       const t = typeof l.target === 'object' ? l.target.id : l.target;
       if (state.highlightIds.has(s) && state.highlightIds.has(t)) return 1.5;
+      if (l.type === 'has_root' || l.type === 'has_fruit' || l.type === 'belongs_to') return 0.65;
       return 0.5;
     })
     .linkDirectionalParticles(0)
@@ -963,23 +1030,23 @@
     if (type === 'principality') {
       const pTopics = topics.filter(t => topicHasPrincipality(t, id));
       result.topics = pTopics;
-      result.roots = [...new Set(pTopics.map(t => t.rootId).filter(Boolean))].map(rid => lookups.root[rid]).filter(Boolean);
-      result.fruits = [...new Set(pTopics.map(t => t.fruitId).filter(Boolean))].map(fid => lookups.fruit[fid]).filter(Boolean);
+      result.roots = uniqueLookupItems(pTopics.flatMap(t => topicRootIds(t)), lookups.root);
+      result.fruits = uniqueLookupItems(pTopics.flatMap(t => topicFruitIds(t)), lookups.fruit);
     } else if (type === 'root') {
-      const rTopics = topics.filter(t => t.rootId === id);
+      const rTopics = topics.filter(t => topicMatchesRoot(t, id));
       result.topics = rTopics;
-      result.principalities = [...new Set(rTopics.flatMap(t => topicPrincipalityIds(t)))].map(pid => lookups.principality[pid]).filter(Boolean);
-      result.fruits = [...new Set(rTopics.map(t => t.fruitId).filter(Boolean))].map(fid => lookups.fruit[fid]).filter(Boolean);
+      result.principalities = uniqueLookupItems(rTopics.flatMap(t => topicPrincipalityIds(t)), lookups.principality);
+      result.fruits = uniqueLookupItems(rTopics.flatMap(t => topicFruitIds(t)), lookups.fruit);
     } else if (type === 'fruit') {
-      const fTopics = topics.filter(t => t.fruitId === id);
+      const fTopics = topics.filter(t => topicMatchesFruit(t, id));
       result.topics = fTopics;
-      result.principalities = [...new Set(fTopics.flatMap(t => topicPrincipalityIds(t)))].map(pid => lookups.principality[pid]).filter(Boolean);
-      result.roots = [...new Set(fTopics.map(t => t.rootId).filter(Boolean))].map(rid => lookups.root[rid]).filter(Boolean);
+      result.principalities = uniqueLookupItems(fTopics.flatMap(t => topicPrincipalityIds(t)), lookups.principality);
+      result.roots = uniqueLookupItems(fTopics.flatMap(t => topicRootIds(t)), lookups.root);
     } else if (type === 'topic') {
       const t = lookups.topic[id];
       result.principalities = getTopicPrincipalities(t);
-      if (t.rootId) result.roots.push(lookups.root[t.rootId]);
-      if (t.fruitId) result.fruits.push(lookups.fruit[t.fruitId]);
+      result.roots = topicRootIds(t).map(rid => lookups.root[rid]).filter(Boolean);
+      result.fruits = topicFruitIds(t).map(fid => lookups.fruit[fid]).filter(Boolean);
       result.topics = [t];
     }
     return result;
@@ -1208,7 +1275,11 @@
     document.getElementById('detail-title').textContent = type === 'topic' ? item.name : item.name;
     const connCount = getConnections(id).topics.length;
     if (type === 'topic') {
-      document.getElementById('detail-meta').textContent = `Topic #${item.number}${item.principalities?.length > 1 ? ` · ${item.principalities.length} principalities` : ''}`;
+      const parts = [`Topic #${item.number}`];
+      if (item.principalities?.length > 1) parts.push(`${item.principalityIds.length} principalities`);
+      if (topicRootIds(item).length > 1) parts.push(`${topicRootIds(item).length} roots`);
+      if (topicFruitIds(item).length > 1) parts.push(`${topicFruitIds(item).length} fruits`);
+      document.getElementById('detail-meta').textContent = parts.join(' · ');
     } else if (type === 'root' || type === 'fruit') {
       const pCount = getConnections(id).principalities.length;
       document.getElementById('detail-meta').textContent =
@@ -1259,7 +1330,9 @@
     document.getElementById('detail-topic-count').textContent = `(${conn.topics.length})`;
     const topicsEl = document.getElementById('detail-topics');
     topicsEl.innerHTML = topicList.map(t => {
-      const dotColor = t.fruitId ? colors.resolveFruit(t.fruitId) : (t.rootId ? colors.resolveRoot(t.rootId) : colors.PRINCIPALITY_COLOR);
+      const fruitId = topicFruitIds(t)[0];
+      const rootId = topicRootIds(t)[0];
+      const dotColor = fruitId ? colors.resolveFruit(fruitId) : (rootId ? colors.resolveRoot(rootId) : colors.PRINCIPALITY_COLOR);
       const hasVideo = window.VIDEO_DATA?.topicIndex?.[String(t.number)];
       const videoMark = hasVideo ? '<span class="topic-video-mark" title="Teaching video available">▶</span>' : '';
       return `<li data-node="topic-${t.id}"><span class="topic-dot" style="background:${dotColor}"></span><span class="num">${String(t.number).padStart(3, '0')}</span>${t.name}${videoMark}</li>`;
@@ -1338,6 +1411,22 @@
   document.getElementById('show-topics').addEventListener('change', e => {
     state.show.topic = e.target.checked;
     if (e.target.checked) state.viewMode = 'explore';
+    refreshGraph();
+  });
+  document.getElementById('show-topic-root-links')?.addEventListener('change', e => {
+    state.show.topicRoot = e.target.checked;
+    refreshGraph();
+  });
+  document.getElementById('show-topic-fruit-links')?.addEventListener('change', e => {
+    state.show.topicFruit = e.target.checked;
+    refreshGraph();
+  });
+  document.getElementById('show-topic-principality-links')?.addEventListener('change', e => {
+    state.show.topicPrincipality = e.target.checked;
+    refreshGraph();
+  });
+  document.getElementById('show-aggregate-links')?.addEventListener('change', e => {
+    state.show.aggregateLinks = e.target.checked;
     refreshGraph();
   });
 
