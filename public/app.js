@@ -20,6 +20,7 @@
     fruit: Object.fromEntries(fruits.map(f => [f.id, f])),
     topic: Object.fromEntries(topics.map(t => [`topic-${t.id}`, t])),
   };
+  const principalityIds = new Set(principalities.map(p => p.id));
 
   const state = {
     selectedId: null,
@@ -352,7 +353,11 @@
     return topicPrincipalityIds(topic).map(pid => lookups.principality[pid]).filter(Boolean);
   }
 
-  function nodeType(id) {
+  function nodeType(idOrNode) {
+    if (typeof idOrNode === 'object' && idOrNode != null && idOrNode.type) {
+      return idOrNode.type;
+    }
+    const id = typeof idOrNode === 'object' && idOrNode != null ? idOrNode.id : idOrNode;
     if (id.startsWith('topic-')) return 'topic';
     if (lookups.principality[id]) return 'principality';
     if (lookups.root[id]) return 'root';
@@ -529,7 +534,7 @@
 
     Graph.d3Force('charge', d3.forceManyBody()
       .strength(node => {
-        const type = nodeType(asNodeId(node));
+        const type = nodeType(node);
         if (isConstellation) {
           if (type === 'principality') return -900;
           if (type === 'topic') return -40;
@@ -637,12 +642,14 @@
     }
     if (state.show.root) {
       roots.forEach(r => {
+        if (principalityIds.has(r.id)) return;
         rootNodes.push({ id: r.id, type: 'root' });
         nodeIds.add(r.id);
       });
     }
     if (state.show.fruit) {
       fruits.forEach(f => {
+        if (principalityIds.has(f.id)) return;
         fruitNodes.push({ id: f.id, type: 'fruit' });
         nodeIds.add(f.id);
       });
@@ -769,9 +776,9 @@
     .nodeVal(node => nodeSize(asNodeId(node)))
     .nodeRelSize(4)
     .showPointerCursor(false)
-    .nodeCanvasObjectMode(node => (nodeType(asNodeId(node)) === 'principality' ? 'after' : undefined))
+    .nodeCanvasObjectMode(node => (nodeType(node) === 'principality' ? 'after' : undefined))
     .nodeCanvasObject((node, ctx, globalScale) => {
-      if (nodeType(asNodeId(node)) === 'principality') {
+      if (nodeType(node) === 'principality') {
         paintPrincipalityNode(node, ctx, globalScale);
       }
     })
@@ -909,7 +916,7 @@
   }
 
   function fitConstellationRing(duration = ZOOM_MS) {
-    fitNodesToView(node => nodeType(asNodeId(node)) === 'principality', 42, duration);
+    fitNodesToView(node => nodeType(node) === 'principality', 42, duration);
   }
 
   function fitConstellationFull(duration = ZOOM_MS) {
@@ -925,7 +932,7 @@
   }
 
   function fitExploreOverview(duration = ZOOM_MS) {
-    fitNodesToView(node => nodeType(asNodeId(node)) !== 'topic', 68, duration);
+    fitNodesToView(node => nodeType(node) !== 'topic', 68, duration);
   }
 
   function applyGraphView(duration = ZOOM_MS, delay = VIEW_SETTLE_MS) {
