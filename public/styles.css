@@ -835,6 +835,16 @@ button:hover, select:hover {
 .topic-list .num {
   color: var(--text-muted);
   margin-right: 0.35rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.topic-video-mark {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
 }
 
 .hidden {

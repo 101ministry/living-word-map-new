@@ -1,7 +1,8 @@
-# Builds public/videos.js from data/teaching-videos.json and YouTube auto-captions.
+# Builds public/videos.js from teaching-videos.json, chart, and TOPICS-666-PRESENTATION.txt
 param(
     [string]$VideosFile = "$PSScriptRoot\..\data\teaching-videos.json",
     [string]$ChartFile = "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt",
+    [string]$PresentationFile = "$PSScriptRoot\..\data\TOPICS-666-PRESENTATION.txt",
     [string]$OutputFile = "$PSScriptRoot\..\public\videos.js",
     [switch]$SkipCaptions
 )
@@ -10,7 +11,11 @@ $ErrorActionPreference = 'Stop'
 
 function Normalize-TopicText([string]$text) {
     if (-not $text) { return '' }
-    return ($text.ToLower() -replace '[^a-z0-9\s]', ' ' -replace '\s+', ' ').Trim()
+    $t = $text.ToLower()
+    $t = $t -replace '[\u201c\u201d\u2018\u2019''"]', ' '
+    $t = $t -replace '[^a-z0-9\s]', ' '
+    $t = $t -replace '\s+', ' '
+    return $t.Trim()
 }
 
 function Get-ChartTopics([string]$chartPath) {
@@ -27,7 +32,124 @@ function Get-ChartTopics([string]$chartPath) {
     return $topics
 }
 
-function Get-YouTubeCaptionUrl([string]$videoId) {
+function Strip-Emoji([string]$text) {
+    if (-not $text) { return '' }
+    return ($text -replace '[^\x00-\x7F]+', ' ' -replace '\s+', ' ').Trim()
+}
+
+function Extract-SpiritPhrase([string]$line) {
+    $line = Strip-Emoji $line.Trim()
+    if (-not $line -or $line -match '^(because|happening because)' ) { return $null }
+
+    if ($line -match '(?i)^interacting with (?:the )?(?:spirit of |spirit )?(.+)$') {
+        $phrase = $Matches[1]
+        $phrase = ($phrase -split ', from a')[0]
+        $phrase = ($phrase -split ' from a ')[0]
+        $phrase = ($phrase -split ', with the')[0]
+        $phrase = ($phrase -split ' with the root')[0]
+        $phrase = ($phrase -split ' with .*root')[0]
+        $phrase = ($phrase -split ' and its')[0]
+        $phrase = ($phrase -split ';')[0]
+        $phrase = ($phrase -split ' is happening')[0]
+        return $phrase.Trim()
+    }
+    if ($line -match '(?i)^spirit of (.+)$') {
+        $phrase = $Matches[1]
+        $phrase = ($phrase -split ' with the root')[0]
+        $phrase = ($phrase -split ' with .*root')[0]
+        $phrase = ($phrase -split ';')[0]
+        $phrase = ($phrase -split ' is happening')[0]
+        return $phrase.Trim()
+    }
+    if ($line -match '(?i)^interacting with (?:the )?(.+?) spirit\b') {
+        return $Matches[1].Trim()
+    }
+    if ($line -match '(?i)^interacting with (disembodied .+)$') {
+        $phrase = ($Matches[1] -split ', with the')[0]
+        return $phrase.Trim()
+    }
+    if ($line -match '(?i)^([a-z][^,]+),\s*with the\b') {
+        return $Matches[1].Trim()
+    }
+    if ($line -match '(?i)^([a-z][^,]+),\s*from a root\b') {
+        return $Matches[1].Trim()
+    }
+    if ($line -match '(?i)^([a-z][^,]+)\s+from a root\b') {
+        return $Matches[1].Trim()
+    }
+    return $null
+}
+
+function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0) {
+    if (-not $phrase) { return $null }
+    $norm = Normalize-TopicText $phrase
+    if (-not $norm) { return $null }
+
+    if ($norm -like '*keeps loving relationships*' -or $norm -like '*keeps people single*') {
+        return ($allTopics | Where-Object { $_.number -eq 666 } | Select-Object -First 1)
+    }
+    if ($norm -like '*fan fiction*' -or $norm -like '*fan fiction*') {
+        return ($allTopics | Where-Object { $_.number -eq 665 } | Select-Object -First 1)
+    }
+
+    $candidates = @()
+    foreach ($t in $allTopics) {
+        $score = 0
+        if ($t.norm -eq $norm) { $score += 200 }
+        elseif ($t.norm -like "*$norm*") { $score += 80 + $norm.Length }
+        elseif ($norm -like "*$($t.norm)*" -and $t.norm.Length -gt 4) { $score += 60 + $t.norm.Length }
+
+        $words = @($norm -split '\s+' | Where-Object { $_.Length -gt 2 })
+        foreach ($w in $words) {
+            if ($t.norm -like "*$w*") { $score += 8 }
+        }
+
+        if ($t.norm -like 'spirit of*' -or $t.norm -like 'spirit of *') { $score += 25 }
+        if ($day -ge 1 -and $day -le 8 -and $t.number -ge 574) { $score += 40 }
+        if ($day -ge 9 -and $t.number -le 250) { $score += 25 }
+
+        if ($score -gt 0) {
+            $candidates += [pscustomobject]@{ topic = $t; score = $score }
+        }
+    }
+
+    if ($candidates.Count -eq 0) { return $null }
+    return ($candidates | Sort-Object { -$_.score }, { $_.topic.number } | Select-Object -First 1).topic
+}
+
+function Parse-Presentation([string]$path, $allTopics) {
+    $raw = Get-Content -LiteralPath $path -Raw
+    $dayMap = @{}
+    $currentDay = $null
+
+    foreach ($line in ($raw -split "`r?`n")) {
+        if ($line -match '(?i)^DAY\s+(\d+)\s*$') {
+            $currentDay = [int]$Matches[1]
+            if (-not $dayMap.ContainsKey($currentDay)) {
+                $dayMap[$currentDay] = @()
+            }
+            continue
+        }
+        if ($null -eq $currentDay) { continue }
+
+        $phrase = Extract-SpiritPhrase $line
+        if (-not $phrase) { continue }
+
+        $topic = Match-ChartTopic $phrase $allTopics $currentDay
+        if ($topic) {
+            $dayMap[$currentDay] += [pscustomobject]@{
+                phrase = $phrase
+                number = $topic.number
+                name   = $topic.name
+            }
+        } else {
+            Write-Warning "Day $currentDay`: could not match topic phrase: $phrase"
+        }
+    }
+    return $dayMap
+}
+
+function Get-YouTubePlayerInfo([string]$videoId) {
     try {
         $page = Invoke-WebRequest -Uri "https://www.youtube.com/watch?v=$videoId" -UseBasicParsing -Headers @{
             'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
@@ -37,16 +159,10 @@ function Get-YouTubeCaptionUrl([string]$videoId) {
             $match = [regex]::Match($page.Content, 'ytInitialPlayerResponse\s*=\s*(\{.+?\})\s*;\s*var')
         }
         if ($match.Success) {
-            $player = $match.Groups[1].Value | ConvertFrom-Json
-            $tracks = $player.captions.playerCaptionsTracklistRenderer.captionTracks
-            if ($tracks -and $tracks.Count -gt 0) {
-                $en = $tracks | Where-Object { $_.languageCode -like 'en*' } | Select-Object -First 1
-                if (-not $en) { $en = $tracks[0] }
-                return $en.baseUrl
-            }
+            return $match.Groups[1].Value | ConvertFrom-Json
         }
     } catch {
-        Write-Warning "Could not load caption URL for ${videoId}: $($_.Exception.Message)"
+        Write-Warning "Could not load player info for ${videoId}: $($_.Exception.Message)"
     }
     return $null
 }
@@ -62,53 +178,31 @@ function Parse-CaptionSegments([string]$xml) {
                 norm  = Normalize-TopicText $raw
             }
         }
-    } elseif ($xml -match '<p t=') {
-        [regex]::Matches($xml, '<p t="(\d+)"[^>]*>(.*?)</p>') | ForEach-Object {
-            $raw = [System.Net.WebUtility]::HtmlDecode($_.Groups[2].Value -replace '<[^>]+>', '')
-            $segments += [pscustomobject]@{
-                start = [double]$_.Groups[1].Value / 1000.0
-                text  = $raw
-                norm  = Normalize-TopicText $raw
-            }
-        }
     }
     return $segments
 }
 
-function Find-TopicTimestamps($segments, $topics, [int[]]$candidateNumbers) {
-    $found = @{}
+function Find-CaptionTimestamp($segments, $topicNorm) {
+    if (-not $segments -or -not $topicNorm) { return $null }
     $patterns = @(
-        @{ re = 'guilty of {0}'; weight = 3 },
-        @{ re = 'serve {0}'; weight = 2 },
-        @{ re = '{0} is happening'; weight = 2 },
-        @{ re = '{0}'; weight = 1 }
+        "guilty of $topicNorm",
+        "serve $topicNorm",
+        "$topicNorm is happening",
+        $topicNorm
     )
-
-    foreach ($num in $candidateNumbers) {
-        $topic = $topics | Where-Object { $_.number -eq $num } | Select-Object -First 1
-        if (-not $topic) { continue }
-        $normTopic = $topic.norm
-        if (-not $normTopic) { continue }
-
-        $bestStart = $null
-        $bestWeight = 0
+    foreach ($pat in $patterns) {
         foreach ($seg in $segments) {
-            if (-not $seg.norm) { continue }
-            foreach ($pat in $patterns) {
-                $needle = ($pat.re -f $normTopic)
-                if ($seg.norm -like "*$needle*") {
-                    if ($pat.weight -gt $bestWeight -or ($pat.weight -eq $bestWeight -and ($null -eq $bestStart -or $seg.start -lt $bestStart))) {
-                        $bestWeight = $pat.weight
-                        $bestStart = [int][Math]::Floor($seg.start)
-                    }
-                }
+            if ($seg.norm -like "*$pat*") {
+                return [int][Math]::Floor($seg.start)
             }
         }
-        if ($null -ne $bestStart) {
-            $found[$num] = $bestStart
-        }
     }
-    return $found
+    return $null
+}
+
+function Estimate-Timestamp([int]$index, [int]$count, [int]$durationSeconds) {
+    if ($count -le 0) { return 0 }
+    return [int][Math]::Floor($durationSeconds * $index / $count)
 }
 
 function Write-Js([object]$payload, [string]$path) {
@@ -122,68 +216,94 @@ $topics = Get-ChartTopics $ChartFile
 $topicByNumber = @{}
 foreach ($t in $topics) { $topicByNumber[$t.number] = $t.name }
 
+$dayTopics = Parse-Presentation $PresentationFile $topics
+
+$videosByDay = @{}
+foreach ($video in $config.videos) {
+    $d = [string]$video.day
+    if (-not $videosByDay.ContainsKey($d)) { $videosByDay[$d] = @() }
+    $videosByDay[$d] += $video
+}
+foreach ($key in @($videosByDay.Keys)) {
+    $videosByDay[$key] = @($videosByDay[$key] | Sort-Object { [int]$_.part })
+}
+
 $videosOut = @()
 $topicIndex = @{}
-$nextTopic = 1
-$maxTopic = $topics.Count
 
-foreach ($video in $config.videos) {
-    Write-Host "Processing Day $($video.day)$(if ($video.part -gt 1) { " part $($video.part)" }) ($($video.youtubeId))..."
+foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part })) {
+    $day = [int]$video.day
+    $part = [int]$video.part
+    Write-Host "Processing Day $day$(if ($part -gt 1) { " part $part" }) ($($video.youtubeId))..."
 
-    $chapters = @()
+    $allDayTopics = @($dayTopics[$day])
+    $dayVideoList = $videosByDay["$day"]
+    $partIndex = [array]::IndexOf($dayVideoList, $video)
+    $partCount = $dayVideoList.Count
+    $chunkSize = if ($allDayTopics.Count -gt 0 -and $partCount -gt 0) {
+        [int][Math]::Ceiling($allDayTopics.Count / $partCount)
+    } else { 0 }
+    $startIdx = $partIndex * $chunkSize
+    $slice = @()
+    if ($chunkSize -gt 0 -and $startIdx -lt $allDayTopics.Count) {
+        $endIdx = [Math]::Min($startIdx + $chunkSize - 1, $allDayTopics.Count - 1)
+        $slice = $allDayTopics[$startIdx..$endIdx]
+    }
+
+    Write-Host "  Topics: $($slice.Count) mapped from presentation"
+
+    $duration = 3600
     $segments = @()
-
-    if (-not $SkipCaptions) {
-        $captionUrl = Get-YouTubeCaptionUrl $video.youtubeId
-        if ($captionUrl) {
+    $player = Get-YouTubePlayerInfo $video.youtubeId
+    if ($player -and $player.videoDetails -and $player.videoDetails.lengthSeconds) {
+        $duration = [int]$player.videoDetails.lengthSeconds
+    }
+    if (-not $SkipCaptions -and $player -and $player.captions -and $player.captions.playerCaptionsTracklistRenderer) {
+        $tracks = $player.captions.playerCaptionsTracklistRenderer.captionTracks
+        if ($tracks -and $tracks.Count -gt 0) {
+            $captionUrl = ($tracks | Where-Object { $_.languageCode -like 'en*' } | Select-Object -First 1).baseUrl
+            if (-not $captionUrl) { $captionUrl = $tracks[0].baseUrl }
             try {
-                $xml = (Invoke-WebRequest -Uri $captionUrl -UseBasicParsing).Content
-                $segments = Parse-CaptionSegments $xml
-                Write-Host "  Captions: $($segments.Count) segments"
+                $xml = (Invoke-WebRequest -Uri $captionUrl -UseBasicParsing -Headers @{
+                    'Referer' = "https://www.youtube.com/watch?v=$($video.youtubeId)"
+                }).Content
+                if ($xml) { $segments = Parse-CaptionSegments $xml }
+                Write-Host "  Captions: $($segments.Count) segments, duration ${duration}s"
             } catch {
                 Write-Warning "  Caption fetch failed: $($_.Exception.Message)"
             }
-        } else {
-            Write-Warning "  No captions found"
         }
-    }
-
-    # Scan forward from next expected topic (up to 25 topics per video).
-    $candidateNumbers = @()
-    for ($n = $nextTopic; $n -lt [Math]::Min($nextTopic + 25, $maxTopic + 1); $n++) {
-        $candidateNumbers += $n
-    }
-
-    $timestamps = @{}
-    if ($segments.Count -gt 0) {
-        $timestamps = Find-TopicTimestamps $segments $topics $candidateNumbers
-    }
-
-    $matched = @($timestamps.Keys | Sort-Object)
-    if ($matched.Count -gt 0) {
-        foreach ($num in $matched) {
-            $chapters += [pscustomobject]@{
-                topicNumber  = $num
-                topicName    = $topicByNumber[$num]
-                startSeconds = $timestamps[$num]
-            }
-            $topicIndex["$num"] = [pscustomobject]@{
-                youtubeId    = $video.youtubeId
-                day          = $video.day
-                part         = $video.part
-                startSeconds = $timestamps[$num]
-                videoKey     = "day-$($video.day)-part-$($video.part)"
-            }
-        }
-        $nextTopic = ($matched[-1] + 1)
     } else {
-        Write-Warning "  No topic timestamps matched - video registered without chapters"
+        Write-Host "  Duration estimate: ${duration}s (proportional timestamps)"
+    }
+
+    $chapters = @()
+    for ($i = 0; $i -lt $slice.Count; $i++) {
+        $entry = $slice[$i]
+        $topicNorm = Normalize-TopicText $entry.name
+        $startSeconds = Find-CaptionTimestamp $segments $topicNorm
+        if ($null -eq $startSeconds) {
+            $startSeconds = Estimate-Timestamp $i $slice.Count $duration
+        }
+
+        $chapters += [pscustomobject]@{
+            topicNumber  = $entry.number
+            topicName    = $entry.name
+            startSeconds = $startSeconds
+        }
+        $topicIndex["$($entry.number)"] = [pscustomobject]@{
+            youtubeId    = $video.youtubeId
+            day          = $day
+            part         = $part
+            startSeconds = $startSeconds
+            videoKey     = "day-$day-part-$part"
+        }
     }
 
     $videosOut += [pscustomobject]@{
-        key          = "day-$($video.day)-part-$($video.part)"
-        day          = [int]$video.day
-        part         = [int]$video.part
+        key          = "day-$day-part-$part"
+        day          = $day
+        part         = $part
         title        = [string]$video.title
         youtubeId    = [string]$video.youtubeId
         url          = [string]$video.url
@@ -203,4 +323,4 @@ $payload = [pscustomobject]@{
 
 Write-Js $payload $OutputFile
 $chapterTotal = ($videosOut | ForEach-Object { $_.chapters.Count } | Measure-Object -Sum).Sum
-Write-Host "Wrote $OutputFile - $($videosOut.Count) videos, $chapterTotal topic timestamps"
+Write-Host "Wrote $OutputFile - $($videosOut.Count) videos, $chapterTotal topic chapters"

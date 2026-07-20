@@ -1260,7 +1260,9 @@
     const topicsEl = document.getElementById('detail-topics');
     topicsEl.innerHTML = topicList.map(t => {
       const dotColor = t.fruitId ? colors.resolveFruit(t.fruitId) : (t.rootId ? colors.resolveRoot(t.rootId) : colors.PRINCIPALITY_COLOR);
-      return `<li data-node="topic-${t.id}"><span class="topic-dot" style="background:${dotColor}"></span><span class="num">${String(t.number).padStart(3, '0')}</span>${t.name}</li>`;
+      const hasVideo = window.VIDEO_DATA?.topicIndex?.[String(t.number)];
+      const videoMark = hasVideo ? '<span class="topic-video-mark" title="Teaching video available">▶</span>' : '';
+      return `<li data-node="topic-${t.id}"><span class="topic-dot" style="background:${dotColor}"></span><span class="num">${String(t.number).padStart(3, '0')}</span>${t.name}${videoMark}</li>`;
     }).join('');
     topicsSection.style.display = conn.topics.length ? '' : 'none';
     topicsEl.querySelectorAll('li').forEach(li => {
