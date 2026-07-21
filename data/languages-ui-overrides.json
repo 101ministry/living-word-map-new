@@ -2,7 +2,10 @@
   "zh": {
     "prayerLanguageLabel": "祷告语言",
     "mapLanguageNote": "地图标签仍为英文。此选项用于祷告文本和音频。",
-    "translationComingSoon": "翻译进行中。完成前显示英文。",
+    "translationComingSoon": "666 条祷告已提供中文版本。",
+    "corePrayerTitle": "核心祷告",
+    "corePrayerHint": "将[主题]替换为具体的祷告主题。请大声宣读。",
+    "spokenNote": "这些祷告需要大声宣读，不可只是默读。",
     "openCorePrayer": "核心祷告",
     "prayerTitle": "祷告",
     "prayerLanguageReady": "祷告已加载",

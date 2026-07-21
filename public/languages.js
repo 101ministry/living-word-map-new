@@ -22,13 +22,13 @@ window.LANGUAGE_CATALOG = {
                       },
                "zh":  {
                           "prayerTitle":  "祷告",
-                          "corePrayerTitle":  "Core Prayer",
-                          "corePrayerHint":  "Replace [topic] with the specific prayer topic. Speak out loud.",
-                          "spokenNote":  "These prayers are to be spoken, not simply read silently.",
+                          "corePrayerTitle":  "核心祷告",
+                          "corePrayerHint":  "将[主题]替换为具体的祷告主题。请大声宣读。",
+                          "spokenNote":  "这些祷告需要大声宣读，不可只是默读。",
                           "openCorePrayer":  "核心祷告",
                           "listenPrayer":  "Listen",
                           "audioComingSoon":  "音频录制即将推出，目前请大声朗读祷告。",
-                          "translationComingSoon":  "翻译进行中。完成前显示英文。",
+                          "translationComingSoon":  "666 条祷告已提供中文版本。",
                           "noPrayer":  "No prayer found for this topic.",
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "祷告语言",
@@ -244,7 +244,7 @@ window.LANGUAGE_CATALOG = {
                           "name":  "Chinese (Mandarin)",
                           "native":  "中文",
                           "rtl":  false,
-                          "complete":  false
+                          "complete":  true
                       },
                       {
                           "code":  "hi",

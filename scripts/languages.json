@@ -1,6 +1,6 @@
 [
   { "code": "en", "name": "English", "native": "English", "rtl": false, "complete": true },
-  { "code": "zh", "name": "Chinese (Mandarin)", "native": "中文", "rtl": false, "complete": false },
+  { "code": "zh", "name": "Chinese (Mandarin)", "native": "中文", "rtl": false, "complete": true },
   { "code": "hi", "name": "Hindi", "native": "हिन्दी", "rtl": false, "complete": false },
   { "code": "es", "name": "Spanish", "native": "Español", "rtl": false, "complete": false },
   { "code": "ar", "name": "Arabic", "native": "العربية", "rtl": true, "complete": false },
