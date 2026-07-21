@@ -116,8 +116,12 @@ function Normalize-FruitBlob([string]$text) {
     $t = $t -replace '(?i)^because of\s+', ''
 
     $t = $t -replace '~+', ''
+    $t = $t -replace '(?i),\s*which I will forgive\.?$', ''
+    $t = $t -replace '(?i),?\s*or an Occultic Trickery\.?$', ''
+    $t = $t -replace '(?i)^Death and Social Destruction\b', 'Death and Self-Destruction'
+    $t = $t -replace '(?i)\bAnti-Holy Spirit\b', 'Anti-Christ Spirit'
     $t = $t -replace '(?i)^Physical Division and Relational Destruction\b', 'Division and Relational Destruction'
-    $t = $t -replace '(?i)\s+with (?:the parent Principality of|Treachery|Destructive Acts|Using and Abusing).*$', ''
+    $t = $t -replace '(?i)\s+with (?:the parent Principality of|(?:the )?Using and Abusing Others|Treachery|Destructive Acts).*$', ''
     if ($t -match '(?i)^Treachery Against') {
         $t = 'Division and Relational Destruction'
     }
@@ -125,8 +129,80 @@ function Normalize-FruitBlob([string]$text) {
     return $t.Trim().TrimEnd('.')
 }
 
+function Get-KnownFruitBlobMap() {
+    return @{
+        'anger, violence, sexual corruption, occultism and false religion' = @(
+            'Anger and Violence'
+            'Sexual Corruption'
+            'Occultism and Counterfeit Spirituality'
+            'Abuse and Exploitation of Others'
+        )
+        'gluttony, physical neglect, and exploitation of holy spirit''s temple' = @(
+            'Neglect and Lack of Stewardship'
+            'Abuse and Exploitation of Others'
+        )
+        'unrighteous division, spiritual destruction, neglect, and separation from god' = @(
+            'Division and Relational Destruction'
+            'False Religion and Doctrinal Error'
+            'Neglect and Lack of Stewardship'
+            'Anti-Christ Spirit / Separation From God'
+        )
+        'anti-christ spirit, separation from god' = @('Anti-Christ Spirit / Separation From God')
+        'anti-christ spirit,separation from god' = @('Anti-Christ Spirit / Separation From God')
+        'sexual corruption, division, spiritual oppression' = @(
+            'Sexual Corruption'
+            'Division and Relational Destruction'
+            'Mental Oppression and Confusion'
+        )
+    }
+}
+
+function Resolve-KnownFruitBlob([string]$text) {
+    if (-not $text) { return @() }
+    $key = ($text -replace '\s+', ' ').Trim().TrimEnd('.').ToLower()
+    $key = $key -replace '(?i),?\s*or an occultic trickery\.?$', ''
+    $key = $key -replace '(?i),\s*which I will forgive\.?$', ''
+    $map = Get-KnownFruitBlobMap
+    if ($map.ContainsKey($key)) { return @($map[$key]) }
+    foreach ($entry in $map.GetEnumerator()) {
+        if ($key.StartsWith($entry.Key)) { return @($entry.Value) }
+    }
+    return @()
+}
+
+function Normalize-FruitLabel([string]$label) {
+    if (-not $label) { return $null }
+    $t = ($label -replace '\s+', ' ').Trim().TrimEnd('.')
+    if (Test-IsPrayerBoilerplateFruit $t) { return $null }
+
+    $exact = @{
+        'Death and Social Destruction' = 'Death and Self-Destruction'
+        'Anti-Holy Spirit' = 'Anti-Christ Spirit / Separation From God'
+        'Anti-Christ Spirit' = 'Anti-Christ Spirit / Separation From God'
+        'Separation from God' = 'Anti-Christ Spirit / Separation From God'
+        'Division' = 'Division and Relational Destruction'
+        'Unrighteous Division' = 'Division and Relational Destruction'
+        'Spiritual Destruction' = 'False Religion and Doctrinal Error'
+        'Spiritual Oppression' = 'Mental Oppression and Confusion'
+        'Neglect' = 'Neglect and Lack of Stewardship'
+        'Physical Neglect' = 'Neglect and Lack of Stewardship'
+        'Gluttony' = 'Neglect and Lack of Stewardship'
+        'Exploitation of Holy Spirit''s Temple' = 'Abuse and Exploitation of Others'
+        'anger' = 'Anger and Violence'
+        'violence' = 'Anger and Violence'
+        'sexual corruption' = 'Sexual Corruption'
+        'occultism and false religion' = 'Occultism and Counterfeit Spirituality'
+    }
+    if ($exact.ContainsKey($t)) { return $exact[$t] }
+
+    $lower = $t.ToLower()
+    if ($exact.ContainsKey($lower)) { return $exact[$lower] }
+
+    return $t
+}
+
 function Get-FruitBlobPattern() {
-    return '(?is)FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s+with Treachery|\s+with Destructive Acts|\s+is happening because|\s*$|\.)'
+    return '(?is)FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with (?:the )?Using and Abusing|\s+with Treachery|\s+with Destructive Acts|\s+is happening because|\s*$|\.)'
 }
 
 function Parse-FruitList([string]$text) {
@@ -134,22 +210,29 @@ function Parse-FruitList([string]$text) {
     $t = Normalize-FruitBlob $text
     $t = $t -replace '\s*\(think [^)]+\)', ''
     $t = $t -replace '\s+with the parent Principality of.+$', ''
-    $t = $t -replace '\s+with Using and Abusing.+$', ''
+    $t = $t -replace '\s+with (?:the )?Using and Abusing.+$', ''
     $t = $t -replace '(?i)\s+with Treachery.+$', ''
     $t = $t -replace '(?i)\s+with Destructive Acts.+$', ''
     $t = $t -replace '(?i)^Physical Division and Relational Destruction\b', 'Division and Relational Destruction'
     $t = $t.Trim().TrimEnd('.')
 
+    $known = Resolve-KnownFruitBlob $t
+    if ($known.Count -gt 0) { return Expand-FruitPhrases @($known | Select-Object -Unique) }
+
+    $items = @()
     if ($t -match '^(.+),\s*and\s+(.+)$') {
         $last = $Matches[2].Trim().TrimEnd('.')
         $rest = $Matches[1]
         $items = @($rest -split ',\s*' | ForEach-Object { $_.Trim().TrimEnd('.') } | Where-Object { $_ })
         if ($last) { $items += $last }
-        return Expand-FruitPhrases @($items | Select-Object -Unique)
+    } elseif (($t -split ',\s*').Count -gt 1) {
+        $items = @($t -split ',\s*' | ForEach-Object { $_.Trim().TrimEnd('.') } | Where-Object { $_ })
+    } else {
+        $items = @($t)
     }
 
-    $simple = @($t -split ',\s*' | ForEach-Object { $_.Trim().TrimEnd('.') } | Where-Object { $_ })
-    if ($simple.Count -gt 1) { return Expand-FruitPhrases $simple }
+    $normalized = @($items | ForEach-Object { Normalize-FruitLabel $_ } | Where-Object { $_ } | Select-Object -Unique)
+    if ($normalized.Count -gt 0) { return Expand-FruitPhrases $normalized }
 
     return Expand-FruitPhrases @($t)
 }
@@ -159,6 +242,10 @@ function Test-IsPrayerBoilerplateFruit([string]$fruit) {
     $t = ($fruit -replace '\s+', ' ').Trim().TrimEnd('.')
     # Malformed "FRUITS with Adultery [a|ga]gainst God" — prayer-template bleed, not a fruit label.
     if ($t -match '(?i)^adultery\s*(?:a|ga)?gainst\s*god$') { return $true }
+    if ($t -match '(?i)^(or an )?occultic trickery$') { return $true }
+    if ($t -match '(?i)^which I will forgive$') { return $true }
+    if ($t -match '(?i)^(physically|verbally|emotionally and spiritually)$') { return $true }
+    if ($t -match '(?i)^using and abusing others') { return $true }
     return $false
 }
 
@@ -519,8 +606,18 @@ $allPrincipalityNames = @(
     'Destructive Identities Against God',     'Spirit Spouse Gods'
 )
 
-# Known-good fruit sets when topics 666.txt has prayer-template bleed ("FRUITS with Adultery against God").
+# Known-good fruit sets when topics 666.txt has prayer-template bleed or truncated metadata.
 $topicFruitOverrides = @{
+    284 = @(
+        'Anger and Violence'
+        'Sexual Corruption'
+        'Occultism and Counterfeit Spirituality'
+        'Abuse and Exploitation of Others'
+    )
+    304 = @('Anti-Christ Spirit / Separation From God')
+    419 = @(
+        "Destructive Attitudes Against God$([char]0x2019)s Image"
+    )
     526 = @(
         "Destructive Attitudes Against God$([char]0x2019)s Image"
     )
@@ -609,6 +706,14 @@ foreach ($block in $metadataBlocks) {
         $fruits = Parse-FruitList $fruitBlob
         if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
         $principality = Normalize-Principality $Matches[2].Trim().TrimEnd('.')
+    } elseif ($b -match '(?is)because of (?!7 agreements)(?!agreements,)(.+?) with (?:the )?Using and Abusing Others') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+    } elseif ($b -match '(?is)because of (Anti-Christ Spirit,.+?|Anti-Holy Spirit,?Separation from God.+?|Sexual Corruption, Division, Spiritual Oppression.+?)(?:,\s*which I will forgive|\s+with|\s+from|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
     } elseif ($b -match 'because of\s+(?!7 agreements)(?!agreements,)(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
         $fruitBlob = Normalize-FruitBlob ($matches[1].Trim().TrimEnd('.'))
         $fruits = Parse-FruitList $fruitBlob
@@ -618,10 +723,9 @@ foreach ($block in $metadataBlocks) {
         $principality = Normalize-Principality $matches[1].Trim().TrimEnd('.')
     }
 
-    if ($fruits.Count -gt 0 -and @($fruits | Where-Object { Test-IsPrayerBoilerplateFruit $_ }).Count -gt 0) {
-        Write-Warning "Topic $num : rejecting prayer-boilerplate fruit parse '$($fruits -join ', ')'"
-        $fruits = @()
-        $fruit = $null
+    if ($fruits.Count -gt 0) {
+        $fruits = @($fruits | ForEach-Object { Normalize-FruitLabel $_ } | Where-Object { $_ -and -not (Test-IsPrayerBoilerplateFruit $_) } | Select-Object -Unique)
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] } else { $fruit = $null }
     }
     if ($topicFruitOverrides.ContainsKey($num)) {
         $fruits = @($topicFruitOverrides[$num])
