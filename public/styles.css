@@ -672,11 +672,15 @@ button:hover, select:hover {
   border-left: 1px solid var(--border);
   background: var(--bg-panel);
   overflow-y: auto;
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
   padding: 1.35rem 1.5rem;
   font-size: 1rem;
   line-height: 1.6;
   min-width: 0;
+}
+
+.detail-panel:has(#detail-empty:not(.hidden)) {
+  overflow: visible;
 }
 
 .detail-empty {

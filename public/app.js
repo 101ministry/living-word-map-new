@@ -78,6 +78,27 @@
     setDetailSheetOpen(false);
   }
 
+  function setupDetailPanelWheelScroll() {
+    const panel = document.getElementById('detail-panel');
+    if (!panel) return;
+
+    panel.addEventListener('wheel', (event) => {
+      const maxScroll = panel.scrollHeight - panel.clientHeight;
+      if (maxScroll <= 1) {
+        window.scrollBy({ top: event.deltaY, left: 0 });
+        event.preventDefault();
+        return;
+      }
+
+      const atTop = panel.scrollTop <= 0;
+      const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+      if ((event.deltaY < 0 && atTop) || (event.deltaY > 0 && atBottom)) {
+        window.scrollBy({ top: event.deltaY, left: 0 });
+        event.preventDefault();
+      }
+    }, { passive: false });
+  }
+
   function setControlsDrawerOpen(open) {
     const legend = document.getElementById('legend-panel');
     const backdrop = document.getElementById('legend-backdrop');
@@ -113,6 +134,7 @@
 
   function initMobileUi() {
     updateGraphHintForLayout();
+    setupDetailPanelWheelScroll();
 
     document.getElementById('open-controls')?.addEventListener('click', () => {
       const legend = document.getElementById('legend-panel');
