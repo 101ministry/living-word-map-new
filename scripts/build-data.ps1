@@ -487,7 +487,23 @@ foreach ($block in $metadataBlocks) {
         $fruitBlob = $Matches[1].Trim().TrimEnd('.')
         $fruits = Parse-FruitList $fruitBlob
         if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
-    } elseif ($b -match 'because of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
+    } elseif ($b -match '(?is)because FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+    } elseif ($b -match '(?is)FRUITS with because of\s+(.+?)(?:\s+with the parent Principality of|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+    } elseif ($b -match '(?is)because of FRUITS with because of\s+(.+?)(?:\s+with the parent Principality of|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+    } elseif ($b -match '(?is)because of FRUITS with\s+(.+?)(?:\s+with the parent Principality of|\s+is happening because|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+    } elseif ($b -match 'because of\s+(?!7 agreements)(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
         $fruit = $matches[1].Trim().TrimEnd('.')
         $fruits = @($fruit)
         $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
