@@ -423,6 +423,43 @@
     return Math.min(w, h);
   }
 
+  function anchorTopicNodes(nodes, fallbackRing) {
+    const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]));
+    nodes.filter(n => n.type === 'topic').forEach(node => {
+      const topic = lookups.topic[node.id];
+      if (!topic) return;
+
+      let anchor = null;
+      for (const pid of topicPrincipalityIds(topic)) {
+        if (nodeById[pid]?.x != null) {
+          anchor = nodeById[pid];
+          break;
+        }
+      }
+      if (!anchor) {
+        for (const rid of topicRootIds(topic)) {
+          if (nodeById[rid]?.x != null) { anchor = nodeById[rid]; break; }
+        }
+      }
+      if (!anchor) {
+        for (const fid of topicFruitIds(topic)) {
+          if (nodeById[fid]?.x != null) { anchor = nodeById[fid]; break; }
+        }
+      }
+
+      const seed = hashId(node.id);
+      const angle = (seed % 360) * (Math.PI / 180);
+      const dist = 12 + (seed % 28);
+      if (anchor) {
+        node.x = anchor.x + Math.cos(angle) * dist;
+        node.y = anchor.y + Math.sin(angle) * dist;
+      } else {
+        node.x = Math.cos(angle) * fallbackRing * 0.55;
+        node.y = Math.sin(angle) * fallbackRing * 0.55;
+      }
+    });
+  }
+
   function seedNightSkyLayout(nodes) {
     const extent = graphExtent();
     const principalityRing = extent * 0.48;
@@ -468,6 +505,8 @@
       node.fx = null;
       node.fy = null;
     });
+
+    anchorTopicNodes(nodes, principalityRing);
   }
 
   function seedExploreLayout(nodes) {
@@ -476,7 +515,6 @@
     const rootRing = extent * 0.2;
     const fruitRing = extent * 0.11;
 
-    const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]));
     const pNodes = nodes.filter(n => n.type === 'principality');
     const rNodes = nodes.filter(n => n.type === 'root');
     const fNodes = nodes.filter(n => n.type === 'fruit');
@@ -507,39 +545,7 @@
       node.y = Math.sin(angle + jitter) * radius;
     });
 
-    nodes.filter(n => n.type === 'topic').forEach(node => {
-      const topic = lookups.topic[node.id];
-      if (!topic) return;
-
-      let anchor = null;
-      for (const pid of topicPrincipalityIds(topic)) {
-        if (nodeById[pid]?.x != null) {
-          anchor = nodeById[pid];
-          break;
-        }
-      }
-      if (!anchor) {
-        for (const rid of topicRootIds(topic)) {
-          if (nodeById[rid]?.x != null) { anchor = nodeById[rid]; break; }
-        }
-      }
-      if (!anchor) {
-        for (const fid of topicFruitIds(topic)) {
-          if (nodeById[fid]?.x != null) { anchor = nodeById[fid]; break; }
-        }
-      }
-
-      const seed = hashId(node.id);
-      const angle = (seed % 360) * (Math.PI / 180);
-      const dist = 12 + (seed % 28);
-      if (anchor) {
-        node.x = anchor.x + Math.cos(angle) * dist;
-        node.y = anchor.y + Math.sin(angle) * dist;
-      } else {
-        node.x = Math.cos(angle) * principalityRing * 0.55;
-        node.y = Math.sin(angle) * principalityRing * 0.55;
-      }
-    });
+    anchorTopicNodes(nodes, principalityRing);
   }
 
   function configureGraphSimulation() {
@@ -715,6 +721,24 @@
         links.push({ source: e.source, target: e.target, type: e.type });
       }
     });
+
+    // Drop topic nodes with no visible edges (otherwise they float when layer/link filters hide all connections).
+    if (state.show.topic && state.viewMode !== 'constellation') {
+      const linkedTopicIds = new Set();
+      links.forEach(l => {
+        const s = typeof l.source === 'object' ? l.source.id : l.source;
+        const t = typeof l.target === 'object' ? l.target.id : l.target;
+        if (s.startsWith('topic-')) linkedTopicIds.add(s);
+        if (t.startsWith('topic-')) linkedTopicIds.add(t);
+      });
+      for (let i = topicNodes.length - 1; i >= 0; i--) {
+        const tid = topicNodes[i].id;
+        if (!linkedTopicIds.has(tid) && tid !== state.selectedId) {
+          nodeIds.delete(tid);
+          topicNodes.splice(i, 1);
+        }
+      }
+    }
 
     if (state.selectedId && state.viewMode === 'constellation' && nodeIds.has(state.selectedId)) {
       const related = new Set([state.selectedId]);
