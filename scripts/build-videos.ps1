@@ -3,6 +3,7 @@ param(
     [string]$VideosFile = "$PSScriptRoot\..\data\teaching-videos.json",
     [string]$ChartFile = "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt",
     [string]$PresentationFile = "$PSScriptRoot\..\data\TOPICS-666-PRESENTATION.txt",
+    [string]$DataFile = "$PSScriptRoot\..\public\data.js",
     [string]$OutputFile = "$PSScriptRoot\..\public\videos.js",
     [switch]$SkipCaptions
 )
@@ -281,6 +282,27 @@ function Estimate-Timestamp([int]$index, [int]$count, [int]$durationSeconds) {
     return [int][Math]::Floor($durationSeconds * $index / $count)
 }
 
+function Get-GraphTopics([string]$dataPath) {
+    if (-not (Test-Path -LiteralPath $dataPath)) { return @() }
+    $raw = Get-Content -LiteralPath $dataPath -Raw
+    $json = $raw -replace '^window\.GRAPH_DATA\s*=\s*', '' -replace ';\s*$', ''
+    $data = $json | ConvertFrom-Json
+    return @($data.topics)
+}
+
+function Get-TopicsForPrincipality($graphTopics, [string]$principalityId) {
+    if (-not $principalityId) { return @() }
+    return @($graphTopics | Where-Object {
+        ($_.principalityIds -contains $principalityId) -or ($_.principalityId -eq $principalityId)
+    } | Sort-Object number | ForEach-Object {
+        [pscustomobject]@{
+            phrase = $_.name
+            number = [int]$_.number
+            name   = [string]$_.name
+        }
+    })
+}
+
 function Write-Js([object]$payload, [string]$path) {
     $json = $payload | ConvertTo-Json -Depth 20 -Compress
     $js = "window.VIDEO_DATA = $json;"
@@ -293,6 +315,7 @@ $topicByNumber = @{}
 foreach ($t in $topics) { $topicByNumber[$t.number] = $t.name }
 
 $dayTopics = Parse-Presentation $PresentationFile $topics
+$graphTopics = Get-GraphTopics $DataFile
 
 $videosByDay = @{}
 foreach ($video in $config.videos) {
@@ -312,7 +335,12 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
     $part = [int]$video.part
     Write-Host "Processing Day $day$(if ($part -gt 1) { " part $part" }) ($($video.youtubeId))..."
 
-    $allDayTopics = @($dayTopics[$day])
+    if ($video.principalityId) {
+        $allDayTopics = Get-TopicsForPrincipality $graphTopics ([string]$video.principalityId)
+        Write-Host "  Topics: $($allDayTopics.Count) from principality $($video.principalityId)"
+    } else {
+        $allDayTopics = @($dayTopics[$day])
+    }
     $dayVideoList = $videosByDay["$day"]
     $partIndex = [array]::IndexOf($dayVideoList, $video)
     $partCount = $dayVideoList.Count
