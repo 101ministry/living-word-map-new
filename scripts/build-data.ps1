@@ -52,13 +52,31 @@ function Resolve-PrincipalityFromFruit([string]$fruit) {
     if (-not $fruit) { return $null }
     $f = $fruit.Trim().TrimEnd('.')
     $map = @{
-        'Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality, and Confusing Preferences with Stewardship' = 'Spirit Spouse Gods'
+        'Sexual Corruption' = 'Spirit Spouse Gods'
+        'Human and Hybrid DNA' = 'Spirit Spouse Gods'
+        'Counterfeit Spirituality' = 'Spirit Spouse Gods'
+        'Confusing Preferences with Stewardship' = 'Spirit Spouse Gods'
     }
     if ($map.ContainsKey($f)) { return $map[$f] }
     foreach ($key in $map.Keys) {
         if ($f.StartsWith($key)) { return $map[$key] }
     }
     return $null
+}
+
+function Expand-FruitPhrases([string[]]$items) {
+    $expanded = [System.Collections.Generic.List[string]]::new()
+    foreach ($item in $items) {
+        $f = $item.Trim().TrimEnd('.')
+        if (-not $f) { continue }
+        if ($f -match '(?i)^Sexual Corruption of Human and Hybrid DNA$') {
+            [void]$expanded.Add('Sexual Corruption')
+            [void]$expanded.Add('Human and Hybrid DNA')
+        } else {
+            [void]$expanded.Add($f)
+        }
+    }
+    return @($expanded | Select-Object -Unique)
 }
 
 function Normalize-TopicKey([string]$text) {
@@ -123,17 +141,25 @@ function Parse-FruitList([string]$text) {
     $t = $t.Trim().TrimEnd('.')
 
     if ($t -match '^(.+),\s*and\s+(.+)$') {
-        $last = $Matches[2].Trim()
+        $last = $Matches[2].Trim().TrimEnd('.')
         $rest = $Matches[1]
-        $items = @($rest -split ',\s*' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+        $items = @($rest -split ',\s*' | ForEach-Object { $_.Trim().TrimEnd('.') } | Where-Object { $_ })
         if ($last) { $items += $last }
-        return @($items | Select-Object -Unique)
+        return Expand-FruitPhrases @($items | Select-Object -Unique)
     }
 
-    $simple = @($t -split ',\s*' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
-    if ($simple.Count -gt 1) { return $simple }
+    $simple = @($t -split ',\s*' | ForEach-Object { $_.Trim().TrimEnd('.') } | Where-Object { $_ })
+    if ($simple.Count -gt 1) { return Expand-FruitPhrases $simple }
 
-    return @($t)
+    return Expand-FruitPhrases @($t)
+}
+
+function Test-IsPrayerBoilerplateFruit([string]$fruit) {
+    if (-not $fruit) { return $false }
+    $t = ($fruit -replace '\s+', ' ').Trim().TrimEnd('.')
+    # Malformed "FRUITS with Adultery [a|ga]gainst God" — prayer-template bleed, not a fruit label.
+    if ($t -match '(?i)^adultery\s*(?:a|ga)?gainst\s*god$') { return $true }
+    return $false
 }
 
 function Resolve-PrincipalityName([string]$header, [string[]]$knownNames) {
@@ -490,8 +516,27 @@ $allPrincipalityNames = @(
     'Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally',
     'Trading Floor Transactions with Demons', 'Gluttony', 'Self-Righteousness',
     'Sexual Perversion', 'Rebellion', 'Destructive Attitudes Against God',
-    'Destructive Identities Against God', 'Spirit Spouse Gods'
+    'Destructive Identities Against God',     'Spirit Spouse Gods'
 )
+
+# Known-good fruit sets when topics 666.txt has prayer-template bleed ("FRUITS with Adultery against God").
+$topicFruitOverrides = @{
+    526 = @(
+        "Destructive Attitudes Against God$([char]0x2019)s Image"
+    )
+    577 = @(
+        'Sexual Corruption'
+        'Human and Hybrid DNA'
+        'Counterfeit Spirituality'
+        'Confusing Preferences with Stewardship'
+    )
+    580 = @(
+        'Sexual Corruption'
+        'Human and Hybrid DNA'
+        'Counterfeit Spirituality'
+        'Confusing Preferences with Stewardship'
+    )
+}
 
 # --- Parse root / fruit / principality metadata from topics file ---
 $topicsRaw = Read-Utf8 $TopicsFile
@@ -571,6 +616,16 @@ foreach ($block in $metadataBlocks) {
         $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
     } elseif ($b -match 'parent Principality of\s+(.+?)(?:\s|$|\.)') {
         $principality = Normalize-Principality $matches[1].Trim().TrimEnd('.')
+    }
+
+    if ($fruits.Count -gt 0 -and @($fruits | Where-Object { Test-IsPrayerBoilerplateFruit $_ }).Count -gt 0) {
+        Write-Warning "Topic $num : rejecting prayer-boilerplate fruit parse '$($fruits -join ', ')'"
+        $fruits = @()
+        $fruit = $null
+    }
+    if ($topicFruitOverrides.ContainsKey($num)) {
+        $fruits = @($topicFruitOverrides[$num])
+        $fruit = $fruits[0]
     }
 
     $metadataByNumber[$num] = @{
