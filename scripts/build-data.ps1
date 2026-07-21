@@ -154,6 +154,10 @@ function Get-KnownFruitBlobMap() {
             'Division and Relational Destruction'
             'Mental Oppression and Confusion'
         )
+        'neglect from lack of stewardship, spiritual oppression and confusion' = @(
+            'Neglect and Lack of Stewardship'
+            'Mental Oppression and Confusion'
+        )
     }
 }
 
@@ -185,6 +189,7 @@ function Normalize-FruitLabel([string]$label) {
         'Spiritual Destruction' = 'False Religion and Doctrinal Error'
         'Spiritual Oppression' = 'Mental Oppression and Confusion'
         'Neglect' = 'Neglect and Lack of Stewardship'
+        'Neglect from Lack of Stewardship' = 'Neglect and Lack of Stewardship'
         'Physical Neglect' = 'Neglect and Lack of Stewardship'
         'Gluttony' = 'Neglect and Lack of Stewardship'
         'Exploitation of Holy Spirit''s Temple' = 'Abuse and Exploitation of Others'

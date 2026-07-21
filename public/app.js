@@ -803,6 +803,83 @@
     return Math.sqrt(nodeSize(id)) * rel;
   }
 
+  function roundRect(ctx, x, y, w, h, radius) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.lineTo(x + w - radius, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+    ctx.lineTo(x + w, y + h - radius);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+    ctx.lineTo(x + radius, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(x, y, x + radius, y);
+    ctx.closePath();
+  }
+
+  function wrapCanvasText(ctx, text, maxWidth) {
+    const words = text.split(/\s+/);
+    const lines = [];
+    let line = '';
+    for (const word of words) {
+      const test = line ? `${line} ${word}` : word;
+      if (ctx.measureText(test).width > maxWidth && line) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = test;
+      }
+    }
+    if (line) lines.push(line);
+    return lines.length ? lines : [text];
+  }
+
+  function paintSelectedNodeLabel(node, ctx, globalScale) {
+    const id = asNodeId(node);
+    if (state.selectedId !== id || nodeType(id) === 'principality') return;
+    if (node.x == null || node.y == null) return;
+
+    const label = nodeLabel(id);
+    const fontSize = Math.max(9, 11 / globalScale);
+    ctx.font = `600 ${fontSize}px "DM Sans", system-ui, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    const maxWidth = 200 / globalScale;
+    const lines = wrapCanvasText(ctx, label, maxWidth);
+    const lineHeight = fontSize * 1.25;
+    const padX = 8 / globalScale;
+    const padY = 6 / globalScale;
+    let maxLineW = 0;
+    lines.forEach(ln => {
+      const w = ctx.measureText(ln).width;
+      if (w > maxLineW) maxLineW = w;
+    });
+    const boxW = maxLineW + padX * 2;
+    const boxH = lines.length * lineHeight + padY * 2;
+    const boxX = node.x - boxW / 2;
+    const boxY = node.y - nodeRadius(id) - boxH - 6 / globalScale;
+
+    ctx.save();
+    ctx.shadowColor = 'rgba(240, 234, 214, 0.5)';
+    ctx.shadowBlur = 10 / globalScale;
+    ctx.fillStyle = 'rgba(10, 11, 15, 0.94)';
+    ctx.strokeStyle = 'rgba(240, 234, 214, 0.35)';
+    ctx.lineWidth = Math.max(0.5, 1 / globalScale);
+    roundRect(ctx, boxX, boxY, boxW, boxH, 5 / globalScale);
+    ctx.fill();
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    ctx.fillStyle = '#f0ead6';
+    ctx.shadowColor = 'rgba(255, 255, 255, 0.65)';
+    ctx.shadowBlur = 6 / globalScale;
+    lines.forEach((ln, i) => {
+      ctx.fillText(ln, node.x, boxY + padY + lineHeight * (i + 0.5));
+    });
+    ctx.restore();
+  }
+
   function paintPrincipalityNode(node, ctx, globalScale) {
     if (node.x == null || node.y == null) return;
     const id = asNodeId(node);
@@ -844,11 +921,18 @@
     .nodeVal(node => nodeSize(asNodeId(node)))
     .nodeRelSize(4)
     .showPointerCursor(false)
-    .nodeCanvasObjectMode(node => (nodeType(node) === 'principality' ? 'after' : undefined))
+    .nodeCanvasObjectMode(node => {
+      const id = asNodeId(node);
+      if (nodeType(id) === 'principality' || state.selectedId === id) return 'after';
+      return undefined;
+    })
     .nodeCanvasObject((node, ctx, globalScale) => {
-      if (nodeType(node) === 'principality') {
+      const id = asNodeId(node);
+      if (nodeType(id) === 'principality') {
         paintPrincipalityNode(node, ctx, globalScale);
+        return;
       }
+      if (state.selectedId === id) paintSelectedNodeLabel(node, ctx, globalScale);
     })
     .nodePointerAreaPaint((node, color, ctx) => {
       if (node.x == null || node.y == null) return;
