@@ -80,12 +80,46 @@ function Get-TopicKind([string]$text) {
     return 'plain'
 }
 
+function Normalize-FruitBlob([string]$text) {
+    if (-not $text) { return $text }
+    $t = $text.Trim().TrimEnd('.')
+
+    $t = $t -replace '(?is)^happening because of\s+', ''
+    $t = $t -replace '(?is)agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements\s*', ''
+    $t = $t -replace '(?is)agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual\s*', ''
+    $t = $t -replace '(?i)^agreements\s+because of\s+', ''
+
+    while ($t -match '(?is)because of\s+(.+)$') {
+        $tail = $Matches[1].Trim()
+        if ($tail -match '(?i)because of') { $t = $tail; continue }
+        $t = $tail
+        break
+    }
+    $t = $t -replace '(?i)^because of\s+', ''
+
+    $t = $t -replace '~+', ''
+    $t = $t -replace '(?i)^Physical Division and Relational Destruction\b', 'Division and Relational Destruction'
+    $t = $t -replace '(?i)\s+with (?:the parent Principality of|Treachery|Destructive Acts|Using and Abusing).*$', ''
+    if ($t -match '(?i)^Treachery Against') {
+        $t = 'Division and Relational Destruction'
+    }
+
+    return $t.Trim().TrimEnd('.')
+}
+
+function Get-FruitBlobPattern() {
+    return '(?is)FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s+with Treachery|\s+with Destructive Acts|\s+is happening because|\s*$|\.)'
+}
+
 function Parse-FruitList([string]$text) {
     if (-not $text) { return @() }
-    $t = $text.Trim().TrimEnd('.')
+    $t = Normalize-FruitBlob $text
     $t = $t -replace '\s*\(think [^)]+\)', ''
     $t = $t -replace '\s+with the parent Principality of.+$', ''
     $t = $t -replace '\s+with Using and Abusing.+$', ''
+    $t = $t -replace '(?i)\s+with Treachery.+$', ''
+    $t = $t -replace '(?i)\s+with Destructive Acts.+$', ''
+    $t = $t -replace '(?i)^Physical Division and Relational Destruction\b', 'Division and Relational Destruction'
     $t = $t.Trim().TrimEnd('.')
 
     if ($t -match '^(.+),\s*and\s+(.+)$') {
@@ -496,11 +530,11 @@ foreach ($block in $metadataBlocks) {
     $fruits = @()
     $principality = $null
 
-    if ($b -match '(?is)FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s*$|\.)') {
+    if ($b -match (Get-FruitBlobPattern)) {
         $fruitBlob = $Matches[1].Trim().TrimEnd('.')
         $fruits = Parse-FruitList $fruitBlob
         if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
-    } elseif ($b -match '(?is)because FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s*$|\.)') {
+    } elseif ($b -match '(?is)because FRUITS of\s+(.+?)(?:\s+with the parent Principality of|\s+with Using and Abusing|\s+with Treachery|\s+with Destructive Acts|\s*$|\.)') {
         $fruitBlob = $Matches[1].Trim().TrimEnd('.')
         $fruits = Parse-FruitList $fruitBlob
         if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
@@ -516,9 +550,24 @@ foreach ($block in $metadataBlocks) {
         $fruitBlob = $Matches[1].Trim().TrimEnd('.')
         $fruits = Parse-FruitList $fruitBlob
         if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
-    } elseif ($b -match 'because of\s+(?!7 agreements)(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
-        $fruit = $matches[1].Trim().TrimEnd('.')
-        $fruits = @($fruit)
+    } elseif ($b -match '(?is)FRUITS with\s+(?!because of)(.+?)(?:\s+with the parent Principality of|\s+is happening because|\s*$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+    } elseif ($b -match '(?is)(?:^|\s)agreements because of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+        $principality = Normalize-Principality $Matches[2].Trim().TrimEnd('.')
+    } elseif ($b -match '(?is)because of agreements, blood covenants.+?because of\s+(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
+        $fruitBlob = $Matches[1].Trim().TrimEnd('.')
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] }
+        $principality = Normalize-Principality $Matches[2].Trim().TrimEnd('.')
+    } elseif ($b -match 'because of\s+(?!7 agreements)(?!agreements,)(.+?)\s+with the parent Principality of\s+(.+?)(?:\s|$|\.)') {
+        $fruitBlob = Normalize-FruitBlob ($matches[1].Trim().TrimEnd('.'))
+        $fruits = Parse-FruitList $fruitBlob
+        if ($fruits.Count -gt 0) { $fruit = $fruits[0] } else { $fruit = $fruitBlob; $fruits = @($fruit) }
         $principality = Normalize-Principality $matches[2].Trim().TrimEnd('.')
     } elseif ($b -match 'parent Principality of\s+(.+?)(?:\s|$|\.)') {
         $principality = Normalize-Principality $matches[1].Trim().TrimEnd('.')
