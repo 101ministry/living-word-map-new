@@ -436,14 +436,16 @@ function Split-MembershipLabels([string]$line) {
     $trimmed = $line.Trim()
     if (-not $trimmed) { return @() }
 
+    # Lines may mix tabs and wide-space runs (e.g. Sexual Perversion, Spirit Spouse Gods).
+    $normalized = ($trimmed -replace "`t", '    ').Trim()
+    $labels = @($normalized -split '\s{4,}' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+    if ($labels.Count -gt 1) { return $labels }
+
     if ($trimmed -match "`t") {
         return @($trimmed -split "`t" | ForEach-Object { $_.Trim() } | Where-Object { $_ })
     }
 
     $labels = @($trimmed -split '\s{2,}' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
-    if ($labels.Count -le 1) {
-        $labels = @($trimmed -split '\s{4,}' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
-    }
     return $labels
 }
 
