@@ -5,7 +5,12 @@ param(
     } else {
         "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 {7-13.1}"
     }),
-    [string]$CorePrayerFile = "$env:USERPROFILE\Downloads\Telegram Desktop\Prayer of Freedom.txt",
+    [string]$CorePrayerFile = $(if (Test-Path "$PSScriptRoot\..\data\en-core-prayer.txt") {
+        "$PSScriptRoot\..\data\en-core-prayer.txt"
+    } else {
+        "$env:USERPROFILE\Downloads\Telegram Desktop\CORE prayer.txt"
+    }),
+    [string]$CoreMetaFile = "$PSScriptRoot\..\data\translations\en-meta.json",
     [string]$ChartFile = $(if (Test-Path "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt") {
         "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt"
     } else {
@@ -38,19 +43,32 @@ $languages = Read-Utf8 (Join-Path $PSScriptRoot 'languages.json') | ConvertFrom-
 
 # --- Parse core prayer ---
 $coreRaw = Read-Utf8 $CorePrayerFile
-$coreLines = ($coreRaw -split '\r?\n') | ForEach-Object { $_.TrimEnd() }
-$coreTitle = ($coreLines | Where-Object { $_ -and $_ -notmatch '^\(' } | Select-Object -First 1).Trim()
-$coreInstruction = ($coreLines | Where-Object { $_ -match 'Make sure you pray OUT LOUD' } | Select-Object -First 1)
-$coreBodyLines = @()
-$inBody = $false
-foreach ($line in $coreLines) {
-    if ($line -match '^Lord, I forgive anyone') { $inBody = $true }
-    if ($inBody) { $coreBodyLines += $line }
+$coreText = $coreRaw.Trim()
+$coreTitle = 'Core Prayer'
+$coreInstruction = 'Replace [topic] with the specific prayer topic. These prayers are to be spoken, not simply read silently.'
+if (Test-Path -LiteralPath $CoreMetaFile) {
+    $coreMeta = Read-Utf8 $CoreMetaFile | ConvertFrom-Json
+    if ($coreMeta.coreTitle) { $coreTitle = [string]$coreMeta.coreTitle }
+    if ($coreMeta.coreInstruction) { $coreInstruction = [string]$coreMeta.coreInstruction }
+}
+if ($coreText -match '^Lord, I forgive anyone') {
+    $coreLines = ($coreRaw -split '\r?\n') | ForEach-Object { $_.TrimEnd() }
+    $legacyTitle = ($coreLines | Where-Object { $_ -and $_ -notmatch '^\(' } | Select-Object -First 1).Trim()
+    $legacyInstruction = ($coreLines | Where-Object { $_ -match 'Make sure you pray OUT LOUD' } | Select-Object -First 1)
+    if ($legacyTitle) { $coreTitle = $legacyTitle }
+    if ($legacyInstruction) { $coreInstruction = $legacyInstruction }
+    $coreBodyLines = @()
+    $inBody = $false
+    foreach ($line in $coreLines) {
+        if ($line -match '^Lord, I forgive anyone') { $inBody = $true }
+        if ($inBody) { $coreBodyLines += $line }
+    }
+    $coreText = ($coreBodyLines -join "`n").Trim()
 }
 $corePrayer = @{
     title = $coreTitle
     instruction = $coreInstruction
-    text = ($coreBodyLines -join "`n").Trim()
+    text = $coreText
     audioPath = 'audio/en/core.mp3'
 }
 
@@ -330,8 +348,8 @@ $langItems = @($languages | ForEach-Object {
 
 $uiEnglish = [ordered]@{
     prayerTitle = 'Prayer'
-    corePrayerTitle = 'Prayer of Freedom'
-    corePrayerHint = 'Prayed after forgiving all people tied to a root spirit. Speak out loud.'
+    corePrayerTitle = 'Core Prayer'
+    corePrayerHint = 'Replace [topic] with the specific prayer topic. Speak out loud.'
     spokenNote = 'These prayers are to be spoken, not simply read silently.'
     openCorePrayer = 'Core Prayer'
     listenPrayer = 'Listen'
