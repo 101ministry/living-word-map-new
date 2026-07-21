@@ -611,6 +611,51 @@ button:hover, select:hover {
   letter-spacing: 0.04em;
 }
 
+.graph-tooltip-title {
+  font-weight: 600;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+.graph-tooltip-title:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+
+.graph-tooltip-meta {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.graph-tooltip-row {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
+}
+
+.graph-tooltip-row:first-child {
+  margin-top: 0;
+}
+
+.graph-tooltip-label {
+  flex: 0 0 auto;
+  min-width: 4.5rem;
+  color: rgba(138, 135, 152, 0.85);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.graph-tooltip-value {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.graph-tooltip-value .graph-tooltip-code {
+  margin-right: 0.3rem;
+}
+
 .graph-zoom-bar {
   position: absolute;
   left: 0;
@@ -738,7 +783,9 @@ button:hover, select:hover {
 }
 
 .detail-header:has(.detail-type.fruit) h2,
-.detail-header:has(.detail-type.root) h2 {
+.detail-header:has(.detail-type.root) h2,
+.detail-header:has(.detail-type.topic) h2,
+.detail-header:has(.detail-type.principality) h2 {
   text-shadow:
     0 0 12px rgba(240, 234, 214, 0.5),
     0 0 4px rgba(255, 255, 255, 0.4),
@@ -753,6 +800,40 @@ button:hover, select:hover {
   box-shadow:
     0 0 14px rgba(240, 234, 214, 0.2),
     0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Detail panel connection chips — high-contrast glow for low vision (not graph links). */
+.detail-panel .connection-chips .chip {
+  color: var(--quote);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding: 0.38rem 0.65rem;
+  border-width: 1px;
+  text-shadow:
+    0 0 10px rgba(240, 234, 214, 0.7),
+    0 0 3px rgba(255, 255, 255, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.92);
+  box-shadow:
+    0 0 14px rgba(240, 234, 214, 0.14),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.detail-panel .connection-chips .chip:hover {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 18px rgba(212, 175, 55, 0.28),
+    0 0 10px rgba(240, 234, 214, 0.22),
+    inset 0 0 12px rgba(255, 255, 255, 0.07);
+}
+
+.detail-panel .tag-list li {
+  color: var(--quote);
+  text-shadow:
+    0 0 8px rgba(240, 234, 214, 0.55),
+    0 0 2px rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 0 10px rgba(240, 234, 214, 0.1),
+    inset 0 0 8px rgba(255, 255, 255, 0.04);
 }
 
 .detail-meta {
@@ -840,6 +921,7 @@ button:hover, select:hover {
   cursor: pointer;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
+  color: var(--text);
 }
 
 .chip:hover {

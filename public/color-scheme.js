@@ -220,24 +220,27 @@
 
   function chipStyle(type, id, lookups) {
     if (type === 'principality' || type === 'principalitys') {
-      return { borderColor: withAlpha(PRINCIPALITY_COLOR, 0.45), color: PRINCIPALITY_COLOR };
+      return {
+        borderColor: withAlpha(PRINCIPALITY_COLOR, 0.55),
+        backgroundColor: withAlpha(PRINCIPALITY_COLOR, 0.14),
+      };
     }
     const key = type.replace(/s$/, '');
     const nodeId = key === 'topic' ? id : id;
     const item = lookups[key]?.[nodeId];
     if (key === 'root' && item) {
       const c = resolveRoot(item);
-      return { borderColor: withAlpha(c, 0.55), color: c };
+      return { borderColor: withAlpha(c, 0.65), backgroundColor: withAlpha(c, 0.16) };
     }
     if (key === 'fruit' && item) {
       const c = resolveFruit(item);
-      return { borderColor: withAlpha(c, 0.55), color: isLightColor(c) ? c : withAlpha(c, 0.95) };
+      return { borderColor: withAlpha(c, 0.7), backgroundColor: withAlpha(c, 0.18) };
     }
     if (key === 'topic' && item) {
       const fruitId = item.fruitIds?.[0] || item.fruitId;
       const rootId = item.rootIds?.[0] || item.rootId;
       const c = fruitId ? resolveFruit(fruitId) : resolveRoot(rootId);
-      return { borderColor: withAlpha(c, 0.45), color: c || TOPIC_DEFAULT };
+      return { borderColor: withAlpha(c, 0.55), backgroundColor: withAlpha(c || TOPIC_DEFAULT, 0.12) };
     }
     return {};
   }

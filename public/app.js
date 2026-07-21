@@ -22,6 +22,22 @@
   };
   const principalityIds = new Set(principalities.map(p => p.id));
 
+  /** Umbrella principalities — span many topics; sit on outer arch when selected, excluded from other selections. */
+  const OUTER_ARCH_PRINCIPALITY_IDS = new Set([
+    'destructive-attitudes-against-god-s-image',   // Destructive Attitudes Against God's Image
+    'destructive-identities-against-god',  // Principality of Destructive Identities Against God (Familiar Spirits)
+  ]);
+
+  function isOuterArchPrincipality(id) {
+    return OUTER_ARCH_PRINCIPALITY_IDS.has(id);
+  }
+
+  /** Prefer the topic's non-umbrella principality for constellation anchoring. */
+  function topicPrimaryPrincipalityId(topic) {
+    const ids = topicPrincipalityIds(topic);
+    return ids.find(pid => !isOuterArchPrincipality(pid)) || ids[0] || null;
+  }
+
   const state = {
     selectedId: null,
     quoteIndex: 0,
@@ -39,6 +55,7 @@
     highlightIds: new Set(),
     compareIds: [],
     language: 'en',
+    hoveredNodeId: null,
   };
 
   const MAX_COMPARE = 3;
@@ -129,7 +146,7 @@
     if (!hint) return;
     hint.textContent = isMobileLayout()
       ? 'Tap a Principality to explore. Pinch to zoom; drag to pan.'
-      : 'Click a Principality to reveal its character. Drag the map to pan; use the slider below to zoom.';
+      : 'Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.';
   }
 
   function initMobileUi() {
@@ -430,10 +447,16 @@
       if (!topic) return;
 
       let anchor = null;
-      for (const pid of topicPrincipalityIds(topic)) {
-        if (nodeById[pid]?.x != null) {
-          anchor = nodeById[pid];
-          break;
+      const primaryPid = topicPrimaryPrincipalityId(topic);
+      if (primaryPid && nodeById[primaryPid]?.x != null) {
+        anchor = nodeById[primaryPid];
+      }
+      if (!anchor) {
+        for (const pid of topicPrincipalityIds(topic)) {
+          if (nodeById[pid]?.x != null) {
+            anchor = nodeById[pid];
+            break;
+          }
         }
       }
       if (!anchor) {
@@ -462,29 +485,58 @@
 
   function seedNightSkyLayout(nodes) {
     const extent = graphExtent();
-    const principalityRing = extent * 0.48;
-    const rootRing = extent * 0.30;
-    const fruitRing = extent * 0.16;
+    const outerArchRing = extent * 0.58;
+    const principalityRing = extent * 0.42;
+    const rootRing = extent * 0.28;
+    const fruitRing = extent * 0.15;
     const pinPrincipalities = !state.selectedId;
+    const outerArchSelection = state.selectedId && isOuterArchPrincipality(state.selectedId);
 
     const pNodes = nodes.filter(n => n.type === 'principality');
     const rNodes = nodes.filter(n => n.type === 'root');
     const fNodes = nodes.filter(n => n.type === 'fruit');
 
-    pNodes.forEach((node, i) => {
-      const angle = (i / Math.max(pNodes.length, 1)) * Math.PI * 2 - Math.PI / 2;
-      const jitter = ((hashId(node.id) % 1000) / 1000 - 0.5) * 0.22;
-      const radius = principalityRing * (0.88 + jitter);
-      node.x = Math.cos(angle + jitter * 0.35) * radius;
-      node.y = Math.sin(angle + jitter * 0.35) * radius;
-      if (pinPrincipalities) {
+    const outerNodes = pNodes.filter(n => isOuterArchPrincipality(n.id));
+    const innerNodes = pNodes.filter(n => !isOuterArchPrincipality(n.id));
+
+    if (outerArchSelection) {
+      outerNodes.forEach((node, i) => {
+        const angle = outerNodes.length > 1
+          ? (i / outerNodes.length) * Math.PI * 2 - Math.PI / 2
+          : -Math.PI / 2;
+        node.x = Math.cos(angle) * outerArchRing;
+        node.y = Math.sin(angle) * outerArchRing;
         node.fx = node.x;
         node.fy = node.y;
-      } else {
-        node.fx = null;
-        node.fy = null;
-      }
-    });
+      });
+
+      innerNodes.forEach((node, i) => {
+        const angle = (i / Math.max(innerNodes.length, 1)) * Math.PI * 2 - Math.PI / 2;
+        const jitter = ((hashId(node.id) % 1000) / 1000 - 0.5) * 0.18;
+        const radius = principalityRing * (0.9 + jitter);
+        node.x = Math.cos(angle + jitter * 0.3) * radius;
+        node.y = Math.sin(angle + jitter * 0.3) * radius;
+        node.fx = node.x;
+        node.fy = node.y;
+      });
+    } else {
+      pNodes.forEach((node, i) => {
+        const isOuter = isOuterArchPrincipality(node.id);
+        const angle = (i / Math.max(pNodes.length, 1)) * Math.PI * 2 - Math.PI / 2;
+        const jitter = ((hashId(node.id) % 1000) / 1000 - 0.5) * 0.22;
+        const baseRing = isOuter && pinPrincipalities ? outerArchRing : principalityRing;
+        const radius = baseRing * (0.88 + jitter);
+        node.x = Math.cos(angle + jitter * 0.35) * radius;
+        node.y = Math.sin(angle + jitter * 0.35) * radius;
+        if (pinPrincipalities) {
+          node.fx = node.x;
+          node.fy = node.y;
+        } else {
+          node.fx = null;
+          node.fy = null;
+        }
+      });
+    }
 
     rNodes.forEach((node, i) => {
       const angle = (i / Math.max(rNodes.length, 1)) * Math.PI * 2;
@@ -770,6 +822,11 @@
         if (s === state.selectedId) related.add(t);
         if (t === state.selectedId) related.add(s);
       });
+      if (nodeType(state.selectedId) === 'principality' && !isOuterArchPrincipality(state.selectedId)) {
+        for (const id of related) {
+          if (isOuterArchPrincipality(id)) related.delete(id);
+        }
+      }
       state.highlightIds = related;
     } else {
       state.highlightIds = new Set();
@@ -913,11 +970,7 @@
   const Graph = ForceGraph()(container)
     .backgroundColor('#0a0b0f')
     .nodeId('id')
-    .nodeLabel(node => {
-      const id = asNodeId(node);
-      if (nodeType(id) === 'principality') return '';
-      return nodeLabel(id);
-    })
+    .nodeLabel(() => '')
     .nodeVal(node => nodeSize(asNodeId(node)))
     .nodeRelSize(4)
     .showPointerCursor(false)
@@ -977,11 +1030,12 @@
     .d3VelocityDecay(0.35)
     .warmupTicks(120)
     .cooldownTicks(280)
-    .enableZoomInteraction(isMobileLayout())
+    .enableZoomInteraction(true)
     .enablePanInteraction(true)
     .enablePointerInteraction(true)
     .onNodeHover(node => {
-      container.style.cursor = node ? 'pointer' : 'grab';
+      state.hoveredNodeId = node ? asNodeId(node) : null;
+      if (!node) hideGraphTooltip();
     })
     .onNodeClick((node, event) => {
       const id = asNodeId(node);
@@ -1044,6 +1098,12 @@
     setGraphZoom(current * step, 120);
   }
 
+  function setupGraphWheelZoom() {
+    container.addEventListener('wheel', event => {
+      event.preventDefault();
+    }, { passive: false });
+  }
+
   function bindZoomSlider() {
     if (!zoomSlider) return;
 
@@ -1078,6 +1138,8 @@
   function fitConstellationSelection(duration = ZOOM_MS) {
     if (state.highlightIds.size > 0) {
       fitNodesToView(node => state.highlightIds.has(asNodeId(node)), 56, duration);
+    } else if (state.selectedId && isOuterArchPrincipality(state.selectedId)) {
+      fitNodesToView(null, 88, duration);
     } else {
       fitConstellationRing(duration);
     }
@@ -1134,38 +1196,117 @@
     configureGraphForces();
   }
 
+  function escapeHtml(str) {
+    return String(str ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function buildGraphTooltipHtml(id) {
+    const type = nodeType(id);
+
+    if (type === 'topic') {
+      const topic = lookups.topic[id];
+      if (!topic) return '';
+      const conn = getConnections(id);
+      const rows = [];
+      if (conn.roots.length) {
+        const label = conn.roots.length > 1 ? 'Roots' : 'Root';
+        const value = conn.roots.map(r => escapeHtml(r.name)).join(', ');
+        rows.push(`<div class="graph-tooltip-row"><span class="graph-tooltip-label">${label}</span><span class="graph-tooltip-value">${value}</span></div>`);
+      }
+      if (conn.fruits.length) {
+        const label = conn.fruits.length > 1 ? 'Fruits' : 'Fruit';
+        const value = conn.fruits.map(f => escapeHtml(f.name)).join(', ');
+        rows.push(`<div class="graph-tooltip-row"><span class="graph-tooltip-label">${label}</span><span class="graph-tooltip-value">${value}</span></div>`);
+      }
+      if (conn.principalities.length) {
+        const label = conn.principalities.length > 1 ? 'Principalities' : 'Principality';
+        const value = conn.principalities.map(p => {
+          const code = icons?.abbrev(p.id, p.name) || '';
+          return code
+            ? `<span class="graph-tooltip-code">${escapeHtml(code)}</span>${escapeHtml(p.name)}`
+            : escapeHtml(p.name);
+        }).join('<br>');
+        rows.push(`<div class="graph-tooltip-row"><span class="graph-tooltip-label">${label}</span><span class="graph-tooltip-value">${value}</span></div>`);
+      }
+      const title = `#${topic.number} ${topic.name}`;
+      const meta = rows.length ? `<div class="graph-tooltip-meta">${rows.join('')}</div>` : '';
+      return `<div class="graph-tooltip-title">${escapeHtml(title)}</div>${meta}`;
+    }
+
+    if (type === 'root' || type === 'fruit') {
+      const item = lookups[type][id];
+      if (!item) return '';
+      const conn = getConnections(id);
+      const pCount = conn.principalities.length;
+      const topicLabel = conn.topics.length === 1 ? 'topic' : 'topics';
+      const pLabel = pCount === 1 ? 'principality' : 'principalities';
+      const meta = `${conn.topics.length} ${topicLabel} · ${pCount} ${pLabel}`;
+      return `<div class="graph-tooltip-title">${escapeHtml(item.name)}</div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
+    }
+
+    if (type === 'principality') {
+      const p = lookups.principality[id];
+      if (!p) return '';
+      const code = icons?.abbrev(id, p.name) || '';
+      const conn = getConnections(id);
+      const topicCount = p.topicCount ?? conn.topics.length;
+      const topicLabel = topicCount === 1 ? 'topic' : 'topics';
+      const title = code
+        ? `<span class="graph-tooltip-code">${escapeHtml(code)}</span>${escapeHtml(p.name)}`
+        : escapeHtml(p.name);
+      const meta = `${topicCount} ${topicLabel} connected`;
+      return `<div class="graph-tooltip-title">${title}</div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
+    }
+
+    return escapeHtml(nodeLabel(id));
+  }
+
+  function positionGraphTooltip(tooltip, clientX, clientY) {
+    const offset = 14;
+    tooltip.style.left = `${Math.min(clientX + offset, window.innerWidth - tooltip.offsetWidth - 8)}px`;
+    tooltip.style.top = `${Math.max(clientY + offset, 8)}px`;
+  }
+
+  function showGraphTooltip(html, clientX, clientY) {
+    const tooltip = document.getElementById('graph-tooltip');
+    if (!tooltip || !html) return;
+    tooltip.innerHTML = html;
+    tooltip.classList.remove('hidden');
+    tooltip.setAttribute('aria-hidden', 'false');
+    positionGraphTooltip(tooltip, clientX, clientY);
+  }
+
+  function hideGraphTooltip() {
+    const tooltip = document.getElementById('graph-tooltip');
+    if (!tooltip) return;
+    tooltip.classList.add('hidden');
+    tooltip.setAttribute('aria-hidden', 'true');
+  }
+
   container.addEventListener('mousemove', ev => {
     if (!(ev.target instanceof HTMLCanvasElement)) return;
-    const tooltip = document.getElementById('graph-tooltip');
     const hit = pickPrincipalityAtScreen(ev.clientX, ev.clientY);
     if (hit) {
+      showGraphTooltip(buildGraphTooltipHtml(asNodeId(hit)), ev.clientX, ev.clientY);
       container.style.cursor = 'pointer';
-      const id = asNodeId(hit);
-      const p = lookups.principality[id];
-      if (tooltip && p) {
-        const code = icons?.abbrev(id, p.name) || '';
-        tooltip.innerHTML = `<span class="graph-tooltip-code">${code}</span>${p.name}`;
-        tooltip.classList.remove('hidden');
-        tooltip.setAttribute('aria-hidden', 'false');
-        const offset = 14;
-        tooltip.style.left = `${Math.min(ev.clientX + offset, window.innerWidth - tooltip.offsetWidth - 8)}px`;
-        tooltip.style.top = `${Math.max(ev.clientY + offset, 8)}px`;
-      }
       return;
     }
-    if (tooltip) {
-      tooltip.classList.add('hidden');
-      tooltip.setAttribute('aria-hidden', 'true');
+    if (state.hoveredNodeId) {
+      showGraphTooltip(buildGraphTooltipHtml(state.hoveredNodeId), ev.clientX, ev.clientY);
+      container.style.cursor = 'pointer';
+      return;
     }
+    hideGraphTooltip();
     container.style.cursor = 'grab';
   });
 
   container.addEventListener('mouseleave', () => {
-    const tooltip = document.getElementById('graph-tooltip');
-    if (tooltip) {
-      tooltip.classList.add('hidden');
-      tooltip.setAttribute('aria-hidden', 'true');
-    }
+    state.hoveredNodeId = null;
+    hideGraphTooltip();
   });
 
   container.addEventListener('click', ev => {
@@ -1211,16 +1352,31 @@
     return result;
   }
 
+  function normalizeTopicKey(name) {
+    return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
+  /** Membership-chart labels that already appear as linked prayer topics (duplicate UI). */
+  function principalityManifestationsAreRedundant(principalityId, topicList) {
+    const manifestations = lookups.principality[principalityId]?.manifestations || [];
+    if (!manifestations.length || !topicList.length) return false;
+    const topicKeys = new Set(topicList.map(t => normalizeTopicKey(t.name)));
+    const matched = manifestations.filter(m => topicKeys.has(normalizeTopicKey(m))).length;
+    return matched / manifestations.length >= 0.9;
+  }
+
   function renderChips(items, type) {
     if (!items.length) return '';
     const label = type.charAt(0).toUpperCase() + type.slice(1) + (items.length > 1 && type !== 'topics' ? 's' : '');
     return `<div class="connection-group"><h4>${label}</h4><div class="connection-chips">${items.map(item => {
       const nodeId = type === 'topic' ? `topic-${item.id}` : item.id;
       const style = colors.chipStyle(type, nodeId, lookups);
-      const styleAttr = style.borderColor
-        ? ` style="border-color:${style.borderColor};color:${style.color || 'inherit'}"`
-        : '';
-      return `<button type="button" class="chip ${type.replace(/s$/, '')}" data-node="${nodeId}"${styleAttr}>${type === 'topic' ? `#${item.number} ${item.name}` : item.name}</button>`;
+      const styleParts = [];
+      if (style.borderColor) styleParts.push(`border-color:${style.borderColor}`);
+      if (style.backgroundColor) styleParts.push(`background:${style.backgroundColor}`);
+      const styleAttr = styleParts.length ? ` style="${styleParts.join(';')}"` : '';
+      const chipLabel = type === 'topic' ? `#${item.number} ${item.name}` : item.name;
+      return `<button type="button" class="chip ${type.replace(/s$/, '')}" data-node="${nodeId}"${styleAttr} title="${escapeHtml(chipLabel)}">${chipLabel}</button>`;
     }).join('')}</div></div>`;
   }
 
@@ -1452,12 +1608,15 @@
     const quoteSection = document.getElementById('detail-quote-section');
     const themesSection = document.getElementById('detail-themes-section');
     const manifestationsSection = document.getElementById('detail-manifestations-section');
+    const conn = getConnections(id);
 
     if (type === 'principality') {
       charSection.style.display = '';
       quoteSection.style.display = '';
       themesSection.style.display = (item.themes || []).length ? '' : 'none';
-      manifestationsSection.style.display = (item.manifestations || []).length ? '' : 'none';
+      const hideManifestations = principalityManifestationsAreRedundant(id, conn.topics);
+      manifestationsSection.style.display =
+        !hideManifestations && (item.manifestations || []).length ? '' : 'none';
       document.getElementById('detail-character').textContent = item.character || '';
       showQuote(item);
       document.getElementById('detail-themes').innerHTML = (item.themes || []).map(t => `<li>${t}</li>`).join('');
@@ -1472,7 +1631,6 @@
       manifestationsSection.style.display = 'none';
     }
 
-    const conn = getConnections(id);
     const connEl = document.getElementById('detail-connections');
     connEl.innerHTML = [
       renderChips(conn.principalities, 'principality'),
@@ -1640,9 +1798,9 @@
   syncGraphSize();
   refreshGraph();
   bindZoomSlider();
+  setupGraphWheelZoom();
   initMobileUi();
   mobileMq.addEventListener('change', () => {
-    Graph.enableZoomInteraction(isMobileLayout());
     updateGraphHintForLayout();
     setControlsDrawerOpen(false);
     if (!isMobileLayout()) {

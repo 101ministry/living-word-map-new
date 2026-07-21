@@ -43,6 +43,9 @@ function Normalize-Principality([string]$name) {
         'Using and Abusing Others Verbally, Physically, Emotionally and Spiritually' = 'Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally'
         'Spirit Spouse' = 'Spirit Spouse Gods'
         'Spirit Spouse Gods' = 'Spirit Spouse Gods'
+        'Destructive Attitudes Against God' = "Destructive Attitudes Against God$([char]0x2019)s Image"
+        "Destructive Attitudes Against God$([char]0x2019)s Image" = "Destructive Attitudes Against God$([char]0x2019)s Image"
+        'Destructive Attitudes Against Gods Image' = "Destructive Attitudes Against God$([char]0x2019)s Image"
     }
     if ($map.ContainsKey($name)) { return $map[$name] }
     return $name
@@ -177,6 +180,7 @@ function Resolve-KnownFruitBlob([string]$text) {
 function Normalize-FruitLabel([string]$label) {
     if (-not $label) { return $null }
     $t = ($label -replace '\s+', ' ').Trim().TrimEnd('.')
+    if ($t -match "(?i)^destructive attitudes against god'?s images?$") { return $null }
     if (Test-IsPrayerBoilerplateFruit $t) { return $null }
 
     $exact = @{
@@ -257,6 +261,10 @@ function Test-IsPrayerBoilerplateFruit([string]$fruit) {
 function Resolve-PrincipalityName([string]$header, [string[]]$knownNames) {
     $clean = ($header -replace '^(PRINCIPALITY|CATEGORY|SPIRIT)\s+OF\s+', '').Trim()
     $cleanSlug = Slugify $clean
+    $daagImage = "Destructive Attitudes Against God$([char]0x2019)s Image"
+    if ($cleanSlug -in @('destructive-attitudes-against-god', 'destructive-attitudes-against-god-s-image', 'destructive-attitudes-against-gods-image')) {
+        if ($knownNames -contains $daagImage) { return $daagImage }
+    }
     foreach ($p in $knownNames) {
         if ((Slugify $p) -eq $cleanSlug) { return $p }
     }
@@ -333,7 +341,8 @@ function Get-PrincipalityAliasMap() {
         'gluttony' = 'Gluttony'
         'self-righteousness' = 'Self-Righteousness'
         'rebellion' = 'Rebellion'
-        'destructive attitudes against god' = 'Destructive Attitudes Against God'
+        'destructive attitudes against god' = "Destructive Attitudes Against God$([char]0x2019)s Image"
+        'destructive attitudes against gods image' = "Destructive Attitudes Against God$([char]0x2019)s Image"
         'destructive identities against god' = 'Destructive Identities Against God'
         'spirit spouse' = 'Spirit Spouse Gods'
         'spirit spouse gods' = 'Spirit Spouse Gods'
@@ -403,7 +412,7 @@ function Convert-ToFirstPersonVoice([string]$sentence) {
 function Get-TranscriptFilePrincipality([string]$fileName, [string[]]$knownNames) {
     $map = @{
         'Rebellion' = 'Rebellion'
-        'Destructive Attitudes Against God' = 'Destructive Attitudes Against God'
+        'Destructive Attitudes Against God' = "Destructive Attitudes Against God$([char]0x2019)s Image"
         'Familiar Spirits' = 'Destructive Identities Against God'
         'Trigger Warning' = 'Whoredom'
     }
@@ -607,7 +616,8 @@ $allPrincipalityNames = @(
     'Whoredom', 'Infirmity', 'Shedding of Innocent Blood', 'Treachery Against Others',
     'Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally',
     'Trading Floor Transactions with Demons', 'Gluttony', 'Self-Righteousness',
-    'Sexual Perversion', 'Rebellion', 'Destructive Attitudes Against God',
+    'Sexual Perversion', 'Rebellion',
+    "Destructive Attitudes Against God$([char]0x2019)s Image",
     'Destructive Identities Against God',     'Spirit Spouse Gods'
 )
 
@@ -620,12 +630,6 @@ $topicFruitOverrides = @{
         'Abuse and Exploitation of Others'
     )
     304 = @('Anti-Christ Spirit / Separation From God')
-    419 = @(
-        "Destructive Attitudes Against God$([char]0x2019)s Image"
-    )
-    526 = @(
-        "Destructive Attitudes Against God$([char]0x2019)s Image"
-    )
     577 = @(
         'Sexual Corruption'
         'Human and Hybrid DNA'
@@ -826,6 +830,30 @@ for ($num = 1; $num -le 666; $num++) {
         }
     }
 
+    $daagImage = "Destructive Attitudes Against God$([char]0x2019)s Image"
+    $imageFruitPattern = "(?i)^destructive attitudes against god'?s images?$"
+    $strippedFruits = [System.Collections.Generic.List[string]]::new()
+    foreach ($f in $fruitNames) {
+        if ($f -match $imageFruitPattern) {
+            if (-not $principalityNames.Contains($daagImage)) {
+                [void]$principalityNames.Insert(0, $daagImage)
+            }
+        } else {
+            [void]$strippedFruits.Add($f)
+        }
+    }
+    $fruitNames = @($strippedFruits)
+    $fruit = if ($fruitNames.Count -gt 0) { $fruitNames[0] } else { $null }
+
+    $normalizedPrincipalities = [System.Collections.Generic.List[string]]::new()
+    foreach ($p in $principalityNames) {
+        $canonical = Normalize-Principality $p
+        if ($canonical -and -not $normalizedPrincipalities.Contains($canonical)) {
+            [void]$normalizedPrincipalities.Add($canonical)
+        }
+    }
+    $principalityNames = $normalizedPrincipalities
+
     $rootNames = @()
     if ($root) { $rootNames = @($root) }
     $rootIds = @($rootNames | ForEach-Object { Slugify $_ })
@@ -1015,7 +1043,7 @@ $stats = @{
     metadataTopicCount = $metadataByNumber.Count
     principalityCount = $principalities.Count
     rootCount = $rootsMap.Count
-    fruitCount = $fruitsMap.Count
+    fruitCount = @($fruitsMap.Values | Where-Object { $_.topicIds.Count -gt 0 }).Count
     edgeCount = $edges.Count
     principalitiesWithLore = ($principalityLore.Keys | Measure-Object).Count
     principalitiesWithTranscriptVoices = $principalitiesWithTranscriptVoices
@@ -1040,7 +1068,7 @@ $graph = @{
     roots = @($rootsMap.Values | ForEach-Object {
         @{ id = $_.id; name = $_.name; topicCount = $_.topicIds.Count }
     })
-    fruits = @($fruitsMap.Values | ForEach-Object {
+    fruits = @($fruitsMap.Values | Where-Object { $_.topicIds.Count -gt 0 } | ForEach-Object {
         @{ id = $_.id; name = $_.name; topicCount = $_.topicIds.Count }
     })
     topics = $topics

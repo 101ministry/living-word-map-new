@@ -23,7 +23,7 @@
     'self-righteousness': 'SR',
     'sexual-perversion': 'SP',
     'rebellion': 'RB',
-    'destructive-attitudes-against-god': 'DA',
+    'destructive-attitudes-against-god-s-image': 'DA',
     'destructive-identities-against-god': 'DI',
     'spirit-spouse-gods': 'SS',
   };
@@ -67,7 +67,14 @@
 
   window.PrincipalityIcons = {
     customPaths(id) {
+      const aliases = {
+        'destructive-attitudes-against-god-s-image': [
+          'images/principalities/destructive-attitudes-against-gods-image.svg',
+        ],
+      };
+      const extra = aliases[id] || [];
       return [
+        ...extra,
         `images/principalities/${id}.png`,
         `images/principalities/${id}.webp`,
         `images/principalities/${id}.svg`,
