@@ -42,14 +42,8 @@ function ConvertTo-FrenchPrayerText([string]$text) {
 }
 
 function Get-FrCorePrayer() {
-    $meta = Read-Utf8 $MetaFile | ConvertFrom-Json
-    $coreText = Read-Utf8 $CoreFile
-    return @{
-        title = [string]$meta.coreTitle
-        instruction = [string]$meta.coreInstruction
-        text = $coreText.Trim()
-        audioPath = 'audio/fr/core.mp3'
-    }
+    . "$PSScriptRoot\core-prayer-i18n.ps1"
+    return Get-TranslatedCorePrayer -LangCode 'fr' -PhrasesFile $PhrasesFile -MetaFile $MetaFile
 }
 
 $en = Read-Utf8 $EnglishFile | ConvertFrom-Json

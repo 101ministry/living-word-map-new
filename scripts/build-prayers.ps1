@@ -166,6 +166,11 @@ $enJs = "window.PRAYER_EN = $($enPayload | ConvertTo-Json -Depth 6 -Compress);"
 [System.IO.File]::WriteAllText((Join-Path $prayersDir 'en.js'), $enJs, [System.Text.UTF8Encoding]::new($false))
 
 # Generate translated prayer sources from English
+$syncCore = Join-Path $PSScriptRoot 'sync-core-prayer-translations.ps1'
+if (Test-Path $syncCore) {
+    & $syncCore -EnglishCoreFile $CorePrayerFile
+}
+
 $buildEs = Join-Path $PSScriptRoot 'build-es-prayers.ps1'
 if (Test-Path $buildEs) {
     & $buildEs -EnglishFile (Join-Path $prayersDir 'en.json')

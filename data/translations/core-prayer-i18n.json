@@ -1,0 +1,80 @@
+{
+  "es": {
+    "topic": "[tema]",
+    "happening": " está sucediendo por pactos, alianzas de sangre, contratos de sangre, hechizos, vejaciones, interacción con la sangre y acuerdos de rituales satánicos. ",
+    "title": "Oración central",
+    "instruction": "Reemplace [tema] con el tema de oración específico. Estas oraciones deben ser proclamadas en voz alta, no leídas en silencio."
+  },
+  "fr": {
+    "topic": "[sujet]",
+    "happening": " se produit à cause de pactes, alliances de sang, contrats de sang, sortilèges, vexations, interaction avec le sang et accords de rituels sataniques. ",
+    "title": "Prière centrale",
+    "instruction": "Remplacez [sujet] par le sujet de prière spécifique. Ces prières doivent être prononcées à voix haute, pas simplement lues en silence."
+  },
+  "de": {
+    "topic": "[Thema]",
+    "happening": " geschieht wegen Bundnissen, Blutbündnissen, Blutverträgen, Hexen, Bedrängungen, Umgang mit dem Blut und satanischen Ritualabkommen. ",
+    "title": "Kerngebet",
+    "instruction": "Ersetzen Sie [Thema] durch das jeweilige Gebetsthema. Diese Gebete sollen laut gesprochen werden, nicht nur still gelesen."
+  },
+  "pt": {
+    "topic": "[tema]",
+    "happening": " acontece por causa de pactos, alianças de sangue, contratos de sangue, feitiços, vexames, interação com o sangue e acordos de rituais satânicos. ",
+    "title": "Oração central",
+    "instruction": "Substitua [tema] pelo tópico de oração específico. Estas orações devem ser proclamadas em voz alta, não lidas em silencio."
+  },
+  "ru": {
+    "topic": "[тема]",
+    "happening": " происходит из-за соглашений, кровных заветов, кровных контрактов, проклятий, тягот, взаимодействия с кровью и сатанинских ритуальных соглашений. ",
+    "title": "Основная молитва",
+    "instruction": "Замените [тема] конкретной темой молитвы. Эти молитвы нужно произносить вслух, а не просто читать про себя."
+  },
+  "ar": {
+    "topic": "[الموضوع]",
+    "happening": " يحدث بسبب اتفاقيات، عهود دم، عقود دم، سحر، أذى، تفاعل مع الدم، واتفاقيات طقوسية شيطانية. ",
+    "title": "الصلاة الأساسية",
+    "instruction": "استبدل [الموضوع] بموضوع الصلاة المحدد. يجب أن تُنطق هذه الصلوات بصوت عالٍ، وليس قراءتها بصمت."
+  },
+  "hi": {
+    "topic": "[विषय]",
+    "happening": " समझौतों, रक्त संधियों, रक्त अनुबंधों, शापों, उत्पीड़नों, रक्त के संपर्क और शैतानी अनुष्ठानिक समझौतों के कारण हो रहा है। ",
+    "title": "मुख्य प्रार्थना",
+    "instruction": "[विषय] को विशिष्ट प्रार्थना विषय से बदलें। ये प्रार्थनाएँ ज़ोर से बोलकर प्रार्थना की जानी चाहिए, चुपचाप पढ़ी नहीं।"
+  },
+  "bn": {
+    "topic": "[বিষয়]",
+    "happening": " চুক্তি, রক্তের নিয়ম, রক্তের চুক্তি, জাদু, কষ্ট, রক্তের সঙ্গে যোগাযোগ এবং শয়তানি আচার-অনুষ্ঠানের চুক্তির কারণে ঘটছে। ",
+    "title": "মূল প্রার্থনা",
+    "instruction": "[বিষয়] কে নির্দিষ্ট প্রার্থনার বিষয় দিয়ে প্রতিস্থাপন করুন। এই প্রার্থনাগুলো জোরে জোরে বলতে হবে, নীরবে পড়া নয়।"
+  },
+  "ur": {
+    "topic": "[موضوع]",
+    "happening": " معاہدوں، خون کے عہد، خون کے معاہدوں، جادو، اذیت، خون کے ساتھ تعامل، اور شیطانی رسمی معاہدوں کی وجہ سے ہو رہا ہے۔ ",
+    "title": "مرکزی دعا",
+    "instruction": "[موضوع] کو مخصوص دعا کے موضوع سے بدلیں۔ یہ دعائیں بلند آواز سے پڑھی جانی چاہئیں، خاموشی سے نہیں۔"
+  },
+  "id": {
+    "topic": "[topik]",
+    "happening": " terjadi karena perjanjian, perjanjian darah, kontrak darah, kutukan, gangguan, interaksi dengan darah, dan perjanjian ritual satanis. ",
+    "title": "Doa inti",
+    "instruction": "Gantilah [topik] dengan topik doa yang spesifik. Doa-doa ini harus diucapkan dengan suara, bukan hanya dibaca diam-diam."
+  },
+  "ja": {
+    "topic": "[トピック]",
+    "happening": " は、契約、血の盟約、血の契約、呪い、悩まし、血との関わり、およびサタンの儀式の契約によって起こっています。",
+    "title": "中心の祈り",
+    "instruction": "[トピック] を特定の祈りのトピックに置き換えてください。これらの祈りは黙読ではなく、声に出して唱えてください。"
+  },
+  "ko": {
+    "topic": "[주제]",
+    "happening": " 은(는) 혈약, 혈맹, 혈계약, 주술, 괴롭힘, 피와의 교류, 사탄 의식 협약 때문에 일어나고 있습니다. ",
+    "title": "핵심 기도",
+    "instruction": "[주제]를 해당 기도 주제로 바꾸십시오. 이 기도들은 조용히 읽지 말고 소리 내어 드려야 합니다."
+  },
+  "sw": {
+    "topic": "[mada]",
+    "happening": " inatokea kwa sababu ya mapatano, agano za damu, mikataba ya damu, uchawi, mateso, mwingiliano na damu, na mapatano ya ibada za kishetani. ",
+    "title": "Sala ya Msingi",
+    "instruction": "Badilisha [mada] na mada maalum ya sala. Sala hizi zinapaswa kutamkwa kwa sauti, si kusomwa kimya kimya."
+  }
+}

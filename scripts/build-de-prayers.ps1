@@ -42,14 +42,8 @@ function ConvertTo-GermanPrayerText([string]$text) {
 }
 
 function Get-DeCorePrayer() {
-    $meta = Read-Utf8 $MetaFile | ConvertFrom-Json
-    $coreText = Read-Utf8 $CoreFile
-    return @{
-        title = [string]$meta.coreTitle
-        instruction = [string]$meta.coreInstruction
-        text = $coreText.Trim()
-        audioPath = 'audio/de/core.mp3'
-    }
+    . "$PSScriptRoot\core-prayer-i18n.ps1"
+    return Get-TranslatedCorePrayer -LangCode 'de' -PhrasesFile $PhrasesFile -MetaFile $MetaFile
 }
 
 $en = Read-Utf8 $EnglishFile | ConvertFrom-Json
