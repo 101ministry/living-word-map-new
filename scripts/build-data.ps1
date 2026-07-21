@@ -479,6 +479,19 @@ foreach ($block in $metadataBlocks) {
         $metaName = $matches[2].Trim()
     }
 
+    $bodyRoot = $null
+    if ($b -match '(?is)with the root of\s+(.+?)\s*;') {
+        $bodyRoot = $Matches[1].Trim().TrimEnd('.')
+    }
+    if ($bodyRoot) {
+        if ($root -and (Slugify $bodyRoot) -ne (Slugify $root)) {
+            # Header and exposition disagree — prefer the exposition line used in prayers/teaching.
+            $root = $bodyRoot
+        } elseif (-not $root) {
+            $root = $bodyRoot
+        }
+    }
+
     $fruit = $null
     $fruits = @()
     $principality = $null

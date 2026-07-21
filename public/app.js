@@ -738,6 +738,28 @@
           topicNodes.splice(i, 1);
         }
       }
+
+      const linkedNodeIds = new Set();
+      links.forEach(l => {
+        const s = typeof l.source === 'object' ? l.source.id : l.source;
+        const t = typeof l.target === 'object' ? l.target.id : l.target;
+        linkedNodeIds.add(s);
+        linkedNodeIds.add(t);
+      });
+      for (let i = rootNodes.length - 1; i >= 0; i--) {
+        const id = rootNodes[i].id;
+        if (!linkedNodeIds.has(id)) {
+          nodeIds.delete(id);
+          rootNodes.splice(i, 1);
+        }
+      }
+      for (let i = fruitNodes.length - 1; i >= 0; i--) {
+        const id = fruitNodes[i].id;
+        if (!linkedNodeIds.has(id)) {
+          nodeIds.delete(id);
+          fruitNodes.splice(i, 1);
+        }
+      }
     }
 
     if (state.selectedId && state.viewMode === 'constellation' && nodeIds.has(state.selectedId)) {
