@@ -1,6 +1,10 @@
 # Builds graph data for the Living Word Map from source files.
 param(
-    [string]$TopicsFile = "$env:USERPROFILE\Downloads\Telegram Desktop\topics 666.txt",
+    [string]$TopicsFile = $(if (Test-Path "$PSScriptRoot\..\data\TOPICS-666.txt") {
+        (Resolve-Path "$PSScriptRoot\..\data\TOPICS-666.txt").Path
+    } else {
+        "$env:USERPROFILE\Downloads\Telegram Desktop\topics 666.txt"
+    }),
     [string]$ChartFile = $(if (Test-Path "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt") {
         (Resolve-Path "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt").Path
     } else {
@@ -201,6 +205,10 @@ function Normalize-FruitLabel([string]$label) {
         'violence' = 'Anger and Violence'
         'sexual corruption' = 'Sexual Corruption'
         'occultism and false religion' = 'Occultism and Counterfeit Spirituality'
+        'False Religion and Occultism' = 'False Religion and Doctrinal Error'
+        'Destructive Identities Against God' = "Destructive Identities Against God$([char]0x2019)s Image"
+        "Destructive Identities Against God$([char]0x2019)s Image" = "Destructive Identities Against God$([char]0x2019)s Image"
+        "Destructive Attitudes Against God$([char]0x2019)s Image" = "Destructive Attitudes Against God$([char]0x2019)s Image"
     }
     if ($exact.ContainsKey($t)) { return $exact[$t] }
 
@@ -622,7 +630,17 @@ $allPrincipalityNames = @(
 )
 
 # Known-good fruit sets when topics 666.txt has prayer-template bleed or truncated metadata.
+$daagImageFruit = "Destructive Attitudes Against God$([char]0x2019)s Image"
+$diagImageFruit = "Destructive Identities Against God$([char]0x2019)s Image"
+$spiritSpouseFruits = @(
+    'Sexual Corruption'
+    'Human and Hybrid DNA'
+    'Counterfeit Spirituality'
+    'Confusing Preferences with Stewardship'
+)
+
 $topicFruitOverrides = @{
+    130 = @('Occultism and Counterfeit Spirituality')
     284 = @(
         'Anger and Violence'
         'Sexual Corruption'
@@ -630,19 +648,15 @@ $topicFruitOverrides = @{
         'Abuse and Exploitation of Others'
     )
     304 = @('Anti-Christ Spirit / Separation From God')
-    577 = @(
-        'Sexual Corruption'
-        'Human and Hybrid DNA'
-        'Counterfeit Spirituality'
-        'Confusing Preferences with Stewardship'
-    )
-    580 = @(
-        'Sexual Corruption'
-        'Human and Hybrid DNA'
-        'Counterfeit Spirituality'
-        'Confusing Preferences with Stewardship'
-    )
 }
+for ($n = 391; $n -le 442; $n++) { $topicFruitOverrides[$n] = @($daagImageFruit) }
+for ($n = 443; $n -le 573; $n++) { $topicFruitOverrides[$n] = @($diagImageFruit) }
+for ($n = 574; $n -le 666; $n++) { $topicFruitOverrides[$n] = @($spiritSpouseFruits) }
+
+$topicPrincipalityOverrides = @{
+    130 = 'Divination'
+}
+for ($n = 574; $n -le 666; $n++) { $topicPrincipalityOverrides[$n] = 'Spirit Spouse Gods' }
 
 # --- Parse root / fruit / principality metadata from topics file ---
 $topicsRaw = Read-Utf8 $TopicsFile
@@ -740,6 +754,9 @@ foreach ($block in $metadataBlocks) {
         $fruits = @($topicFruitOverrides[$num])
         $fruit = $fruits[0]
     }
+    if ($topicPrincipalityOverrides.ContainsKey($num)) {
+        $principality = $topicPrincipalityOverrides[$num]
+    }
 
     $metadataByNumber[$num] = @{
         metaName = $metaName
@@ -831,10 +848,13 @@ for ($num = 1; $num -le 666; $num++) {
     }
 
     $daagImage = "Destructive Attitudes Against God$([char]0x2019)s Image"
+    $diagImage = "Destructive Identities Against God$([char]0x2019)s Image"
     $imageFruitPattern = "(?i)^destructive attitudes against god'?s images?$"
     $strippedFruits = [System.Collections.Generic.List[string]]::new()
     foreach ($f in $fruitNames) {
-        if ($f -match $imageFruitPattern) {
+        $isCanonicalImageFruit = ($f -eq $daagImage -and $num -ge 391 -and $num -le 442) -or
+            ($f -eq $diagImage -and $num -ge 443 -and $num -le 573)
+        if ($f -match $imageFruitPattern -and -not $isCanonicalImageFruit) {
             if (-not $principalityNames.Contains($daagImage)) {
                 [void]$principalityNames.Insert(0, $daagImage)
             }

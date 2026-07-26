@@ -21,6 +21,8 @@
     { id: 'sexual-corruption', label: 'Sexual Corruption', color: '#F9A825', aliases: ['sexual'] },
     { id: 'occultism-and-counterfeit-spirituality', label: 'Occultism and Counterfeit Spirituality', color: '#2E7D32', aliases: ['occultism', 'counterfeit-spirituality', 'because-of-occultism'] },
     { id: 'false-religion-and-doctrinal-error', label: 'False Religion and Doctrinal Error', color: '#1565C0', aliases: ['false-religion', 'doctrinal-error', 'because-of-false-religion', 'false-religion-and-occultism'] },
+    { id: 'destructive-attitudes-against-god-s-image', label: "Destructive Attitudes Against God's Image", color: '#C62828', aliases: ['destructive-attitudes', 'against-gods-image-attitudes'] },
+    { id: 'destructive-identities-against-god-s-image', label: "Destructive Identities Against God's Image", color: '#AD1457', aliases: ['destructive-identities', 'familiar-spirits-fruit'] },
     { id: 'mental-oppression-and-confusion', label: 'Mental Oppression and Confusion', color: '#6A1B9A', aliases: ['mental-oppression', 'because-of-mental-oppression'] },
     { id: 'death-and-self-destruction', label: 'Death and Self-Destruction', color: '#4E342E', aliases: ['death-and-social-destruction', 'self-destruction'] },
     { id: 'physical-weakness-and-infirmity', label: 'Physical Weakness and Infirmity', color: '#90A4AE', aliases: ['physical-weakness', 'infirmity'] },

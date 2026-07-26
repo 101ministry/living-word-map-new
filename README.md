@@ -53,11 +53,13 @@ powershell -File scripts\build-prayers.ps1 # → public\prayers\
 **Source files in `data/`:**
 
 - `ROOT-SPIRITS-CHART.txt` — roots & fruits taxonomy
+- `TOPICS-666.txt` — all 666 topics with root/fruit/principality metadata (canonical; synced to Telegram Desktop by `fix-topics666-fruits.ps1`)
+- `TOPICS-666-PRESENTATION.txt` — teaching presentation order
 - `PRINCIPALITY-MEMBERSHIPS.txt` — principality ↔ topic labels (additive)
 - `PRINCIPALITY-STRONGS.txt` — Greek/Hebrew Strong's anchors for character voices
 - `COMPILED-PRAYERS-ROUND1.txt` — prayer source text
 
-Some build inputs (Obsidian lore, transcripts, `topics 666.txt`) may still live outside this repo until fully copied into `data/`.
+Some build inputs (Obsidian lore, transcripts) may still live outside this repo until fully copied into `data/`.
 
 ---
 
