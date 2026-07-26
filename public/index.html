@@ -7,12 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
   <div id="app">
     <header class="header">
-      <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Filters and legend" aria-expanded="false" aria-controls="legend-panel">☰</button>
+      <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">☰</button>
       <div class="header-brand">
         <h1>Living Word Map</h1>
         <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
@@ -28,6 +28,7 @@
         <select id="view-mode" aria-label="View mode">
           <option value="constellation">Constellation</option>
           <option value="explore">Explore All</option>
+          <option value="globe">Globe Word Map</option>
         </select>
         <button id="reset-view" type="button">Reset</button>
       </div>
@@ -38,6 +39,16 @@
     <div class="workspace">
     <main class="main">
       <aside class="legend" id="legend-panel" aria-label="Legend">
+        <div class="legend-drawer-header">
+          <button type="button" id="close-controls" class="legend-close-btn" aria-label="Close filters">×</button>
+        </div>
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Quick navigation">
+          <h2>Navigate</h2>
+          <ul class="mobile-nav-list">
+            <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
+            <li><button type="button" id="nav-videos" class="mobile-nav-link">Teaching Videos</button></li>
+          </ul>
+        </nav>
         <h2>Layers</h2>
         <ul>
           <li><span class="dot principality"></span> Principality</li>
@@ -74,6 +85,7 @@
 
       <section class="graph-panel">
         <div id="graph"></div>
+        <div id="globe-view" class="globe-view hidden" aria-hidden="true" aria-label="Globe word map"></div>
         <div id="graph-tooltip" class="graph-tooltip hidden" role="tooltip" aria-hidden="true"></div>
         <div id="graph-hint" class="graph-hint">Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.</div>
         <div class="graph-zoom-bar" aria-label="Graph magnification">
@@ -91,6 +103,10 @@
         <div class="detail-sheet-header">
           <div class="detail-sheet-handle" aria-hidden="true"></div>
           <button type="button" id="close-detail" class="detail-close-btn">← Map</button>
+          <nav id="globe-detail-nav" class="globe-detail-nav hidden" aria-label="Globe navigation">
+            <button type="button" id="globe-back-country" class="detail-close-btn">← Country map</button>
+            <button type="button" id="globe-back-globe" class="detail-close-btn">← Globe view</button>
+          </nav>
         </div>
         <div class="detail-empty" id="detail-empty">
           <p class="detail-empty-title">Select a node</p>
@@ -148,6 +164,23 @@
             <div class="prayer-text" id="prayer-text"></div>
           </section>
         </article>
+      </aside>
+
+      <aside class="globe-video-rail hidden" id="globe-video-rail" aria-label="Fruit teaching videos">
+        <header class="globe-video-rail-header">
+          <h2 id="globe-video-rail-title">Teaching Videos</h2>
+          <p id="globe-video-rail-meta" class="globe-video-rail-meta"></p>
+        </header>
+        <div class="globe-video-rail-layout">
+          <div class="globe-video-rail-player-wrap">
+            <div id="globe-teaching-player" class="teaching-player" aria-label="YouTube video player"></div>
+            <div id="globe-teaching-video-picker" class="teaching-video-picker" role="tablist" aria-label="Select day"></div>
+          </div>
+          <div class="globe-video-rail-chapters-wrap teaching-chapters-wrap">
+            <p id="globe-teaching-chapter-meta" class="teaching-chapter-meta"></p>
+            <ul id="globe-teaching-chapters" class="teaching-chapters"></ul>
+          </div>
+        </div>
       </aside>
     </main>
     </div>
@@ -219,6 +252,8 @@
   <script src="prayers/en.js"></script>
   <script src="prayers.js"></script>
   <script src="videos.js"></script>
+  <script src="topic-icons.js?v=4"></script>
+  <script src="globe-view.js?v=23"></script>
   <script src="app.js"></script>
   <script src="teaching-videos.js"></script>
 </body>

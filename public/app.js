@@ -56,12 +56,70 @@
     compareIds: [],
     language: 'en',
     hoveredNodeId: null,
+    globeTransportPrincipalityId: null,
+    globeFruitFocusId: null,
   };
 
   const MAX_COMPARE = 3;
   const mobileMq = window.matchMedia('(max-width: 768px)');
   const icons = window.PrincipalityIcons;
   const compareDialog = document.getElementById('compare-dialog');
+
+  function isGlobeView() {
+    return state.viewMode === 'globe';
+  }
+
+  function isGlobeFruitFocus() {
+    return isGlobeView() && !!state.globeFruitFocusId;
+  }
+
+  function applyGlobeLayout() {
+    const fruitFocus = isGlobeFruitFocus();
+    mainWorkspace?.classList.toggle('is-globe-fruit-focus', fruitFocus);
+    document.getElementById('globe-video-rail')?.classList.toggle('hidden', !fruitFocus);
+    document.getElementById('teaching-panel')?.classList.toggle('hidden', fruitFocus && !isMobileLayout());
+    document.getElementById('globe-detail-nav')?.classList.toggle('hidden', !fruitFocus);
+    document.getElementById('close-detail')?.classList.toggle('hidden', fruitFocus);
+    if (fruitFocus) closeDetailSheet();
+  }
+
+  function exitGlobeFruitFocusToCountry() {
+    if (!state.globeTransportPrincipalityId) {
+      exitGlobeFruitFocusToGlobe();
+      return;
+    }
+    state.globeFruitFocusId = null;
+    window.TeachingVideos?.hideGlobeRail?.();
+    applyGlobeLayout();
+    selectNode(state.globeTransportPrincipalityId);
+  }
+
+  function exitGlobeFruitFocusToGlobe() {
+    state.globeFruitFocusId = null;
+    state.globeTransportPrincipalityId = null;
+    window.TeachingVideos?.hideGlobeRail?.();
+    applyGlobeLayout();
+    closeConstellationDetail();
+  }
+
+  function enterGlobeFruitFocus(fruitId, fruitItem, topics) {
+    if (!state.globeTransportPrincipalityId) {
+      state.globeTransportPrincipalityId = globeTransportPrincipalityId();
+    }
+    state.globeFruitFocusId = fruitId;
+    applyGlobeLayout();
+    const topicNumbers = topics.map(t => t.number);
+    const withVideo = topicNumbers.filter(n => window.VIDEO_DATA?.topicIndex?.[String(n)]);
+    window.TeachingVideos?.showFruitRail?.(fruitItem.name, withVideo.length ? withVideo : topicNumbers);
+  }
+
+  function isConstellationView() {
+    return state.viewMode === 'constellation';
+  }
+
+  function isFocusedSelectionView() {
+    return isConstellationView() || isGlobeView();
+  }
 
   const topicAudio = document.getElementById('topic-audio');
   const coreAudio = document.getElementById('core-audio');
@@ -130,7 +188,11 @@
   }
 
   function dismissDetailSelection() {
-    if (state.viewMode === 'constellation' && state.selectedId) {
+    if (isGlobeFruitFocus()) {
+      exitGlobeFruitFocusToCountry();
+      return;
+    }
+    if (isFocusedSelectionView() && state.selectedId) {
       closeConstellationDetail();
       return;
     }
@@ -144,9 +206,29 @@
   function updateGraphHintForLayout() {
     const hint = document.getElementById('graph-hint');
     if (!hint) return;
-    hint.textContent = isMobileLayout()
-      ? 'Tap a Principality to explore. Pinch to zoom; drag to pan.'
-      : 'Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.';
+    hint.textContent = isGlobeView()
+      ? 'Globe Word Map: drag to spin territories, scroll or use the slider to magnify, tap a region for routes.'
+      : isMobileLayout()
+        ? 'Tap a Principality to explore. Pinch to zoom; drag to pan.'
+        : 'Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.';
+  }
+
+  function scrollToTeachingVideos() {
+    setControlsDrawerOpen(false);
+    closeDetailSheet();
+    document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function goToCompare() {
+    if (state.compareIds.length >= 2) {
+      setControlsDrawerOpen(false);
+      openCompareDialog();
+      return;
+    }
+    setControlsDrawerOpen(true);
+    requestAnimationFrame(() => {
+      document.querySelector('.compare-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
   function initMobileUi() {
@@ -158,11 +240,20 @@
       setControlsDrawerOpen(!legend?.classList.contains('is-open'));
     });
 
+    document.getElementById('close-controls')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+    });
+
+    document.getElementById('nav-compare')?.addEventListener('click', goToCompare);
+    document.getElementById('nav-videos')?.addEventListener('click', scrollToTeachingVideos);
+
     document.getElementById('legend-backdrop')?.addEventListener('click', () => {
       setControlsDrawerOpen(false);
     });
 
     document.getElementById('close-detail')?.addEventListener('click', dismissDetailSelection);
+    document.getElementById('globe-back-country')?.addEventListener('click', exitGlobeFruitFocusToCountry);
+    document.getElementById('globe-back-globe')?.addEventListener('click', exitGlobeFruitFocusToGlobe);
 
     document.getElementById('detail-backdrop')?.addEventListener('click', dismissDetailSelection);
   }
@@ -735,12 +826,12 @@
       });
     }
 
-    const topicLimit = state.viewMode === 'constellation' ? 0 : (state.show.topic ? topics.length : 0);
-    const visibleTopics = state.selectedId && state.viewMode === 'constellation'
+    const topicLimit = isConstellationView() ? 0 : (state.show.topic ? topics.length : 0);
+    const visibleTopics = state.selectedId && isConstellationView()
       ? topics.filter(t => topicMatchesNode(t, state.selectedId))
       : topics.slice(0, topicLimit);
 
-    if (state.selectedId && state.viewMode === 'constellation') {
+    if (state.selectedId && isConstellationView()) {
       visibleTopics.forEach(t => {
         const tid = `topic-${t.id}`;
         topicNodes.push({ id: tid, type: 'topic' });
@@ -754,7 +845,7 @@
       });
     }
 
-    const showTopicLinks = state.show.topic || (state.selectedId && state.viewMode === 'constellation');
+    const showTopicLinks = state.show.topic || (state.selectedId && isConstellationView());
     const allowedLinkTypes = new Set();
     if (state.show.aggregateLinks) {
       allowedLinkTypes.add('root_principality');
@@ -775,7 +866,7 @@
     });
 
     // Drop topic nodes with no visible edges (otherwise they float when layer/link filters hide all connections).
-    if (state.show.topic && state.viewMode !== 'constellation') {
+    if (state.show.topic && !isConstellationView()) {
       const linkedTopicIds = new Set();
       links.forEach(l => {
         const s = typeof l.source === 'object' ? l.source.id : l.source;
@@ -814,7 +905,7 @@
       }
     }
 
-    if (state.selectedId && state.viewMode === 'constellation' && nodeIds.has(state.selectedId)) {
+    if (state.selectedId && isConstellationView() && nodeIds.has(state.selectedId)) {
       const related = new Set([state.selectedId]);
       links.forEach(l => {
         const s = typeof l.source === 'object' ? l.source.id : l.source;
@@ -838,6 +929,10 @@
   }
 
   const container = document.getElementById('graph');
+  const graphPanel = container?.closest('.graph-panel');
+  const mainWorkspace = document.querySelector('.main');
+  const globeHost = document.getElementById('globe-view');
+  let globeView = null;
   if (typeof ForceGraph !== 'function') {
     container.innerHTML = '<p style="padding:2rem;color:#8a8798;text-align:center;line-height:1.6">Graph could not load. Try refreshing the page, or open via <strong>open.bat</strong> in the project folder.</p>';
     initLanguageSelector().catch(err => console.error('Language catalog failed to load:', err));
@@ -1054,6 +1149,38 @@
 
   window.__principalityIconRefresh = () => Graph.refresh();
 
+  if (globeHost && window.GlobeView) {
+    globeView = window.GlobeView.create(globeHost, {
+      principalities,
+      colors,
+      lookups,
+      getConnections,
+      onSelectPrincipality(id) {
+        state.globeTransportPrincipalityId = id;
+        state.globeFruitFocusId = null;
+        window.TeachingVideos?.hideGlobeRail?.();
+        applyGlobeLayout();
+        selectNode(id);
+      },
+      onSelectTopic(topicId) {
+        selectNode(`topic-${topicId}`);
+      },
+      onSelectNode(id) {
+        selectNode(id);
+      },
+      onBackgroundClick() {
+        state.globeTransportPrincipalityId = null;
+        state.globeFruitFocusId = null;
+        window.TeachingVideos?.hideGlobeRail?.();
+        applyGlobeLayout();
+        closeConstellationDetail();
+      },
+      onMagnificationChange(m) {
+        syncZoomSlider(m);
+      },
+    });
+  }
+
   principalities.forEach(p => icons?.ensure(p.id, p.name));
 
   const ZOOM_MS = 450;
@@ -1079,9 +1206,14 @@
     if (zoomLabel) zoomLabel.textContent = `${zoom.toFixed(2)}×`;
   }
 
-  function syncZoomSlider(zoom = Graph.zoom()) {
+  function syncZoomSlider(zoom) {
     if (!zoomSlider || sliderDrivingZoom) return;
-    const k = typeof zoom === 'number' ? zoom : Graph.zoom();
+    let k;
+    if (isGlobeView() && globeView) {
+      k = globeView.getMagnification();
+    } else {
+      k = typeof zoom === 'number' ? zoom : Graph.zoom();
+    }
     zoomSlider.value = String(Math.round(zoomToSlider(k)));
     updateZoomLabel(k);
   }
@@ -1092,10 +1224,24 @@
     else setTimeout(() => syncZoomSlider(), duration + 40);
   }
 
-  function nudgeGraphZoom(direction) {
-    const current = Graph.zoom();
+  function setActiveZoom(zoom, duration = 0) {
+    if (isGlobeView() && globeView) {
+      globeView.setMagnification(zoom);
+      return;
+    }
+    setGraphZoom(zoom, duration);
+  }
+
+  function nudgeActiveZoom(direction) {
+    const current = isGlobeView() && globeView
+      ? globeView.getMagnification()
+      : Graph.zoom();
     const step = direction > 0 ? 1.18 : 1 / 1.18;
-    setGraphZoom(current * step, 120);
+    setActiveZoom(current * step, isGlobeView() ? 0 : 120);
+  }
+
+  function nudgeGraphZoom(direction) {
+    nudgeActiveZoom(direction);
   }
 
   function setupGraphWheelZoom() {
@@ -1109,7 +1255,13 @@
 
     zoomSlider.addEventListener('input', () => {
       sliderDrivingZoom = true;
-      setGraphZoom(sliderToZoom(Number(zoomSlider.value)), 0);
+      const zoom = sliderToZoom(Number(zoomSlider.value));
+      if (isGlobeView() && globeView) {
+        globeView.setMagnification(zoom, { silent: true });
+        updateZoomLabel(zoom);
+      } else {
+        setGraphZoom(zoom, 0);
+      }
       sliderDrivingZoom = false;
     });
 
@@ -1150,8 +1302,9 @@
   }
 
   function applyGraphView(duration = ZOOM_MS, delay = VIEW_SETTLE_MS) {
+    if (isGlobeView()) return;
     const run = () => {
-      if (state.viewMode === 'constellation') {
+      if (isConstellationView()) {
         if (state.selectedId) fitConstellationSelection(duration);
         else fitConstellationRing(duration);
       } else {
@@ -1163,14 +1316,55 @@
   }
 
   function closeConstellationDetail() {
+    if (isGlobeView()) {
+      state.globeTransportPrincipalityId = null;
+      state.globeFruitFocusId = null;
+      window.TeachingVideos?.hideGlobeRail?.();
+      applyGlobeLayout();
+    }
     state.selectedId = null;
     showEmptyDetail();
     document.getElementById('graph-hint').classList.remove('hidden');
     refreshGraph();
+    if (isGlobeView()) return;
     setTimeout(() => {
       fitConstellationFull(ZOOM_MS);
       setTimeout(() => fitConstellationRing(ZOOM_MS), ZOOM_MS + 80);
     }, VIEW_SETTLE_MS);
+  }
+
+  function globeTransportPrincipalityId() {
+    if (state.globeTransportPrincipalityId) return state.globeTransportPrincipalityId;
+    if (!state.selectedId) return null;
+    if (nodeType(state.selectedId) === 'principality') return state.selectedId;
+    if (nodeType(state.selectedId) === 'fruit' || nodeType(state.selectedId) === 'root') {
+      const conn = getConnections(state.selectedId);
+      return conn.principalities[0]?.id || null;
+    }
+    if (nodeType(state.selectedId) === 'topic') {
+      const topic = lookups.topic[state.selectedId];
+      return topic ? topicPrimaryPrincipalityId(topic) : null;
+    }
+    return null;
+  }
+
+  function refreshGlobeView() {
+    if (!isGlobeView() || !globeView) return;
+    globeView.render(globeTransportPrincipalityId());
+  }
+
+  function setViewSurface() {
+    const globe = isGlobeView();
+    graphPanel?.classList.toggle('is-globe', globe);
+    document.getElementById('graph-hint')?.classList.toggle('hidden', globe);
+    if (globe) {
+      globeView?.show();
+      syncZoomSlider();
+    } else {
+      globeView?.hide();
+      syncGraphSize();
+      syncZoomSlider();
+    }
   }
 
   function syncGraphSize() {
@@ -1184,9 +1378,13 @@
   }
 
   function refreshGraph() {
+    if (isGlobeView()) {
+      refreshGlobeView();
+      return;
+    }
     syncGraphSize();
     const { nodes, links } = buildVisibleGraph();
-    if (state.viewMode === 'constellation') {
+    if (isConstellationView()) {
       seedNightSkyLayout(nodes);
     } else if (state.show.topic) {
       seedExploreLayout(nodes);
@@ -1575,6 +1773,16 @@
     const item = lookups[type]?.[id];
     if (!item && type !== 'topic') return;
 
+    const conn = getConnections(id);
+    const enteringGlobeFruitFocus = isGlobeView()
+      && type === 'fruit'
+      && (state.globeTransportPrincipalityId || globeTransportPrincipalityId())
+      && state.globeFruitFocusId !== id;
+
+    if (enteringGlobeFruitFocus) {
+      enterGlobeFruitFocus(id, item, conn.topics);
+    }
+
     state.selectedId = id;
     state.quoteIndex = 0;
     refreshGraph();
@@ -1588,7 +1796,7 @@
     typeEl.className = `detail-type ${type}`;
 
     document.getElementById('detail-title').textContent = type === 'topic' ? item.name : item.name;
-    const connCount = getConnections(id).topics.length;
+    const connCount = conn.topics.length;
     if (type === 'topic') {
       const parts = [`Topic #${item.number}`];
       if (item.principalities?.length > 1) parts.push(`${item.principalityIds.length} principalities`);
@@ -1596,7 +1804,7 @@
       if (topicFruitIds(item).length > 1) parts.push(`${topicFruitIds(item).length} fruits`);
       document.getElementById('detail-meta').textContent = parts.join(' · ');
     } else if (type === 'root' || type === 'fruit') {
-      const pCount = getConnections(id).principalities.length;
+      const pCount = conn.principalities.length;
       document.getElementById('detail-meta').textContent =
         `${connCount} topics · spans ${pCount} ${pCount === 1 ? 'principality' : 'principalities'}`;
     } else {
@@ -1608,7 +1816,6 @@
     const quoteSection = document.getElementById('detail-quote-section');
     const themesSection = document.getElementById('detail-themes-section');
     const manifestationsSection = document.getElementById('detail-manifestations-section');
-    const conn = getConnections(id);
 
     if (type === 'principality') {
       charSection.style.display = '';
@@ -1674,8 +1881,12 @@
           : '';
         teachingNote.textContent = `Teaching video: ${dayLabel}${timeLabel}`;
         watchTeachingBtn.onclick = () => {
-          window.TeachingVideos?.openTopicVideo(item.number);
-          document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (isGlobeFruitFocus()) {
+            window.TeachingVideos?.openTopicVideoInRail?.(item.number);
+          } else {
+            window.TeachingVideos?.openTopicVideo(item.number);
+            document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         };
       } else if (teachingSection) {
         teachingSection.classList.add('hidden');
@@ -1686,8 +1897,17 @@
       teachingSection?.classList.add('hidden');
     }
 
+    if (isGlobeFruitFocus() && teachingSection) {
+      teachingSection.classList.add('hidden');
+    }
+
+    if (isGlobeFruitFocus() && type === 'topic') {
+      window.TeachingVideos?.openTopicVideoInRail?.(item.number);
+    }
+
     applyGraphView();
-    openDetailSheet();
+    if (isGlobeView()) refreshGlobeView();
+    if (!isGlobeFruitFocus()) openDetailSheet();
   }
 
   function showQuote(principality) {
@@ -1750,6 +1970,10 @@
   document.getElementById('view-mode').addEventListener('change', e => {
     state.viewMode = e.target.value;
     state.selectedId = null;
+    state.globeTransportPrincipalityId = null;
+    state.globeFruitFocusId = null;
+    window.TeachingVideos?.hideGlobeRail?.();
+    applyGlobeLayout();
     showEmptyDetail();
     document.getElementById('graph-hint').classList.remove('hidden');
     if (e.target.value === 'explore') {
@@ -1759,18 +1983,24 @@
       document.getElementById('show-topics').checked = false;
       state.show.topic = false;
     }
+    setViewSurface();
     refreshGraph();
     applyGraphView();
   });
 
   document.getElementById('reset-view').addEventListener('click', () => {
     state.selectedId = null;
+    state.globeTransportPrincipalityId = null;
+    state.globeFruitFocusId = null;
+    window.TeachingVideos?.hideGlobeRail?.();
+    applyGlobeLayout();
     state.viewMode = 'constellation';
     document.getElementById('view-mode').value = 'constellation';
     document.getElementById('show-topics').checked = false;
     state.show.topic = false;
     showEmptyDetail();
     document.getElementById('graph-hint').classList.remove('hidden');
+    setViewSurface();
     refreshGraph();
     applyGraphView(400, 400);
   });
@@ -1796,6 +2026,7 @@
   });
 
   syncGraphSize();
+  setViewSurface();
   refreshGraph();
   bindZoomSlider();
   setupGraphWheelZoom();
@@ -1820,7 +2051,11 @@
 
   if (typeof ResizeObserver !== 'undefined') {
     new ResizeObserver(() => {
-      if (state.viewMode === 'constellation' && !state.selectedId) {
+      if (isGlobeView()) {
+        refreshGlobeView();
+        return;
+      }
+      if (isConstellationView() && !state.selectedId) {
         fitConstellationRing(0);
       } else if (state.viewMode === 'explore' && !state.selectedId) {
         fitExploreOverview(0);
@@ -1839,6 +2074,10 @@
     const topic = topics.find(t => t.number === number);
     if (!topic) return;
     selectNode(`topic-${topic.id}`);
+    if (isGlobeFruitFocus()) {
+      window.TeachingVideos?.openTopicVideoInRail?.(number);
+      return;
+    }
     if (scrollTeaching && window.TeachingVideos?.openTopicVideo(number)) {
       document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

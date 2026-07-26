@@ -111,11 +111,174 @@ button:hover, select:hover {
   overflow: hidden;
 }
 
+.main.is-globe-fruit-focus .graph-panel {
+  display: none;
+}
+
+.main.is-globe-fruit-focus .detail-panel {
+  grid-column: 2;
+  grid-row: 1;
+  border-left: none;
+  border-right: 1px solid var(--border);
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.main.is-globe-fruit-focus .globe-video-rail {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-left: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+
+.globe-detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-left: auto;
+}
+
+.globe-detail-nav.hidden,
+.detail-close-btn.hidden {
+  display: none;
+}
+
+.globe-video-rail.hidden {
+  display: none !important;
+}
+
+.globe-video-rail-header {
+  flex: 0 0 auto;
+  padding: 1rem 1rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.globe-video-rail-header h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.globe-video-rail-meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.globe-video-rail-layout {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.globe-video-rail-player-wrap {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.globe-video-rail-chapters-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+}
+
+.main.is-globe-fruit-focus .detail-sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin: -0.35rem 0 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.main.is-globe-fruit-focus .detail-sheet-handle {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus-visible {
+  border-color: var(--principality);
+  background: rgba(201, 162, 39, 0.08);
+  outline: none;
+}
+
+.mobile-nav-list li + li {
+  margin-top: 0.45rem;
+}
+
 .legend {
   padding: 1rem;
   border-right: 1px solid var(--border);
   background: var(--bg-panel);
   overflow-y: auto;
+}
+
+.legend-drawer-header {
+  display: none;
+}
+
+.legend-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.legend-close-btn:hover,
+.legend-close-btn:focus-visible {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--principality);
+}
+
+.legend-close-btn:focus-visible {
+  outline: 2px solid var(--principality);
+  outline-offset: 2px;
 }
 
 .legend h2 {
@@ -537,6 +700,7 @@ button:hover, select:hover {
 }
 
 .graph-panel {
+  --graph-zoom-bar-height: 2.85rem;
   position: relative;
   min-width: 0;
   min-height: 0;
@@ -548,6 +712,592 @@ button:hover, select:hover {
 
 .graph-panel:active {
   cursor: grabbing;
+}
+
+.graph-panel.is-globe {
+  cursor: default;
+  touch-action: pan-y;
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-panel.is-globe:active {
+  cursor: default;
+}
+
+.graph-panel.is-globe #graph {
+  display: none;
+}
+
+.globe-view-caption {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.35rem 0.75rem 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(240, 234, 214, 0.88);
+  text-align: center;
+  pointer-events: none;
+}
+
+.globe-view {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background: #020810 url('images/globe-night-sky.webp') center / cover no-repeat;
+  overflow: hidden;
+}
+
+.graph-panel.is-globe .globe-view {
+  position: relative;
+  inset: unset;
+  flex: 1 1 auto;
+  min-height: 0;
+  z-index: 1;
+}
+
+.globe-view.hidden {
+  display: none;
+}
+
+.globe-view-host {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.globe-view-svg {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: block;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.globe-view-svg text,
+.globe-view-svg tspan {
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.globe-view-hint {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.globe-title {
+  fill: #f0ead6;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.globe-subtitle {
+  fill: var(--text-muted);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 11px;
+}
+
+.globe-region-label {
+  fill: rgba(42, 24, 16, 0.88);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: italic;
+  pointer-events: none;
+  paint-order: stroke fill;
+  stroke: rgba(247, 237, 214, 0.55);
+  stroke-width: 2px;
+}
+
+.globe-map-region {
+  transition: opacity 0.15s ease;
+}
+
+.globe-map-region:hover {
+  filter: brightness(1.08);
+}
+
+.globe-map-ocean {
+  pointer-events: none;
+}
+
+.globe-night-sky,
+.globe-night-vignette {
+  pointer-events: none;
+}
+
+.globe-map-label {
+  letter-spacing: 0.02em;
+}
+
+.globe-layer-label {
+  fill: rgba(201, 162, 39, 0.9);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.globe-fruit-track {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.globe-fruit-metro {
+  cursor: grab;
+}
+
+.globe-fruit-metro:active {
+  cursor: grabbing;
+}
+
+.globe-fruit-metro .globe-station.fruit {
+  cursor: pointer;
+}
+
+.globe-fruit-metro-floor,
+.globe-fruit-metro-wall,
+.globe-fruit-metro-plaza {
+  cursor: inherit;
+}
+
+.globe-fruit-metro-floor:active,
+.globe-fruit-metro-wall:active,
+.globe-fruit-metro-plaza:active {
+  cursor: inherit;
+}
+
+.globe-fruit-metro-single .globe-fruit-metro-title {
+  font-size: 7px;
+  letter-spacing: 0.08em;
+}
+
+.globe-fruit-metro-single .globe-fruit-metro-wall {
+  stroke-width: 1.5;
+}
+
+.globe-fruit-single-banner {
+  pointer-events: all;
+}
+
+.globe-fruit-metro-floor {
+  fill: #c8b89a;
+  stroke: none;
+}
+
+.globe-fruit-metro-plaza {
+  fill: #ddd0b8;
+  stroke: rgba(42, 36, 32, 0.25);
+  stroke-width: 1;
+}
+
+.globe-fruit-metro-wall {
+  fill: none;
+  stroke: #2a2420;
+  stroke-width: 5;
+}
+
+.globe-fruit-metro-bastion {
+  fill: #2a2420;
+  stroke: none;
+}
+
+.globe-fruit-metro-title {
+  fill: rgba(90, 70, 120, 0.85);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.globe-fruit-word {
+  fill: rgba(48, 36, 62, 0.92);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.globe-fruit-ribbon {
+  stroke: rgba(42, 36, 32, 0.55);
+  stroke-width: 0.75;
+}
+
+.globe-fruit-ribbon-gold {
+  fill: rgba(210, 175, 95, 0.92);
+}
+
+.globe-fruit-ribbon-green {
+  fill: rgba(130, 165, 95, 0.88);
+}
+
+.globe-fruit-ribbon-stroke {
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 0.5;
+}
+
+.globe-fruit-banner-text {
+  fill: rgba(38, 28, 18, 0.94);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+}
+
+.globe-fruit-banner-block:hover .globe-fruit-banner-text {
+  fill: rgba(60, 40, 20, 1);
+}
+
+.globe-fruit-word-hit {
+  fill: rgba(168, 130, 255, 0.08);
+  stroke: rgba(168, 130, 255, 0.35);
+  stroke-width: 1;
+  opacity: 0.001;
+}
+
+.globe-fruit-word-block:hover .globe-fruit-word-hit {
+  opacity: 0.35;
+  fill: rgba(168, 130, 255, 0.2);
+}
+
+.globe-fruit-word-block:hover .globe-fruit-word,
+.globe-fruit-word-block:hover .globe-fruit-banner-text {
+  fill: rgba(90, 60, 130, 1);
+}
+
+.globe-fruit-track.outer {
+  stroke: rgba(168, 130, 255, 0.55);
+  stroke-width: 8;
+}
+
+.globe-fruit-track.inner {
+  stroke: rgba(168, 130, 255, 0.38);
+  stroke-width: 5;
+}
+
+.globe-fruit-loop-label {
+  fill: rgba(168, 130, 255, 0.85);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.globe-root-line {
+  stroke: rgba(90, 160, 255, 0.65);
+  stroke-width: 3;
+  stroke-linecap: butt;
+}
+
+.globe-root-terminus {
+  fill: rgba(90, 160, 255, 0.75);
+  stroke: rgba(90, 160, 255, 0.9);
+  stroke-width: 1;
+}
+
+.globe-highway-lane {
+  stroke: rgba(201, 162, 39, 0.45);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.globe-highway-center {
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 1;
+  stroke-dasharray: 5 6;
+}
+
+.globe-principality-hub {
+  fill: rgba(201, 162, 39, 0.35);
+  stroke: #c9a227;
+  stroke-width: 2;
+}
+
+.globe-station.fruit {
+  fill: rgba(168, 130, 255, 0.9);
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+.globe-station.fruit:hover {
+  fill: rgba(200, 170, 255, 1);
+}
+
+.globe-station.root {
+  fill: rgba(90, 160, 255, 0.9);
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.globe-station.root:hover {
+  fill: rgba(120, 185, 255, 1);
+}
+
+.globe-station-label {
+  fill: rgba(240, 234, 214, 0.88);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 9px;
+}
+
+.globe-root-station-label {
+  font-size: 10px;
+  letter-spacing: 0.01em;
+}
+
+.globe-topic-station {
+  fill: #c9a227;
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.globe-topic-label {
+  fill: rgba(240, 234, 214, 0.82);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 8px;
+}
+
+.globe-topic-region {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.globe-topic-region-parchment,
+.globe-topic-region-frame,
+.globe-topic-region-forest,
+.globe-topic-region-sea,
+.globe-topic-terrain,
+.globe-topic-scroll-band,
+.globe-topic-scroll-border,
+.globe-topic-region-more,
+.globe-topic-river-water,
+.globe-topic-river-ink {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.globe-topic-place-label,
+.globe-topic-place-num,
+.globe-topic-callout-text {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.globe-topic-region-frame {
+  fill: none;
+  stroke: rgba(120, 90, 50, 0.55);
+  stroke-width: 2;
+}
+
+.globe-topic-region-parchment {
+  fill: rgba(235, 220, 185, 0.92);
+  stroke: rgba(100, 75, 45, 0.35);
+  stroke-width: 1;
+}
+
+.globe-topic-region-forest {
+  fill: rgba(72, 110, 62, 0.22);
+  stroke: none;
+}
+
+.globe-topic-region-mountains {
+  fill: rgba(90, 85, 78, 0.35);
+  stroke: rgba(60, 55, 50, 0.4);
+  stroke-width: 0.5;
+}
+
+.globe-topic-region-coast {
+  fill: none;
+  stroke: rgba(120, 150, 170, 0.35);
+  stroke-width: 2;
+}
+
+.globe-topic-region-sea {
+  fill: rgba(155, 190, 210, 0.28);
+  stroke: none;
+}
+
+.globe-topic-terrain.globe-topic-river .globe-topic-river-water {
+  fill: none;
+  stroke: rgba(155, 190, 210, 0.38);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.globe-topic-terrain.globe-topic-river .globe-topic-river-ink {
+  fill: none;
+  stroke: rgba(70, 105, 130, 0.65);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.globe-topic-mountain-peak {
+  fill: rgba(90, 85, 78, 0.32);
+  stroke: rgba(55, 50, 45, 0.55);
+  stroke-width: 0.6;
+  stroke-linejoin: round;
+}
+
+.globe-topic-mountain-hatch {
+  stroke: rgba(55, 50, 45, 0.45);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+}
+
+.globe-topic-tree {
+  fill: none;
+  stroke: rgba(55, 85, 48, 0.55);
+  stroke-width: 0.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.globe-topic-scroll-band {
+  fill: rgba(145, 185, 210, 0.42);
+  stroke: rgba(80, 120, 150, 0.35);
+  stroke-width: 0.75;
+}
+
+.globe-topic-scroll-border {
+  stroke: rgba(55, 95, 125, 0.55);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+
+.globe-topic-settlement-icon {
+  fill: rgba(180, 150, 100, 0.85);
+  stroke: rgba(60, 45, 25, 0.7);
+  stroke-width: 1.1;
+}
+
+.globe-topic-icon-detail {
+  fill: none;
+  stroke: rgba(60, 45, 25, 0.55);
+  stroke-width: 0.5;
+}
+
+.globe-topic-node-hit {
+  fill: transparent;
+  stroke: none;
+}
+
+.globe-topic-node-hit:hover ~ .globe-topic-icon .globe-topic-settlement-icon,
+.globe-topic-node-hit:hover + .globe-topic-settlement-icon {
+  fill: rgba(210, 175, 110, 1);
+  stroke: rgba(201, 162, 39, 0.9);
+}
+
+.globe-topic-sensitive .globe-topic-settlement-icon {
+  fill: rgba(160, 145, 130, 0.75);
+  stroke: rgba(80, 70, 60, 0.55);
+}
+
+.globe-topic-callout-bubble {
+  fill: rgba(248, 240, 220, 0.96);
+  stroke: rgba(80, 55, 30, 0.55);
+  stroke-width: 0.75;
+}
+
+.globe-topic-callout-text {
+  fill: rgba(45, 32, 18, 0.92);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.globe-topic-place-label {
+  fill: rgba(45, 32, 18, 0.92);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.globe-topic-place-num {
+  fill: rgba(120, 90, 50, 0.65);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.globe-topic-region-more {
+  fill: rgba(80, 55, 30, 0.55);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 9px;
+  font-style: italic;
+}
+
+.globe-back-btn {
+  fill: rgba(201, 162, 39, 0.95);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: all;
+}
+
+.globe-transport-close {
+  pointer-events: all;
+}
+
+.globe-transport-close-label {
+  fill: rgba(90, 160, 255, 0.95);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.globe-transport-close:hover .globe-transport-close-label,
+.globe-transport-close:hover .globe-transport-close-bar {
+  stroke: rgba(140, 190, 255, 1);
+}
+
+.globe-transport-close:hover .globe-root-terminus {
+  fill: rgba(140, 190, 255, 0.95);
+}
+
+.globe-fruit-grid .globe-fruit-word-hit {
+  fill: transparent;
+  stroke: none;
+}
+
+.globe-fruit-grid .globe-fruit-word-block:hover .globe-fruit-banner-text {
+  fill: #fff;
+}
+
+.globe-region:hover {
+  filter: brightness(1.12);
+}
+
+.globe-grid {
+  opacity: 0.85;
 }
 
 #graph {
@@ -665,11 +1415,27 @@ button:hover, select:hover {
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  min-height: var(--graph-zoom-bar-height);
   padding: 0.55rem 1rem;
   background: rgba(10, 11, 15, 0.92);
   border-top: 1px solid var(--border);
   font-size: 0.78rem;
   color: var(--text-muted);
+}
+
+.graph-panel.is-globe .globe-view-hint {
+  display: none;
+}
+
+.graph-panel.is-globe .graph-zoom-bar {
+  position: relative;
+  flex: 0 0 auto;
+  z-index: 10;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: auto;
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.35);
 }
 
 .graph-zoom-bar label {
@@ -701,16 +1467,56 @@ button:hover, select:hover {
 
 #graph-zoom {
   flex: 1 1 auto;
-  min-width: 0;
+  min-width: 4rem;
+  height: 1rem;
+  margin: 0;
   accent-color: var(--principality);
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+#graph-zoom::-webkit-slider-runnable-track {
+  height: 0.35rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+#graph-zoom::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  margin-top: calc((0.35rem - 1rem) / 2);
+  border-radius: 50%;
+  background: var(--principality);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
+}
+
+#graph-zoom::-moz-range-track {
+  height: 0.35rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+#graph-zoom::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--principality);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45);
 }
 
 .graph-zoom-label {
   flex: 0 0 3.25rem;
   text-align: right;
   font-variant-numeric: tabular-nums;
-  color: var(--text);
+  color: var(--principality);
+  font-weight: 600;
 }
 
 .detail-panel {
@@ -1153,6 +1959,13 @@ button:hover, select:hover {
     display: inline-flex;
   }
 
+  .mobile-nav {
+    display: block;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
   .legend {
     display: block;
     position: fixed;
@@ -1166,6 +1979,20 @@ button:hover, select:hover {
     transform: translateX(-105%);
     transition: transform 0.25s ease;
     box-shadow: 8px 0 32px rgba(0, 0, 0, 0.35);
+    padding-top: 0;
+  }
+
+  .legend-drawer-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin: 0 -1rem 0.5rem;
+    padding: 0.65rem 1rem 0.5rem;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
   }
 
   .legend.is-open {
@@ -1337,6 +2164,28 @@ button:hover, select:hover {
 
   .detail-panel.is-open {
     transform: translateY(0);
+  }
+
+  .main.is-globe-fruit-focus .graph-panel {
+    display: none;
+  }
+
+  .main.is-globe-fruit-focus .detail-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    grid-column: auto;
+    max-height: min(58vh, calc(100dvh - 3.5rem));
+    z-index: 20;
+    transform: translateY(0);
+  }
+
+  .main.is-globe-fruit-focus .globe-video-rail {
+    display: flex;
+    position: relative;
+    grid-column: auto;
+    min-height: calc(100dvh - 58vh - 5rem);
   }
 
   .detail-sheet-header {

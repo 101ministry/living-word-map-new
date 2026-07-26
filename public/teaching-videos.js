@@ -110,12 +110,18 @@
   function loadYouTubeApi() {
     if (window.YT?.Player) {
       createPlayer();
+      createGlobePlayer();
       return;
     }
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.head.appendChild(tag);
-    window.onYouTubeIframeAPIReady = () => createPlayer();
+    const prior = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      if (typeof prior === 'function') prior();
+      createPlayer();
+      createGlobePlayer();
+    };
   }
 
   function createPlayer() {
@@ -193,12 +199,217 @@
   renderChapters();
   loadYouTubeApi();
 
+  // Globe view fruit-focus rail (right column)
+  const globeRail = document.getElementById('globe-video-rail');
+  const globePlayerHost = document.getElementById('globe-teaching-player');
+  const globeVideoPicker = document.getElementById('globe-teaching-video-picker');
+  const globeChapterList = document.getElementById('globe-teaching-chapters');
+  const globeChapterMeta = document.getElementById('globe-teaching-chapter-meta');
+  const globeRailTitle = document.getElementById('globe-video-rail-title');
+  const globeRailMeta = document.getElementById('globe-video-rail-meta');
+
+  let globeTopicSet = null;
+  let globeVideoPool = videos;
+  let globeActiveVideo = null;
+  let globePlayer = null;
+  let globePlayerReady = false;
+  let globePendingSeek = null;
+
+  function filteredChapters(video) {
+    const chapters = video?.chapters || [];
+    if (!globeTopicSet) return chapters;
+    return chapters.filter(ch => globeTopicSet.has(String(ch.topicNumber)));
+  }
+
+  function videosForGlobeFruit(topicNumbers) {
+    const set = new Set(topicNumbers.map(String));
+    return videos.filter(v => filteredChaptersForSet(v, set).length > 0);
+  }
+
+  function filteredChaptersForSet(video, set) {
+    return (video?.chapters || []).filter(ch => set.has(String(ch.topicNumber)));
+  }
+
+  function renderGlobePicker() {
+    if (!globeVideoPicker) return;
+    globeVideoPicker.innerHTML = globeVideoPool.map(v => {
+      const chapters = filteredChapters(v);
+      const range = chapters.length
+        ? `<span class="teaching-video-range">${chapters.length} topic${chapters.length === 1 ? '' : 's'}</span>`
+        : '';
+      const active = globeActiveVideo && v.key === globeActiveVideo.key ? ' is-active' : '';
+      return `<button type="button" class="teaching-video-btn${active}" data-key="${v.key}">${videoLabel(v)}${range}</button>`;
+    }).join('');
+
+    globeVideoPicker.querySelectorAll('.teaching-video-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const v = globeVideoPool.find(x => x.key === btn.dataset.key);
+        if (v) selectGlobeVideo(v);
+      });
+    });
+  }
+
+  function renderGlobeChapters() {
+    if (!globeChapterList) return;
+    if (!globeActiveVideo) {
+      globeChapterList.innerHTML = '';
+      if (globeChapterMeta) globeChapterMeta.textContent = '';
+      return;
+    }
+
+    const chapters = filteredChapters(globeActiveVideo);
+    if (!chapters.length) {
+      globeChapterList.innerHTML = '<li class="teaching-chapter-empty">No indexed timestamps for this fruit yet.</li>';
+      if (globeChapterMeta) globeChapterMeta.textContent = globeActiveVideo.title;
+      return;
+    }
+
+    if (globeChapterMeta) {
+      globeChapterMeta.textContent = `${globeActiveVideo.title} · ${chapters.length} topics`;
+    }
+    globeChapterList.innerHTML = chapters.map(ch => `
+      <li>
+        <button type="button" class="teaching-chapter-btn" data-topic="${ch.topicNumber}" data-start="${ch.startSeconds}">
+          <span class="teaching-chapter-num">${String(ch.topicNumber).padStart(3, '0')}</span>
+          <span class="teaching-chapter-name">${ch.topicName}</span>
+          <span class="teaching-chapter-time">${formatTime(ch.startSeconds)}</span>
+        </button>
+      </li>`).join('');
+
+    globeChapterList.querySelectorAll('.teaching-chapter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const topicNum = Number(btn.dataset.topic);
+        const start = Number(btn.dataset.start);
+        seekGlobeTo(start);
+        highlightGlobeChapter(topicNum);
+        if (window.LivingWordMap?.selectTopicByNumber) {
+          window.LivingWordMap.selectTopicByNumber(topicNum, { scrollTeaching: false });
+        }
+      });
+    });
+  }
+
+  function highlightGlobeChapter(topicNumber) {
+    globeChapterList?.querySelectorAll('.teaching-chapter-btn').forEach(btn => {
+      btn.classList.toggle('is-active', Number(btn.dataset.topic) === topicNumber);
+    });
+  }
+
+  function ensureGlobePlayer() {
+    if (globePlayer || !globeActiveVideo || !globePlayerHost) return;
+    globePlayerHost.innerHTML = '';
+    const frame = document.createElement('div');
+    frame.id = 'globe-youtube-player';
+    globePlayerHost.appendChild(frame);
+  }
+
+  function createGlobePlayer() {
+    if (!globeActiveVideo || globePlayer || !globePlayerHost) return;
+    ensureGlobePlayer();
+    globePlayer = new YT.Player('globe-youtube-player', {
+      videoId: globeActiveVideo.youtubeId,
+      playerVars: {
+        rel: 0,
+        modestbranding: 1,
+        origin: window.location.origin,
+      },
+      events: {
+        onReady: () => {
+          globePlayerReady = true;
+          if (globePendingSeek != null) {
+            seekGlobeTo(globePendingSeek);
+            globePendingSeek = null;
+          }
+        },
+      },
+    });
+  }
+
+  function loadGlobeYouTubeApi() {
+    loadYouTubeApi();
+  }
+
+  function selectGlobeVideo(video, seekSeconds = 0) {
+    globeActiveVideo = video;
+    renderGlobePicker();
+    renderGlobeChapters();
+
+    if (!globePlayer) {
+      loadGlobeYouTubeApi();
+      globePendingSeek = seekSeconds || null;
+      return;
+    }
+
+    globePlayerReady = false;
+    globePlayer.loadVideoById({
+      videoId: video.youtubeId,
+      startSeconds: seekSeconds || 0,
+    });
+  }
+
+  function seekGlobeTo(seconds) {
+    if (!globeActiveVideo) return;
+    if (!globePlayer || !globePlayerReady) {
+      globePendingSeek = seconds;
+      if (!globePlayer) selectGlobeVideo(globeActiveVideo, seconds);
+      return;
+    }
+    globePlayer.seekTo(Math.max(0, seconds), true);
+    globePlayer.playVideo();
+  }
+
+  function showFruitRail(fruitName, topicNumbers) {
+    if (!globeRail) return;
+    globeTopicSet = new Set(topicNumbers.map(String));
+    globeVideoPool = videosForGlobeFruit(topicNumbers);
+    if (!globeVideoPool.length) globeVideoPool = videos;
+    globeActiveVideo = globeVideoPool[0] || null;
+    if (globeRailTitle) globeRailTitle.textContent = fruitName;
+    if (globeRailMeta) {
+      const videoCount = globeVideoPool.length;
+      globeRailMeta.textContent = `${topicNumbers.length} topics · ${videoCount} video${videoCount === 1 ? '' : 's'}`;
+    }
+    globeRail.classList.remove('hidden');
+    renderGlobePicker();
+    renderGlobeChapters();
+    if (globeActiveVideo) selectGlobeVideo(globeActiveVideo);
+  }
+
+  function hideGlobeRail() {
+    globeRail?.classList.add('hidden');
+    globeTopicSet = null;
+    globeVideoPool = videos;
+    globeActiveVideo = null;
+    if (globePlayer?.stopVideo) {
+      try { globePlayer.stopVideo(); } catch { /* player may be torn down */ }
+    }
+  }
+
+  function openTopicVideoInRail(topicNumber) {
+    const entry = topicEntry(topicNumber);
+    if (!entry || !globeTopicSet?.has(String(topicNumber))) return false;
+    const video = globeVideoPool.find(v => v.key === entry.videoKey || v.youtubeId === entry.youtubeId)
+      || videos.find(v => v.key === entry.videoKey || v.youtubeId === entry.youtubeId);
+    if (!video) return false;
+
+    if (!globeActiveVideo || globeActiveVideo.key !== video.key) {
+      selectGlobeVideo(video, entry.startSeconds || 0);
+    } else {
+      seekGlobeTo(entry.startSeconds || 0);
+    }
+    highlightGlobeChapter(topicNumber);
+    return true;
+  }
+
   window.TeachingVideos = {
     openTopicVideo,
+    openTopicVideoInRail,
     selectVideoByKey(key) {
       const v = videos.find(x => x.key === key);
       if (v) selectVideo(v);
     },
+    showFruitRail,
+    hideGlobeRail,
     getTopicEntry: topicEntry,
     formatTime,
   };
