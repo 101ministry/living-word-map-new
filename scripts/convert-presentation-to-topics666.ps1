@@ -12,6 +12,7 @@ $ErrorActionPreference = 'Stop'
 $RootEmoji = @{
     'loneliness and emotional brokenness' = '🟤'
     'deception and falsehood'              = '🟣'
+    'idolatry and person-worship'          = '⭕'
     'idolatry and self-worship'            = '⭕'
     'pride and self-exaltation'            = '🔴'
     'control and rebellion'                = '🔵'

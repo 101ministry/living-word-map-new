@@ -11,7 +11,7 @@
     { id: 'loneliness-and-emotional-brokenness', label: 'Loneliness and Emotional Brokenness', color: '#8D6E63', aliases: ['loneliness', 'emotional-brokenness'] },
     { id: 'addiction-and-bondage', label: 'Addiction and Bondage', color: '#ECEFF1', aliases: ['addiction', 'bondage'] },
     { id: 'covetousness-and-materialism', label: 'Covetousness and Materialism', color: '#757575', aliases: ['covetousness', 'materialism'] },
-    { id: 'idolatry-and-self-worship', label: 'Idolatry and Self-Worship', color: '#FFD54F', aliases: ['idolatry', 'self-worship'] },
+    { id: 'idolatry-and-person-worship', label: 'Idolatry and Person-Worship', color: '#FFD54F', aliases: ['idolatry', 'person-worship', 'self-worship'] },
   ];
 
   /** Fruit = background palette (deeper / earthier) */

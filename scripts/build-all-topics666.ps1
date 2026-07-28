@@ -18,6 +18,7 @@ function Em([int]$codePoint) {
 $RootEmoji = @{
     'loneliness and emotional brokenness' = Em 0x1F7E4
     'deception and falsehood'              = Em 0x1F7E3
+    'idolatry and person-worship'          = Em 0x2B55
     'idolatry and self-worship'            = Em 0x2B55
     'pride and self-exaltation'            = Em 0x1F534
     'control and rebellion'                = Em 0x1F535

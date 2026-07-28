@@ -44,7 +44,7 @@ Use the **R&R Thumbnail Images** chat only for Day-series poster/thumbnail image
 4. covetousness and materialism  
 5. deception and falsehood  
 6. fear and insecurity  
-7. idolatry and self-worship  
+7. idolatry and person-worship  
 8. loneliness and emotional brokenness  
 9. pride and self-exaltation  
 10. shame and false identity  
