@@ -16,6 +16,15 @@ Interactive site: 26 Principalities, Roots, Fruits, **666 topics**, prayers in m
 
 Local dev: `open.bat` → http://localhost:8765/index.html
 
+## Query routing (keep chats separated)
+
+| Chat | Use for |
+|------|---------|
+| **Living Word Map queries** | App, globe, deploy, topics 666, roots/fruits, prayers, teaching videos |
+| **R&R Thumbnail Images** | Day-series poster/thumbnail image generation only |
+
+Archive of past LWM questions: `data/LIVING-WORD-MAP-QUERIES.md`
+
 ## Canonical data files (repo-local — do not use Telegram Desktop paths)
 
 | File | Purpose |

@@ -2049,6 +2049,10 @@ button:hover, select:hover {
 }
 
 @media (max-width: 768px) {
+  #app.is-globe-legend-disabled .header-menu-btn {
+    display: none !important;
+  }
+
   .header {
     flex-wrap: wrap;
     gap: 0.5rem 0.65rem;

@@ -174,7 +174,22 @@
     }, { passive: false });
   }
 
+  function applyMobileLegendAccess() {
+    const disabled = isGlobeView() && isMobileLayout();
+    document.getElementById('app')?.classList.toggle('is-globe-legend-disabled', disabled);
+    const btn = document.getElementById('open-controls');
+    if (disabled) {
+      setControlsDrawerOpen(false);
+      btn?.setAttribute('aria-hidden', 'true');
+      btn?.setAttribute('tabindex', '-1');
+    } else {
+      btn?.removeAttribute('aria-hidden');
+      btn?.removeAttribute('tabindex');
+    }
+  }
+
   function setControlsDrawerOpen(open) {
+    if (open && isGlobeView() && isMobileLayout()) return;
     const legend = document.getElementById('legend-panel');
     const backdrop = document.getElementById('legend-backdrop');
     const btn = document.getElementById('open-controls');
@@ -1365,6 +1380,7 @@
       syncGraphSize();
       syncZoomSlider();
     }
+    applyMobileLegendAccess();
   }
 
   function syncGraphSize() {
@@ -2033,6 +2049,7 @@
   initMobileUi();
   mobileMq.addEventListener('change', () => {
     updateGraphHintForLayout();
+    applyMobileLegendAccess();
     setControlsDrawerOpen(false);
     if (!isMobileLayout()) {
       closeDetailSheet();
