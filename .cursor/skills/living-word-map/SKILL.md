@@ -37,8 +37,10 @@ Archive of past LWM questions: `data/LIVING-WORD-MAP-QUERIES.md`
 After editing topic metadata, run:
 
 ```powershell
-powershell -File scripts\fix-topics666-fruits.ps1   # emoji + range fixes, syncs Telegram copy
-powershell -File scripts\build-data.ps1             # → public\data.js
+powershell -File scripts\sync-prayers-from-topics666.ps1  # root + recognize lines → COMPILED-PRAYERS
+powershell -File scripts\fix-topics666-fruits.ps1       # emoji + range fixes, syncs Telegram copy
+powershell -File scripts\build-data.ps1                 # → public\data.js
+powershell -File scripts\build-prayers.ps1              # → public\prayers\
 ```
 
 ## Fruit emoji key (topics 666.txt)

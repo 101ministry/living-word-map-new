@@ -16,7 +16,7 @@ param(
     } else {
         "$env:USERPROFILE\Downloads\Telegram Desktop\ROOT SPIRITS CHART - vertical revamp.txt"
     }),
-    [string]$TopicsFile = "$env:USERPROFILE\Downloads\Telegram Desktop\topics 666.txt",
+    [string]$TopicsFile = "$PSScriptRoot\..\data\TOPICS-666.txt",
     [string]$OutputDir = "$PSScriptRoot\..\public"
 )
 
