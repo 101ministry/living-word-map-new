@@ -265,7 +265,11 @@
   function scrollToTeachingVideos() {
     setControlsDrawerOpen(false);
     closeDetailSheet();
-    document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const target = (isGlobeFruitFocus() && isMobileLayout())
+      ? document.getElementById('globe-video-rail')
+      : document.getElementById('teaching-panel');
+    (target || document.getElementById('teaching-panel'))
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function goToCompare() {
@@ -295,6 +299,7 @@
 
     document.getElementById('nav-compare')?.addEventListener('click', goToCompare);
     document.getElementById('nav-videos')?.addEventListener('click', scrollToTeachingVideos);
+    document.getElementById('scroll-to-videos')?.addEventListener('click', scrollToTeachingVideos);
 
     document.getElementById('legend-backdrop')?.addEventListener('click', () => {
       setControlsDrawerOpen(false);

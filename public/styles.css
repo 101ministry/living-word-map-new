@@ -103,6 +103,10 @@ button:hover, select:hover {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+.header-videos-btn {
+  display: none;
+}
+
 .main {
   display: grid;
   grid-template-columns: minmax(220px, 240px) minmax(0, 1fr) var(--detail-panel-width);
@@ -2101,14 +2105,33 @@ button:hover, select:hover {
 
   #view-mode,
   #reset-view,
+  #scroll-to-videos,
   #open-core-prayer {
-    flex: 1 1 auto;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .header-videos-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .workspace {
+    flex: 0 0 auto;
+    height: auto;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
   }
 
   .main {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     position: relative;
+    height: clamp(280px, 52dvh, 440px);
+    max-height: min(58dvh, 480px);
+    flex-shrink: 0;
   }
 
   .graph-panel {
@@ -2172,6 +2195,15 @@ button:hover, select:hover {
 
   .main.is-globe-fruit-focus .graph-panel {
     display: none;
+  }
+
+  .main.is-globe-fruit-focus {
+    height: auto;
+    max-height: none;
+  }
+
+  .main.is-globe-fruit-focus .globe-video-rail {
+    min-height: min(48dvh, 400px);
   }
 
   .main.is-globe-fruit-focus .detail-panel {
@@ -2440,11 +2472,6 @@ button:hover, select:hover {
 }
 
 @media (max-width: 768px) {
-  .workspace {
-    height: 100dvh;
-    min-height: 0;
-  }
-
   .teaching-header {
     flex-direction: column;
   }
