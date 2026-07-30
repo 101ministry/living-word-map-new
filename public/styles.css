@@ -2215,6 +2215,14 @@ button:hover, select:hover {
     background: rgba(255, 255, 255, 0.18);
   }
 
+  .detail-sheet-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
   .detail-close-btn {
     align-self: flex-start;
     padding: 0.35rem 0.5rem;
@@ -2228,6 +2236,22 @@ button:hover, select:hover {
   }
 
   .detail-close-btn:hover {
+    color: var(--accent);
+  }
+
+  .detail-dismiss-x {
+    flex-shrink: 0;
+    padding: 0.2rem 0.55rem;
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.72);
+    font: inherit;
+    font-size: 1.65rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .detail-dismiss-x:hover {
     color: var(--accent);
   }
 

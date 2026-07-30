@@ -146,11 +146,45 @@
   }
 
   function openDetailSheet() {
-    if (isMobileLayout()) setDetailSheetOpen(true);
+    if (isMobileLayout()) {
+      setDetailSheetOpen(true);
+      updateDetailCloseAffordance();
+    }
   }
 
   function closeDetailSheet() {
     setDetailSheetOpen(false);
+  }
+
+  function isScrolledToTeachingArea() {
+    const marker = document.getElementById('corner-breaker-game')
+      || document.getElementById('teaching-panel');
+    if (!marker) return false;
+    const rect = marker.getBoundingClientRect();
+    return rect.top < window.innerHeight - 72;
+  }
+
+  function updateDetailCloseAffordance() {
+    const btn = document.getElementById('close-detail');
+    const dismissX = document.getElementById('close-detail-x');
+    if (!btn || !isMobileLayout() || isGlobeFruitFocus()) return;
+
+    const type = state.selectedId ? nodeType(state.selectedId) : null;
+    const prayerClose = type === 'topic' && isScrolledToTeachingArea();
+
+    btn.textContent = prayerClose ? 'Close prayer' : '← Map';
+    btn.setAttribute('aria-label', prayerClose ? 'Close prayer and return to game' : 'Back to map');
+    dismissX?.classList.toggle('hidden', !prayerClose);
+  }
+
+  let detailCloseAffordanceScheduled = false;
+  function scheduleUpdateDetailCloseAffordance() {
+    if (detailCloseAffordanceScheduled) return;
+    detailCloseAffordanceScheduled = true;
+    requestAnimationFrame(() => {
+      detailCloseAffordanceScheduled = false;
+      updateDetailCloseAffordance();
+    });
   }
 
   function setupDetailPanelWheelScroll() {
@@ -267,10 +301,12 @@
     });
 
     document.getElementById('close-detail')?.addEventListener('click', dismissDetailSelection);
+    document.getElementById('close-detail-x')?.addEventListener('click', dismissDetailSelection);
     document.getElementById('globe-back-country')?.addEventListener('click', exitGlobeFruitFocusToCountry);
     document.getElementById('globe-back-globe')?.addEventListener('click', exitGlobeFruitFocusToGlobe);
 
     document.getElementById('detail-backdrop')?.addEventListener('click', dismissDetailSelection);
+    window.addEventListener('scroll', scheduleUpdateDetailCloseAffordance, { passive: true });
   }
 
   function t(key) {
@@ -1924,6 +1960,7 @@
     applyGraphView();
     if (isGlobeView()) refreshGlobeView();
     if (!isGlobeFruitFocus()) openDetailSheet();
+    updateDetailCloseAffordance();
   }
 
   function showQuote(principality) {

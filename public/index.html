@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="corner-breaker.css?v=6" />
 </head>
 <body>
   <div id="app">
@@ -102,7 +103,10 @@
       <aside class="detail-panel" id="detail-panel">
         <div class="detail-sheet-header">
           <div class="detail-sheet-handle" aria-hidden="true"></div>
-          <button type="button" id="close-detail" class="detail-close-btn">← Map</button>
+          <div class="detail-sheet-toolbar">
+            <button type="button" id="close-detail" class="detail-close-btn">← Map</button>
+            <button type="button" id="close-detail-x" class="detail-dismiss-x hidden" aria-label="Close prayer">×</button>
+          </div>
           <nav id="globe-detail-nav" class="globe-detail-nav hidden" aria-label="Globe navigation">
             <button type="button" id="globe-back-country" class="detail-close-btn">← Country map</button>
             <button type="button" id="globe-back-globe" class="detail-close-btn">← Globe view</button>
@@ -203,6 +207,54 @@
           <ul id="teaching-chapters" class="teaching-chapters"></ul>
         </aside>
       </div>
+      <section id="corner-breaker-game" class="corner-breaker" aria-label="Corner Breaker mini-game">
+        <header class="corner-breaker-header">
+          <div>
+            <h3>Corner Breaker</h3>
+            <p class="corner-breaker-sub">Jump to any chapter — watch time for game bonuses counts while the video plays (unmuted), not from the start of the video.</p>
+          </div>
+          <button type="button" id="corner-breaker-copy-score" class="corner-breaker-copy-btn">Copy score</button>
+        </header>
+        <div class="corner-breaker-stats">
+          <span>Level <strong id="corner-breaker-level">1</strong></span>
+          <span>Blocks <strong id="corner-breaker-blocks-left">64</strong></span>
+          <span>Click <strong id="corner-breaker-power">1</strong></span>
+          <span>Score <strong id="corner-breaker-coins">0</strong></span>
+          <span>Idle drip <strong id="corner-breaker-drip">—</strong></span>
+          <span>Watch time <strong id="corner-breaker-watch">0s</strong></span>
+        </div>
+        <dialog id="corner-breaker-location-dialog" class="corner-breaker-dialog">
+          <form class="corner-breaker-dialog-inner" id="corner-breaker-location-form">
+            <header class="corner-breaker-dialog-header">
+              <h4>Where are you watching from?</h4>
+              <button type="button" id="corner-breaker-location-close" class="dialog-close" aria-label="Close">×</button>
+            </header>
+            <p class="corner-breaker-dialog-sub">Enter your state or country to boost your click power.</p>
+            <label class="corner-breaker-dialog-label" for="corner-breaker-location-input">State or country</label>
+            <input id="corner-breaker-location-input" class="corner-breaker-dialog-input" type="text" autocomplete="address-level1" placeholder="e.g. Texas or Kenya" />
+            <div class="corner-breaker-dialog-actions">
+              <button type="submit" class="corner-breaker-dialog-submit">Continue (+30 bonus to click power)</button>
+              <button type="button" id="corner-breaker-location-decline" class="corner-breaker-dialog-decline">No, stay where I am</button>
+            </div>
+          </form>
+        </dialog>
+        <div class="corner-breaker-play-area">
+          <div id="corner-breaker-grid" class="corner-breaker-grid" role="grid" aria-label="8 by 8 block grid"></div>
+          <div class="corner-breaker-side-rail">
+            <p id="corner-breaker-mute-hint" class="corner-breaker-mute-hint hidden" aria-live="polite">
+              Unmute the video to resume incremental points.
+            </p>
+            <aside id="corner-breaker-hook-panel" class="corner-breaker-hook-panel hidden" aria-label="Bonus hook question">
+              <h4 class="corner-breaker-hook-title">Where are you watching from?</h4>
+              <p class="corner-breaker-hook-sub">Skipped the bonus? Answer here for +30 click power.</p>
+              <label class="corner-breaker-hook-label" for="corner-breaker-hook-input">State or country</label>
+              <input id="corner-breaker-hook-input" class="corner-breaker-hook-input" type="text" autocomplete="address-level1" placeholder="e.g. Texas or Kenya" />
+              <button type="button" id="corner-breaker-hook-submit" class="corner-breaker-hook-submit">Claim +30 bonus</button>
+            </aside>
+          </div>
+        </div>
+        <p id="corner-breaker-message" class="corner-breaker-message" aria-live="polite"></p>
+      </section>
     </section>
   </div>
 
@@ -256,5 +308,6 @@
   <script src="globe-view.js?v=23"></script>
   <script src="app.js"></script>
   <script src="teaching-videos.js"></script>
+  <script src="corner-breaker.js"></script>
 </body>
 </html>

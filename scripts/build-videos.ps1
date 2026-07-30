@@ -10,6 +10,10 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+function Read-Utf8([string]$path) {
+    return [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
+}
+
 function Normalize-TopicText([string]$text) {
     if (-not $text) { return '' }
     $t = $text.ToLower()
@@ -42,8 +46,8 @@ function Get-TopicKind([string]$text) {
 
 function Get-ChartTopics([string]$chartPath) {
     $topics = @()
-    Get-Content -LiteralPath $chartPath | ForEach-Object {
-        if ($_ -match '^\s*(\d{3})\.\s*(.+?)\s*$') {
+    foreach ($line in ((Read-Utf8 $chartPath) -split '\r?\n')) {
+        if ($line -match '^\s*(\d{3})\.\s*(.+?)\s*$') {
             $name = $Matches[2].Trim()
             $topics += [pscustomobject]@{
                 number = [int]$Matches[1]
@@ -190,7 +194,7 @@ function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbe
 }
 
 function Parse-Presentation([string]$path, $allTopics) {
-    $raw = Get-Content -LiteralPath $path -Raw
+    $raw = Read-Utf8 $path
     $dayMap = @{}
     $currentDay = $null
     $usedByDay = @{}
@@ -284,7 +288,7 @@ function Estimate-Timestamp([int]$index, [int]$count, [int]$durationSeconds) {
 
 function Get-GraphTopics([string]$dataPath) {
     if (-not (Test-Path -LiteralPath $dataPath)) { return @() }
-    $raw = Get-Content -LiteralPath $dataPath -Raw
+    $raw = Read-Utf8 $dataPath
     $json = $raw -replace '^window\.GRAPH_DATA\s*=\s*', '' -replace ';\s*$', ''
     $data = $json | ConvertFrom-Json
     return @($data.topics)
@@ -309,7 +313,7 @@ function Write-Js([object]$payload, [string]$path) {
     [System.IO.File]::WriteAllText($path, $js, [System.Text.UTF8Encoding]::new($false))
 }
 
-$config = Get-Content -LiteralPath $VideosFile -Raw | ConvertFrom-Json
+$config = Read-Utf8 $VideosFile | ConvertFrom-Json
 $topics = Get-ChartTopics $ChartFile
 $topicByNumber = @{}
 foreach ($t in $topics) { $topicByNumber[$t.number] = $t.name }
