@@ -1,0 +1,79 @@
+# TEACHING SCHEDULE — Repentance Project 3.0 Prayer Topics
+# Canonical cross-reference when adding YouTube teaching links.
+#
+# Related files:
+#   data/PRINCIPALITY-MEMBERSHIPS.txt  — root spirits chart (principality groupings)
+#   data/ROOT-SPIRITS-CHART.txt        — numbered topic list (used by build-videos.ps1)
+#   data/TOPICS-666-PRESENTATION.txt   — split-day topic phrases (presentation mode)
+#   data/teaching-videos.json          — YouTube IDs per day/part
+#   public/data.js                     — principalityId slugs for full-principality days
+#   scripts/build-videos.ps1           — builds public/videos.js
+#
+# Modes:
+#   presentation — topics from TOPICS-666-PRESENTATION.txt for that day (no principalityId)
+#   full         — all topics for one principality via principalityId in teaching-videos.json
+#
+# Teaching order differs from chart order: Spirit Spouse Gods (chart last) is taught first (days 1–8).
+
+# --- CHART ORDER (PRINCIPALITY-MEMBERSHIPS.txt) ---
+# idx | principalityId              | chart header
+#  1  | jealousy                    | PRINCIPALITY OF JEALOUSY
+#  2  | sleep-slumber               | PRINCIPALITY OF SLEEP-SLUMBER
+#  3  | haughtiness                 | PRINCIPALITY OF HAUGHTINESS
+#  4  | lies                        | PRINCIPALITY OF LIES
+#  5  | bondage                     | PRINCIPALITY OF BONDAGE
+#  6  | idolatry                    | PRINCIPALITY OF IDOLATRY
+#  7  | error                       | PRINCIPALITY OF ERROR
+#  8  | fear                        | PRINCIPALITY OF FEAR
+#  9  | divination                  | PRINCIPALITY OF DIVINATION
+# 10  | heaviness                   | SPIRIT OF HEAVINESS
+# 11  | anti-christ                 | SPIRIT OF ANTI-CHRIST
+# 12  | deaf-dumb                   | PRINCIPALITY OF DEAF & DUMB
+# 13  | perversion                  | PRINCIPALITY OF PERVERSION
+# 14  | whoredom                    | PRINCIPALITY OF WHOREDOM
+# 15  | infirmity                   | PRINCIPALITY OF INFIRMITY
+# 16  | shedding-of-innocent-blood  | PRINCIPALITY OF SHEDDING OF INNOCENT BLOOD
+# 17  | treachery-against-others    | PRINCIPALITY OF TREACHERY AGAINST OTHERS
+# 18  | using-and-abusing-others    | PRINCIPALITY OF USING AND ABUSING OTHERS...
+# 19  | trading-floor-transactions  | PRINCIPALITY OF TRADING FLOOR TRANSACTIONS WITH DEMONS
+# 20  | gluttony                    | PRINCIPALITY OF GLUTTONY
+# 21  | self-righteousness          | PRINCIPALITY OF SELF RIGHTEOUSNESS
+# 22  | sexual-perversion           | PRINCIPALITY OF SEXUAL PERVERSION
+# 23  | rebellion                   | PRINCIPALITY OF REBELLION
+# 24  | destructive-attitudes       | PRINCIPALITY OF DESTRUCTIVE ATTITUDES AGAINST GOD
+# 25  | destructive-identities      | PRINCIPALITY OF DESTRUCTIVE IDENTITIES AGAINST GOD
+# 26  | spirit-spouse-gods          | PRINCIPALITY OF SPIRIT SPOUSE GODS
+
+# --- SCHEDULED DAYS ---
+# day | mode         | principalityId(s)              | notes
+#   1 | presentation | spirit-spouse-gods (topics>=574) | TOPICS-666-PRESENTATION DAY 1
+#   2 | presentation | spirit-spouse-gods               | DAY 2
+#   3 | presentation | spirit-spouse-gods               | DAY 3
+#   4 | presentation | spirit-spouse-gods               | DAY 4
+#   5 | presentation | spirit-spouse-gods               | DAY 5
+#   6 | presentation | spirit-spouse-gods               | DAY 6
+#   7 | presentation | spirit-spouse-gods               | DAY 7
+#   8 | presentation | spirit-spouse-gods               | DAY 8 (2 parts in teaching-videos.json)
+#   9 | presentation | jealousy                         | partial Jealousy; DAY 9 in presentation
+#  10 | presentation | jealousy, sleep-slumber          | finishes Jealousy, starts Sleep-Slumber
+#  11 | presentation | haughtiness                      | DAY 11
+#  12 | presentation | lies                             | DAY 12
+#  13 | presentation | lies                             | DAY 13 (continues Lies)
+#  14 | full         | bondage                          | first full-principality day
+#  15 | full         | idolatry
+#  16 | full         | error
+#  17 | full         | fear
+#  18 | full         | divination
+#  19 | full         | heaviness
+#  20 | full         | anti-christ
+#  21 | full         | deaf-dumb
+#  22 | full         | perversion
+
+# --- NEXT EXPECTED (update after each new batch of links) ---
+nextDay=23
+nextMode=full
+nextPrincipalityId=whoredom
+nextTitleSuffix=Whoredom
+
+# After divination, continue chart order with full-principality days unless split is indicated
+# in a new presentation file section.
