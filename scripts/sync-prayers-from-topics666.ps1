@@ -1,8 +1,9 @@
-# Sync COMPILED-PRAYERS root + "I recognize that..." lines from data/TOPICS-666.txt
+# Sync COMPILED-PRAYERS topic, root, recognize, and serve lines from data/TOPICS-666.txt
 param(
     [string]$TopicsFile = "$PSScriptRoot\..\data\TOPICS-666.txt",
     [string]$PrayersFile = "$PSScriptRoot\..\data\COMPILED-PRAYERS-ROUND1.txt",
     [string[]]$AlsoWriteTo = @(
+        "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 (latest edit).txt",
         "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 {7-13.1}"
     )
 )
@@ -41,6 +42,7 @@ function Parse-Topics666([string]$raw) {
         $detail = ($detail -split '~~~~~~~~~~~~')[0].Trim()
         $detail = (Strip-NonAscii $detail).TrimEnd('.')
         $result[$num] = @{
+            topicPlain  = (Strip-NonAscii $Matches[2]).Trim().TrimEnd('.')
             rootPlain   = Extract-PlainRoot $Matches[0]
             detailPlain = $detail
         }
@@ -76,8 +78,8 @@ foreach ($block in $blocks) {
 
     for ($i = 0; $i -lt $lines.Count; $i++) {
         $line = $lines[$i]
-        if ($line -match '^I agree that I am guilty of keeping and not casting down thought suggestions of .+, from a root of .+\.$') {
-            $newLine = [regex]::Replace($line, ', from a root of .+\.$', ", from a root of $($meta.rootPlain).")
+        if ($line -match '^I agree that I am guilty of keeping and not casting down thought suggestions of ') {
+            $newLine = "I agree that I am guilty of keeping and not casting down thought suggestions of $($meta.topicPlain), from a root of $($meta.rootPlain)."
             if ($newLine -ne $line) {
                 $lines[$i] = $newLine
                 $changed = $true
@@ -88,6 +90,18 @@ foreach ($block in $blocks) {
             if ($newLine.Trim() -ne $line.Trim()) {
                 $lines[$i] = $newLine
                 $changed = $true
+            }
+        }
+        elseif ($line -match '^I no longer want to serve ') {
+            $newLine = "I no longer want to serve $($meta.topicPlain). In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead."
+            if ($newLine -ne $line) {
+                $lines[$i] = $newLine
+                $changed = $true
+            }
+            while ($i + 1 -lt $lines.Count -and $lines[$i + 1] -match '^(?:lewdness|thoughts, words|and actions|In fact, I am asking)') {
+                $lines[$i + 1] = ''
+                $changed = $true
+                $i++
             }
         }
     }

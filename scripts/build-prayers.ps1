@@ -3,7 +3,7 @@ param(
     [string]$PrayersFile = $(if (Test-Path "$PSScriptRoot\..\data\COMPILED-PRAYERS-ROUND1.txt") {
         "$PSScriptRoot\..\data\COMPILED-PRAYERS-ROUND1.txt"
     } else {
-        "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 {7-13.1}"
+        "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 (latest edit).txt"
     }),
     [string]$CorePrayerFile = $(if (Test-Path "$PSScriptRoot\..\data\en-core-prayer.txt") {
         "$PSScriptRoot\..\data\en-core-prayer.txt"
@@ -157,7 +157,7 @@ foreach ($lang in $languages) {
 $enPayload = @{
     language = 'en'
     complete = $true
-    source = 'compiled_prayers - round 1 {7-13.1}'
+    source = 'compiled_prayers - round 1 (latest edit).txt'
     corePrayer = $corePrayer
     topics = $topicPrayers
 }

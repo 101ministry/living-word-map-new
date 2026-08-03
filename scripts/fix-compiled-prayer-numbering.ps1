@@ -1,7 +1,7 @@
 # Renumbers compiled_prayers so guile=607 and stupor=654 align with topics 666.txt.
 param(
     [string[]]$Files = @(
-        "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 {7-13}.txt",
+        "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 (latest edit).txt",
         "$env:USERPROFILE\Downloads\Telegram Desktop\compiled_prayers - round 1 {7-13.1}",
         "$PSScriptRoot\..\data\COMPILED-PRAYERS-ROUND1.txt"
     ),
