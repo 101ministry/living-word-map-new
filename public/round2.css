@@ -1,0 +1,532 @@
+.round2-body {
+  background: var(--bg-deep);
+  min-height: 100vh;
+}
+
+#round2-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.round2-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-panel);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.round2-back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.round2-back-link:hover {
+  color: var(--accent);
+}
+
+.round2-header-brand h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--quote);
+}
+
+.round2-phase-label,
+.round2-header-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.round2-header-brand {
+  flex: 1;
+  min-width: 180px;
+}
+
+.round2-phase {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.round2-phase.hidden {
+  display: none;
+}
+
+/* Overview */
+.round2-overview-intro {
+  flex-shrink: 0;
+  padding: 1rem 1.25rem 0.75rem;
+  max-width: 720px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.round2-overview-sections {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 1.25rem 1.5rem;
+}
+
+.round2-overview-section {
+  margin-bottom: 1.75rem;
+}
+
+.round2-overview-section h3 {
+  margin: 0 0 0.65rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--principality);
+}
+
+.round2-overview-card {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0.65rem 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.round2-overview-card:last-child {
+  border-bottom: none;
+}
+
+.round2-overview-num {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding-top: 0.15rem;
+}
+
+.round2-overview-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.round2-overview-snippet {
+  margin: 0 0 0.45rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.round2-snapshot-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.round2-tag {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.round2-tag.root {
+  color: var(--root);
+  background: rgba(107, 140, 174, 0.12);
+}
+
+.round2-tag.fruit {
+  color: var(--fruit);
+  background: rgba(155, 107, 140, 0.12);
+}
+
+/* Gate bar — sticky under intro; always visible without scrolling the full list */
+.round2-gate {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  z-index: 15;
+}
+
+.round2-gate-text {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--quote);
+}
+
+.round2-gate-actions {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.round2-btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.round2-btn-ghost:hover {
+  border-color: var(--text-muted);
+}
+
+/* Round 2 layout */
+.round2-layout {
+  display: grid;
+  grid-template-columns: 1fr min(320px, 34vw);
+  grid-template-rows: 1fr;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.round2-prayer-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+}
+
+.round2-prayer-header {
+  padding: 1rem 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.round2-topic-num {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.round2-prayer-header h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  color: var(--quote);
+}
+
+.round2-topic-meta {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.round2-topic-video {
+  margin: 0.45rem 0 0;
+}
+
+.round2-topic-video.hidden {
+  display: none;
+}
+
+.round2-topic-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.round2-topic-video-link:hover,
+.round2-topic-video-link:focus-visible {
+  text-decoration: underline;
+}
+
+.round2-overview-video-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.round2-overview-video-link:hover,
+.round2-overview-video-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Scrollbars — subtle dark / fruit purple tone */
+.round2-prayer-scroll,
+.round2-sidebar,
+.round2-overview-sections {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 107, 140, 0.38) var(--bg-deep);
+}
+
+.round2-sidebar {
+  scrollbar-color: rgba(155, 107, 140, 0.38) var(--bg-panel);
+}
+
+.round2-prayer-scroll::-webkit-scrollbar,
+.round2-sidebar::-webkit-scrollbar,
+.round2-overview-sections::-webkit-scrollbar {
+  width: 8px;
+}
+
+.round2-prayer-scroll::-webkit-scrollbar-track,
+.round2-overview-sections::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+.round2-sidebar::-webkit-scrollbar-track {
+  background: var(--bg-panel);
+}
+
+.round2-prayer-scroll::-webkit-scrollbar-thumb,
+.round2-sidebar::-webkit-scrollbar-thumb,
+.round2-overview-sections::-webkit-scrollbar-thumb {
+  background: rgba(155, 107, 140, 0.32);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.round2-prayer-scroll::-webkit-scrollbar-thumb:hover,
+.round2-sidebar::-webkit-scrollbar-thumb:hover,
+.round2-overview-sections::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 107, 140, 0.52);
+  background-clip: padding-box;
+}
+
+.round2-prayer-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.25rem 2rem;
+  scroll-behavior: smooth;
+}
+
+.round2-prayer-note {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.round2-prayer-text {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.round2-scroll-sentinel {
+  height: 1px;
+  margin-top: 1rem;
+}
+
+/* Sidebar */
+.round2-sidebar {
+  overflow-y: auto;
+  background: var(--bg-panel);
+  padding: 0.75rem 0;
+  min-height: 0;
+  height: 100%;
+}
+
+.round2-sidebar-section {
+  margin-bottom: 0.5rem;
+}
+
+.round2-sidebar-principality {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--principality);
+  position: sticky;
+  top: 0;
+  background: var(--bg-panel);
+  z-index: 2;
+}
+
+.round2-principality-check {
+  opacity: 0.35;
+  font-size: 0.9rem;
+}
+
+.round2-principality-check.done {
+  opacity: 1;
+}
+
+.round2-sidebar-topic {
+  display: grid;
+  grid-template-columns: 1.4rem 2.2rem 1fr;
+  align-items: start;
+  gap: 0.35rem;
+  padding: 0.3rem 0.85rem 0.3rem 0.65rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+
+.round2-sidebar-topic:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.round2-sidebar-topic.active {
+  border-left-color: var(--accent);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--text);
+}
+
+.round2-sidebar-topic.visited .round2-topic-check {
+  opacity: 0.5;
+}
+
+.round2-sidebar-topic.done .round2-topic-check {
+  opacity: 1;
+  color: #6fcf97;
+}
+
+.round2-topic-check {
+  opacity: 0.2;
+  user-select: none;
+}
+
+.round2-sidebar-topic-num {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+.round2-sidebar-topic-label {
+  word-break: break-word;
+}
+
+/* Dialog */
+.round2-dialog {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0;
+  background: var(--bg-elevated);
+  color: var(--text);
+  max-width: min(420px, 92vw);
+}
+
+.round2-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.round2-dialog-inner {
+  position: relative;
+  padding: 2.35rem 1.35rem 1.35rem;
+  margin: 0;
+}
+
+.round2-dialog-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.round2-dialog-close:hover,
+.round2-dialog-close:focus-visible {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.round2-dialog-inner h3 {
+  margin: 0 0 0.35rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--quote);
+}
+
+.round2-dialog-sub {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.round2-cal-prompt {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+}
+
+.round2-cal-prompt p {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+}
+
+.round2-cal-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.round2-dialog-actions {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .round2-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) minmax(180px, 34vh);
+  }
+
+  .round2-prayer-panel {
+    border-right: none;
+    max-height: none;
+  }
+
+  .round2-sidebar {
+    max-height: none;
+    border-top: 1px solid var(--border);
+  }
+}
