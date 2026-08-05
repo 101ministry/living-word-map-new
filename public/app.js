@@ -828,6 +828,31 @@
     return Graph.screen2GraphCoords(clientX - rect.left, clientY - rect.top);
   }
 
+  function pickRootOrFruitAtScreen(clientX, clientY) {
+    const coords = graphPointerCoords(clientX, clientY);
+    if (!coords) return null;
+
+    const { nodes } = Graph.graphData();
+    let best = null;
+    let bestDist = Infinity;
+
+    for (const node of nodes) {
+      const id = asNodeId(node);
+      const type = nodeType(id);
+      if (type !== 'root' && type !== 'fruit') continue;
+      if (node.x == null || node.y == null) continue;
+      const radius = nodeRadius(id) * (isConstellationView() ? 1.55 : 1.25);
+      const dx = coords.x - node.x;
+      const dy = coords.y - node.y;
+      const dist = dx * dx + dy * dy;
+      if (dist <= radius * radius && dist < bestDist) {
+        bestDist = dist;
+        best = node;
+      }
+    }
+    return best;
+  }
+
   function pickPrincipalityAtScreen(clientX, clientY) {
     const coords = graphPointerCoords(clientX, clientY);
     if (!coords) return null;
@@ -1147,7 +1172,9 @@
         ctx.fillRect(node.x - half, node.y - half, half * 2, half * 2);
         return;
       }
-      const r = Math.sqrt(nodeSize(id)) * 4;
+      const r = Math.sqrt(nodeSize(id)) * (
+        isConstellationView() && (nodeType(id) === 'root' || nodeType(id) === 'fruit') ? 5.2 : 4
+      );
       ctx.beginPath();
       ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
       ctx.fill();
@@ -1186,7 +1213,6 @@
     .enablePointerInteraction(true)
     .onNodeHover(node => {
       state.hoveredNodeId = node ? asNodeId(node) : null;
-      if (!node) hideGraphTooltip();
     })
     .onNodeClick((node, event) => {
       const id = asNodeId(node);
@@ -1500,7 +1526,8 @@
       const topicLabel = conn.topics.length === 1 ? 'topic' : 'topics';
       const pLabel = pCount === 1 ? 'principality' : 'principalities';
       const meta = `${conn.topics.length} ${topicLabel} · ${pCount} ${pLabel}`;
-      return `<div class="graph-tooltip-title">${escapeHtml(item.name)}</div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
+      const dotColor = nodeColorResolved(id);
+      return `<div class="graph-tooltip-head"><span class="graph-tooltip-dot" style="background:${dotColor}"></span><div class="graph-tooltip-title">${escapeHtml(item.name)}</div></div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
     }
 
     if (type === 'principality') {
@@ -1544,6 +1571,12 @@
 
   container.addEventListener('mousemove', ev => {
     if (!(ev.target instanceof HTMLCanvasElement)) return;
+    const rootHit = pickRootOrFruitAtScreen(ev.clientX, ev.clientY);
+    if (rootHit) {
+      showGraphTooltip(buildGraphTooltipHtml(asNodeId(rootHit)), ev.clientX, ev.clientY);
+      container.style.cursor = 'pointer';
+      return;
+    }
     const hit = pickPrincipalityAtScreen(ev.clientX, ev.clientY);
     if (hit) {
       showGraphTooltip(buildGraphTooltipHtml(asNodeId(hit)), ev.clientX, ev.clientY);

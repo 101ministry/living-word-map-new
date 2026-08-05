@@ -1370,6 +1370,23 @@ button:hover, select:hover {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 0.92rem;
   line-height: 1.3;
+  flex: 1;
+  min-width: 0;
+}
+
+.graph-tooltip-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.graph-tooltip-dot {
+  flex-shrink: 0;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-top: 0.28rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12), 0 0 10px currentColor;
 }
 
 .graph-tooltip-title:not(:last-child) {
@@ -1380,6 +1397,11 @@ button:hover, select:hover {
   font-size: 0.76rem;
   color: var(--text-muted);
   line-height: 1.4;
+}
+
+.graph-tooltip-head + .graph-tooltip-meta {
+  margin-top: 0.12rem;
+  padding-left: 1.15rem;
 }
 
 .graph-tooltip-row {
