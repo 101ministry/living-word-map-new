@@ -3,7 +3,8 @@
   min-height: 100vh;
 }
 
-#round2-app {
+#round2-app,
+#round1-app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -426,6 +427,18 @@
 .round2-sidebar-topic-num {
   font-variant-numeric: tabular-nums;
   opacity: 0.7;
+}
+
+.round1-sidebar-topic {
+  grid-template-columns: 2.2rem 1fr;
+}
+
+.round1-sidebar-topic .round2-topic-check {
+  display: none;
+}
+
+.round1-sidebar-principality .round2-principality-check {
+  display: none;
 }
 
 .round2-sidebar-topic-label {
