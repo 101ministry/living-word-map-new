@@ -1,0 +1,14 @@
+---
+description: Deportation biblical study — Part 1 PDF, podcast, sojourner vs nations, BLB commentary (not word map UI)
+globs: data/DEPORTATION*,scripts/build-deportation-study-pdf.ps1
+alwaysApply: false
+---
+
+# Deportation biblical study scope
+
+When working on matched files, this is **Part 1 deportation study** — not Living Word Map graph/prayers and not supersessionism Part 2.
+
+- OT distinction: **sojourner (ger)** vs **nations of the land** / their gods
+- Commentary stack: ESV paragraph context, BLB MacArthur / Chuck Smith C2000 / Henry selective
+- Build: `scripts/build-deportation-study-pdf.ps1` → portrait PDF
+- For dedicated chats, prefer skill **deportation-biblical-study**
