@@ -243,7 +243,7 @@ for ($n = 1; $n -le 666; $n++) {
         fruits = @($fruits)
         fruitDisplay = $fruitDisplay
         principality = $principality
-        sectionId = if ($topicToSection.ContainsKey($n)) { $topicToSection[$n] } else { $null }
+        sectionId = if ($principality) { Slugify $principality } elseif ($topicToSection.ContainsKey($n)) { $topicToSection[$n] } else { $null }
         round1Preview = $round1Preview
         round1Text = $body
     }

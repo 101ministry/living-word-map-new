@@ -95,7 +95,9 @@ G5401   # phobos — fear / terror / dread / alarm / reverence
 
 
 [PRINCIPALITY OF DIVINATION]
-
+H6049   # anan — to practice soothsaying / to conjure / to observe times
+H7081   # qesem — divination / witchcraft / soothsaying
+G4436   # puthón — Python / spirit of divination
 
 [SPIRIT OF HEAVINESS]
 

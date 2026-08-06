@@ -77,18 +77,74 @@
     return pairs.some(([a, b]) => a && b);
   }
 
-  function centerLayer(row, col) {
+  function ringDist(row, col) {
     return Math.max(Math.abs(row - CENTER), Math.abs(col - CENTER));
   }
 
-  function canBreakCenter(row, col) {
-    const layer = centerLayer(row, col);
-    for (let i = 0; i < SIZE; i++) {
-      const b = grid[i];
-      if (!b || b.health <= 0) continue;
-      if (centerLayer(b.row, b.col) < layer) return false;
+  function ringIndex(row, col) {
+    return Math.round(ringDist(row, col) - 0.5);
+  }
+
+  function isCenterCell(row, col) {
+    return ringDist(row, col) <= 0.5;
+  }
+
+  /** Ring corner (O): both axes sit on the same ring square, e.g. (2,2) on ring 1. */
+  function isRingCorner(row, col) {
+    const rd = ringDist(row, col);
+    if (rd <= 0.5) return false;
+    const dr = Math.abs(row - CENTER);
+    const dc = Math.abs(col - CENTER);
+    return Math.abs(dr - rd) < 0.01 && Math.abs(dc - rd) < 0.01;
+  }
+
+  /** Edge cell (X): one step closer to center along the shared side. */
+  function inwardNeighbor(row, col) {
+    const here = ringDist(row, col);
+    let best = null;
+    let bestDist = here;
+    const neighbors = [
+      [row - 1, col],
+      [row + 1, col],
+      [row, col - 1],
+      [row, col + 1],
+    ];
+    for (const [nr, nc] of neighbors) {
+      if (nr < 0 || nr >= GRID || nc < 0 || nc >= GRID) continue;
+      const d = ringDist(nr, nc);
+      if (d < bestDist) {
+        bestDist = d;
+        best = [nr, nc];
+      }
     }
-    return true;
+    return best;
+  }
+
+  /** O cells unlock when both adjacent X neighbors on the same ring are cleared. */
+  function sameRingEdgeNeighbors(row, col) {
+    const ri = ringIndex(row, col);
+    const neighbors = [
+      [row - 1, col],
+      [row + 1, col],
+      [row, col - 1],
+      [row, col + 1],
+    ];
+    return neighbors.filter(([nr, nc]) => {
+      if (nr < 0 || nr >= GRID || nc < 0 || nc >= GRID) return false;
+      return ringIndex(nr, nc) === ri && !isRingCorner(nr, nc);
+    });
+  }
+
+  function canBreakCenter(row, col) {
+    if (isCenterCell(row, col)) return true;
+
+    if (isRingCorner(row, col)) {
+      const edges = sameRingEdgeNeighbors(row, col);
+      return edges.length >= 2 && edges.every(([r, c]) => isBroken(r, c));
+    }
+
+    const inward = inwardNeighbor(row, col);
+    return inward ? isBroken(inward[0], inward[1]) : false;
   }
 
   function canBreakBlock(block) {
@@ -227,7 +283,7 @@
     blocksEl.textContent = String(blocksLeft);
     messageEl.textContent = currentLevel <= 3
       ? `Level ${currentLevel} — break from the corners inward.`
-      : '';
+      : `Level ${currentLevel} — break from the center outward.`;
     refreshBreakableStates();
     promptLocationIfNeeded(currentLevel);
     updateHookPanelVisibility();
@@ -251,7 +307,11 @@
       if (!el || block.health <= 0) return;
       const ok = canBreakBlock(block);
       el.disabled = !ok;
-      el.title = ok || mode !== 'corner' ? '' : 'Clear the corner path first';
+      el.title = ok
+        ? ''
+        : mode === 'corner'
+          ? 'Clear the corner path first'
+          : 'Clear the center path first';
     });
   }
 
@@ -297,7 +357,7 @@
     if (!canBreakBlock(block)) {
       messageEl.textContent = mode === 'corner'
         ? 'That block is not exposed from a corner yet.'
-        : '';
+        : 'That block is not exposed from the center yet.';
       return;
     }
     applyDamage(block, amount);

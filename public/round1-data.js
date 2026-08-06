@@ -2,7 +2,7 @@ window.ROUND1_DATA = {
     "topics":  {
                    "484":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of disapproval, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -39,7 +39,7 @@ window.ROUND1_DATA = {
                            },
                    "664":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God,â€¦",
-                               "sectionId":  "divination",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -133,7 +133,7 @@ window.ROUND1_DATA = {
                            },
                    "531":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of playacting, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -150,7 +150,7 @@ window.ROUND1_DATA = {
                            },
                    "469":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doctrinal obsession, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -238,7 +238,7 @@ window.ROUND1_DATA = {
                            },
                    "282":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Contention, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -289,7 +289,7 @@ window.ROUND1_DATA = {
                           },
                    "417":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of disunity - seeking to pit one person against another, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -306,7 +306,7 @@ window.ROUND1_DATA = {
                            },
                    "661":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of violence, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -326,7 +326,7 @@ window.ROUND1_DATA = {
                            },
                    "473":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of dread, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -377,7 +377,7 @@ window.ROUND1_DATA = {
                            },
                    "502":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of inadequacy, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -394,7 +394,7 @@ window.ROUND1_DATA = {
                            },
                    "555":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of spirit of error, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -467,7 +467,7 @@ window.ROUND1_DATA = {
                            },
                    "186":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sexual deviations, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -484,7 +484,7 @@ window.ROUND1_DATA = {
                            },
                    "645":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of seduction, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, â€¦",
-                               "sectionId":  "whoredom",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -504,7 +504,7 @@ window.ROUND1_DATA = {
                            },
                    "366":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -555,7 +555,7 @@ window.ROUND1_DATA = {
                            },
                    "560":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of stubbornness, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -572,7 +572,7 @@ window.ROUND1_DATA = {
                            },
                    "450":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of belittling, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -609,7 +609,7 @@ window.ROUND1_DATA = {
                            },
                    "422":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of excessive pride in looks, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -697,7 +697,7 @@ window.ROUND1_DATA = {
                            },
                    "287":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hating both god and mankind, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -780,7 +780,7 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of erotic lust (lust for the erotic), from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of erotic lust (lust for the erotic) with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of erotic lust (lust for the erotic). In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nIn fact, I am asking for the forgiveness of God on this and for the\r\nBlood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of erotic lust (lust for the erotic), from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of erotic lust (lust for the erotic) with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of erotic lust (lust for the erotic). In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nBlood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "626":  {
@@ -825,7 +825,7 @@ window.ROUND1_DATA = {
                            },
                    "516":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of lying spirit, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -859,7 +859,7 @@ window.ROUND1_DATA = {
                            },
                    "572":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "divination",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -870,13 +870,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Divination",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of witchcraft with the root of idolatry and person-worship; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Divination \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of witchcraft. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of witchcraft with the root of idolatry and person-worship; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of witchcraft. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "461":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "lies",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -887,13 +887,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Lies",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of deception with the root of deception and falsehood; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Lies \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of deception. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of deception with the root of deception and falsehood; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of deception. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "457":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of crib death, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -910,7 +910,7 @@ window.ROUND1_DATA = {
                            },
                    "512":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of laziness, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -1032,7 +1032,7 @@ window.ROUND1_DATA = {
                            },
                    "226":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the abortion, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1137,7 +1137,7 @@ window.ROUND1_DATA = {
                            },
                    "452":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of bitterness, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1188,7 +1188,7 @@ window.ROUND1_DATA = {
                            },
                    "298":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing others by actions, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1205,7 +1205,7 @@ window.ROUND1_DATA = {
                            },
                    "316":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s power, from a root of covetousness and materialism.\r\n\r\nI agree that I made iâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -1222,7 +1222,7 @@ window.ROUND1_DATA = {
                            },
                    "486":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of judgment, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -1256,7 +1256,7 @@ window.ROUND1_DATA = {
                           },
                    "305":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for money, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important thâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -1273,7 +1273,7 @@ window.ROUND1_DATA = {
                            },
                    "635":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pornography, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -1313,7 +1313,7 @@ window.ROUND1_DATA = {
                            },
                    "463":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of depression, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "heaviness",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -1324,13 +1324,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Heaviness",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of depression, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of depression with the root of deception and falsehood; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Heaviness \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of depression. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of depression, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of depression with the root of deception and falsehood; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of depression. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "240":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of use of cruel oppression of people, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -1364,7 +1364,7 @@ window.ROUND1_DATA = {
                            },
                    "474":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of early death, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -1381,7 +1381,7 @@ window.ROUND1_DATA = {
                            },
                    "631":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -1438,7 +1438,7 @@ window.ROUND1_DATA = {
                            },
                    "569":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of vanity, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -1472,7 +1472,7 @@ window.ROUND1_DATA = {
                           },
                    "459":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1483,8 +1483,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of cruelty with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of cruelty. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of cruelty with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of cruelty. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "611":  {
@@ -1560,7 +1560,7 @@ window.ROUND1_DATA = {
                            },
                    "374":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using women as objects of lust, impurity, and lewdness in thoughts, words, and actions, from a root of addiction and bondage.\r\n\r\nI agree â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -1577,7 +1577,7 @@ window.ROUND1_DATA = {
                            },
                    "404":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -1594,7 +1594,7 @@ window.ROUND1_DATA = {
                            },
                    "235":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of participation in acts of torture during the Crusades, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it moreâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -1611,7 +1611,7 @@ window.ROUND1_DATA = {
                            },
                    "510":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of jealousy, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -1622,13 +1622,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of jealousy, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of jealousy with the root of fear and insecurity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of jealousy. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of jealousy, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of jealousy with the root of fear and insecurity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of jealousy. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "570":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of violence, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1645,7 +1645,7 @@ window.ROUND1_DATA = {
                            },
                    "440":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of duplicity or hypocrisy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -1662,7 +1662,7 @@ window.ROUND1_DATA = {
                            },
                    "529":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of passivity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "slothfulness",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -1673,13 +1673,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Slothfulness",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of passivity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of passivity with the root of control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Slothfulness \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of passivity. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of passivity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of passivity with the root of control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of passivity. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "419":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of compromise with the flesh and known sinful traps, from a root of unbelief and distrust of god.\r\n\r\nI agree that I made it moreâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -1696,7 +1696,7 @@ window.ROUND1_DATA = {
                            },
                    "471":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doom and gloom, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than Goâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -1713,7 +1713,7 @@ window.ROUND1_DATA = {
                            },
                    "553":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of shyness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -1730,7 +1730,7 @@ window.ROUND1_DATA = {
                            },
                    "318":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s church or denomination, from a root of covetousness and materialism.\r\n\r\nI agâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -1747,7 +1747,7 @@ window.ROUND1_DATA = {
                            },
                    "228":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of ambush of the innocent, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1781,7 +1781,7 @@ window.ROUND1_DATA = {
                           },
                    "399":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -1798,7 +1798,7 @@ window.ROUND1_DATA = {
                            },
                    "557":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of spite, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -1815,7 +1815,7 @@ window.ROUND1_DATA = {
                            },
                    "495":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hallucinations, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -1852,7 +1852,7 @@ window.ROUND1_DATA = {
                            },
                    "424":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of excessive pride in church activities, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -1923,7 +1923,7 @@ window.ROUND1_DATA = {
                           },
                    "482":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of accusation, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -1940,7 +1940,7 @@ window.ROUND1_DATA = {
                            },
                    "582":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of adultery, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
-                               "sectionId":  "whoredom",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -1960,7 +1960,7 @@ window.ROUND1_DATA = {
                            },
                    "222":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the spear, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2028,7 +2028,7 @@ window.ROUND1_DATA = {
                           },
                    "478":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fantasy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -2045,7 +2045,7 @@ window.ROUND1_DATA = {
                            },
                    "303":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of worshipping idols and expecting them to save you, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -2130,7 +2130,7 @@ window.ROUND1_DATA = {
                            },
                    "505":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of inferiority, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -2164,7 +2164,7 @@ window.ROUND1_DATA = {
                           },
                    "438":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts and feelings of panic, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -2198,7 +2198,7 @@ window.ROUND1_DATA = {
                          },
                    "518":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of materialism, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -2266,7 +2266,7 @@ window.ROUND1_DATA = {
                            },
                    "527":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of overburden, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -2320,7 +2320,7 @@ window.ROUND1_DATA = {
                           },
                    "444":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2331,13 +2331,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of anger with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of anger. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of anger with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of anger. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "544":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2348,8 +2348,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of revenge with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of revenge. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of revenge with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of revenge. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "18":  {
@@ -2371,7 +2371,7 @@ window.ROUND1_DATA = {
                           },
                    "179":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing false teachers, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -2422,7 +2422,7 @@ window.ROUND1_DATA = {
                            },
                    "491":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of frigidity, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -2439,7 +2439,7 @@ window.ROUND1_DATA = {
                            },
                    "559":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -2450,8 +2450,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Using",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of strife with the root of pride and self-exaltation; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of strife. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of strife with the root of pride and self-exaltation; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of strife. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "74":  {
@@ -2510,7 +2510,7 @@ window.ROUND1_DATA = {
                            },
                    "433":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of ability to focus, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -2564,7 +2564,7 @@ window.ROUND1_DATA = {
                            },
                    "652":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of slavery, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -2601,7 +2601,7 @@ window.ROUND1_DATA = {
                            },
                    "296":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing others by thoughts, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2689,7 +2689,7 @@ window.ROUND1_DATA = {
                            },
                    "539":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of religiosity, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -2706,7 +2706,7 @@ window.ROUND1_DATA = {
                            },
                    "290":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Scorner, Mocker, Scoffer, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -2794,7 +2794,7 @@ window.ROUND1_DATA = {
                            },
                    "436":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of desire to attend church, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -2828,7 +2828,7 @@ window.ROUND1_DATA = {
                          },
                    "402":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of erratic thoughts out of nowhere, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -2845,7 +2845,7 @@ window.ROUND1_DATA = {
                            },
                    "233":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture of the innocent people in the land, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more importâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2862,7 +2862,7 @@ window.ROUND1_DATA = {
                            },
                    "567":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of unfairness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -2879,7 +2879,7 @@ window.ROUND1_DATA = {
                            },
                    "542":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of retaliation, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2896,7 +2896,7 @@ window.ROUND1_DATA = {
                            },
                    "407":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of overcompensating in any way, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -2930,7 +2930,7 @@ window.ROUND1_DATA = {
                            },
                    "291":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hater of all that is pure and good, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2947,7 +2947,7 @@ window.ROUND1_DATA = {
                            },
                    "376":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using men as objects of lust, impurity, and lewdness in thoughts, words, and actions, from a root of pride and self-exaltation.\r\n\r\nI agreâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -2964,7 +2964,7 @@ window.ROUND1_DATA = {
                            },
                    "312":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s goods, from a root of covetousness and materialism.\r\n\r\nI agree that I made iâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -2981,7 +2981,7 @@ window.ROUND1_DATA = {
                            },
                    "564":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of temper, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -2998,7 +2998,7 @@ window.ROUND1_DATA = {
                            },
                    "237":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Shedding of Innocent Blood through the use of human trafficking, from a root of covetousness and materialism.\r\n\r\nI agree that I made it mâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -3123,7 +3123,7 @@ window.ROUND1_DATA = {
                            },
                    "397":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rebellion to established authority, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -3157,7 +3157,7 @@ window.ROUND1_DATA = {
                           },
                    "609":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -3194,7 +3194,7 @@ window.ROUND1_DATA = {
                           },
                    "497":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of headache, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -3228,7 +3228,7 @@ window.ROUND1_DATA = {
                           },
                    "537":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of rationalism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -3262,7 +3262,7 @@ window.ROUND1_DATA = {
                           },
                    "503":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of incubus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -3279,7 +3279,7 @@ window.ROUND1_DATA = {
                            },
                    "476":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of envy, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -3296,7 +3296,7 @@ window.ROUND1_DATA = {
                            },
                    "185":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sadomasochism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -3313,7 +3313,7 @@ window.ROUND1_DATA = {
                            },
                    "281":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferreâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -3398,7 +3398,7 @@ window.ROUND1_DATA = {
                            },
                    "442":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having thoughts of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -3415,7 +3415,7 @@ window.ROUND1_DATA = {
                            },
                    "361":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of bastard children born outside the protection of marriage, from a root of shame and false identity.\r\n\r\nI agree that I made it more importaâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -3466,7 +3466,7 @@ window.ROUND1_DATA = {
                            },
                    "239":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of slave ownership, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -3483,7 +3483,7 @@ window.ROUND1_DATA = {
                            },
                    "288":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Blasphemy Against God, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -3500,7 +3500,7 @@ window.ROUND1_DATA = {
                            },
                    "308":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for walking in self-sufficient independence, from a root of control and rebellion.\r\n\r\nI agree that â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -3534,7 +3534,7 @@ window.ROUND1_DATA = {
                            },
                    "546":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sadness and crying, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important thaâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -3570,7 +3570,7 @@ window.ROUND1_DATA = {
                            },
                    "310":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for withholding tithes and offerings, from a root of covetousness and materialism.\r\n\r\nI agree that â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -3607,7 +3607,7 @@ window.ROUND1_DATA = {
                            },
                    "220":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the knife, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -3661,7 +3661,7 @@ window.ROUND1_DATA = {
                            },
                    "643":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of rebellion, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -3715,7 +3715,7 @@ window.ROUND1_DATA = {
                            },
                    "493":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of gossip, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "treachery-against-others",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -3726,8 +3726,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Treachery Against Others",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of gossip, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of gossip with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Treachery Against Others \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of gossip. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of gossip, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of gossip with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of gossip. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "637":  {
@@ -3891,7 +3891,7 @@ window.ROUND1_DATA = {
                            },
                    "480":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of faultfinding, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -3925,7 +3925,7 @@ window.ROUND1_DATA = {
                            },
                    "420":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of overwhelming panic attacks, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -3942,7 +3942,7 @@ window.ROUND1_DATA = {
                            },
                    "227":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of kidnapping, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -3996,7 +3996,7 @@ window.ROUND1_DATA = {
                            },
                    "561":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of succubus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -4013,7 +4013,7 @@ window.ROUND1_DATA = {
                            },
                    "451":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of bickering, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -4030,7 +4030,7 @@ window.ROUND1_DATA = {
                            },
                    "218":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture through disembowelment, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than Godâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -4047,7 +4047,7 @@ window.ROUND1_DATA = {
                            },
                    "509":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of intellectualism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -4081,7 +4081,7 @@ window.ROUND1_DATA = {
                            },
                    "481":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -4098,7 +4098,7 @@ window.ROUND1_DATA = {
                            },
                    "514":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of listlessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God,â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -4115,7 +4115,7 @@ window.ROUND1_DATA = {
                            },
                    "183":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -4151,7 +4151,7 @@ window.ROUND1_DATA = {
                           },
                    "455":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of confrontation, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -4168,7 +4168,7 @@ window.ROUND1_DATA = {
                            },
                    "487":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of man, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -4202,7 +4202,7 @@ window.ROUND1_DATA = {
                           },
                    "306":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for fertility, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more importantâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -4256,7 +4256,7 @@ window.ROUND1_DATA = {
                            },
                    "548":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of selfishness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -4363,7 +4363,7 @@ window.ROUND1_DATA = {
                            },
                    "324":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hiding envy behind the cloak of insecurity and failure, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important thanâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -4397,7 +4397,7 @@ window.ROUND1_DATA = {
                            },
                    "395":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of obsession with negatives of the past, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than Gâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -4448,7 +4448,7 @@ window.ROUND1_DATA = {
                            },
                    "428":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts that question God’s love, faithfulness and Word, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more impâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -4465,7 +4465,7 @@ window.ROUND1_DATA = {
                            },
                    "562":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of suicide, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -4482,7 +4482,7 @@ window.ROUND1_DATA = {
                            },
                    "528":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of paranoia, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -4499,7 +4499,7 @@ window.ROUND1_DATA = {
                            },
                    "418":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seeking to create doubt about a person or day, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God,â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -4533,7 +4533,7 @@ window.ROUND1_DATA = {
                            },
                    "371":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in gender confusion, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -4550,7 +4550,7 @@ window.ROUND1_DATA = {
                            },
                    "319":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s intellect, from a root of pride and self-exaltation.\r\n\r\nI agree that I made â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -4567,7 +4567,7 @@ window.ROUND1_DATA = {
                            },
                    "229":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of slaughter, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -4584,7 +4584,7 @@ window.ROUND1_DATA = {
                            },
                    "535":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of quarreling, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -4618,7 +4618,7 @@ window.ROUND1_DATA = {
                           },
                    "554":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sorrow, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -4635,7 +4635,7 @@ window.ROUND1_DATA = {
                            },
                    "465":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of disobedience, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -4652,7 +4652,7 @@ window.ROUND1_DATA = {
                            },
                    "187":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of twisted thinking, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -4773,7 +4773,7 @@ window.ROUND1_DATA = {
                           },
                    "613":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of incest, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "whoredom",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -4830,7 +4830,7 @@ window.ROUND1_DATA = {
                            },
                    "300":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Purposeful Lying to Destroy Another’s Life, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -4847,7 +4847,7 @@ window.ROUND1_DATA = {
                            },
                    "286":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of violence and cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -4972,7 +4972,7 @@ window.ROUND1_DATA = {
                            },
                    "320":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s career, from a root of covetousness and materialism.\r\n\r\nI agree that I made â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -5043,7 +5043,7 @@ window.ROUND1_DATA = {
                            },
                    "426":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings of loneliness and detachment, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -5060,7 +5060,7 @@ window.ROUND1_DATA = {
                            },
                    "526":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of occult spirits, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -5130,7 +5130,7 @@ window.ROUND1_DATA = {
                           },
                    "445":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anti-submissiveness, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -5164,7 +5164,7 @@ window.ROUND1_DATA = {
                            },
                    "522":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of murder, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -5175,8 +5175,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of murder, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of murder with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of murder. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of murder, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of murder with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of murder. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "212":  {
@@ -5198,7 +5198,7 @@ window.ROUND1_DATA = {
                            },
                    "520":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -5209,13 +5209,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Sexual",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of molestation with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Sexual Perversion \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of molestation. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of molestation with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of molestation. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "410":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -5232,7 +5232,7 @@ window.ROUND1_DATA = {
                            },
                    "470":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of dominance, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -5334,7 +5334,7 @@ window.ROUND1_DATA = {
                            },
                    "453":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of blasphemy, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -5419,7 +5419,7 @@ window.ROUND1_DATA = {
                          },
                    "299":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of delighting in the destruction of another, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God,â€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -5436,7 +5436,7 @@ window.ROUND1_DATA = {
                            },
                    "489":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fighting, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -5453,7 +5453,7 @@ window.ROUND1_DATA = {
                            },
                    "304":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for power, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thaâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -5507,7 +5507,7 @@ window.ROUND1_DATA = {
                            },
                    "322":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of idolizing the works of one’s hands, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -5635,7 +5635,7 @@ window.ROUND1_DATA = {
                            },
                    "466":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of distrust, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -5737,7 +5737,7 @@ window.ROUND1_DATA = {
                            },
                    "377":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using filthy language, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -5754,7 +5754,7 @@ window.ROUND1_DATA = {
                            },
                    "405":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to overwork, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -5805,7 +5805,7 @@ window.ROUND1_DATA = {
                           },
                    "464":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of discontent, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -5873,7 +5873,7 @@ window.ROUND1_DATA = {
                            },
                    "373":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of serving the spirit spouse gods and inviting others to do the same, from a root of addiction and bondage.\r\n\r\nI agree that I made it more iâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -5907,7 +5907,7 @@ window.ROUND1_DATA = {
                            },
                    "317":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s position, from a root of covetousness and materialism.\r\n\r\nI agree that I madâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -5941,7 +5941,7 @@ window.ROUND1_DATA = {
                           },
                    "329":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of alcohol addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
-                               "sectionId":  "bondage",
+                               "sectionId":  "gluttony",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -5952,8 +5952,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "⬛Neglect and Lack of Stewardship"
                                           ],
-                               "principality":  "Bondage",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of alcohol addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that alcohol addiction with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Neglect and Lack of Stewardship with the parent Principality of Bondage \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve alcohol addiction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Gluttony",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of alcohol addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that alcohol addiction with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Neglect and Lack of Stewardship with the parent Principality of Gluttony \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve alcohol addiction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "⬛Neglect and Lack of Stewardship"
                            },
                    "608":  {
@@ -5995,7 +5995,7 @@ window.ROUND1_DATA = {
                            },
                    "556":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of spiritism, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -6029,7 +6029,7 @@ window.ROUND1_DATA = {
                            },
                    "496":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -6040,13 +6040,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of hatred with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of hatred. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of hatred with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of hatred. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "615":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lesbianism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -6066,7 +6066,7 @@ window.ROUND1_DATA = {
                            },
                    "330":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sex addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
-                               "sectionId":  "bondage",
+                               "sectionId":  "gluttony",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -6077,13 +6077,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "⬛Neglect and Lack of Stewardship"
                                           ],
-                               "principality":  "Bondage",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of sex addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that sex addiction with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Neglect and Lack of Stewardship with the parent Principality of Bondage \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve sex addiction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Gluttony",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of sex addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that sex addiction with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Neglect and Lack of Stewardship with the parent Principality of Gluttony \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve sex addiction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "⬛Neglect and Lack of Stewardship"
                            },
                    "369":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -6100,7 +6100,7 @@ window.ROUND1_DATA = {
                            },
                    "231":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture in times of war, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -6134,7 +6134,7 @@ window.ROUND1_DATA = {
                           },
                    "293":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Flattering For Gain, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -6205,7 +6205,7 @@ window.ROUND1_DATA = {
                            },
                    "284":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -6219,8 +6219,8 @@ window.ROUND1_DATA = {
                                               "Occultism and Counterfeit Spirituality",
                                               "Abuse and Exploitation of Others"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that anger with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anger and Violence with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve Anger. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Using",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that anger with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anger and Violence with the parent Principality of Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve Anger. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Anger and Violence, Sexual Corruption, Occultism and Counterfeit Spirituality, Abuse and Exploitation of Others"
                            },
                    "384":  {
@@ -6313,7 +6313,7 @@ window.ROUND1_DATA = {
                            },
                    "504":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of indifference, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -6347,7 +6347,7 @@ window.ROUND1_DATA = {
                            },
                    "439":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of over-religiousness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -6381,7 +6381,7 @@ window.ROUND1_DATA = {
                            },
                    "443":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -6398,7 +6398,7 @@ window.ROUND1_DATA = {
                            },
                    "393":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of obsession with failure, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -6415,7 +6415,7 @@ window.ROUND1_DATA = {
                            },
                    "507":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of insanity, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -6432,7 +6432,7 @@ window.ROUND1_DATA = {
                            },
                    "524":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of nightmares, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
-                               "sectionId":  "fear",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -6443,13 +6443,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Fear",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of nightmares, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of nightmares with the root of fear and insecurity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Fear \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of nightmares. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of nightmares, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of nightmares with the root of fear and insecurity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of nightmares. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "414":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of accusing thoughts about yourself, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -6466,7 +6466,7 @@ window.ROUND1_DATA = {
                            },
                    "447":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of apprehension, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -6483,7 +6483,7 @@ window.ROUND1_DATA = {
                            },
                    "280":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of walking in hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -6500,7 +6500,7 @@ window.ROUND1_DATA = {
                            },
                    "545":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of ritualism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -6554,7 +6554,7 @@ window.ROUND1_DATA = {
                            },
                    "543":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of retardation, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -6622,7 +6622,7 @@ window.ROUND1_DATA = {
                            },
                    "501":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hurt, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -6656,7 +6656,7 @@ window.ROUND1_DATA = {
                            },
                    "558":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of stoicism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -6673,7 +6673,7 @@ window.ROUND1_DATA = {
                            },
                    "565":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of tension, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -6829,7 +6829,7 @@ window.ROUND1_DATA = {
                            },
                    "297":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing others by words, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -6920,7 +6920,7 @@ window.ROUND1_DATA = {
                            },
                    "538":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of rebellion, from a root of control and rebellion is happening.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "control and rebellion is happening"
                                          ],
@@ -6991,7 +6991,7 @@ window.ROUND1_DATA = {
                            },
                    "594":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
-                               "sectionId":  "lies",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -7031,7 +7031,7 @@ window.ROUND1_DATA = {
                            },
                    "437":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of isolation, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -7068,7 +7068,7 @@ window.ROUND1_DATA = {
                            },
                    "403":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to binge eat, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -7085,7 +7085,7 @@ window.ROUND1_DATA = {
                            },
                    "515":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
-                               "sectionId":  "heaviness",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -7096,13 +7096,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Heaviness",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of loneliness with the root of loneliness and emotional brokenness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Heaviness \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of loneliness. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of loneliness with the root of loneliness and emotional brokenness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of loneliness. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "182":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -7138,7 +7138,7 @@ window.ROUND1_DATA = {
                           },
                    "454":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of compromise, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -7189,7 +7189,7 @@ window.ROUND1_DATA = {
                            },
                    "311":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for being lawless, from a root of control and rebellion.\r\n\r\nI agree that I made it more important tâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -7206,7 +7206,7 @@ window.ROUND1_DATA = {
                            },
                    "511":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of kleptomania, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -7223,7 +7223,7 @@ window.ROUND1_DATA = {
                            },
                    "221":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the sword, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -7277,7 +7277,7 @@ window.ROUND1_DATA = {
                           },
                    "449":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of backbiting, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -7311,7 +7311,7 @@ window.ROUND1_DATA = {
                            },
                    "283":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of ill-temper, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -7362,7 +7362,7 @@ window.ROUND1_DATA = {
                            },
                    "315":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s money, from a root of covetousness and materialism.\r\n\r\nI agree that I made iâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -7379,7 +7379,7 @@ window.ROUND1_DATA = {
                            },
                    "552":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sexual perversion, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -7396,7 +7396,7 @@ window.ROUND1_DATA = {
                            },
                    "225":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the gun, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -7413,7 +7413,7 @@ window.ROUND1_DATA = {
                            },
                    "396":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of False Expectations Appearing Real, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -7450,7 +7450,7 @@ window.ROUND1_DATA = {
                            },
                    "563":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of suspicion, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -7467,7 +7467,7 @@ window.ROUND1_DATA = {
                            },
                    "540":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of resentment, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -7518,7 +7518,7 @@ window.ROUND1_DATA = {
                            },
                    "498":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of heartbreak, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -7552,7 +7552,7 @@ window.ROUND1_DATA = {
                            },
                    "429":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of selfish thoughts, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -7603,7 +7603,7 @@ window.ROUND1_DATA = {
                            },
                    "485":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of failure, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -7637,7 +7637,7 @@ window.ROUND1_DATA = {
                           },
                    "500":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hopelessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God,â€¦",
-                               "sectionId":  "heaviness",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -7648,13 +7648,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Heaviness",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hopelessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of hopelessness with the root of loneliness and emotional brokenness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Heaviness \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of hopelessness. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hopelessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of hopelessness with the root of loneliness and emotional brokenness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of hopelessness. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "536":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of rape, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -7671,7 +7671,7 @@ window.ROUND1_DATA = {
                            },
                    "467":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of divination, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -7688,7 +7688,7 @@ window.ROUND1_DATA = {
                            },
                    "413":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sudden distrust in people who have given you no reason to distrust them, from a root of fear and insecurity.\r\n\r\nI agree that I made it moâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -7725,7 +7725,7 @@ window.ROUND1_DATA = {
                            },
                    "477":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of escapism, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -7759,7 +7759,7 @@ window.ROUND1_DATA = {
                            },
                    "532":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of possessiveness, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -7776,7 +7776,7 @@ window.ROUND1_DATA = {
                            },
                    "506":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of infirmity, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -7813,7 +7813,7 @@ window.ROUND1_DATA = {
                            },
                    "650":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sexual abuse, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Goâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -7884,7 +7884,7 @@ window.ROUND1_DATA = {
                            },
                    "362":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being polluted by the leaven of the Herodians, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God,â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -7901,7 +7901,7 @@ window.ROUND1_DATA = {
                            },
                    "409":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about illicit sex, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -7969,7 +7969,7 @@ window.ROUND1_DATA = {
                           },
                    "416":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive uncontrolled anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -7986,7 +7986,7 @@ window.ROUND1_DATA = {
                            },
                    "472":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doubt and unbelief, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -8020,7 +8020,7 @@ window.ROUND1_DATA = {
                           },
                    "547":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of schizophrenia, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -8054,7 +8054,7 @@ window.ROUND1_DATA = {
                            },
                    "332":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred itâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -8125,7 +8125,7 @@ window.ROUND1_DATA = {
                            },
                    "427":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts that I do not fit in anywhere, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -8213,7 +8213,7 @@ window.ROUND1_DATA = {
                           },
                    "295":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seeking revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -8230,7 +8230,7 @@ window.ROUND1_DATA = {
                            },
                    "423":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of excessive pride in work, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -8335,7 +8335,7 @@ window.ROUND1_DATA = {
                            },
                    "219":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the axe, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -8352,7 +8352,7 @@ window.ROUND1_DATA = {
                            },
                    "508":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of insomnia, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -8369,7 +8369,7 @@ window.ROUND1_DATA = {
                            },
                    "435":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of desire to pray, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -8403,7 +8403,7 @@ window.ROUND1_DATA = {
                            },
                    "517":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of mania, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -8420,7 +8420,7 @@ window.ROUND1_DATA = {
                            },
                    "573":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of worry, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -8437,7 +8437,7 @@ window.ROUND1_DATA = {
                            },
                    "456":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of contention, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -8448,8 +8448,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Using",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of contention, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of contention with the root of pride and self-exaltation; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of contention. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of contention, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of contention with the root of pride and self-exaltation; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of contention. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "260":  {
@@ -8488,7 +8488,7 @@ window.ROUND1_DATA = {
                            },
                    "513":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of legalism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -8505,7 +8505,7 @@ window.ROUND1_DATA = {
                            },
                    "223":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the arrow, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -8542,7 +8542,7 @@ window.ROUND1_DATA = {
                            },
                    "321":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s accomplishments, from a root of pride and self-exaltation.\r\n\r\nI agree that Iâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -8559,7 +8559,7 @@ window.ROUND1_DATA = {
                            },
                    "549":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of self-pity, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "heaviness",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -8610,7 +8610,7 @@ window.ROUND1_DATA = {
                           },
                    "301":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Human Trafficking, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -8695,7 +8695,7 @@ window.ROUND1_DATA = {
                            },
                    "325":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of needing the worship of others, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -8729,7 +8729,7 @@ window.ROUND1_DATA = {
                            },
                    "394":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of obsession with defeat, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -8763,7 +8763,7 @@ window.ROUND1_DATA = {
                           },
                    "550":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of senility, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -8780,7 +8780,7 @@ window.ROUND1_DATA = {
                            },
                    "604":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of fear, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -8874,7 +8874,7 @@ window.ROUND1_DATA = {
                            },
                    "619":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
-                               "sectionId":  "whoredom",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -8894,7 +8894,7 @@ window.ROUND1_DATA = {
                            },
                    "309":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for resisting man’s and God’s authority, from a root of control and rebellion.\r\n\r\nI agree that I maâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -8948,7 +8948,7 @@ window.ROUND1_DATA = {
                            },
                    "534":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of procrastination, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "slothfulness",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -8959,8 +8959,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Slothfulness",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of procrastination, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of procrastination with the root of control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Slothfulness \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of procrastination. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of procrastination, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of procrastination with the root of control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of procrastination. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "634":  {
@@ -8985,7 +8985,7 @@ window.ROUND1_DATA = {
                            },
                    "475":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of egotism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -9002,7 +9002,7 @@ window.ROUND1_DATA = {
                            },
                    "551":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sensitivity, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -9070,7 +9070,7 @@ window.ROUND1_DATA = {
                            },
                    "468":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doctrinal error, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -9087,7 +9087,7 @@ window.ROUND1_DATA = {
                            },
                    "568":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of unforgiveness, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -9121,7 +9121,7 @@ window.ROUND1_DATA = {
                           },
                    "458":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of criticism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -9172,7 +9172,7 @@ window.ROUND1_DATA = {
                            },
                    "292":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Reckless Speaking, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -9206,7 +9206,7 @@ window.ROUND1_DATA = {
                            },
                    "375":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using children as objects of lust, impurity, and lewdness in thoughts, words, and actions, from a root of addiction and bondage.\r\n\r\nI agrâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -9257,7 +9257,7 @@ window.ROUND1_DATA = {
                            },
                    "234":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of participation in acts of torture during the Inquisition, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it mâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -9274,7 +9274,7 @@ window.ROUND1_DATA = {
                            },
                    "285":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rage, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
-                               "sectionId":  "jealousy",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -9285,8 +9285,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "🟥Anger and Violence"
                                           ],
-                               "principality":  "Jealousy",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of rage, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that rage with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anger and Violence with the parent Principality of Jealousy \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve Rage. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Using",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of rage, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that rage with the root of bitterness and unforgiveness; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anger and Violence with the parent Principality of Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve Rage. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟥Anger and Violence"
                            },
                    "48":  {
@@ -9362,7 +9362,7 @@ window.ROUND1_DATA = {
                            },
                    "494":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of greed, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -9399,7 +9399,7 @@ window.ROUND1_DATA = {
                            },
                    "425":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rigidity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -9472,7 +9472,7 @@ window.ROUND1_DATA = {
                            },
                    "483":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of condemnation, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -9543,7 +9543,7 @@ window.ROUND1_DATA = {
                            },
                    "421":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of self-doubt, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -9577,7 +9577,7 @@ window.ROUND1_DATA = {
                            },
                    "523":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of nervousness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -9679,7 +9679,7 @@ window.ROUND1_DATA = {
                            },
                    "217":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture through hanging, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -9713,7 +9713,7 @@ window.ROUND1_DATA = {
                            },
                    "530":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of persecution, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -9764,7 +9764,7 @@ window.ROUND1_DATA = {
                          },
                    "519":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of mockery, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "haughtiness",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -9775,13 +9775,13 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Haughtiness",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of mockery, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of mockery with the root of pride and self-exaltation; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Haughtiness \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of mockery. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of mockery, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of mockery with the root of pride and self-exaltation; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of mockery. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "571":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of weary in well doing, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -9798,7 +9798,7 @@ window.ROUND1_DATA = {
                            },
                    "441":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of no transparency - believing that my problems are too big for anyone else, from a root of shame and false identity.\r\n\r\nI agree that I madeâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -9815,7 +9815,7 @@ window.ROUND1_DATA = {
                            },
                    "180":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing false doctrines, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -9832,7 +9832,7 @@ window.ROUND1_DATA = {
                            },
                    "488":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of reproof, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -9849,7 +9849,7 @@ window.ROUND1_DATA = {
                            },
                    "230":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -9866,7 +9866,7 @@ window.ROUND1_DATA = {
                            },
                    "323":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of idolizing one’s self, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -9900,7 +9900,7 @@ window.ROUND1_DATA = {
                           },
                    "181":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having multi-partner sex, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -9974,7 +9974,7 @@ window.ROUND1_DATA = {
                            },
                    "657":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of unbelief, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, â€¦",
-                               "sectionId":  "error",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -9994,7 +9994,7 @@ window.ROUND1_DATA = {
                            },
                    "307":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for stubbornly clinging to opinions and viewpoints, from a root of pride and self-exaltation.\r\n\r\nI â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -10062,7 +10062,7 @@ window.ROUND1_DATA = {
                            },
                    "432":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of beliefs that nothing will get better, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -10079,7 +10079,7 @@ window.ROUND1_DATA = {
                            },
                    "490":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of forgetfulness, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -10096,7 +10096,7 @@ window.ROUND1_DATA = {
                            },
                    "406":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to overdo whatever, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -10113,7 +10113,7 @@ window.ROUND1_DATA = {
                            },
                    "430":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thinking that others don’t care about me, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🩷shame and false identity"
                                          ],
@@ -10200,7 +10200,7 @@ window.ROUND1_DATA = {
                           },
                    "462":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of defeatism, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -10285,7 +10285,7 @@ window.ROUND1_DATA = {
                          },
                    "401":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of offense, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -10302,7 +10302,7 @@ window.ROUND1_DATA = {
                            },
                    "232":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture of captives, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -10319,7 +10319,7 @@ window.ROUND1_DATA = {
                            },
                    "566":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of timidity, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -10370,7 +10370,7 @@ window.ROUND1_DATA = {
                            },
                    "313":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s life, from a root of covetousness and materialism.\r\n\r\nI agree that I made itâ€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -10387,7 +10387,7 @@ window.ROUND1_DATA = {
                            },
                    "236":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of heartless destruction of life based on greed for power and wealth, from a root of covetousness and materialism.\r\n\r\nI agree thaâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -10441,7 +10441,7 @@ window.ROUND1_DATA = {
                            },
                    "533":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of pride, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -10492,7 +10492,7 @@ window.ROUND1_DATA = {
                            },
                    "398":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lying, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred iâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -10526,7 +10526,7 @@ window.ROUND1_DATA = {
                            },
                    "408":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of constant worry thoughts, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -10577,7 +10577,7 @@ window.ROUND1_DATA = {
                            },
                    "525":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of obesity, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -10594,7 +10594,7 @@ window.ROUND1_DATA = {
                            },
                    "415":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of accusing thoughts about others, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -10611,7 +10611,7 @@ window.ROUND1_DATA = {
                            },
                    "446":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
-                               "sectionId":  "fear",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -10622,8 +10622,8 @@ window.ROUND1_DATA = {
                                "fruits":  [
                                               "Destructive Identities Against God’s Image"
                                           ],
-                               "principality":  "Fear",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of anxiety with the root of fear and insecurity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Fear \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of anxiety. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "principality":  "Destructive",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that familiar identity of anxiety with the root of fear and insecurity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Identities Against God’s Image with the parent Principality of Destructive Identities Against God \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve familiar identity of anxiety. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "583":  {
@@ -10684,7 +10684,7 @@ window.ROUND1_DATA = {
                            },
                    "521":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of moonstruck, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⭕idolatry and person-worship"
                                          ],
@@ -10718,7 +10718,7 @@ window.ROUND1_DATA = {
                            },
                    "411":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about compulsion to view pornography, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -10735,7 +10735,7 @@ window.ROUND1_DATA = {
                            },
                    "479":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fatigue, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -10752,7 +10752,7 @@ window.ROUND1_DATA = {
                            },
                    "363":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in fornication, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -10803,7 +10803,7 @@ window.ROUND1_DATA = {
                            },
                    "184":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of polygamy, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -10854,7 +10854,7 @@ window.ROUND1_DATA = {
                            },
                    "364":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -10922,7 +10922,7 @@ window.ROUND1_DATA = {
                            },
                    "460":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of death, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -10939,7 +10939,7 @@ window.ROUND1_DATA = {
                            },
                    "294":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being resentful, envious and jealous of another’s life and blessings, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I madeâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -10990,7 +10990,7 @@ window.ROUND1_DATA = {
                           },
                    "541":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of restlessness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟠fear and insecurity"
                                          ],
@@ -11024,7 +11024,7 @@ window.ROUND1_DATA = {
                            },
                    "238":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of slave trading, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -11058,7 +11058,7 @@ window.ROUND1_DATA = {
                           },
                    "289":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Willfully Separating Self from God and Men, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "using",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -11075,7 +11075,7 @@ window.ROUND1_DATA = {
                            },
                    "639":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pride, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -11132,7 +11132,7 @@ window.ROUND1_DATA = {
                           },
                    "623":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of masturbation, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than Gâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -11169,7 +11169,7 @@ window.ROUND1_DATA = {
                           },
                    "597":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of disobedience, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🔵control and rebellion"
                                          ],
@@ -11206,7 +11206,7 @@ window.ROUND1_DATA = {
                            },
                    "400":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of discord, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -11223,7 +11223,7 @@ window.ROUND1_DATA = {
                            },
                    "434":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of desire to read the Word of God, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, lâ€¦",
-                               "sectionId":  "destructive-attitudes-against-god-s-image",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟡unbelief and distrust of god"
                                          ],
@@ -11277,7 +11277,7 @@ window.ROUND1_DATA = {
                            },
                    "492":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of gluttony, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -11311,7 +11311,7 @@ window.ROUND1_DATA = {
                            },
                    "378":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in masochism, sadism, and wicked imaginations, from a root of deception and falsehood.\r\n\r\nI agree that I made it more imporâ€¦",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "sexual",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -11382,7 +11382,7 @@ window.ROUND1_DATA = {
                           },
                    "448":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of arguing, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
@@ -11467,7 +11467,7 @@ window.ROUND1_DATA = {
                            },
                    "314":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s spouse, from a root of covetousness and materialism.\r\n\r\nI agree that I made â€¦",
-                               "sectionId":  "trading-floor-transactions-with-demons",
+                               "sectionId":  "trading",
                                "roots":  [
                                              "⚫covetousness and materialism"
                                          ],
@@ -11484,7 +11484,7 @@ window.ROUND1_DATA = {
                            },
                    "224":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the rifle, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
-                               "sectionId":  "shedding-of-innocent-blood",
+                               "sectionId":  "shedding",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
@@ -11589,7 +11589,7 @@ window.ROUND1_DATA = {
                            },
                    "499":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of heaviness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loâ€¦",
-                               "sectionId":  "destructive-identities-against-god",
+                               "sectionId":  "destructive",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
@@ -11606,7 +11606,7 @@ window.ROUND1_DATA = {
                            },
                    "618":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important tâ€¦",
-                               "sectionId":  "heaviness",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "🟤loneliness and emotional brokenness"
                                          ],
