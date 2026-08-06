@@ -39,7 +39,6 @@ function Normalize-Principality([string]$name) {
         'Spirit of Heaviness' = 'Heaviness'
         'Spirit of Anti-Christ' = 'Anti-Christ'
         'Deaf' = 'Deaf & Dumb'
-        'Perversion' = 'Sexual Perversion'
         'Spirit Spouse' = 'Spirit Spouse Gods'
         'Destructive Attitudes Against God' = "Destructive Attitudes Against God$([char]0x2019)s Image"
         'Destructive Identities Against God' = 'Destructive Identities Against God'
@@ -53,10 +52,11 @@ function Resolve-MembershipPrincipality([string]$header) {
     if ($clean -match '^\[(.+)\]$') { $clean = $Matches[1].Trim() }
     $clean = ($clean -replace '^(?i)PRINCIPALITY OF\s+', '').Trim()
     $clean = ($clean -replace '^(?i)SPIRIT OF\s+', '').Trim()
-    if ((Slugify $clean) -eq 'perversion') { return 'Sexual Perversion' }
+    if ((Slugify $clean) -eq 'perversion') { return 'Perversion' }
+    if ((Slugify $clean) -eq 'sexual-perversion') { return 'Sexual Perversion' }
     $known = @(
         'Jealousy', 'Slothfulness', 'Haughtiness', 'Lies', 'Bondage', 'Idolatry', 'Error',
-        'Fear', 'Divination', 'Heaviness', 'Anti-Christ', 'Deaf & Dumb', 'Sexual Perversion',
+        'Fear', 'Divination', 'Heaviness', 'Anti-Christ', 'Deaf & Dumb', 'Perversion', 'Sexual Perversion',
         'Whoredom', 'Infirmity', 'Shedding of Innocent Blood', 'Treachery Against Others',
         'Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally',
         'Trading Floor Transactions with Demons', 'Gluttony', 'Self-Righteousness',
