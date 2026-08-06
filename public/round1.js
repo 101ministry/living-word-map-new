@@ -41,8 +41,6 @@
     topicNum: document.getElementById('round1-topic-num'),
     topicTitle: document.getElementById('round1-topic-title'),
     topicMeta: document.getElementById('round1-topic-meta'),
-    topicVideoWrap: document.getElementById('round1-topic-video-wrap'),
-    topicVideoLink: document.getElementById('round1-topic-video'),
     prayerText: document.getElementById('round1-prayer-text'),
     prayerScroll: document.getElementById('round1-prayer-scroll'),
     heartDialog: document.getElementById('round1-heart-dialog'),
@@ -117,39 +115,20 @@
       .replace(/"/g, '&quot;');
   }
 
-  function topicVideoEntry(num) {
-    return window.VIDEO_DATA?.topicIndex?.[String(num)] || null;
-  }
-
-  function topicYoutubeUrl(num) {
-    const entry = topicVideoEntry(num);
-    if (!entry?.youtubeId) return null;
-    const base = `https://www.youtube.com/watch?v=${entry.youtubeId}`;
-    const start = Number(entry.startSeconds);
-    if (Number.isFinite(start) && start > 0) {
-      return `${base}&t=${Math.floor(start)}s`;
-    }
-    return base;
-  }
-
-  function topicVideoLabel(entry) {
-    if (!entry?.day) return 'Watch on YouTube';
-    const part = entry.part > 1 ? ` Part ${entry.part}` : '';
-    return `Watch on YouTube (Day ${entry.day}${part})`;
-  }
-
-  function renderTopicVideoLink(num, wrapEl, linkEl) {
-    if (!wrapEl || !linkEl) return;
-    const entry = topicVideoEntry(num);
-    const url = topicYoutubeUrl(num);
-    if (url) {
-      linkEl.href = url;
-      linkEl.textContent = topicVideoLabel(entry);
-      wrapEl.classList.remove('hidden');
-    } else {
-      wrapEl.classList.add('hidden');
-      linkEl.removeAttribute('href');
-    }
+  function createOverviewCard(t) {
+    const card = document.createElement('div');
+    card.className = 'round2-overview-card';
+    card.innerHTML = `
+      <span class="round2-overview-num">${pad(t.number)}</span>
+      <div>
+        <p class="round2-overview-title">${escapeHtml(t.label)}</p>
+        ${t.round1Preview ? `<p class="round2-overview-snippet">${escapeHtml(t.round1Preview)}</p>` : ''}
+        <div class="round2-snapshot-tags">
+          ${t.root ? `<span class="round2-tag root">Root: ${escapeHtml(t.root)}</span>` : ''}
+          ${t.fruitDisplay ? `<span class="round2-tag fruit">Fruit: ${escapeHtml(t.fruitDisplay)}</span>` : ''}
+        </div>
+      </div>`;
+    return card;
   }
 
   function firstTopicOfSection(sectionId) {
@@ -169,28 +148,6 @@
     const complete = isSectionComplete(sectionId);
     el.classList.toggle('done', complete);
     el.textContent = complete ? '✅' : '☐';
-  }
-
-  function createOverviewCard(t) {
-    const card = document.createElement('div');
-    card.className = 'round2-overview-card';
-    const videoUrl = topicYoutubeUrl(t.number);
-    const videoEntry = topicVideoEntry(t.number);
-    const videoLinkHtml = videoUrl
-      ? `<a class="round2-overview-video-link" href="${escapeHtml(videoUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(topicVideoLabel(videoEntry))}</a>`
-      : '';
-    card.innerHTML = `
-      <span class="round2-overview-num">${pad(t.number)}</span>
-      <div>
-        <p class="round2-overview-title">${escapeHtml(t.label)}</p>
-        ${videoLinkHtml}
-        ${t.round1Preview ? `<p class="round2-overview-snippet">${escapeHtml(t.round1Preview)}</p>` : ''}
-        <div class="round2-snapshot-tags">
-          ${t.root ? `<span class="round2-tag root">Root: ${escapeHtml(t.root)}</span>` : ''}
-          ${t.fruitDisplay ? `<span class="round2-tag fruit">Fruit: ${escapeHtml(t.fruitDisplay)}</span>` : ''}
-        </div>
-      </div>`;
-    return card;
   }
 
   function buildOverview(onDone) {
@@ -355,8 +312,6 @@
       els.topicNum.textContent = pad(num);
       els.topicTitle.textContent = 'Topic not found';
       els.topicMeta.textContent = '';
-      els.topicVideoWrap?.classList.add('hidden');
-      els.topicVideoLink?.removeAttribute('href');
       els.prayerText.textContent = 'Prayer text missing for this topic. Re-run scripts/build-round1-web.ps1.';
       return;
     }
@@ -368,7 +323,6 @@
     if (t.fruitDisplay) metaParts.push(`Fruit: ${t.fruitDisplay}`);
     if (t.principality) metaParts.push(`Principality: ${t.principality}`);
     els.topicMeta.textContent = metaParts.join(' · ');
-    renderTopicVideoLink(t.number, els.topicVideoWrap, els.topicVideoLink);
     els.prayerText.textContent = t.round1Text || '(No Round 1 prayer text.)';
     els.progress.textContent = `Topic ${t.number} / ${DATA.topicCount}`;
 
