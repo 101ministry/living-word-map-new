@@ -32,10 +32,7 @@
   const els = {
     phaseLabel: document.getElementById('round1-phase-label'),
     progress: document.getElementById('round1-progress'),
-    phaseOverview: document.getElementById('phase-overview'),
     phasePrayers: document.getElementById('phase-prayers'),
-    gateYes: document.getElementById('round1-gate-yes'),
-    gateNo: document.getElementById('round1-gate-no'),
     sidebarSections: document.getElementById('round1-sidebar-sections'),
     topicNum: document.getElementById('round1-topic-num'),
     topicTitle: document.getElementById('round1-topic-title'),
@@ -49,11 +46,6 @@
   };
 
   const state = loadState();
-  const entryFromMap = new URLSearchParams(window.location.search).get('from') === 'map';
-  if (entryFromMap) {
-    state.phase = 'overview';
-    saveState();
-  }
 
   let pendingHeartCheck = false;
   let pendingNavigation = null;
@@ -68,6 +60,7 @@
         const parsed = JSON.parse(raw);
         const merged = { ...defaultState(), ...parsed, heartAnswered: parsed.heartAnswered || [] };
         merged.currentTopic = clampTopic(merged.currentTopic);
+        merged.phase = 'prayers';
         return merged;
       }
     } catch { /* ignore */ }
@@ -76,7 +69,7 @@
 
   function defaultState() {
     return {
-      phase: 'overview',
+      phase: 'prayers',
       currentTopic: 1,
       visited: [],
       heartYes: [],
@@ -201,24 +194,13 @@
     requestAnimationFrame(renderBatch);
   }
 
-  function setPhase(phase) {
-    state.phase = phase;
+  function startPrayers() {
+    state.phase = 'prayers';
     saveState();
-    const isOverview = phase === 'overview';
-    const isPrayers = phase === 'prayers';
-    els.phaseOverview.classList.toggle('hidden', !isOverview);
-    els.phasePrayers.classList.toggle('hidden', !isPrayers);
-    els.phaseLabel.textContent = isOverview ? 'Round 1' : 'Round 1 · personal confession';
-    document.body.classList.toggle('round2-active', isPrayers);
-    if (isOverview) {
-      els.progress.textContent = `${DATA.topicCount} topics`;
-    }
-    if (isPrayers) {
-      pendingNavigation = null;
-      closeHeartDialog();
-      renderCurrentTopic();
-      buildSidebar();
-    }
+    pendingNavigation = null;
+    closeHeartDialog();
+    renderCurrentTopic();
+    buildSidebar();
   }
 
   function refreshSidebarMarks() {
@@ -395,9 +377,6 @@
     saveState();
   }
 
-  els.gateYes.addEventListener('click', () => setPhase('prayers'));
-  els.gateNo.addEventListener('click', () => { window.location.href = 'index.html'; });
-
   els.heartYes.addEventListener('click', () => advanceAfterHeart(true));
   els.heartNo.addEventListener('click', () => advanceAfterHeart(false));
   els.heartDismiss.addEventListener('click', () => dismissHeartDialogOnly());
@@ -419,11 +398,7 @@
   window.addEventListener('focus', () => handleCalReturn());
 
   try {
-    if (state.phase === 'prayers' && !entryFromMap) {
-      setPhase('prayers');
-    } else {
-      setPhase('overview');
-    }
+    startPrayers();
   } catch (err) {
     showFatalError(`Round 1 failed to initialize: ${err.message}`);
     console.error(err);

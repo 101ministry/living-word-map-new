@@ -10,33 +10,20 @@
   <link rel="stylesheet" href="styles.css?v=18" />
   <link rel="stylesheet" href="round2.css?v=9" />
 </head>
-<body class="round2-body">
+<body class="round2-body round2-active">
   <div id="round1-app">
     <header class="round2-header">
-      <a href="index.html" class="round2-back-link">← Living Word Map</a>
+      <a href="index.html" class="round2-back-link">← Back to map</a>
       <div class="round2-header-brand">
         <h1>Personal Prayers · Round 1</h1>
-        <p id="round1-phase-label" class="round2-phase-label">Round 1</p>
+        <p id="round1-phase-label" class="round2-phase-label">Round 1 · personal confession</p>
       </div>
       <div class="round2-header-meta">
         <span id="round1-progress">Loading…</span>
       </div>
     </header>
 
-    <section id="phase-overview" class="round2-phase round1-entry" aria-label="Ready for Round 1">
-      <div class="round2-overview-intro round1-entry-intro">
-        <p>When you are ready, begin personal confession prayer. Use the topic list in the sidebar to move through each prayer.</p>
-      </div>
-      <div id="round1-gate" class="round2-gate round1-entry-gate" role="region" aria-label="Ready for Round 1">
-        <p class="round2-gate-text">Ready to begin Round 1 prayers?</p>
-        <div class="round2-gate-actions">
-          <button type="button" id="round1-gate-yes" class="btn-accent">Yes</button>
-          <button type="button" id="round1-gate-no" class="round2-btn-ghost">No — back to map</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="phase-prayers" class="round2-phase hidden" aria-label="Round 1 prayers">
+    <section id="phase-prayers" class="round2-phase" aria-label="Round 1 prayers">
       <div class="round2-layout">
         <article class="round2-prayer-panel">
           <header class="round2-prayer-header">
@@ -71,6 +58,6 @@
   </div>
 
   <script src="round1-data.js?v=4"></script>
-  <script src="round1.js?v=5"></script>
+  <script src="round1.js?v=6"></script>
 </body>
 </html>
