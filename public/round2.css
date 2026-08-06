@@ -441,6 +441,32 @@
   display: none;
 }
 
+/* Round 1 entry — gate only; no scrollable topic preview list (that is Round 2). */
+#round1-app #phase-overview.round1-entry {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 2rem 1.25rem 3rem;
+}
+
+#round1-app .round1-entry-intro {
+  max-width: 36rem;
+  text-align: center;
+  padding: 0;
+}
+
+#round1-app .round1-entry-gate {
+  position: static;
+  border-top: none;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  max-width: 36rem;
+  width: 100%;
+}
+
 .round2-sidebar-topic-label {
   word-break: break-word;
 }

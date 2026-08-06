@@ -36,7 +36,6 @@
     phasePrayers: document.getElementById('phase-prayers'),
     gateYes: document.getElementById('round1-gate-yes'),
     gateNo: document.getElementById('round1-gate-no'),
-    overviewSections: document.getElementById('round1-overview-sections'),
     sidebarSections: document.getElementById('round1-sidebar-sections'),
     topicNum: document.getElementById('round1-topic-num'),
     topicTitle: document.getElementById('round1-topic-title'),
@@ -115,22 +114,6 @@
       .replace(/"/g, '&quot;');
   }
 
-  function createOverviewCard(t) {
-    const card = document.createElement('div');
-    card.className = 'round2-overview-card';
-    card.innerHTML = `
-      <span class="round2-overview-num">${pad(t.number)}</span>
-      <div>
-        <p class="round2-overview-title">${escapeHtml(t.label)}</p>
-        ${t.round1Preview ? `<p class="round2-overview-snippet">${escapeHtml(t.round1Preview)}</p>` : ''}
-        <div class="round2-snapshot-tags">
-          ${t.root ? `<span class="round2-tag root">Root: ${escapeHtml(t.root)}</span>` : ''}
-          ${t.fruitDisplay ? `<span class="round2-tag fruit">Fruit: ${escapeHtml(t.fruitDisplay)}</span>` : ''}
-        </div>
-      </div>`;
-    return card;
-  }
-
   function firstTopicOfSection(sectionId) {
     const sec = DATA.sections.find(s => s.id === sectionId);
     if (!sec?.topics?.length) return 1;
@@ -148,55 +131,6 @@
     const complete = isSectionComplete(sectionId);
     el.classList.toggle('done', complete);
     el.textContent = complete ? '✅' : '☐';
-  }
-
-  function buildOverview(onDone) {
-    els.overviewSections.innerHTML = '';
-    const sections = DATA.sections;
-    let sectionIdx = 0;
-    let topicIdx = 0;
-    let wrap = null;
-    let sorted = null;
-    const BATCH = 30;
-
-    function renderBatch() {
-      let count = 0;
-      while (sectionIdx < sections.length && count < BATCH) {
-        const section = sections[sectionIdx];
-        if (!wrap) {
-          wrap = document.createElement('div');
-          wrap.className = 'round2-overview-section';
-          const h = document.createElement('h3');
-          h.textContent = section.name;
-          wrap.appendChild(h);
-          sorted = [...section.topics].sort((a, b) => a.number - b.number);
-          topicIdx = 0;
-        }
-
-        while (topicIdx < sorted.length && count < BATCH) {
-          const item = sorted[topicIdx++];
-          const t = topicData(item.number);
-          if (t) {
-            wrap.appendChild(createOverviewCard(t));
-            count += 1;
-          }
-        }
-
-        if (topicIdx >= sorted.length) {
-          els.overviewSections.appendChild(wrap);
-          wrap = null;
-          sectionIdx += 1;
-        }
-      }
-
-      if (sectionIdx < sections.length) {
-        requestAnimationFrame(renderBatch);
-      } else if (typeof onDone === 'function') {
-        onDone();
-      }
-    }
-
-    requestAnimationFrame(renderBatch);
   }
 
   function buildSidebar(onDone) {
@@ -274,10 +208,10 @@
     const isPrayers = phase === 'prayers';
     els.phaseOverview.classList.toggle('hidden', !isOverview);
     els.phasePrayers.classList.toggle('hidden', !isPrayers);
-    els.phaseLabel.textContent = isOverview ? 'Topic overview' : 'Round 1 · personal confession';
+    els.phaseLabel.textContent = isOverview ? 'Round 1' : 'Round 1 · personal confession';
     document.body.classList.toggle('round2-active', isPrayers);
     if (isOverview) {
-      els.progress.textContent = `${DATA.topicCount} topics · review`;
+      els.progress.textContent = `${DATA.topicCount} topics`;
     }
     if (isPrayers) {
       pendingNavigation = null;
@@ -489,7 +423,6 @@
       setPhase('prayers');
     } else {
       setPhase('overview');
-      buildOverview();
     }
   } catch (err) {
     showFatalError(`Round 1 failed to initialize: ${err.message}`);
