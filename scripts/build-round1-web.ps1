@@ -251,6 +251,8 @@ for ($n = 1; $n -le 666; $n++) {
 
 $payload = @{
     version = 1
+    calLink = 'https://cal.com/repentance101/introductions-from-repentance-to-you'
+    calReturnMinutes = 2
     topicCount = 666
     order = $order
     sections = @($sections)

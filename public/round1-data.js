@@ -1,4 +1,2855 @@
 window.ROUND1_DATA = {
+    "sections":  [
+                     {
+                         "firstTopic":  1,
+                         "name":  "Jealousy",
+                         "id":  "jealousy",
+                         "topics":  [
+                                        {
+                                            "number":  1,
+                                            "label":  "Anger"
+                                        },
+                                        {
+                                            "number":  2,
+                                            "label":  "Wrath"
+                                        },
+                                        {
+                                            "number":  3,
+                                            "label":  "Rage"
+                                        },
+                                        {
+                                            "number":  4,
+                                            "label":  "Hatred"
+                                        },
+                                        {
+                                            "number":  5,
+                                            "label":  "Murder"
+                                        },
+                                        {
+                                            "number":  6,
+                                            "label":  "Covetousness"
+                                        },
+                                        {
+                                            "number":  7,
+                                            "label":  "Cruelty"
+                                        },
+                                        {
+                                            "number":  8,
+                                            "label":  "Divorce"
+                                        },
+                                        {
+                                            "number":  9,
+                                            "label":  "Division"
+                                        },
+                                        {
+                                            "number":  10,
+                                            "label":  "Feelings That God Loves Others More Than Me"
+                                        },
+                                        {
+                                            "number":  11,
+                                            "label":  "Jealousy"
+                                        },
+                                        {
+                                            "number":  12,
+                                            "label":  "Insecurity"
+                                        },
+                                        {
+                                            "number":  13,
+                                            "label":  "Revenge"
+                                        },
+                                        {
+                                            "number":  14,
+                                            "label":  "Self-centeredness"
+                                        },
+                                        {
+                                            "number":  15,
+                                            "label":  "Suspicious Attitude"
+                                        },
+                                        {
+                                            "number":  16,
+                                            "label":  "Unnatural Competitiveness"
+                                        },
+                                        {
+                                            "number":  284,
+                                            "label":  "Anger"
+                                        },
+                                        {
+                                            "number":  285,
+                                            "label":  "Rage"
+                                        },
+                                        {
+                                            "number":  444,
+                                            "label":  "Familiar Identity Of Anger"
+                                        },
+                                        {
+                                            "number":  459,
+                                            "label":  "Familiar Identity Of Cruelty"
+                                        },
+                                        {
+                                            "number":  496,
+                                            "label":  "Familiar Identity Of Hatred"
+                                        },
+                                        {
+                                            "number":  510,
+                                            "label":  "Familiar Identity Of Jealousy"
+                                        },
+                                        {
+                                            "number":  522,
+                                            "label":  "Familiar Identity Of Murder"
+                                        },
+                                        {
+                                            "number":  544,
+                                            "label":  "Familiar Identity Of Revenge"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  17,
+                         "name":  "Slothfulness",
+                         "id":  "slothfulness",
+                         "topics":  [
+                                        {
+                                            "number":  17,
+                                            "label":  "Constant Fatigue"
+                                        },
+                                        {
+                                            "number":  18,
+                                            "label":  "Drawing Back From Life"
+                                        },
+                                        {
+                                            "number":  19,
+                                            "label":  "Passivity"
+                                        },
+                                        {
+                                            "number":  20,
+                                            "label":  "Procrastination"
+                                        },
+                                        {
+                                            "number":  21,
+                                            "label":  "Blocked Success"
+                                        },
+                                        {
+                                            "number":  22,
+                                            "label":  "Wishing I Were Not Born"
+                                        },
+                                        {
+                                            "number":  529,
+                                            "label":  "Familiar Identity Of Passivity"
+                                        },
+                                        {
+                                            "number":  534,
+                                            "label":  "Familiar Identity Of Procrastination"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  23,
+                         "name":  "Haughtiness",
+                         "id":  "haughtiness",
+                         "topics":  [
+                                        {
+                                            "number":  23,
+                                            "label":  "Arrogance"
+                                        },
+                                        {
+                                            "number":  24,
+                                            "label":  "Being Boastful"
+                                        },
+                                        {
+                                            "number":  25,
+                                            "label":  "Being Proud"
+                                        },
+                                        {
+                                            "number":  26,
+                                            "label":  "Being Contentious"
+                                        },
+                                        {
+                                            "number":  27,
+                                            "label":  "Being Controlling"
+                                        },
+                                        {
+                                            "number":  28,
+                                            "label":  "Being Domineering"
+                                        },
+                                        {
+                                            "number":  29,
+                                            "label":  "Being Critical"
+                                        },
+                                        {
+                                            "number":  30,
+                                            "label":  "Being Judgmental"
+                                        },
+                                        {
+                                            "number":  31,
+                                            "label":  "Being Dictatorlike"
+                                        },
+                                        {
+                                            "number":  32,
+                                            "label":  "Offense"
+                                        },
+                                        {
+                                            "number":  33,
+                                            "label":  "Being Offensive"
+                                        },
+                                        {
+                                            "number":  34,
+                                            "label":  "Gossiping"
+                                        },
+                                        {
+                                            "number":  35,
+                                            "label":  "Being Prejudice"
+                                        },
+                                        {
+                                            "number":  36,
+                                            "label":  "Mockery"
+                                        },
+                                        {
+                                            "number":  37,
+                                            "label":  "Rudeness"
+                                        },
+                                        {
+                                            "number":  38,
+                                            "label":  "Self-righteous Complex"
+                                        },
+                                        {
+                                            "number":  39,
+                                            "label":  "Superiority Complex"
+                                        },
+                                        {
+                                            "number":  40,
+                                            "label":  "Being Vain"
+                                        },
+                                        {
+                                            "number":  519,
+                                            "label":  "Familiar Identity Of Mockery"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  41,
+                         "name":  "Lies",
+                         "id":  "lies",
+                         "topics":  [
+                                        {
+                                            "number":  41,
+                                            "label":  "Thievery"
+                                        },
+                                        {
+                                            "number":  42,
+                                            "label":  "Condemnation"
+                                        },
+                                        {
+                                            "number":  43,
+                                            "label":  "Deception"
+                                        },
+                                        {
+                                            "number":  44,
+                                            "label":  "Exaggeration"
+                                        },
+                                        {
+                                            "number":  45,
+                                            "label":  "Feeling Like a Hypocrite"
+                                        },
+                                        {
+                                            "number":  46,
+                                            "label":  "Lying From Time To Time"
+                                        },
+                                        {
+                                            "number":  47,
+                                            "label":  "Lying Habitually"
+                                        },
+                                        {
+                                            "number":  48,
+                                            "label":  "Feeling Like I\u0027ll Never Get Married"
+                                        },
+                                        {
+                                            "number":  49,
+                                            "label":  "Feeling Like No One Wants Me"
+                                        },
+                                        {
+                                            "number":  50,
+                                            "label":  "Being Obese"
+                                        },
+                                        {
+                                            "number":  51,
+                                            "label":  "Being Overweight"
+                                        },
+                                        {
+                                            "number":  52,
+                                            "label":  "Using Profanity"
+                                        },
+                                        {
+                                            "number":  53,
+                                            "label":  "A Poor Self Image"
+                                        },
+                                        {
+                                            "number":  54,
+                                            "label":  "Thinking I\u0027m Ugly"
+                                        },
+                                        {
+                                            "number":  55,
+                                            "label":  "Thinking I Can\u0027t Change"
+                                        },
+                                        {
+                                            "number":  56,
+                                            "label":  "Having Vain Imaginations"
+                                        },
+                                        {
+                                            "number":  57,
+                                            "label":  "Feeling Worthless"
+                                        },
+                                        {
+                                            "number":  392,
+                                            "label":  "Condemnation"
+                                        },
+                                        {
+                                            "number":  461,
+                                            "label":  "Familiar Identity Of Deception"
+                                        },
+                                        {
+                                            "number":  594,
+                                            "label":  "Spirit Of Deception"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  58,
+                         "name":  "Bondage",
+                         "id":  "bondage",
+                         "topics":  [
+                                        {
+                                            "number":  58,
+                                            "label":  "Being Co-dependent"
+                                        },
+                                        {
+                                            "number":  59,
+                                            "label":  "Being A Workaholic"
+                                        },
+                                        {
+                                            "number":  60,
+                                            "label":  "Alcohol Addiction"
+                                        },
+                                        {
+                                            "number":  61,
+                                            "label":  "Gambling Addiction"
+                                        },
+                                        {
+                                            "number":  62,
+                                            "label":  "Tobacco Addiction"
+                                        },
+                                        {
+                                            "number":  63,
+                                            "label":  "Drug Addiction"
+                                        },
+                                        {
+                                            "number":  64,
+                                            "label":  "Marijuana Or CBD Addiction"
+                                        },
+                                        {
+                                            "number":  65,
+                                            "label":  "Food Addiction"
+                                        },
+                                        {
+                                            "number":  66,
+                                            "label":  "Video Game Addiction"
+                                        },
+                                        {
+                                            "number":  67,
+                                            "label":  "Sex Addiction"
+                                        },
+                                        {
+                                            "number":  68,
+                                            "label":  "Computer Addiction"
+                                        },
+                                        {
+                                            "number":  69,
+                                            "label":  "Social Media"
+                                        },
+                                        {
+                                            "number":  70,
+                                            "label":  "Other Addictions"
+                                        },
+                                        {
+                                            "number":  329,
+                                            "label":  "Alcohol Addiction"
+                                        },
+                                        {
+                                            "number":  330,
+                                            "label":  "Sex Addiction"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  71,
+                         "name":  "Idolatry",
+                         "id":  "idolatry",
+                         "topics":  [
+                                        {
+                                            "number":  71,
+                                            "label":  "Love Of Money"
+                                        },
+                                        {
+                                            "number":  72,
+                                            "label":  "Love Of Possessions"
+                                        },
+                                        {
+                                            "number":  73,
+                                            "label":  "Love Of Position"
+                                        },
+                                        {
+                                            "number":  74,
+                                            "label":  "Love Of Power"
+                                        },
+                                        {
+                                            "number":  75,
+                                            "label":  "Worshiping Things Other Than God"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  76,
+                         "name":  "Error",
+                         "id":  "error",
+                         "topics":  [
+                                        {
+                                            "number":  76,
+                                            "label":  "Anorexia"
+                                        },
+                                        {
+                                            "number":  77,
+                                            "label":  "Bulimia"
+                                        },
+                                        {
+                                            "number":  78,
+                                            "label":  "Compromising On My Convictions"
+                                        },
+                                        {
+                                            "number":  79,
+                                            "label":  "Confusion"
+                                        },
+                                        {
+                                            "number":  80,
+                                            "label":  "Continually Making Bad Decisions"
+                                        },
+                                        {
+                                            "number":  81,
+                                            "label":  "Believing Cultic Or False Teachers"
+                                        },
+                                        {
+                                            "number":  82,
+                                            "label":  "Doubt"
+                                        },
+                                        {
+                                            "number":  83,
+                                            "label":  "Unbelief"
+                                        },
+                                        {
+                                            "number":  84,
+                                            "label":  "Being Irresponsible"
+                                        },
+                                        {
+                                            "number":  85,
+                                            "label":  "Inappropriate Thinking"
+                                        },
+                                        {
+                                            "number":  86,
+                                            "label":  "Inappropriate Behavior"
+                                        },
+                                        {
+                                            "number":  391,
+                                            "label":  "Doubt"
+                                        },
+                                        {
+                                            "number":  657,
+                                            "label":  "Spirit Of Unbelief"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  87,
+                         "name":  "Fear",
+                         "id":  "fear",
+                         "topics":  [
+                                        {
+                                            "number":  87,
+                                            "label":  "Feelings Of Abandonment"
+                                        },
+                                        {
+                                            "number":  88,
+                                            "label":  "Anxiety"
+                                        },
+                                        {
+                                            "number":  89,
+                                            "label":  "Lack Of Faith"
+                                        },
+                                        {
+                                            "number":  90,
+                                            "label":  "Fear Of Death"
+                                        },
+                                        {
+                                            "number":  91,
+                                            "label":  "Fear Of Success"
+                                        },
+                                        {
+                                            "number":  92,
+                                            "label":  "Fear Of Men"
+                                        },
+                                        {
+                                            "number":  93,
+                                            "label":  "Fear Of Women"
+                                        },
+                                        {
+                                            "number":  94,
+                                            "label":  "Fear Of Poverty"
+                                        },
+                                        {
+                                            "number":  95,
+                                            "label":  "Feelings That I Have Been Rejected"
+                                        },
+                                        {
+                                            "number":  96,
+                                            "label":  "Fear Of Rejection"
+                                        },
+                                        {
+                                            "number":  97,
+                                            "label":  "Fear Of Authority"
+                                        },
+                                        {
+                                            "number":  98,
+                                            "label":  "Feeling Unable To Perform Properly"
+                                        },
+                                        {
+                                            "number":  99,
+                                            "label":  "Feelings Of Inferiority"
+                                        },
+                                        {
+                                            "number":  100,
+                                            "label":  "Nightmares"
+                                        },
+                                        {
+                                            "number":  101,
+                                            "label":  "Phobias"
+                                        },
+                                        {
+                                            "number":  102,
+                                            "label":  "Self-rejection"
+                                        },
+                                        {
+                                            "number":  103,
+                                            "label":  "Being Shy Or Timid"
+                                        },
+                                        {
+                                            "number":  104,
+                                            "label":  "Feelings Of Stress"
+                                        },
+                                        {
+                                            "number":  105,
+                                            "label":  "Feelings Of Tension"
+                                        },
+                                        {
+                                            "number":  106,
+                                            "label":  "Being Tormented"
+                                        },
+                                        {
+                                            "number":  107,
+                                            "label":  "Feeling Tormented"
+                                        },
+                                        {
+                                            "number":  446,
+                                            "label":  "Familiar Identity Of Anxiety"
+                                        },
+                                        {
+                                            "number":  524,
+                                            "label":  "Familiar Identity Of Nightmares"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  108,
+                         "name":  "Divination",
+                         "id":  "divination",
+                         "topics":  [
+                                        {
+                                            "number":  108,
+                                            "label":  "Astrology"
+                                        },
+                                        {
+                                            "number":  109,
+                                            "label":  "Having Gone To A Medium"
+                                        },
+                                        {
+                                            "number":  110,
+                                            "label":  "Using A Crystal Ball"
+                                        },
+                                        {
+                                            "number":  111,
+                                            "label":  "Playing With A Ouija Board"
+                                        },
+                                        {
+                                            "number":  112,
+                                            "label":  "Playing With An 8 Ball"
+                                        },
+                                        {
+                                            "number":  113,
+                                            "label":  "Playing With D\u0026D Cards"
+                                        },
+                                        {
+                                            "number":  114,
+                                            "label":  "Playing With Pokémon Cards"
+                                        },
+                                        {
+                                            "number":  115,
+                                            "label":  "Playing With Magic Of The Gathering Cards"
+                                        },
+                                        {
+                                            "number":  116,
+                                            "label":  "Going To A Fortune Teller"
+                                        },
+                                        {
+                                            "number":  117,
+                                            "label":  "Being Involved In Freemasonry"
+                                        },
+                                        {
+                                            "number":  118,
+                                            "label":  "Reading Horoscopes"
+                                        },
+                                        {
+                                            "number":  119,
+                                            "label":  "Going To A Hypnotist"
+                                        },
+                                        {
+                                            "number":  120,
+                                            "label":  "Being Extremely Independent"
+                                        },
+                                        {
+                                            "number":  121,
+                                            "label":  "Being Manipulative"
+                                        },
+                                        {
+                                            "number":  122,
+                                            "label":  "Being Rebellious"
+                                        },
+                                        {
+                                            "number":  123,
+                                            "label":  "Being Involved In Satanism"
+                                        },
+                                        {
+                                            "number":  124,
+                                            "label":  "Being In A Seance"
+                                        },
+                                        {
+                                            "number":  125,
+                                            "label":  "Using Tarot Cards"
+                                        },
+                                        {
+                                            "number":  126,
+                                            "label":  "Participating In Transcendental Meditation"
+                                        },
+                                        {
+                                            "number":  127,
+                                            "label":  "Astral Projection"
+                                        },
+                                        {
+                                            "number":  128,
+                                            "label":  "Lucid Dreaming"
+                                        },
+                                        {
+                                            "number":  129,
+                                            "label":  "Being In Wicca"
+                                        },
+                                        {
+                                            "number":  130,
+                                            "label":  "Being In Witchcraft"
+                                        },
+                                        {
+                                            "number":  131,
+                                            "label":  "Involvement In Any Kind Of Satanic Ritual Abuse"
+                                        },
+                                        {
+                                            "number":  132,
+                                            "label":  "Involvement In Any Kind Of Sexual Ritual Abuse"
+                                        },
+                                        {
+                                            "number":  572,
+                                            "label":  "Familiar Identity Of Witchcraft"
+                                        },
+                                        {
+                                            "number":  664,
+                                            "label":  "Spirit Of Witchcraft"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  133,
+                         "name":  "Heaviness",
+                         "id":  "heaviness",
+                         "topics":  [
+                                        {
+                                            "number":  133,
+                                            "label":  "Abnormal Grief"
+                                        },
+                                        {
+                                            "number":  134,
+                                            "label":  "Abnormal Mourning"
+                                        },
+                                        {
+                                            "number":  135,
+                                            "label":  "Being Defiled"
+                                        },
+                                        {
+                                            "number":  136,
+                                            "label":  "Depression"
+                                        },
+                                        {
+                                            "number":  137,
+                                            "label":  "Despair"
+                                        },
+                                        {
+                                            "number":  138,
+                                            "label":  "Discouragement"
+                                        },
+                                        {
+                                            "number":  139,
+                                            "label":  "Hopelessness"
+                                        },
+                                        {
+                                            "number":  140,
+                                            "label":  "Frustration"
+                                        },
+                                        {
+                                            "number":  141,
+                                            "label":  "Loneliness"
+                                        },
+                                        {
+                                            "number":  142,
+                                            "label":  "Sadness"
+                                        },
+                                        {
+                                            "number":  143,
+                                            "label":  "1Self-pity"
+                                        },
+                                        {
+                                            "number":  144,
+                                            "label":  "Shame"
+                                        },
+                                        {
+                                            "number":  145,
+                                            "label":  "Unjustified Feelings Of Guilt"
+                                        },
+                                        {
+                                            "number":  146,
+                                            "label":  "Having A Wounded Spirit"
+                                        },
+                                        {
+                                            "number":  431,
+                                            "label":  "Hopelessness"
+                                        },
+                                        {
+                                            "number":  463,
+                                            "label":  "Familiar Identity Of Depression"
+                                        },
+                                        {
+                                            "number":  500,
+                                            "label":  "Familiar Identity Of Hopelessness"
+                                        },
+                                        {
+                                            "number":  515,
+                                            "label":  "Familiar Identity Of Loneliness"
+                                        },
+                                        {
+                                            "number":  618,
+                                            "label":  "Spirit Of Loneliness"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  147,
+                         "name":  "Anti-Christ",
+                         "id":  "anti-christ",
+                         "topics":  [
+                                        {
+                                            "number":  147,
+                                            "label":  "Blaspheming The Holy Spirit And Gifts Of The Spirit"
+                                        },
+                                        {
+                                            "number":  148,
+                                            "label":  "Opposition To God’s Word"
+                                        },
+                                        {
+                                            "number":  149,
+                                            "label":  "Condemnation Of God’s Word"
+                                        },
+                                        {
+                                            "number":  150,
+                                            "label":  "Rationalization Of God’s Word"
+                                        },
+                                        {
+                                            "number":  151,
+                                            "label":  "Opposition To Christ’s Deity Or Humanity"
+                                        },
+                                        {
+                                            "number":  152,
+                                            "label":  "Harassing Christians"
+                                        },
+                                        {
+                                            "number":  153,
+                                            "label":  "Persecuting Christians"
+                                        },
+                                        {
+                                            "number":  154,
+                                            "label":  "Suppressing Ministries"
+                                        },
+                                        {
+                                            "number":  155,
+                                            "label":  "Suppressing Ministers"
+                                        },
+                                        {
+                                            "number":  156,
+                                            "label":  "Creating Church Splits"
+                                        },
+                                        {
+                                            "number":  157,
+                                            "label":  "Calling Out False Doctrines Because I Disagree With Them"
+                                        },
+                                        {
+                                            "number":  158,
+                                            "label":  "Calling Out False Teachers Because I Disagree With Them"
+                                        },
+                                        {
+                                            "number":  159,
+                                            "label":  "Feeling Like Giving Up On Christianity"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  160,
+                         "name":  "Deaf \u0026 Dumb",
+                         "id":  "deaf-dumb",
+                         "topics":  [
+                                        {
+                                            "number":  160,
+                                            "label":  "Prone To Accidents"
+                                        },
+                                        {
+                                            "number":  161,
+                                            "label":  "Prone To Drowning"
+                                        },
+                                        {
+                                            "number":  162,
+                                            "label":  "Prone To House Fires"
+                                        },
+                                        {
+                                            "number":  163,
+                                            "label":  "Prone To Car Accidents"
+                                        },
+                                        {
+                                            "number":  164,
+                                            "label":  "Epilepsy"
+                                        },
+                                        {
+                                            "number":  165,
+                                            "label":  "Convulsions"
+                                        },
+                                        {
+                                            "number":  166,
+                                            "label":  "Seizures"
+                                        },
+                                        {
+                                            "number":  167,
+                                            "label":  "Having Autism"
+                                        },
+                                        {
+                                            "number":  168,
+                                            "label":  "Having Tourette’s"
+                                        },
+                                        {
+                                            "number":  169,
+                                            "label":  "Having Any Type Of Mental Disorder"
+                                        },
+                                        {
+                                            "number":  170,
+                                            "label":  "Disease Of Eyes"
+                                        },
+                                        {
+                                            "number":  171,
+                                            "label":  "Disease Of Ears"
+                                        },
+                                        {
+                                            "number":  172,
+                                            "label":  "Being Mentally Ill"
+                                        },
+                                        {
+                                            "number":  173,
+                                            "label":  "Being Mentally Insane"
+                                        },
+                                        {
+                                            "number":  174,
+                                            "label":  "Feeling Like I’m In A Stupor"
+                                        },
+                                        {
+                                            "number":  175,
+                                            "label":  "Having Suicidal Thoughts"
+                                        },
+                                        {
+                                            "number":  176,
+                                            "label":  "Attempting Suicide"
+                                        },
+                                        {
+                                            "number":  177,
+                                            "label":  "Thinking I Am Dumb"
+                                        },
+                                        {
+                                            "number":  178,
+                                            "label":  "Thinking I Am Stupid"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  179,
+                         "name":  "Sexual Perversion",
+                         "id":  "sexual-perversion",
+                         "topics":  [
+                                        {
+                                            "number":  179,
+                                            "label":  "Believing False Teachers"
+                                        },
+                                        {
+                                            "number":  180,
+                                            "label":  "Believing False Doctrines"
+                                        },
+                                        {
+                                            "number":  181,
+                                            "label":  "Having Multi-Partner Sex"
+                                        },
+                                        {
+                                            "number":  182,
+                                            "label":  "Having Orgies"
+                                        },
+                                        {
+                                            "number":  183,
+                                            "label":  "Homosexuality"
+                                        },
+                                        {
+                                            "number":  184,
+                                            "label":  "Polygamy"
+                                        },
+                                        {
+                                            "number":  185,
+                                            "label":  "Sadomasochism"
+                                        },
+                                        {
+                                            "number":  186,
+                                            "label":  "Sexual Deviations"
+                                        },
+                                        {
+                                            "number":  187,
+                                            "label":  "Twisted Thinking"
+                                        },
+                                        {
+                                            "number":  332,
+                                            "label":  "Orgies"
+                                        },
+                                        {
+                                            "number":  366,
+                                            "label":  "Participating In Orgies"
+                                        },
+                                        {
+                                            "number":  369,
+                                            "label":  "Participating In Homosexuality"
+                                        },
+                                        {
+                                            "number":  609,
+                                            "label":  "Spirit Of Homosexuality"
+                                        },
+                                        {
+                                            "number":  631,
+                                            "label":  "Spirit Of Orgies"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  188,
+                         "name":  "Whoredom",
+                         "id":  "whoredom",
+                         "topics":  [
+                                        {
+                                            "number":  188,
+                                            "label":  "Adultery"
+                                        },
+                                        {
+                                            "number":  189,
+                                            "label":  "Bestiality"
+                                        },
+                                        {
+                                            "number":  190,
+                                            "label":  "Exhibitionism"
+                                        },
+                                        {
+                                            "number":  191,
+                                            "label":  "Illegitimacy"
+                                        },
+                                        {
+                                            "number":  192,
+                                            "label":  "Incest"
+                                        },
+                                        {
+                                            "number":  193,
+                                            "label":  "Lust"
+                                        },
+                                        {
+                                            "number":  194,
+                                            "label":  "Masturbation Or Self Molestation"
+                                        },
+                                        {
+                                            "number":  195,
+                                            "label":  "Being Molested As A Child"
+                                        },
+                                        {
+                                            "number":  196,
+                                            "label":  "Molesting Someone Else"
+                                        },
+                                        {
+                                            "number":  197,
+                                            "label":  "Voyeurism Or Exploiting Someone’s Private Space For Personal Profit"
+                                        },
+                                        {
+                                            "number":  198,
+                                            "label":  "Pornography In Any Form"
+                                        },
+                                        {
+                                            "number":  199,
+                                            "label":  "Being Raped"
+                                        },
+                                        {
+                                            "number":  200,
+                                            "label":  "Raping Someone Else"
+                                        },
+                                        {
+                                            "number":  201,
+                                            "label":  "Seduction"
+                                        },
+                                        {
+                                            "number":  202,
+                                            "label":  "Prostitution"
+                                        },
+                                        {
+                                            "number":  251,
+                                            "label":  "Adultery"
+                                        },
+                                        {
+                                            "number":  252,
+                                            "label":  "Incest"
+                                        },
+                                        {
+                                            "number":  365,
+                                            "label":  "Participating In Incest"
+                                        },
+                                        {
+                                            "number":  368,
+                                            "label":  "Participating In Bestiality"
+                                        },
+                                        {
+                                            "number":  582,
+                                            "label":  "Spirit Of Adultery"
+                                        },
+                                        {
+                                            "number":  613,
+                                            "label":  "Spirit Of Incest"
+                                        },
+                                        {
+                                            "number":  619,
+                                            "label":  "Spirit Of Lust"
+                                        },
+                                        {
+                                            "number":  645,
+                                            "label":  "Spirit Of Seduction"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  203,
+                         "name":  "Infirmity",
+                         "id":  "infirmity",
+                         "topics":  [
+                                        {
+                                            "number":  203,
+                                            "label":  "Having Allergies"
+                                        },
+                                        {
+                                            "number":  204,
+                                            "label":  "Having Arthritis"
+                                        },
+                                        {
+                                            "number":  205,
+                                            "label":  "Having Asthma"
+                                        },
+                                        {
+                                            "number":  206,
+                                            "label":  "Having Cancer"
+                                        },
+                                        {
+                                            "number":  207,
+                                            "label":  "Having Diabetes"
+                                        },
+                                        {
+                                            "number":  208,
+                                            "label":  "Having Female Reproductive Problems"
+                                        },
+                                        {
+                                            "number":  209,
+                                            "label":  "Having Male Reproductive Problems"
+                                        },
+                                        {
+                                            "number":  210,
+                                            "label":  "Having Fungus"
+                                        },
+                                        {
+                                            "number":  211,
+                                            "label":  "Having Heart Disease"
+                                        },
+                                        {
+                                            "number":  212,
+                                            "label":  "Having High Blood Pressure"
+                                        },
+                                        {
+                                            "number":  213,
+                                            "label":  "Having Sinus Issues"
+                                        },
+                                        {
+                                            "number":  214,
+                                            "label":  "Having Strokes"
+                                        },
+                                        {
+                                            "number":  215,
+                                            "label":  "Having Viruses"
+                                        },
+                                        {
+                                            "number":  216,
+                                            "label":  "Being Weak Or Feeble"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  217,
+                         "name":  "Shedding of Innocent Blood",
+                         "id":  "shedding-of-innocent-blood",
+                         "topics":  [
+                                        {
+                                            "number":  217,
+                                            "label":  "The Use Of Torture Through Hanging"
+                                        },
+                                        {
+                                            "number":  218,
+                                            "label":  "The Use Of Torture Through Disembowelment"
+                                        },
+                                        {
+                                            "number":  219,
+                                            "label":  "The Use Of The Axe"
+                                        },
+                                        {
+                                            "number":  220,
+                                            "label":  "The Use Of The Knife"
+                                        },
+                                        {
+                                            "number":  221,
+                                            "label":  "The Use Of The Sword"
+                                        },
+                                        {
+                                            "number":  222,
+                                            "label":  "The Use Of The Spear"
+                                        },
+                                        {
+                                            "number":  223,
+                                            "label":  "The Use Of The Arrow"
+                                        },
+                                        {
+                                            "number":  224,
+                                            "label":  "The Use Of The Rifle"
+                                        },
+                                        {
+                                            "number":  225,
+                                            "label":  "The Use Of The Gun"
+                                        },
+                                        {
+                                            "number":  226,
+                                            "label":  "The Use Of The Abortion"
+                                        },
+                                        {
+                                            "number":  227,
+                                            "label":  "The Use Of Kidnapping"
+                                        },
+                                        {
+                                            "number":  228,
+                                            "label":  "The Use Of Ambush Of The Innocent"
+                                        },
+                                        {
+                                            "number":  229,
+                                            "label":  "The Use Of Slaughter"
+                                        },
+                                        {
+                                            "number":  230,
+                                            "label":  "The Use Of Cruelty"
+                                        },
+                                        {
+                                            "number":  231,
+                                            "label":  "The Use Of Torture In Times Of War"
+                                        },
+                                        {
+                                            "number":  232,
+                                            "label":  "The Use Of Torture Of Captives"
+                                        },
+                                        {
+                                            "number":  233,
+                                            "label":  "The Use Of Torture Of The Innocent People In The Land"
+                                        },
+                                        {
+                                            "number":  234,
+                                            "label":  "The Use Of Participation In Acts Of Torture During The Inquisition"
+                                        },
+                                        {
+                                            "number":  235,
+                                            "label":  "The Use Of Participation In Acts Of Torture During The Crusades"
+                                        },
+                                        {
+                                            "number":  236,
+                                            "label":  "The Use Of Heartless Destruction Of Life Based On Greed For Power And Wealth"
+                                        },
+                                        {
+                                            "number":  237,
+                                            "label":  "Shedding Of Innocent Blood Through The Use Of Human Trafficking"
+                                        },
+                                        {
+                                            "number":  238,
+                                            "label":  "The Use Of Slave Trading"
+                                        },
+                                        {
+                                            "number":  239,
+                                            "label":  "The Use Of Slave Ownership"
+                                        },
+                                        {
+                                            "number":  240,
+                                            "label":  "Use Of Cruel Oppression Of People"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  241,
+                         "name":  "Treachery Against Others",
+                         "id":  "treachery-against-others",
+                         "topics":  [
+                                        {
+                                            "number":  241,
+                                            "label":  "Treachery Against Others"
+                                        },
+                                        {
+                                            "number":  242,
+                                            "label":  "False Accusation Against Anyone"
+                                        },
+                                        {
+                                            "number":  243,
+                                            "label":  "Broken Covenants"
+                                        },
+                                        {
+                                            "number":  244,
+                                            "label":  "Betrayals"
+                                        },
+                                        {
+                                            "number":  245,
+                                            "label":  "Unfaithfulness In Relationships With Families"
+                                        },
+                                        {
+                                            "number":  246,
+                                            "label":  "Unfaithfulness In Neighbors"
+                                        },
+                                        {
+                                            "number":  247,
+                                            "label":  "Unfaithfulness In Communities"
+                                        },
+                                        {
+                                            "number":  248,
+                                            "label":  "Unfaithfulness In Church"
+                                        },
+                                        {
+                                            "number":  249,
+                                            "label":  "Unfaithfulness In Business"
+                                        },
+                                        {
+                                            "number":  250,
+                                            "label":  "Unfaithfulness In Nations"
+                                        },
+                                        {
+                                            "number":  253,
+                                            "label":  "Child Molestation"
+                                        },
+                                        {
+                                            "number":  254,
+                                            "label":  "Neglect"
+                                        },
+                                        {
+                                            "number":  255,
+                                            "label":  "Abandonment"
+                                        },
+                                        {
+                                            "number":  256,
+                                            "label":  "Robbery"
+                                        },
+                                        {
+                                            "number":  257,
+                                            "label":  "Cursing"
+                                        },
+                                        {
+                                            "number":  258,
+                                            "label":  "Dishonoring"
+                                        },
+                                        {
+                                            "number":  259,
+                                            "label":  "Failing To Provide For Widows"
+                                        },
+                                        {
+                                            "number":  260,
+                                            "label":  "Lying, Or Cheating"
+                                        },
+                                        {
+                                            "number":  261,
+                                            "label":  "Being A False Witness"
+                                        },
+                                        {
+                                            "number":  262,
+                                            "label":  "Lying Under Oath"
+                                        },
+                                        {
+                                            "number":  263,
+                                            "label":  "Sowing Discord Among The Brethren"
+                                        },
+                                        {
+                                            "number":  264,
+                                            "label":  "Slander"
+                                        },
+                                        {
+                                            "number":  265,
+                                            "label":  "Gossip"
+                                        },
+                                        {
+                                            "number":  266,
+                                            "label":  "Being A Talebearer"
+                                        },
+                                        {
+                                            "number":  267,
+                                            "label":  "Using Guile To Gain Advantage"
+                                        },
+                                        {
+                                            "number":  268,
+                                            "label":  "Exposing Another’s Secrets"
+                                        },
+                                        {
+                                            "number":  269,
+                                            "label":  "Speaking With A Perverse Tongue That Stirs Up Trouble And Evil Against Another"
+                                        },
+                                        {
+                                            "number":  270,
+                                            "label":  "Holding Hatred In One’s Heart"
+                                        },
+                                        {
+                                            "number":  271,
+                                            "label":  "Using A False Balance Or Scale In Business"
+                                        },
+                                        {
+                                            "number":  272,
+                                            "label":  "Moving Boundary Stones Or Pins"
+                                        },
+                                        {
+                                            "number":  273,
+                                            "label":  "Stealing Inheritance By Unjust Means"
+                                        },
+                                        {
+                                            "number":  274,
+                                            "label":  "Giving And Receiving Bribes"
+                                        },
+                                        {
+                                            "number":  275,
+                                            "label":  "Securing Wealth By A Lying Tongue"
+                                        },
+                                        {
+                                            "number":  276,
+                                            "label":  "Taking The Fields Of The Orphans And Widows"
+                                        },
+                                        {
+                                            "number":  277,
+                                            "label":  "Charging Excessive Interest For Loans"
+                                        },
+                                        {
+                                            "number":  278,
+                                            "label":  "Using A Corrupt Judicial System To Destroy Another’s Life"
+                                        },
+                                        {
+                                            "number":  412,
+                                            "label":  "Gossip"
+                                        },
+                                        {
+                                            "number":  493,
+                                            "label":  "Familiar Identity Of Gossip"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  279,
+                         "name":  "Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally",
+                         "id":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                         "topics":  [
+                                        {
+                                            "number":  279,
+                                            "label":  "Sexual Abuse"
+                                        },
+                                        {
+                                            "number":  280,
+                                            "label":  "Walking In Hatred"
+                                        },
+                                        {
+                                            "number":  281,
+                                            "label":  "Strife"
+                                        },
+                                        {
+                                            "number":  282,
+                                            "label":  "Contention"
+                                        },
+                                        {
+                                            "number":  283,
+                                            "label":  "Ill-Temper"
+                                        },
+                                        {
+                                            "number":  286,
+                                            "label":  "Violence And Cruelty"
+                                        },
+                                        {
+                                            "number":  287,
+                                            "label":  "Hating Both God And Mankind"
+                                        },
+                                        {
+                                            "number":  288,
+                                            "label":  "Blasphemy Against God"
+                                        },
+                                        {
+                                            "number":  289,
+                                            "label":  "Willfully Separating Self From God And Men"
+                                        },
+                                        {
+                                            "number":  290,
+                                            "label":  "Scorner, Mocker, Scoffer"
+                                        },
+                                        {
+                                            "number":  291,
+                                            "label":  "Hater Of All That Is Pure And Good"
+                                        },
+                                        {
+                                            "number":  292,
+                                            "label":  "Reckless Speaking"
+                                        },
+                                        {
+                                            "number":  293,
+                                            "label":  "Flattering For Gain"
+                                        },
+                                        {
+                                            "number":  294,
+                                            "label":  "Being Resentful, Envious And Jealous Of Another’s Life And Blessings"
+                                        },
+                                        {
+                                            "number":  295,
+                                            "label":  "Seeking Revenge"
+                                        },
+                                        {
+                                            "number":  296,
+                                            "label":  "Cursing Others By Thoughts"
+                                        },
+                                        {
+                                            "number":  297,
+                                            "label":  "Cursing Others By Words"
+                                        },
+                                        {
+                                            "number":  298,
+                                            "label":  "Cursing Others By Actions"
+                                        },
+                                        {
+                                            "number":  299,
+                                            "label":  "Delighting In The Destruction Of Another"
+                                        },
+                                        {
+                                            "number":  300,
+                                            "label":  "Purposeful Lying To Destroy Another’s Life"
+                                        },
+                                        {
+                                            "number":  301,
+                                            "label":  "Human Trafficking"
+                                        },
+                                        {
+                                            "number":  302,
+                                            "label":  "Slavery"
+                                        },
+                                        {
+                                            "number":  456,
+                                            "label":  "Familiar Identity Of Contention"
+                                        },
+                                        {
+                                            "number":  559,
+                                            "label":  "Familiar Identity Of Strife"
+                                        },
+                                        {
+                                            "number":  650,
+                                            "label":  "Spirit Of Sexual Abuse"
+                                        },
+                                        {
+                                            "number":  652,
+                                            "label":  "Spirit Of Slavery"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  303,
+                         "name":  "Trading Floor Transactions with Demons",
+                         "id":  "trading-floor-transactions-with-demons",
+                         "topics":  [
+                                        {
+                                            "number":  303,
+                                            "label":  "Worshipping Idols And Expecting Them To Save You"
+                                        },
+                                        {
+                                            "number":  304,
+                                            "label":  "Trading Floor Transaction With Demons For Power"
+                                        },
+                                        {
+                                            "number":  305,
+                                            "label":  "Trading Floor Transaction With Demons For Money"
+                                        },
+                                        {
+                                            "number":  306,
+                                            "label":  "Trading Floor Transaction With Demons For Fertility"
+                                        },
+                                        {
+                                            "number":  307,
+                                            "label":  "Trading Floor Transaction With Demons For Stubbornly Clinging To Opinions And Viewpoints"
+                                        },
+                                        {
+                                            "number":  308,
+                                            "label":  "Trading Floor Transaction With Demons For Walking In Self-sufficient Independence"
+                                        },
+                                        {
+                                            "number":  309,
+                                            "label":  "Trading Floor Transaction With Demons For Resisting Man’s And God’s Authority"
+                                        },
+                                        {
+                                            "number":  310,
+                                            "label":  "Trading Floor Transaction With Demons For Withholding Tithes And Offerings"
+                                        },
+                                        {
+                                            "number":  311,
+                                            "label":  "Trading Floor Transaction With Demons For Being Lawless"
+                                        },
+                                        {
+                                            "number":  312,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Goods"
+                                        },
+                                        {
+                                            "number":  313,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Life"
+                                        },
+                                        {
+                                            "number":  314,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Spouse"
+                                        },
+                                        {
+                                            "number":  315,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Money"
+                                        },
+                                        {
+                                            "number":  316,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Power"
+                                        },
+                                        {
+                                            "number":  317,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Position"
+                                        },
+                                        {
+                                            "number":  318,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Church Or Denomination"
+                                        },
+                                        {
+                                            "number":  319,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Intellect"
+                                        },
+                                        {
+                                            "number":  320,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Career"
+                                        },
+                                        {
+                                            "number":  321,
+                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Accomplishments"
+                                        },
+                                        {
+                                            "number":  322,
+                                            "label":  "Idolizing The Works Of One’s Hands"
+                                        },
+                                        {
+                                            "number":  323,
+                                            "label":  "Idolizing One’s Self"
+                                        },
+                                        {
+                                            "number":  324,
+                                            "label":  "Hiding Envy Behind The Cloak Of Insecurity And Failure"
+                                        },
+                                        {
+                                            "number":  325,
+                                            "label":  "Needing The Worship Of Others"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  326,
+                         "name":  "Gluttony",
+                         "id":  "gluttony",
+                         "topics":  [
+                                        {
+                                            "number":  326,
+                                            "label":  "Being Greedy For Food"
+                                        },
+                                        {
+                                            "number":  327,
+                                            "label":  "Being Greedy For Chocolate Or Attention"
+                                        },
+                                        {
+                                            "number":  328,
+                                            "label":  "Being Addicted To Drugs"
+                                        },
+                                        {
+                                            "number":  331,
+                                            "label":  "Participating In Drunkenness"
+                                        },
+                                        {
+                                            "number":  333,
+                                            "label":  "Gambling"
+                                        },
+                                        {
+                                            "number":  334,
+                                            "label":  "Worldliness"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  335,
+                         "name":  "Self-Righteousness",
+                         "id":  "self-righteousness",
+                         "topics":  [
+                                        {
+                                            "number":  335,
+                                            "label":  "Shameful Compromise In The Face Of Danger, Difficulty, Or Opposition"
+                                        },
+                                        {
+                                            "number":  336,
+                                            "label":  "Being A Coward Who Justifies Actions And Wickedness"
+                                        },
+                                        {
+                                            "number":  337,
+                                            "label":  "Evading Responsibility For Actions"
+                                        },
+                                        {
+                                            "number":  338,
+                                            "label":  "Over-estimating Oneself, Spiritually"
+                                        },
+                                        {
+                                            "number":  339,
+                                            "label":  "Being Willfully Contrary In One’s Heart"
+                                        },
+                                        {
+                                            "number":  340,
+                                            "label":  "Being Cold-hearted"
+                                        },
+                                        {
+                                            "number":  341,
+                                            "label":  "Hating Instruction, Discipline, And Correction"
+                                        },
+                                        {
+                                            "number":  342,
+                                            "label":  "Living In A Deliberate State Of Hypocrisy"
+                                        },
+                                        {
+                                            "number":  343,
+                                            "label":  "Being Lukewarm"
+                                        },
+                                        {
+                                            "number":  344,
+                                            "label":  "Being Cold-hearted Towards The Needs Of Others And The Poor"
+                                        },
+                                        {
+                                            "number":  345,
+                                            "label":  "Deluding Oneself As Being Rich In Spirit"
+                                        },
+                                        {
+                                            "number":  346,
+                                            "label":  "Being Spiritually Proud Of Dead Works"
+                                        },
+                                        {
+                                            "number":  347,
+                                            "label":  "Covering Up Transgressions"
+                                        },
+                                        {
+                                            "number":  348,
+                                            "label":  "Being Polluted By The Leaven Of The Pharisees Or Sadducees"
+                                        },
+                                        {
+                                            "number":  349,
+                                            "label":  "Being Unteachable, Arrogant, Proud, Haughty"
+                                        },
+                                        {
+                                            "number":  350,
+                                            "label":  "Being Competitive"
+                                        },
+                                        {
+                                            "number":  351,
+                                            "label":  "Needing To Be The Best"
+                                        },
+                                        {
+                                            "number":  352,
+                                            "label":  "Being Judgmental, Critical, Suspicious, Legalistic"
+                                        },
+                                        {
+                                            "number":  353,
+                                            "label":  "Belonging To Factions Such As The Klu Klux Klan Or Freemasons"
+                                        },
+                                        {
+                                            "number":  354,
+                                            "label":  "Having A Party Spirit"
+                                        },
+                                        {
+                                            "number":  355,
+                                            "label":  "Disputing; Being Opinionated"
+                                        },
+                                        {
+                                            "number":  356,
+                                            "label":  "Fearing Man Rather Than God"
+                                        },
+                                        {
+                                            "number":  357,
+                                            "label":  "Being A Respecter Of Persons"
+                                        },
+                                        {
+                                            "number":  358,
+                                            "label":  "Showing Partiality To The Rich And Powerful"
+                                        },
+                                        {
+                                            "number":  359,
+                                            "label":  "Making Rash Vows To God And Others"
+                                        },
+                                        {
+                                            "number":  360,
+                                            "label":  "Believing Religious Lies Like Infant Baptism Has Made You Righteous Before God"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  361,
+                         "name":  "Sexual Perversion",
+                         "id":  "sexual-perversion",
+                         "topics":  [
+                                        {
+                                            "number":  361,
+                                            "label":  "Bastard Children Born Outside The Protection Of Marriage"
+                                        },
+                                        {
+                                            "number":  362,
+                                            "label":  "Being Polluted By The Leaven Of The Herodians"
+                                        },
+                                        {
+                                            "number":  363,
+                                            "label":  "Participating In Fornication"
+                                        },
+                                        {
+                                            "number":  364,
+                                            "label":  "Participating In Molestation"
+                                        },
+                                        {
+                                            "number":  367,
+                                            "label":  "Participating In Masturbation"
+                                        },
+                                        {
+                                            "number":  370,
+                                            "label":  "Participating In Lesbianism"
+                                        },
+                                        {
+                                            "number":  371,
+                                            "label":  "Participating In Gender Confusion"
+                                        },
+                                        {
+                                            "number":  372,
+                                            "label":  "Participating In Pornography"
+                                        },
+                                        {
+                                            "number":  373,
+                                            "label":  "Serving the Spirit Spouse gods and Inviting Others to Do the Same"
+                                        },
+                                        {
+                                            "number":  374,
+                                            "label":  "Using Women As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions"
+                                        },
+                                        {
+                                            "number":  375,
+                                            "label":  "Using Children As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions"
+                                        },
+                                        {
+                                            "number":  376,
+                                            "label":  "Using Men As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions"
+                                        },
+                                        {
+                                            "number":  377,
+                                            "label":  "Using Filthy Language"
+                                        },
+                                        {
+                                            "number":  378,
+                                            "label":  "Participating In Masochism, Sadism, And Wicked Imaginations"
+                                        },
+                                        {
+                                            "number":  520,
+                                            "label":  "Familiar Identity Of Molestation"
+                                        },
+                                        {
+                                            "number":  615,
+                                            "label":  "Spirit Of Lesbianism"
+                                        },
+                                        {
+                                            "number":  623,
+                                            "label":  "Spirit Of Masturbation"
+                                        },
+                                        {
+                                            "number":  635,
+                                            "label":  "Spirit Of Pornography"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  379,
+                         "name":  "Rebellion",
+                         "id":  "rebellion",
+                         "topics":  [
+                                        {
+                                            "number":  379,
+                                            "label":  "Participating In Witchcraft Through The Control And Manipulation Of Another’s Will"
+                                        },
+                                        {
+                                            "number":  380,
+                                            "label":  "Being Stubborn"
+                                        },
+                                        {
+                                            "number":  381,
+                                            "label":  "Emasculation Of Men Through Female Domination"
+                                        },
+                                        {
+                                            "number":  382,
+                                            "label":  "Hating Men"
+                                        },
+                                        {
+                                            "number":  383,
+                                            "label":  "Hating Women"
+                                        },
+                                        {
+                                            "number":  384,
+                                            "label":  "Hating One’s Sexual Role And Function"
+                                        },
+                                        {
+                                            "number":  385,
+                                            "label":  "Rebelling Against The Natural Law Through Homosexuality"
+                                        },
+                                        {
+                                            "number":  386,
+                                            "label":  "Abdicating Responsibility Of Leadership"
+                                        },
+                                        {
+                                            "number":  387,
+                                            "label":  "Abandoning Of The Family By The Father Or Mother"
+                                        },
+                                        {
+                                            "number":  388,
+                                            "label":  "Being Above The Law Of God And The Government"
+                                        },
+                                        {
+                                            "number":  389,
+                                            "label":  "Resisting And Opposing Authority"
+                                        },
+                                        {
+                                            "number":  390,
+                                            "label":  "Encouraging Others To Oppose Lawful Authority"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  393,
+                         "name":  "Destructive Attitudes Against God’s Image",
+                         "id":  "destructive-attitudes-against-god-s-image",
+                         "topics":  [
+                                        {
+                                            "number":  393,
+                                            "label":  "Obsession With Failure"
+                                        },
+                                        {
+                                            "number":  394,
+                                            "label":  "Obsession With Defeat"
+                                        },
+                                        {
+                                            "number":  395,
+                                            "label":  "Obsession With Negatives Of The Past"
+                                        },
+                                        {
+                                            "number":  396,
+                                            "label":  "False Expectations Appearing Real"
+                                        },
+                                        {
+                                            "number":  397,
+                                            "label":  "Rebellion To Established Authority"
+                                        },
+                                        {
+                                            "number":  398,
+                                            "label":  "Lying"
+                                        },
+                                        {
+                                            "number":  399,
+                                            "label":  "Thoughts Of Strife"
+                                        },
+                                        {
+                                            "number":  400,
+                                            "label":  "Thoughts Of Discord"
+                                        },
+                                        {
+                                            "number":  401,
+                                            "label":  "Thoughts Of Offense"
+                                        },
+                                        {
+                                            "number":  402,
+                                            "label":  "Erratic Thoughts Out Of Nowhere"
+                                        },
+                                        {
+                                            "number":  403,
+                                            "label":  "Compulsive Desires To Binge Eat"
+                                        },
+                                        {
+                                            "number":  404,
+                                            "label":  "Compulsive Desires To Lust"
+                                        },
+                                        {
+                                            "number":  405,
+                                            "label":  "Compulsive Desires To Overwork"
+                                        },
+                                        {
+                                            "number":  406,
+                                            "label":  "Compulsive Desires To Overdo Whatever"
+                                        },
+                                        {
+                                            "number":  407,
+                                            "label":  "Overcompensating In Any Way"
+                                        },
+                                        {
+                                            "number":  408,
+                                            "label":  "Constant Worry Thoughts"
+                                        },
+                                        {
+                                            "number":  409,
+                                            "label":  "Thoughts About Illicit Sex"
+                                        },
+                                        {
+                                            "number":  410,
+                                            "label":  "Thoughts About Homosexuality"
+                                        },
+                                        {
+                                            "number":  411,
+                                            "label":  "Thoughts About Compulsion To View Pornography"
+                                        },
+                                        {
+                                            "number":  413,
+                                            "label":  "Sudden Distrust In People Who Have Given You No Reason To Distrust Them"
+                                        },
+                                        {
+                                            "number":  414,
+                                            "label":  "Accusing Thoughts About Yourself"
+                                        },
+                                        {
+                                            "number":  415,
+                                            "label":  "Accusing Thoughts About Others"
+                                        },
+                                        {
+                                            "number":  416,
+                                            "label":  "Compulsive Uncontrolled Anger"
+                                        },
+                                        {
+                                            "number":  417,
+                                            "label":  "Disunity - Seeking To Pit One Person Against Another"
+                                        },
+                                        {
+                                            "number":  418,
+                                            "label":  "Seeking To Create Doubt About A Person Or Day"
+                                        },
+                                        {
+                                            "number":  419,
+                                            "label":  "Thoughts Of Compromise With The Flesh And Known Sinful Traps"
+                                        },
+                                        {
+                                            "number":  420,
+                                            "label":  "Overwhelming Panic Attacks"
+                                        },
+                                        {
+                                            "number":  421,
+                                            "label":  "Self-doubt"
+                                        },
+                                        {
+                                            "number":  422,
+                                            "label":  "Excessive Pride In Looks"
+                                        },
+                                        {
+                                            "number":  423,
+                                            "label":  "Excessive Pride In Work"
+                                        },
+                                        {
+                                            "number":  424,
+                                            "label":  "Excessive Pride In Church Activities"
+                                        },
+                                        {
+                                            "number":  425,
+                                            "label":  "Rigidity"
+                                        },
+                                        {
+                                            "number":  426,
+                                            "label":  "Feelings Of Loneliness And Detachment"
+                                        },
+                                        {
+                                            "number":  427,
+                                            "label":  "Thoughts That I Do Not Fit In Anywhere"
+                                        },
+                                        {
+                                            "number":  428,
+                                            "label":  "Thoughts That Question God’s Love, Faithfulness And Word"
+                                        },
+                                        {
+                                            "number":  429,
+                                            "label":  "Selfish Thoughts"
+                                        },
+                                        {
+                                            "number":  430,
+                                            "label":  "Thinking That Others Don’t Care About Me"
+                                        },
+                                        {
+                                            "number":  432,
+                                            "label":  "Beliefs That Nothing Will Get Better"
+                                        },
+                                        {
+                                            "number":  433,
+                                            "label":  "Lack Of Ability To Focus"
+                                        },
+                                        {
+                                            "number":  434,
+                                            "label":  "Lack Of Desire To Read The Word Of God"
+                                        },
+                                        {
+                                            "number":  435,
+                                            "label":  "Lack Of Desire To Pray"
+                                        },
+                                        {
+                                            "number":  436,
+                                            "label":  "Lack Of Desire To Attend Church"
+                                        },
+                                        {
+                                            "number":  437,
+                                            "label":  "Thoughts Of Isolation"
+                                        },
+                                        {
+                                            "number":  438,
+                                            "label":  "Thoughts And Feelings Of Panic"
+                                        },
+                                        {
+                                            "number":  439,
+                                            "label":  "Over-religiousness"
+                                        },
+                                        {
+                                            "number":  440,
+                                            "label":  "Duplicity Or Hypocrisy"
+                                        },
+                                        {
+                                            "number":  441,
+                                            "label":  "No Transparency - Believing That My Problems Are Too Big For Anyone Else"
+                                        },
+                                        {
+                                            "number":  442,
+                                            "label":  "Having Thoughts Of Anxiety"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  443,
+                         "name":  "Destructive Identities Against God",
+                         "id":  "destructive-identities-against-god",
+                         "topics":  [
+                                        {
+                                            "number":  443,
+                                            "label":  "Familiar Identity Of Addiction"
+                                        },
+                                        {
+                                            "number":  445,
+                                            "label":  "Familiar Identity Of Anti-submissiveness"
+                                        },
+                                        {
+                                            "number":  447,
+                                            "label":  "Familiar Identity Of Apprehension"
+                                        },
+                                        {
+                                            "number":  448,
+                                            "label":  "Familiar Identity Of Arguing"
+                                        },
+                                        {
+                                            "number":  449,
+                                            "label":  "Familiar Identity Of Backbiting"
+                                        },
+                                        {
+                                            "number":  450,
+                                            "label":  "Familiar Identity Of Belittling"
+                                        },
+                                        {
+                                            "number":  451,
+                                            "label":  "Familiar Identity Of Bickering"
+                                        },
+                                        {
+                                            "number":  452,
+                                            "label":  "Familiar Identity Of Bitterness"
+                                        },
+                                        {
+                                            "number":  453,
+                                            "label":  "Familiar Identity Of Blasphemy"
+                                        },
+                                        {
+                                            "number":  454,
+                                            "label":  "Familiar Identity Of Compromise"
+                                        },
+                                        {
+                                            "number":  455,
+                                            "label":  "Familiar Identity Of Confrontation"
+                                        },
+                                        {
+                                            "number":  457,
+                                            "label":  "Familiar Identity Of Crib Death"
+                                        },
+                                        {
+                                            "number":  458,
+                                            "label":  "Familiar Identity Of Criticism"
+                                        },
+                                        {
+                                            "number":  460,
+                                            "label":  "Familiar Identity Of Death"
+                                        },
+                                        {
+                                            "number":  462,
+                                            "label":  "Familiar Identity Of Defeatism"
+                                        },
+                                        {
+                                            "number":  464,
+                                            "label":  "Familiar Identity Of Discontent"
+                                        },
+                                        {
+                                            "number":  465,
+                                            "label":  "Familiar Identity Of Disobedience"
+                                        },
+                                        {
+                                            "number":  466,
+                                            "label":  "Familiar Identity Of Distrust"
+                                        },
+                                        {
+                                            "number":  467,
+                                            "label":  "Familiar Identity Of Divination"
+                                        },
+                                        {
+                                            "number":  468,
+                                            "label":  "Familiar Identity Of Doctrinal Error"
+                                        },
+                                        {
+                                            "number":  469,
+                                            "label":  "Familiar Identity Of Doctrinal Obsession"
+                                        },
+                                        {
+                                            "number":  470,
+                                            "label":  "Familiar Identity Of Dominance"
+                                        },
+                                        {
+                                            "number":  471,
+                                            "label":  "Familiar Identity Of Doom And Gloom"
+                                        },
+                                        {
+                                            "number":  472,
+                                            "label":  "Familiar Identity Of Doubt And Unbelief"
+                                        },
+                                        {
+                                            "number":  473,
+                                            "label":  "Familiar Identity Of Dread"
+                                        },
+                                        {
+                                            "number":  474,
+                                            "label":  "Familiar Identity Of Early Death"
+                                        },
+                                        {
+                                            "number":  475,
+                                            "label":  "Familiar Identity Of Egotism"
+                                        },
+                                        {
+                                            "number":  476,
+                                            "label":  "Familiar Identity Of Envy"
+                                        },
+                                        {
+                                            "number":  477,
+                                            "label":  "Familiar Identity Of Escapism"
+                                        },
+                                        {
+                                            "number":  478,
+                                            "label":  "Familiar Identity Of Fantasy"
+                                        },
+                                        {
+                                            "number":  479,
+                                            "label":  "Familiar Identity Of Fatigue"
+                                        },
+                                        {
+                                            "number":  480,
+                                            "label":  "Familiar Identity Of Faultfinding"
+                                        },
+                                        {
+                                            "number":  481,
+                                            "label":  "Familiar Identity Of Fear"
+                                        },
+                                        {
+                                            "number":  482,
+                                            "label":  "Familiar Identity Of Fear Of Accusation"
+                                        },
+                                        {
+                                            "number":  483,
+                                            "label":  "Familiar Identity Of Fear Of Condemnation"
+                                        },
+                                        {
+                                            "number":  484,
+                                            "label":  "Familiar Identity Of Fear Of Disapproval"
+                                        },
+                                        {
+                                            "number":  485,
+                                            "label":  "Familiar Identity Of Fear Of Failure"
+                                        },
+                                        {
+                                            "number":  486,
+                                            "label":  "Familiar Identity Of Fear Of Judgment"
+                                        },
+                                        {
+                                            "number":  487,
+                                            "label":  "Familiar Identity Of Fear Of Man"
+                                        },
+                                        {
+                                            "number":  488,
+                                            "label":  "Familiar Identity Of Fear Of Reproof"
+                                        },
+                                        {
+                                            "number":  489,
+                                            "label":  "Familiar Identity Of Fighting"
+                                        },
+                                        {
+                                            "number":  490,
+                                            "label":  "Familiar Identity Of Forgetfulness"
+                                        },
+                                        {
+                                            "number":  491,
+                                            "label":  "Familiar Identity Of Frigidity"
+                                        },
+                                        {
+                                            "number":  492,
+                                            "label":  "Familiar Identity Of Gluttony"
+                                        },
+                                        {
+                                            "number":  494,
+                                            "label":  "Familiar Identity Of Greed"
+                                        },
+                                        {
+                                            "number":  495,
+                                            "label":  "Familiar Identity Of Hallucinations"
+                                        },
+                                        {
+                                            "number":  497,
+                                            "label":  "Familiar Identity Of Headache"
+                                        },
+                                        {
+                                            "number":  498,
+                                            "label":  "Familiar Identity Of Heartbreak"
+                                        },
+                                        {
+                                            "number":  499,
+                                            "label":  "Familiar Identity Of Heaviness"
+                                        },
+                                        {
+                                            "number":  501,
+                                            "label":  "Familiar Identity Of Hurt"
+                                        },
+                                        {
+                                            "number":  502,
+                                            "label":  "Familiar Identity Of Inadequacy"
+                                        },
+                                        {
+                                            "number":  503,
+                                            "label":  "Familiar Identity Of Incubus"
+                                        },
+                                        {
+                                            "number":  504,
+                                            "label":  "Familiar Identity Of Indifference"
+                                        },
+                                        {
+                                            "number":  505,
+                                            "label":  "Familiar Identity Of Inferiority"
+                                        },
+                                        {
+                                            "number":  506,
+                                            "label":  "Familiar Identity Of Infirmity"
+                                        },
+                                        {
+                                            "number":  507,
+                                            "label":  "Familiar Identity Of Insanity"
+                                        },
+                                        {
+                                            "number":  508,
+                                            "label":  "Familiar Identity Of Insomnia"
+                                        },
+                                        {
+                                            "number":  509,
+                                            "label":  "Familiar Identity Of Intellectualism"
+                                        },
+                                        {
+                                            "number":  511,
+                                            "label":  "Familiar Identity Of Kleptomania"
+                                        },
+                                        {
+                                            "number":  512,
+                                            "label":  "Familiar Identity Of Laziness"
+                                        },
+                                        {
+                                            "number":  513,
+                                            "label":  "Familiar Identity Of Legalism"
+                                        },
+                                        {
+                                            "number":  514,
+                                            "label":  "Familiar Identity Of Listlessness"
+                                        },
+                                        {
+                                            "number":  516,
+                                            "label":  "Familiar Identity Of Lying Spirit"
+                                        },
+                                        {
+                                            "number":  517,
+                                            "label":  "Familiar Identity Of Mania"
+                                        },
+                                        {
+                                            "number":  518,
+                                            "label":  "Familiar Identity Of Materialism"
+                                        },
+                                        {
+                                            "number":  521,
+                                            "label":  "Familiar Identity Of Moonstruck"
+                                        },
+                                        {
+                                            "number":  523,
+                                            "label":  "Familiar Identity Of Nervousness"
+                                        },
+                                        {
+                                            "number":  525,
+                                            "label":  "Familiar Identity Of Obesity"
+                                        },
+                                        {
+                                            "number":  526,
+                                            "label":  "Familiar Identity Of Occult Spirits"
+                                        },
+                                        {
+                                            "number":  527,
+                                            "label":  "Familiar Identity Of Overburden"
+                                        },
+                                        {
+                                            "number":  528,
+                                            "label":  "Familiar Identity Of Paranoia"
+                                        },
+                                        {
+                                            "number":  530,
+                                            "label":  "Familiar Identity Of Persecution"
+                                        },
+                                        {
+                                            "number":  531,
+                                            "label":  "Familiar Identity Of Playacting"
+                                        },
+                                        {
+                                            "number":  532,
+                                            "label":  "Familiar Identity Of Possessiveness"
+                                        },
+                                        {
+                                            "number":  533,
+                                            "label":  "Familiar Identity Of Pride"
+                                        },
+                                        {
+                                            "number":  535,
+                                            "label":  "Familiar Identity Of Quarreling"
+                                        },
+                                        {
+                                            "number":  536,
+                                            "label":  "Familiar Identity Of Rape"
+                                        },
+                                        {
+                                            "number":  537,
+                                            "label":  "Familiar Identity Of Rationalism"
+                                        },
+                                        {
+                                            "number":  538,
+                                            "label":  "Familiar Identity Of Rebellion"
+                                        },
+                                        {
+                                            "number":  539,
+                                            "label":  "Familiar Identity Of Religiosity"
+                                        },
+                                        {
+                                            "number":  540,
+                                            "label":  "Familiar Identity Of Resentment"
+                                        },
+                                        {
+                                            "number":  541,
+                                            "label":  "Familiar Identity Of Restlessness"
+                                        },
+                                        {
+                                            "number":  542,
+                                            "label":  "Familiar Identity Of Retaliation"
+                                        },
+                                        {
+                                            "number":  543,
+                                            "label":  "Familiar Identity Of Retardation"
+                                        },
+                                        {
+                                            "number":  545,
+                                            "label":  "Familiar Identity Of Ritualism"
+                                        },
+                                        {
+                                            "number":  546,
+                                            "label":  "Familiar Identity Of Sadness And Crying"
+                                        },
+                                        {
+                                            "number":  547,
+                                            "label":  "Familiar Identity Of Schizophrenia"
+                                        },
+                                        {
+                                            "number":  548,
+                                            "label":  "Familiar Identity Of Selfishness"
+                                        },
+                                        {
+                                            "number":  549,
+                                            "label":  "Familiar Identity Of Self-pity"
+                                        },
+                                        {
+                                            "number":  550,
+                                            "label":  "Familiar Identity Of Senility"
+                                        },
+                                        {
+                                            "number":  551,
+                                            "label":  "Familiar Identity Of Sensitivity"
+                                        },
+                                        {
+                                            "number":  552,
+                                            "label":  "Familiar Identity Of Sexual Perversion"
+                                        },
+                                        {
+                                            "number":  553,
+                                            "label":  "Familiar Identity Of Shyness"
+                                        },
+                                        {
+                                            "number":  554,
+                                            "label":  "Familiar Identity Of Sorrow"
+                                        },
+                                        {
+                                            "number":  555,
+                                            "label":  "Familiar Identity Of Spirit Of Error"
+                                        },
+                                        {
+                                            "number":  556,
+                                            "label":  "Familiar Identity Of Spiritism"
+                                        },
+                                        {
+                                            "number":  557,
+                                            "label":  "Familiar Identity Of Spite"
+                                        },
+                                        {
+                                            "number":  558,
+                                            "label":  "Familiar Identity Of Stoicism"
+                                        },
+                                        {
+                                            "number":  560,
+                                            "label":  "Familiar Identity Of Stubbornness"
+                                        },
+                                        {
+                                            "number":  561,
+                                            "label":  "Familiar Identity Of Succubus"
+                                        },
+                                        {
+                                            "number":  562,
+                                            "label":  "Familiar Identity Of Suicide"
+                                        },
+                                        {
+                                            "number":  563,
+                                            "label":  "Familiar Identity Of Suspicion"
+                                        },
+                                        {
+                                            "number":  564,
+                                            "label":  "Familiar Identity Of Temper"
+                                        },
+                                        {
+                                            "number":  565,
+                                            "label":  "Familiar Identity Of Tension"
+                                        },
+                                        {
+                                            "number":  566,
+                                            "label":  "Familiar Identity Of Timidity"
+                                        },
+                                        {
+                                            "number":  567,
+                                            "label":  "Familiar Identity Of Unfairness"
+                                        },
+                                        {
+                                            "number":  568,
+                                            "label":  "Familiar Identity Of Unforgiveness"
+                                        },
+                                        {
+                                            "number":  569,
+                                            "label":  "Familiar Identity Of Vanity"
+                                        },
+                                        {
+                                            "number":  570,
+                                            "label":  "Familiar Identity Of Violence"
+                                        },
+                                        {
+                                            "number":  571,
+                                            "label":  "Familiar Identity Of Weary In Well Doing"
+                                        },
+                                        {
+                                            "number":  573,
+                                            "label":  "Familiar Identity Of Worry"
+                                        },
+                                        {
+                                            "number":  597,
+                                            "label":  "Spirit Of Disobedience"
+                                        },
+                                        {
+                                            "number":  604,
+                                            "label":  "Spirit Of Fear"
+                                        },
+                                        {
+                                            "number":  639,
+                                            "label":  "Spirit Of Pride"
+                                        },
+                                        {
+                                            "number":  643,
+                                            "label":  "Spirit Of Rebellion"
+                                        },
+                                        {
+                                            "number":  661,
+                                            "label":  "Spirit Of Violence"
+                                        }
+                                    ]
+                     },
+                     {
+                         "firstTopic":  574,
+                         "name":  "Spirit Spouse Gods",
+                         "id":  "spirit-spouse-gods",
+                         "topics":  [
+                                        {
+                                            "number":  574,
+                                            "label":  "Disembodied Spirits Of Unsaved Family Members, Relatives, Or Ancestors Of The Person Or His OR Her Spouse"
+                                        },
+                                        {
+                                            "number":  575,
+                                            "label":  "Antichrist Spirit"
+                                        },
+                                        {
+                                            "number":  576,
+                                            "label":  "Exhibitionist Spirit"
+                                        },
+                                        {
+                                            "number":  577,
+                                            "label":  "Fetish Spirit"
+                                        },
+                                        {
+                                            "number":  578,
+                                            "label":  "Haughty Spirit"
+                                        },
+                                        {
+                                            "number":  579,
+                                            "label":  "Spirit Eros"
+                                        },
+                                        {
+                                            "number":  580,
+                                            "label":  "Spirit Of Addictions And Sex Addictions"
+                                        },
+                                        {
+                                            "number":  581,
+                                            "label":  "Spirit Of Adoration"
+                                        },
+                                        {
+                                            "number":  583,
+                                            "label":  "Spirit Of Adulation"
+                                        },
+                                        {
+                                            "number":  584,
+                                            "label":  "Spirit Of Attractions"
+                                        },
+                                        {
+                                            "number":  585,
+                                            "label":  "Spirit Of Autoeroticism"
+                                        },
+                                        {
+                                            "number":  586,
+                                            "label":  "Spirit Of Bacchus"
+                                        },
+                                        {
+                                            "number":  587,
+                                            "label":  "Spirit Of Ba-al Worship"
+                                        },
+                                        {
+                                            "number":  588,
+                                            "label":  "Spirit Of Bondage"
+                                        },
+                                        {
+                                            "number":  589,
+                                            "label":  "Spirit Of Breast Lust"
+                                        },
+                                        {
+                                            "number":  590,
+                                            "label":  "Spirit Of Compulsion"
+                                        },
+                                        {
+                                            "number":  591,
+                                            "label":  "Spirit Of Control"
+                                        },
+                                        {
+                                            "number":  592,
+                                            "label":  "Spirit Of Decadence"
+                                        },
+                                        {
+                                            "number":  593,
+                                            "label":  "Spirit Of Debauchery"
+                                        },
+                                        {
+                                            "number":  595,
+                                            "label":  "Spirit Of Delights"
+                                        },
+                                        {
+                                            "number":  596,
+                                            "label":  "Spirit Of Desires"
+                                        },
+                                        {
+                                            "number":  598,
+                                            "label":  "Spirit Of Double-mindedness"
+                                        },
+                                        {
+                                            "number":  599,
+                                            "label":  "Spirit Of Erotic Lust (Lust For The Erotic)"
+                                        },
+                                        {
+                                            "number":  600,
+                                            "label":  "Spirit Of Eroticism"
+                                        },
+                                        {
+                                            "number":  601,
+                                            "label":  "Spirit Of Eye Lust"
+                                        },
+                                        {
+                                            "number":  602,
+                                            "label":  "Spirit Of Fantasizing"
+                                        },
+                                        {
+                                            "number":  603,
+                                            "label":  "Spirit Of Fascination"
+                                        },
+                                        {
+                                            "number":  605,
+                                            "label":  "Spirit Of Forces"
+                                        },
+                                        {
+                                            "number":  606,
+                                            "label":  "Spirit Of Genital Lust"
+                                        },
+                                        {
+                                            "number":  607,
+                                            "label":  "Spirit Of Guile"
+                                        },
+                                        {
+                                            "number":  608,
+                                            "label":  "Spirit Of Habits"
+                                        },
+                                        {
+                                            "number":  610,
+                                            "label":  "Spirit Of Idolatry"
+                                        },
+                                        {
+                                            "number":  611,
+                                            "label":  "Spirit Of Immorality"
+                                        },
+                                        {
+                                            "number":  612,
+                                            "label":  "Spirit Of Inordinate Affections"
+                                        },
+                                        {
+                                            "number":  614,
+                                            "label":  "Spirit Of Lasciviousness"
+                                        },
+                                        {
+                                            "number":  616,
+                                            "label":  "Spirit Of Lewdness"
+                                        },
+                                        {
+                                            "number":  617,
+                                            "label":  "Spirit Of Lies"
+                                        },
+                                        {
+                                            "number":  620,
+                                            "label":  "Spirit Of Lust For Looks"
+                                        },
+                                        {
+                                            "number":  621,
+                                            "label":  "Spirit Of Lust For The Flesh (Cannibalism)"
+                                        },
+                                        {
+                                            "number":  622,
+                                            "label":  "Spirit Of Manipulation"
+                                        },
+                                        {
+                                            "number":  624,
+                                            "label":  "Spirit Of Mirrors"
+                                        },
+                                        {
+                                            "number":  625,
+                                            "label":  "Spirit Of Narcissism"
+                                        },
+                                        {
+                                            "number":  626,
+                                            "label":  "Spirit Of Necrophilia"
+                                        },
+                                        {
+                                            "number":  627,
+                                            "label":  "Spirit Of Nudity"
+                                        },
+                                        {
+                                            "number":  628,
+                                            "label":  "Spirit Of Nymphomania"
+                                        },
+                                        {
+                                            "number":  629,
+                                            "label":  "Spirit Of Obsession"
+                                        },
+                                        {
+                                            "number":  630,
+                                            "label":  "Spirit Of Oppression"
+                                        },
+                                        {
+                                            "number":  632,
+                                            "label":  "Spirit Of Pedophilia (Lust For Children)"
+                                        },
+                                        {
+                                            "number":  633,
+                                            "label":  "Spirit Of Penile Lust"
+                                        },
+                                        {
+                                            "number":  634,
+                                            "label":  "Spirit Of Physical Abuse"
+                                        },
+                                        {
+                                            "number":  636,
+                                            "label":  "Spirit Of Practices Of Sexual And Sensual Activities (Sex Therapists)"
+                                        },
+                                        {
+                                            "number":  637,
+                                            "label":  "Spirit of Somnophilia"
+                                        },
+                                        {
+                                            "number":  638,
+                                            "label":  "Spirit Of Pre-occupations"
+                                        },
+                                        {
+                                            "number":  640,
+                                            "label":  "Spirit Of Promiscuity"
+                                        },
+                                        {
+                                            "number":  641,
+                                            "label":  "Spirit Of Prostitution (Harlotry) (Whoredoms) (Sex-trafficking)"
+                                        },
+                                        {
+                                            "number":  642,
+                                            "label":  "Spirit Of Python"
+                                        },
+                                        {
+                                            "number":  644,
+                                            "label":  "Spirit Of Ritual Sex"
+                                        },
+                                        {
+                                            "number":  646,
+                                            "label":  "Spirit Of Self-adoration"
+                                        },
+                                        {
+                                            "number":  647,
+                                            "label":  "Spirit Of Self-idolatry"
+                                        },
+                                        {
+                                            "number":  648,
+                                            "label":  "Spirit Of Self-indulgence"
+                                        },
+                                        {
+                                            "number":  649,
+                                            "label":  "Spirit Of Self-lust"
+                                        },
+                                        {
+                                            "number":  651,
+                                            "label":  "Spirit Of Sexual Idolatry"
+                                        },
+                                        {
+                                            "number":  653,
+                                            "label":  "Spirit Of Sodomy"
+                                        },
+                                        {
+                                            "number":  654,
+                                            "label":  "Spirit Of Stupor"
+                                        },
+                                        {
+                                            "number":  655,
+                                            "label":  "Spirit Of Temptations"
+                                        },
+                                        {
+                                            "number":  656,
+                                            "label":  "Spirit Of Touch Lust"
+                                        },
+                                        {
+                                            "number":  658,
+                                            "label":  "Spirit Of Vaginal Lust"
+                                        },
+                                        {
+                                            "number":  659,
+                                            "label":  "Spirit Of Verbal Eroticism"
+                                        },
+                                        {
+                                            "number":  660,
+                                            "label":  "Spirit Of Verbal Lust"
+                                        },
+                                        {
+                                            "number":  662,
+                                            "label":  "Spirit Of Voyeurism"
+                                        },
+                                        {
+                                            "number":  663,
+                                            "label":  "Spirit Of Vulgarity"
+                                        },
+                                        {
+                                            "number":  665,
+                                            "label":  "Spirit of Writing Fan-fiction Stories to Create and Worship your Own Narrative"
+                                        },
+                                        {
+                                            "number":  666,
+                                            "label":  "Spirit Of Love That Keeps Loving Relationships From Forming And Keeps People Single"
+                                        }
+                                    ]
+                     }
+                 ],
+    "version":  1,
+    "calReturnMinutes":  2,
+    "calLink":  "https://cal.com/repentance101/introductions-from-repentance-to-you",
     "topics":  {
                    "484":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of disapproval, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
@@ -11625,2856 +14476,6 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            }
                },
-    "topicCount":  666,
-    "sections":  [
-                     {
-                         "firstTopic":  1,
-                         "name":  "Jealousy",
-                         "id":  "jealousy",
-                         "topics":  [
-                                        {
-                                            "number":  1,
-                                            "label":  "Anger"
-                                        },
-                                        {
-                                            "number":  2,
-                                            "label":  "Wrath"
-                                        },
-                                        {
-                                            "number":  3,
-                                            "label":  "Rage"
-                                        },
-                                        {
-                                            "number":  4,
-                                            "label":  "Hatred"
-                                        },
-                                        {
-                                            "number":  5,
-                                            "label":  "Murder"
-                                        },
-                                        {
-                                            "number":  6,
-                                            "label":  "Covetousness"
-                                        },
-                                        {
-                                            "number":  7,
-                                            "label":  "Cruelty"
-                                        },
-                                        {
-                                            "number":  8,
-                                            "label":  "Divorce"
-                                        },
-                                        {
-                                            "number":  9,
-                                            "label":  "Division"
-                                        },
-                                        {
-                                            "number":  10,
-                                            "label":  "Feelings That God Loves Others More Than Me"
-                                        },
-                                        {
-                                            "number":  11,
-                                            "label":  "Jealousy"
-                                        },
-                                        {
-                                            "number":  12,
-                                            "label":  "Insecurity"
-                                        },
-                                        {
-                                            "number":  13,
-                                            "label":  "Revenge"
-                                        },
-                                        {
-                                            "number":  14,
-                                            "label":  "Self-centeredness"
-                                        },
-                                        {
-                                            "number":  15,
-                                            "label":  "Suspicious Attitude"
-                                        },
-                                        {
-                                            "number":  16,
-                                            "label":  "Unnatural Competitiveness"
-                                        },
-                                        {
-                                            "number":  284,
-                                            "label":  "Anger"
-                                        },
-                                        {
-                                            "number":  285,
-                                            "label":  "Rage"
-                                        },
-                                        {
-                                            "number":  444,
-                                            "label":  "Familiar Identity Of Anger"
-                                        },
-                                        {
-                                            "number":  459,
-                                            "label":  "Familiar Identity Of Cruelty"
-                                        },
-                                        {
-                                            "number":  496,
-                                            "label":  "Familiar Identity Of Hatred"
-                                        },
-                                        {
-                                            "number":  510,
-                                            "label":  "Familiar Identity Of Jealousy"
-                                        },
-                                        {
-                                            "number":  522,
-                                            "label":  "Familiar Identity Of Murder"
-                                        },
-                                        {
-                                            "number":  544,
-                                            "label":  "Familiar Identity Of Revenge"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  17,
-                         "name":  "Slothfulness",
-                         "id":  "slothfulness",
-                         "topics":  [
-                                        {
-                                            "number":  17,
-                                            "label":  "Constant Fatigue"
-                                        },
-                                        {
-                                            "number":  18,
-                                            "label":  "Drawing Back From Life"
-                                        },
-                                        {
-                                            "number":  19,
-                                            "label":  "Passivity"
-                                        },
-                                        {
-                                            "number":  20,
-                                            "label":  "Procrastination"
-                                        },
-                                        {
-                                            "number":  21,
-                                            "label":  "Blocked Success"
-                                        },
-                                        {
-                                            "number":  22,
-                                            "label":  "Wishing I Were Not Born"
-                                        },
-                                        {
-                                            "number":  529,
-                                            "label":  "Familiar Identity Of Passivity"
-                                        },
-                                        {
-                                            "number":  534,
-                                            "label":  "Familiar Identity Of Procrastination"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  23,
-                         "name":  "Haughtiness",
-                         "id":  "haughtiness",
-                         "topics":  [
-                                        {
-                                            "number":  23,
-                                            "label":  "Arrogance"
-                                        },
-                                        {
-                                            "number":  24,
-                                            "label":  "Being Boastful"
-                                        },
-                                        {
-                                            "number":  25,
-                                            "label":  "Being Proud"
-                                        },
-                                        {
-                                            "number":  26,
-                                            "label":  "Being Contentious"
-                                        },
-                                        {
-                                            "number":  27,
-                                            "label":  "Being Controlling"
-                                        },
-                                        {
-                                            "number":  28,
-                                            "label":  "Being Domineering"
-                                        },
-                                        {
-                                            "number":  29,
-                                            "label":  "Being Critical"
-                                        },
-                                        {
-                                            "number":  30,
-                                            "label":  "Being Judgmental"
-                                        },
-                                        {
-                                            "number":  31,
-                                            "label":  "Being Dictatorlike"
-                                        },
-                                        {
-                                            "number":  32,
-                                            "label":  "Offense"
-                                        },
-                                        {
-                                            "number":  33,
-                                            "label":  "Being Offensive"
-                                        },
-                                        {
-                                            "number":  34,
-                                            "label":  "Gossiping"
-                                        },
-                                        {
-                                            "number":  35,
-                                            "label":  "Being Prejudice"
-                                        },
-                                        {
-                                            "number":  36,
-                                            "label":  "Mockery"
-                                        },
-                                        {
-                                            "number":  37,
-                                            "label":  "Rudeness"
-                                        },
-                                        {
-                                            "number":  38,
-                                            "label":  "Self-righteous Complex"
-                                        },
-                                        {
-                                            "number":  39,
-                                            "label":  "Superiority Complex"
-                                        },
-                                        {
-                                            "number":  40,
-                                            "label":  "Being Vain"
-                                        },
-                                        {
-                                            "number":  519,
-                                            "label":  "Familiar Identity Of Mockery"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  41,
-                         "name":  "Lies",
-                         "id":  "lies",
-                         "topics":  [
-                                        {
-                                            "number":  41,
-                                            "label":  "Thievery"
-                                        },
-                                        {
-                                            "number":  42,
-                                            "label":  "Condemnation"
-                                        },
-                                        {
-                                            "number":  43,
-                                            "label":  "Deception"
-                                        },
-                                        {
-                                            "number":  44,
-                                            "label":  "Exaggeration"
-                                        },
-                                        {
-                                            "number":  45,
-                                            "label":  "Feeling Like a Hypocrite"
-                                        },
-                                        {
-                                            "number":  46,
-                                            "label":  "Lying From Time To Time"
-                                        },
-                                        {
-                                            "number":  47,
-                                            "label":  "Lying Habitually"
-                                        },
-                                        {
-                                            "number":  48,
-                                            "label":  "Feeling Like I\u0027ll Never Get Married"
-                                        },
-                                        {
-                                            "number":  49,
-                                            "label":  "Feeling Like No One Wants Me"
-                                        },
-                                        {
-                                            "number":  50,
-                                            "label":  "Being Obese"
-                                        },
-                                        {
-                                            "number":  51,
-                                            "label":  "Being Overweight"
-                                        },
-                                        {
-                                            "number":  52,
-                                            "label":  "Using Profanity"
-                                        },
-                                        {
-                                            "number":  53,
-                                            "label":  "A Poor Self Image"
-                                        },
-                                        {
-                                            "number":  54,
-                                            "label":  "Thinking I\u0027m Ugly"
-                                        },
-                                        {
-                                            "number":  55,
-                                            "label":  "Thinking I Can\u0027t Change"
-                                        },
-                                        {
-                                            "number":  56,
-                                            "label":  "Having Vain Imaginations"
-                                        },
-                                        {
-                                            "number":  57,
-                                            "label":  "Feeling Worthless"
-                                        },
-                                        {
-                                            "number":  392,
-                                            "label":  "Condemnation"
-                                        },
-                                        {
-                                            "number":  461,
-                                            "label":  "Familiar Identity Of Deception"
-                                        },
-                                        {
-                                            "number":  594,
-                                            "label":  "Spirit Of Deception"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  58,
-                         "name":  "Bondage",
-                         "id":  "bondage",
-                         "topics":  [
-                                        {
-                                            "number":  58,
-                                            "label":  "Being Co-dependent"
-                                        },
-                                        {
-                                            "number":  59,
-                                            "label":  "Being A Workaholic"
-                                        },
-                                        {
-                                            "number":  60,
-                                            "label":  "Alcohol Addiction"
-                                        },
-                                        {
-                                            "number":  61,
-                                            "label":  "Gambling Addiction"
-                                        },
-                                        {
-                                            "number":  62,
-                                            "label":  "Tobacco Addiction"
-                                        },
-                                        {
-                                            "number":  63,
-                                            "label":  "Drug Addiction"
-                                        },
-                                        {
-                                            "number":  64,
-                                            "label":  "Marijuana Or CBD Addiction"
-                                        },
-                                        {
-                                            "number":  65,
-                                            "label":  "Food Addiction"
-                                        },
-                                        {
-                                            "number":  66,
-                                            "label":  "Video Game Addiction"
-                                        },
-                                        {
-                                            "number":  67,
-                                            "label":  "Sex Addiction"
-                                        },
-                                        {
-                                            "number":  68,
-                                            "label":  "Computer Addiction"
-                                        },
-                                        {
-                                            "number":  69,
-                                            "label":  "Social Media"
-                                        },
-                                        {
-                                            "number":  70,
-                                            "label":  "Other Addictions"
-                                        },
-                                        {
-                                            "number":  329,
-                                            "label":  "Alcohol Addiction"
-                                        },
-                                        {
-                                            "number":  330,
-                                            "label":  "Sex Addiction"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  71,
-                         "name":  "Idolatry",
-                         "id":  "idolatry",
-                         "topics":  [
-                                        {
-                                            "number":  71,
-                                            "label":  "Love Of Money"
-                                        },
-                                        {
-                                            "number":  72,
-                                            "label":  "Love Of Possessions"
-                                        },
-                                        {
-                                            "number":  73,
-                                            "label":  "Love Of Position"
-                                        },
-                                        {
-                                            "number":  74,
-                                            "label":  "Love Of Power"
-                                        },
-                                        {
-                                            "number":  75,
-                                            "label":  "Worshiping Things Other Than God"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  76,
-                         "name":  "Error",
-                         "id":  "error",
-                         "topics":  [
-                                        {
-                                            "number":  76,
-                                            "label":  "Anorexia"
-                                        },
-                                        {
-                                            "number":  77,
-                                            "label":  "Bulimia"
-                                        },
-                                        {
-                                            "number":  78,
-                                            "label":  "Compromising On My Convictions"
-                                        },
-                                        {
-                                            "number":  79,
-                                            "label":  "Confusion"
-                                        },
-                                        {
-                                            "number":  80,
-                                            "label":  "Continually Making Bad Decisions"
-                                        },
-                                        {
-                                            "number":  81,
-                                            "label":  "Believing Cultic Or False Teachers"
-                                        },
-                                        {
-                                            "number":  82,
-                                            "label":  "Doubt"
-                                        },
-                                        {
-                                            "number":  83,
-                                            "label":  "Unbelief"
-                                        },
-                                        {
-                                            "number":  84,
-                                            "label":  "Being Irresponsible"
-                                        },
-                                        {
-                                            "number":  85,
-                                            "label":  "Inappropriate Thinking"
-                                        },
-                                        {
-                                            "number":  86,
-                                            "label":  "Inappropriate Behavior"
-                                        },
-                                        {
-                                            "number":  391,
-                                            "label":  "Doubt"
-                                        },
-                                        {
-                                            "number":  657,
-                                            "label":  "Spirit Of Unbelief"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  87,
-                         "name":  "Fear",
-                         "id":  "fear",
-                         "topics":  [
-                                        {
-                                            "number":  87,
-                                            "label":  "Feelings Of Abandonment"
-                                        },
-                                        {
-                                            "number":  88,
-                                            "label":  "Anxiety"
-                                        },
-                                        {
-                                            "number":  89,
-                                            "label":  "Lack Of Faith"
-                                        },
-                                        {
-                                            "number":  90,
-                                            "label":  "Fear Of Death"
-                                        },
-                                        {
-                                            "number":  91,
-                                            "label":  "Fear Of Success"
-                                        },
-                                        {
-                                            "number":  92,
-                                            "label":  "Fear Of Men"
-                                        },
-                                        {
-                                            "number":  93,
-                                            "label":  "Fear Of Women"
-                                        },
-                                        {
-                                            "number":  94,
-                                            "label":  "Fear Of Poverty"
-                                        },
-                                        {
-                                            "number":  95,
-                                            "label":  "Feelings That I Have Been Rejected"
-                                        },
-                                        {
-                                            "number":  96,
-                                            "label":  "Fear Of Rejection"
-                                        },
-                                        {
-                                            "number":  97,
-                                            "label":  "Fear Of Authority"
-                                        },
-                                        {
-                                            "number":  98,
-                                            "label":  "Feeling Unable To Perform Properly"
-                                        },
-                                        {
-                                            "number":  99,
-                                            "label":  "Feelings Of Inferiority"
-                                        },
-                                        {
-                                            "number":  100,
-                                            "label":  "Nightmares"
-                                        },
-                                        {
-                                            "number":  101,
-                                            "label":  "Phobias"
-                                        },
-                                        {
-                                            "number":  102,
-                                            "label":  "Self-rejection"
-                                        },
-                                        {
-                                            "number":  103,
-                                            "label":  "Being Shy Or Timid"
-                                        },
-                                        {
-                                            "number":  104,
-                                            "label":  "Feelings Of Stress"
-                                        },
-                                        {
-                                            "number":  105,
-                                            "label":  "Feelings Of Tension"
-                                        },
-                                        {
-                                            "number":  106,
-                                            "label":  "Being Tormented"
-                                        },
-                                        {
-                                            "number":  107,
-                                            "label":  "Feeling Tormented"
-                                        },
-                                        {
-                                            "number":  446,
-                                            "label":  "Familiar Identity Of Anxiety"
-                                        },
-                                        {
-                                            "number":  524,
-                                            "label":  "Familiar Identity Of Nightmares"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  108,
-                         "name":  "Divination",
-                         "id":  "divination",
-                         "topics":  [
-                                        {
-                                            "number":  108,
-                                            "label":  "Astrology"
-                                        },
-                                        {
-                                            "number":  109,
-                                            "label":  "Having Gone To A Medium"
-                                        },
-                                        {
-                                            "number":  110,
-                                            "label":  "Using A Crystal Ball"
-                                        },
-                                        {
-                                            "number":  111,
-                                            "label":  "Playing With A Ouija Board"
-                                        },
-                                        {
-                                            "number":  112,
-                                            "label":  "Playing With An 8 Ball"
-                                        },
-                                        {
-                                            "number":  113,
-                                            "label":  "Playing With D\u0026D Cards"
-                                        },
-                                        {
-                                            "number":  114,
-                                            "label":  "Playing With Pokémon Cards"
-                                        },
-                                        {
-                                            "number":  115,
-                                            "label":  "Playing With Magic Of The Gathering Cards"
-                                        },
-                                        {
-                                            "number":  116,
-                                            "label":  "Going To A Fortune Teller"
-                                        },
-                                        {
-                                            "number":  117,
-                                            "label":  "Being Involved In Freemasonry"
-                                        },
-                                        {
-                                            "number":  118,
-                                            "label":  "Reading Horoscopes"
-                                        },
-                                        {
-                                            "number":  119,
-                                            "label":  "Going To A Hypnotist"
-                                        },
-                                        {
-                                            "number":  120,
-                                            "label":  "Being Extremely Independent"
-                                        },
-                                        {
-                                            "number":  121,
-                                            "label":  "Being Manipulative"
-                                        },
-                                        {
-                                            "number":  122,
-                                            "label":  "Being Rebellious"
-                                        },
-                                        {
-                                            "number":  123,
-                                            "label":  "Being Involved In Satanism"
-                                        },
-                                        {
-                                            "number":  124,
-                                            "label":  "Being In A Seance"
-                                        },
-                                        {
-                                            "number":  125,
-                                            "label":  "Using Tarot Cards"
-                                        },
-                                        {
-                                            "number":  126,
-                                            "label":  "Participating In Transcendental Meditation"
-                                        },
-                                        {
-                                            "number":  127,
-                                            "label":  "Astral Projection"
-                                        },
-                                        {
-                                            "number":  128,
-                                            "label":  "Lucid Dreaming"
-                                        },
-                                        {
-                                            "number":  129,
-                                            "label":  "Being In Wicca"
-                                        },
-                                        {
-                                            "number":  130,
-                                            "label":  "Being In Witchcraft"
-                                        },
-                                        {
-                                            "number":  131,
-                                            "label":  "Involvement In Any Kind Of Satanic Ritual Abuse"
-                                        },
-                                        {
-                                            "number":  132,
-                                            "label":  "Involvement In Any Kind Of Sexual Ritual Abuse"
-                                        },
-                                        {
-                                            "number":  572,
-                                            "label":  "Familiar Identity Of Witchcraft"
-                                        },
-                                        {
-                                            "number":  664,
-                                            "label":  "Spirit Of Witchcraft"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  133,
-                         "name":  "Heaviness",
-                         "id":  "heaviness",
-                         "topics":  [
-                                        {
-                                            "number":  133,
-                                            "label":  "Abnormal Grief"
-                                        },
-                                        {
-                                            "number":  134,
-                                            "label":  "Abnormal Mourning"
-                                        },
-                                        {
-                                            "number":  135,
-                                            "label":  "Being Defiled"
-                                        },
-                                        {
-                                            "number":  136,
-                                            "label":  "Depression"
-                                        },
-                                        {
-                                            "number":  137,
-                                            "label":  "Despair"
-                                        },
-                                        {
-                                            "number":  138,
-                                            "label":  "Discouragement"
-                                        },
-                                        {
-                                            "number":  139,
-                                            "label":  "Hopelessness"
-                                        },
-                                        {
-                                            "number":  140,
-                                            "label":  "Frustration"
-                                        },
-                                        {
-                                            "number":  141,
-                                            "label":  "Loneliness"
-                                        },
-                                        {
-                                            "number":  142,
-                                            "label":  "Sadness"
-                                        },
-                                        {
-                                            "number":  143,
-                                            "label":  "1Self-pity"
-                                        },
-                                        {
-                                            "number":  144,
-                                            "label":  "Shame"
-                                        },
-                                        {
-                                            "number":  145,
-                                            "label":  "Unjustified Feelings Of Guilt"
-                                        },
-                                        {
-                                            "number":  146,
-                                            "label":  "Having A Wounded Spirit"
-                                        },
-                                        {
-                                            "number":  431,
-                                            "label":  "Hopelessness"
-                                        },
-                                        {
-                                            "number":  463,
-                                            "label":  "Familiar Identity Of Depression"
-                                        },
-                                        {
-                                            "number":  500,
-                                            "label":  "Familiar Identity Of Hopelessness"
-                                        },
-                                        {
-                                            "number":  515,
-                                            "label":  "Familiar Identity Of Loneliness"
-                                        },
-                                        {
-                                            "number":  618,
-                                            "label":  "Spirit Of Loneliness"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  147,
-                         "name":  "Anti-Christ",
-                         "id":  "anti-christ",
-                         "topics":  [
-                                        {
-                                            "number":  147,
-                                            "label":  "Blaspheming The Holy Spirit And Gifts Of The Spirit"
-                                        },
-                                        {
-                                            "number":  148,
-                                            "label":  "Opposition To God’s Word"
-                                        },
-                                        {
-                                            "number":  149,
-                                            "label":  "Condemnation Of God’s Word"
-                                        },
-                                        {
-                                            "number":  150,
-                                            "label":  "Rationalization Of God’s Word"
-                                        },
-                                        {
-                                            "number":  151,
-                                            "label":  "Opposition To Christ’s Deity Or Humanity"
-                                        },
-                                        {
-                                            "number":  152,
-                                            "label":  "Harassing Christians"
-                                        },
-                                        {
-                                            "number":  153,
-                                            "label":  "Persecuting Christians"
-                                        },
-                                        {
-                                            "number":  154,
-                                            "label":  "Suppressing Ministries"
-                                        },
-                                        {
-                                            "number":  155,
-                                            "label":  "Suppressing Ministers"
-                                        },
-                                        {
-                                            "number":  156,
-                                            "label":  "Creating Church Splits"
-                                        },
-                                        {
-                                            "number":  157,
-                                            "label":  "Calling Out False Doctrines Because I Disagree With Them"
-                                        },
-                                        {
-                                            "number":  158,
-                                            "label":  "Calling Out False Teachers Because I Disagree With Them"
-                                        },
-                                        {
-                                            "number":  159,
-                                            "label":  "Feeling Like Giving Up On Christianity"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  160,
-                         "name":  "Deaf \u0026 Dumb",
-                         "id":  "deaf-dumb",
-                         "topics":  [
-                                        {
-                                            "number":  160,
-                                            "label":  "Prone To Accidents"
-                                        },
-                                        {
-                                            "number":  161,
-                                            "label":  "Prone To Drowning"
-                                        },
-                                        {
-                                            "number":  162,
-                                            "label":  "Prone To House Fires"
-                                        },
-                                        {
-                                            "number":  163,
-                                            "label":  "Prone To Car Accidents"
-                                        },
-                                        {
-                                            "number":  164,
-                                            "label":  "Epilepsy"
-                                        },
-                                        {
-                                            "number":  165,
-                                            "label":  "Convulsions"
-                                        },
-                                        {
-                                            "number":  166,
-                                            "label":  "Seizures"
-                                        },
-                                        {
-                                            "number":  167,
-                                            "label":  "Having Autism"
-                                        },
-                                        {
-                                            "number":  168,
-                                            "label":  "Having Tourette’s"
-                                        },
-                                        {
-                                            "number":  169,
-                                            "label":  "Having Any Type Of Mental Disorder"
-                                        },
-                                        {
-                                            "number":  170,
-                                            "label":  "Disease Of Eyes"
-                                        },
-                                        {
-                                            "number":  171,
-                                            "label":  "Disease Of Ears"
-                                        },
-                                        {
-                                            "number":  172,
-                                            "label":  "Being Mentally Ill"
-                                        },
-                                        {
-                                            "number":  173,
-                                            "label":  "Being Mentally Insane"
-                                        },
-                                        {
-                                            "number":  174,
-                                            "label":  "Feeling Like I’m In A Stupor"
-                                        },
-                                        {
-                                            "number":  175,
-                                            "label":  "Having Suicidal Thoughts"
-                                        },
-                                        {
-                                            "number":  176,
-                                            "label":  "Attempting Suicide"
-                                        },
-                                        {
-                                            "number":  177,
-                                            "label":  "Thinking I Am Dumb"
-                                        },
-                                        {
-                                            "number":  178,
-                                            "label":  "Thinking I Am Stupid"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  179,
-                         "name":  "Sexual Perversion",
-                         "id":  "sexual-perversion",
-                         "topics":  [
-                                        {
-                                            "number":  179,
-                                            "label":  "Believing False Teachers"
-                                        },
-                                        {
-                                            "number":  180,
-                                            "label":  "Believing False Doctrines"
-                                        },
-                                        {
-                                            "number":  181,
-                                            "label":  "Having Multi-Partner Sex"
-                                        },
-                                        {
-                                            "number":  182,
-                                            "label":  "Having Orgies"
-                                        },
-                                        {
-                                            "number":  183,
-                                            "label":  "Homosexuality"
-                                        },
-                                        {
-                                            "number":  184,
-                                            "label":  "Polygamy"
-                                        },
-                                        {
-                                            "number":  185,
-                                            "label":  "Sadomasochism"
-                                        },
-                                        {
-                                            "number":  186,
-                                            "label":  "Sexual Deviations"
-                                        },
-                                        {
-                                            "number":  187,
-                                            "label":  "Twisted Thinking"
-                                        },
-                                        {
-                                            "number":  332,
-                                            "label":  "Orgies"
-                                        },
-                                        {
-                                            "number":  366,
-                                            "label":  "Participating In Orgies"
-                                        },
-                                        {
-                                            "number":  369,
-                                            "label":  "Participating In Homosexuality"
-                                        },
-                                        {
-                                            "number":  609,
-                                            "label":  "Spirit Of Homosexuality"
-                                        },
-                                        {
-                                            "number":  631,
-                                            "label":  "Spirit Of Orgies"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  188,
-                         "name":  "Whoredom",
-                         "id":  "whoredom",
-                         "topics":  [
-                                        {
-                                            "number":  188,
-                                            "label":  "Adultery"
-                                        },
-                                        {
-                                            "number":  189,
-                                            "label":  "Bestiality"
-                                        },
-                                        {
-                                            "number":  190,
-                                            "label":  "Exhibitionism"
-                                        },
-                                        {
-                                            "number":  191,
-                                            "label":  "Illegitimacy"
-                                        },
-                                        {
-                                            "number":  192,
-                                            "label":  "Incest"
-                                        },
-                                        {
-                                            "number":  193,
-                                            "label":  "Lust"
-                                        },
-                                        {
-                                            "number":  194,
-                                            "label":  "Masturbation Or Self Molestation"
-                                        },
-                                        {
-                                            "number":  195,
-                                            "label":  "Being Molested As A Child"
-                                        },
-                                        {
-                                            "number":  196,
-                                            "label":  "Molesting Someone Else"
-                                        },
-                                        {
-                                            "number":  197,
-                                            "label":  "Voyeurism Or Exploiting Someone’s Private Space For Personal Profit"
-                                        },
-                                        {
-                                            "number":  198,
-                                            "label":  "Pornography In Any Form"
-                                        },
-                                        {
-                                            "number":  199,
-                                            "label":  "Being Raped"
-                                        },
-                                        {
-                                            "number":  200,
-                                            "label":  "Raping Someone Else"
-                                        },
-                                        {
-                                            "number":  201,
-                                            "label":  "Seduction"
-                                        },
-                                        {
-                                            "number":  202,
-                                            "label":  "Prostitution"
-                                        },
-                                        {
-                                            "number":  251,
-                                            "label":  "Adultery"
-                                        },
-                                        {
-                                            "number":  252,
-                                            "label":  "Incest"
-                                        },
-                                        {
-                                            "number":  365,
-                                            "label":  "Participating In Incest"
-                                        },
-                                        {
-                                            "number":  368,
-                                            "label":  "Participating In Bestiality"
-                                        },
-                                        {
-                                            "number":  582,
-                                            "label":  "Spirit Of Adultery"
-                                        },
-                                        {
-                                            "number":  613,
-                                            "label":  "Spirit Of Incest"
-                                        },
-                                        {
-                                            "number":  619,
-                                            "label":  "Spirit Of Lust"
-                                        },
-                                        {
-                                            "number":  645,
-                                            "label":  "Spirit Of Seduction"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  203,
-                         "name":  "Infirmity",
-                         "id":  "infirmity",
-                         "topics":  [
-                                        {
-                                            "number":  203,
-                                            "label":  "Having Allergies"
-                                        },
-                                        {
-                                            "number":  204,
-                                            "label":  "Having Arthritis"
-                                        },
-                                        {
-                                            "number":  205,
-                                            "label":  "Having Asthma"
-                                        },
-                                        {
-                                            "number":  206,
-                                            "label":  "Having Cancer"
-                                        },
-                                        {
-                                            "number":  207,
-                                            "label":  "Having Diabetes"
-                                        },
-                                        {
-                                            "number":  208,
-                                            "label":  "Having Female Reproductive Problems"
-                                        },
-                                        {
-                                            "number":  209,
-                                            "label":  "Having Male Reproductive Problems"
-                                        },
-                                        {
-                                            "number":  210,
-                                            "label":  "Having Fungus"
-                                        },
-                                        {
-                                            "number":  211,
-                                            "label":  "Having Heart Disease"
-                                        },
-                                        {
-                                            "number":  212,
-                                            "label":  "Having High Blood Pressure"
-                                        },
-                                        {
-                                            "number":  213,
-                                            "label":  "Having Sinus Issues"
-                                        },
-                                        {
-                                            "number":  214,
-                                            "label":  "Having Strokes"
-                                        },
-                                        {
-                                            "number":  215,
-                                            "label":  "Having Viruses"
-                                        },
-                                        {
-                                            "number":  216,
-                                            "label":  "Being Weak Or Feeble"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  217,
-                         "name":  "Shedding of Innocent Blood",
-                         "id":  "shedding-of-innocent-blood",
-                         "topics":  [
-                                        {
-                                            "number":  217,
-                                            "label":  "The Use Of Torture Through Hanging"
-                                        },
-                                        {
-                                            "number":  218,
-                                            "label":  "The Use Of Torture Through Disembowelment"
-                                        },
-                                        {
-                                            "number":  219,
-                                            "label":  "The Use Of The Axe"
-                                        },
-                                        {
-                                            "number":  220,
-                                            "label":  "The Use Of The Knife"
-                                        },
-                                        {
-                                            "number":  221,
-                                            "label":  "The Use Of The Sword"
-                                        },
-                                        {
-                                            "number":  222,
-                                            "label":  "The Use Of The Spear"
-                                        },
-                                        {
-                                            "number":  223,
-                                            "label":  "The Use Of The Arrow"
-                                        },
-                                        {
-                                            "number":  224,
-                                            "label":  "The Use Of The Rifle"
-                                        },
-                                        {
-                                            "number":  225,
-                                            "label":  "The Use Of The Gun"
-                                        },
-                                        {
-                                            "number":  226,
-                                            "label":  "The Use Of The Abortion"
-                                        },
-                                        {
-                                            "number":  227,
-                                            "label":  "The Use Of Kidnapping"
-                                        },
-                                        {
-                                            "number":  228,
-                                            "label":  "The Use Of Ambush Of The Innocent"
-                                        },
-                                        {
-                                            "number":  229,
-                                            "label":  "The Use Of Slaughter"
-                                        },
-                                        {
-                                            "number":  230,
-                                            "label":  "The Use Of Cruelty"
-                                        },
-                                        {
-                                            "number":  231,
-                                            "label":  "The Use Of Torture In Times Of War"
-                                        },
-                                        {
-                                            "number":  232,
-                                            "label":  "The Use Of Torture Of Captives"
-                                        },
-                                        {
-                                            "number":  233,
-                                            "label":  "The Use Of Torture Of The Innocent People In The Land"
-                                        },
-                                        {
-                                            "number":  234,
-                                            "label":  "The Use Of Participation In Acts Of Torture During The Inquisition"
-                                        },
-                                        {
-                                            "number":  235,
-                                            "label":  "The Use Of Participation In Acts Of Torture During The Crusades"
-                                        },
-                                        {
-                                            "number":  236,
-                                            "label":  "The Use Of Heartless Destruction Of Life Based On Greed For Power And Wealth"
-                                        },
-                                        {
-                                            "number":  237,
-                                            "label":  "Shedding Of Innocent Blood Through The Use Of Human Trafficking"
-                                        },
-                                        {
-                                            "number":  238,
-                                            "label":  "The Use Of Slave Trading"
-                                        },
-                                        {
-                                            "number":  239,
-                                            "label":  "The Use Of Slave Ownership"
-                                        },
-                                        {
-                                            "number":  240,
-                                            "label":  "Use Of Cruel Oppression Of People"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  241,
-                         "name":  "Treachery Against Others",
-                         "id":  "treachery-against-others",
-                         "topics":  [
-                                        {
-                                            "number":  241,
-                                            "label":  "Treachery Against Others"
-                                        },
-                                        {
-                                            "number":  242,
-                                            "label":  "False Accusation Against Anyone"
-                                        },
-                                        {
-                                            "number":  243,
-                                            "label":  "Broken Covenants"
-                                        },
-                                        {
-                                            "number":  244,
-                                            "label":  "Betrayals"
-                                        },
-                                        {
-                                            "number":  245,
-                                            "label":  "Unfaithfulness In Relationships With Families"
-                                        },
-                                        {
-                                            "number":  246,
-                                            "label":  "Unfaithfulness In Neighbors"
-                                        },
-                                        {
-                                            "number":  247,
-                                            "label":  "Unfaithfulness In Communities"
-                                        },
-                                        {
-                                            "number":  248,
-                                            "label":  "Unfaithfulness In Church"
-                                        },
-                                        {
-                                            "number":  249,
-                                            "label":  "Unfaithfulness In Business"
-                                        },
-                                        {
-                                            "number":  250,
-                                            "label":  "Unfaithfulness In Nations"
-                                        },
-                                        {
-                                            "number":  253,
-                                            "label":  "Child Molestation"
-                                        },
-                                        {
-                                            "number":  254,
-                                            "label":  "Neglect"
-                                        },
-                                        {
-                                            "number":  255,
-                                            "label":  "Abandonment"
-                                        },
-                                        {
-                                            "number":  256,
-                                            "label":  "Robbery"
-                                        },
-                                        {
-                                            "number":  257,
-                                            "label":  "Cursing"
-                                        },
-                                        {
-                                            "number":  258,
-                                            "label":  "Dishonoring"
-                                        },
-                                        {
-                                            "number":  259,
-                                            "label":  "Failing To Provide For Widows"
-                                        },
-                                        {
-                                            "number":  260,
-                                            "label":  "Lying, Or Cheating"
-                                        },
-                                        {
-                                            "number":  261,
-                                            "label":  "Being A False Witness"
-                                        },
-                                        {
-                                            "number":  262,
-                                            "label":  "Lying Under Oath"
-                                        },
-                                        {
-                                            "number":  263,
-                                            "label":  "Sowing Discord Among The Brethren"
-                                        },
-                                        {
-                                            "number":  264,
-                                            "label":  "Slander"
-                                        },
-                                        {
-                                            "number":  265,
-                                            "label":  "Gossip"
-                                        },
-                                        {
-                                            "number":  266,
-                                            "label":  "Being A Talebearer"
-                                        },
-                                        {
-                                            "number":  267,
-                                            "label":  "Using Guile To Gain Advantage"
-                                        },
-                                        {
-                                            "number":  268,
-                                            "label":  "Exposing Another’s Secrets"
-                                        },
-                                        {
-                                            "number":  269,
-                                            "label":  "Speaking With A Perverse Tongue That Stirs Up Trouble And Evil Against Another"
-                                        },
-                                        {
-                                            "number":  270,
-                                            "label":  "Holding Hatred In One’s Heart"
-                                        },
-                                        {
-                                            "number":  271,
-                                            "label":  "Using A False Balance Or Scale In Business"
-                                        },
-                                        {
-                                            "number":  272,
-                                            "label":  "Moving Boundary Stones Or Pins"
-                                        },
-                                        {
-                                            "number":  273,
-                                            "label":  "Stealing Inheritance By Unjust Means"
-                                        },
-                                        {
-                                            "number":  274,
-                                            "label":  "Giving And Receiving Bribes"
-                                        },
-                                        {
-                                            "number":  275,
-                                            "label":  "Securing Wealth By A Lying Tongue"
-                                        },
-                                        {
-                                            "number":  276,
-                                            "label":  "Taking The Fields Of The Orphans And Widows"
-                                        },
-                                        {
-                                            "number":  277,
-                                            "label":  "Charging Excessive Interest For Loans"
-                                        },
-                                        {
-                                            "number":  278,
-                                            "label":  "Using A Corrupt Judicial System To Destroy Another’s Life"
-                                        },
-                                        {
-                                            "number":  412,
-                                            "label":  "Gossip"
-                                        },
-                                        {
-                                            "number":  493,
-                                            "label":  "Familiar Identity Of Gossip"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  279,
-                         "name":  "Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally",
-                         "id":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
-                         "topics":  [
-                                        {
-                                            "number":  279,
-                                            "label":  "Sexual Abuse"
-                                        },
-                                        {
-                                            "number":  280,
-                                            "label":  "Walking In Hatred"
-                                        },
-                                        {
-                                            "number":  281,
-                                            "label":  "Strife"
-                                        },
-                                        {
-                                            "number":  282,
-                                            "label":  "Contention"
-                                        },
-                                        {
-                                            "number":  283,
-                                            "label":  "Ill-Temper"
-                                        },
-                                        {
-                                            "number":  286,
-                                            "label":  "Violence And Cruelty"
-                                        },
-                                        {
-                                            "number":  287,
-                                            "label":  "Hating Both God And Mankind"
-                                        },
-                                        {
-                                            "number":  288,
-                                            "label":  "Blasphemy Against God"
-                                        },
-                                        {
-                                            "number":  289,
-                                            "label":  "Willfully Separating Self From God And Men"
-                                        },
-                                        {
-                                            "number":  290,
-                                            "label":  "Scorner, Mocker, Scoffer"
-                                        },
-                                        {
-                                            "number":  291,
-                                            "label":  "Hater Of All That Is Pure And Good"
-                                        },
-                                        {
-                                            "number":  292,
-                                            "label":  "Reckless Speaking"
-                                        },
-                                        {
-                                            "number":  293,
-                                            "label":  "Flattering For Gain"
-                                        },
-                                        {
-                                            "number":  294,
-                                            "label":  "Being Resentful, Envious And Jealous Of Another’s Life And Blessings"
-                                        },
-                                        {
-                                            "number":  295,
-                                            "label":  "Seeking Revenge"
-                                        },
-                                        {
-                                            "number":  296,
-                                            "label":  "Cursing Others By Thoughts"
-                                        },
-                                        {
-                                            "number":  297,
-                                            "label":  "Cursing Others By Words"
-                                        },
-                                        {
-                                            "number":  298,
-                                            "label":  "Cursing Others By Actions"
-                                        },
-                                        {
-                                            "number":  299,
-                                            "label":  "Delighting In The Destruction Of Another"
-                                        },
-                                        {
-                                            "number":  300,
-                                            "label":  "Purposeful Lying To Destroy Another’s Life"
-                                        },
-                                        {
-                                            "number":  301,
-                                            "label":  "Human Trafficking"
-                                        },
-                                        {
-                                            "number":  302,
-                                            "label":  "Slavery"
-                                        },
-                                        {
-                                            "number":  456,
-                                            "label":  "Familiar Identity Of Contention"
-                                        },
-                                        {
-                                            "number":  559,
-                                            "label":  "Familiar Identity Of Strife"
-                                        },
-                                        {
-                                            "number":  650,
-                                            "label":  "Spirit Of Sexual Abuse"
-                                        },
-                                        {
-                                            "number":  652,
-                                            "label":  "Spirit Of Slavery"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  303,
-                         "name":  "Trading Floor Transactions with Demons",
-                         "id":  "trading-floor-transactions-with-demons",
-                         "topics":  [
-                                        {
-                                            "number":  303,
-                                            "label":  "Worshipping Idols And Expecting Them To Save You"
-                                        },
-                                        {
-                                            "number":  304,
-                                            "label":  "Trading Floor Transaction With Demons For Power"
-                                        },
-                                        {
-                                            "number":  305,
-                                            "label":  "Trading Floor Transaction With Demons For Money"
-                                        },
-                                        {
-                                            "number":  306,
-                                            "label":  "Trading Floor Transaction With Demons For Fertility"
-                                        },
-                                        {
-                                            "number":  307,
-                                            "label":  "Trading Floor Transaction With Demons For Stubbornly Clinging To Opinions And Viewpoints"
-                                        },
-                                        {
-                                            "number":  308,
-                                            "label":  "Trading Floor Transaction With Demons For Walking In Self-sufficient Independence"
-                                        },
-                                        {
-                                            "number":  309,
-                                            "label":  "Trading Floor Transaction With Demons For Resisting Man’s And God’s Authority"
-                                        },
-                                        {
-                                            "number":  310,
-                                            "label":  "Trading Floor Transaction With Demons For Withholding Tithes And Offerings"
-                                        },
-                                        {
-                                            "number":  311,
-                                            "label":  "Trading Floor Transaction With Demons For Being Lawless"
-                                        },
-                                        {
-                                            "number":  312,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Goods"
-                                        },
-                                        {
-                                            "number":  313,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Life"
-                                        },
-                                        {
-                                            "number":  314,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Spouse"
-                                        },
-                                        {
-                                            "number":  315,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Money"
-                                        },
-                                        {
-                                            "number":  316,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Power"
-                                        },
-                                        {
-                                            "number":  317,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Position"
-                                        },
-                                        {
-                                            "number":  318,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Church Or Denomination"
-                                        },
-                                        {
-                                            "number":  319,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Intellect"
-                                        },
-                                        {
-                                            "number":  320,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Career"
-                                        },
-                                        {
-                                            "number":  321,
-                                            "label":  "Trading Floor Transaction With Demons For Coveting Another’s Accomplishments"
-                                        },
-                                        {
-                                            "number":  322,
-                                            "label":  "Idolizing The Works Of One’s Hands"
-                                        },
-                                        {
-                                            "number":  323,
-                                            "label":  "Idolizing One’s Self"
-                                        },
-                                        {
-                                            "number":  324,
-                                            "label":  "Hiding Envy Behind The Cloak Of Insecurity And Failure"
-                                        },
-                                        {
-                                            "number":  325,
-                                            "label":  "Needing The Worship Of Others"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  326,
-                         "name":  "Gluttony",
-                         "id":  "gluttony",
-                         "topics":  [
-                                        {
-                                            "number":  326,
-                                            "label":  "Being Greedy For Food"
-                                        },
-                                        {
-                                            "number":  327,
-                                            "label":  "Being Greedy For Chocolate Or Attention"
-                                        },
-                                        {
-                                            "number":  328,
-                                            "label":  "Being Addicted To Drugs"
-                                        },
-                                        {
-                                            "number":  331,
-                                            "label":  "Participating In Drunkenness"
-                                        },
-                                        {
-                                            "number":  333,
-                                            "label":  "Gambling"
-                                        },
-                                        {
-                                            "number":  334,
-                                            "label":  "Worldliness"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  335,
-                         "name":  "Self-Righteousness",
-                         "id":  "self-righteousness",
-                         "topics":  [
-                                        {
-                                            "number":  335,
-                                            "label":  "Shameful Compromise In The Face Of Danger, Difficulty, Or Opposition"
-                                        },
-                                        {
-                                            "number":  336,
-                                            "label":  "Being A Coward Who Justifies Actions And Wickedness"
-                                        },
-                                        {
-                                            "number":  337,
-                                            "label":  "Evading Responsibility For Actions"
-                                        },
-                                        {
-                                            "number":  338,
-                                            "label":  "Over-estimating Oneself, Spiritually"
-                                        },
-                                        {
-                                            "number":  339,
-                                            "label":  "Being Willfully Contrary In One’s Heart"
-                                        },
-                                        {
-                                            "number":  340,
-                                            "label":  "Being Cold-hearted"
-                                        },
-                                        {
-                                            "number":  341,
-                                            "label":  "Hating Instruction, Discipline, And Correction"
-                                        },
-                                        {
-                                            "number":  342,
-                                            "label":  "Living In A Deliberate State Of Hypocrisy"
-                                        },
-                                        {
-                                            "number":  343,
-                                            "label":  "Being Lukewarm"
-                                        },
-                                        {
-                                            "number":  344,
-                                            "label":  "Being Cold-hearted Towards The Needs Of Others And The Poor"
-                                        },
-                                        {
-                                            "number":  345,
-                                            "label":  "Deluding Oneself As Being Rich In Spirit"
-                                        },
-                                        {
-                                            "number":  346,
-                                            "label":  "Being Spiritually Proud Of Dead Works"
-                                        },
-                                        {
-                                            "number":  347,
-                                            "label":  "Covering Up Transgressions"
-                                        },
-                                        {
-                                            "number":  348,
-                                            "label":  "Being Polluted By The Leaven Of The Pharisees Or Sadducees"
-                                        },
-                                        {
-                                            "number":  349,
-                                            "label":  "Being Unteachable, Arrogant, Proud, Haughty"
-                                        },
-                                        {
-                                            "number":  350,
-                                            "label":  "Being Competitive"
-                                        },
-                                        {
-                                            "number":  351,
-                                            "label":  "Needing To Be The Best"
-                                        },
-                                        {
-                                            "number":  352,
-                                            "label":  "Being Judgmental, Critical, Suspicious, Legalistic"
-                                        },
-                                        {
-                                            "number":  353,
-                                            "label":  "Belonging To Factions Such As The Klu Klux Klan Or Freemasons"
-                                        },
-                                        {
-                                            "number":  354,
-                                            "label":  "Having A Party Spirit"
-                                        },
-                                        {
-                                            "number":  355,
-                                            "label":  "Disputing; Being Opinionated"
-                                        },
-                                        {
-                                            "number":  356,
-                                            "label":  "Fearing Man Rather Than God"
-                                        },
-                                        {
-                                            "number":  357,
-                                            "label":  "Being A Respecter Of Persons"
-                                        },
-                                        {
-                                            "number":  358,
-                                            "label":  "Showing Partiality To The Rich And Powerful"
-                                        },
-                                        {
-                                            "number":  359,
-                                            "label":  "Making Rash Vows To God And Others"
-                                        },
-                                        {
-                                            "number":  360,
-                                            "label":  "Believing Religious Lies Like Infant Baptism Has Made You Righteous Before God"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  361,
-                         "name":  "Sexual Perversion",
-                         "id":  "sexual-perversion",
-                         "topics":  [
-                                        {
-                                            "number":  361,
-                                            "label":  "Bastard Children Born Outside The Protection Of Marriage"
-                                        },
-                                        {
-                                            "number":  362,
-                                            "label":  "Being Polluted By The Leaven Of The Herodians"
-                                        },
-                                        {
-                                            "number":  363,
-                                            "label":  "Participating In Fornication"
-                                        },
-                                        {
-                                            "number":  364,
-                                            "label":  "Participating In Molestation"
-                                        },
-                                        {
-                                            "number":  367,
-                                            "label":  "Participating In Masturbation"
-                                        },
-                                        {
-                                            "number":  370,
-                                            "label":  "Participating In Lesbianism"
-                                        },
-                                        {
-                                            "number":  371,
-                                            "label":  "Participating In Gender Confusion"
-                                        },
-                                        {
-                                            "number":  372,
-                                            "label":  "Participating In Pornography"
-                                        },
-                                        {
-                                            "number":  373,
-                                            "label":  "Serving the Spirit Spouse gods and Inviting Others to Do the Same"
-                                        },
-                                        {
-                                            "number":  374,
-                                            "label":  "Using Women As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions"
-                                        },
-                                        {
-                                            "number":  375,
-                                            "label":  "Using Children As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions"
-                                        },
-                                        {
-                                            "number":  376,
-                                            "label":  "Using Men As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions"
-                                        },
-                                        {
-                                            "number":  377,
-                                            "label":  "Using Filthy Language"
-                                        },
-                                        {
-                                            "number":  378,
-                                            "label":  "Participating In Masochism, Sadism, And Wicked Imaginations"
-                                        },
-                                        {
-                                            "number":  520,
-                                            "label":  "Familiar Identity Of Molestation"
-                                        },
-                                        {
-                                            "number":  615,
-                                            "label":  "Spirit Of Lesbianism"
-                                        },
-                                        {
-                                            "number":  623,
-                                            "label":  "Spirit Of Masturbation"
-                                        },
-                                        {
-                                            "number":  635,
-                                            "label":  "Spirit Of Pornography"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  379,
-                         "name":  "Rebellion",
-                         "id":  "rebellion",
-                         "topics":  [
-                                        {
-                                            "number":  379,
-                                            "label":  "Participating In Witchcraft Through The Control And Manipulation Of Another’s Will"
-                                        },
-                                        {
-                                            "number":  380,
-                                            "label":  "Being Stubborn"
-                                        },
-                                        {
-                                            "number":  381,
-                                            "label":  "Emasculation Of Men Through Female Domination"
-                                        },
-                                        {
-                                            "number":  382,
-                                            "label":  "Hating Men"
-                                        },
-                                        {
-                                            "number":  383,
-                                            "label":  "Hating Women"
-                                        },
-                                        {
-                                            "number":  384,
-                                            "label":  "Hating One’s Sexual Role And Function"
-                                        },
-                                        {
-                                            "number":  385,
-                                            "label":  "Rebelling Against The Natural Law Through Homosexuality"
-                                        },
-                                        {
-                                            "number":  386,
-                                            "label":  "Abdicating Responsibility Of Leadership"
-                                        },
-                                        {
-                                            "number":  387,
-                                            "label":  "Abandoning Of The Family By The Father Or Mother"
-                                        },
-                                        {
-                                            "number":  388,
-                                            "label":  "Being Above The Law Of God And The Government"
-                                        },
-                                        {
-                                            "number":  389,
-                                            "label":  "Resisting And Opposing Authority"
-                                        },
-                                        {
-                                            "number":  390,
-                                            "label":  "Encouraging Others To Oppose Lawful Authority"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  393,
-                         "name":  "Destructive Attitudes Against God’s Image",
-                         "id":  "destructive-attitudes-against-god-s-image",
-                         "topics":  [
-                                        {
-                                            "number":  393,
-                                            "label":  "Obsession With Failure"
-                                        },
-                                        {
-                                            "number":  394,
-                                            "label":  "Obsession With Defeat"
-                                        },
-                                        {
-                                            "number":  395,
-                                            "label":  "Obsession With Negatives Of The Past"
-                                        },
-                                        {
-                                            "number":  396,
-                                            "label":  "False Expectations Appearing Real"
-                                        },
-                                        {
-                                            "number":  397,
-                                            "label":  "Rebellion To Established Authority"
-                                        },
-                                        {
-                                            "number":  398,
-                                            "label":  "Lying"
-                                        },
-                                        {
-                                            "number":  399,
-                                            "label":  "Thoughts Of Strife"
-                                        },
-                                        {
-                                            "number":  400,
-                                            "label":  "Thoughts Of Discord"
-                                        },
-                                        {
-                                            "number":  401,
-                                            "label":  "Thoughts Of Offense"
-                                        },
-                                        {
-                                            "number":  402,
-                                            "label":  "Erratic Thoughts Out Of Nowhere"
-                                        },
-                                        {
-                                            "number":  403,
-                                            "label":  "Compulsive Desires To Binge Eat"
-                                        },
-                                        {
-                                            "number":  404,
-                                            "label":  "Compulsive Desires To Lust"
-                                        },
-                                        {
-                                            "number":  405,
-                                            "label":  "Compulsive Desires To Overwork"
-                                        },
-                                        {
-                                            "number":  406,
-                                            "label":  "Compulsive Desires To Overdo Whatever"
-                                        },
-                                        {
-                                            "number":  407,
-                                            "label":  "Overcompensating In Any Way"
-                                        },
-                                        {
-                                            "number":  408,
-                                            "label":  "Constant Worry Thoughts"
-                                        },
-                                        {
-                                            "number":  409,
-                                            "label":  "Thoughts About Illicit Sex"
-                                        },
-                                        {
-                                            "number":  410,
-                                            "label":  "Thoughts About Homosexuality"
-                                        },
-                                        {
-                                            "number":  411,
-                                            "label":  "Thoughts About Compulsion To View Pornography"
-                                        },
-                                        {
-                                            "number":  413,
-                                            "label":  "Sudden Distrust In People Who Have Given You No Reason To Distrust Them"
-                                        },
-                                        {
-                                            "number":  414,
-                                            "label":  "Accusing Thoughts About Yourself"
-                                        },
-                                        {
-                                            "number":  415,
-                                            "label":  "Accusing Thoughts About Others"
-                                        },
-                                        {
-                                            "number":  416,
-                                            "label":  "Compulsive Uncontrolled Anger"
-                                        },
-                                        {
-                                            "number":  417,
-                                            "label":  "Disunity - Seeking To Pit One Person Against Another"
-                                        },
-                                        {
-                                            "number":  418,
-                                            "label":  "Seeking To Create Doubt About A Person Or Day"
-                                        },
-                                        {
-                                            "number":  419,
-                                            "label":  "Thoughts Of Compromise With The Flesh And Known Sinful Traps"
-                                        },
-                                        {
-                                            "number":  420,
-                                            "label":  "Overwhelming Panic Attacks"
-                                        },
-                                        {
-                                            "number":  421,
-                                            "label":  "Self-doubt"
-                                        },
-                                        {
-                                            "number":  422,
-                                            "label":  "Excessive Pride In Looks"
-                                        },
-                                        {
-                                            "number":  423,
-                                            "label":  "Excessive Pride In Work"
-                                        },
-                                        {
-                                            "number":  424,
-                                            "label":  "Excessive Pride In Church Activities"
-                                        },
-                                        {
-                                            "number":  425,
-                                            "label":  "Rigidity"
-                                        },
-                                        {
-                                            "number":  426,
-                                            "label":  "Feelings Of Loneliness And Detachment"
-                                        },
-                                        {
-                                            "number":  427,
-                                            "label":  "Thoughts That I Do Not Fit In Anywhere"
-                                        },
-                                        {
-                                            "number":  428,
-                                            "label":  "Thoughts That Question God’s Love, Faithfulness And Word"
-                                        },
-                                        {
-                                            "number":  429,
-                                            "label":  "Selfish Thoughts"
-                                        },
-                                        {
-                                            "number":  430,
-                                            "label":  "Thinking That Others Don’t Care About Me"
-                                        },
-                                        {
-                                            "number":  432,
-                                            "label":  "Beliefs That Nothing Will Get Better"
-                                        },
-                                        {
-                                            "number":  433,
-                                            "label":  "Lack Of Ability To Focus"
-                                        },
-                                        {
-                                            "number":  434,
-                                            "label":  "Lack Of Desire To Read The Word Of God"
-                                        },
-                                        {
-                                            "number":  435,
-                                            "label":  "Lack Of Desire To Pray"
-                                        },
-                                        {
-                                            "number":  436,
-                                            "label":  "Lack Of Desire To Attend Church"
-                                        },
-                                        {
-                                            "number":  437,
-                                            "label":  "Thoughts Of Isolation"
-                                        },
-                                        {
-                                            "number":  438,
-                                            "label":  "Thoughts And Feelings Of Panic"
-                                        },
-                                        {
-                                            "number":  439,
-                                            "label":  "Over-religiousness"
-                                        },
-                                        {
-                                            "number":  440,
-                                            "label":  "Duplicity Or Hypocrisy"
-                                        },
-                                        {
-                                            "number":  441,
-                                            "label":  "No Transparency - Believing That My Problems Are Too Big For Anyone Else"
-                                        },
-                                        {
-                                            "number":  442,
-                                            "label":  "Having Thoughts Of Anxiety"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  443,
-                         "name":  "Destructive Identities Against God",
-                         "id":  "destructive-identities-against-god",
-                         "topics":  [
-                                        {
-                                            "number":  443,
-                                            "label":  "Familiar Identity Of Addiction"
-                                        },
-                                        {
-                                            "number":  445,
-                                            "label":  "Familiar Identity Of Anti-submissiveness"
-                                        },
-                                        {
-                                            "number":  447,
-                                            "label":  "Familiar Identity Of Apprehension"
-                                        },
-                                        {
-                                            "number":  448,
-                                            "label":  "Familiar Identity Of Arguing"
-                                        },
-                                        {
-                                            "number":  449,
-                                            "label":  "Familiar Identity Of Backbiting"
-                                        },
-                                        {
-                                            "number":  450,
-                                            "label":  "Familiar Identity Of Belittling"
-                                        },
-                                        {
-                                            "number":  451,
-                                            "label":  "Familiar Identity Of Bickering"
-                                        },
-                                        {
-                                            "number":  452,
-                                            "label":  "Familiar Identity Of Bitterness"
-                                        },
-                                        {
-                                            "number":  453,
-                                            "label":  "Familiar Identity Of Blasphemy"
-                                        },
-                                        {
-                                            "number":  454,
-                                            "label":  "Familiar Identity Of Compromise"
-                                        },
-                                        {
-                                            "number":  455,
-                                            "label":  "Familiar Identity Of Confrontation"
-                                        },
-                                        {
-                                            "number":  457,
-                                            "label":  "Familiar Identity Of Crib Death"
-                                        },
-                                        {
-                                            "number":  458,
-                                            "label":  "Familiar Identity Of Criticism"
-                                        },
-                                        {
-                                            "number":  460,
-                                            "label":  "Familiar Identity Of Death"
-                                        },
-                                        {
-                                            "number":  462,
-                                            "label":  "Familiar Identity Of Defeatism"
-                                        },
-                                        {
-                                            "number":  464,
-                                            "label":  "Familiar Identity Of Discontent"
-                                        },
-                                        {
-                                            "number":  465,
-                                            "label":  "Familiar Identity Of Disobedience"
-                                        },
-                                        {
-                                            "number":  466,
-                                            "label":  "Familiar Identity Of Distrust"
-                                        },
-                                        {
-                                            "number":  467,
-                                            "label":  "Familiar Identity Of Divination"
-                                        },
-                                        {
-                                            "number":  468,
-                                            "label":  "Familiar Identity Of Doctrinal Error"
-                                        },
-                                        {
-                                            "number":  469,
-                                            "label":  "Familiar Identity Of Doctrinal Obsession"
-                                        },
-                                        {
-                                            "number":  470,
-                                            "label":  "Familiar Identity Of Dominance"
-                                        },
-                                        {
-                                            "number":  471,
-                                            "label":  "Familiar Identity Of Doom And Gloom"
-                                        },
-                                        {
-                                            "number":  472,
-                                            "label":  "Familiar Identity Of Doubt And Unbelief"
-                                        },
-                                        {
-                                            "number":  473,
-                                            "label":  "Familiar Identity Of Dread"
-                                        },
-                                        {
-                                            "number":  474,
-                                            "label":  "Familiar Identity Of Early Death"
-                                        },
-                                        {
-                                            "number":  475,
-                                            "label":  "Familiar Identity Of Egotism"
-                                        },
-                                        {
-                                            "number":  476,
-                                            "label":  "Familiar Identity Of Envy"
-                                        },
-                                        {
-                                            "number":  477,
-                                            "label":  "Familiar Identity Of Escapism"
-                                        },
-                                        {
-                                            "number":  478,
-                                            "label":  "Familiar Identity Of Fantasy"
-                                        },
-                                        {
-                                            "number":  479,
-                                            "label":  "Familiar Identity Of Fatigue"
-                                        },
-                                        {
-                                            "number":  480,
-                                            "label":  "Familiar Identity Of Faultfinding"
-                                        },
-                                        {
-                                            "number":  481,
-                                            "label":  "Familiar Identity Of Fear"
-                                        },
-                                        {
-                                            "number":  482,
-                                            "label":  "Familiar Identity Of Fear Of Accusation"
-                                        },
-                                        {
-                                            "number":  483,
-                                            "label":  "Familiar Identity Of Fear Of Condemnation"
-                                        },
-                                        {
-                                            "number":  484,
-                                            "label":  "Familiar Identity Of Fear Of Disapproval"
-                                        },
-                                        {
-                                            "number":  485,
-                                            "label":  "Familiar Identity Of Fear Of Failure"
-                                        },
-                                        {
-                                            "number":  486,
-                                            "label":  "Familiar Identity Of Fear Of Judgment"
-                                        },
-                                        {
-                                            "number":  487,
-                                            "label":  "Familiar Identity Of Fear Of Man"
-                                        },
-                                        {
-                                            "number":  488,
-                                            "label":  "Familiar Identity Of Fear Of Reproof"
-                                        },
-                                        {
-                                            "number":  489,
-                                            "label":  "Familiar Identity Of Fighting"
-                                        },
-                                        {
-                                            "number":  490,
-                                            "label":  "Familiar Identity Of Forgetfulness"
-                                        },
-                                        {
-                                            "number":  491,
-                                            "label":  "Familiar Identity Of Frigidity"
-                                        },
-                                        {
-                                            "number":  492,
-                                            "label":  "Familiar Identity Of Gluttony"
-                                        },
-                                        {
-                                            "number":  494,
-                                            "label":  "Familiar Identity Of Greed"
-                                        },
-                                        {
-                                            "number":  495,
-                                            "label":  "Familiar Identity Of Hallucinations"
-                                        },
-                                        {
-                                            "number":  497,
-                                            "label":  "Familiar Identity Of Headache"
-                                        },
-                                        {
-                                            "number":  498,
-                                            "label":  "Familiar Identity Of Heartbreak"
-                                        },
-                                        {
-                                            "number":  499,
-                                            "label":  "Familiar Identity Of Heaviness"
-                                        },
-                                        {
-                                            "number":  501,
-                                            "label":  "Familiar Identity Of Hurt"
-                                        },
-                                        {
-                                            "number":  502,
-                                            "label":  "Familiar Identity Of Inadequacy"
-                                        },
-                                        {
-                                            "number":  503,
-                                            "label":  "Familiar Identity Of Incubus"
-                                        },
-                                        {
-                                            "number":  504,
-                                            "label":  "Familiar Identity Of Indifference"
-                                        },
-                                        {
-                                            "number":  505,
-                                            "label":  "Familiar Identity Of Inferiority"
-                                        },
-                                        {
-                                            "number":  506,
-                                            "label":  "Familiar Identity Of Infirmity"
-                                        },
-                                        {
-                                            "number":  507,
-                                            "label":  "Familiar Identity Of Insanity"
-                                        },
-                                        {
-                                            "number":  508,
-                                            "label":  "Familiar Identity Of Insomnia"
-                                        },
-                                        {
-                                            "number":  509,
-                                            "label":  "Familiar Identity Of Intellectualism"
-                                        },
-                                        {
-                                            "number":  511,
-                                            "label":  "Familiar Identity Of Kleptomania"
-                                        },
-                                        {
-                                            "number":  512,
-                                            "label":  "Familiar Identity Of Laziness"
-                                        },
-                                        {
-                                            "number":  513,
-                                            "label":  "Familiar Identity Of Legalism"
-                                        },
-                                        {
-                                            "number":  514,
-                                            "label":  "Familiar Identity Of Listlessness"
-                                        },
-                                        {
-                                            "number":  516,
-                                            "label":  "Familiar Identity Of Lying Spirit"
-                                        },
-                                        {
-                                            "number":  517,
-                                            "label":  "Familiar Identity Of Mania"
-                                        },
-                                        {
-                                            "number":  518,
-                                            "label":  "Familiar Identity Of Materialism"
-                                        },
-                                        {
-                                            "number":  521,
-                                            "label":  "Familiar Identity Of Moonstruck"
-                                        },
-                                        {
-                                            "number":  523,
-                                            "label":  "Familiar Identity Of Nervousness"
-                                        },
-                                        {
-                                            "number":  525,
-                                            "label":  "Familiar Identity Of Obesity"
-                                        },
-                                        {
-                                            "number":  526,
-                                            "label":  "Familiar Identity Of Occult Spirits"
-                                        },
-                                        {
-                                            "number":  527,
-                                            "label":  "Familiar Identity Of Overburden"
-                                        },
-                                        {
-                                            "number":  528,
-                                            "label":  "Familiar Identity Of Paranoia"
-                                        },
-                                        {
-                                            "number":  530,
-                                            "label":  "Familiar Identity Of Persecution"
-                                        },
-                                        {
-                                            "number":  531,
-                                            "label":  "Familiar Identity Of Playacting"
-                                        },
-                                        {
-                                            "number":  532,
-                                            "label":  "Familiar Identity Of Possessiveness"
-                                        },
-                                        {
-                                            "number":  533,
-                                            "label":  "Familiar Identity Of Pride"
-                                        },
-                                        {
-                                            "number":  535,
-                                            "label":  "Familiar Identity Of Quarreling"
-                                        },
-                                        {
-                                            "number":  536,
-                                            "label":  "Familiar Identity Of Rape"
-                                        },
-                                        {
-                                            "number":  537,
-                                            "label":  "Familiar Identity Of Rationalism"
-                                        },
-                                        {
-                                            "number":  538,
-                                            "label":  "Familiar Identity Of Rebellion"
-                                        },
-                                        {
-                                            "number":  539,
-                                            "label":  "Familiar Identity Of Religiosity"
-                                        },
-                                        {
-                                            "number":  540,
-                                            "label":  "Familiar Identity Of Resentment"
-                                        },
-                                        {
-                                            "number":  541,
-                                            "label":  "Familiar Identity Of Restlessness"
-                                        },
-                                        {
-                                            "number":  542,
-                                            "label":  "Familiar Identity Of Retaliation"
-                                        },
-                                        {
-                                            "number":  543,
-                                            "label":  "Familiar Identity Of Retardation"
-                                        },
-                                        {
-                                            "number":  545,
-                                            "label":  "Familiar Identity Of Ritualism"
-                                        },
-                                        {
-                                            "number":  546,
-                                            "label":  "Familiar Identity Of Sadness And Crying"
-                                        },
-                                        {
-                                            "number":  547,
-                                            "label":  "Familiar Identity Of Schizophrenia"
-                                        },
-                                        {
-                                            "number":  548,
-                                            "label":  "Familiar Identity Of Selfishness"
-                                        },
-                                        {
-                                            "number":  549,
-                                            "label":  "Familiar Identity Of Self-pity"
-                                        },
-                                        {
-                                            "number":  550,
-                                            "label":  "Familiar Identity Of Senility"
-                                        },
-                                        {
-                                            "number":  551,
-                                            "label":  "Familiar Identity Of Sensitivity"
-                                        },
-                                        {
-                                            "number":  552,
-                                            "label":  "Familiar Identity Of Sexual Perversion"
-                                        },
-                                        {
-                                            "number":  553,
-                                            "label":  "Familiar Identity Of Shyness"
-                                        },
-                                        {
-                                            "number":  554,
-                                            "label":  "Familiar Identity Of Sorrow"
-                                        },
-                                        {
-                                            "number":  555,
-                                            "label":  "Familiar Identity Of Spirit Of Error"
-                                        },
-                                        {
-                                            "number":  556,
-                                            "label":  "Familiar Identity Of Spiritism"
-                                        },
-                                        {
-                                            "number":  557,
-                                            "label":  "Familiar Identity Of Spite"
-                                        },
-                                        {
-                                            "number":  558,
-                                            "label":  "Familiar Identity Of Stoicism"
-                                        },
-                                        {
-                                            "number":  560,
-                                            "label":  "Familiar Identity Of Stubbornness"
-                                        },
-                                        {
-                                            "number":  561,
-                                            "label":  "Familiar Identity Of Succubus"
-                                        },
-                                        {
-                                            "number":  562,
-                                            "label":  "Familiar Identity Of Suicide"
-                                        },
-                                        {
-                                            "number":  563,
-                                            "label":  "Familiar Identity Of Suspicion"
-                                        },
-                                        {
-                                            "number":  564,
-                                            "label":  "Familiar Identity Of Temper"
-                                        },
-                                        {
-                                            "number":  565,
-                                            "label":  "Familiar Identity Of Tension"
-                                        },
-                                        {
-                                            "number":  566,
-                                            "label":  "Familiar Identity Of Timidity"
-                                        },
-                                        {
-                                            "number":  567,
-                                            "label":  "Familiar Identity Of Unfairness"
-                                        },
-                                        {
-                                            "number":  568,
-                                            "label":  "Familiar Identity Of Unforgiveness"
-                                        },
-                                        {
-                                            "number":  569,
-                                            "label":  "Familiar Identity Of Vanity"
-                                        },
-                                        {
-                                            "number":  570,
-                                            "label":  "Familiar Identity Of Violence"
-                                        },
-                                        {
-                                            "number":  571,
-                                            "label":  "Familiar Identity Of Weary In Well Doing"
-                                        },
-                                        {
-                                            "number":  573,
-                                            "label":  "Familiar Identity Of Worry"
-                                        },
-                                        {
-                                            "number":  597,
-                                            "label":  "Spirit Of Disobedience"
-                                        },
-                                        {
-                                            "number":  604,
-                                            "label":  "Spirit Of Fear"
-                                        },
-                                        {
-                                            "number":  639,
-                                            "label":  "Spirit Of Pride"
-                                        },
-                                        {
-                                            "number":  643,
-                                            "label":  "Spirit Of Rebellion"
-                                        },
-                                        {
-                                            "number":  661,
-                                            "label":  "Spirit Of Violence"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  574,
-                         "name":  "Spirit Spouse Gods",
-                         "id":  "spirit-spouse-gods",
-                         "topics":  [
-                                        {
-                                            "number":  574,
-                                            "label":  "Disembodied Spirits Of Unsaved Family Members, Relatives, Or Ancestors Of The Person Or His OR Her Spouse"
-                                        },
-                                        {
-                                            "number":  575,
-                                            "label":  "Antichrist Spirit"
-                                        },
-                                        {
-                                            "number":  576,
-                                            "label":  "Exhibitionist Spirit"
-                                        },
-                                        {
-                                            "number":  577,
-                                            "label":  "Fetish Spirit"
-                                        },
-                                        {
-                                            "number":  578,
-                                            "label":  "Haughty Spirit"
-                                        },
-                                        {
-                                            "number":  579,
-                                            "label":  "Spirit Eros"
-                                        },
-                                        {
-                                            "number":  580,
-                                            "label":  "Spirit Of Addictions And Sex Addictions"
-                                        },
-                                        {
-                                            "number":  581,
-                                            "label":  "Spirit Of Adoration"
-                                        },
-                                        {
-                                            "number":  583,
-                                            "label":  "Spirit Of Adulation"
-                                        },
-                                        {
-                                            "number":  584,
-                                            "label":  "Spirit Of Attractions"
-                                        },
-                                        {
-                                            "number":  585,
-                                            "label":  "Spirit Of Autoeroticism"
-                                        },
-                                        {
-                                            "number":  586,
-                                            "label":  "Spirit Of Bacchus"
-                                        },
-                                        {
-                                            "number":  587,
-                                            "label":  "Spirit Of Ba-al Worship"
-                                        },
-                                        {
-                                            "number":  588,
-                                            "label":  "Spirit Of Bondage"
-                                        },
-                                        {
-                                            "number":  589,
-                                            "label":  "Spirit Of Breast Lust"
-                                        },
-                                        {
-                                            "number":  590,
-                                            "label":  "Spirit Of Compulsion"
-                                        },
-                                        {
-                                            "number":  591,
-                                            "label":  "Spirit Of Control"
-                                        },
-                                        {
-                                            "number":  592,
-                                            "label":  "Spirit Of Decadence"
-                                        },
-                                        {
-                                            "number":  593,
-                                            "label":  "Spirit Of Debauchery"
-                                        },
-                                        {
-                                            "number":  595,
-                                            "label":  "Spirit Of Delights"
-                                        },
-                                        {
-                                            "number":  596,
-                                            "label":  "Spirit Of Desires"
-                                        },
-                                        {
-                                            "number":  598,
-                                            "label":  "Spirit Of Double-mindedness"
-                                        },
-                                        {
-                                            "number":  599,
-                                            "label":  "Spirit Of Erotic Lust (Lust For The Erotic)"
-                                        },
-                                        {
-                                            "number":  600,
-                                            "label":  "Spirit Of Eroticism"
-                                        },
-                                        {
-                                            "number":  601,
-                                            "label":  "Spirit Of Eye Lust"
-                                        },
-                                        {
-                                            "number":  602,
-                                            "label":  "Spirit Of Fantasizing"
-                                        },
-                                        {
-                                            "number":  603,
-                                            "label":  "Spirit Of Fascination"
-                                        },
-                                        {
-                                            "number":  605,
-                                            "label":  "Spirit Of Forces"
-                                        },
-                                        {
-                                            "number":  606,
-                                            "label":  "Spirit Of Genital Lust"
-                                        },
-                                        {
-                                            "number":  607,
-                                            "label":  "Spirit Of Guile"
-                                        },
-                                        {
-                                            "number":  608,
-                                            "label":  "Spirit Of Habits"
-                                        },
-                                        {
-                                            "number":  610,
-                                            "label":  "Spirit Of Idolatry"
-                                        },
-                                        {
-                                            "number":  611,
-                                            "label":  "Spirit Of Immorality"
-                                        },
-                                        {
-                                            "number":  612,
-                                            "label":  "Spirit Of Inordinate Affections"
-                                        },
-                                        {
-                                            "number":  614,
-                                            "label":  "Spirit Of Lasciviousness"
-                                        },
-                                        {
-                                            "number":  616,
-                                            "label":  "Spirit Of Lewdness"
-                                        },
-                                        {
-                                            "number":  617,
-                                            "label":  "Spirit Of Lies"
-                                        },
-                                        {
-                                            "number":  620,
-                                            "label":  "Spirit Of Lust For Looks"
-                                        },
-                                        {
-                                            "number":  621,
-                                            "label":  "Spirit Of Lust For The Flesh (Cannibalism)"
-                                        },
-                                        {
-                                            "number":  622,
-                                            "label":  "Spirit Of Manipulation"
-                                        },
-                                        {
-                                            "number":  624,
-                                            "label":  "Spirit Of Mirrors"
-                                        },
-                                        {
-                                            "number":  625,
-                                            "label":  "Spirit Of Narcissism"
-                                        },
-                                        {
-                                            "number":  626,
-                                            "label":  "Spirit Of Necrophilia"
-                                        },
-                                        {
-                                            "number":  627,
-                                            "label":  "Spirit Of Nudity"
-                                        },
-                                        {
-                                            "number":  628,
-                                            "label":  "Spirit Of Nymphomania"
-                                        },
-                                        {
-                                            "number":  629,
-                                            "label":  "Spirit Of Obsession"
-                                        },
-                                        {
-                                            "number":  630,
-                                            "label":  "Spirit Of Oppression"
-                                        },
-                                        {
-                                            "number":  632,
-                                            "label":  "Spirit Of Pedophilia (Lust For Children)"
-                                        },
-                                        {
-                                            "number":  633,
-                                            "label":  "Spirit Of Penile Lust"
-                                        },
-                                        {
-                                            "number":  634,
-                                            "label":  "Spirit Of Physical Abuse"
-                                        },
-                                        {
-                                            "number":  636,
-                                            "label":  "Spirit Of Practices Of Sexual And Sensual Activities (Sex Therapists)"
-                                        },
-                                        {
-                                            "number":  637,
-                                            "label":  "Spirit of Somnophilia"
-                                        },
-                                        {
-                                            "number":  638,
-                                            "label":  "Spirit Of Pre-occupations"
-                                        },
-                                        {
-                                            "number":  640,
-                                            "label":  "Spirit Of Promiscuity"
-                                        },
-                                        {
-                                            "number":  641,
-                                            "label":  "Spirit Of Prostitution (Harlotry) (Whoredoms) (Sex-trafficking)"
-                                        },
-                                        {
-                                            "number":  642,
-                                            "label":  "Spirit Of Python"
-                                        },
-                                        {
-                                            "number":  644,
-                                            "label":  "Spirit Of Ritual Sex"
-                                        },
-                                        {
-                                            "number":  646,
-                                            "label":  "Spirit Of Self-adoration"
-                                        },
-                                        {
-                                            "number":  647,
-                                            "label":  "Spirit Of Self-idolatry"
-                                        },
-                                        {
-                                            "number":  648,
-                                            "label":  "Spirit Of Self-indulgence"
-                                        },
-                                        {
-                                            "number":  649,
-                                            "label":  "Spirit Of Self-lust"
-                                        },
-                                        {
-                                            "number":  651,
-                                            "label":  "Spirit Of Sexual Idolatry"
-                                        },
-                                        {
-                                            "number":  653,
-                                            "label":  "Spirit Of Sodomy"
-                                        },
-                                        {
-                                            "number":  654,
-                                            "label":  "Spirit Of Stupor"
-                                        },
-                                        {
-                                            "number":  655,
-                                            "label":  "Spirit Of Temptations"
-                                        },
-                                        {
-                                            "number":  656,
-                                            "label":  "Spirit Of Touch Lust"
-                                        },
-                                        {
-                                            "number":  658,
-                                            "label":  "Spirit Of Vaginal Lust"
-                                        },
-                                        {
-                                            "number":  659,
-                                            "label":  "Spirit Of Verbal Eroticism"
-                                        },
-                                        {
-                                            "number":  660,
-                                            "label":  "Spirit Of Verbal Lust"
-                                        },
-                                        {
-                                            "number":  662,
-                                            "label":  "Spirit Of Voyeurism"
-                                        },
-                                        {
-                                            "number":  663,
-                                            "label":  "Spirit Of Vulgarity"
-                                        },
-                                        {
-                                            "number":  665,
-                                            "label":  "Spirit of Writing Fan-fiction Stories to Create and Worship your Own Narrative"
-                                        },
-                                        {
-                                            "number":  666,
-                                            "label":  "Spirit Of Love That Keeps Loving Relationships From Forming And Keeps People Single"
-                                        }
-                                    ]
-                     }
-                 ],
-    "version":  1,
     "order":  [
                   1,
                   2,
@@ -15142,5 +15143,6 @@ window.ROUND1_DATA = {
                   664,
                   665,
                   666
-              ]
+              ],
+    "topicCount":  666
 };

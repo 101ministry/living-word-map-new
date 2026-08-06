@@ -26,6 +26,8 @@
   }
 
   const STORAGE_KEY = 'lwm-round1-progress-v1';
+  const CAL_MS = (DATA.calReturnMinutes || 2) * 60 * 1000;
+  const CAL_CONSECUTIVE_NOS = 4;
 
   const els = {
     phaseLabel: document.getElementById('round1-phase-label'),
@@ -43,6 +45,10 @@
     topicVideoLink: document.getElementById('round1-topic-video'),
     prayerText: document.getElementById('round1-prayer-text'),
     prayerScroll: document.getElementById('round1-prayer-scroll'),
+    heartDialog: document.getElementById('round1-heart-dialog'),
+    heartDismiss: document.getElementById('round1-heart-dismiss'),
+    heartYes: document.getElementById('round1-heart-yes'),
+    heartNo: document.getElementById('round1-heart-no'),
   };
 
   const state = loadState();
@@ -52,12 +58,18 @@
     saveState();
   }
 
+  let pendingHeartCheck = false;
+  let pendingNavigation = null;
+  let calDepartedAt = null;
+  let calDepartedSectionFirstTopic = null;
+  let awaitingCalReturn = false;
+
   function loadState() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw);
-        const merged = { ...defaultState(), ...parsed };
+        const merged = { ...defaultState(), ...parsed, heartAnswered: parsed.heartAnswered || [] };
         merged.currentTopic = clampTopic(merged.currentTopic);
         return merged;
       }
@@ -69,6 +81,10 @@
     return {
       phase: 'overview',
       currentTopic: 1,
+      visited: [],
+      heartYes: [],
+      heartAnswered: [],
+      consecutiveNo: 0,
     };
   }
 
@@ -134,6 +150,18 @@
       wrapEl.classList.add('hidden');
       linkEl.removeAttribute('href');
     }
+  }
+
+  function firstTopicOfSection(sectionId) {
+    const sec = DATA.sections.find(s => s.id === sectionId);
+    if (!sec?.topics?.length) return 1;
+    return Math.min(...sec.topics.map(t => t.number));
+  }
+
+  function isSectionComplete(sectionId) {
+    const sec = DATA.sections.find(s => s.id === sectionId);
+    if (!sec) return false;
+    return sec.topics.every(t => state.heartAnswered.includes(t.number));
   }
 
   function createOverviewCard(t) {
@@ -226,7 +254,11 @@
           secEl.dataset.sectionId = section.id;
 
           const pHead = document.createElement('div');
-          pHead.className = 'round2-sidebar-principality round1-sidebar-principality';
+          pHead.className = 'round2-sidebar-principality';
+          const pCheck = document.createElement('span');
+          pCheck.className = 'round2-principality-check' + (isSectionComplete(section.id) ? ' done' : '');
+          pCheck.textContent = '✅';
+          pHead.appendChild(pCheck);
           const pName = document.createElement('span');
           pName.textContent = section.name;
           pHead.appendChild(pName);
@@ -239,14 +271,17 @@
         while (topicIdx < sorted.length && count < BATCH) {
           const item = sorted[topicIdx++];
           const row = document.createElement('div');
-          row.className = 'round2-sidebar-topic round1-sidebar-topic';
+          row.className = 'round2-sidebar-topic';
           row.dataset.topic = String(item.number);
+          if (state.heartAnswered.includes(item.number)) row.classList.add('visited');
+          if (state.heartYes.includes(item.number)) row.classList.add('done');
           if (item.number === state.currentTopic) row.classList.add('active');
 
           row.innerHTML = `
+            <span class="round2-topic-check">${state.heartYes.includes(item.number) ? '✅' : '☐'}</span>
             <span class="round2-sidebar-topic-num">${pad(item.number)}</span>
             <span class="round2-sidebar-topic-label">${escapeHtml(item.label)}</span>`;
-          row.addEventListener('click', () => goToTopic(item.number));
+          row.addEventListener('click', () => requestTopicChange(item.number));
           secEl.appendChild(row);
           count += 1;
         }
@@ -281,9 +316,27 @@
       els.progress.textContent = `${DATA.topicCount} topics · review`;
     }
     if (isPrayers) {
+      pendingNavigation = null;
+      closeHeartDialog();
       renderCurrentTopic();
       buildSidebar();
     }
+  }
+
+  function refreshSidebarMarks() {
+    document.querySelectorAll('.round2-sidebar-topic').forEach(row => {
+      const num = Number(row.dataset.topic);
+      row.classList.toggle('visited', state.heartAnswered.includes(num));
+      row.classList.toggle('done', state.heartYes.includes(num));
+      const check = row.querySelector('.round2-topic-check');
+      if (check) check.textContent = state.heartYes.includes(num) ? '✅' : '☐';
+      row.classList.toggle('active', num === state.currentTopic);
+    });
+    DATA.sections.forEach(section => {
+      const secEl = document.querySelector(`.round2-sidebar-section[data-section-id="${section.id}"]`);
+      const pc = secEl?.querySelector('.round2-principality-check');
+      if (pc) pc.classList.toggle('done', isSectionComplete(section.id));
+    });
   }
 
   function renderCurrentTopic() {
@@ -321,16 +374,157 @@
     }
   }
 
+  function showHeartDialogForNavigation(targetNum) {
+    if (state.phase !== 'prayers') return;
+
+    pendingNavigation = clampTopic(targetNum);
+    pendingHeartCheck = true;
+    if (!els.heartDialog.open) {
+      els.heartDialog.showModal();
+    }
+  }
+
+  function requestTopicChange(targetNum) {
+    const target = clampTopic(targetNum);
+    const current = clampTopic(state.currentTopic);
+
+    if (target === current) {
+      document.querySelector(`.round2-sidebar-topic[data-topic="${target}"]`)
+        ?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      return;
+    }
+
+    if (state.heartAnswered.includes(current)) {
+      goToTopic(target);
+      return;
+    }
+
+    showHeartDialogForNavigation(target);
+  }
+
+  function updateSidebarTopic(num) {
+    const row = document.querySelector(`.round2-sidebar-topic[data-topic="${num}"]`);
+    if (!row) return;
+    row.classList.add('visited');
+    if (state.heartYes.includes(num)) {
+      row.classList.add('done');
+      const check = row.querySelector('.round2-topic-check');
+      if (check) check.textContent = '✅';
+    }
+    const t = topicData(num);
+    if (t?.sectionId) {
+      const secEl = document.querySelector(`.round2-sidebar-section[data-section-id="${t.sectionId}"]`);
+      if (secEl && isSectionComplete(t.sectionId)) {
+        const pc = secEl.querySelector('.round2-principality-check');
+        if (pc) pc.classList.add('done');
+      }
+    }
+  }
+
   function goToTopic(num) {
     state.currentTopic = clampTopic(num);
     saveState();
     renderCurrentTopic();
+    refreshSidebarMarks();
     document.querySelector(`.round2-sidebar-topic[data-topic="${state.currentTopic}"]`)
       ?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
 
+  function closeHeartDialog() {
+    if (els.heartDialog?.open) els.heartDialog.close();
+  }
+
+  function dismissHeartDialogOnly() {
+    if (els.heartDialog?.open) els.heartDialog.close();
+  }
+
+  function advanceAfterHeart(yes) {
+    const destination = pendingNavigation;
+    pendingNavigation = null;
+    pendingHeartCheck = false;
+    if (els.heartDialog?.open) els.heartDialog.close();
+
+    const current = clampTopic(state.currentTopic);
+
+    if (!state.heartAnswered.includes(current)) {
+      state.heartAnswered.push(current);
+    }
+    if (!state.visited.includes(current)) {
+      state.visited.push(current);
+    }
+
+    let openCalSilently = false;
+    if (yes) {
+      if (!state.heartYes.includes(current)) state.heartYes.push(current);
+      state.consecutiveNo = 0;
+    } else {
+      state.consecutiveNo += 1;
+      if (state.consecutiveNo >= CAL_CONSECUTIVE_NOS) {
+        openCalSilently = true;
+        const t = topicData(current);
+        calDepartedSectionFirstTopic = t?.sectionId
+          ? firstTopicOfSection(t.sectionId)
+          : current;
+        state.consecutiveNo = 0;
+      }
+    }
+
+    saveState();
+    updateSidebarTopic(current);
+
+    window.setTimeout(() => {
+      if (destination) {
+        goToTopic(destination);
+      }
+
+      if (openCalSilently && DATA.calLink) {
+        calDepartedAt = Date.now();
+        awaitingCalReturn = true;
+        window.open(DATA.calLink, '_blank', 'noopener,noreferrer');
+      }
+    }, 50);
+  }
+
+  function handleCalReturn() {
+    if (!awaitingCalReturn || !calDepartedAt) return;
+    awaitingCalReturn = false;
+    const elapsed = Date.now() - calDepartedAt;
+    calDepartedAt = null;
+
+    if (elapsed < CAL_MS) {
+      const resetTo = calDepartedSectionFirstTopic || state.currentTopic;
+      calDepartedSectionFirstTopic = null;
+      saveState();
+      goToTopic(resetTo);
+      return;
+    }
+
+    calDepartedSectionFirstTopic = null;
+    saveState();
+  }
+
   els.gateYes.addEventListener('click', () => setPhase('prayers'));
   els.gateNo.addEventListener('click', () => { window.location.href = 'index.html'; });
+
+  els.heartYes.addEventListener('click', () => advanceAfterHeart(true));
+  els.heartNo.addEventListener('click', () => advanceAfterHeart(false));
+  els.heartDismiss.addEventListener('click', () => dismissHeartDialogOnly());
+
+  els.heartDialog.addEventListener('cancel', e => {
+    e.preventDefault();
+  });
+
+  els.heartDialog.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      dismissHeartDialogOnly();
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') handleCalReturn();
+  });
+  window.addEventListener('focus', () => handleCalReturn());
 
   try {
     if (state.phase === 'prayers' && !entryFromMap) {
