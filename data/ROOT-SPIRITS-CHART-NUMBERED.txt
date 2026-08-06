@@ -333,7 +333,7 @@ ROOT SPIRITS CHART
 296.    Cursing Others By Thoughts
 297.    Cursing Others By Words
 298.    Cursing Others By Actions
-399.    Delighting In The Destruction Of Another
+299.    Delighting In The Destruction Of Another
 300.    Purposeful Lying To Destroy Another’s Life
 301.    Human Trafficking
 302.    Slavery    
@@ -445,7 +445,7 @@ ROOT SPIRITS CHART
 396.    False Expectations Appearing Real
 397.    Rebellion To Established Authority
 398.    Lying
-499.    Thoughts Of Strife
+399.    Thoughts Of Strife
 400.    Thoughts Of Discord
 401.    Thoughts Of Offense
 402.    Erratic Thoughts Out Of Nowhere
@@ -457,9 +457,9 @@ ROOT SPIRITS CHART
 408.    Constant Worry Thoughts
 409.    Thoughts About Illicit Sex
 410.    Thoughts About Homosexuality
-412.    Thoughts About Compulsion To View Pornography
-413.    Gossip
-414.    Sudden Distrust In People Who Have Given You No Reason To Distrust Them
+411.    Thoughts About Compulsion To View Pornography
+412.    Gossip
+413.    Sudden Distrust In People Who Have Given You No Reason To Distrust Them
 414.    Accusing Thoughts About Yourself
 415.    Accusing Thoughts About Others
 416.    Compulsive Uncontrolled Anger
@@ -649,7 +649,7 @@ ROOT SPIRITS CHART
 596.    Spirit Of Desires
 597.    Spirit Of Disobedience
 598.    Spirit Of Double-mindedness
-699.    Spirit Of Erotic Lust (Lust For The Erotic)
+599.    Spirit Of Erotic Lust (Lust For The Erotic)
 600.    Spirit Of Eroticism
 601.    Spirit Of Eye Lust
 602.    Spirit Of Fantasizing

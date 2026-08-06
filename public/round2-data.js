@@ -798,8 +798,8 @@ window.ROUND2_DATA = {
                      },
                      {
                          "firstTopic":  179,
-                         "name":  "Sexual Perversion",
-                         "id":  "sexual-perversion",
+                         "name":  "Perversion",
+                         "id":  "perversion",
                          "topics":  [
                                         {
                                             "number":  179,
@@ -1317,6 +1317,10 @@ window.ROUND2_DATA = {
                                             "label":  "Cursing Others By Actions"
                                         },
                                         {
+                                            "number":  299,
+                                            "label":  "Delighting In The Destruction Of Another"
+                                        },
+                                        {
                                             "number":  300,
                                             "label":  "Purposeful Lying To Destroy Another’s Life"
                                         },
@@ -1327,10 +1331,6 @@ window.ROUND2_DATA = {
                                         {
                                             "number":  302,
                                             "label":  "Slavery"
-                                        },
-                                        {
-                                            "number":  399,
-                                            "label":  "Delighting In The Destruction Of Another"
                                         }
                                     ]
                      },
@@ -1759,6 +1759,10 @@ window.ROUND2_DATA = {
                                             "label":  "Lying"
                                         },
                                         {
+                                            "number":  399,
+                                            "label":  "Thoughts Of Strife"
+                                        },
+                                        {
                                             "number":  400,
                                             "label":  "Thoughts Of Discord"
                                         },
@@ -1803,16 +1807,16 @@ window.ROUND2_DATA = {
                                             "label":  "Thoughts About Homosexuality"
                                         },
                                         {
-                                            "number":  412,
+                                            "number":  411,
                                             "label":  "Thoughts About Compulsion To View Pornography"
                                         },
                                         {
-                                            "number":  413,
+                                            "number":  412,
                                             "label":  "Gossip"
                                         },
                                         {
-                                            "number":  414,
-                                            "label":  "Accusing Thoughts About Yourself"
+                                            "number":  413,
+                                            "label":  "Sudden Distrust In People Who Have Given You No Reason To Distrust Them"
                                         },
                                         {
                                             "number":  414,
@@ -1929,10 +1933,6 @@ window.ROUND2_DATA = {
                                         {
                                             "number":  442,
                                             "label":  "Having Thoughts Of Anxiety"
-                                        },
-                                        {
-                                            "number":  499,
-                                            "label":  "Thoughts Of Strife"
                                         }
                                     ]
                      },
@@ -2573,6 +2573,10 @@ window.ROUND2_DATA = {
                                             "label":  "Spirit Of Double-mindedness"
                                         },
                                         {
+                                            "number":  599,
+                                            "label":  "Spirit Of Erotic Lust (Lust For The Erotic)"
+                                        },
+                                        {
                                             "number":  600,
                                             "label":  "Spirit Of Eroticism"
                                         },
@@ -2839,29 +2843,6 @@ window.ROUND2_DATA = {
                                         {
                                             "number":  666,
                                             "label":  "Spirit Of “Love” That Keeps Loving Relationships From Forming And Keeps People Single"
-                                        },
-                                        {
-                                            "number":  699,
-                                            "label":  "Spirit Of Erotic Lust (Lust For The Erotic)"
-                                        }
-                                    ]
-                     },
-                     {
-                         "firstTopic":  299,
-                         "name":  "Other Topics",
-                         "id":  "other-topics",
-                         "topics":  [
-                                        {
-                                            "number":  299,
-                                            "label":  "Topic 299"
-                                        },
-                                        {
-                                            "number":  411,
-                                            "label":  "Topic 411"
-                                        },
-                                        {
-                                            "number":  599,
-                                            "label":  "Topic 599"
                                         }
                                     ]
                      }
@@ -3338,7 +3319,7 @@ window.ROUND2_DATA = {
                    "186":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of sexual deviations from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that sexual deviations from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error, Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve sexual deviations. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sexual deviations, from a root of addiction and bondage.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -3349,7 +3330,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "645":  {
@@ -3636,13 +3617,13 @@ window.ROUND2_DATA = {
                    "599":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of interacting with the spirit of erotic lust (lust for the erotic) from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that interacting with the spirit of erotic lust (lust for the erotic) from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with parent Principality of Spirit Spouse Gods.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of erotic lust (lust for the erotic). In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of erotic lust (lust for the erotic), from a root of addiction and bondage.",
-                               "sectionId":  "other-topics",
+                               "sectionId":  "spirit-spouse-gods",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
                                "number":  599,
                                "root":  "addiction and bondage",
-                               "label":  "Topic 599",
+                               "label":  "Spirit Of Erotic Lust (Lust For The Erotic)",
                                "spirit":  "erotic lust (lust for the erotic)",
                                "fruits":  [
                                               "Sexual Corruption",
@@ -3650,7 +3631,7 @@ window.ROUND2_DATA = {
                                               "Counterfeit Spirituality",
                                               "Confusing Preferences with Stewardship"
                                           ],
-                               "principality":  "Other Topics",
+                               "principality":  "Spirit Spouse Gods",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "626":  {
@@ -4652,18 +4633,18 @@ window.ROUND2_DATA = {
                    "399":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of thoughts of strife from a pride and self-exaltation.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that thoughts of strife from a pride and self-exaltation has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Attitudes Against God’s Image with parent Principality of Destructive Attitudes Against God’s Image.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve thoughts of strife. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of strife, from a root of pride and self-exaltation.",
-                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
+                               "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
                                              "🔴pride and self-exaltation"
                                          ],
                                "number":  399,
                                "root":  "pride and self-exaltation",
-                               "label":  "Delighting In The Destruction Of Another",
+                               "label":  "Thoughts Of Strife",
                                "spirit":  "thoughts of strife",
                                "fruits":  [
                                               "Destructive Attitudes Against God’s Image"
                                           ],
-                               "principality":  "Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally",
+                               "principality":  "Destructive Attitudes Against God’s Image",
                                "fruitDisplay":  "Destructive Attitudes Against God’s Image"
                            },
                    "557":  {
@@ -5242,7 +5223,7 @@ window.ROUND2_DATA = {
                    "179":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of believing false teachers from a deception and falsehood.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that believing false teachers from a deception and falsehood has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve believing false teachers. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing false teachers, from a root of deception and falsehood.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -5253,7 +5234,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "147":  {
@@ -6167,7 +6148,7 @@ window.ROUND2_DATA = {
                    "185":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of sadomasochism from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that sadomasochism from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error, Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve sadomasochism. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sadomasochism, from a root of addiction and bondage.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -6178,7 +6159,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "281":  {
@@ -6986,7 +6967,7 @@ window.ROUND2_DATA = {
                    "183":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of homosexuality from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that homosexuality from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve homosexuality. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of homosexuality, from a root of addiction and bondage.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -6999,7 +6980,7 @@ window.ROUND2_DATA = {
                                               "🟩Counterfeit Spirituality",
                                               "⬛Confusing Preferences with Stewardship"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟨Sexual Corruption of Human and Hybrid DNA, 🟩Counterfeit Spirituality, ⬛Confusing Preferences with Stewardship"
                            },
                    "39":  {
@@ -7523,7 +7504,7 @@ window.ROUND2_DATA = {
                    "187":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of twisted thinking from a deception and falsehood.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that twisted thinking from a deception and falsehood has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve twisted thinking. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of twisted thinking, from a root of deception and falsehood.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -7534,7 +7515,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "269":  {
@@ -8290,18 +8271,18 @@ window.ROUND2_DATA = {
                    "299":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of delighting in the destruction of another from a bitterness and unforgiveness.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that delighting in the destruction of another from a bitterness and unforgiveness has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anger and Violence with parent Principality of Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve delighting in the destruction of another. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of delighting in the destruction of another, from a root of bitterness and unforgiveness.",
-                               "sectionId":  "other-topics",
+                               "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
                                              "🟢bitterness and unforgiveness"
                                          ],
                                "number":  299,
                                "root":  "bitterness and unforgiveness",
-                               "label":  "Topic 299",
+                               "label":  "Delighting In The Destruction Of Another",
                                "spirit":  "delighting in the destruction of another",
                                "fruits":  [
                                               "🟥Anger and Violence"
                                           ],
-                               "principality":  "Other Topics",
+                               "principality":  "Using and Abusing Others Emotionally, Physically, Spiritually, and Verbally",
                                "fruitDisplay":  "🟥Anger and Violence"
                            },
                    "489":  {
@@ -9973,7 +9954,7 @@ window.ROUND2_DATA = {
                    "182":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of having orgies from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that having orgies from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve having orgies. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having orgies, from a root of addiction and bondage.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -9986,7 +9967,7 @@ window.ROUND2_DATA = {
                                               "🟩Counterfeit Spirituality",
                                               "⬛Confusing Preferences with Stewardship"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟨Sexual Corruption of Human and Hybrid DNA, 🟩Counterfeit Spirituality, ⬛Confusing Preferences with Stewardship"
                            },
                    "38":  {
@@ -10565,7 +10546,7 @@ window.ROUND2_DATA = {
                                          ],
                                "number":  413,
                                "root":  "fear and insecurity",
-                               "label":  "Gossip",
+                               "label":  "Sudden Distrust In People Who Have Given You No Reason To Distrust Them",
                                "spirit":  "sudden distrust in people who have given you no reason to distrust them",
                                "fruits":  [
                                               "Destructive Attitudes Against God’s Image"
@@ -12403,7 +12384,7 @@ window.ROUND2_DATA = {
                                          ],
                                "number":  412,
                                "root":  "bitterness and unforgiveness",
-                               "label":  "Thoughts About Compulsion To View Pornography",
+                               "label":  "Gossip",
                                "spirit":  "gossip",
                                "fruits":  [
                                               "Destructive Attitudes Against God’s Image"
@@ -12686,7 +12667,7 @@ window.ROUND2_DATA = {
                    "180":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of believing false doctrines from a deception and falsehood.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that believing false doctrines from a deception and falsehood has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve believing false doctrines. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing false doctrines, from a root of deception and falsehood.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "🟣deception and falsehood"
                                          ],
@@ -12697,7 +12678,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "488":  {
@@ -12771,7 +12752,7 @@ window.ROUND2_DATA = {
                    "181":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of having multi-partner sex from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that having multi-partner sex from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve having multi-partner sex. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having multi-partner sex, from a root of addiction and bondage.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -12782,7 +12763,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "73":  {
@@ -13589,18 +13570,18 @@ window.ROUND2_DATA = {
                    "411":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of thoughts about compulsion to view pornography from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that thoughts about compulsion to view pornography from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Destructive Attitudes Against God’s Image with parent Principality of Destructive Attitudes Against God’s Image.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve thoughts about compulsion to view pornography. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about compulsion to view pornography, from a root of addiction and bondage.",
-                               "sectionId":  "other-topics",
+                               "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
                                "number":  411,
                                "root":  "addiction and bondage",
-                               "label":  "Topic 411",
+                               "label":  "Thoughts About Compulsion To View Pornography",
                                "spirit":  "thoughts about compulsion to view pornography",
                                "fruits":  [
                                               "Destructive Attitudes Against God’s Image"
                                           ],
-                               "principality":  "Other Topics",
+                               "principality":  "Destructive Attitudes Against God’s Image",
                                "fruitDisplay":  "Destructive Attitudes Against God’s Image"
                            },
                    "479":  {
@@ -13674,7 +13655,7 @@ window.ROUND2_DATA = {
                    "184":  {
                                "round2Text":  "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of polygamy from a addiction and bondage.\r\n\r\nI agree that we made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.\r\n\r\nI recognize that polygamy from a addiction and bondage has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of False Religion and Doctrinal Error, Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with parent Principality of Sexual Perversion.\r\n\r\nFor the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what we copied into the bloodline AND FORGIVE every person who taught us how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my body\u0027s memories and forgive every way we remembered people the way Jesus doesn\u0027t. I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don\u0027t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn\u0027t. I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. \r\n\r\nI no longer want to serve polygamy. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don\u0027t have room in my life for you anymore. We don\u0027t have room for unconfessed records in this bloodline.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen\r\n\r\n~~~~~~~~~~~~",
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of polygamy, from a root of addiction and bondage.",
-                               "sectionId":  "sexual-perversion",
+                               "sectionId":  "perversion",
                                "roots":  [
                                              "⚪addiction and bondage"
                                          ],
@@ -13685,7 +13666,7 @@ window.ROUND2_DATA = {
                                "fruits":  [
                                               "🟦False Religion and Doctrinal Error"
                                           ],
-                               "principality":  "Sexual Perversion",
+                               "principality":  "Perversion",
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "264":  {
