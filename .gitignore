@@ -2,3 +2,5 @@
 Thumbs.db
 *.log
 desktop.ini
+node_modules/
+.wrangler/

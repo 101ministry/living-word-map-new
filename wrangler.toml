@@ -1,0 +1,15 @@
+name = "living-word-map"
+main = "worker/index.js"
+compatibility_date = "2024-08-01"
+
+# Static site (public/) + Worker API routes
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# Set secrets via: wrangler secret put RESEND_API_KEY
+# Optional: CAL_WEBHOOK_SECRET, NOTIFY_EMAIL, RESEND_FROM
+
+[vars]
+NOTIFY_EMAIL = "norm@repentance101.com"
+RESEND_FROM = "Living Word Map <notifications@repentance101.com>"

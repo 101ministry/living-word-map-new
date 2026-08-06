@@ -67,8 +67,35 @@ Some build inputs (Obsidian lore, transcripts) may still live outside this repo 
 
 - **Repository:** [github.com/repentance101/living-word-map](https://github.com/repentance101/living-word-map) (private)
 - **Live site:** [living-word-map.norm-f37.workers.dev](https://living-word-map.norm-f37.workers.dev/)
-- **Host:** Cloudflare — output directory `public`, no build command (pre-built artifacts in repo)
-- Push to `main` → redeploy automatically
+- **Host:** Cloudflare Worker serves `public/` static assets and `POST /api/cal-booking` for Cal.com webhooks
+- Push to `main` → GitHub Action runs `wrangler deploy` (requires secrets below)
+
+### Cal.com webhook URL
+
+```
+https://living-word-map.norm-f37.workers.dev/api/cal-booking
+```
+
+Ping test should return **200** once the Worker is deployed. Real bookings email **norm@repentance101.com** when `RESEND_API_KEY` is set.
+
+### One-time Cloudflare setup
+
+1. **Disable** any older Cloudflare “static assets only” Git integration for this repo (avoid double deploys).
+2. GitHub repo → **Settings → Secrets → Actions**:
+   - `CLOUDFLARE_API_TOKEN` — Workers edit permission
+   - `CLOUDFLARE_ACCOUNT_ID`
+3. Worker secrets (Cloudflare dashboard or CLI):
+
+```powershell
+npm install
+npx wrangler login
+npx wrangler secret put RESEND_API_KEY    # from resend.com — enables booking emails
+npx wrangler secret put CAL_WEBHOOK_SECRET  # optional — same string as Cal.com webhook Secret
+```
+
+4. Verify domain in [Resend](https://resend.com) for `notifications@repentance101.com` (or change `RESEND_FROM` in `wrangler.toml`).
+
+Local Worker dev: `npm run dev` → http://localhost:8787
 
 ---
 
