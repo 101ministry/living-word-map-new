@@ -3,13 +3,14 @@ param(
     [string]$Round2File = "$PSScriptRoot\..\data\COMPILED-PRAYERS-ROUND2.txt",
     [string]$Round1Json = "$PSScriptRoot\..\public\prayers\en.json",
     [string]$GraphDataJs = "$PSScriptRoot\..\public\data.js",
-    [string]$ChartFile = "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt",
+    [string]$ChartFile = "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART-NUMBERED.txt",
     [string]$MembershipFile = "$PSScriptRoot\..\data\PRINCIPALITY-MEMBERSHIPS.txt",
     [string]$OutputFile = "$PSScriptRoot\..\public\round2-data.js"
 )
 
 $ErrorActionPreference = 'Stop'
 $Utf8 = [System.Text.UTF8Encoding]::new($false)
+. (Join-Path $PSScriptRoot 'lib-numbered-chart.ps1')
 
 function Read-Utf8([string]$path) {
     return [System.IO.File]::ReadAllText($path, $Utf8)
@@ -52,6 +53,7 @@ function Resolve-MembershipPrincipality([string]$header) {
     if ($clean -match '^\[(.+)\]$') { $clean = $Matches[1].Trim() }
     $clean = ($clean -replace '^(?i)PRINCIPALITY OF\s+', '').Trim()
     $clean = ($clean -replace '^(?i)SPIRIT OF\s+', '').Trim()
+    if ((Slugify $clean) -eq 'perversion') { return 'Sexual Perversion' }
     $known = @(
         'Jealousy', 'Slothfulness', 'Haughtiness', 'Lies', 'Bondage', 'Idolatry', 'Error',
         'Fear', 'Divination', 'Heaviness', 'Anti-Christ', 'Deaf & Dumb', 'Sexual Perversion',
@@ -106,20 +108,12 @@ function Parse-Round2Prayers([string]$raw) {
     return $result
 }
 
-# Chart labels
-$chartNames = @{}
-$chartKeyToNum = @{}
-foreach ($line in ((Read-Utf8 $ChartFile) -split '\r?\n')) {
-    if ($line -match '^(\d{3})\.\s*(.+)$') {
-        $n = [int]$Matches[1]
-        $chartNames[$n] = $Matches[2].Trim()
-        $key = Normalize-TopicKey $Matches[2]
-        if ($key) {
-            if (-not $chartKeyToNum.ContainsKey($key)) { $chartKeyToNum[$key] = @() }
-            $chartKeyToNum[$key] += $n
-        }
-    }
-}
+$chartParsed = Read-NumberedChart -Path $ChartFile -ResolvePrincipality ${function:Resolve-MembershipPrincipality} -Slugify ${function:Slugify}
+$chartNames = $chartParsed.chartNames
+$sections = [System.Collections.Generic.List[object]]::new()
+foreach ($sec in $chartParsed.sections) { [void]$sections.Add($sec) }
+$topicToSection = $chartParsed.topicToSection
+$topicToPrincipality = $chartParsed.topicToPrincipality
 
 # Graph topic metadata
 $graphRaw = Read-Utf8 $GraphDataJs
@@ -142,76 +136,6 @@ if (-not (Test-Path -LiteralPath $Round2File)) {
 }
 $round2ByNum = Parse-Round2Prayers (Read-Utf8 $Round2File)
 
-# Build principality sections from membership file (sidebar order)
-$sections = [System.Collections.Generic.List[object]]::new()
-$topicToSection = @{}
-$seenTopics = [System.Collections.Generic.HashSet[int]]::new()
-
-if (Test-Path -LiteralPath $MembershipFile) {
-    $currentName = $null
-    $currentTopics = [System.Collections.Generic.List[int]]::new()
-
-    function Flush-Section {
-        param($name, $topicList)
-        if (-not $name -or $topicList.Count -eq 0) { return }
-        $sorted = @($topicList | Sort-Object)
-        $items = @($sorted | ForEach-Object {
-            $n = $_
-            @{
-                number = $n
-                label = if ($chartNames.ContainsKey($n)) { $chartNames[$n] } else { "Topic $n" }
-            }
-        })
-        [void]$sections.Add(@{
-            id = Slugify $name
-            name = $name
-            topics = $items
-            firstTopic = $sorted[0]
-        })
-        foreach ($n in $sorted) {
-            if (-not $topicToSection.ContainsKey($n)) { $topicToSection[$n] = Slugify $name }
-        }
-    }
-
-    foreach ($line in ((Read-Utf8 $MembershipFile) -split '\r?\n')) {
-        if ($line -match '^\[(.+)\]\s*$') {
-            Flush-Section $currentName $currentTopics
-            $currentName = Resolve-MembershipPrincipality $Matches[1]
-            $currentTopics = [System.Collections.Generic.List[int]]::new()
-            continue
-        }
-        if (-not $currentName) { continue }
-        $trimmed = $line.Trim()
-        if (-not $trimmed -or $trimmed -match '^(ROOT SPIRITS CHART|JACKIE|MITCH|KIMBERLY|ASHTON)') { continue }
-        foreach ($label in (Split-MembershipLabels $trimmed)) {
-            $key = Normalize-TopicKey $label
-            if ($key -and $chartKeyToNum.ContainsKey($key)) {
-                foreach ($n in $chartKeyToNum[$key]) {
-                    if ($seenTopics.Add($n)) { [void]$currentTopics.Add($n) }
-                }
-            }
-        }
-    }
-    Flush-Section $currentName $currentTopics
-}
-
-# Append any chart topics missing from membership sections
-$orphan = @()
-for ($n = 1; $n -le 666; $n++) {
-    if (-not $seenTopics.Contains($n)) { $orphan += $n }
-}
-if ($orphan.Count -gt 0) {
-    [void]$sections.Add(@{
-        id = 'other-topics'
-        name = 'Other Topics'
-        topics = @($orphan | Sort-Object | ForEach-Object {
-            @{ number = $_; label = $chartNames[$_] }
-        })
-        firstTopic = ($orphan | Sort-Object)[0]
-    })
-    foreach ($n in $orphan) { $topicToSection[$n] = 'other-topics' }
-}
-
 # Flat chart order
 $order = @(1..666)
 
@@ -230,7 +154,8 @@ for ($n = 1; $n -le 666; $n++) {
     }
     $rootDisplay = ($roots | Where-Object { $_ } | ForEach-Object { ($_ -replace '[^\x00-\x7F\u0080-\u024F\u1E00-\u1EFF''\u2019\-(),./:;]+', ' ').Trim() }) -join ' and '
     $fruitDisplay = ($fruits | Where-Object { $_ }) -join ', '
-    $principality = if ($g -and $g.principality) { $g.principality } else { $null }
+    $principality = if ($topicToPrincipality.ContainsKey($n)) { $topicToPrincipality[$n] }
+        elseif ($g -and $g.principality) { $g.principality } else { $null }
 
     $round1Preview = $null
     if ($r1 -and $r1.text) {
@@ -252,7 +177,7 @@ for ($n = 1; $n -le 666; $n++) {
         fruits = @($fruits)
         fruitDisplay = $fruitDisplay
         principality = $principality
-        sectionId = if ($principality) { Slugify $principality } elseif ($topicToSection.ContainsKey($n)) { $topicToSection[$n] } else { $null }
+        sectionId = if ($topicToSection.ContainsKey($n)) { $topicToSection[$n] } else { $null }
         round1Preview = $round1Preview
         round2Text = $round2ByNum[$n]
     }
@@ -260,7 +185,7 @@ for ($n = 1; $n -le 666; $n++) {
 
 $payload = @{
     version = 1
-    calLink = 'https://cal.com/repentance101/introductions-from-repentance-to-you'
+    calLink = 'https://cal.com/repentance101meeting/no-heart-change'
     calReturnMinutes = 2
     topicCount = 666
     order = $order

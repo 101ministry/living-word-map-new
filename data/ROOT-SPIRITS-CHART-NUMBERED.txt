@@ -1,0 +1,719 @@
+ROOT SPIRITS CHART
+
+[PRINCIPALITY OF JEALOUSY] 01.
+001.    Anger
+002.    Wrath
+003.    Rage
+004.    Hatred
+005.    Murder
+006.    Covetousness
+007.    Cruelty
+008.    Divorce
+009.    Division
+010.    Feelings That God Loves Others More Than Me
+011.    Jealousy
+012.    Insecurity
+013.    Revenge
+014.    Self-centeredness
+015.    Suspicious Attitude
+016.    Unnatural Competitiveness
+
+[PRINCIPALITY OF SLEEP-SLUMBER] 02.
+017.    Constant Fatigue
+018.    Drawing Back From Life
+019.    Passivity
+020.    Procrastination
+021.    Blocked Success
+022.    Wishing I Were Not Born
+
+[PRINCIPALITY OF HAUGHTINESS] 03.
+023.    Arrogance
+024.    Being Boastful
+025.    Being Proud
+026.    Being Contentious
+027.    Being Controlling
+028.    Being Domineering
+029.    Being Critical
+030.    Being Judgmental
+031.    Being Dictatorlike
+032.    Offense
+033.    Being Offensive
+034.    Gossiping
+035.    Being Prejudice
+036.    Mockery
+037.    Rudeness
+038.    Self-righteous Complex
+039.    Superiority Complex
+040.    Being Vain
+
+[PRINCIPALITY OF LIES] 04.
+041.    Thievery
+042.    Condemnation
+043.    Deception
+044.    Exaggeration
+045.    Feeling Like a Hypocrite
+046.    Lying From Time To Time
+047.    Lying Habitually
+048.    Feeling Like I'll Never Get Married
+049.    Feeling Like No One Wants Me
+050.    Being Obese
+051.    Being Overweight
+052.    Using Profanity
+053.    A Poor Self Image
+054.    Thinking I'm Ugly
+055.   Thinking I Can't Change
+056.    Having Vain Imaginations
+057.    Feeling Worthless
+
+[PRINCIPALITY OF BONDAGE] 05.
+058.    Being Co-dependent
+059.    Being A Workaholic
+060.    Alcohol Addiction
+061.    Gambling Addiction
+062.    Tobacco Addiction
+063.    Drug Addiction
+064.    Marijuana Or CBD Addiction
+065.    Food Addiction
+066.    Video Game Addiction
+067.    Sex Addiction
+068.    Computer Addiction
+069.    Social Media
+070.    Other Addictions
+
+[PRINCIPALITY OF IDOLATRY] 06.
+071.    Love Of Money
+072.    Love Of Possessions
+073.    Love Of Position
+074.    Love Of Power
+075.    Worshiping Things Other Than God
+
+[PRINCIPALITY OF ERROR] 07
+076.    Anorexia
+077.    Bulimia
+078.    Compromising On My Convictions
+079.    Confusion
+080.    Continually Making Bad Decisions
+081.    Believing Cultic Or False Teachers
+082.    Doubt
+083.    Unbelief
+084.    Being Irresponsible
+085.    Inappropriate Thinking
+086.    Inappropriate Behavior
+
+[PRINCIPALITY OF FEAR] 08.
+087.    Feelings Of Abandonment
+088.    Anxiety
+089.    Lack Of Faith
+090.    Fear Of Death
+091.    Fear Of Success
+092.    Fear Of Men
+093.    Fear Of Women
+094.    Fear Of Poverty
+095.    Feelings That I Have Been Rejected
+096.    Fear Of Rejection
+097.    Fear Of Authority
+098.    Feeling Unable To Perform Properly
+099.    Feelings Of Inferiority
+100.    Nightmares
+101.    Phobias
+102.    Self-rejection
+103.    Being Shy Or Timid
+104.    Feelings Of Stress
+105.    Feelings Of Tension
+106.    Being Tormented
+107.    Feeling Tormented    
+
+[PRINCIPALITY OF DIVINATION] 09.
+108.    Astrology
+109.    Having Gone To A Medium
+110.    Using A Crystal Ball
+111.    Playing With A Ouija Board
+112.    Playing With An 8 Ball
+113.    Playing With D&D Cards
+114.    Playing With Pokémon Cards
+115.    Playing With Magic Of The Gathering Cards
+116.    Going To A Fortune Teller
+117.    Being Involved In Freemasonry
+118.    Reading Horoscopes
+119.    Going To A Hypnotist
+120.    Being Extremely Independent
+121.    Being Manipulative
+122.    Being Rebellious
+123.    Being Involved In Satanism
+124.    Being In A Seance
+125.    Using Tarot Cards
+126.    Participating In Transcendental Meditation
+127.    Astral Projection
+128.    Lucid Dreaming
+129.    Being In Wicca
+130.    Being In Witchcraft
+131.    Involvement In Any Kind Of Satanic Ritual Abuse
+132.    Involvement In Any Kind Of Sexual Ritual Abuse    
+
+[PRINCIPALITY OF HEAVINESS] 10.
+133.    Abnormal Grief
+134.    Abnormal Mourning
+135.    Being Defiled
+136.    Depression
+137.    Despair
+138.    Discouragement
+139.    Hopelessness
+140.    Frustration
+141.    Loneliness
+142.    Sadness
+143.    Self-pity
+144.    Shame
+145.    Unjustified Feelings Of Guilt
+146.    Having A Wounded Spirit    
+
+[PRINCIPALITY OF ANTI-CHRIST] 11.
+147.    Blaspheming The Holy Spirit And Gifts Of The Spirit
+148.    Opposition To God’s Word
+149.    Condemnation Of God’s Word
+150.    Rationalization Of God’s Word
+151.    Opposition To Christ’s Deity Or Humanity
+152.    Harassing Christians
+153.    Persecuting Christians
+154.    Suppressing Ministries
+155.    Suppressing Ministers
+156.    Creating Church Splits
+157.    Calling Out “False Doctrines” Because I Disagree With Them
+158.    Calling Out “False Teachers” Because I Disagree With Them
+159.    Feeling Like Giving Up On Christianity    
+
+[PRINCIPALITY OF DEAF & DUMB] 12.
+160.    Prone To Accidents
+161.    Prone To Drowning
+162.    Prone To House Fires
+163.    Prone To Car Accidents
+164.    Epilepsy
+165.    Convulsions
+166.    Seizures
+167.    Having Autism
+168.    Having Tourette’s
+169.    Having Any Type Of Mental Disorder
+170.    Disease Of Eyes
+171.    Disease Of Ears
+172.    Being Mentally Ill
+173.    Being Mentally Insane
+174.    Feeling Like I’m In A Stupor
+175.    Having Suicidal Thoughts
+176.    Attempting Suicide
+177.    Thinking I Am Dumb
+178.    Thinking I Am Stupid    
+
+[PRINCIPALITY OF PERVERSION] 13.
+179.    Believing False Teachers
+180.    Believing False Doctrines
+181.    Having Multi-Partner Sex
+182.    Having Orgies
+183.    Homosexuality
+184.    Polygamy
+185.    Sadomasochism
+186.    Sexual Deviations
+187.    Twisted Thinking    
+
+[PRINCIPALITY OF WHOREDOM] 14.
+188.    Adultery
+189.    Bestiality
+190.    Exhibitionism
+191.    Illegitimacy
+192.    Incest
+193.    Lust
+194.    Masturbation Or Self Molestation
+195.    Being Molested As A Child
+196.    Molesting Someone Else
+197.    Voyeurism Or Exploiting Someone’s Private Space For Personal Profit
+198.    Pornography In Any Form
+199.    Being Raped
+200.    Raping Someone Else
+201.    Seduction
+202.    Prostitution    
+
+[PRINCIPALITY OF INFIRMITY] 15.
+203.    Having Allergies
+204.    Having Arthritis
+205.    Having Asthma
+206.    Having Cancer
+207.    Having Diabetes
+208.    Having Female Reproductive Problems
+209.    Having Male Reproductive Problems
+210.    Having Fungus
+211.    Having Heart Disease
+212.    Having High Blood Pressure
+213.    Having Sinus Issues
+214.    Having Strokes
+215.    Having Viruses
+216.    Being Weak Or Feeble
+
+[PRINCIPALITY OF SHEDDING OF INNOCENT BLOOD] 16.
+217.   The Use Of Torture Through Hanging
+218.    The Use Of Torture Through Disembowelment
+219.    The Use Of The Axe
+220.    The Use Of The Knife
+221.    The Use Of The Sword
+222.    The Use Of The Spear
+223.    The Use Of The Arrow
+224.    The Use Of The Rifle
+225.    The Use Of The Gun
+226.    The Use Of The Abortion
+227.    The Use Of Kidnapping
+228.    The Use Of Ambush Of The Innocent
+229.    The Use Of Slaughter
+230.    The Use Of Cruelty
+231.    The Use Of Torture In Times Of War
+232.    The Use Of Torture Of Captives
+233.    The Use Of Torture Of The Innocent People In The Land
+234.    The Use Of Participation In Acts Of Torture During The Inquisition
+235.    The Use Of Participation In Acts Of Torture During The Crusades
+236.    The Use Of Heartless Destruction Of Life Based On Greed For Power And Wealth
+237.    Shedding Of Innocent Blood Through The Use Of Human Trafficking
+238.    The Use Of Slave Trading
+239.    The Use Of Slave Ownership
+240.    Use Of Cruel Oppression Of People    
+
+[PRINCIPALITY OF TREACHERY AGAINST OTHERS] 17.
+241.    Treachery Against Others
+242.    False Accusation Against Anyone
+243.    Broken Covenants
+244.    Betrayals
+245.    Unfaithfulness In Relationships With Families
+246.    Unfaithfulness In Neighbors
+247.    Unfaithfulness In Communities
+248.    Unfaithfulness In Church
+249.    Unfaithfulness In Business
+250.    Unfaithfulness In Nations
+251.    Adultery
+252.    Incest
+253.    Child Molestation
+254.    Neglect
+255.    Abandonment
+256.    Robbery
+257.    Cursing
+258.    Dishonoring
+259.    Failing To Provide For Widows
+260.    Lying, Or Cheating
+261.    Being A False Witness
+262.    Lying Under Oath
+263.    Sowing Discord Among The Brethren
+264.    Slander
+265.    Gossip
+266.    Being A Talebearer
+267.    Using Guile To Gain Advantage
+268.    Exposing Another’s Secrets
+269.    Speaking With A Perverse Tongue That Stirs Up Trouble And Evil Against Another
+270.    Holding Hatred In One’s Heart
+271.    Using A False Balance Or Scale In Business
+272.    Moving Boundary Stones Or Pins
+273.    Stealing Inheritance By Unjust Means
+274.    Giving And Receiving Bribes
+275.    Securing Wealth By A Lying Tongue
+276.    Taking The Fields Of The Orphans And Widows
+277.    Charging Excessive Interest For Loans
+278.    Using A Corrupt Judicial System To Destroy Another’s Life    
+
+[PRINCIPALITY OF USING AND ABUSING OTHERS EMOTIONALLY, PHYSICALLY, SPIRITUALLY, AND VERBALLY] 18.
+279.    Sexual Abuse
+280.    Walking In Hatred
+281.    Strife
+282.    Contention
+283.    Ill-Temper
+284.    Anger
+285.    Rage
+286.    Violence And Cruelty
+287.    Hating Both God And Mankind
+288.    Blasphemy Against God
+289.    Willfully Separating Self From God And Men
+290.    Scorner, Mocker, Scoffer
+291.    Hater Of All That Is Pure And Good
+292.    Reckless Speaking
+293.    Flattering For Gain
+294.    Being Resentful, Envious And Jealous Of Another’s Life And Blessings
+295.    Seeking Revenge
+296.    Cursing Others By Thoughts
+297.    Cursing Others By Words
+298.    Cursing Others By Actions
+399.    Delighting In The Destruction Of Another
+300.    Purposeful Lying To Destroy Another’s Life
+301.    Human Trafficking
+302.    Slavery    
+
+[PRINCIPALITY OF TRADING FLOOR TRANSACTIONS WITH DEMONS] 19.
+303.    Worshipping Idols And Expecting Them To Save You
+304.    Trading Floor Transaction With Demons For Power
+305.    Trading Floor Transaction With Demons For Money
+306.    Trading Floor Transaction With Demons For Fertility
+307.    Trading Floor Transaction With Demons For Stubbornly Clinging To Opinions And Viewpoints
+308.    Trading Floor Transaction With Demons For Walking In Self-sufficient Independence
+309.    Trading Floor Transaction With Demons For Resisting Man’s And God’s Authority
+310.    Trading Floor Transaction With Demons For Withholding Tithes And Offerings
+311.    Trading Floor Transaction With Demons For Being Lawless
+312.    Trading Floor Transaction With Demons For Coveting Another’s Goods
+313.    Trading Floor Transaction With Demons For Coveting Another’s Life
+314.    Trading Floor Transaction With Demons For Coveting Another’s Spouse
+315.    Trading Floor Transaction With Demons For Coveting Another’s Money
+316.    Trading Floor Transaction With Demons For Coveting Another’s Power
+317.    Trading Floor Transaction With Demons For Coveting Another’s Position
+318.    Trading Floor Transaction With Demons For Coveting Another’s Church Or Denomination
+319.    Trading Floor Transaction With Demons For Coveting Another’s Intellect
+320.    Trading Floor Transaction With Demons For Coveting Another’s Career
+321.    Trading Floor Transaction With Demons For Coveting Another’s Accomplishments
+322.    Idolizing The Works Of One’s Hands
+323.    Idolizing One’s Self
+324.    Hiding Envy Behind The Cloak Of Insecurity And Failure
+325.    Needing The Worship Of Others    
+
+[PRINCIPALITY OF GLUTTONY] 20.
+326.    Being Greedy For Food
+327.    Being Greedy For Chocolate Or Attention
+328.    Being Addicted To Drugs
+329.    Alcohol Addiction
+330.    Sex Addiction
+331.    Participating In Drunkenness
+332.    Orgies
+333.    Gambling
+334.    Worldliness    
+
+[PRINCIPALITY OF SELF RIGHTEOUSNESS] 21.
+335.    Shameful Compromise In The Face Of Danger, Difficulty, Or Opposition
+336.    Being A Coward Who Justifies Actions And Wickedness
+337.    Evading Responsibility For Actions
+338.    Over-estimating Oneself, Spiritually
+339.    Being Willfully Contrary In One’s Heart
+340.    Being Cold-hearted
+341.    Hating Instruction, Discipline, And Correction
+342.    Living In A Deliberate State Of Hypocrisy
+343.    Being Lukewarm
+344.    Being Cold-hearted Towards The Needs Of Others And The Poor
+345.    Deluding Oneself As Being Rich In Spirit
+346.    Being Spiritually Proud Of Dead Works
+347.    Covering Up Transgressions
+348.    Being Polluted By The Leaven Of The Pharisees Or Sadducees
+349.    Being Unteachable, Arrogant, Proud, Haughty
+350.    Being Competitive
+351.    Needing To Be The Best
+352.    Being Judgmental, Critical, Suspicious, Legalistic
+353.    Belonging To Factions Such As The Klu Klux Klan Or Freemasons
+354.    Having A Party Spirit
+355.    Disputing; Being Opinionated
+356.    Fearing Man Rather Than God
+357.    Being A Respecter Of Persons
+358.    Showing Partiality To The Rich And Powerful
+359.    Making Rash Vows To God And Others
+360.    Believing Religious Lies Like Infant Baptism Has Made You Righteous Before God    
+
+[PRINCIPALITY OF SEXUAL PERVERSION] 22.
+361.    Bastard Children Born Outside The Protection Of Marriage
+362.    Being Polluted By The Leaven Of The Herodians
+363.    Participating In Fornication
+364.    Participating In Molestation
+365.    Participating In Incest
+366.    Participating In Orgies
+367.    Participating In Masturbation
+368.    Participating In Bestiality
+369.    Participating In Homosexuality
+370.    Participating In Lesbianism
+371.    Participating In Gender Confusion
+372.    Participating In Pornography
+373.    Serving the Spirit Spouse gods and Inviting Others to Do the Same
+374.    Using Women As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions
+375.    Using Children As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions
+376.    Using Men As Objects Of Lust, Impurity, And Lewdness In Thoughts, Words, And Actions
+377.    Using Filthy Language
+378.    Participating In Masochism, Sadism, And Wicked Imaginations    
+
+[PRINCIPALITY OF REBELLION] 23
+379.    Participating In Witchcraft Through The Control And Manipulation Of Another’s Will
+380.    Being Stubborn
+381.    Emasculation Of Men Through Female Domination
+382.    Hating Men
+383.    Hating Women
+384.    Hating One’s Sexual Role And Function
+385.    Rebelling Against The Natural Law Through Homosexuality
+386.    Abdicating Responsibility Of Leadership
+387.    Abandoning Of The Family By The Father Or Mother
+388.    Being Above The Law Of God And The Government
+389.    Resisting And Opposing Authority
+390.    Encouraging Others To Oppose Lawful Authority
+
+[PRINCIPALITY OF DESTRUCTIVE ATTITUDES AGAINST GOD] 24.
+391.    Doubt
+392.    Condemnation
+393.    Obsession With Failure
+394.    Obsession With Defeat
+395.    Obsession With Negatives Of The Past
+396.    False Expectations Appearing Real
+397.    Rebellion To Established Authority
+398.    Lying
+499.    Thoughts Of Strife
+400.    Thoughts Of Discord
+401.    Thoughts Of Offense
+402.    Erratic Thoughts Out Of Nowhere
+403.    Compulsive Desires To Binge Eat
+404.    Compulsive Desires To Lust
+405.    Compulsive Desires To Overwork
+406.    Compulsive Desires To Overdo Whatever
+407.    Overcompensating In Any Way
+408.    Constant Worry Thoughts
+409.    Thoughts About Illicit Sex
+410.    Thoughts About Homosexuality
+412.    Thoughts About Compulsion To View Pornography
+413.    Gossip
+414.    Sudden Distrust In People Who Have Given You No Reason To Distrust Them
+414.    Accusing Thoughts About Yourself
+415.    Accusing Thoughts About Others
+416.    Compulsive Uncontrolled Anger
+417.    Disunity - Seeking To Pit One Person Against Another
+418.    Seeking To Create Doubt About A Person Or Day
+419.    Thoughts Of Compromise With The Flesh And Known Sinful Traps
+420.    Overwhelming Panic Attacks
+421.    Self-doubt
+422.    Excessive Pride In Looks 
+423.    Excessive Pride In Work
+424.    Excessive Pride In Church Activities
+425.    Rigidity
+426.    Feelings Of Loneliness And Detachment
+427.    Thoughts That I Do Not Fit In Anywhere
+428.    Thoughts That Question God’s Love, Faithfulness And Word
+429.    Selfish Thoughts
+430.    Thinking That Others Don’t Care About Me
+431.    Hopelessness
+432.    Beliefs That Nothing Will Get Better
+433.    Lack Of Ability To Focus
+434.    Lack Of Desire To Read The Word Of God
+435.    Lack Of Desire To Pray
+436.    Lack Of Desire To Attend Church
+437.    Thoughts Of Isolation
+438.    Thoughts And Feelings Of Panic
+439.    Over-religiousness
+440.    Duplicity Or Hypocrisy
+441.    No Transparency - Believing That My Problems Are Too Big For Anyone Else
+442.    Having Thoughts Of Anxiety
+
+[PRINCIPALITY OF DESTRUCTIVE IDENTITIES AGAINST GOD] 25.
+443.    Familiar Identity Of Addiction
+444.    Familiar Identity Of Anger
+445.    Familiar Identity Of Anti-submissiveness
+446.    Familiar Identity Of Anxiety
+447.    Familiar Identity Of Apprehension
+448.    Familiar Identity Of Arguing
+449.    Familiar Identity Of Backbiting
+450.    Familiar Identity Of Belittling
+451.    Familiar Identity Of Bickering
+452.    Familiar Identity Of Bitterness
+453.    Familiar Identity Of Blasphemy
+454.    Familiar Identity Of Compromise
+455.    Familiar Identity Of Confrontation
+456.    Familiar Identity Of Contention
+457.    Familiar Identity Of Crib Death
+458.    Familiar Identity Of Criticism
+459.    Familiar Identity Of Cruelty
+460.    Familiar Identity Of Death
+461.    Familiar Identity Of Deception
+462.    Familiar Identity Of Defeatism
+463.    Familiar Identity Of Depression
+464.    Familiar Identity Of Discontent
+465.    Familiar Identity Of Disobedience
+466.    Familiar Identity Of Distrust
+467.    Familiar Identity Of Divination
+468.    Familiar Identity Of Doctrinal Error
+469.    Familiar Identity Of Doctrinal Obsession
+470.    Familiar Identity Of Dominance
+471.    Familiar Identity Of Doom And Gloom
+472.    Familiar Identity Of Doubt And Unbelief
+473.    Familiar Identity Of Dread
+474.    Familiar Identity Of Early Death
+475.    Familiar Identity Of Egotism
+476.    Familiar Identity Of Envy
+477.    Familiar Identity Of Escapism 
+478.    Familiar Identity Of Fantasy
+479.    Familiar Identity Of Fatigue
+480.    Familiar Identity Of Faultfinding
+481.    Familiar Identity Of Fear
+482.    Familiar Identity Of Fear Of Accusation
+483.    Familiar Identity Of Fear Of Condemnation
+484.    Familiar Identity Of Fear Of Disapproval
+485.    Familiar Identity Of Fear Of Failure
+486.    Familiar Identity Of Fear Of Judgment
+487.    Familiar Identity Of Fear Of Man
+488.    Familiar Identity Of Fear Of Reproof
+489.    Familiar Identity Of Fighting
+490.    Familiar Identity Of Forgetfulness
+491.    Familiar Identity Of Frigidity
+492.    Familiar Identity Of Gluttony
+493.    Familiar Identity Of Gossip
+494.    Familiar Identity Of Greed
+495.    Familiar Identity Of Hallucinations
+496.    Familiar Identity Of Hatred
+497.    Familiar Identity Of Headache
+498.    Familiar Identity Of Heartbreak
+499.    Familiar Identity Of Heaviness
+500.    Familiar Identity Of Hopelessness
+501.    Familiar Identity Of Hurt
+502.    Familiar Identity Of Inadequacy
+503.    Familiar Identity Of Incubus
+504.    Familiar Identity Of Indifference
+505.    Familiar Identity Of Inferiority
+506.    Familiar Identity Of Infirmity
+507.    Familiar Identity Of Insanity
+508.    Familiar Identity Of Insomnia
+509.    Familiar Identity Of Intellectualism
+510.    Familiar Identity Of Jealousy
+511.    Familiar Identity Of Kleptomania
+512.    Familiar Identity Of Laziness
+513.    Familiar Identity Of Legalism
+514.    Familiar Identity Of Listlessness
+515.    Familiar Identity Of Loneliness
+516.    Familiar Identity Of Lying Spirit 
+517.    Familiar Identity Of Mania
+518.    Familiar Identity Of Materialism
+519.    Familiar Identity Of Mockery
+520.    Familiar Identity Of Molestation
+521.    Familiar Identity Of Moonstruck
+522.    Familiar Identity Of Murder
+523.    Familiar Identity Of Nervousness
+524.    Familiar Identity Of Nightmares
+525.    Familiar Identity Of Obesity
+526.    Familiar Identity Of Occult Spirits
+527.    Familiar Identity Of Overburden
+528.    Familiar Identity Of Paranoia
+529.    Familiar Identity Of Passivity
+530.    Familiar Identity Of Persecution
+531.    Familiar Identity Of Playacting
+532.    Familiar Identity Of Possessiveness
+533.    Familiar Identity Of Pride
+534.    Familiar Identity Of Procrastination
+535.    Familiar Identity Of Quarreling
+536.    Familiar Identity Of Rape
+537.    Familiar Identity Of Rationalism
+538.    Familiar Identity Of Rebellion
+539.    Familiar Identity Of Religiosity
+540.    Familiar Identity Of Resentment
+541.    Familiar Identity Of Restlessness
+542.    Familiar Identity Of Retaliation
+543.    Familiar Identity Of Retardation
+544.    Familiar Identity Of Revenge
+545.    Familiar Identity Of Ritualism
+546.    Familiar Identity Of Sadness And Crying
+547.    Familiar Identity Of Schizophrenia
+548.    Familiar Identity Of Selfishness
+549.    Familiar Identity Of Self-pity
+550.    Familiar Identity Of Senility
+551.    Familiar Identity Of Sensitivity
+552.    Familiar Identity Of Sexual Perversion
+553.    Familiar Identity Of Shyness
+554.    Familiar Identity Of Sorrow
+555.    Familiar Identity Of Spirit Of Error
+556.    Familiar Identity Of Spiritism
+557.    Familiar Identity Of Spite
+558.    Familiar Identity Of Stoicism
+559.    Familiar Identity Of Strife
+560.    Familiar Identity Of Stubbornness
+561.    Familiar Identity Of Succubus
+562.    Familiar Identity Of Suicide
+563.    Familiar Identity Of Suspicion
+564.    Familiar Identity Of Temper
+565.    Familiar Identity Of Tension
+566.    Familiar Identity Of Timidity
+567.    Familiar Identity Of Unfairness
+568.    Familiar Identity Of Unforgiveness
+569.    Familiar Identity Of Vanity
+570.    Familiar Identity Of Violence
+571.    Familiar Identity Of Weary In Well Doing
+572.    Familiar Identity Of Witchcraft
+573.    Familiar Identity Of Worry
+
+[PRINCIPALITY OF SPIRIT SPOUSE GODS] 26.
+574.    Disembodied Spirits Of Unsaved Family Members, Relatives, Or Ancestors Of The Person Or His OR Her Spouse
+575.    Antichrist Spirit
+576.    Exhibitionist Spirit
+577.    Fetish Spirit
+578.    Haughty Spirit
+579.    Spirit Eros
+580.    Spirit Of Addictions And Sex Addictions
+581.    Spirit Of Adoration
+582.    Spirit Of Adultery
+583.    Spirit Of Adulation
+584.    Spirit Of Attractions
+585.    Spirit Of Autoeroticism
+586.    Spirit Of Bacchus
+587.    Spirit Of Ba-al Worship
+588.    Spirit Of Bondage
+589.    Spirit Of Breast Lust
+590.    Spirit Of Compulsion
+591.    Spirit Of Control
+592.    Spirit Of Decadence
+593.    Spirit Of Debauchery
+594.    Spirit Of Deception
+595.    Spirit Of Delights
+596.    Spirit Of Desires
+597.    Spirit Of Disobedience
+598.    Spirit Of Double-mindedness
+699.    Spirit Of Erotic Lust (Lust For The Erotic)
+600.    Spirit Of Eroticism
+601.    Spirit Of Eye Lust
+602.    Spirit Of Fantasizing
+603.    Spirit Of Fascination
+604.    Spirit Of Fear
+605.    Spirit Of Forces
+606.    Spirit Of Genital Lust
+607.    Spirit Of Guile
+608.    Spirit Of Habits
+609.    Spirit Of Homosexuality
+610.    Spirit Of Idolatry
+611.    Spirit Of Immorality
+612.    Spirit Of Inordinate Affections
+613.    Spirit Of Incest
+614.    Spirit Of Lasciviousness
+615.    Spirit Of Lesbianism
+616.    Spirit Of Lewdness
+617.    Spirit Of Lies
+618.    Spirit Of Loneliness
+619.    Spirit Of Lust
+620.    Spirit Of Lust For Looks
+621.    Spirit Of Lust For The Flesh (Cannibalism)
+622.    Spirit Of Manipulation
+623.    Spirit Of Masturbation
+624.    Spirit Of Mirrors
+625.    Spirit Of Narcissism
+626.    Spirit Of Necrophilia
+627.    Spirit Of Nudity
+628.    Spirit Of Nymphomania
+629.    Spirit Of Obsession
+630.    Spirit Of Oppression
+631.    Spirit Of Orgies
+632.    Spirit Of Pedophilia (Lust For Children)
+633.    Spirit Of Penile Lust
+634.    Spirit Of Physical Abuse
+635.    Spirit Of Pornography
+636.    Spirit Of Practices Of Sexual And Sensual Activities (Sex Therapists)
+637.    Spirit of Somnophilia
+638.    Spirit Of Pre-occupations
+639.    Spirit Of Pride
+640.    Spirit Of Promiscuity
+641.    Spirit Of Prostitution (Harlotry) (Whoredoms) (Sex-trafficking)
+642.    Spirit Of Python
+643.    Spirit Of Rebellion
+644.    Spirit Of Ritual Sex
+645.    Spirit Of Seduction
+646.    Spirit Of Self-adoration
+647.    Spirit Of Self-idolatry
+648.    Spirit Of Self-indulgence
+649.    Spirit Of Self-lust
+650.    Spirit Of Sexual Abuse
+651.    Spirit Of Sexual Idolatry
+652.    Spirit Of Slavery
+653.    Spirit Of Sodomy
+654.    Spirit Of Stupor
+655.    Spirit Of Temptations
+656.    Spirit Of Touch Lust
+657.    Spirit Of Unbelief
+658.    Spirit Of Vaginal Lust
+659.    Spirit Of Verbal Eroticism
+660.    Spirit Of Verbal Lust
+661.    Spirit Of Violence
+662.    Spirit Of Voyeurism
+663.    Spirit Of Vulgarity
+664.    Spirit Of Witchcraft
+665.    Spirit of Writing Fan-fiction Stories to Create and Worship your Own Narrative
+666.    Spirit Of “Love” That Keeps Loving Relationships From Forming And Keeps People Single
