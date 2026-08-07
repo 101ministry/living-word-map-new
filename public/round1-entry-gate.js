@@ -4,6 +4,7 @@
   const ROUND1_URL = 'round1.html?from=map';
   const STORAGE_KEY = 'lwm-round1-videos-v1';
   const COUNTDOWN_SEC = 45;
+  const TOUGH_QUESTIONS_AT_SEC = 20;
 
   const els = {
     link: document.getElementById('round1-entry-link'),
@@ -12,6 +13,7 @@
     videosNo: document.getElementById('round1-entry-videos-no'),
     videosDismiss: document.getElementById('round1-entry-videos-dismiss'),
     warningDialog: document.getElementById('round1-entry-warning-dialog'),
+    toughQuestions: document.getElementById('round1-entry-tough-questions'),
     countdownEl: document.getElementById('round1-entry-countdown'),
     countdownSec: document.getElementById('round1-entry-countdown-sec'),
   };
@@ -52,14 +54,26 @@
     }
   }
 
+  function hideToughQuestionsLink() {
+    els.toughQuestions?.classList.add('hidden');
+  }
+
+  function showToughQuestionsLink() {
+    els.toughQuestions?.classList.remove('hidden');
+  }
+
   function updateCountdownDisplay() {
     if (els.countdownSec) {
       els.countdownSec.textContent = String(countdownRemaining);
+    }
+    if (countdownRemaining <= TOUGH_QUESTIONS_AT_SEC) {
+      showToughQuestionsLink();
     }
   }
 
   function finishWarningCountdown() {
     clearCountdown();
+    hideToughQuestionsLink();
     closeDialog(els.warningDialog);
     goToRound1();
   }
@@ -67,6 +81,7 @@
   function startWarningCountdown() {
     clearCountdown();
     countdownRemaining = COUNTDOWN_SEC;
+    hideToughQuestionsLink();
     updateCountdownDisplay();
     showDialog(els.warningDialog);
 
