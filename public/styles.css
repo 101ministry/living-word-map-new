@@ -2000,6 +2000,53 @@ a.round2-nav-link:hover {
   justify-content: flex-end;
 }
 
+.round1-video-gate-dialog {
+  max-width: min(480px, 92vw);
+}
+
+.round1-video-gate-list {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.round1-video-gate-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.round1-video-gate-part {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.round1-entry-warning-dialog {
+  max-width: min(440px, 92vw);
+}
+
+.round1-entry-warning-text {
+  margin: 0 0 1.25rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--quote);
+}
+
+.round1-entry-countdown {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted, var(--text));
+}
+
 .prayer-dialog {
   border: 1px solid var(--border);
   border-radius: 12px;

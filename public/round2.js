@@ -32,12 +32,7 @@
   const els = {
     phaseLabel: document.getElementById('round2-phase-label'),
     progress: document.getElementById('round2-progress'),
-    phaseOverview: document.getElementById('phase-overview'),
     phaseRound2: document.getElementById('phase-round2'),
-    gate: document.getElementById('round2-gate'),
-    gateYes: document.getElementById('round2-gate-yes'),
-    gateNo: document.getElementById('round2-gate-no'),
-    overviewSections: document.getElementById('round2-overview-sections'),
     sidebarSections: document.getElementById('round2-sidebar-sections'),
     topicNum: document.getElementById('round2-topic-num'),
     topicTitle: document.getElementById('round2-topic-title'),
@@ -53,11 +48,6 @@
   };
 
   const state = loadState();
-  const entryFromMap = new URLSearchParams(window.location.search).get('from') === 'map';
-  if (entryFromMap) {
-    state.phase = 'overview';
-    saveState();
-  }
 
   let pendingHeartCheck = false;
   let pendingNavigation = null;
@@ -72,6 +62,7 @@
         const parsed = JSON.parse(raw);
         const merged = { ...defaultState(), ...parsed, heartAnswered: parsed.heartAnswered || [] };
         merged.currentTopic = clampTopic(merged.currentTopic);
+        merged.phase = 'round2';
         return merged;
       }
     } catch { /* ignore */ }
@@ -80,7 +71,7 @@
 
   function defaultState() {
     return {
-      phase: 'overview',
+      phase: 'round2',
       currentTopic: 1,
       visited: [],
       heartYes: [],
@@ -164,78 +155,6 @@
     el.textContent = complete ? '✅' : '☐';
   }
 
-  function createOverviewCard(t) {
-    const card = document.createElement('div');
-    card.className = 'round2-overview-card';
-    const videoUrl = topicYoutubeUrl(t.number);
-    const videoEntry = topicVideoEntry(t.number);
-    const videoLinkHtml = videoUrl
-      ? `<a class="round2-overview-video-link" href="${escapeHtml(videoUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(topicVideoLabel(videoEntry))}</a>`
-      : '';
-    card.innerHTML = `
-      <span class="round2-overview-num">${pad(t.number)}</span>
-      <div>
-        <p class="round2-overview-title">${escapeHtml(t.label)}</p>
-        ${videoLinkHtml}
-        ${t.round1Preview ? `<p class="round2-overview-snippet">${escapeHtml(t.round1Preview)}</p>` : ''}
-        <div class="round2-snapshot-tags">
-          ${t.root ? `<span class="round2-tag root">Root: ${escapeHtml(t.root)}</span>` : ''}
-          ${t.fruitDisplay ? `<span class="round2-tag fruit">Fruit: ${escapeHtml(t.fruitDisplay)}</span>` : ''}
-        </div>
-      </div>`;
-    return card;
-  }
-
-  /** Render overview cards in batches so 666 nodes do not block the main thread. */
-  function buildOverview(onDone) {
-    els.overviewSections.innerHTML = '';
-    const sections = DATA.sections;
-    let sectionIdx = 0;
-    let topicIdx = 0;
-    let wrap = null;
-    let sorted = null;
-    const BATCH = 30;
-
-    function renderBatch() {
-      let count = 0;
-      while (sectionIdx < sections.length && count < BATCH) {
-        const section = sections[sectionIdx];
-        if (!wrap) {
-          wrap = document.createElement('div');
-          wrap.className = 'round2-overview-section';
-          const h = document.createElement('h3');
-          h.textContent = section.name;
-          wrap.appendChild(h);
-          sorted = [...section.topics].sort((a, b) => a.number - b.number);
-          topicIdx = 0;
-        }
-
-        while (topicIdx < sorted.length && count < BATCH) {
-          const item = sorted[topicIdx++];
-          const t = topicData(item.number);
-          if (t) {
-            wrap.appendChild(createOverviewCard(t));
-            count += 1;
-          }
-        }
-
-        if (topicIdx >= sorted.length) {
-          els.overviewSections.appendChild(wrap);
-          wrap = null;
-          sectionIdx += 1;
-        }
-      }
-
-      if (sectionIdx < sections.length) {
-        requestAnimationFrame(renderBatch);
-      } else if (typeof onDone === 'function') {
-        onDone();
-      }
-    }
-
-    requestAnimationFrame(renderBatch);
-  }
-
   function buildSidebar(onDone) {
     els.sidebarSections.innerHTML = '';
     const sections = DATA.sections;
@@ -312,24 +231,15 @@
       .replace(/"/g, '&quot;');
   }
 
-  function setPhase(phase) {
-    state.phase = phase;
+  function startRound2() {
+    state.phase = 'round2';
     saveState();
-    const isOverview = phase === 'overview';
-    const isRound2 = phase === 'round2';
-    els.phaseOverview.classList.toggle('hidden', !isOverview);
-    els.phaseRound2.classList.toggle('hidden', !isRound2);
-    els.phaseLabel.textContent = isOverview ? 'Round 1 overview' : 'Round 2 · generational prayer';
-    document.body.classList.toggle('round2-active', isRound2);
-    if (isOverview) {
-      els.progress.textContent = `${DATA.topicCount} topics · Round 1 review`;
-    }
-    if (isRound2) {
-      pendingNavigation = null;
-      closeHeartDialog();
-      renderCurrentTopic();
-      buildSidebar();
-    }
+    pendingNavigation = null;
+    closeHeartDialog();
+    document.body.classList.add('round2-active');
+    els.phaseLabel.textContent = 'Round 2 · generational prayer';
+    renderCurrentTopic();
+    buildSidebar();
   }
 
   function refreshSidebarMarks() {
@@ -511,9 +421,6 @@
   }
 
   // Events
-  els.gateYes.addEventListener('click', () => setPhase('round2'));
-  els.gateNo.addEventListener('click', () => { window.location.href = 'index.html'; });
-
   els.heartYes.addEventListener('click', () => advanceAfterHeart(true));
   els.heartNo.addEventListener('click', () => advanceAfterHeart(false));
   els.heartDismiss.addEventListener('click', () => dismissHeartDialogOnly());
@@ -535,14 +442,9 @@
   });
   window.addEventListener('focus', () => handleCalReturn());
 
-  // Init — show overview + gate immediately; resume Round 2 only on return visits.
+  // Init — open directly to Round 2 prayers (same as Round 1 & 3).
   try {
-    if (state.phase === 'round2' && !entryFromMap) {
-      setPhase('round2');
-    } else {
-      setPhase('overview');
-      buildOverview();
-    }
+    startRound2();
   } catch (err) {
     showFatalError(`Round 2 failed to initialize: ${err.message}`);
     console.error(err);

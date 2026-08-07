@@ -7,39 +7,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=17" />
-  <link rel="stylesheet" href="round2.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="round2.css?v=9" />
 </head>
-<body class="round2-body">
+<body class="round2-body round2-active">
   <div id="round2-app">
     <header class="round2-header">
-      <a href="index.html" class="round2-back-link">← Living Word Map</a>
+      <a href="index.html" class="round2-back-link">← Back to map</a>
       <div class="round2-header-brand">
         <h1>Generational Prayers · Round 2</h1>
-        <p id="round2-phase-label" class="round2-phase-label">Round 1 overview</p>
+        <p id="round2-phase-label" class="round2-phase-label">Round 2 · generational prayer</p>
       </div>
       <div class="round2-header-meta">
         <span id="round2-progress">Loading…</span>
       </div>
     </header>
 
-    <!-- Phase 1: Round 1 overview with root/fruit snapshots -->
-    <section id="phase-overview" class="round2-phase" aria-label="Round 1 overview">
-      <div class="round2-overview-intro">
-        <p>Before Round 2, review each topic’s Round 1 prayer theme with its related <strong>root(s)</strong> and <strong>fruit(s)</strong>. Scroll the list as you like — you can enter generational prayer whenever you are ready.</p>
-      </div>
-      <div id="round2-gate" class="round2-gate" role="region" aria-label="Ready for Round 2">
-        <p class="round2-gate-text">Ready for Round 2?</p>
-        <div class="round2-gate-actions">
-          <button type="button" id="round2-gate-yes" class="btn-accent">Yes</button>
-          <button type="button" id="round2-gate-no" class="round2-btn-ghost">No — back to map</button>
-        </div>
-      </div>
-      <div id="round2-overview-sections" class="round2-overview-sections"></div>
-    </section>
-
-    <!-- Phase 2: Round 2 prayer journey -->
-    <section id="phase-round2" class="round2-phase hidden" aria-label="Round 2 prayers">
+    <section id="phase-round2" class="round2-phase" aria-label="Round 2 prayers">
       <div class="round2-layout">
         <article class="round2-prayer-panel">
           <header class="round2-prayer-header">
@@ -63,7 +47,6 @@
       </div>
     </section>
 
-    <!-- Heart-check dialog -->
     <dialog id="round2-heart-dialog" class="round2-dialog">
       <div class="round2-dialog-inner">
         <button type="button" id="round2-heart-dismiss" class="round2-dialog-close" aria-label="Close dialog">×</button>
@@ -78,7 +61,7 @@
   </div>
 
   <script src="round2-data.js?v=5"></script>
-  <script src="round2.js?v=12"></script>
+  <script src="round2.js?v=13"></script>
   <script defer src="videos.js?v=1"></script>
 </body>
 </html>

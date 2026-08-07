@@ -96,6 +96,13 @@ function Normalize-TopicKey([string]$text) {
     return ($t.Trim() -replace '\s+', ' ')
 }
 
+function Normalize-ExactTopicKey([string]$text) {
+    if (-not $text) { return '' }
+    $t = $text.ToLower()
+    $t = $t -replace '[^a-z0-9]+', ' '
+    return ($t.Trim() -replace '\s+', ' ')
+}
+
 function Get-TopicKind([string]$text) {
     if (-not $text) { return 'plain' }
     $t = $text.ToLower().Trim()
@@ -581,22 +588,28 @@ foreach ($line in ($chartRaw -split '\r?\n')) {
 }
 
 $chartKeyToNum = @{}
+$chartExactKeyToNum = @{}
 $chartKindByNum = @{}
 foreach ($entry in $chartNames.GetEnumerator()) {
     $key = Normalize-TopicKey $entry.Value
+    $exactKey = Normalize-ExactTopicKey $entry.Value
     $kind = Get-TopicKind $entry.Value
     $chartKindByNum[[int]$entry.Key] = $kind
     if ($key -and -not $chartKeyToNum.ContainsKey($key)) {
         $chartKeyToNum[$key] = @()
     }
     if ($key) { $chartKeyToNum[$key] += [int]$entry.Key }
+    if ($exactKey -and -not $chartExactKeyToNum.ContainsKey($exactKey)) {
+        $chartExactKeyToNum[$exactKey] = @()
+    }
+    if ($exactKey) { $chartExactKeyToNum[$exactKey] += [int]$entry.Key }
 }
 
 function Find-TopicNumbersByLabel([string]$label) {
-    $key = Normalize-TopicKey $label
+    $key = Normalize-ExactTopicKey $label
     if (-not $key) { return @() }
-    if ($chartKeyToNum.ContainsKey($key)) {
-        return @($chartKeyToNum[$key])
+    if ($chartExactKeyToNum.ContainsKey($key)) {
+        return @($chartExactKeyToNum[$key])
     }
     return @()
 }
