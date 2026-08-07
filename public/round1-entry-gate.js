@@ -3,7 +3,7 @@
 
   const ROUND1_URL = 'round1.html?from=map';
   const STORAGE_KEY = 'lwm-round1-videos-v1';
-  const COUNTDOWN_SEC = 45;
+  const COUNTDOWN_SEC = 28;
   const TOUGH_QUESTIONS_AT_SEC = 20;
 
   const els = {
