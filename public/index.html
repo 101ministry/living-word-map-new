@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="styles.css?v=20" />
   <link rel="stylesheet" href="corner-breaker.css?v=7" />
 </head>
 <body>
@@ -27,6 +27,7 @@
         <button type="button" id="open-core-prayer" class="btn-accent">Core Prayer</button>
         <a href="round1.html?from=map" class="btn-accent round2-nav-link">Round 1 Prayers</a>
         <a href="round2.html?from=map" class="btn-accent round2-nav-link">Round 2 Prayers</a>
+        <a href="round3.html" class="btn-accent round2-nav-link">Round 3 Prayers</a>
         <input type="search" id="search" placeholder="Search principalities, roots, fruits, topics…" autocomplete="off" />
         <select id="view-mode" aria-label="View mode">
           <option value="constellation">Constellation</option>
@@ -297,6 +298,20 @@
     </form>
   </dialog>
 
+  <dialog id="survey-gate-dialog" class="survey-gate-dialog">
+    <div class="survey-gate-dialog-inner">
+      <button type="button" id="survey-gate-dismiss" class="dialog-close survey-gate-close" aria-label="Close">×</button>
+      <h2>Have you filled out the survey yet?</h2>
+      <p class="survey-gate-link-wrap">
+        <a id="survey-gate-link" class="survey-gate-link" href="https://s.surveyplanet.com/9cxtgo01" target="_blank" rel="noopener noreferrer">Take the survey</a>
+      </p>
+      <div class="survey-gate-actions">
+        <button type="button" id="survey-gate-yes" class="btn-accent">Yes</button>
+        <button type="button" id="survey-gate-no" class="btn-ghost">No</button>
+      </div>
+    </div>
+  </dialog>
+
   <script src="vendor/d3.min.js"></script>
   <script src="vendor/force-graph.min.js"></script>
   <script src="color-scheme.js"></script>
@@ -309,6 +324,7 @@
   <script src="videos.js"></script>
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
+  <script src="survey-gate.js?v=1"></script>
   <script src="app.js"></script>
   <script src="teaching-videos.js"></script>
   <script src="corner-breaker.js"></script>

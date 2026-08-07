@@ -1,6 +1,6 @@
 # Builds generational (round 2) compiled prayers from topics 666.txt metadata.
 param(
-    [string]$TopicsFile = "$env:USERPROFILE\Downloads\Telegram Desktop\topics 666.txt",
+    [string]$TopicsFile = $(if (Test-Path "$PSScriptRoot\..\data\TOPICS-666.txt") { (Resolve-Path "$PSScriptRoot\..\data\TOPICS-666.txt").Path } else { "$env:USERPROFILE\Downloads\Telegram Desktop\topics 666.txt" }),
     [string]$ChartFile = $(if (Test-Path "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt") {
         (Resolve-Path "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART.txt").Path
     } else {

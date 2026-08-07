@@ -1,0 +1,25 @@
+---
+description: Globe Word Map transport UX — applies only to globe mode, not graph views
+globs: public/globe-view.js,public/topic-icons.js
+alwaysApply: false
+---
+
+# Globe transport view only
+
+These conventions apply **only** to Globe Word Map (`globe-view.js` principality transport view). Do **not** change explore, constellation, or force-graph link behavior in `app.js` unless explicitly requested.
+
+## Principality topic shire
+
+- Topics appear as settlement/house icons on a parchment regional map.
+- **No inter-topic connector lines** — sharing the same principality map implies they are related.
+- All topics use the same house icon treatment (no callout bubbles or special sensitive styling).
+
+## Fruit / root layers
+
+- Fruit metro (banners + walled ring), root metro line, drag-to-spin — globe transport only.
+- Single-fruit principalities: top-center banner + smaller globe.
+
+## When editing other views
+
+- Preserve `buildVisibleGraph()`, `edges`, and layer toggles in `app.js` for explore/constellation.
+- Do not remove topic–root, topic–fruit, or topic–principality links from non-globe views based on globe transport rules.

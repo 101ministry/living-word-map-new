@@ -1,0 +1,35 @@
+---
+description: When user provides YouTube teaching video links, cross-reference chart and update teaching schedule
+globs: data/teaching-videos.json,data/TEACHING-SCHEDULE.txt,data/PRINCIPALITY-MEMBERSHIPS.txt,scripts/build-videos.ps1,public/videos.js
+alwaysApply: false
+---
+
+# Teaching video YouTube links
+
+When the user provides YouTube teaching video links (Repentance Project prayer topics), **always cross-reference the root spirits chart** before adding entries.
+
+## Required reads (in order)
+
+1. **`data/PRINCIPALITY-MEMBERSHIPS.txt`** — canonical root spirits / principality chart (groupings and topic order).
+2. **`data/TEACHING-SCHEDULE.txt`** — which days are split (presentation) vs full (`principalityId`), chart order, and `nextDay` / `nextPrincipalityId`.
+3. **`data/teaching-videos.json`** — existing days, parts, and YouTube IDs (confirm next day numbers).
+4. **`public/data.js`** — verify `principalityId` slugs exist (e.g. `idolatry`, `error`, `fear`, `divination`, `spirit-spouse-gods`).
+
+## Assigning each new link
+
+- **Full principality day** (chart order after day 14): set `principalityId` on the video entry; title like `Day N - Prayer Topics (PrincipalityName)`.
+- **Split / presentation day** (days 1–13 pattern, or Spirit Spouse block): do **not** set `principalityId`; add or extend **`data/TOPICS-666-PRESENTATION.txt`** with a `DAY N` section and topic phrases from the teaching.
+- Match **`principalityId`** to slugs in `public/data.js` (from chart header via kebab-case, e.g. Bondage → `bondage`, Sleep-Slumber → `sleep-slumber`).
+
+## After edits
+
+1. Update **`data/teaching-videos.json`** with new day(s), `part`, `youtubeId`, `url`, and `principalityId` when applicable.
+2. Update **`data/TEACHING-SCHEDULE.txt`**: record new days and advance `nextDay` / `nextPrincipalityId` / `nextTitleSuffix`.
+3. Run **`scripts/build-videos.ps1`** (use `-SkipCaptions` if network/captions fail) to rebuild **`public/videos.js`**.
+4. Optional: **`scripts/add-teaching-videos.ps1`** to preview next day and suggested JSON from URLs.
+
+## Do not
+
+- Commit or push unless the user explicitly asks.
+- Reference or copy from the user's Downloads path; repo files above are canonical.
+- Touch unrelated uncommitted work (globe view, etc.).

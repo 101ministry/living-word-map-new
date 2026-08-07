@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Round 1 Prayers — Living Word Map</title>
+  <title>Round 3 Prayers — Living Word Map</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -11,53 +11,52 @@
   <link rel="stylesheet" href="round2.css?v=9" />
 </head>
 <body class="round2-body round2-active">
-  <div id="round1-app">
+  <div id="round3-app">
     <header class="round2-header">
       <a href="index.html" class="round2-back-link">← Back to map</a>
       <div class="round2-header-brand">
-        <h1>Personal Prayers · Round 1</h1>
-        <p id="round1-phase-label" class="round2-phase-label">Round 1 · personal confession</p>
+        <h1>Generational Prayers · Round 3</h1>
+        <p id="round3-phase-label" class="round2-phase-label">Round 3 · generations 6–20</p>
       </div>
       <div class="round2-header-meta">
-        <span id="round1-progress">Loading…</span>
+        <span id="round3-progress">Loading…</span>
       </div>
     </header>
 
-    <section id="phase-prayers" class="round2-phase" aria-label="Round 1 prayers">
+    <section id="phase-prayers" class="round2-phase" aria-label="Round 3 prayers">
       <div class="round2-layout">
         <article class="round2-prayer-panel">
           <header class="round2-prayer-header">
-            <span id="round1-topic-num" class="round2-topic-num">001</span>
-            <h2 id="round1-topic-title">Topic</h2>
-            <p id="round1-topic-meta" class="round2-topic-meta"></p>
+            <span id="round3-topic-num" class="round2-topic-num">001</span>
+            <h2 id="round3-topic-title">Topic</h2>
+            <p id="round3-topic-meta" class="round2-topic-meta"></p>
           </header>
-          <div id="round1-prayer-scroll" class="round2-prayer-scroll" tabindex="0">
-            <p id="round1-prayer-note" class="round2-prayer-note">PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.</p>
-            <div id="round1-prayer-text" class="round2-prayer-text"></div>
+          <div id="round3-prayer-scroll" class="round2-prayer-scroll" tabindex="0">
+            <p id="round3-prayer-note" class="round2-prayer-note">PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.</p>
+            <div id="round3-prayer-text" class="round2-prayer-text"></div>
           </div>
         </article>
 
         <aside class="round2-sidebar" aria-label="Topic index">
-          <div id="round1-sidebar-sections" class="round2-sidebar-sections"></div>
+          <div id="round3-sidebar-sections" class="round2-sidebar-sections"></div>
         </aside>
       </div>
     </section>
 
-    <!-- Heart-check dialog -->
-    <dialog id="round1-heart-dialog" class="round2-dialog">
+    <dialog id="round3-heart-dialog" class="round2-dialog">
       <div class="round2-dialog-inner">
-        <button type="button" id="round1-heart-dismiss" class="round2-dialog-close" aria-label="Close dialog">×</button>
+        <button type="button" id="round3-heart-dismiss" class="round2-dialog-close" aria-label="Close dialog">×</button>
         <h3>Did anything change in your heart?</h3>
         <p class="round2-dialog-sub">When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.</p>
         <div class="round2-dialog-actions">
-          <button type="button" id="round1-heart-yes" class="btn-accent">Yes</button>
-          <button type="button" id="round1-heart-no" class="round2-btn-ghost">No</button>
+          <button type="button" id="round3-heart-yes" class="btn-accent">Yes</button>
+          <button type="button" id="round3-heart-no" class="round2-btn-ghost">No</button>
         </div>
       </div>
     </dialog>
   </div>
 
-  <script src="round1-data.js?v=4"></script>
-  <script src="round1.js?v=7"></script>
+  <script src="round3-data.js?v=1"></script>
+  <script src="round3.js?v=2"></script>
 </body>
 </html>

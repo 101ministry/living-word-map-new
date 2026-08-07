@@ -1,0 +1,238 @@
+LIVING WORD MAP — AUDIO PRAYER STITCHING (EXAMPLE)
+==================================================
+
+This file explains shells vs inserts, and shows how Topic 001 (Anger)
+would be assembled for Round 1. Use it to reset how you think about
+recording and building prayer audio.
+
+
+WHAT IS A SHELL?
+----------------
+
+A SHELL is a fixed MP3 clip — words that are the SAME in every topic
+prayer. Record each shell once. Reuse it in all 666 prayers.
+
+An INSERT is a small MP3 clip that CHANGES per topic — the topic name,
+root name, fruit/theme line, principality name, etc. Record one clip
+per unique word/phrase in that category.
+
+
+THE FORM-LETTER IDEA
+--------------------
+
+  [shell] + [insert] + [insert] + [shell] + [shell] + … → full prayer MP3
+
+You are not recording 666 full prayers from scratch. You are recording:
+
+  • ~8 shell clips (Round 1)
+  • ~666 topic inserts
+  • ~20–40 root inserts (however many distinct roots exist)
+  • (+ fruit and principality inserts when a round needs them)
+
+Then a script (e.g. Python) stitches them in order and saves one file
+per topic, e.g.  output/round1/001-anger.mp3
+
+
+FOLDER LAYOUT (SUGGESTED)
+-------------------------
+
+  audiobits/
+    shells/
+      01-please-note.mp3
+      02-i-agree.mp3
+      03-made-it-more-important.mp3
+      04-because-of-agreements.mp3
+      05-accusation-of-this-record.mp3
+      06-i-refuse-to-blame.mp3
+      07-i-no-longer-want-to-serve.mp3
+      08-in-fact-through-amen.mp3
+
+    topics/
+      001-anger.mp3
+      002-wrath.mp3
+      …
+      666-….mp3
+
+    roots/
+      bitterness-and-unforgiveness.mp3
+      deception-and-falsehood.mp3
+      …
+
+    fruits/           (when a round needs them)
+    principalities/   (when a round needs them)
+
+
+ROUND 1 — STITCH ORDER FOR TOPIC 001 (ANGER)
+--------------------------------------------
+
+Written prayer (from compiled Round 1 source):
+
+  001. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.
+
+  I agree that I am guilty of keeping and not casting down thought suggestions
+  of anger, from a root of bitterness and unforgiveness.
+
+  I agree that I made it more important than God, loved it more than God,
+  and preferred it instead of God. For this idolatry, adultery, and rebellion,
+  I lay my life on the altar of God.
+
+  I recognize that anger, from a root of bitterness and unforgiveness; is
+  happening because of agreements, blood covenants, blood contracts, hexes,
+  vexes, interaction with the blood, and satanic ritual agreements because of
+  Anger and Violence with the parent Principality of Jealousy
+
+  For the accusation of this record, I lay my life down on my mother's side
+  (say her full name), and my father's side (say his full name), all the
+  way back to Adam.
+
+  … (forgiveness block) …
+
+  I no longer want to serve anger. In fact, I am asking for the forgiveness
+  of God on this and for the Blood of Jesus to cover the record and speak
+  instead. … In the name of Jesus, Amen
+
+
+Audio assembly (play in this order):
+
+  STEP  FILE                              TYPE     SPOKEN TEXT (summary)
+  ----  --------------------------------  -------  -------------------------
+   1    shells/01-please-note.mp3         SHELL    "Please note: these prayers
+                                                     are to be spoken…"
+
+   2    shells/02-i-agree.mp3             SHELL    "I agree that I am guilty of
+                                                     keeping and not casting down
+                                                     thought suggestions of"
+
+   3    topics/001-anger.mp3              INSERT   "anger"
+
+   4    roots/bitterness-and-unforgiveness.mp3
+                                          INSERT   "from a root of bitterness
+                                                     and unforgiveness"
+         (OR split: a tiny shell "from a root of" + root insert — your choice)
+
+   5    shells/03-made-it-more-important.mp3
+                                          SHELL    "I agree that I made it more
+                                                     important than God… lay my
+                                                     life on the altar of God."
+
+   6    shells/04-because-of-agreements.mp3
+                                          SHELL    "I recognize that … is
+                                                     happening because of
+                                                     agreements, blood covenants…"
+         (see NOTE A below)
+
+   7    shells/05-accusation-of-this-record.mp3
+                                          SHELL    "For the accusation of this
+                                                     record… all the way back to
+                                                     Adam."
+         (mother/father names are spoken LIVE by the person praying — no clip)
+
+   8    shells/06-i-refuse-to-blame.mp3   SHELL    "I refuse to blame anyone
+                                                     anymore… pure and holy."
+
+   9    shells/07-i-no-longer-want-to-serve.mp3
+                                          SHELL    "I no longer want to serve"
+
+  10    topics/001-anger.mp3              INSERT   "anger"  (same clip as step 3)
+
+  11    shells/08-in-fact-through-amen.mp3 SHELL    "In fact, I am asking for the
+                                                     forgiveness of God… In the
+                                                     name of Jesus, Amen"
+
+  → Save as:  output/round1/001-anger.mp3
+  → Deploy as:  public/audio/en/001.mp3  (when ready for the website)
+
+
+VISUAL (Round 1, Topic 001)
+---------------------------
+
+  [please note]
+       ↓
+  [I agree…] → [anger] → [root: bitterness…]
+       ↓
+  [made it more important…]
+       ↓
+  [because of agreements…]
+       ↓
+  [accusation of this record…]
+       ↓
+  [I refuse to blame…]
+       ↓
+  [I no longer want to serve] → [anger]
+       ↓
+  [In fact… Amen]
+
+  = one full prayer MP3 (~3–8 minutes depending on pacing)
+
+
+NOTE A — FRUIT + PRINCIPALITY (FULL TEXT VS SIMPLIFIED ROUND 1)
+---------------------------------------------------------------
+
+The written prayer after "agreements…" also says:
+
+  "because of Anger and Violence with the parent Principality of Jealousy"
+
+That part is NOT the same for every topic. Options:
+
+  (1) SIMPLIFIED ROUND 1 AUDIO
+      Bake a generic agreements shell and skip fruit/principality for now.
+      Easier to start; text on screen still shows the full prayer.
+
+  (2) FULL FIDELITY
+      After the agreements shell, add inserts:
+        fruits/anger-and-violence.mp3
+        principalities/jealousy.mp3
+      (exact wording must match your recorded clips)
+
+  Round 2 and Round 3 may add more shells and more inserts. Same clip
+  library — different stitch recipe per round.
+
+
+THREE ROUNDS
+------------
+
+  Round 1   Foundation (recipe above). Fewest shells.
+  Round 2   Adds some sections, removes or replaces others → new recipe.
+  Round 3   Fullest version → third recipe.
+
+  Record shells and inserts ONCE. Run the stitch script once per round:
+
+    python stitch_prayer.py --round 1 --topic 001
+    python stitch_prayer.py --round 2 --topic 001
+    python stitch_prayer.py --round 3 --topic 001
+
+  Output:
+    output/round1/001-anger.mp3
+    output/round2/001-anger.mp3
+    output/round3/001-anger.mp3
+
+
+WHAT THE WEBSITE EXPECTS TODAY
+------------------------------
+
+  public/audio/en/001.mp3   …   666.mp3   (one full file per topic)
+  public/audio/en/core.mp3  (shorter core prayer — separate from topic prayers)
+
+  Pre-rendered stitched files drop in without changing the player.
+
+
+TOPIC 002 (WRATH) — SAME SHELLS, DIFFERENT INSERTS
+----------------------------------------------------
+
+  Only steps 3, 4, and 10 change:
+
+    topics/002-wrath.mp3
+    roots/bitterness-and-unforgiveness.mp3   (same root as 001 in Round 1)
+    topics/002-wrath.mp3
+
+  All shell files are identical to Topic 001. That is the whole point.
+
+
+RECORDING CHECKLIST (ROUND 1 START)
+-----------------------------------
+
+  [ ] 8 shell clips (record once)
+  [ ] 666 topic clips (or batch by shared wording where phrases repeat)
+  [ ] Root clips for each distinct root in the chart
+  [ ] Test stitch on 001 Anger and 002 Wrath before batching all 666
+  [ ] Plan fruit/principality inserts before claiming "full" Round 1 audio
