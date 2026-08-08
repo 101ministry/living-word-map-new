@@ -2,7 +2,24 @@
   "series": "Repentance Project 3.0 - Prayer Topics",
   "platform": "youtube",
   "videos": [
-    { "day": 1, "part": 1, "title": "Day 1 - Prayer Topics", "youtubeId": "lzQaEDHfxrE", "url": "https://www.youtube.com/watch?v=lzQaEDHfxrE" },
+    {
+      "day": 1,
+      "part": 1,
+      "title": "Day 1 - Prayer Topics",
+      "youtubeId": "lzQaEDHfxrE",
+      "url": "https://www.youtube.com/watch?v=lzQaEDHfxrE",
+      "chapterTimestamps": {
+        "666": "13:00",
+        "665": "2:57:25",
+        "664": "2:58:22",
+        "663": "3:00:30",
+        "662": "3:04:28",
+        "661": "3:11:05",
+        "660": "3:12:10",
+        "659": "3:12:53",
+        "658": "3:13:10"
+      }
+    },
     { "day": 2, "part": 1, "title": "Day 2 - Prayer Topics", "youtubeId": "pwHwDasm-4c", "url": "https://www.youtube.com/watch?v=pwHwDasm-4c" },
     { "day": 3, "part": 1, "title": "Day 3 - Prayer Topics", "youtubeId": "T6fZ_jWU1dc", "url": "https://www.youtube.com/watch?v=T6fZ_jWU1dc" },
     { "day": 4, "part": 1, "title": "Day 4 - Prayer Topics", "youtubeId": "37jRMIrZgMU", "url": "https://www.youtube.com/watch?v=37jRMIrZgMU" },

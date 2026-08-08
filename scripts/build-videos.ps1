@@ -307,6 +307,26 @@ function Get-TopicsForPrincipality($graphTopics, [string]$principalityId) {
     })
 }
 
+function Parse-Timestamp([string]$text) {
+    if (-not $text) { return $null }
+    $parts = @($text.Trim() -split ':')
+    if ($parts.Count -eq 2) {
+        return [int]$parts[0] * 60 + [int]$parts[1]
+    }
+    if ($parts.Count -eq 3) {
+        return [int]$parts[0] * 3600 + [int]$parts[1] * 60 + [int]$parts[2]
+    }
+    return $null
+}
+
+function Get-ChapterTimestampOverride($video, [int]$topicNumber) {
+    if (-not $video -or -not $video.chapterTimestamps) { return $null }
+    $key = [string]$topicNumber
+    $ts = $video.chapterTimestamps.$key
+    if (-not $ts) { return $null }
+    return Parse-Timestamp ([string]$ts)
+}
+
 function Write-Js([object]$payload, [string]$path) {
     $json = $payload | ConvertTo-Json -Depth 20 -Compress
     $js = "window.VIDEO_DATA = $json;"
@@ -389,7 +409,10 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
     for ($i = 0; $i -lt $slice.Count; $i++) {
         $entry = $slice[$i]
         $topicNorm = Normalize-TopicText $entry.name
-        $startSeconds = Find-CaptionTimestamp $segments $topicNorm
+        $startSeconds = Get-ChapterTimestampOverride $video $entry.number
+        if ($null -eq $startSeconds) {
+            $startSeconds = Find-CaptionTimestamp $segments $topicNorm
+        }
         if ($null -eq $startSeconds) {
             $startSeconds = Estimate-Timestamp $i $slice.Count $duration
         }
