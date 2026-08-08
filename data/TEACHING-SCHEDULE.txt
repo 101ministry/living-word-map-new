@@ -72,10 +72,11 @@
 #  24 | full         | perversion                       | cut short — see description + Tough Questions link
 #  25 | presentation | whoredom (partial)               | TOPICS-666-PRESENTATION DAY 25
 #  26 | presentation | whoredom (cont.) + infirmity     | TOPICS-666-PRESENTATION DAY 26
+#  27 | presentation | infirmity (cont.) + shedding     | TOPICS-666-PRESENTATION DAY 27
 
 # --- NEXT EXPECTED (update after each new batch of links) ---
-nextDay=27
-nextMode=full
+nextDay=28
+nextMode=presentation
 nextPrincipalityId=shedding-of-innocent-blood
 nextTitleSuffix=Shedding of Innocent Blood
 

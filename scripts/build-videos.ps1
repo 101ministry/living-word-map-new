@@ -384,7 +384,12 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
     $segments = @()
     $player = Get-YouTubePlayerInfo $video.youtubeId
     if ($player -and $player.videoDetails -and $player.videoDetails.lengthSeconds) {
-        $duration = [int]$player.videoDetails.lengthSeconds
+        $len = [int]$player.videoDetails.lengthSeconds
+        if ($len -gt 0) { $duration = $len }
+    }
+    if ($video.PSObject.Properties.Name -contains 'durationSeconds' -and [int]$video.durationSeconds -gt 0) {
+        $duration = [int]$video.durationSeconds
+        Write-Host "  Using configured durationSeconds: ${duration}s"
     }
     if (-not $SkipCaptions -and $player -and $player.captions -and $player.captions.playerCaptionsTracklistRenderer) {
         $tracks = $player.captions.playerCaptionsTracklistRenderer.captionTracks
