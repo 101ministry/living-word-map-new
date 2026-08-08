@@ -2601,6 +2601,20 @@ a.round2-nav-link:hover {
   color: var(--text-muted);
 }
 
+.teaching-video-description {
+  margin: 0.55rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.teaching-video-description a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
 .teaching-chapters {
   list-style: none;
   margin: 0;

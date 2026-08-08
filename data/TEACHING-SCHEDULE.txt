@@ -68,12 +68,16 @@
 #  20 | full         | anti-christ
 #  21 | full         | deaf-dumb
 #  22 | full         | perversion
+#  23 | full         | deaf-dumb                        | Tourette's, mental disorder, stupor, suicide topics
+#  24 | full         | perversion                       | cut short — see description + Tough Questions link
+#  25 | presentation | whoredom (partial)               | TOPICS-666-PRESENTATION DAY 25
+#  26 | presentation | whoredom (cont.) + infirmity     | TOPICS-666-PRESENTATION DAY 26
 
 # --- NEXT EXPECTED (update after each new batch of links) ---
-nextDay=23
+nextDay=27
 nextMode=full
-nextPrincipalityId=whoredom
-nextTitleSuffix=Whoredom
+nextPrincipalityId=shedding-of-innocent-blood
+nextTitleSuffix=Shedding of Innocent Blood
 
 # After divination, continue chart order with full-principality days unless split is indicated
 # in a new presentation file section.

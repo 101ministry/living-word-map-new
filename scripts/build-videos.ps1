@@ -408,7 +408,7 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         }
     }
 
-    $videosOut += [pscustomobject]@{
+    $videoObj = [ordered]@{
         key          = "day-$day-part-$part"
         day          = $day
         part         = $part
@@ -419,6 +419,10 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         topicEnd     = if ($chapters.Count) { $chapters[-1].topicNumber } else { $null }
         chapters     = $chapters
     }
+    if ($video.PSObject.Properties.Name -contains 'description' -and $video.description) {
+        $videoObj.description = [string]$video.description
+    }
+    $videosOut += [pscustomobject]$videoObj
 }
 
 $payload = [pscustomobject]@{

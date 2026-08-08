@@ -61,6 +61,28 @@
     });
   }
 
+  function formatVideoDescription(desc) {
+    if (!desc) return '';
+    const toughUrl = 'https://repentance101ministry.com/channels/tough-questions';
+    const escaped = String(desc)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+    const linked = escaped.replace(
+      toughUrl,
+      `<a href="${toughUrl}" target="_blank" rel="noopener noreferrer">Tough Questions</a>`
+    );
+    return `<p class="teaching-video-description">${linked}</p>`;
+  }
+
+  function setChapterMeta(el, video, chapterCount) {
+    if (!el || !video) return;
+    const head = chapterCount
+      ? `${video.title} · ${chapterCount} topics`
+      : (video.title || '');
+    el.innerHTML = head + formatVideoDescription(video.description);
+  }
+
   function renderChapters() {
     if (!activeVideo) {
       chapterList.innerHTML = '';
@@ -71,11 +93,11 @@
     const chapters = activeVideo.chapters || [];
     if (!chapters.length) {
       chapterList.innerHTML = '<li class="teaching-chapter-empty">Topic timestamps for this video are being indexed. You can still watch the full teaching below.</li>';
-      chapterMeta.textContent = activeVideo.title;
+      setChapterMeta(chapterMeta, activeVideo, 0);
       return;
     }
 
-    chapterMeta.textContent = `${activeVideo.title} · ${chapters.length} topics`;
+    setChapterMeta(chapterMeta, activeVideo, chapters.length);
     chapterList.innerHTML = chapters.map(ch => `
       <li>
         <button type="button" class="teaching-chapter-btn" data-topic="${ch.topicNumber}" data-start="${ch.startSeconds}">
@@ -374,13 +396,12 @@
     const chapters = filteredChapters(globeActiveVideo);
     if (!chapters.length) {
       globeChapterList.innerHTML = '<li class="teaching-chapter-empty">No indexed timestamps for this fruit yet.</li>';
-      if (globeChapterMeta) globeChapterMeta.textContent = globeActiveVideo.title;
+      setChapterMeta(globeChapterMeta, globeActiveVideo, 0);
       return;
     }
 
-    if (globeChapterMeta) {
-      globeChapterMeta.textContent = `${globeActiveVideo.title} · ${chapters.length} topics`;
-    }
+    setChapterMeta(globeChapterMeta, globeActiveVideo, chapters.length);
+
     globeChapterList.innerHTML = chapters.map(ch => `
       <li>
         <button type="button" class="teaching-chapter-btn" data-topic="${ch.topicNumber}" data-start="${ch.startSeconds}">
