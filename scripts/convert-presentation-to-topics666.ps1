@@ -375,9 +375,9 @@ for ($num = 1; $num -le 666; $num++) {
         $because = if ($meta.because) { $meta.because } elseif ($existing.ContainsKey($num)) { $existing[$num].detail } else { '' }
         $detail = Build-Detail $meta.phrase $root $because $num
     } elseif ($existing.ContainsKey($num)) {
-        # Preserve fallback topics (108-573 etc.) — strip prior bad inject pass, keep plain text
-        $header = Clean-FallbackText $existing[$num].header
-        $detail = Clean-FallbackText $existing[$num].detail
+        # Preserve unmatched topics exactly (keep emoji markers)
+        $header = $existing[$num].header
+        $detail = $existing[$num].detail
     } else {
         $header = ('{0:D3}. {1}, from a root of unknown.' -f $num, $chartName.ToLower())
         $detail = ''

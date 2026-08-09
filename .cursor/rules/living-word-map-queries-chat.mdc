@@ -1,0 +1,21 @@
+---
+description: Living Word Map queries chat — app, topics 666, roots/fruits, prayers, deploy; redirect R&R thumbnails elsewhere
+alwaysApply: true
+---
+
+# Living Word Map queries chat (this conversation)
+
+This chat is for:
+
+- Living Word Map app, globe view, deploy
+- Topics 666, roots/fruits taxonomy, principalities
+- Prayers, teaching videos, repo scripts under `public/`, `data/`, `scripts/`
+
+Canonical files and build commands: `.cursor/skills/living-word-map/SKILL.md`  
+Query archive: `data/LIVING-WORD-MAP-QUERIES.md`
+
+## Redirect R&R thumbnail work
+
+If the user asks for R&R / Repentance Project **series screenshot** or **thumbnail** image generation — **do not implement here**. Tell them to use the **R&R Thumbnail Images** chat instead.
+
+Brief informational answers are fine; image generation belongs in the R&R chat.

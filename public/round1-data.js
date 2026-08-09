@@ -2855,7 +2855,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of disapproval, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  484,
                                "root":  "fear and insecurity",
@@ -2872,7 +2872,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of attractions, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Godâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  584,
                                "root":  "idolatry and person-worship",
@@ -2892,7 +2892,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  664,
                                "root":  "idolatry and person-worship",
@@ -2912,7 +2912,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of debauchery, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  593,
                                "root":  "addiction and bondage",
@@ -2932,7 +2932,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of playing with a Ouija board, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  111,
                                "root":  "idolatry and person-worship",
@@ -2949,7 +2949,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of making rash vows to God and others, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  359,
                                "root":  "control and rebellion",
@@ -2966,7 +2966,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of fantasizing, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  602,
                                "root":  "addiction and bondage",
@@ -2986,7 +2986,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of playacting, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  531,
                                "root":  "deception and falsehood",
@@ -3003,7 +3003,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doctrinal obsession, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  469,
                                "root":  "pride and self-exaltation",
@@ -3020,7 +3020,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of voyeurism, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  662,
                                "root":  "control and rebellion",
@@ -3040,7 +3040,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of playing with Magic of the Gathering cards, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  115,
                                "root":  "idolatry and person-worship",
@@ -3057,7 +3057,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of success, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  91,
                               "root":  "fear and insecurity",
@@ -3074,7 +3074,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of robbery, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  256,
                                "root":  "covetousness and materialism",
@@ -3091,7 +3091,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Contention, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  282,
                                "root":  "pride and self-exaltation",
@@ -3108,7 +3108,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being dictatorlike, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🟢bitterness and unforgiveness"
+                                            "bitterness and unforgiveness"
                                         ],
                               "number":  31,
                               "root":  "bitterness and unforgiveness",
@@ -3125,7 +3125,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being offensive, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🟢bitterness and unforgiveness"
+                                            "bitterness and unforgiveness"
                                         ],
                               "number":  33,
                               "root":  "bitterness and unforgiveness",
@@ -3142,7 +3142,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of disunity - seeking to pit one person against another, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  417,
                                "root":  "pride and self-exaltation",
@@ -3159,7 +3159,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of violence, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  661,
                                "root":  "bitterness and unforgiveness",
@@ -3179,7 +3179,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of dread, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  473,
                                "root":  "fear and insecurity",
@@ -3196,7 +3196,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unfaithfulness in nations, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  250,
                                "root":  "control and rebellion",
@@ -3213,7 +3213,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of prone to house fires, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  162,
                                "root":  "fear and insecurity",
@@ -3230,7 +3230,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of inadequacy, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  502,
                                "root":  "shame and false identity",
@@ -3247,7 +3247,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of spirit of error, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  555,
                                "root":  "deception and falsehood",
@@ -3264,7 +3264,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of gambling addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  61,
                               "root":  "addiction and bondage",
@@ -3278,13 +3278,14 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟫Death and Self-destruction"
                           },
                    "201":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seduction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferredâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seduction, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  201,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Seduction",
                                "spirit":  "seduction",
                                "fruits":  [
@@ -3293,14 +3294,14 @@ window.ROUND1_DATA = {
                                               "⬛Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of seduction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that seduction with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve seduction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of seduction, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that seduction with the root of addiction and bondage and control and rebellion; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve seduction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption of Human and Hybrid DNA, 🟩Counterfeit Spirituality, ⬛Confusing Preferences with Stewardship"
                            },
                    "616":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lewdness, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  616,
                                "root":  "addiction and bondage",
@@ -3320,7 +3321,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sexual deviations, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  186,
                                "root":  "addiction and bondage",
@@ -3334,13 +3335,13 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                            },
                    "645":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of seduction, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of seduction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "addiction and bondage"
                                          ],
                                "number":  645,
-                               "root":  "idolatry and person-worship",
+                               "root":  "addiction and bondage",
                                "label":  "Spirit Of Seduction",
                                "spirit":  "seduction",
                                "fruits":  [
@@ -3350,14 +3351,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of seduction, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of seduction with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of seduction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of seduction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of seduction with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of seduction. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "366":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  366,
                                "root":  "addiction and bondage",
@@ -3374,7 +3375,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of creating church splits, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  156,
                                "root":  "pride and self-exaltation",
@@ -3391,7 +3392,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of involvement in any kind of sexual ritual abuse, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thanâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  132,
                                "root":  "idolatry and person-worship",
@@ -3408,7 +3409,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of stubbornness, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  560,
                                "root":  "control and rebellion",
@@ -3425,7 +3426,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of belittling, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  450,
                                "root":  "pride and self-exaltation",
@@ -3442,7 +3443,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of inordinate affections, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important thanâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  612,
                                "root":  "addiction and bondage",
@@ -3462,7 +3463,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of excessive pride in looks, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  422,
                                "root":  "pride and self-exaltation",
@@ -3479,7 +3480,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of idolatry, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  610,
                                "root":  "idolatry and person-worship",
@@ -3499,7 +3500,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of inappropriate thinking, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  85,
                               "root":  "deception and falsehood",
@@ -3516,7 +3517,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of harassing christians, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  152,
                                "root":  "bitterness and unforgiveness",
@@ -3533,7 +3534,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of depression, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  136,
                                "root":  "loneliness and emotional brokenness",
@@ -3550,7 +3551,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hating both god and mankind, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  287,
                                "root":  "bitterness and unforgiveness",
@@ -3567,7 +3568,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of resisting and opposing authority, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  389,
                                "root":  "control and rebellion",
@@ -3584,7 +3585,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being a respecter of persons, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  357,
                                "root":  "pride and self-exaltation",
@@ -3601,7 +3602,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being in Witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  130,
                                "root":  "idolatry and person-worship",
@@ -3618,7 +3619,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of erotic lust (lust for the erotic), from a root of addiction and bondage.\r\n\r\nI agree that I made it more imâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  599,
                                "root":  "addiction and bondage",
@@ -3638,7 +3639,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of necrophilia, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  626,
                                "root":  "addiction and bondage",
@@ -3658,7 +3659,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of python, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  642,
                                "root":  "idolatry and person-worship",
@@ -3678,7 +3679,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of lying spirit, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  516,
                                "root":  "deception and falsehood",
@@ -3695,7 +3696,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of belonging to factions such as the klu klux klan or freemasons, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it moreâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  353,
                                "root":  "idolatry and person-worship",
@@ -3712,7 +3713,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of witchcraft, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  572,
                                "root":  "idolatry and person-worship",
@@ -3729,7 +3730,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  461,
                                "root":  "deception and falsehood",
@@ -3746,7 +3747,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of crib death, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  457,
                                "root":  "loneliness and emotional brokenness",
@@ -3763,7 +3764,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of laziness, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  512,
                                "root":  "control and rebellion",
@@ -3780,7 +3781,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of authority, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  97,
                               "root":  "fear and insecurity",
@@ -3797,7 +3798,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of exhibitionist spirit, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  576,
                                "root":  "addiction and bondage",
@@ -3817,7 +3818,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unnatural competitiveness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  16,
                               "root":  "pride and self-exaltation",
@@ -3834,7 +3835,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of love of possessions, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                               "sectionId":  "idolatry",
                               "roots":  [
-                                            "⚫covetousness and materialism"
+                                            "covetousness and materialism"
                                         ],
                               "number":  72,
                               "root":  "covetousness and materialism",
@@ -3851,7 +3852,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of deluding oneself as being rich in spirit, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  345,
                                "root":  "pride and self-exaltation",
@@ -3868,7 +3869,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of securing wealth by a lying tongue, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  275,
                                "root":  "covetousness and materialism",
@@ -3885,7 +3886,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the abortion, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  226,
                                "root":  "bitterness and unforgiveness",
@@ -3902,7 +3903,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being greedy for food, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  326,
                                "root":  "addiction and bondage",
@@ -3919,7 +3920,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of insecurity, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  12,
                               "root":  "fear and insecurity",
@@ -3936,7 +3937,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of anorexia, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  76,
                               "root":  "shame and false identity",
@@ -3953,7 +3954,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of forces, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  605,
                                "root":  "addiction and bondage",
@@ -3970,27 +3971,28 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "188":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of adultery, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of adultery, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  188,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Adultery",
                                "spirit":  "adultery",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of adultery, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that adultery with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve adultery. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of adultery, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that adultery with the root of addiction and bondage and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve adultery. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "452":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of bitterness, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  452,
                                "root":  "bitterness and unforgiveness",
@@ -4007,7 +4009,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  141,
                                "root":  "loneliness and emotional brokenness",
@@ -4024,7 +4026,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being in Wicca, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  129,
                                "root":  "idolatry and person-worship",
@@ -4041,7 +4043,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing others by actions, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  298,
                                "root":  "bitterness and unforgiveness",
@@ -4058,7 +4060,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s power, from a root of covetousness and materialism.\r\n\r\nI agree that I made iâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  316,
                                "root":  "covetousness and materialism",
@@ -4075,7 +4077,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of judgment, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  486,
                                "root":  "fear and insecurity",
@@ -4092,7 +4094,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of condemnation, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  42,
                               "root":  "shame and false identity",
@@ -4109,7 +4111,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for money, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important thâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  305,
                                "root":  "covetousness and materialism",
@@ -4126,7 +4128,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pornography, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  635,
                                "root":  "addiction and bondage",
@@ -4146,7 +4148,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of love that keeps loving relationships from forming and keeps people single, from a root of loneliness and eâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  666,
                                "root":  "loneliness and emotional brokenness",
@@ -4166,7 +4168,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of depression, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  463,
                                "root":  "deception and falsehood",
@@ -4183,7 +4185,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of use of cruel oppression of people, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  240,
                                "root":  "control and rebellion",
@@ -4200,7 +4202,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of playing with D\u0026D cards, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  113,
                                "root":  "idolatry and person-worship",
@@ -4217,7 +4219,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of early death, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  474,
                                "root":  "loneliness and emotional brokenness",
@@ -4234,7 +4236,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  631,
                                "root":  "addiction and bondage",
@@ -4254,7 +4256,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of verbal eroticism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  659,
                                "root":  "addiction and bondage",
@@ -4274,7 +4276,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of phobias, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it â€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  101,
                                "root":  "fear and insecurity",
@@ -4291,7 +4293,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of vanity, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  569,
                                "root":  "pride and self-exaltation",
@@ -4308,7 +4310,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being prejudice, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  35,
                               "root":  "pride and self-exaltation",
@@ -4325,7 +4327,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  459,
                                "root":  "bitterness and unforgiveness",
@@ -4342,7 +4344,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of immorality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  611,
                                "root":  "addiction and bondage",
@@ -4362,7 +4364,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of women, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  93,
                               "root":  "fear and insecurity",
@@ -4376,27 +4378,28 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟧Division and Relational Destruction"
                           },
                    "194":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of masturbation or self molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of masturbation or self molestation, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more imporâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "shame and false identity",
+                                             "control and rebellion"
                                          ],
                                "number":  194,
-                               "root":  "addiction and bondage",
+                               "root":  "shame and false identity and control and rebellion",
                                "label":  "Masturbation Or Self Molestation",
                                "spirit":  "masturbation or self molestation",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of masturbation or self molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that masturbation or self molestation with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve masturbation or self molestation. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of masturbation or self molestation, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that masturbation or self molestation with the root of shame and false identity and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve masturbation or self molestation. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "254":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of neglect, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  254,
                                "root":  "loneliness and emotional brokenness",
@@ -4413,7 +4416,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using women as objects of lust, impurity, and lewdness in thoughts, words, and actions, from a root of addiction and bondage.\r\n\r\nI agree â€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  374,
                                "root":  "addiction and bondage",
@@ -4430,7 +4433,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  404,
                                "root":  "addiction and bondage",
@@ -4447,7 +4450,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of participation in acts of torture during the Crusades, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it moreâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  235,
                                "root":  "pride and self-exaltation",
@@ -4464,7 +4467,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of jealousy, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  510,
                                "root":  "fear and insecurity",
@@ -4481,7 +4484,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of violence, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  570,
                                "root":  "bitterness and unforgiveness",
@@ -4498,7 +4501,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of duplicity or hypocrisy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  440,
                                "root":  "deception and falsehood",
@@ -4515,7 +4518,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of passivity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  529,
                                "root":  "control and rebellion",
@@ -4532,7 +4535,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of compromise with the flesh and known sinful traps, from a root of unbelief and distrust of god.\r\n\r\nI agree that I made it moreâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  419,
                                "root":  "unbelief and distrust of god",
@@ -4549,7 +4552,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doom and gloom, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than Goâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  471,
                                "root":  "loneliness and emotional brokenness",
@@ -4566,7 +4569,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of shyness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  553,
                                "root":  "fear and insecurity",
@@ -4583,7 +4586,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s church or denomination, from a root of covetousness and materialism.\r\n\r\nI agâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  318,
                                "root":  "covetousness and materialism",
@@ -4600,7 +4603,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of ambush of the innocent, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  228,
                                "root":  "bitterness and unforgiveness",
@@ -4617,7 +4620,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of continually making bad decisions, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  80,
                               "root":  "deception and falsehood",
@@ -4634,7 +4637,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  399,
                                "root":  "pride and self-exaltation",
@@ -4651,7 +4654,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of spite, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  557,
                                "root":  "bitterness and unforgiveness",
@@ -4668,7 +4671,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hallucinations, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  495,
                                "root":  "deception and falsehood",
@@ -4685,7 +4688,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lasciviousness, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  614,
                                "root":  "addiction and bondage",
@@ -4705,7 +4708,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of excessive pride in church activities, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  424,
                                "root":  "pride and self-exaltation",
@@ -4719,15 +4722,15 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Destructive Attitudes Against God’s Image"
                            },
                    "586":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of Bacchus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of bacchus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  586,
                                "root":  "idolatry and person-worship",
                                "label":  "Spirit Of Bacchus",
-                               "spirit":  "Bacchus",
+                               "spirit":  "bacchus",
                                "fruits":  [
                                               "Sexual Corruption",
                                               "Human and Hybrid DNA",
@@ -4735,14 +4738,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of Bacchus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of bacchus with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of Bacchus. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of bacchus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of bacchus with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of Bacchus. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "158":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of calling out false teachers because i disagree with them, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more importaâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  158,
                                "root":  "pride and self-exaltation",
@@ -4759,7 +4762,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it â€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  88,
                               "root":  "fear and insecurity",
@@ -4776,7 +4779,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of accusation, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  482,
                                "root":  "deception and falsehood",
@@ -4793,7 +4796,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of adultery, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  582,
                                "root":  "addiction and bondage",
@@ -4813,7 +4816,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the spear, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  222,
                                "root":  "bitterness and unforgiveness",
@@ -4830,7 +4833,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unfaithfulness in church, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  248,
                                "root":  "control and rebellion",
@@ -4847,7 +4850,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thinking i can\u0027t change, from a root of unbelief and distrust of god.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🟡unbelief and distrust of god"
+                                            "unbelief and distrust of god"
                                         ],
                               "number":  55,
                               "root":  "unbelief and distrust of god",
@@ -4864,7 +4867,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings of abandonment, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟤loneliness and emotional brokenness"
+                                            "loneliness and emotional brokenness"
                                         ],
                               "number":  87,
                               "root":  "loneliness and emotional brokenness",
@@ -4881,7 +4884,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fantasy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  478,
                                "root":  "deception and falsehood",
@@ -4898,7 +4901,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of worshipping idols and expecting them to save you, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  303,
                                "root":  "idolatry and person-worship",
@@ -4915,7 +4918,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of abandoning of the family by the father or mother, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  387,
                                "root":  "deception and falsehood",
@@ -4932,7 +4935,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of disputing; being opinionated, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  355,
                                "root":  "pride and self-exaltation",
@@ -4949,7 +4952,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of gossip, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  265,
                                "root":  "bitterness and unforgiveness",
@@ -4966,7 +4969,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having strokes, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  214,
                                "root":  "deception and falsehood",
@@ -4983,7 +4986,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of inferiority, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  505,
                                "root":  "shame and false identity",
@@ -5000,7 +5003,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of computer addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  68,
                               "root":  "addiction and bondage",
@@ -5017,7 +5020,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts and feelings of panic, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  438,
                                "root":  "loneliness and emotional brokenness",
@@ -5034,7 +5037,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of covetousness, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "⚫covetousness and materialism"
+                                           "covetousness and materialism"
                                        ],
                              "number":  6,
                              "root":  "covetousness and materialism",
@@ -5051,7 +5054,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of materialism, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  518,
                                "root":  "covetousness and materialism",
@@ -5068,7 +5071,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of needing to be the best, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  351,
                                "root":  "pride and self-exaltation",
@@ -5085,7 +5088,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being a false witness, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  261,
                                "root":  "deception and falsehood",
@@ -5102,7 +5105,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of opposition to christ’s deity or humanity, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  151,
                                "root":  "deception and falsehood",
@@ -5119,7 +5122,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of overburden, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  527,
                                "root":  "loneliness and emotional brokenness",
@@ -5136,7 +5139,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with disembodied spirits of unsaved family members, relatives, or ancestors of the person or his or her spouse, from a root oâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  574,
                                "root":  "idolatry and person-worship",
@@ -5156,7 +5159,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being domineering, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔵control and rebellion"
+                                            "control and rebellion"
                                         ],
                               "number":  28,
                               "root":  "control and rebellion",
@@ -5173,7 +5176,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  444,
                                "root":  "bitterness and unforgiveness",
@@ -5190,7 +5193,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  544,
                                "root":  "bitterness and unforgiveness",
@@ -5207,7 +5210,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of drawing back from life, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                               "sectionId":  "slothfulness",
                               "roots":  [
-                                            "🟤loneliness and emotional brokenness"
+                                            "loneliness and emotional brokenness"
                                         ],
                               "number":  18,
                               "root":  "loneliness and emotional brokenness",
@@ -5224,7 +5227,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing false teachers, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  179,
                                "root":  "deception and falsehood",
@@ -5241,7 +5244,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of blaspheming the Holy Spirit and gifts of the Spirit, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more importantâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  147,
                                "root":  "idolatry and person-worship",
@@ -5258,7 +5261,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in drunkenness, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  331,
                                "root":  "addiction and bondage",
@@ -5275,7 +5278,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of frigidity, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  491,
                                "root":  "addiction and bondage",
@@ -5292,7 +5295,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  559,
                                "root":  "pride and self-exaltation",
@@ -5309,7 +5312,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of love of power, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                               "sectionId":  "idolatry",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  74,
                               "root":  "pride and self-exaltation",
@@ -5326,7 +5329,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being irresponsible, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🔵control and rebellion"
+                                            "control and rebellion"
                                         ],
                               "number":  84,
                               "root":  "control and rebellion",
@@ -5343,7 +5346,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lust for the flesh (cannibalism), from a root of addiction and bondage.\r\n\r\nI agree that I made it more impâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  621,
                                "root":  "addiction and bondage",
@@ -5363,7 +5366,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of ability to focus, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  433,
                                "root":  "deception and falsehood",
@@ -5380,7 +5383,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of self-lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  649,
                                "root":  "addiction and bondage",
@@ -5400,7 +5403,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of self-pity, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  143,
                                "root":  "shame and false identity",
@@ -5414,13 +5417,13 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "🟫Death and Self-Destruction"
                            },
                    "652":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of slavery, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of slavery, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "covetousness and materialism"
                                          ],
                                "number":  652,
-                               "root":  "deception and falsehood",
+                               "root":  "covetousness and materialism",
                                "label":  "Spirit Of Slavery",
                                "spirit":  "slavery",
                                "fruits":  [
@@ -5430,14 +5433,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of slavery, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of slavery with the root of deception and falsehood; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of slavery. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of slavery, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of slavery with the root of covetousness and materialism; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of slavery. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "127":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of astral projection, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  127,
                                "root":  "idolatry and person-worship",
@@ -5454,7 +5457,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing others by thoughts, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  296,
                                "root":  "bitterness and unforgiveness",
@@ -5471,7 +5474,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unbelief, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟡unbelief and distrust of god"
+                                            "unbelief and distrust of god"
                                         ],
                               "number":  83,
                               "root":  "unbelief and distrust of god",
@@ -5488,7 +5491,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unfaithfulness in neighbors, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  246,
                                "root":  "control and rebellion",
@@ -5505,7 +5508,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of blocked success, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                               "sectionId":  "slothfulness",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  21,
                               "root":  "fear and insecurity",
@@ -5522,7 +5525,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of bondage, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  588,
                                "root":  "addiction and bondage",
@@ -5542,7 +5545,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of religiosity, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  539,
                                "root":  "pride and self-exaltation",
@@ -5559,7 +5562,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Scorner, Mocker, Scoffer, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  290,
                                "root":  "pride and self-exaltation",
@@ -5576,7 +5579,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sodomy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  653,
                                "root":  "deception and falsehood",
@@ -5596,7 +5599,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling tormented, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  107,
                                "root":  "fear and insecurity",
@@ -5613,7 +5616,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of living in a deliberate state of hypocrisy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  342,
                                "root":  "deception and falsehood",
@@ -5630,7 +5633,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being mentally ill, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  172,
                                "root":  "deception and falsehood",
@@ -5647,7 +5650,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of desire to attend church, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  436,
                                "root":  "unbelief and distrust of god",
@@ -5664,7 +5667,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of divorce, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  8,
                              "root":  "bitterness and unforgiveness",
@@ -5681,7 +5684,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of erratic thoughts out of nowhere, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  402,
                                "root":  "deception and falsehood",
@@ -5698,7 +5701,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture of the innocent people in the land, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more importâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  233,
                                "root":  "bitterness and unforgiveness",
@@ -5715,7 +5718,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of unfairness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  567,
                                "root":  "pride and self-exaltation",
@@ -5732,7 +5735,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of retaliation, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  542,
                                "root":  "bitterness and unforgiveness",
@@ -5749,7 +5752,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of overcompensating in any way, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  407,
                                "root":  "pride and self-exaltation",
@@ -5763,27 +5766,28 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Destructive Attitudes Against God’s Image"
                            },
                    "196":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of molesting someone else, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of molesting someone else, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than â€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "shame and false identity",
+                                             "control and rebellion"
                                          ],
                                "number":  196,
-                               "root":  "addiction and bondage",
+                               "root":  "shame and false identity and control and rebellion",
                                "label":  "Molesting Someone Else",
                                "spirit":  "molesting someone else",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of molesting someone else, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that molesting someone else with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve molesting someone else. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of molesting someone else, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that molesting someone else with the root of shame and false identity and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve molesting someone else. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "291":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hater of all that is pure and good, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  291,
                                "root":  "bitterness and unforgiveness",
@@ -5800,7 +5804,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using men as objects of lust, impurity, and lewdness in thoughts, words, and actions, from a root of pride and self-exaltation.\r\n\r\nI agreâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  376,
                                "root":  "pride and self-exaltation",
@@ -5817,7 +5821,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s goods, from a root of covetousness and materialism.\r\n\r\nI agree that I made iâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  312,
                                "root":  "covetousness and materialism",
@@ -5834,7 +5838,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of temper, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  564,
                                "root":  "bitterness and unforgiveness",
@@ -5851,7 +5855,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Shedding of Innocent Blood through the use of human trafficking, from a root of covetousness and materialism.\r\n\r\nI agree that I made it mâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  237,
                                "root":  "covetousness and materialism",
@@ -5868,7 +5872,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being contentious, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  26,
                               "root":  "pride and self-exaltation",
@@ -5885,7 +5889,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of addictions and sex addictions, from a root of addiction and bondage.\r\n\r\nI agree that I made it more importâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  580,
                                "root":  "addiction and bondage",
@@ -5905,7 +5909,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling like a hypocrite, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  45,
                               "root":  "shame and false identity",
@@ -5919,15 +5923,15 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟦False Religion and Doctrinal Error"
                           },
                    "587":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of Ba-al worship, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Gâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of ba-al worship, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  587,
                                "root":  "idolatry and person-worship",
                                "label":  "Spirit Of Ba-al Worship",
-                               "spirit":  "Ba-al worship",
+                               "spirit":  "ba-al worship",
                                "fruits":  [
                                               "Sexual Corruption",
                                               "Human and Hybrid DNA",
@@ -5935,14 +5939,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of Ba-al worship, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of ba-al worship with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of Ba-al worship. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of ba-al worship, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of ba-al worship with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of Ba-al worship. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "177":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thinking I am dumb, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  177,
                                "root":  "shame and false identity",
@@ -5959,7 +5963,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having male reproductive problems, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  209,
                                "root":  "deception and falsehood",
@@ -5976,7 +5980,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rebellion to established authority, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  397,
                                "root":  "control and rebellion",
@@ -5993,7 +5997,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings that God loves others more than me, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  10,
                               "root":  "fear and insecurity",
@@ -6010,7 +6014,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  609,
                                "root":  "addiction and bondage",
@@ -6030,7 +6034,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of other addictions, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  70,
                               "root":  "addiction and bondage",
@@ -6047,7 +6051,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of headache, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  497,
                                "root":  "loneliness and emotional brokenness",
@@ -6064,7 +6068,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of a poor self image, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  53,
                               "root":  "shame and false identity",
@@ -6081,7 +6085,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of rationalism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  537,
                                "root":  "pride and self-exaltation",
@@ -6098,7 +6102,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of faith, from a root of unbelief and distrust of god.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟡unbelief and distrust of god"
+                                            "unbelief and distrust of god"
                                         ],
                               "number":  89,
                               "root":  "unbelief and distrust of god",
@@ -6115,7 +6119,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of incubus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  503,
                                "root":  "idolatry and person-worship",
@@ -6132,7 +6136,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of envy, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  476,
                                "root":  "bitterness and unforgiveness",
@@ -6149,7 +6153,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sadomasochism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  185,
                                "root":  "addiction and bondage",
@@ -6166,7 +6170,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Strife, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferreâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  281,
                                "root":  "pride and self-exaltation",
@@ -6183,7 +6187,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in incest, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  365,
                                "root":  "addiction and bondage",
@@ -6200,7 +6204,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being a coward who justifies actions and wickedness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than Goâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  336,
                                "root":  "fear and insecurity",
@@ -6217,7 +6221,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of video game addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  66,
                               "root":  "addiction and bondage",
@@ -6231,27 +6235,28 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "⬛Neglect and Lack of Stewardship"
                           },
                    "198":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of pornography in any form, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of pornography in any form, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than Goâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  198,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Pornography In Any Form",
                                "spirit":  "pornography in any form",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of pornography in any form, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that pornography in any form with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve pornography in any form. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of pornography in any form, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that pornography in any form with the root of addiction and bondage and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve pornography in any form. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "442":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having thoughts of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  442,
                                "root":  "fear and insecurity",
@@ -6268,7 +6273,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of bastard children born outside the protection of marriage, from a root of shame and false identity.\r\n\r\nI agree that I made it more importaâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  361,
                                "root":  "shame and false identity",
@@ -6285,7 +6290,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of persecuting christians, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  153,
                                "root":  "bitterness and unforgiveness",
@@ -6302,7 +6307,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of despair, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  137,
                                "root":  "loneliness and emotional brokenness",
@@ -6319,7 +6324,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of slave ownership, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  239,
                                "root":  "covetousness and materialism",
@@ -6336,7 +6341,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Blasphemy Against God, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  288,
                                "root":  "idolatry and person-worship",
@@ -6353,7 +6358,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for walking in self-sufficient independence, from a root of control and rebellion.\r\n\r\nI agree that â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  308,
                                "root":  "control and rebellion",
@@ -6367,27 +6372,28 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "▫Anti-Christ Spirit / Separation From God"
                            },
                    "190":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of exhibitionism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of exhibitionism, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  190,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Exhibitionism",
                                "spirit":  "exhibitionism",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of exhibitionism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that exhibitionism with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve exhibitionism. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of exhibitionism, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that exhibitionism with the root of addiction and bondage and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve exhibitionism. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "546":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sadness and crying, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important thaâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  546,
                                "root":  "loneliness and emotional brokenness",
@@ -6404,7 +6410,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in lesbianism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  370,
                                "root":  "addiction and bondage",
@@ -6423,7 +6429,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for withholding tithes and offerings, from a root of covetousness and materialism.\r\n\r\nI agree that â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  310,
                                "root":  "covetousness and materialism",
@@ -6440,7 +6446,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of desires, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  596,
                                "root":  "addiction and bondage",
@@ -6460,7 +6466,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the knife, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  220,
                                "root":  "bitterness and unforgiveness",
@@ -6477,7 +6483,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having diabetes, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  207,
                                "root":  "deception and falsehood",
@@ -6494,7 +6500,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of nudity, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  627,
                                "root":  "addiction and bondage",
@@ -6511,13 +6517,13 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "643":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of rebellion, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of rebellion, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "control and rebellion"
                                          ],
                                "number":  643,
-                               "root":  "addiction and bondage",
+                               "root":  "control and rebellion",
                                "label":  "Spirit Of Rebellion",
                                "spirit":  "rebellion",
                                "fruits":  [
@@ -6527,14 +6533,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of rebellion, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of rebellion with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of rebellion. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of rebellion, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of rebellion with the root of control and rebellion; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of rebellion. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "149":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of condemnation of God’s Word, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  149,
                                "root":  "unbelief and distrust of god",
@@ -6551,7 +6557,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of gambling, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  333,
                                "root":  "addiction and bondage",
@@ -6568,7 +6574,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of gossip, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  493,
                                "root":  "bitterness and unforgiveness",
@@ -6585,7 +6591,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of somnophilia, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  637,
                                "root":  "shame and false identity",
@@ -6605,7 +6611,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of failing to provide for widows, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  259,
                                "root":  "control and rebellion",
@@ -6622,7 +6628,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of doubt, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  391,
                                "root":  "unbelief and distrust of god",
@@ -6639,7 +6645,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hopelessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  431,
                                "root":  "loneliness and emotional brokenness",
@@ -6656,7 +6662,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of self-idolatry, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  647,
                                "root":  "idolatry and person-worship",
@@ -6676,7 +6682,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of rejection, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  96,
                               "root":  "fear and insecurity",
@@ -6690,27 +6696,28 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟪Mental Oppression and Confusion"
                           },
                    "191":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of illegitimacy, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of illegitimacy, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity",
+                                             "control and rebellion"
                                          ],
                                "number":  191,
-                               "root":  "shame and false identity",
+                               "root":  "shame and false identity and control and rebellion",
                                "label":  "Illegitimacy",
                                "spirit":  "illegitimacy",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of illegitimacy, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that illegitimacy with the root of shame and false identity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve illegitimacy. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of illegitimacy, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that illegitimacy with the root of shame and false identity and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve illegitimacy. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "244":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of betrayals, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  244,
                                "root":  "deception and falsehood",
@@ -6727,7 +6734,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being cold-hearted towards the needs of others and the poor, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more â€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  344,
                                "root":  "bitterness and unforgiveness",
@@ -6744,7 +6751,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of faultfinding, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  480,
                                "root":  "pride and self-exaltation",
@@ -6761,7 +6768,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of giving and receiving bribes, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  274,
                                "root":  "covetousness and materialism",
@@ -6778,7 +6785,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of overwhelming panic attacks, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  420,
                                "root":  "fear and insecurity",
@@ -6795,7 +6802,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of kidnapping, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  227,
                                "root":  "covetousness and materialism",
@@ -6812,7 +6819,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of verbal lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  660,
                                "root":  "addiction and bondage",
@@ -6832,7 +6839,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having gone to a medium, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  109,
                                "root":  "idolatry and person-worship",
@@ -6849,7 +6856,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of succubus, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  561,
                                "root":  "idolatry and person-worship",
@@ -6866,7 +6873,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of bickering, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  451,
                                "root":  "pride and self-exaltation",
@@ -6883,7 +6890,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture through disembowelment, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than Godâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  218,
                                "root":  "bitterness and unforgiveness",
@@ -6900,7 +6907,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of intellectualism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  509,
                                "root":  "pride and self-exaltation",
@@ -6917,7 +6924,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of over-estimating oneself, spiritually, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  338,
                                "root":  "pride and self-exaltation",
@@ -6934,7 +6941,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  481,
                                "root":  "fear and insecurity",
@@ -6951,7 +6958,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of listlessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  514,
                                "root":  "loneliness and emotional brokenness",
@@ -6968,7 +6975,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  183,
                                "root":  "addiction and bondage",
@@ -6987,7 +6994,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of superiority complex, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  39,
                               "root":  "pride and self-exaltation",
@@ -7004,7 +7011,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of confrontation, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  455,
                                "root":  "pride and self-exaltation",
@@ -7021,7 +7028,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of man, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  487,
                                "root":  "fear and insecurity",
@@ -7038,7 +7045,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  43,
                               "root":  "deception and falsehood",
@@ -7055,7 +7062,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for fertility, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more importantâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  306,
                                "root":  "idolatry and person-worship",
@@ -7072,7 +7079,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having Tourette’s, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  168,
                                "root":  "deception and falsehood",
@@ -7089,7 +7096,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of decadence, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  592,
                                "root":  "addiction and bondage",
@@ -7109,7 +7116,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of selfishness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  548,
                                "root":  "pride and self-exaltation",
@@ -7126,7 +7133,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of self-centeredness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  14,
                               "root":  "pride and self-exaltation",
@@ -7143,7 +7150,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lying habitually, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  47,
                               "root":  "deception and falsehood",
@@ -7160,7 +7167,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Slavery, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  302,
                                "root":  "covetousness and materialism",
@@ -7180,7 +7187,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hating men, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  382,
                                "root":  "bitterness and unforgiveness",
@@ -7197,7 +7204,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of vaginal lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  658,
                                "root":  "addiction and bondage",
@@ -7217,7 +7224,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hiding envy behind the cloak of insecurity and failure, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important thanâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  324,
                                "root":  "fear and insecurity",
@@ -7234,7 +7241,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of playing with Pokémon cards, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  114,
                                "root":  "idolatry and person-worship",
@@ -7251,7 +7258,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of obsession with negatives of the past, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  395,
                                "root":  "loneliness and emotional brokenness",
@@ -7268,7 +7275,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  257,
                                "root":  "bitterness and unforgiveness",
@@ -7285,7 +7292,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using guile to gain advantage, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  267,
                                "root":  "deception and falsehood",
@@ -7302,7 +7309,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts that question God’s love, faithfulness and Word, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more impâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  428,
                                "root":  "unbelief and distrust of god",
@@ -7319,7 +7326,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of suicide, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  562,
                                "root":  "shame and false identity",
@@ -7336,7 +7343,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of paranoia, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  528,
                                "root":  "fear and insecurity",
@@ -7353,7 +7360,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seeking to create doubt about a person or day, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  418,
                                "root":  "deception and falsehood",
@@ -7370,7 +7377,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of child molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  253,
                                "root":  "addiction and bondage",
@@ -7387,7 +7394,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in gender confusion, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  371,
                                "root":  "shame and false identity",
@@ -7404,7 +7411,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s intellect, from a root of pride and self-exaltation.\r\n\r\nI agree that I made â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  319,
                                "root":  "pride and self-exaltation",
@@ -7421,7 +7428,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of slaughter, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  229,
                                "root":  "bitterness and unforgiveness",
@@ -7438,7 +7445,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of quarreling, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  535,
                                "root":  "pride and self-exaltation",
@@ -7455,7 +7462,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of exaggeration, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  44,
                               "root":  "deception and falsehood",
@@ -7472,7 +7479,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sorrow, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  554,
                                "root":  "loneliness and emotional brokenness",
@@ -7489,7 +7496,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of disobedience, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  465,
                                "root":  "control and rebellion",
@@ -7506,7 +7513,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of twisted thinking, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  187,
                                "root":  "deception and falsehood",
@@ -7523,7 +7530,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of speaking with a perverse tongue that stirs up trouble and evil against another, from a root of deception and falsehood.\r\n\r\nI agree that Iâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  269,
                                "root":  "deception and falsehood",
@@ -7540,7 +7547,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in masturbation, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  367,
                                "root":  "covetousness and materialism",
@@ -7559,7 +7566,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling like giving up on Christianity, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  159,
                                "root":  "unbelief and distrust of god",
@@ -7576,7 +7583,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of involvement in any kind of satanic ritual abuse, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thaâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  131,
                                "root":  "idolatry and person-worship",
@@ -7593,7 +7600,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rudeness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  37,
                               "root":  "pride and self-exaltation",
@@ -7610,7 +7617,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of marijuana or CBD addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  64,
                               "root":  "addiction and bondage",
@@ -7627,7 +7634,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of incest, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  613,
                                "root":  "addiction and bondage",
@@ -7647,7 +7654,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of mirrors, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  624,
                                "root":  "pride and self-exaltation",
@@ -7667,7 +7674,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seizures, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferreâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  166,
                                "root":  "deception and falsehood",
@@ -7684,7 +7691,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Purposeful Lying to Destroy Another’s Life, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  300,
                                "root":  "deception and falsehood",
@@ -7701,7 +7708,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of violence and cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  286,
                                "root":  "bitterness and unforgiveness",
@@ -7718,7 +7725,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of abdicating responsibility of leadership, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  386,
                                "root":  "control and rebellion",
@@ -7735,7 +7742,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling like no one wants me, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  49,
                               "root":  "shame and false identity",
@@ -7752,7 +7759,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of prone to accidents, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  160,
                                "root":  "fear and insecurity",
@@ -7769,7 +7776,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of double-mindedness, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important tâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  598,
                                "root":  "unbelief and distrust of god",
@@ -7789,7 +7796,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having asthma, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  205,
                                "root":  "deception and falsehood",
@@ -7806,7 +7813,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of obsession, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  629,
                                "root":  "addiction and bondage",
@@ -7826,7 +7833,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s career, from a root of covetousness and materialism.\r\n\r\nI agree that I made â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  320,
                                "root":  "covetousness and materialism",
@@ -7843,7 +7850,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of prostitution (harlotry) (whoredoms) (sex-trafficking), from a root of addiction and bondage.\r\n\r\nI agree thâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  641,
                                "root":  "addiction and bondage",
@@ -7863,7 +7870,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being stubborn, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  380,
                                "root":  "control and rebellion",
@@ -7880,7 +7887,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being judgmental, critical, suspicious, legalistic, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important thâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  352,
                                "root":  "pride and self-exaltation",
@@ -7897,7 +7904,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings of loneliness and detachment, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  426,
                                "root":  "loneliness and emotional brokenness",
@@ -7914,7 +7921,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of occult spirits, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  526,
                                "root":  "idolatry and person-worship",
@@ -7931,7 +7938,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling unable to perform properly, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  98,
                               "root":  "fear and insecurity",
@@ -7945,13 +7952,14 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟧Division and Relational Destruction"
                           },
                    "193":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it iâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lust, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  193,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Lust",
                                "spirit":  "lust",
                                "fruits":  [
@@ -7960,14 +7968,14 @@ window.ROUND1_DATA = {
                                               "⬛Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that lust with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve lust. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of lust, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that lust with the root of addiction and bondage and control and rebellion; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve lust. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption of Human and Hybrid DNA, 🟩Counterfeit Spirituality, ⬛Confusing Preferences with Stewardship"
                            },
                    "29":  {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being critical, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  29,
                               "root":  "pride and self-exaltation",
@@ -7984,7 +7992,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anti-submissiveness, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  445,
                                "root":  "control and rebellion",
@@ -8001,7 +8009,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of taking the fields of the orphans and widows, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  276,
                                "root":  "covetousness and materialism",
@@ -8018,7 +8026,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of murder, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  522,
                                "root":  "bitterness and unforgiveness",
@@ -8035,7 +8043,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having high blood pressure, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  212,
                                "root":  "deception and falsehood",
@@ -8052,7 +8060,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  520,
                                "root":  "addiction and bondage",
@@ -8069,7 +8077,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  410,
                                "root":  "addiction and bondage",
@@ -8086,7 +8094,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of dominance, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  470,
                                "root":  "control and rebellion",
@@ -8103,7 +8111,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-                                            "🟢bitterness and unforgiveness"
+                                            "bitterness and unforgiveness"
                                         ],
                               "number":  13,
                               "root":  "bitterness and unforgiveness",
@@ -8120,7 +8128,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of bulimia, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferreâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  77,
                               "root":  "shame and false identity",
@@ -8137,7 +8145,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of emasculation of men through female domination, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  381,
                                "root":  "control and rebellion",
@@ -8154,7 +8162,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of bestiality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferreâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  189,
                                "root":  "addiction and bondage",
@@ -8171,7 +8179,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of moving boundary stones or pins, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  272,
                                "root":  "covetousness and materialism",
@@ -8188,7 +8196,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of blasphemy, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  453,
                                "root":  "idolatry and person-worship",
@@ -8205,7 +8213,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being weak or feeble, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  216,
                                "root":  "deception and falsehood",
@@ -8222,7 +8230,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sadness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  142,
                                "root":  "loneliness and emotional brokenness",
@@ -8239,7 +8247,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in transcendental meditation, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Godâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  126,
                                "root":  "idolatry and person-worship",
@@ -8256,7 +8264,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of murder, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  5,
                              "root":  "bitterness and unforgiveness",
@@ -8273,7 +8281,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of delighting in the destruction of another, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  299,
                                "root":  "bitterness and unforgiveness",
@@ -8290,7 +8298,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fighting, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  489,
                                "root":  "bitterness and unforgiveness",
@@ -8307,7 +8315,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for power, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thaâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  304,
                                "root":  "idolatry and person-worship",
@@ -8324,7 +8332,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of practices of sexual and sensual activities (sex therapists), from a root of addiction and bondage.\r\n\r\nI agâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  636,
                                "root":  "addiction and bondage",
@@ -8344,7 +8352,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of broken covenants, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  243,
                                "root":  "control and rebellion",
@@ -8361,7 +8369,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of idolizing the works of one’s hands, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  322,
                                "root":  "idolatry and person-worship",
@@ -8378,7 +8386,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of playing with an 8 ball, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  112,
                                "root":  "idolatry and person-worship",
@@ -8395,7 +8403,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of eye lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  601,
                                "root":  "addiction and bondage",
@@ -8415,7 +8423,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  1,
                              "root":  "bitterness and unforgiveness",
@@ -8432,7 +8440,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pedophilia (lust for children), from a root of addiction and bondage.\r\n\r\nI agree that I made it more imporâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  632,
                                "root":  "addiction and bondage",
@@ -8452,7 +8460,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of confusion, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  79,
                               "root":  "deception and falsehood",
@@ -8469,7 +8477,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of touch lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  656,
                                "root":  "addiction and bondage",
@@ -8489,7 +8497,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of distrust, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  466,
                                "root":  "fear and insecurity",
@@ -8506,7 +8514,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unjustified feelings of guilt, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  145,
                                "root":  "shame and false identity",
@@ -8523,7 +8531,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of going to a fortune teller, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  116,
                                "root":  "idolatry and person-worship",
@@ -8540,7 +8548,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of poverty, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  94,
                               "root":  "fear and insecurity",
@@ -8554,27 +8562,28 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "⬛Neglect and Lack of Stewardship"
                           },
                    "197":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of voyeurism or exploiting someone’s private space for personal profit, from a root of covetousness and materialism.\r\n\r\nI agree that I made â€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of voyeurism or exploiting someone’s private space for personal profit, from a root of covetousness and materialism and control and rebellioâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism",
+                                             "control and rebellion"
                                          ],
                                "number":  197,
-                               "root":  "covetousness and materialism",
+                               "root":  "covetousness and materialism and control and rebellion",
                                "label":  "Voyeurism Or Exploiting Someone’s Private Space For Personal Profit",
                                "spirit":  "voyeurism or exploiting someone’s private space for personal profit",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of voyeurism or exploiting someone’s private space for personal profit, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that voyeurism or exploiting someone’s private space for personal profit with the root of covetousness and materialism; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve voyeurism or exploiting someone’s private space for personal profit. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of voyeurism or exploiting someone’s private space for personal profit, from a root of covetousness and materialism and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that voyeurism or exploiting someone’s private space for personal profit with the root of covetousness and materialism and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve voyeurism or exploiting someone’s private space for personal profit. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "255":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of abandonment, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  255,
                                "root":  "loneliness and emotional brokenness",
@@ -8591,7 +8600,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using filthy language, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  377,
                                "root":  "addiction and bondage",
@@ -8608,7 +8617,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to overwork, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  405,
                                "root":  "addiction and bondage",
@@ -8625,7 +8634,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being competitive, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  350,
                                "root":  "pride and self-exaltation",
@@ -8642,7 +8651,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being controlling, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔵control and rebellion"
+                                            "control and rebellion"
                                         ],
                               "number":  27,
                               "root":  "control and rebellion",
@@ -8659,7 +8668,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of discontent, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  464,
                                "root":  "fear and insecurity",
@@ -8676,7 +8685,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing cultic or false teachers, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  81,
                               "root":  "deception and falsehood",
@@ -8693,7 +8702,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of adultery, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  251,
                                "root":  "addiction and bondage",
@@ -8710,7 +8719,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being involved in Satanism, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  123,
                                "root":  "idolatry and person-worship",
@@ -8727,7 +8736,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of serving the spirit spouse gods and inviting others to do the same, from a root of addiction and bondage.\r\n\r\nI agree that I made it more iâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  373,
                                "root":  "addiction and bondage",
@@ -8744,7 +8753,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of prone to drowning, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  161,
                                "root":  "fear and insecurity",
@@ -8761,7 +8770,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s position, from a root of covetousness and materialism.\r\n\r\nI agree that I madâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  317,
                                "root":  "covetousness and materialism",
@@ -8778,7 +8787,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of arrogance, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  23,
                               "root":  "pride and self-exaltation",
@@ -8795,7 +8804,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of alcohol addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  329,
                                "root":  "addiction and bondage",
@@ -8812,7 +8821,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of habits, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  608,
                                "root":  "addiction and bondage",
@@ -8832,7 +8841,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings of tension, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  105,
                                "root":  "fear and insecurity",
@@ -8849,7 +8858,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of spiritism, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  556,
                                "root":  "idolatry and person-worship",
@@ -8866,7 +8875,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of disease of eyes, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  170,
                                "root":  "deception and falsehood",
@@ -8883,7 +8892,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  496,
                                "root":  "bitterness and unforgiveness",
@@ -8900,7 +8909,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lesbianism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  615,
                                "root":  "addiction and bondage",
@@ -8920,7 +8929,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sex addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  330,
                                "root":  "addiction and bondage",
@@ -8937,7 +8946,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in homosexuality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  369,
                                "root":  "addiction and bondage",
@@ -8954,7 +8963,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture in times of war, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  231,
                                "root":  "bitterness and unforgiveness",
@@ -8971,7 +8980,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having vain imaginations, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  56,
                               "root":  "deception and falsehood",
@@ -8988,7 +8997,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Flattering For Gain, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  293,
                                "root":  "covetousness and materialism",
@@ -9005,7 +9014,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of antichrist spirit, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  575,
                                "root":  "idolatry and person-worship",
@@ -9025,7 +9034,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of inappropriate behavior, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🔵control and rebellion"
+                                            "control and rebellion"
                                         ],
                               "number":  86,
                               "root":  "control and rebellion",
@@ -9042,7 +9051,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of epilepsy, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferreâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  164,
                                "root":  "deception and falsehood",
@@ -9059,7 +9068,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  284,
                                "root":  "bitterness and unforgiveness",
@@ -9079,7 +9088,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hating one’s sexual role and function, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  384,
                                "root":  "shame and false identity",
@@ -9096,7 +9105,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being addicted to drugs, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  328,
                                "root":  "addiction and bondage",
@@ -9113,7 +9122,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being cold-hearted, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  340,
                                "root":  "bitterness and unforgiveness",
@@ -9130,7 +9139,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having a party spirit, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  354,
                                "root":  "pride and self-exaltation",
@@ -9147,7 +9156,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of compulsion, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  590,
                                "root":  "addiction and bondage",
@@ -9167,7 +9176,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of indifference, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  504,
                                "root":  "control and rebellion",
@@ -9184,7 +9193,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of reading horoscopes, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  118,
                                "root":  "idolatry and person-worship",
@@ -9201,7 +9210,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of over-religiousness, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  439,
                                "root":  "pride and self-exaltation",
@@ -9215,27 +9224,28 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Destructive Attitudes Against God’s Image"
                            },
                    "199":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being raped, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being raped, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity",
+                                             "control and rebellion"
                                          ],
                                "number":  199,
-                               "root":  "shame and false identity",
+                               "root":  "shame and false identity and control and rebellion",
                                "label":  "Being Raped",
                                "spirit":  "being raped",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of being raped, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that being raped with the root of shame and false identity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve being raped. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of being raped, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that being raped with the root of shame and false identity and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve being raped. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "443":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  443,
                                "root":  "addiction and bondage",
@@ -9252,7 +9262,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of obsession with failure, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  393,
                                "root":  "fear and insecurity",
@@ -9269,7 +9279,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of insanity, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  507,
                                "root":  "deception and falsehood",
@@ -9286,7 +9296,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of nightmares, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  524,
                                "root":  "fear and insecurity",
@@ -9303,7 +9313,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of accusing thoughts about yourself, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  414,
                                "root":  "shame and false identity",
@@ -9320,7 +9330,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of apprehension, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  447,
                                "root":  "fear and insecurity",
@@ -9337,7 +9347,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of walking in hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  280,
                                "root":  "bitterness and unforgiveness",
@@ -9354,7 +9364,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of ritualism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  545,
                                "root":  "pride and self-exaltation",
@@ -9371,7 +9381,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of passivity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferredâ€¦",
                               "sectionId":  "slothfulness",
                               "roots":  [
-                                            "🔵control and rebellion"
+                                            "control and rebellion"
                                         ],
                               "number":  19,
                               "root":  "control and rebellion",
@@ -9388,7 +9398,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of eroticism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  600,
                                "root":  "addiction and bondage",
@@ -9408,7 +9418,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of retardation, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  543,
                                "root":  "pride and self-exaltation",
@@ -9425,7 +9435,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being polluted by the leaven of the Pharisees or Sadducees, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more impoâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  348,
                                "root":  "pride and self-exaltation",
@@ -9442,7 +9452,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thinking I am stupid, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  178,
                                "root":  "shame and false identity",
@@ -9459,7 +9469,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using a corrupt judicial system to destroy another’s life, from a root of control and rebellion.\r\n\r\nI agree that I made it more importantâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  278,
                                "root":  "control and rebellion",
@@ -9477,7 +9487,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hurt, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  501,
                                "root":  "loneliness and emotional brokenness",
@@ -9494,7 +9504,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of false accusation against anyone, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  242,
                                "root":  "deception and falsehood",
@@ -9511,7 +9521,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of stoicism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  558,
                                "root":  "pride and self-exaltation",
@@ -9528,7 +9538,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of tension, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  565,
                                "root":  "fear and insecurity",
@@ -9542,27 +9552,27 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Destructive Identities Against God’s Image"
                            },
                    "75":  {
-                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of worshiping things other than God, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
+                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of worshiping things other than god, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                               "sectionId":  "idolatry",
                               "roots":  [
-                                            "⭕idolatry and person-worship"
+                                            "idolatry and person-worship"
                                         ],
                               "number":  75,
                               "root":  "idolatry and person-worship",
                               "label":  "Worshiping Things Other Than God",
-                              "spirit":  "worshiping things other than God",
+                              "spirit":  "worshiping things other than god",
                               "fruits":  [
                                              "▫Anti-Christ or Separation from God"
                                          ],
                               "principality":  "Idolatry",
-                              "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of worshiping things other than God, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that worshiping things other than god with the root of idolatry and person-worship; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anti-Christ or Separation from God with the parent Principality of Idolatry \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve worshiping things other than God. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~~",
+                              "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of worshiping things other than god, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that worshiping things other than god with the root of idolatry and person-worship; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Anti-Christ or Separation from God with the parent Principality of Idolatry \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve worshiping things other than God. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~~",
                               "fruitDisplay":  "▫Anti-Christ or Separation from God"
                           },
                    "2":  {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of wrath, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  2,
                              "root":  "bitterness and unforgiveness",
@@ -9576,27 +9586,28 @@ window.ROUND1_DATA = {
                              "fruitDisplay":  "🟥Anger and Violence"
                          },
                    "202":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of prostitution, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of prostitution, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  202,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Prostitution",
                                "spirit":  "prostitution",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of prostitution, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that prostitution with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve prostitution. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of prostitution, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that prostitution with the root of addiction and bondage and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve prostitution. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "392":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of condemnation, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  392,
                                "root":  "shame and false identity",
@@ -9613,7 +9624,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of self-indulgence, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  648,
                                "root":  "addiction and bondage",
@@ -9633,7 +9644,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of suppressing ministers, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  155,
                                "root":  "control and rebellion",
@@ -9650,7 +9661,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of worldliness, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  334,
                                "root":  "idolatry and person-worship",
@@ -9667,7 +9678,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being in a seance, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  124,
                                "root":  "idolatry and person-worship",
@@ -9684,7 +9695,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cursing others by words, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  297,
                                "root":  "bitterness and unforgiveness",
@@ -9701,7 +9712,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being co-dependent, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "🟤loneliness and emotional brokenness"
+                                            "loneliness and emotional brokenness"
                                         ],
                               "number":  58,
                               "root":  "loneliness and emotional brokenness",
@@ -9718,7 +9729,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of fascination, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  603,
                                "root":  "addiction and bondage",
@@ -9738,7 +9749,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hopelessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  139,
                                "root":  "loneliness and emotional brokenness",
@@ -9755,7 +9766,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of breast lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  589,
                                "root":  "addiction and bondage",
@@ -9775,10 +9786,10 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of rebellion, from a root of control and rebellion is happening.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "control and rebellion is happening"
+                                             "control and rebellion"
                                          ],
                                "number":  538,
-                               "root":  "control and rebellion is happening",
+                               "root":  "control and rebellion",
                                "label":  "Familiar Identity Of Rebellion",
                                "spirit":  "familiar identity of rebellion",
                                "fruits":  [
@@ -9792,7 +9803,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pre-occupations, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  638,
                                "root":  "addiction and bondage",
@@ -9812,7 +9823,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Treachery against others, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  241,
                                "root":  "deception and falsehood",
@@ -9829,7 +9840,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being lukewarm, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  343,
                                "root":  "unbelief and distrust of god",
@@ -9846,7 +9857,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of deception, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  594,
                                "root":  "deception and falsehood",
@@ -9866,7 +9877,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of narcissism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  625,
                                "root":  "pride and self-exaltation",
@@ -9886,7 +9897,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of isolation, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  437,
                                "root":  "unbelief and distrust of god",
@@ -9903,7 +9914,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of stupor, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  654,
                                "root":  "deception and falsehood",
@@ -9923,7 +9934,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to binge eat, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  403,
                                "root":  "addiction and bondage",
@@ -9940,7 +9951,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  515,
                                "root":  "loneliness and emotional brokenness",
@@ -9957,7 +9968,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  182,
                                "root":  "addiction and bondage",
@@ -9976,7 +9987,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of self-righteous complex, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  38,
                               "root":  "pride and self-exaltation",
@@ -9993,7 +10004,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of compromise, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  454,
                                "root":  "unbelief and distrust of god",
@@ -10010,7 +10021,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of self-rejection, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  102,
                                "root":  "shame and false identity",
@@ -10027,7 +10038,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in witchcraft through the control and manipulation of another’s will, from a root of control and rebellion.\r\n\r\nI agree thatâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  379,
                                "root":  "control and rebellion",
@@ -10044,7 +10055,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for being lawless, from a root of control and rebellion.\r\n\r\nI agree that I made it more important tâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  311,
                                "root":  "control and rebellion",
@@ -10061,7 +10072,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of kleptomania, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  511,
                                "root":  "covetousness and materialism",
@@ -10078,7 +10089,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the sword, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  221,
                                "root":  "bitterness and unforgiveness",
@@ -10095,7 +10106,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit Eros, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  579,
                                "root":  "addiction and bondage",
@@ -10115,7 +10126,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being proud, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  25,
                               "root":  "pride and self-exaltation",
@@ -10132,7 +10143,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of backbiting, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  449,
                                "root":  "bitterness and unforgiveness",
@@ -10149,7 +10160,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being manipulative, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  121,
                                "root":  "control and rebellion",
@@ -10166,7 +10177,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of ill-temper, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  283,
                                "root":  "bitterness and unforgiveness",
@@ -10183,7 +10194,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being spiritually proud of dead works, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  346,
                                "root":  "pride and self-exaltation",
@@ -10200,7 +10211,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of attempting suicide, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  176,
                                "root":  "shame and false identity",
@@ -10217,7 +10228,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s money, from a root of covetousness and materialism.\r\n\r\nI agree that I made iâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  315,
                                "root":  "covetousness and materialism",
@@ -10234,7 +10245,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sexual perversion, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  552,
                                "root":  "addiction and bondage",
@@ -10251,7 +10262,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the gun, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  225,
                                "root":  "bitterness and unforgiveness",
@@ -10268,7 +10279,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of False Expectations Appearing Real, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  396,
                                "root":  "fear and insecurity",
@@ -10285,7 +10296,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of genital lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  606,
                                "root":  "addiction and bondage",
@@ -10305,7 +10316,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of suspicion, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  563,
                                "root":  "fear and insecurity",
@@ -10322,7 +10333,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of resentment, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  540,
                                "root":  "bitterness and unforgiveness",
@@ -10339,7 +10350,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of holding hatred in one’s heart, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  270,
                                "root":  "bitterness and unforgiveness",
@@ -10356,7 +10367,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having fungus, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  210,
                                "root":  "deception and falsehood",
@@ -10373,7 +10384,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of heartbreak, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  498,
                                "root":  "loneliness and emotional brokenness",
@@ -10390,7 +10401,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of frustration, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferredâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  140,
                                "root":  "fear and insecurity",
@@ -10407,7 +10418,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of selfish thoughts, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  429,
                                "root":  "pride and self-exaltation",
@@ -10424,7 +10435,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being extremely independent, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  120,
                                "root":  "control and rebellion",
@@ -10441,7 +10452,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of incest, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred itâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  252,
                                "root":  "addiction and bondage",
@@ -10458,7 +10469,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of failure, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  485,
                                "root":  "fear and insecurity",
@@ -10475,7 +10486,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thievery, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "⚫covetousness and materialism"
+                                            "covetousness and materialism"
                                         ],
                               "number":  41,
                               "root":  "covetousness and materialism",
@@ -10492,7 +10503,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of hopelessness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  500,
                                "root":  "loneliness and emotional brokenness",
@@ -10509,7 +10520,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of rape, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  536,
                                "root":  "addiction and bondage",
@@ -10526,7 +10537,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of divination, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  467,
                                "root":  "idolatry and person-worship",
@@ -10543,7 +10554,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sudden distrust in people who have given you no reason to distrust them, from a root of fear and insecurity.\r\n\r\nI agree that I made it moâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  413,
                                "root":  "fear and insecurity",
@@ -10560,7 +10571,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of writing fan-fiction stories to create and worship my own narrative, from a root of deception and falsehoodâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  665,
                                "root":  "deception and falsehood",
@@ -10580,7 +10591,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of escapism, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  477,
                                "root":  "loneliness and emotional brokenness",
@@ -10597,7 +10608,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being a talebearer, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  266,
                                "root":  "deception and falsehood",
@@ -10614,7 +10625,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of possessiveness, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  532,
                                "root":  "covetousness and materialism",
@@ -10631,7 +10642,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of infirmity, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  506,
                                "root":  "loneliness and emotional brokenness",
@@ -10648,7 +10659,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of oppression, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  630,
                                "root":  "deception and falsehood",
@@ -10665,13 +10676,13 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "650":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sexual abuse, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Goâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sexual abuse, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "control and rebellion"
                                          ],
                                "number":  650,
-                               "root":  "idolatry and person-worship",
+                               "root":  "control and rebellion",
                                "label":  "Spirit Of Sexual Abuse",
                                "spirit":  "sexual abuse",
                                "fruits":  [
@@ -10681,14 +10692,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sexual abuse, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of sexual abuse with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of sexual abuse. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sexual abuse, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of sexual abuse with the root of control and rebellion; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of sexual abuse. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "36":  {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of mockery, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  36,
                               "root":  "pride and self-exaltation",
@@ -10705,7 +10716,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of food addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  65,
                               "root":  "addiction and bondage",
@@ -10722,7 +10733,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lying under oath, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  262,
                                "root":  "deception and falsehood",
@@ -10739,7 +10750,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being polluted by the leaven of the Herodians, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  362,
                                "root":  "deception and falsehood",
@@ -10756,7 +10767,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about illicit sex, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  409,
                                "root":  "addiction and bondage",
@@ -10773,7 +10784,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of offense, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🟢bitterness and unforgiveness"
+                                            "bitterness and unforgiveness"
                                         ],
                               "number":  32,
                               "root":  "bitterness and unforgiveness",
@@ -10790,7 +10801,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of death, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  90,
                               "root":  "fear and insecurity",
@@ -10807,7 +10818,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being judgmental, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  30,
                               "root":  "pride and self-exaltation",
@@ -10824,7 +10835,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive uncontrolled anger, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  416,
                                "root":  "bitterness and unforgiveness",
@@ -10841,7 +10852,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doubt and unbelief, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  472,
                                "root":  "unbelief and distrust of god",
@@ -10858,7 +10869,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being overweight, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  51,
                               "root":  "addiction and bondage",
@@ -10875,7 +10886,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of schizophrenia, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  547,
                                "root":  "deception and falsehood",
@@ -10892,7 +10903,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having arthritis, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  204,
                                "root":  "deception and falsehood",
@@ -10909,7 +10920,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of orgies, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred itâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  332,
                                "root":  "addiction and bondage",
@@ -10926,7 +10937,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of tobacco addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  62,
                               "root":  "addiction and bondage",
@@ -10943,7 +10954,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hatred, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  4,
                              "root":  "bitterness and unforgiveness",
@@ -10960,7 +10971,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of manipulation, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  622,
                                "root":  "control and rebellion",
@@ -10980,7 +10991,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts that I do not fit in anywhere, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  427,
                                "root":  "shame and false identity",
@@ -10997,7 +11008,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of self-adoration, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  646,
                                "root":  "idolatry and person-worship",
@@ -11017,7 +11028,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of calling out false doctrines because i disagree with them, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more importâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  157,
                                "root":  "pride and self-exaltation",
@@ -11034,7 +11045,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of abnormal grief, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  133,
                                "root":  "loneliness and emotional brokenness",
@@ -11051,7 +11062,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of procrastination, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                               "sectionId":  "slothfulness",
                               "roots":  [
-                                            "🔵control and rebellion"
+                                            "control and rebellion"
                                         ],
                               "number":  20,
                               "root":  "control and rebellion",
@@ -11068,7 +11079,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of seeking revenge, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  295,
                                "root":  "bitterness and unforgiveness",
@@ -11085,7 +11096,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of excessive pride in work, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  423,
                                "root":  "pride and self-exaltation",
@@ -11102,7 +11113,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of vulgarity, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  663,
                                "root":  "pride and self-exaltation",
@@ -11122,7 +11133,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being above the law of God and the government, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  388,
                                "root":  "control and rebellion",
@@ -11139,7 +11150,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of astrology, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  108,
                                "root":  "idolatry and person-worship",
@@ -11156,7 +11167,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hating instruction, discipline, and correction, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  341,
                                "root":  "pride and self-exaltation",
@@ -11173,7 +11184,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using a false balance or scale in business, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than Goâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  271,
                                "root":  "covetousness and materialism",
@@ -11190,7 +11201,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the axe, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  219,
                                "root":  "bitterness and unforgiveness",
@@ -11207,7 +11218,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of insomnia, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  508,
                                "root":  "deception and falsehood",
@@ -11224,7 +11235,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of desire to pray, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  435,
                                "root":  "unbelief and distrust of god",
@@ -11241,7 +11252,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using a crystal ball, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  110,
                                "root":  "idolatry and person-worship",
@@ -11258,7 +11269,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of mania, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  517,
                                "root":  "deception and falsehood",
@@ -11275,7 +11286,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of worry, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  573,
                                "root":  "fear and insecurity",
@@ -11292,7 +11303,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of contention, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  456,
                                "root":  "pride and self-exaltation",
@@ -11309,7 +11320,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lying, or cheating, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  260,
                                "root":  "deception and falsehood",
@@ -11326,7 +11337,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having any type of mental disorder, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  169,
                                "root":  "deception and falsehood",
@@ -11343,7 +11354,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of legalism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  513,
                                "root":  "pride and self-exaltation",
@@ -11360,7 +11371,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the arrow, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  223,
                                "root":  "bitterness and unforgiveness",
@@ -11377,7 +11388,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of fetish spirit, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  577,
                                "root":  "addiction and bondage",
@@ -11397,7 +11408,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s accomplishments, from a root of pride and self-exaltation.\r\n\r\nI agree that Iâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  321,
                                "root":  "pride and self-exaltation",
@@ -11414,7 +11425,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of self-pity, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  549,
                                "root":  "shame and false identity",
@@ -11431,7 +11442,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of suspicious attitude, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  15,
                               "root":  "fear and insecurity",
@@ -11448,7 +11459,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lying from time to time, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🟣deception and falsehood"
+                                            "deception and falsehood"
                                         ],
                               "number":  46,
                               "root":  "deception and falsehood",
@@ -11465,7 +11476,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Human Trafficking, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  301,
                                "root":  "covetousness and materialism",
@@ -11482,7 +11493,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of hating women, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  383,
                                "root":  "bitterness and unforgiveness",
@@ -11499,7 +11510,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling like I’m in a stupor, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  174,
                                "root":  "loneliness and emotional brokenness",
@@ -11513,27 +11524,28 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "🟩Occultism and Counterfeit Spirituality"
                            },
                    "200":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of raping someone else, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of raping someone else, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  200,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Raping Someone Else",
                                "spirit":  "raping someone else",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of raping someone else, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that raping someone else with the root of addiction and bondage; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve raping someone else. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of raping someone else, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that raping someone else with the root of addiction and bondage and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve raping someone else. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "144":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of shame, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  144,
                                "root":  "shame and false identity",
@@ -11550,7 +11562,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of needing the worship of others, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  325,
                                "root":  "pride and self-exaltation",
@@ -11567,7 +11579,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being involved in Freemasonry, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  117,
                                "root":  "control and rebellion",
@@ -11584,7 +11596,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of obsession with defeat, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  394,
                                "root":  "fear and insecurity",
@@ -11601,10 +11613,10 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of jealousy, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred itâ€¦",
                               "sectionId":  "jealousy",
                               "roots":  [
-
+                                            "fear and insecurity"
                                         ],
                               "number":  11,
-                              "root":  "",
+                              "root":  "fear and insecurity",
                               "label":  "Jealousy",
                               "spirit":  "jealousy",
                               "fruits":  [
@@ -11618,7 +11630,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of senility, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  550,
                                "root":  "loneliness and emotional brokenness",
@@ -11635,7 +11647,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of fear, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  604,
                                "root":  "fear and insecurity",
@@ -11655,7 +11667,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings of stress, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  104,
                                "root":  "fear and insecurity",
@@ -11672,7 +11684,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lust for looks, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  620,
                                "root":  "addiction and bondage",
@@ -11692,7 +11704,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of promiscuity, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  640,
                                "root":  "addiction and bondage",
@@ -11712,7 +11724,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lucid dreaming, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  128,
                                "root":  "idolatry and person-worship",
@@ -11729,7 +11741,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it moâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  619,
                                "root":  "addiction and bondage",
@@ -11749,7 +11761,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for resisting man’s and God’s authority, from a root of control and rebellion.\r\n\r\nI agree that I maâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  309,
                                "root":  "control and rebellion",
@@ -11766,7 +11778,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of alcohol addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  60,
                               "root":  "addiction and bondage",
@@ -11780,13 +11792,13 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟫Death and Self-destruction"
                           },
                    "585":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of autoeroticism, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than Gâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of autoeroticism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "addiction and bondage"
                                          ],
                                "number":  585,
-                               "root":  "idolatry and person-worship",
+                               "root":  "addiction and bondage",
                                "label":  "Spirit Of Autoeroticism",
                                "spirit":  "autoeroticism",
                                "fruits":  [
@@ -11796,14 +11808,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of autoeroticism, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of autoeroticism with the root of idolatry and person-worship; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of autoeroticism. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of autoeroticism, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of autoeroticism with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of autoeroticism. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "534":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of procrastination, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  534,
                                "root":  "control and rebellion",
@@ -11820,7 +11832,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of physical abuse, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  634,
                                "root":  "control and rebellion",
@@ -11840,7 +11852,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of egotism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  475,
                                "root":  "pride and self-exaltation",
@@ -11857,7 +11869,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of sensitivity, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  551,
                                "root":  "fear and insecurity",
@@ -11874,7 +11886,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of showing partiality to the rich and powerful, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  358,
                                "root":  "covetousness and materialism",
@@ -11891,7 +11903,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of exposing another’s secrets, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  268,
                                "root":  "deception and falsehood",
@@ -11908,7 +11920,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in bestiality, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  368,
                                "root":  "addiction and bondage",
@@ -11925,7 +11937,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of doctrinal error, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  468,
                                "root":  "deception and falsehood",
@@ -11942,7 +11954,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of unforgiveness, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  568,
                                "root":  "bitterness and unforgiveness",
@@ -11959,7 +11971,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of gossiping, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  34,
                               "root":  "shame and false identity",
@@ -11976,7 +11988,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of criticism, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  458,
                                "root":  "pride and self-exaltation",
@@ -11993,7 +12005,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fear of men, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferredâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🟠fear and insecurity"
+                                            "fear and insecurity"
                                         ],
                               "number":  92,
                               "root":  "fear and insecurity",
@@ -12007,27 +12019,28 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟧Division and Relational Destruction"
                           },
                    "195":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being molested as a child, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being molested as a child, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important thâ€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity",
+                                             "control and rebellion"
                                          ],
                                "number":  195,
-                               "root":  "shame and false identity",
+                               "root":  "shame and false identity and control and rebellion",
                                "label":  "Being Molested As A Child",
                                "spirit":  "being molested as a child",
                                "fruits":  [
                                               "🟨Sexual Corruption"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of being molested as a child, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that being molested as a child with the root of shame and false identity; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve being molested as a child. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of being molested as a child, from a root of shame and false identity and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that being molested as a child with the root of shame and false identity and control and rebellion; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of Sexual Corruption with the parent Principality of Whoredom \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve being molested as a child. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption"
                            },
                    "292":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Reckless Speaking, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  292,
                                "root":  "pride and self-exaltation",
@@ -12044,7 +12057,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being shy or timid, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  103,
                                "root":  "fear and insecurity",
@@ -12061,7 +12074,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using children as objects of lust, impurity, and lewdness in thoughts, words, and actions, from a root of addiction and bondage.\r\n\r\nI agrâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  375,
                                "root":  "addiction and bondage",
@@ -12078,7 +12091,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having autism, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  167,
                                "root":  "deception and falsehood",
@@ -12095,7 +12108,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of abnormal mourning, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  134,
                                "root":  "loneliness and emotional brokenness",
@@ -12112,7 +12125,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of participation in acts of torture during the Inquisition, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it mâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  234,
                                "root":  "pride and self-exaltation",
@@ -12129,7 +12142,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rage, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  285,
                                "root":  "bitterness and unforgiveness",
@@ -12146,7 +12159,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling like i\u0027ll never get married, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  48,
                               "root":  "shame and false identity",
@@ -12163,7 +12176,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of prone to car accidents, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  163,
                                "root":  "fear and insecurity",
@@ -12180,7 +12193,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of going to a hypnotist, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  119,
                                "root":  "idolatry and person-worship",
@@ -12197,7 +12210,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of nymphomania, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  628,
                                "root":  "addiction and bondage",
@@ -12217,7 +12230,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of greed, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it moreâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  494,
                                "root":  "covetousness and materialism",
@@ -12234,7 +12247,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of lies, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  617,
                                "root":  "deception and falsehood",
@@ -12254,7 +12267,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rigidity, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  425,
                                "root":  "control and rebellion",
@@ -12271,7 +12284,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of ritual sex, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  644,
                                "root":  "addiction and bondage",
@@ -12291,7 +12304,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings of inferiority, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  99,
                               "root":  "shame and false identity",
@@ -12305,13 +12318,14 @@ window.ROUND1_DATA = {
                               "fruitDisplay":  "🟧Division and Relational Destruction"
                           },
                    "192":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of incest, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred itâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of incest, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "whoredom",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage",
+                                             "control and rebellion"
                                          ],
                                "number":  192,
-                               "root":  "addiction and bondage",
+                               "root":  "addiction and bondage and control and rebellion",
                                "label":  "Incest",
                                "spirit":  "incest",
                                "fruits":  [
@@ -12320,14 +12334,14 @@ window.ROUND1_DATA = {
                                               "⬛Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Whoredom",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of incest, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that incest with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve incest. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of incest, from a root of addiction and bondage and control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that incest with the root of addiction and bondage and control and rebellion; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve incest. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "🟨Sexual Corruption of Human and Hybrid DNA, 🟩Counterfeit Spirituality, ⬛Confusing Preferences with Stewardship"
                            },
                    "483":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of condemnation, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  483,
                                "root":  "shame and false identity",
@@ -12344,7 +12358,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of adoration, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  581,
                                "root":  "idolatry and person-worship",
@@ -12364,7 +12378,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unfaithfulness in business, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  249,
                                "root":  "control and rebellion",
@@ -12381,7 +12395,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of gossip, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  412,
                                "root":  "bitterness and unforgiveness",
@@ -12398,7 +12412,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of self-doubt, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  421,
                                "root":  "shame and false identity",
@@ -12415,7 +12429,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of charging excessive interest for loans, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  277,
                                "root":  "covetousness and materialism",
@@ -12432,7 +12446,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of nervousness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  523,
                                "root":  "fear and insecurity",
@@ -12449,7 +12463,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having sinus issues, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  213,
                                "root":  "deception and falsehood",
@@ -12466,7 +12480,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of nightmares, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  100,
                                "root":  "fear and insecurity",
@@ -12483,7 +12497,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rage, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  3,
                              "root":  "bitterness and unforgiveness",
@@ -12500,7 +12514,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of fearing man rather than God, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  356,
                                "root":  "deception and falsehood",
@@ -12517,7 +12531,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of stealing inheritance by unjust means, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  273,
                                "root":  "covetousness and materialism",
@@ -12534,7 +12548,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture through hanging, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, lovedâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  217,
                                "root":  "bitterness and unforgiveness",
@@ -12551,7 +12565,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of shameful compromise in the face of danger, difficulty, or opposition, from a root of fear and insecurity.\r\n\r\nI agree that I made it more â€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  335,
                                "root":  "fear and insecurity",
@@ -12568,7 +12582,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of persecution, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  530,
                                "root":  "bitterness and unforgiveness",
@@ -12585,7 +12599,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of social media, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  69,
                               "root":  "addiction and bondage",
@@ -12602,7 +12616,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🟢bitterness and unforgiveness"
+                                           "bitterness and unforgiveness"
                                        ],
                              "number":  7,
                              "root":  "bitterness and unforgiveness",
@@ -12619,7 +12633,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of mockery, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  519,
                                "root":  "pride and self-exaltation",
@@ -12636,7 +12650,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of weary in well doing, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  571,
                                "root":  "loneliness and emotional brokenness",
@@ -12653,7 +12667,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of no transparency - believing that my problems are too big for anyone else, from a root of shame and false identity.\r\n\r\nI agree that I madeâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  441,
                                "root":  "shame and false identity",
@@ -12670,7 +12684,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing false doctrines, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  180,
                                "root":  "deception and falsehood",
@@ -12687,7 +12701,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fear of reproof, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  488,
                                "root":  "fear and insecurity",
@@ -12704,7 +12718,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of cruelty, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Goâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  230,
                                "root":  "bitterness and unforgiveness",
@@ -12721,7 +12735,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of idolizing one’s self, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  323,
                                "root":  "idolatry and person-worship",
@@ -12738,7 +12752,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of constant fatigue, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                               "sectionId":  "slothfulness",
                               "roots":  [
-                                            "🟤loneliness and emotional brokenness"
+                                            "loneliness and emotional brokenness"
                                         ],
                               "number":  17,
                               "root":  "loneliness and emotional brokenness",
@@ -12755,7 +12769,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having multi-partner sex, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than Godâ€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  181,
                                "root":  "addiction and bondage",
@@ -12772,7 +12786,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of love of position, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "idolatry",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  73,
                               "root":  "pride and self-exaltation",
@@ -12789,7 +12803,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of delights, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  595,
                                "root":  "addiction and bondage",
@@ -12809,7 +12823,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of penile lust, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  633,
                                "root":  "addiction and bondage",
@@ -12829,7 +12843,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of unbelief, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  657,
                                "root":  "unbelief and distrust of god",
@@ -12849,7 +12863,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for stubbornly clinging to opinions and viewpoints, from a root of pride and self-exaltation.\r\n\r\nI â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  307,
                                "root":  "pride and self-exaltation",
@@ -12866,7 +12880,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having a wounded spirit, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  146,
                                "root":  "loneliness and emotional brokenness",
@@ -12883,7 +12897,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being greedy for chocolate or attention, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "gluttony",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  327,
                                "root":  "addiction and bondage",
@@ -12900,7 +12914,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being rebellious, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  122,
                                "root":  "control and rebellion",
@@ -12917,7 +12931,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of beliefs that nothing will get better, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  432,
                                "root":  "deception and falsehood",
@@ -12934,7 +12948,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of forgetfulness, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  490,
                                "root":  "deception and falsehood",
@@ -12951,7 +12965,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compulsive desires to overdo whatever, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  406,
                                "root":  "addiction and bondage",
@@ -12968,7 +12982,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thinking that others don’t care about me, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  430,
                                "root":  "shame and false identity",
@@ -12985,7 +12999,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unfaithfulness in communities, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  247,
                                "root":  "control and rebellion",
@@ -13002,7 +13016,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in pornography, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  372,
                                "root":  "addiction and bondage",
@@ -13021,7 +13035,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being obese, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferrâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  50,
                               "root":  "addiction and bondage",
@@ -13038,7 +13052,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of wishing I were not born, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                               "sectionId":  "slothfulness",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  22,
                               "root":  "shame and false identity",
@@ -13055,7 +13069,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of defeatism, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  462,
                                "root":  "deception and falsehood",
@@ -13072,7 +13086,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being mentally insane, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  173,
                                "root":  "deception and falsehood",
@@ -13089,7 +13103,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of believing religious lies like infant baptism has made you righteous before God, from a root of deception and falsehood.\r\n\r\nI agree that Iâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  360,
                                "root":  "deception and falsehood",
@@ -13106,7 +13120,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rationalization of God’s Word, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  150,
                                "root":  "deception and falsehood",
@@ -13123,7 +13137,7 @@ window.ROUND1_DATA = {
                              "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of division, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                              "sectionId":  "jealousy",
                              "roots":  [
-                                           "🔴pride and self-exaltation"
+                                           "pride and self-exaltation"
                                        ],
                              "number":  9,
                              "root":  "pride and self-exaltation",
@@ -13140,7 +13154,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of offense, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  401,
                                "root":  "bitterness and unforgiveness",
@@ -13157,7 +13171,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of torture of captives, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  232,
                                "root":  "bitterness and unforgiveness",
@@ -13174,7 +13188,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of timidity, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  566,
                                "root":  "fear and insecurity",
@@ -13191,7 +13205,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feeling worthless, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  57,
                               "root":  "shame and false identity",
@@ -13208,7 +13222,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of convulsions, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  165,
                                "root":  "deception and falsehood",
@@ -13225,7 +13239,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s life, from a root of covetousness and materialism.\r\n\r\nI agree that I made itâ€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  313,
                                "root":  "covetousness and materialism",
@@ -13242,7 +13256,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of heartless destruction of life based on greed for power and wealth, from a root of covetousness and materialism.\r\n\r\nI agree thaâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  236,
                                "root":  "covetousness and materialism",
@@ -13259,7 +13273,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of control, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  591,
                                "root":  "control and rebellion",
@@ -13279,7 +13293,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of rebelling against the natural law through homosexuality, from a root of control and rebellion.\r\n\r\nI agree that I made it more important tâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  385,
                                "root":  "control and rebellion",
@@ -13296,7 +13310,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of pride, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more thâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  533,
                                "root":  "pride and self-exaltation",
@@ -13313,7 +13327,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being defiled, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  135,
                                "root":  "shame and false identity",
@@ -13330,7 +13344,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having female reproductive problems, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  208,
                                "root":  "deception and falsehood",
@@ -13347,7 +13361,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lying, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred iâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  398,
                                "root":  "deception and falsehood",
@@ -13364,7 +13378,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sowing discord among the brethren, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  263,
                                "root":  "pride and self-exaltation",
@@ -13381,7 +13395,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of constant worry thoughts, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, aâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  408,
                                "root":  "fear and insecurity",
@@ -13398,7 +13412,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using profanity, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, andâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  52,
                               "root":  "pride and self-exaltation",
@@ -13415,7 +13429,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of encouraging others to oppose lawful authority, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "rebellion",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  390,
                                "root":  "control and rebellion",
@@ -13432,7 +13446,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of obesity, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  525,
                                "root":  "addiction and bondage",
@@ -13449,7 +13463,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of accusing thoughts about others, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  415,
                                "root":  "bitterness and unforgiveness",
@@ -13466,7 +13480,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of anxiety, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than Gâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  446,
                                "root":  "fear and insecurity",
@@ -13483,7 +13497,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of adulation, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  583,
                                "root":  "pride and self-exaltation",
@@ -13503,7 +13517,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being unteachable, arrogant, proud, haughty, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God,â€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  349,
                                "root":  "pride and self-exaltation",
@@ -13520,7 +13534,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Sexual Abuse, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  279,
                                "root":  "control and rebellion",
@@ -13540,7 +13554,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of moonstruck, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  521,
                                "root":  "idolatry and person-worship",
@@ -13557,7 +13571,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having heart disease, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  211,
                                "root":  "deception and falsehood",
@@ -13574,7 +13588,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts about compulsion to view pornography, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  411,
                                "root":  "addiction and bondage",
@@ -13591,7 +13605,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of fatigue, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  479,
                                "root":  "loneliness and emotional brokenness",
@@ -13608,7 +13622,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in fornication, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  363,
                                "root":  "addiction and bondage",
@@ -13625,7 +13639,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of drug addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  63,
                               "root":  "addiction and bondage",
@@ -13642,7 +13656,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having allergies, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  203,
                                "root":  "deception and falsehood",
@@ -13659,7 +13673,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of polygamy, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred â€¦",
                                "sectionId":  "perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  184,
                                "root":  "addiction and bondage",
@@ -13676,7 +13690,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of slander, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  264,
                                "root":  "bitterness and unforgiveness",
@@ -13693,7 +13707,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having viruses, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  215,
                                "root":  "deception and falsehood",
@@ -13710,7 +13724,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in molestation, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  364,
                                "root":  "addiction and bondage",
@@ -13727,7 +13741,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of suppressing ministries, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it more than God, â€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  154,
                                "root":  "control and rebellion",
@@ -13744,7 +13758,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of evading responsibility for actions, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved it morâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  337,
                                "root":  "control and rebellion",
@@ -13761,7 +13775,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of using Tarot cards, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "divination",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  125,
                                "root":  "idolatry and person-worship",
@@ -13778,7 +13792,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of death, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  460,
                                "root":  "loneliness and emotional brokenness",
@@ -13795,7 +13809,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being resentful, envious and jealous of another’s life and blessings, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I madeâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  294,
                                "root":  "bitterness and unforgiveness",
@@ -13812,7 +13826,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of sex addiction, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  67,
                               "root":  "addiction and bondage",
@@ -13829,7 +13843,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being a workaholic, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                               "sectionId":  "bondage",
                               "roots":  [
-                                            "⚪addiction and bondage"
+                                            "addiction and bondage"
                                         ],
                               "number":  59,
                               "root":  "addiction and bondage",
@@ -13846,7 +13860,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of restlessness, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  541,
                                "root":  "fear and insecurity",
@@ -13863,7 +13877,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of discouragement, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "heaviness",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  138,
                                "root":  "loneliness and emotional brokenness",
@@ -13880,7 +13894,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of slave trading, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  238,
                                "root":  "covetousness and materialism",
@@ -13897,7 +13911,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thinking i\u0027m ugly, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "lies",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  54,
                               "root":  "shame and false identity",
@@ -13914,7 +13928,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of Willfully Separating Self from God and Men, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loveâ€¦",
                                "sectionId":  "using-and-abusing-others-emotionally-physically-spiritually-and-verbally",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  289,
                                "root":  "control and rebellion",
@@ -13928,13 +13942,13 @@ window.ROUND1_DATA = {
                                "fruitDisplay":  "🟥Anger and Violence"
                            },
                    "639":  {
-                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pride, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it mâ€¦",
+                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pride, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved â€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  639,
-                               "root":  "addiction and bondage",
+                               "root":  "pride and self-exaltation",
                                "label":  "Spirit Of Pride",
                                "spirit":  "pride",
                                "fruits":  [
@@ -13944,14 +13958,14 @@ window.ROUND1_DATA = {
                                               "Confusing Preferences with Stewardship"
                                           ],
                                "principality":  "Spirit Spouse Gods",
-                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pride, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of pride with the root of addiction and bondage; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of pride. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
+                               "round1Text":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of pride, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFor this idolatry, adultery, and rebellion, I lay my life on the altar of God.\r\n\r\nI recognize that interacting with the spirit of pride with the root of pride and self-exaltation; is happening because of 7 agreements AND because FRUITS of Sexual Corruption of Human and Hybrid DNA, Counterfeit Spirituality (think KUNDALINI), and Confusing Preferences with Stewardship with the parent Principality of Spirit Spouse Gods \r\n\r\nFor the accusation of this record, I lay my life down on my mother’s side (say her full name), and my father’s side (say his full name), all the way back to Adam.\r\n\r\nI refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don’t know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn’t. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me.\r\n\r\nI ask You Father to forgive me since I have forgiven others. I ask You to judge between me and them so that the judgment is pure and holy. \r\n\r\nI no longer want to serve interacting with the spirit of pride. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead.\r\n\r\nI also ask for a spiritual decree of divorce from this record. I don’t have room in my life for you anymore. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body.\r\n\r\nFather, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance.\r\n\r\nIn the name of Jesus, Amen ~~~~~~~~~~~ ~",
                                "fruitDisplay":  "Sexual Corruption, Human and Hybrid DNA, Counterfeit Spirituality, Confusing Preferences with Stewardship"
                            },
                    "651":  {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of sexual idolatry, from a root of idolatry and person-worship.\r\n\r\nI agree that I made it more important thanâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⭕idolatry and person-worship"
+                                             "idolatry and person-worship"
                                          ],
                                "number":  651,
                                "root":  "idolatry and person-worship",
@@ -13971,7 +13985,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being vain, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefâ€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  40,
                               "root":  "pride and self-exaltation",
@@ -13988,7 +14002,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of masturbation, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than Gâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  623,
                                "root":  "covetousness and materialism",
@@ -14008,7 +14022,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of love of money, from a root of covetousness and materialism.\r\n\r\nI agree that I made it more important than God, loved it more than God, anâ€¦",
                               "sectionId":  "idolatry",
                               "roots":  [
-                                            "⚫covetousness and materialism"
+                                            "covetousness and materialism"
                                         ],
                               "number":  71,
                               "root":  "covetousness and materialism",
@@ -14025,7 +14039,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of disobedience, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lovâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  597,
                                "root":  "control and rebellion",
@@ -14045,7 +14059,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having cancer, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "infirmity",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  206,
                                "root":  "deception and falsehood",
@@ -14062,7 +14076,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of thoughts of discord, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God,â€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  400,
                                "root":  "pride and self-exaltation",
@@ -14079,7 +14093,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of lack of desire to read the Word of God, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "destructive-attitudes-against-god-s-image",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  434,
                                "root":  "unbelief and distrust of god",
@@ -14096,7 +14110,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of temptations, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  655,
                                "root":  "deception and falsehood",
@@ -14116,7 +14130,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of opposition to God’s Word, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more tâ€¦",
                                "sectionId":  "anti-christ",
                                "roots":  [
-                                             "🟡unbelief and distrust of god"
+                                             "unbelief and distrust of god"
                                          ],
                                "number":  148,
                                "root":  "unbelief and distrust of god",
@@ -14133,7 +14147,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of gluttony, from a root of addiction and bondage.\r\n\r\nI agree that I made it more important than God, loved it more thaâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "⚪addiction and bondage"
+                                             "addiction and bondage"
                                          ],
                                "number":  492,
                                "root":  "addiction and bondage",
@@ -14150,7 +14164,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of dishonoring, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  258,
                                "root":  "pride and self-exaltation",
@@ -14167,7 +14181,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of participating in masochism, sadism, and wicked imaginations, from a root of deception and falsehood.\r\n\r\nI agree that I made it more imporâ€¦",
                                "sectionId":  "sexual-perversion",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  378,
                                "root":  "deception and falsehood",
@@ -14184,7 +14198,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of feelings that I have been rejected, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                               "sectionId":  "fear",
                               "roots":  [
-                                            "🩷shame and false identity"
+                                            "shame and false identity"
                                         ],
                               "number":  95,
                               "root":  "shame and false identity",
@@ -14201,7 +14215,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of haughty spirit, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than Goâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  578,
                                "root":  "pride and self-exaltation",
@@ -14221,7 +14235,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being boastful, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more than God, and â€¦",
                               "sectionId":  "haughtiness",
                               "roots":  [
-                                            "🔴pride and self-exaltation"
+                                            "pride and self-exaltation"
                                         ],
                               "number":  24,
                               "root":  "pride and self-exaltation",
@@ -14238,7 +14252,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of arguing, from a root of pride and self-exaltation.\r\n\r\nI agree that I made it more important than God, loved it more â€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🔴pride and self-exaltation"
+                                             "pride and self-exaltation"
                                          ],
                                "number":  448,
                                "root":  "pride and self-exaltation",
@@ -14255,7 +14269,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of doubt, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferâ€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟡unbelief and distrust of god"
+                                            "unbelief and distrust of god"
                                         ],
                               "number":  82,
                               "root":  "unbelief and distrust of god",
@@ -14272,7 +14286,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of unfaithfulness in relationships with families, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, lâ€¦",
                                "sectionId":  "treachery-against-others",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  245,
                                "root":  "control and rebellion",
@@ -14289,7 +14303,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of covering up transgressions, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more thanâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  347,
                                "root":  "deception and falsehood",
@@ -14306,7 +14320,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of having suicidal thoughts, from a root of shame and false identity.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🩷shame and false identity"
+                                             "shame and false identity"
                                          ],
                                "number":  175,
                                "root":  "shame and false identity",
@@ -14323,7 +14337,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of trading floor transaction with demons for coveting another’s spouse, from a root of covetousness and materialism.\r\n\r\nI agree that I made â€¦",
                                "sectionId":  "trading-floor-transactions-with-demons",
                                "roots":  [
-                                             "⚫covetousness and materialism"
+                                             "covetousness and materialism"
                                          ],
                                "number":  314,
                                "root":  "covetousness and materialism",
@@ -14340,7 +14354,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of the use of the rifle, from a root of bitterness and unforgiveness.\r\n\r\nI agree that I made it more important than God, loved it more than â€¦",
                                "sectionId":  "shedding-of-innocent-blood",
                                "roots":  [
-                                             "🟢bitterness and unforgiveness"
+                                             "bitterness and unforgiveness"
                                          ],
                                "number":  224,
                                "root":  "bitterness and unforgiveness",
@@ -14357,7 +14371,7 @@ window.ROUND1_DATA = {
                               "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of compromising on my convictions, from a root of unbelief and distrust of God.\r\n\r\nI agree that I made it more important than God, loved it â€¦",
                               "sectionId":  "error",
                               "roots":  [
-                                            "🟡unbelief and distrust of god"
+                                            "unbelief and distrust of god"
                                         ],
                               "number":  78,
                               "root":  "unbelief and distrust of god",
@@ -14374,7 +14388,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of guile, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved itâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  607,
                                "root":  "deception and falsehood",
@@ -14394,7 +14408,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being tormented, from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and prefeâ€¦",
                                "sectionId":  "fear",
                                "roots":  [
-                                             "🟠fear and insecurity"
+                                             "fear and insecurity"
                                          ],
                                "number":  106,
                                "root":  "fear and insecurity",
@@ -14411,7 +14425,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of disease of ears, from a root of deception and falsehood.\r\n\r\nI agree that I made it more important than God, loved it more than God, and pâ€¦",
                                "sectionId":  "deaf-dumb",
                                "roots":  [
-                                             "🟣deception and falsehood"
+                                             "deception and falsehood"
                                          ],
                                "number":  171,
                                "root":  "deception and falsehood",
@@ -14428,7 +14442,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of being willfully contrary in one’s heart, from a root of control and rebellion.\r\n\r\nI agree that I made it more important than God, loved iâ€¦",
                                "sectionId":  "self-righteousness",
                                "roots":  [
-                                             "🔵control and rebellion"
+                                             "control and rebellion"
                                          ],
                                "number":  339,
                                "root":  "control and rebellion",
@@ -14445,7 +14459,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of familiar identity of heaviness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important than God, loâ€¦",
                                "sectionId":  "destructive-identities-against-god",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  499,
                                "root":  "loneliness and emotional brokenness",
@@ -14462,7 +14476,7 @@ window.ROUND1_DATA = {
                                "round1Preview":  "I agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of loneliness, from a root of loneliness and emotional brokenness.\r\n\r\nI agree that I made it more important tâ€¦",
                                "sectionId":  "spirit-spouse-gods",
                                "roots":  [
-                                             "🟤loneliness and emotional brokenness"
+                                             "loneliness and emotional brokenness"
                                          ],
                                "number":  618,
                                "root":  "loneliness and emotional brokenness",

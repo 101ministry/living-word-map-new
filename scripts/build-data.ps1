@@ -31,6 +31,86 @@ function Slugify([string]$text) {
     return $t.Trim('-')
 }
 
+# Canonical root spirits. Matching keys are space-normalized; display keeps hyphens.
+$script:CanonicalRootDisplay = [ordered]@{
+    'loneliness and emotional brokenness' = 'loneliness and emotional brokenness'
+    'unbelief and distrust of god'        = 'unbelief and distrust of god'
+    'bitterness and unforgiveness'        = 'bitterness and unforgiveness'
+    'covetousness and materialism'        = 'covetousness and materialism'
+    'idolatry and person worship'         = 'idolatry and person-worship'
+    'idolatry and self worship'           = 'idolatry and person-worship'  # merge: one constellation root
+    'pride and self exaltation'           = 'pride and self-exaltation'
+    'shame and false identity'            = 'shame and false identity'
+    'deception and falsehood'             = 'deception and falsehood'
+    'addiction and bondage'               = 'addiction and bondage'
+    'control and rebellion'               = 'control and rebellion'
+    'fear and insecurity'                 = 'fear and insecurity'
+}
+$script:CanonicalRootKeys = @($script:CanonicalRootDisplay.Keys | Sort-Object { $_.Length } -Descending)
+
+function Strip-RootNoise([string]$text) {
+    if (-not $text) { return '' }
+    # Drop emoji / symbols (including surrogate pairs) and parse tails
+    $chars = New-Object System.Collections.Generic.List[char]
+    foreach ($ch in $text.ToCharArray()) {
+        if ([int]$ch -lt 128) { [void]$chars.Add($ch) }
+    }
+    $t = (-join $chars)
+    $t = $t.ToLowerInvariant()
+    $t = $t -replace '\bis happening\b.*$', ''
+    $t = $t -replace '[^a-z0-9]+', ' '
+    return ($t.Trim() -replace '\s+', ' ')
+}
+
+function Split-CanonicalRoots([string]$rootRaw) {
+    <#
+      Split ANY compound root line into canonical root spirits for constellation:
+        single  -> one has_root edge
+        pair    -> two small has_root edges (no frankenstein combined node)
+        triplet -> three small has_root edges
+      Applies to every root family, not only control and rebellion.
+    #>
+    $plain = Strip-RootNoise $rootRaw
+    if (-not $plain) { return @() }
+
+    $found = New-Object System.Collections.Generic.List[string]
+    $remaining = $plain
+    while ($remaining) {
+        $hitKey = $null
+        foreach ($key in $script:CanonicalRootKeys) {
+            if ($remaining -eq $key) {
+                $hitKey = $key
+                $remaining = ''
+                break
+            }
+            if ($remaining.StartsWith("$key and ")) {
+                $hitKey = $key
+                $remaining = $remaining.Substring($key.Length + 5).Trim()
+                break
+            }
+        }
+        if (-not $hitKey) { break }
+        $display = $script:CanonicalRootDisplay[$hitKey]
+        if (-not $found.Contains($display)) { [void]$found.Add($display) }
+    }
+
+    if ($found.Count -eq 0) {
+        # Fallback: collect every canonical key present as a bounded phrase
+        foreach ($key in $script:CanonicalRootKeys) {
+            if ([regex]::IsMatch($plain, "(?:^| and )$([regex]::Escape($key))(?: and |$)")) {
+                $display = $script:CanonicalRootDisplay[$key]
+                if (-not $found.Contains($display)) { [void]$found.Add($display) }
+            }
+        }
+    }
+
+    if ($found.Count -eq 0 -and $plain -notmatch '^(is happening|happening)$' -and $plain.Length -gt 3) {
+        [void]$found.Add($plain)
+    }
+
+    return @($found)
+}
+
 function Normalize-Principality([string]$name) {
     $map = @{
         'Sleep-Slumber' = 'Slothfulness'
@@ -887,8 +967,9 @@ for ($num = 1; $num -le 666; $num++) {
     }
     $principalityNames = $normalizedPrincipalities
 
-    $rootNames = @()
-    if ($root) { $rootNames = @($root) }
+    # Split compound roots (pairs/triplets) into canonical root nodes — never create
+    # frankenstein nodes like "addiction-and-bondage-and-control-and-rebellion".
+    $rootNames = @(Split-CanonicalRoots $root)
     $rootIds = @($rootNames | ForEach-Object { Slugify $_ })
     $fruitIds = @($fruitNames | ForEach-Object { Slugify $_ })
 
@@ -898,6 +979,7 @@ for ($num = 1; $num -le 666; $num++) {
 
     foreach ($rName in $rootNames) {
         $rootId = Slugify $rName
+        if (-not $rootId) { continue }
         if (-not $rootsMap.ContainsKey($rootId)) {
             $rootsMap[$rootId] = @{ id = $rootId; name = $rName; topicIds = @() }
         }
@@ -1095,10 +1177,22 @@ $stats = @{
     }
 }
 
+# Guard: never ship frankenstein / partial compound root nodes
+$allowedRootIds = @($script:CanonicalRootDisplay.Values | ForEach-Object { Slugify $_ })
+$frankensteinRoots = @($rootsMap.Keys | Where-Object {
+    $id = $_
+    if ($id -match '-and$' ) { return $true }
+    $matched = @($allowedRootIds | Where-Object { $id -ne $_ -and $id.Contains($_) })
+    return ($matched.Count -ge 2)
+})
+if ($frankensteinRoots.Count -gt 0) {
+    throw ("Compound root nodes were not split: {0}" -f ($frankensteinRoots -join ', '))
+}
+
 $graph = @{
     stats = $stats
     principalities = $principalities
-    roots = @($rootsMap.Values | ForEach-Object {
+    roots = @($rootsMap.Values | Where-Object { $_.topicIds.Count -gt 0 } | ForEach-Object {
         @{ id = $_.id; name = $_.name; topicCount = $_.topicIds.Count }
     })
     fruits = @($fruitsMap.Values | Where-Object { $_.topicIds.Count -gt 0 } | ForEach-Object {
