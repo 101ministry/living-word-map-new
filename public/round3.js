@@ -25,9 +25,17 @@
     return;
   }
 
+  const CATALOG = window.LANGUAGE_CATALOG || {
+    languages: [{ code: 'en', name: 'English', native: 'English' }],
+    ui: {},
+    defaultLanguage: 'en',
+  };
   const STORAGE_KEY = 'lwm-round3-progress-v1';
+  const LANG_STORAGE_KEY = 'lwm-round-prayer-lang';
   const CAL_MS = (DATA.calReturnMinutes || 2) * 60 * 1000;
   const CAL_CONSECUTIVE_NOS = 4;
+  /** User code "sp" maps to existing Spanish "es". */
+  const LANG_ALIASES = { sp: 'es' };
 
   const els = {
     phaseLabel: document.getElementById('round3-phase-label'),
@@ -37,14 +45,21 @@
     topicNum: document.getElementById('round3-topic-num'),
     topicTitle: document.getElementById('round3-topic-title'),
     topicMeta: document.getElementById('round3-topic-meta'),
+    prayerNote: document.getElementById('round3-prayer-note'),
     prayerText: document.getElementById('round3-prayer-text'),
     prayerScroll: document.getElementById('round3-prayer-scroll'),
+    langSelect: document.getElementById('round3-lang'),
+    langLabel: document.getElementById('round3-lang-label'),
     heartDialog: document.getElementById('round3-heart-dialog'),
     heartDismiss: document.getElementById('round3-heart-dismiss'),
+    heartTitle: document.getElementById('round3-heart-title'),
+    heartSub: document.getElementById('round3-heart-sub'),
     heartYes: document.getElementById('round3-heart-yes'),
     heartNo: document.getElementById('round3-heart-no'),
   };
 
+  const prayerPackCache = Object.create(null);
+  let activePack = null;
   const state = loadState();
 
   let pendingHeartCheck = false;
@@ -52,6 +67,11 @@
   let calDepartedAt = null;
   let calDepartedSectionFirstTopic = null;
   let awaitingCalReturn = false;
+
+  function normalizeLang(code) {
+    const raw = String(code || 'en').toLowerCase();
+    return LANG_ALIASES[raw] || raw;
+  }
 
   function loadState() {
     try {
@@ -61,6 +81,9 @@
         const merged = { ...defaultState(), ...parsed, heartAnswered: parsed.heartAnswered || [] };
         merged.currentTopic = clampTopic(merged.currentTopic);
         merged.phase = 'prayers';
+        merged.language = normalizeLang(
+          merged.language || localStorage.getItem(LANG_STORAGE_KEY) || CATALOG.defaultLanguage || 'en'
+        );
         return merged;
       }
     } catch { /* ignore */ }
@@ -68,6 +91,10 @@
   }
 
   function defaultState() {
+    let language = 'en';
+    try {
+      language = normalizeLang(localStorage.getItem(LANG_STORAGE_KEY) || CATALOG.defaultLanguage || 'en');
+    } catch { /* ignore */ }
     return {
       phase: 'prayers',
       currentTopic: 1,
@@ -75,6 +102,7 @@
       heartYes: [],
       heartAnswered: [],
       consecutiveNo: 0,
+      language,
     };
   }
 
@@ -88,6 +116,7 @@
   function saveState() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      localStorage.setItem(LANG_STORAGE_KEY, state.language);
     } catch { /* ignore */ }
   }
 
@@ -97,6 +126,96 @@
 
   function pad(n) {
     return String(n).padStart(3, '0');
+  }
+
+  function ui(key, fallback) {
+    const pack = CATALOG.ui?.[state.language] || CATALOG.ui?.en || {};
+    return pack[key] || CATALOG.ui?.en?.[key] || fallback || key;
+  }
+
+  function applyUiChrome() {
+    if (els.langLabel) els.langLabel.textContent = ui('languageLabel', 'Language');
+    if (els.heartTitle) els.heartTitle.textContent = ui('heartTitle', 'Did anything change in your heart?');
+    if (els.heartSub) {
+      els.heartSub.textContent = ui(
+        'heartSub',
+        'When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.'
+      );
+    }
+    if (els.heartYes) els.heartYes.textContent = ui('heartYes', 'Yes');
+    if (els.heartNo) els.heartNo.textContent = ui('heartNo', 'No');
+    const rtl = !!(CATALOG.languages || []).find(l => l.code === state.language)?.rtl;
+    document.documentElement.lang = state.language;
+    document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+  }
+
+  function populateLanguageSelect() {
+    if (!els.langSelect) return;
+    const langs = Array.isArray(CATALOG.languages) ? CATALOG.languages : [];
+    els.langSelect.innerHTML = '';
+    langs.forEach(lang => {
+      const opt = document.createElement('option');
+      opt.value = lang.code;
+      opt.textContent = lang.native ? `${lang.native} (${lang.name})` : (lang.name || lang.code);
+      els.langSelect.appendChild(opt);
+    });
+    if (![...els.langSelect.options].some(o => o.value === state.language)) {
+      state.language = 'en';
+    }
+    els.langSelect.value = state.language;
+  }
+
+  async function loadPrayerPack(lang) {
+    const code = normalizeLang(lang);
+    if (code === 'en') {
+      activePack = null;
+      return null;
+    }
+    if (prayerPackCache[code]) {
+      activePack = prayerPackCache[code];
+      return activePack;
+    }
+    const res = await fetch(`prayers/${code}-round3.json`, { cache: 'no-cache' });
+    if (!res.ok) {
+      activePack = null;
+      return null;
+    }
+    const pack = await res.json();
+    prayerPackCache[code] = pack;
+    activePack = pack;
+    return pack;
+  }
+
+  function prayerTextForTopic(num) {
+    const t = topicData(num);
+    if (!t) return '';
+    if (activePack?.topics) {
+      const entry = activePack.topics[String(num)] || activePack.topics[pad(num)];
+      if (entry?.text) return entry.text;
+    }
+    return t.round3Text || '';
+  }
+
+  function prayerNoteForTopic(num) {
+    if (activePack?.topics) {
+      const entry = activePack.topics[String(num)] || activePack.topics[pad(num)];
+      if (entry?.note) return entry.note;
+    }
+    return 'PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.';
+  }
+
+  async function setLanguage(code) {
+    const next = normalizeLang(code);
+    state.language = next;
+    saveState();
+    applyUiChrome();
+    try {
+      await loadPrayerPack(next);
+    } catch (err) {
+      console.error(err);
+      activePack = null;
+    }
+    renderCurrentTopic();
   }
 
   function escapeHtml(s) {
@@ -239,8 +358,12 @@
     if (t.fruitDisplay) metaParts.push(`Fruit: ${t.fruitDisplay}`);
     if (t.principality) metaParts.push(`Principality: ${t.principality}`);
     els.topicMeta.textContent = metaParts.join(' · ');
-    els.prayerText.textContent = t.round3Text || '(No Round 3 prayer text.)';
-    els.progress.textContent = `Topic ${t.number} / ${DATA.topicCount}`;
+    if (els.prayerNote) els.prayerNote.textContent = prayerNoteForTopic(t.number);
+    els.prayerText.textContent = prayerTextForTopic(t.number) || '(No Round 3 prayer text.)';
+    const progressTpl = ui('topicProgress', 'Topic {n} / {total}');
+    els.progress.textContent = progressTpl
+      .replace('{n}', String(t.number))
+      .replace('{total}', String(DATA.topicCount));
 
     document.querySelectorAll('.round2-sidebar-topic').forEach(el => {
       el.classList.toggle('active', Number(el.dataset.topic) === state.currentTopic);
@@ -392,15 +515,26 @@
     }
   });
 
+  if (els.langSelect) {
+    els.langSelect.addEventListener('change', () => {
+      setLanguage(els.langSelect.value);
+    });
+  }
+
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') handleCalReturn();
   });
   window.addEventListener('focus', () => handleCalReturn());
 
-  try {
-    startPrayers();
-  } catch (err) {
-    showFatalError(`Round 3 failed to initialize: ${err.message}`);
-    console.error(err);
-  }
+  (async () => {
+    try {
+      populateLanguageSelect();
+      applyUiChrome();
+      await loadPrayerPack(state.language);
+      startPrayers();
+    } catch (err) {
+      showFatalError(`Round 3 failed to initialize: ${err.message}`);
+      console.error(err);
+    }
+  })();
 })();

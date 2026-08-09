@@ -365,6 +365,11 @@ $uiEnglish = [ordered]@{
     prayerLanguageLabel = 'Prayer language'
     mapLanguageNote = 'Map labels stay in English. This sets prayer text and audio.'
     prayerLanguageReady = 'Prayers loaded'
+    heartTitle = 'Did anything change in your heart?'
+    heartSub = 'When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.'
+    heartYes = 'Yes'
+    heartNo = 'No'
+    topicProgress = 'Topic {n} / {total}'
 }
 
 $uiOverridesPath = Join-Path $PSScriptRoot '..\data\languages-ui-overrides.json'

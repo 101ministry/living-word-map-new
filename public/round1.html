@@ -23,6 +23,10 @@
         <p id="round1-phase-label" class="round2-phase-label">Round 1 · personal confession</p>
       </div>
       <div class="round2-header-meta">
+        <label class="round-lang-label" for="round1-lang">
+          <span id="round1-lang-label">Language</span>
+          <select id="round1-lang" class="round-lang-select" aria-label="Prayer language"></select>
+        </label>
         <span id="round1-progress">Loading…</span>
       </div>
     </header>
@@ -51,8 +55,8 @@
     <dialog id="round1-heart-dialog" class="round2-dialog">
       <div class="round2-dialog-inner">
         <button type="button" id="round1-heart-dismiss" class="round2-dialog-close" aria-label="Close dialog">×</button>
-        <h3>Did anything change in your heart?</h3>
-        <p class="round2-dialog-sub">When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.</p>
+        <h3 id="round1-heart-title">Did anything change in your heart?</h3>
+        <p id="round1-heart-sub" class="round2-dialog-sub">When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.</p>
         <div class="round2-dialog-actions">
           <button type="button" id="round1-heart-yes" class="btn-accent">Yes</button>
           <button type="button" id="round1-heart-no" class="round2-btn-ghost">No</button>
@@ -62,7 +66,8 @@
 
   </div>
 
-  <script src="round1-data.js?v=4"></script>
-  <script src="round1.js?v=7"></script>
+  <script src="languages.js?v=21"></script>
+  <script src="round1-data.js?v=5"></script>
+  <script src="round1.js?v=9"></script>
 </body>
 </html>

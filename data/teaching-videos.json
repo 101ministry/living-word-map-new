@@ -20,7 +20,25 @@
         "658": "3:13:10"
       }
     },
-    { "day": 2, "part": 1, "title": "Day 2 - Prayer Topics", "youtubeId": "pwHwDasm-4c", "url": "https://www.youtube.com/watch?v=pwHwDasm-4c" },
+    {
+      "day": 2,
+      "part": 1,
+      "title": "Day 2 - Prayer Topics",
+      "youtubeId": "pwHwDasm-4c",
+      "url": "https://www.youtube.com/watch?v=pwHwDasm-4c",
+      "chapterTimestamps": {
+        "657": "12:58",
+        "656": "1:15:58",
+        "655": "1:18:10",
+        "654": "1:51:26",
+        "637": "2:11:03",
+        "653": "2:31:34",
+        "652": "2:39:58",
+        "651": "2:46:50",
+        "650": "2:54:34",
+        "649": "3:02:40"
+      }
+    },
     { "day": 3, "part": 1, "title": "Day 3 - Prayer Topics", "youtubeId": "T6fZ_jWU1dc", "url": "https://www.youtube.com/watch?v=T6fZ_jWU1dc" },
     { "day": 4, "part": 1, "title": "Day 4 - Prayer Topics", "youtubeId": "37jRMIrZgMU", "url": "https://www.youtube.com/watch?v=37jRMIrZgMU" },
     { "day": 5, "part": 1, "title": "Day 5 - Prayer Topics", "youtubeId": "b-EJ1SOIXqs", "url": "https://www.youtube.com/watch?v=b-EJ1SOIXqs" },

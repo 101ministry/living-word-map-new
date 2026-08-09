@@ -13,5 +13,9 @@
   { "code": "de", "name": "German", "native": "Deutsch", "rtl": false, "complete": false },
   { "code": "ja", "name": "Japanese", "native": "日本語", "rtl": false, "complete": false },
   { "code": "sw", "name": "Swahili", "native": "Kiswahili", "rtl": false, "complete": false },
-  { "code": "ko", "name": "Korean", "native": "한국어", "rtl": false, "complete": false }
+  { "code": "ko", "name": "Korean", "native": "한국어", "rtl": false, "complete": false },
+  { "code": "it", "name": "Italian", "native": "Italiano", "rtl": false, "complete": true },
+  { "code": "vi", "name": "Vietnamese", "native": "Tiếng Việt", "rtl": false, "complete": true },
+  { "code": "th", "name": "Thai", "native": "ไทย", "rtl": false, "complete": true },
+  { "code": "pl", "name": "Polish", "native": "Polski", "rtl": false, "complete": true }
 ]

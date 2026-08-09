@@ -2,17 +2,19 @@
 param(
     [Parameter(Mandatory = $true)]
     [string]$LangCode,
-    [string]$EnglishFile = "$PSScriptRoot\..\public\prayers\en.json",
+    [string]$EnglishFile = "",
     [string]$PhrasesFile = "",
     [string]$CoreFile = "",
     [string]$MetaFile = "",
     [string]$OutputFile = ""
 )
 
-if (-not $PhrasesFile) { $PhrasesFile = "$PSScriptRoot\..\data\translations\$LangCode-phrases.json" }
-if (-not $CoreFile) { $CoreFile = "$PSScriptRoot\..\data\translations\$LangCode-core-prayer.txt" }
-if (-not $MetaFile) { $MetaFile = "$PSScriptRoot\..\data\translations\$LangCode-meta.json" }
-if (-not $OutputFile) { $OutputFile = "$PSScriptRoot\..\data\translations\$LangCode-prayers.json" }
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+if (-not $EnglishFile) { $EnglishFile = Join-Path $repoRoot 'public\prayers\en.json' }
+if (-not $PhrasesFile) { $PhrasesFile = Join-Path $repoRoot "data\translations\$LangCode-phrases.json" }
+if (-not $CoreFile) { $CoreFile = Join-Path $repoRoot "data\translations\$LangCode-core-prayer.txt" }
+if (-not $MetaFile) { $MetaFile = Join-Path $repoRoot "data\translations\$LangCode-meta.json" }
+if (-not $OutputFile) { $OutputFile = Join-Path $repoRoot "data\translations\$LangCode-prayers.json" }
 
 function Read-Utf8([string]$path) {
     return [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)

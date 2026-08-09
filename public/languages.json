@@ -18,7 +18,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Prayer language",
                           "mapLanguageNote":  "Map labels stay in English. This sets prayer text and audio.",
-                          "prayerLanguageReady":  "Prayers loaded"
+                          "prayerLanguageReady":  "Prayers loaded",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "zh":  {
                           "prayerTitle":  "祷告",
@@ -33,7 +38,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "祷告语言",
                           "mapLanguageNote":  "地图标签仍为英文。此选项用于祷告文本和音频。",
-                          "prayerLanguageReady":  "祷告已加载"
+                          "prayerLanguageReady":  "祷告已加载",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "hi":  {
                           "prayerTitle":  "प्रार्थना",
@@ -48,7 +58,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "प्रार्थना भाषा",
                           "mapLanguageNote":  "मानचित्र अंग्रेज़ी में रहता है। यह प्रार्थना पाठ और ऑडियो के लिए है।",
-                          "prayerLanguageReady":  "प्रार्थनाएँ लोड हुईं"
+                          "prayerLanguageReady":  "प्रार्थनाएँ लोड हुईं",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "es":  {
                           "prayerTitle":  "Oración",
@@ -60,10 +75,15 @@
                           "audioComingSoon":  "Grabación de audio próximamente; por ahora lee la oración en voz alta.",
                           "translationComingSoon":  "666 oraciones disponibles en español.",
                           "noPrayer":  "No prayer found for this topic.",
-                          "languageLabel":  "Language",
+                          "languageLabel":  "Idioma",
                           "prayerLanguageLabel":  "Idioma de oración",
                           "mapLanguageNote":  "El mapa permanece en inglés. Esto aplica al texto y audio de oración.",
-                          "prayerLanguageReady":  "Oraciones cargadas"
+                          "prayerLanguageReady":  "Oraciones cargadas",
+                          "heartTitle":  "¿Cambió algo en tu corazón?",
+                          "heartSub":  "Cuando elijas el siguiente tema de la lista, responde aquí primero. Puedes volver a leer la oración detrás de este cuadro antes de responder.",
+                          "heartYes":  "Sí",
+                          "heartNo":  "No",
+                          "topicProgress":  "Tema {n} / {total}"
                       },
                "ar":  {
                           "prayerTitle":  "صلاة",
@@ -78,7 +98,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "لغة الصلاة",
                           "mapLanguageNote":  "تبقى تسميات الخريطة بالإنجليزية. هذا يخص نص الصلاة والصوت.",
-                          "prayerLanguageReady":  "تم تحميل الصلوات"
+                          "prayerLanguageReady":  "تم تحميل الصلوات",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "fr":  {
                           "prayerTitle":  "Prière",
@@ -93,7 +118,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Langue de prière",
                           "mapLanguageNote":  "La carte reste en anglais. Ceci règle le texte et l\u0027audio des prières.",
-                          "prayerLanguageReady":  "Prières chargées"
+                          "prayerLanguageReady":  "Prières chargées",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "bn":  {
                           "prayerTitle":  "প্রার্থনা",
@@ -108,7 +138,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "প্রার্থনার ভাষা",
                           "mapLanguageNote":  "মানচিত্রের লেবেল ইংরেজিতে থাকে। এটি প্রার্থনার পাঠ ও অডিওর জন্য।",
-                          "prayerLanguageReady":  "প্রার্থনা লোড হয়েছে"
+                          "prayerLanguageReady":  "প্রার্থনা লোড হয়েছে",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "pt":  {
                           "prayerTitle":  "Oração",
@@ -123,7 +158,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Idioma da oração",
                           "mapLanguageNote":  "O mapa permanece em inglês. Isto define texto e áudio da oração.",
-                          "prayerLanguageReady":  "Orações carregadas"
+                          "prayerLanguageReady":  "Orações carregadas",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "ru":  {
                           "prayerTitle":  "Молитва",
@@ -138,7 +178,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Язык молитвы",
                           "mapLanguageNote":  "Подписи карты остаются на английском. Это для текста и аудио молитв.",
-                          "prayerLanguageReady":  "Молитвы загружены"
+                          "prayerLanguageReady":  "Молитвы загружены",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "ur":  {
                           "prayerTitle":  "دعا",
@@ -153,7 +198,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "دعا کی زبان",
                           "mapLanguageNote":  "نقشے کے لیبل انگریزی میں رہتے ہیں۔ یہ دعا کے متن اور آڈیو کے لیے ہے۔",
-                          "prayerLanguageReady":  "دعائیں لوڈ ہو گئیں"
+                          "prayerLanguageReady":  "دعائیں لوڈ ہو گئیں",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "id":  {
                           "prayerTitle":  "Doa",
@@ -168,7 +218,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Bahasa doa",
                           "mapLanguageNote":  "Label peta tetap dalam bahasa Inggris. Ini untuk teks dan audio doa.",
-                          "prayerLanguageReady":  "Doa dimuat"
+                          "prayerLanguageReady":  "Doa dimuat",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "de":  {
                           "prayerTitle":  "Gebet",
@@ -183,7 +238,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Gebetssprache",
                           "mapLanguageNote":  "Kartenbeschriftungen bleiben auf Englisch. Dies gilt für Gebetstext und Audio.",
-                          "prayerLanguageReady":  "Gebete geladen"
+                          "prayerLanguageReady":  "Gebete geladen",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "ja":  {
                           "prayerTitle":  "祈り",
@@ -198,7 +258,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "祈りの言語",
                           "mapLanguageNote":  "地図のラベルは英語のままです。祈りの文と音声に適用されます。",
-                          "prayerLanguageReady":  "祈りを読み込みました"
+                          "prayerLanguageReady":  "祈りを読み込みました",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "sw":  {
                           "prayerTitle":  "Maombi",
@@ -213,7 +278,12 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "Lugha ya maombi",
                           "mapLanguageNote":  "Lebo za ramani hubaki kwa Kiingereza. Hii huweka maandishi na sauti ya maombi.",
-                          "prayerLanguageReady":  "Maombi yamepakiwa"
+                          "prayerLanguageReady":  "Maombi yamepakiwa",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
                       },
                "ko":  {
                           "prayerTitle":  "기도",
@@ -228,7 +298,92 @@
                           "languageLabel":  "Language",
                           "prayerLanguageLabel":  "기도 언어",
                           "mapLanguageNote":  "지도 라벨은 영어로 유지됩니다. 기도 본문과 오디오에 적용됩니다.",
-                          "prayerLanguageReady":  "기도가 로드됨"
+                          "prayerLanguageReady":  "기도가 로드됨",
+                          "heartTitle":  "Did anything change in your heart?",
+                          "heartSub":  "When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.",
+                          "heartYes":  "Yes",
+                          "heartNo":  "No",
+                          "topicProgress":  "Topic {n} / {total}"
+                      },
+               "it":  {
+                          "prayerTitle":  "Preghiera",
+                          "corePrayerTitle":  "Core Prayer",
+                          "corePrayerHint":  "Replace [topic] with the specific prayer topic. Speak out loud.",
+                          "spokenNote":  "These prayers are to be spoken, not simply read silently.",
+                          "openCorePrayer":  "Preghiera centrale",
+                          "listenPrayer":  "Listen",
+                          "audioComingSoon":  "Registrazione audio in arrivo; per ora leggi la preghiera ad alta voce.",
+                          "translationComingSoon":  "666 preghiere disponibili in italiano.",
+                          "noPrayer":  "No prayer found for this topic.",
+                          "languageLabel":  "Lingua",
+                          "prayerLanguageLabel":  "Lingua di preghiera",
+                          "mapLanguageNote":  "Le etichette della mappa restano in inglese. Questo imposta testo e audio della preghiera.",
+                          "prayerLanguageReady":  "Preghiere caricate",
+                          "heartTitle":  "È cambiato qualcosa nel tuo cuore?",
+                          "heartSub":  "Quando scegli il prossimo tema nell\u0027elenco, rispondi prima qui. Puoi scorrere di nuovo la preghiera dietro questa finestra prima di rispondere.",
+                          "heartYes":  "Sì",
+                          "heartNo":  "No",
+                          "topicProgress":  "Tema {n} / {total}"
+                      },
+               "vi":  {
+                          "prayerTitle":  "Cầu nguyện",
+                          "corePrayerTitle":  "Core Prayer",
+                          "corePrayerHint":  "Replace [topic] with the specific prayer topic. Speak out loud.",
+                          "spokenNote":  "These prayers are to be spoken, not simply read silently.",
+                          "openCorePrayer":  "Lời cầu nguyện chính",
+                          "listenPrayer":  "Listen",
+                          "audioComingSoon":  "Bản ghi âm sắp có; hiện hãy đọc lời cầu nguyện to.",
+                          "translationComingSoon":  "666 lời cầu nguyện có sẵn bằng tiếng Việt.",
+                          "noPrayer":  "No prayer found for this topic.",
+                          "languageLabel":  "Ngôn ngữ",
+                          "prayerLanguageLabel":  "Ngôn ngữ cầu nguyện",
+                          "mapLanguageNote":  "Nhãn bản đồ vẫn bằng tiếng Anh. Tùy chọn này dùng cho văn bản và âm thanh cầu nguyện.",
+                          "prayerLanguageReady":  "Đã tải lời cầu nguyện",
+                          "heartTitle":  "Có điều gì thay đổi trong lòng bạn không?",
+                          "heartSub":  "Khi bạn chọn chủ đề tiếp theo trong danh sách, hãy trả lời tại đây trước. Bạn có thể cuộn lại lời cầu nguyện phía sau hộp này trước khi trả lời.",
+                          "heartYes":  "Có",
+                          "heartNo":  "Không",
+                          "topicProgress":  "Chủ đề {n} / {total}"
+                      },
+               "th":  {
+                          "prayerTitle":  "คำอธิษฐาน",
+                          "corePrayerTitle":  "Core Prayer",
+                          "corePrayerHint":  "Replace [topic] with the specific prayer topic. Speak out loud.",
+                          "spokenNote":  "These prayers are to be spoken, not simply read silently.",
+                          "openCorePrayer":  "คำอธิษฐานหลัก",
+                          "listenPrayer":  "Listen",
+                          "audioComingSoon":  "ไฟล์เสียงจะมีเร็วๆ นี้ ตอนนี้ให้อ่านคำอธิษฐานออกเสียง",
+                          "translationComingSoon":  "มีคำอธิษฐาน 666 ข้อในภาษาไทย",
+                          "noPrayer":  "No prayer found for this topic.",
+                          "languageLabel":  "ภาษา",
+                          "prayerLanguageLabel":  "ภาษาคำอธิษฐาน",
+                          "mapLanguageNote":  "ป้ายแผนที่ยังเป็นภาษาอังกฤษ ตัวเลือกนี้ใช้สำหรับข้อความและเสียงคำอธิษฐาน",
+                          "prayerLanguageReady":  "โหลดคำอธิษฐานแล้ว",
+                          "heartTitle":  "มีอะไรเปลี่ยนแปลงในใจของคุณหรือไม่?",
+                          "heartSub":  "เมื่อคุณเลือกหัวข้อถัดไปในรายการ ให้ตอบที่นี่ก่อน คุณสามารถเลื่อนกลับไปอ่านคำอธิษฐานด้านหลังกล่องนี้ก่อนตอบได้",
+                          "heartYes":  "ใช่",
+                          "heartNo":  "ไม่",
+                          "topicProgress":  "หัวข้อ {n} / {total}"
+                      },
+               "pl":  {
+                          "prayerTitle":  "Modlitwa",
+                          "corePrayerTitle":  "Core Prayer",
+                          "corePrayerHint":  "Replace [topic] with the specific prayer topic. Speak out loud.",
+                          "spokenNote":  "These prayers are to be spoken, not simply read silently.",
+                          "openCorePrayer":  "Modlitwa główna",
+                          "listenPrayer":  "Listen",
+                          "audioComingSoon":  "Nagranie audio wkrótce; na razie przeczytaj modlitwę na głos.",
+                          "translationComingSoon":  "666 modlitw dostępnych po polsku.",
+                          "noPrayer":  "No prayer found for this topic.",
+                          "languageLabel":  "Język",
+                          "prayerLanguageLabel":  "Język modlitwy",
+                          "mapLanguageNote":  "Etykiety mapy pozostają po angielsku. To ustawia tekst i audio modlitwy.",
+                          "prayerLanguageReady":  "Modlitwy załadowane",
+                          "heartTitle":  "Czy coś się zmieniło w Twoim sercu?",
+                          "heartSub":  "Gdy wybierasz następny temat z listy, najpierw odpowiedz tutaj. Możesz przewinąć z powrotem modlitwę za tym oknem, zanim odpowiesz.",
+                          "heartYes":  "Tak",
+                          "heartNo":  "Nie",
+                          "topicProgress":  "Temat {n} / {total}"
                       }
            },
     "languages":  [
@@ -334,6 +489,34 @@
                           "code":  "ko",
                           "name":  "Korean",
                           "native":  "한국어",
+                          "rtl":  false,
+                          "complete":  true
+                      },
+                      {
+                          "code":  "it",
+                          "name":  "Italian",
+                          "native":  "Italiano",
+                          "rtl":  false,
+                          "complete":  true
+                      },
+                      {
+                          "code":  "vi",
+                          "name":  "Vietnamese",
+                          "native":  "Tiếng Việt",
+                          "rtl":  false,
+                          "complete":  true
+                      },
+                      {
+                          "code":  "th",
+                          "name":  "Thai",
+                          "native":  "ไทย",
+                          "rtl":  false,
+                          "complete":  true
+                      },
+                      {
+                          "code":  "pl",
+                          "name":  "Polish",
+                          "native":  "Polski",
                           "rtl":  false,
                           "complete":  true
                       }
