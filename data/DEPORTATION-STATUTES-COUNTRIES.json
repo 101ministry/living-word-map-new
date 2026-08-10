@@ -1,0 +1,1798 @@
+﻿{
+    "countries":  [
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~64% Christian; ~29% unaffiliated",
+                          "officialReligion":  "No established religion. First Amendment: Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.",
+                          "officialReligionShort":  "None (secular)",
+                          "overall":  "Partial",
+                          "wjpScore":  "0.68",
+                          "name":  "United States",
+                          "practiceReligion":  "Christian 64%; unaffiliated 29%; Jewish 2%; Muslim 1%; Hindu 1%; Buddhist 1%; other 2% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Strong statutory protection for life, free exercise, and lawful authority, but impartial justice and sojourner fairness vary by enforcement. Immigration law is complex and sometimes punitive relative to Lev 19/Num 15 analogs.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1111",
+                                               "note":  "Murder and manslaughter federally and in all states",
+                                               "axis":  "Life",
+                                               "cite":  "18 U.S.C. Sec. 1111 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section201",
+                                               "note":  "Federal bribery of public officials criminalized",
+                                               "axis":  "Justice",
+                                               "cite":  "18 U.S.C. Sec. 201 (Bribery of public officials)"
+                                           },
+                                           {
+                                               "url":  "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title8-section1158",
+                                               "note":  "Asylum and withholding of removal for qualifying aliens",
+                                               "axis":  "Sojourner",
+                                               "cite":  "8 U.S.C. Sec. 1158 (Asylum)"
+                                           },
+                                           {
+                                               "url":  "https://uscode.house.gov/view.xhtml?path=/prelim@title8\u0026edition=prelim",
+                                               "note":  "General immigration and nationality framework",
+                                               "axis":  "One law",
+                                               "cite":  "8 U.S.C. Sec. 1101 et seq. (INA)"
+                                           },
+                                           {
+                                               "url":  "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1621",
+                                               "note":  "Perjury before federal courts or grand jury",
+                                               "axis":  "Truth",
+                                               "cite":  "18 U.S.C. Sec. 1621 (Perjury generally)"
+                                           },
+                                           {
+                                               "url":  "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title8-section1182",
+                                               "note":  "Inadmissibility and removal for security-related grounds",
+                                               "axis":  "Security",
+                                               "cite":  "8 U.S.C. Sec. 1182(a)(3) (Security grounds)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.archives.gov/founding-docs/bill-of-rights-transcript",
+                          "wjpRank":  "27",
+                          "practiceGap":  "Constitutionally secular; population remains majority Christian with growing unaffiliated share."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~52% unaffiliated; ~18% Buddhist; ~5% Christian",
+                          "officialReligion":  "Constitution guarantees freedom of religious belief but subordinates religion to state supervision; CCP promotes atheism and registers permitted religious activity.",
+                          "officialReligionShort":  "Atheist state (CCP)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.48",
+                          "name":  "China",
+                          "practiceReligion":  "Unaffiliated 52%; folk religion 21%; Buddhist 18%; Christian 5%; Muslim 2%; other 2% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal law punishes killing but party-controlled courts undermine impartial justice. Religious practice is regulated and suppressed; sojourner and truth protections are weak relative to biblical norms.",
+                          "statutes":  [
+                                           {
+                                               "url":  "http://www.npc.gov.cn/npc/c30834/2021030516025689013.shtml",
+                                               "note":  "Intentional homicide criminally punished",
+                                               "axis":  "Life",
+                                               "cite":  "Criminal Law of the PRC, Art. 232 (Intentional homicide)"
+                                           },
+                                           {
+                                               "url":  "http://www.npc.gov.cn/npc/c30834/2021030516025689013.shtml",
+                                               "note":  "State organs exercise public power under Constitution",
+                                               "axis":  "Authority",
+                                               "cite":  "Constitution of the PRC, Art. 57 (NPC authority)"
+                                           },
+                                           {
+                                               "url":  "https://www.china-briefing.com/news/the-new-regulations-on-religious-affairs-2017-explained/",
+                                               "note":  "Religious affairs under state administration",
+                                               "axis":  "Religion",
+                                               "cite":  "Regulations on Religious Affairs (2017)"
+                                           },
+                                           {
+                                               "url":  "http://www.npc.gov.cn/npc/c30834/2021030516025689013.shtml",
+                                               "note":  "Exit and entry administration for foreigners",
+                                               "axis":  "One law",
+                                               "cite":  "Exit and Entry Administration Law of the PRC"
+                                           },
+                                           {
+                                               "url":  "http://www.npc.gov.cn/npc/c30834/2021030516025689013.shtml",
+                                               "note":  "State security and counter-espionage framework",
+                                               "axis":  "Security",
+                                               "cite":  "Counter-Espionage Law of the PRC (2014)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.npc.gov.cn/npc/c30834/2021030516025689013.shtml",
+                          "wjpRank":  "92",
+                          "practiceGap":  "Official atheist supervision vs substantial Buddhist, folk, and underground Christian practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "P",
+                                       "child":  "P",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "P",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~80% Hindu; ~14% Muslim; ~2% Christian",
+                          "officialReligion":  "Constitution declares India a sovereign socialist secular democratic republic; no state religion; freedom of conscience and religion guaranteed.",
+                          "officialReligionShort":  "Secular (no state religion)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "0.49",
+                          "name":  "India",
+                          "practiceReligion":  "Hindu 79.8%; Muslim 14.2%; Christian 2.3%; Sikh 1.7%; Buddhist 0.7%; Jain 0.4%; other 0.9% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "IPC retains strong life and truth statutes, but court delays and uneven enforcement weaken justice. Secular pluralism aligns on paper; sojourner protection is partial for refugees and migrants.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.indiacode.nic.in/handle/123456789/2263",
+                                               "note":  "Murder punishable with death or life imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Indian Penal Code, Sec. 302 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.indiacode.nic.in/handle/123456789/1362",
+                                               "note":  "Bribery of public servants criminalized",
+                                               "axis":  "Justice",
+                                               "cite":  "Prevention of Corruption Act, 1988"
+                                           },
+                                           {
+                                               "url":  "https://www.indiacode.nic.in/handle/123456789/1362",
+                                               "note":  "Foreigners registration and visa framework",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Foreigners Act, 1946"
+                                           },
+                                           {
+                                               "url":  "https://www.indiacode.nic.in/handle/123456789/1362",
+                                               "note":  "Citizenship and naturalization rules",
+                                               "axis":  "One law",
+                                               "cite":  "Citizenship Act, 1955"
+                                           },
+                                           {
+                                               "url":  "https://www.indiacode.nic.in/handle/123456789/2263",
+                                               "note":  "False evidence and perjury offenses",
+                                               "axis":  "Truth",
+                                               "cite":  "Indian Penal Code, Sec.Sec. 191-193 (False evidence)"
+                                           },
+                                           {
+                                               "url":  "https://www.india.gov.in/my-government/constitution-india/constitution-india-full-text",
+                                               "note":  "Freedom of religion with conversion restrictions in some states",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of India, Art. 25 (Freedom of religion)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.india.gov.in/my-government/constitution-india/constitution-india-full-text",
+                          "wjpRank":  "86",
+                          "practiceGap":  "Secular constitution vs Hindu-majority practice and periodic communal tension."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "P",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "P",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~87% Muslim; ~7% Christian",
+                          "officialReligion":  "Pancasila requires belief in one God but constitution guarantees freedom of religion; state recognizes six official religions.",
+                          "officialReligionShort":  "Pancasila (not one faith)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "0.52",
+                          "name":  "Indonesia",
+                          "practiceReligion":  "Muslim 86.7%; Christian 7.6%; Hindu 1.7%; Buddhist 0.7%; folk 2.4%; other 0.9% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal code protects life and punishes perjury; sharia-inspired regional rules create mixed sexual-order and religion outcomes. Sojourner law exists but enforcement is uneven.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.kemenkumham.go.id/",
+                                               "note":  "Intentional killing punishable by death or imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Law No. 1/2023 (Criminal Code), Art. on murder"
+                                           },
+                                           {
+                                               "url":  "https://www.kemenkumham.go.id/",
+                                               "note":  "Corruption of public officials criminalized",
+                                               "axis":  "Justice",
+                                               "cite":  "Law No. 31/1999 on Eradication of Corruption"
+                                           },
+                                           {
+                                               "url":  "https://www.kemenkumham.go.id/",
+                                               "note":  "Immigration and foreign nationals residence",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Law No. 6/2011 on Immigration"
+                                           },
+                                           {
+                                               "url":  "https://www.kemenkumham.go.id/",
+                                               "note":  "Religious harmony and blasphemy provisions",
+                                               "axis":  "Religion",
+                                               "cite":  "Law No. 1/PNPS/1965 on Blasphemy"
+                                           },
+                                           {
+                                               "url":  "https://www.kemenkumham.go.id/",
+                                               "note":  "False testimony in court criminalized",
+                                               "axis":  "Truth",
+                                               "cite":  "Criminal Code provisions on false testimony"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.kemenkumham.go.id/undang-undang-dasar-1945",
+                          "wjpRank":  "69",
+                          "practiceGap":  "Official pluralism under Pancasila vs overwhelming Muslim practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "N",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~96% Muslim",
+                          "officialReligion":  "Constitution names Islam as state religion; President and Prime Minister must be Muslims; freedom of religion subject to law and public order.",
+                          "officialReligionShort":  "Islam (state religion)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.37",
+                          "name":  "Pakistan",
+                          "practiceReligion":  "Muslim 96.4%; Hindu 2.1%; Christian 1.3%; other 0.2% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Blasphemy and apostasy pressures conflict with free exercise norms. Life is criminalized in statute but honor killings and mob violence undermine Gen 9 alignment.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.pakistani.org/pakistan/legislation/1860/actXLVof1860.html",
+                                               "note":  "Qisas and Diyat framework for homicide",
+                                               "axis":  "Life",
+                                               "cite":  "Pakistan Penal Code, Sec. 302 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.pakistani.org/pakistan/legislation/1860/actXLVof1860.html",
+                                               "note":  "Blasphemy offenses against Islam",
+                                               "axis":  "Religion",
+                                               "cite":  "Pakistan Penal Code, Sec. 295-C (Blasphemy)"
+                                           },
+                                           {
+                                               "url":  "https://www.pakistani.org/pakistan/constitution/",
+                                               "note":  "Executive and legislative structure under Constitution",
+                                               "axis":  "Authority",
+                                               "cite":  "Constitution of Pakistan, Part III (Federation)"
+                                           },
+                                           {
+                                               "url":  "https://www.pakistani.org/pakistan/legislation/",
+                                               "note":  "Foreigners Act registration and deportation",
+                                               "axis":  "One law",
+                                               "cite":  "Foreigners Act, 1946 (Pakistan)"
+                                           },
+                                           {
+                                               "url":  "https://www.pakistani.org/pakistan/legislation/",
+                                               "note":  "Anti-terrorism and security courts",
+                                               "axis":  "Security",
+                                               "cite":  "Anti-Terrorism Act, 1997"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.pakistani.org/pakistan/constitution/",
+                          "wjpRank":  "130",
+                          "practiceGap":  "Established Islam in law vs small Christian and Hindu minorities in practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~88% Christian (mostly Catholic)",
+                          "officialReligion":  "1988 Constitution establishes secular state; prohibits federal support or hindrance of any religion; free exercise guaranteed.",
+                          "officialReligionShort":  "Secular state",
+                          "overall":  "Partial",
+                          "wjpScore":  "0.50",
+                          "name":  "Brazil",
+                          "practiceReligion":  "Christian 88.1% (Catholic 64.6%, Protestant 22.2%); unaffiliated 8.0%; other 3.9% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal Code strongly criminalizes homicide and perjury; secular religious freedom aligns with Ex 20 analog. Justice delays and prison conditions weaken impartial courts.",
+                          "statutes":  [
+                                           {
+                                               "url":  "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm",
+                                               "note":  "Homicide punishable by imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Decreto-Lei 2.848/1940 (Penal Code), Art. 121"
+                                           },
+                                           {
+                                               "url":  "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm",
+                                               "note":  "Crimes against public administration",
+                                               "axis":  "Justice",
+                                               "cite":  "Penal Code, Art. 312-337 (Crimes by public officials)"
+                                           },
+                                           {
+                                               "url":  "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+                                               "note":  "Secular state and free exercise",
+                                               "axis":  "Religion",
+                                               "cite":  "Constituicao Federal, Art. 5(VI) (Freedom of conscience)"
+                                           },
+                                           {
+                                               "url":  "http://www.planalto.gov.br/ccivil_03/leis/l6815.htm",
+                                               "note":  "Foreigner registration and deportation",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Lei 6.815/1980 (Estatuto do Estrangeiro)"
+                                           },
+                                           {
+                                               "url":  "http://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm",
+                                               "note":  "False testimony criminalized",
+                                               "axis":  "Truth",
+                                               "cite":  "Penal Code, Art. 342 (False testimony)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+                          "wjpRank":  "78",
+                          "practiceGap":  "Secular constitution vs historically Catholic-majority society."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "P",
+                                       "religion":  "P",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "P",
+                                       "oneLaw":  "P",
+                                       "sexual":  "N",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~49% Christian; ~49% Muslim",
+                          "officialReligion":  "Secular federal constitution; no state religion; sharia courts operate in northern states for Muslims in personal law.",
+                          "officialReligionShort":  "Secular (dual sharia/civil)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.41",
+                          "name":  "Nigeria",
+                          "practiceReligion":  "Christian 48.9%; Muslim 48.8%; folk 1.4%; other 0.9% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Federal criminal law punishes murder but communal violence and corruption erode justice. Dual legal systems produce mixed religious and sexual-order outcomes.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.nigeria-law.org/Criminal%20Code%20Act-Tables/Criminal%20Code%20Act.htm",
+                                               "note":  "Murder and manslaughter under Criminal Code",
+                                               "axis":  "Life",
+                                               "cite":  "Criminal Code Act, Sec. 319 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.nigeria-law.org/",
+                                               "note":  "Corrupt practices and bribery",
+                                               "axis":  "Justice",
+                                               "cite":  "Corrupt Practices and Other Related Offences Act, 2000"
+                                           },
+                                           {
+                                               "url":  "https://www.nigeria-law.org/ConstitutionOfTheFederalRepublicOfNigeria.htm",
+                                               "note":  "Freedom of religion and worship",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of Nigeria, Sec. 38 (Freedom of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.nigeria-law.org/",
+                                               "note":  "Immigration Act residence and deportation",
+                                               "axis":  "One law",
+                                               "cite":  "Immigration Act, 2015"
+                                           },
+                                           {
+                                               "url":  "https://www.nigeria-law.org/",
+                                               "note":  "Terrorism prevention Act",
+                                               "axis":  "Security",
+                                               "cite":  "Terrorism (Prevention) Act, 2011"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.nigeria-law.org/ConstitutionOfTheFederalRepublicOfNigeria.htm",
+                          "wjpRank":  "120",
+                          "practiceGap":  "Secular federal frame vs near-even Christian-Muslim split and regional sharia."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~90% Muslim; ~9% Hindu",
+                          "officialReligion":  "Constitution declares Bangladesh a secular republic but retains Islam as state religion (15th Amendment tension); freedom of religion guaranteed.",
+                          "officialReligionShort":  "Secular (Islam privileged)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.39",
+                          "name":  "Bangladesh",
+                          "practiceReligion":  "Muslim 90.4%; Hindu 8.5%; Buddhist 0.6%; Christian 0.3%; other 0.2% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal Code retains life and truth statutes but blasphemy and digital security laws suppress religious speech. Sojourner Rohingya population faces precarious status.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://bdlaws.minlaw.gov.bd/act-367.html",
+                                               "note":  "Murder punishable by death or life",
+                                               "axis":  "Life",
+                                               "cite":  "Penal Code, Sec. 302 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://bdlaws.minlaw.gov.bd/act-367.html",
+                                               "note":  "Blasphemy and hurting religious feelings",
+                                               "axis":  "Religion",
+                                               "cite":  "Penal Code, Sec. 295A (Deliberate religious outrage)"
+                                           },
+                                           {
+                                               "url":  "https://bdlaws.minlaw.gov.bd/",
+                                               "note":  "Foreigners registration and visa rules",
+                                               "axis":  "One law",
+                                               "cite":  "Foreigners Act, 1946 (Bangladesh)"
+                                           },
+                                           {
+                                               "url":  "https://bdlaws.minlaw.gov.bd/act-367.html",
+                                               "note":  "False evidence and perjury",
+                                               "axis":  "Truth",
+                                               "cite":  "Penal Code, Sec.Sec. 191-193"
+                                           },
+                                           {
+                                               "url":  "https://bdlaws.minlaw.gov.bd/",
+                                               "note":  "Digital Security Act broad offenses",
+                                               "axis":  "Security",
+                                               "cite":  "Digital Security Act, 2018"
+                                           }
+                                       ],
+                          "officialSource":  "https://bdlaws.minlaw.gov.bd/act-367.html",
+                          "wjpRank":  "125",
+                          "practiceGap":  "Secular wording with established Islam vs Hindu minority practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "Y",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "N",
+                                       "truth":  "N",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~73% Orthodox; ~15% unaffiliated",
+                          "officialReligion":  "Constitution declares secular state and equality of religions; Russian Orthodox Church holds privileged public role without formal establishment.",
+                          "officialReligionShort":  "Secular (Orthodox favored)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.41",
+                          "name":  "Russia",
+                          "practiceReligion":  "Christian 73.6% (Orthodox 71.8%); Muslim 6.5%; unaffiliated 15.0%; Buddhist 0.5%; other 4.4% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal Code punishes murder but political prosecutions undermine impartial justice. Foreign-agent and extremism laws suppress religious minorities and speech.",
+                          "statutes":  [
+                                           {
+                                               "url":  "http://www.consultant.ru/document/cons_doc_LAW_10699/",
+                                               "note":  "Intentional murder criminalized",
+                                               "axis":  "Life",
+                                               "cite":  "Criminal Code of the RF, Art. 105 (Murder)"
+                                           },
+                                           {
+                                               "url":  "http://www.consultant.ru/document/cons_doc_LAW_10699/",
+                                               "note":  "Abuse of official powers",
+                                               "axis":  "Justice",
+                                               "cite":  "Criminal Code, Art. 285 (Abuse of powers)"
+                                           },
+                                           {
+                                               "url":  "http://www.consultant.ru/document/cons_doc_LAW_8945/",
+                                               "note":  "Freedom of conscience and religious associations",
+                                               "axis":  "Religion",
+                                               "cite":  "Federal Law No. 125-FZ on Freedom of Conscience"
+                                           },
+                                           {
+                                               "url":  "http://www.consultant.ru/document/cons_doc_LAW_60799/",
+                                               "note":  "Migration registration and residence rules",
+                                               "axis":  "One law",
+                                               "cite":  "Federal Law No. 109-FZ on Migration Registration"
+                                           },
+                                           {
+                                               "url":  "http://www.consultant.ru/document/cons_doc_LAW_10699/",
+                                               "note":  "Counter-extremism and undesirable organizations",
+                                               "axis":  "Security",
+                                               "cite":  "Federal Law No. 114-FZ on Countering Extremism"
+                                           }
+                                       ],
+                          "officialSource":  "http://www.constitution.ru/en/russia/constitution/",
+                          "wjpRank":  "119",
+                          "practiceGap":  "Secular constitution vs Orthodox cultural dominance and state favoritism."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "P",
+                                       "religion":  "Y",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "P",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~88% Christian (mostly Catholic)",
+                          "officialReligion":  "Constitution establishes secular state; prohibits establishment; guarantees free exercise; clergy barred from holding certain public offices.",
+                          "officialReligionShort":  "Secular state",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.40",
+                          "name":  "Mexico",
+                          "practiceReligion":  "Christian 88.0% (Catholic 77.7%, Protestant 8.3%); unaffiliated 8.1%; other 3.9% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Federal penal law criminalizes homicide but cartel violence overwhelms security. Secular religious freedom aligns; justice and truth enforcement remain weak.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf",
+                                               "note":  "Homicide punishable under federal and state codes",
+                                               "axis":  "Life",
+                                               "cite":  "Codigo Penal Federal, Art. 302 (Homicidio)"
+                                           },
+                                           {
+                                               "url":  "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+                                               "note":  "Secular state and free exercise",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitucion Politica, Art. 130 (Religious associations)"
+                                           },
+                                           {
+                                               "url":  "https://www.diputados.gob.mx/LeyesBiblio/pdf/LMigra.pdf",
+                                               "note":  "Migration law and refugee protection",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Ley de Migracion"
+                                           },
+                                           {
+                                               "url":  "https://www.diputados.gob.mx/LeyesBiblio/",
+                                               "note":  "Nationality and naturalization",
+                                               "axis":  "One law",
+                                               "cite":  "Ley de Nacionalidad"
+                                           },
+                                           {
+                                               "url":  "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf",
+                                               "note":  "Perjury and false testimony",
+                                               "axis":  "Truth",
+                                               "cite":  "Codigo Penal Federal, Art. 247 (Perjurio)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+                          "wjpRank":  "121",
+                          "practiceGap":  "Hard secularism in law vs Catholic-majority culture."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~57% syncretic; ~27% unaffiliated",
+                          "officialReligion":  "Constitution guarantees freedom of religion; state and religion strictly separated; no religious test for office.",
+                          "officialReligionShort":  "Secular (no state religion)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.78",
+                          "name":  "Japan",
+                          "practiceReligion":  "Unaffiliated 27.0%; Buddhist 36.2%; Shinto 16.9%; Christian 1.5%; folk 18.4% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal Code rigorously criminalizes homicide and perjury; courts rank high on impartiality. Immigration is orderly but strict on sojourner integration relative to ger model.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.japaneselawtranslation.go.jp/en/laws/view/3171/en",
+                                               "note":  "Murder punishable by death or life imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Penal Code of Japan, Art. 199 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.japaneselawtranslation.go.jp/en/laws/view/3171/en",
+                                               "note":  "Bribery of public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "Penal Code, Art. 197 (Bribery)"
+                                           },
+                                           {
+                                               "url":  "https://www.japaneselawtranslation.go.jp/en/laws/view/4012/en",
+                                               "note":  "Freedom of religion guaranteed",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of Japan, Art. 20 (Freedom of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.japaneselawtranslation.go.jp/en/laws/view/3109/en",
+                                               "note":  "Immigration Control and Refugee Recognition Act",
+                                               "axis":  "One law",
+                                               "cite":  "Immigration Control and Refugee Recognition Act"
+                                           },
+                                           {
+                                               "url":  "https://www.japaneselawtranslation.go.jp/en/laws/view/3171/en",
+                                               "note":  "Perjury in official proceedings",
+                                               "axis":  "Truth",
+                                               "cite":  "Penal Code, Art. 169 (Perjury)"
+                                           },
+                                           {
+                                               "url":  "https://www.japaneselawtranslation.go.jp/en/laws/view/3109/en",
+                                               "note":  "Subversive Activities Prevention Act",
+                                               "axis":  "Security",
+                                               "cite":  "Subversive Activities Prevention Act"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.japaneselawtranslation.go.jp/en/laws/view/4012/en",
+                          "wjpRank":  "15",
+                          "practiceGap":  "Constitutional secularism vs widespread Shinto-Buddhist syncretic practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "P",
+                                       "religion":  "P",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "P",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~63% Christian; ~34% Muslim",
+                          "officialReligion":  "Constitution provides for secular state, freedom of religion, and equality of faiths; no state religion.",
+                          "officialReligionShort":  "Secular (religions equal)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.36",
+                          "name":  "Ethiopia",
+                          "practiceReligion":  "Christian 62.8% (Orthodox 43.8%, Protestant 18.6%); Muslim 33.9%; folk 2.6%; other 0.7% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal code retains life statutes but ethnic conflict and detention practices undermine justice. Religious freedom on paper; communal violence creates mixed enforcement.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.wipo.int/wipolex/en/legislation/details/13085",
+                                               "note":  "Crime of homicide under Criminal Code",
+                                               "axis":  "Life",
+                                               "cite":  "Ethiopian Criminal Code, Art. 530 (Homicide)"
+                                           },
+                                           {
+                                               "url":  "https://www.wipo.int/wipolex/en/legislation/details/13085",
+                                               "note":  "Freedom of religion and worship",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of Ethiopia, Art. 27 (Freedom of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.wipo.int/wipolex/en/legislation/details/13085",
+                                               "note":  "Proclamation on immigration and citizenship",
+                                               "axis":  "One law",
+                                               "cite":  "Ethiopian Immigration Proclamation No. 354/2003"
+                                           },
+                                           {
+                                               "url":  "https://www.wipo.int/wipolex/en/legislation/details/13085",
+                                               "note":  "Federal democratic republic structure",
+                                               "axis":  "Authority",
+                                               "cite":  "Constitution of Ethiopia, Art. 1 (Nomenclature)"
+                                           },
+                                           {
+                                               "url":  "https://www.wipo.int/wipolex/en/legislation/details/13085",
+                                               "note":  "Anti-Terrorism Proclamation",
+                                               "axis":  "Security",
+                                               "cite":  "Anti-Terrorism Proclamation No. 652/2009"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.wipo.int/wipolex/en/legislation/details/13085",
+                          "wjpRank":  "132",
+                          "practiceGap":  "Secular equality in law vs Orthodox and Muslim regional concentrations."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "P",
+                                       "religion":  "Y",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "P",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~89% Christian (mostly Catholic)",
+                          "officialReligion":  "Constitution separates church and state; free exercise guaranteed; no state religion.",
+                          "officialReligionShort":  "Secular (Catholic history)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "0.46",
+                          "name":  "Philippines",
+                          "practiceReligion":  "Christian 89.1% (Catholic 78.8%, Protestant 8.2%); Muslim 6.4%; folk 2.5%; other 2.0% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Revised Penal Code criminalizes murder and perjury but drug-war killings and corruption erode life and justice alignment. Secular religious freedom largely upheld.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.officialgazette.gov.ph/1993/12/06/republic-act-no-8353/",
+                                               "note":  "Murder and homicide under RPC",
+                                               "axis":  "Life",
+                                               "cite":  "Revised Penal Code, Art. 248 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.officialgazette.gov.ph/constitutions/the-1987-constitution-of-the-republic-of-the-philippines/",
+                                               "note":  "Free exercise and non-establishment",
+                                               "axis":  "Religion",
+                                               "cite":  "1987 Constitution, Art. III Sec. 5 (Free exercise)"
+                                           },
+                                           {
+                                               "url":  "https://www.officialgazette.gov.ph/",
+                                               "note":  "Alien registration and deportation",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Philippine Immigration Act of 1940"
+                                           },
+                                           {
+                                               "url":  "https://www.officialgazette.gov.ph/1993/12/06/republic-act-no-8353/",
+                                               "note":  "Perjury in judicial proceedings",
+                                               "axis":  "Truth",
+                                               "cite":  "Revised Penal Code, Art. 183 (Perjury)"
+                                           },
+                                           {
+                                               "url":  "https://www.officialgazette.gov.ph/",
+                                               "note":  "Citizenship and naturalization",
+                                               "axis":  "One law",
+                                               "cite":  "Commonwealth Act No. 473 (Citizenship)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.officialgazette.gov.ph/constitutions/the-1987-constitution-of-the-republic-of-the-philippines/",
+                          "wjpRank":  "97",
+                          "practiceGap":  "Secular constitution vs Catholic-majority practice and Muslim south."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "N",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~90% Muslim; ~10% Christian",
+                          "officialReligion":  "Constitution declares Islam state religion and principles of sharia main source of legislation; freedom of belief for Abrahamic faiths.",
+                          "officialReligionShort":  "Islam (state religion)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.35",
+                          "name":  "Egypt",
+                          "practiceReligion":  "Muslim 90.3%; Christian 9.1%; other 0.6% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal code punishes murder but blasphemy and apostasy pressures conflict with free exercise. Courts lack impartiality; sojourner and migrant workers face abuse.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Egypt_2014",
+                                               "note":  "Intentional killing under Penal Code",
+                                               "axis":  "Life",
+                                               "cite":  "Egyptian Penal Code, Art. 230 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Egypt_2014",
+                                               "note":  "Contempt of heavenly religions",
+                                               "axis":  "Religion",
+                                               "cite":  "Penal Code, Art. 98(f) (Contempt of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Egypt_2014",
+                                               "note":  "Executive and legislative framework",
+                                               "axis":  "Authority",
+                                               "cite":  "Constitution of Egypt 2014, Art. 139 (President)"
+                                           },
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Egypt_2014",
+                                               "note":  "Foreigners residency and deportation",
+                                               "axis":  "One law",
+                                               "cite":  "Law No. 89/1960 on Entry and Residence of Foreigners"
+                                           },
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Egypt_2014",
+                                               "note":  "Anti-terrorism and emergency powers",
+                                               "axis":  "Security",
+                                               "cite":  "Anti-Terrorism Law No. 94/2015"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.constituteproject.org/constitution/Egypt_2014",
+                          "wjpRank":  "135",
+                          "practiceGap":  "Established Islam with sharia source vs Coptic Christian minority."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~55% Christian; ~37% unaffiliated",
+                          "officialReligion":  "Basic Law guarantees freedom of faith and conscience; no established church but cooperative church-state relations (Kirchensteuer).",
+                          "officialReligionShort":  "Secular (church-state cooperation)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.83",
+                          "name":  "Germany",
+                          "practiceReligion":  "Christian 55.0% (Protestant 24.7%, Catholic 27.2%); unaffiliated 37.5%; Muslim 6.2%; other 1.3% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "StrGB criminalizes murder and perjury with high rule-of-law enforcement. Sojourner integration is orderly but asylum processing has faced strain; no compelled worship.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.gesetze-im-internet.de/stgb/__211.html",
+                                               "note":  "Murder (Mord) punishable by life imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Strafgesetzbuch (StGB), Sec. 211 (Mord)"
+                                           },
+                                           {
+                                               "url":  "https://www.gesetze-im-internet.de/stgb/__332.html",
+                                               "note":  "Bribery of public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "StGB, Sec. 332 (Bestechlichkeit)"
+                                           },
+                                           {
+                                               "url":  "https://www.gesetze-im-internet.de/gg/art_4.html",
+                                               "note":  "Freedom of faith and conscience",
+                                               "axis":  "Religion",
+                                               "cite":  "Grundgesetz (GG), Art. 4 (Freedom of faith)"
+                                           },
+                                           {
+                                               "url":  "https://www.gesetze-im-internet.de/aufenthg/",
+                                               "note":  "Residence Act for foreigners",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Aufenthaltsgesetz (AufenthG)"
+                                           },
+                                           {
+                                               "url":  "https://www.gesetze-im-internet.de/stgb/__153.html",
+                                               "note":  "False testimony under oath",
+                                               "axis":  "Truth",
+                                               "cite":  "StGB, Sec. 153 (Meineid)"
+                                           },
+                                           {
+                                               "url":  "https://www.gesetze-im-internet.de/rustag/",
+                                               "note":  "Nationality Act",
+                                               "axis":  "One law",
+                                               "cite":  "Staatsangehorigkeitsgesetz (StAG)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.gesetze-im-internet.de/gg/BJNR000010949.html",
+                          "wjpRank":  "6",
+                          "practiceGap":  "Secular Basic Law with church tax system vs growing unaffiliated population."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "P",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~46% Christian; ~37% unaffiliated",
+                          "officialReligion":  "Church of England established in England; monarch Supreme Governor; Scotland and Wales have no established church; free exercise broadly protected.",
+                          "officialReligionShort":  "Established CofE (England)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.78",
+                          "name":  "United Kingdom",
+                          "practiceReligion":  "Christian 46.0%; unaffiliated 37.2%; Muslim 6.5%; Hindu 1.7%; Sikh 0.9%; other 7.7% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Murder and perjury strongly prosecuted; courts rank among world best on impartiality. Established church is partial conflict with Ex 20 analog but no compelled idolatry.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.legislation.gov.uk/ukpga/Eliz2/5-6/11/contents",
+                                               "note":  "Murder and manslaughter",
+                                               "axis":  "Life",
+                                               "cite":  "Homicide Act 1957"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.uk/ukpga/2010/23/contents",
+                                               "note":  "Bribery Act 2010",
+                                               "axis":  "Justice",
+                                               "cite":  "Bribery Act 2010"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.uk/ukpga/1998/42/schedule/1",
+                                               "note":  "Human Rights Act â€” freedom of thought, conscience, religion",
+                                               "axis":  "Religion",
+                                               "cite":  "Human Rights Act 1998, Sch. 1 Art. 9"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.uk/ukpga/2002/41/contents",
+                                               "note":  "Nationality, Immigration and Asylum Act 2002",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Nationality, Immigration and Asylum Act 2002"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.uk/ukpga/Geo5/1-2/6/contents",
+                                               "note":  "Perjury Act 1911",
+                                               "axis":  "Truth",
+                                               "cite":  "Perjury Act 1911"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.uk/ukpga/1971/77/contents",
+                                               "note":  "Immigration Act 1971",
+                                               "axis":  "One law",
+                                               "cite":  "Immigration Act 1971"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.legislation.gov.uk/ukpga/2023/54/contents/enacted",
+                          "wjpRank":  "14",
+                          "practiceGap":  "Established Anglicanism in England vs minority Christian share and large unaffiliated population."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "P",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~47% Christian; ~40% unaffiliated",
+                          "officialReligion":  "1905 Law on Separation of Churches and State; Constitution affirms secular republic; public schools forbid religious symbols (2004 law).",
+                          "officialReligionShort":  "Secular (laicite)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.72",
+                          "name":  "France",
+                          "practiceReligion":  "Christian 47.0%; unaffiliated 40.0%; Muslim 8.0%; Jewish 0.7%; Buddhist 0.5%; other 3.8% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Code penal rigorously punishes homicide and false testimony. Laicite limits public religion expression â€” partial on Ex 20 analog but no state cult compulsion.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006070719/",
+                                               "note":  "Assassinat punishable by life imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Code penal, Art. 221-1 (Assassinat)"
+                                           },
+                                           {
+                                               "url":  "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000508749",
+                                               "note":  "Law on separation of churches and state",
+                                               "axis":  "Religion",
+                                               "cite":  "Loi du 9 decembre 1905"
+                                           },
+                                           {
+                                               "url":  "https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006070719/",
+                                               "note":  "Corruption of public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "Code penal, Art. 432-11 (Favoritisme)"
+                                           },
+                                           {
+                                               "url":  "https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006070719/",
+                                               "note":  "Code de l entree et du sejour des etrangers",
+                                               "axis":  "Sojourner",
+                                               "cite":  "CESEDA (Code de l immigration)"
+                                           },
+                                           {
+                                               "url":  "https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006070719/",
+                                               "note":  "False testimony (Faux temoignage)",
+                                               "axis":  "Truth",
+                                               "cite":  "Code penal, Art. 434-13"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000508749",
+                          "wjpRank":  "22",
+                          "practiceGap":  "Strict laicite vs substantial Muslim and Christian minorities."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~78% Christian (Catholic)",
+                          "officialReligion":  "Constitution guarantees free exercise; Lateran Pacts recognize Catholic Church relations but no formal state religion since 1984 revisions.",
+                          "officialReligionShort":  "Secular (Lateran Treaties)",
+                          "overall":  "Partial",
+                          "wjpScore":  "0.66",
+                          "name":  "Italy",
+                          "practiceReligion":  "Christian 78.0% (Catholic 75.5%); unaffiliated 15.0%; Muslim 3.7%; other 3.3% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Codice Penale criminalizes murder and perjury; EU membership supports rule of law. Justice delays and organized crime weaken full impartiality.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.gazzettaufficiale.it/",
+                                               "note":  "Omicidio punishable by imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Codice Penale, Art. 575 (Omicidio)"
+                                           },
+                                           {
+                                               "url":  "https://www.gazzettaufficiale.it/",
+                                               "note":  "Free exercise guaranteed",
+                                               "axis":  "Religion",
+                                               "cite":  "Costituzione, Art. 19 (Liberta di culto)"
+                                           },
+                                           {
+                                               "url":  "https://www.gazzettaufficiale.it/",
+                                               "note":  "Corruption in public office",
+                                               "axis":  "Justice",
+                                               "cite":  "Codice Penale, Art. 318 (Corruzione)"
+                                           },
+                                           {
+                                               "url":  "https://www.gazzettaufficiale.it/",
+                                               "note":  "Immigration and asylum framework",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Decreto Legislativo 286/1998 (Immigrazione)"
+                                           },
+                                           {
+                                               "url":  "https://www.gazzettaufficiale.it/",
+                                               "note":  "False testimony (Falsa testimonianza)",
+                                               "axis":  "Truth",
+                                               "cite":  "Codice Penale, Art. 372"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=1947-12-27\u0026atto.codiceRedazionale=047U0001",
+                          "wjpRank":  "34",
+                          "practiceGap":  "Secular constitution with Catholic concordat vs Catholic-majority practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "P",
+                                       "religion":  "Y",
+                                       "child":  "P",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "P",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~81% Christian",
+                          "officialReligion":  "Constitution protects freedom of religion, belief, and opinion; no state religion; equality before law.",
+                          "officialReligionShort":  "Secular (religious equality)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "0.56",
+                          "name":  "South Africa",
+                          "practiceReligion":  "Christian 81.2%; unaffiliated 3.2%; Muslim 1.5%; Hindu 1.0%; Jewish 0.1%; folk 8.4%; other 4.6% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Constitution enshrines equality and free exercise; Criminal Procedure Act punishes murder. High violent crime and xenophobia against migrants weaken sojourner and life alignment.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.gov.za/documents/",
+                                               "note":  "Murder under common law and Criminal Law Amendment",
+                                               "axis":  "Life",
+                                               "cite":  "Criminal Law Amendment Act 105 of 1997"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.za/documents/constitution-republic-south-africa-1996-1",
+                                               "note":  "Freedom of religion, belief, and opinion",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution, Sec. 15 (Freedom of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.za/documents/",
+                                               "note":  "Prevention and Combating of Corrupt Activities Act",
+                                               "axis":  "Justice",
+                                               "cite":  "Prevention and Combating of Corrupt Activities Act 12 of 2004"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.za/documents/",
+                                               "note":  "Immigration Act 13 of 2002",
+                                               "axis":  "One law",
+                                               "cite":  "Immigration Act 13 of 2002"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.za/documents/",
+                                               "note":  "Perjury Act 18 of 1911",
+                                               "axis":  "Truth",
+                                               "cite":  "Perjury Act 18 of 1911"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.gov.za/documents/constitution-republic-south-africa-1996-1",
+                          "wjpRank":  "60",
+                          "practiceGap":  "Secular equality vs Christian-majority society and traditional beliefs."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "P",
+                                       "religion":  "P",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~61% Christian; ~35% Muslim",
+                          "officialReligion":  "Union constitution provides secular state; freedom of worship; Zanzibar has separate religious dynamics.",
+                          "officialReligionShort":  "Secular (no state religion)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "0.46",
+                          "name":  "Tanzania",
+                          "practiceReligion":  "Christian 61.4%; Muslim 35.2%; folk 1.8%; other 1.6% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal Code retains murder statutes but political prosecutions and corruption undermine justice. Religious freedom generally upheld with periodic restrictions.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.judiciary.go.tz/en/",
+                                               "note":  "Murder under Penal Code Cap 16",
+                                               "axis":  "Life",
+                                               "cite":  "Penal Code (Cap 16), Sec. 200 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.judiciary.go.tz/en/constitution",
+                                               "note":  "Freedom of worship guaranteed",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of Tanzania, Art. 19 (Freedom of worship)"
+                                           },
+                                           {
+                                               "url":  "https://www.judiciary.go.tz/en/",
+                                               "note":  "Immigration Act 1995",
+                                               "axis":  "One law",
+                                               "cite":  "Immigration Act Cap 54"
+                                           },
+                                           {
+                                               "url":  "https://www.judiciary.go.tz/en/constitution",
+                                               "note":  "Union government structure",
+                                               "axis":  "Authority",
+                                               "cite":  "Constitution of Tanzania, Art. 4 (United Republic)"
+                                           },
+                                           {
+                                               "url":  "https://www.judiciary.go.tz/en/",
+                                               "note":  "Prevention of Terrorism Act 2002",
+                                               "axis":  "Security",
+                                               "cite":  "Prevention of Terrorism Act 2002"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.judiciary.go.tz/en/constitution",
+                          "wjpRank":  "98",
+                          "practiceGap":  "Secular union vs Christian mainland and Muslim Zanzibar/coast."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "P",
+                                       "religion":  "Y",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~85% Christian; ~11% Muslim",
+                          "officialReligion":  "2010 Constitution prohibits state religion; guarantees freedom of conscience, religion, and belief.",
+                          "officialReligionShort":  "Secular (no state religion)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "0.45",
+                          "name":  "Kenya",
+                          "practiceReligion":  "Christian 85.5%; Muslim 10.9%; folk 1.6%; other 2.0% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal Code criminalizes murder; Constitution protects free exercise. Corruption and ethnic politics weaken impartial justice and truth enforcement.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.kenyalaw.org/kl/index.php?id=398",
+                                               "note":  "Murder under Penal Code",
+                                               "axis":  "Life",
+                                               "cite":  "Penal Code (Cap 63), Sec. 203 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.kenyalaw.org/kl/index.php?id=398",
+                                               "note":  "Freedom of conscience, religion, and belief",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of Kenya 2010, Art. 32"
+                                           },
+                                           {
+                                               "url":  "https://www.kenyalaw.org/kl/",
+                                               "note":  "Anti-Corruption and Economic Crimes Act",
+                                               "axis":  "Justice",
+                                               "cite":  "Anti-Corruption and Economic Crimes Act 2003"
+                                           },
+                                           {
+                                               "url":  "https://www.kenyalaw.org/kl/",
+                                               "note":  "Citizenship and Immigration Act 2011",
+                                               "axis":  "One law",
+                                               "cite":  "Citizenship and Immigration Act 2011"
+                                           },
+                                           {
+                                               "url":  "https://www.kenyalaw.org/kl/index.php?id=398",
+                                               "note":  "Perjury and subornation of perjury",
+                                               "axis":  "Truth",
+                                               "cite":  "Penal Code, Sec. 108-109 (Perjury)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.kenyalaw.org/kl/index.php?id=398",
+                          "wjpRank":  "102",
+                          "practiceGap":  "Secular constitution vs Christian-majority practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~28% Christian; ~46% unaffiliated",
+                          "officialReligion":  "Constitution guarantees freedom of religion; no state religion; church and state separated.",
+                          "officialReligionShort":  "Secular (no state religion)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.74",
+                          "name":  "South Korea",
+                          "practiceReligion":  "Unaffiliated 46.0%; Christian 28.0% (Protestant 19.7%, Catholic 7.9%); Buddhist 15.5%; folk 5.3%; other 5.2% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal Act rigorously punishes homicide and perjury; courts rank high on impartiality. Immigration is orderly; no compelled national worship.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.law.go.kr/eng/engMain.do",
+                                               "note":  "Murder punishable by death, life, or imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Criminal Act, Art. 250 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.law.go.kr/eng/engMain.do",
+                                               "note":  "Bribery of public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "Criminal Act, Art. 129 (Bribery)"
+                                           },
+                                           {
+                                               "url":  "https://www.law.go.kr/eng/engMain.do",
+                                               "note":  "Freedom of religion guaranteed",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution of Korea, Art. 20 (Freedom of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.law.go.kr/eng/engMain.do",
+                                               "note":  "Immigration Act",
+                                               "axis":  "One law",
+                                               "cite":  "Immigration Act of Korea"
+                                           },
+                                           {
+                                               "url":  "https://www.law.go.kr/eng/engMain.do",
+                                               "note":  "Perjury and false testimony",
+                                               "axis":  "Truth",
+                                               "cite":  "Criminal Act, Art. 152 (Perjury)"
+                                           },
+                                           {
+                                               "url":  "https://www.law.go.kr/eng/engMain.do",
+                                               "note":  "National Security Act",
+                                               "axis":  "Security",
+                                               "cite":  "National Security Act"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.law.go.kr/eng/engMain.do",
+                          "wjpRank":  "19",
+                          "practiceGap":  "Secular state vs plurality unaffiliated and active Christian minority."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~68% Christian; ~27% unaffiliated",
+                          "officialReligion":  "1978 Constitution declares no state religion; guarantees ideological, religious, and worship freedom; cooperation agreements with religious groups.",
+                          "officialReligionShort":  "Secular (Catholic not official)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.71",
+                          "name":  "Spain",
+                          "practiceReligion":  "Christian 68.0% (Catholic 58.2%, Protestant 1.3%); unaffiliated 27.0%; Muslim 2.1%; other 2.9% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Codigo Penal criminalizes homicide and false testimony with strong rule-of-law institutions. Immigration framework is clear; religious freedom without establishment.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444",
+                                               "note":  "Asesinato punishable by imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Codigo Penal, Art. 138 (Asesinato)"
+                                           },
+                                           {
+                                               "url":  "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229",
+                                               "note":  "Freedom of ideology, religion, and worship",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitucion Espanola, Art. 16"
+                                           },
+                                           {
+                                               "url":  "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444",
+                                               "note":  "Bribery of public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "Codigo Penal, Art. 419 (Cohecho)"
+                                           },
+                                           {
+                                               "url":  "https://www.boe.es/buscar/act.php?id=BOE-A-2000-5440",
+                                               "note":  "Organic Law on rights and freedoms of foreigners",
+                                               "axis":  "Sojourner",
+                                               "cite":  "LO 4/2000 sobre derechos y libertades de los extranjeros"
+                                           },
+                                           {
+                                               "url":  "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444",
+                                               "note":  "False testimony (Falso testimonio)",
+                                               "axis":  "Truth",
+                                               "cite":  "Codigo Penal, Art. 458"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229",
+                          "wjpRank":  "25",
+                          "practiceGap":  "Secular constitution vs historically Catholic culture."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "P",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~63% Christian (Catholic)",
+                          "officialReligion":  "Constitution guarantees free exercise; state supports Catholic worship historically but no formal establishment.",
+                          "officialReligionShort":  "Secular (Catholic historically favored)",
+                          "overall":  "Partial",
+                          "wjpScore":  "0.54",
+                          "name":  "Argentina",
+                          "practiceReligion":  "Christian 63.0% (Catholic 54.9%, Protestant 8.1%); unaffiliated 20.0%; other 17.0% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Codigo Penal criminalizes homicide; Constitution protects free exercise. Economic instability and corruption weaken full justice alignment.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.argentina.gob.ar/normativa/nacional/ley-1432-1886-6398",
+                                               "note":  "Homicidio simple and agravado",
+                                               "axis":  "Life",
+                                               "cite":  "Codigo Penal, Art. 79 (Homicidio)"
+                                           },
+                                           {
+                                               "url":  "https://www.argentina.gob.ar/normativa/nacional/constitucion-de-la-nacion-argentina-25985",
+                                               "note":  "Free exercise guaranteed",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitucion Nacional, Art. 14 (Libertad de culto)"
+                                           },
+                                           {
+                                               "url":  "https://www.argentina.gob.ar/normativa/nacional/ley-25871-2004-14816",
+                                               "note":  "Migration law and refugee status",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Ley 25.871 de Migraciones"
+                                           },
+                                           {
+                                               "url":  "https://www.argentina.gob.ar/normativa/nacional/ley-1432-1886-6398",
+                                               "note":  "Falso testimonio",
+                                               "axis":  "Truth",
+                                               "cite":  "Codigo Penal, Art. 275 (Falso testimonio)"
+                                           },
+                                           {
+                                               "url":  "https://www.argentina.gob.ar/normativa/nacional/",
+                                               "note":  "Citizenship law",
+                                               "axis":  "One law",
+                                               "cite":  "Ley 346 de Ciudadania"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.argentina.gob.ar/normativa/nacional/constitucion-de-la-nacion-argentina-25985",
+                          "wjpRank":  "65",
+                          "practiceGap":  "Secular constitution with Catholic cultural weight vs growing unaffiliated share."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~53% Christian; ~35% unaffiliated",
+                          "officialReligion":  "Charter guarantees freedom of conscience and religion; no established church; multiculturalism policy.",
+                          "officialReligionShort":  "Secular (Charter)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.79",
+                          "name":  "Canada",
+                          "practiceReligion":  "Christian 53.3%; unaffiliated 34.6%; Muslim 3.2%; Hindu 2.0%; Sikh 1.4%; Buddhist 1.1%; Jewish 1.0%; other 3.4% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal Code rigorously criminalizes murder and perjury; courts rank among world leaders. Immigration law is orderly; no compelled worship under Charter.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                               "note":  "Murder and manslaughter",
+                                               "axis":  "Life",
+                                               "cite":  "Criminal Code, RSC 1985, c C-46, s 229-236"
+                                           },
+                                           {
+                                               "url":  "https://laws-lois.justice.gc.ca/eng/Const/page-15.html",
+                                               "note":  "Fundamental freedoms â€” conscience and religion",
+                                               "axis":  "Religion",
+                                               "cite":  "Canadian Charter of Rights and Freedoms, s 2(a)"
+                                           },
+                                           {
+                                               "url":  "https://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                               "note":  "Bribery of judicial officers and corruption",
+                                               "axis":  "Justice",
+                                               "cite":  "Criminal Code, s 119-122"
+                                           },
+                                           {
+                                               "url":  "https://laws-lois.justice.gc.ca/eng/acts/I-2.5/",
+                                               "note":  "Immigration and Refugee Protection Act",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Immigration and Refugee Protection Act, SC 2001, c 27"
+                                           },
+                                           {
+                                               "url":  "https://laws-lois.justice.gc.ca/eng/acts/C-46/",
+                                               "note":  "Perjury",
+                                               "axis":  "Truth",
+                                               "cite":  "Criminal Code, s 131 (Perjury)"
+                                           },
+                                           {
+                                               "url":  "https://laws-lois.justice.gc.ca/eng/acts/C-29/",
+                                               "note":  "Citizenship Act",
+                                               "axis":  "One law",
+                                               "cite":  "Citizenship Act, RSC 1985, c C-29"
+                                           }
+                                       ],
+                          "officialSource":  "https://laws-lois.justice.gc.ca/eng/Const/page-15.html",
+                          "wjpRank":  "13",
+                          "practiceGap":  "Secular Charter vs Christian plurality and growing unaffiliated population."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "P",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "N",
+                                       "truth":  "N",
+                                       "life":  "P"
+                                   },
+                          "practiceShort":  "~93% Muslim",
+                          "officialReligion":  "Basic Law declares Quran and Sunna constitution; Islam official religion; public worship of other faiths prohibited.",
+                          "officialReligionShort":  "Islam (Sunni state religion)",
+                          "overall":  "Weak",
+                          "wjpScore":  "—",
+                          "name":  "Saudi Arabia",
+                          "practiceReligion":  "Muslim 93.0% (Sunni majority); other 7.0% (mostly expatriate Christian, Hindu, Buddhist workers) (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Sharia criminalizes murder but judicial process lacks impartiality by biblical standards. Compulsory Islamic order and kafala system conflict with sojourner and religion axes.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.boe.gov.sa/",
+                                               "note":  "Qisas and diyat for intentional killing under sharia",
+                                               "axis":  "Life",
+                                               "cite":  "Law of Criminal Procedure (Royal Decree M/39)"
+                                           },
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Saudi_Arabia_1992",
+                                               "note":  "Basic Law â€” governance by Quran and Sunna",
+                                               "axis":  "Religion",
+                                               "cite":  "Basic Law of Governance, Art. 1"
+                                           },
+                                           {
+                                               "url":  "https://www.constituteproject.org/constitution/Saudi_Arabia_1992",
+                                               "note":  "Monarchy and Council of Ministers",
+                                               "axis":  "Authority",
+                                               "cite":  "Basic Law of Governance, Art. 5"
+                                           },
+                                           {
+                                               "url":  "https://www.boe.gov.sa/",
+                                               "note":  "Residency and labor regulations for foreigners",
+                                               "axis":  "One law",
+                                               "cite":  "Saudi Labor Law (Royal Decree M/51)"
+                                           },
+                                           {
+                                               "url":  "https://www.boe.gov.sa/",
+                                               "note":  "Anti-Cyber Crime and counter-terrorism regulations",
+                                               "axis":  "Security",
+                                               "cite":  "Anti-Cyber Crime Law (Royal Decree M/17)"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.constituteproject.org/constitution/Saudi_Arabia_1992",
+                          "wjpRank":  "NR",
+                          "practiceGap":  "Established Sunni Islam and sharia governance vs large non-Muslim expatriate workforce."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "Y",
+                                       "child":  "Y",
+                                       "justice":  "Y",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~44% Christian; ~39% unaffiliated",
+                          "officialReligion":  "Constitution prohibits religious tests for federal office; courts interpret implied freedom of religion; no state religion.",
+                          "officialReligionShort":  "Secular (no established church)",
+                          "overall":  "Strong",
+                          "wjpScore":  "0.80",
+                          "name":  "Australia",
+                          "practiceReligion":  "Christian 43.9%; unaffiliated 38.9%; Muslim 3.2%; Buddhist 2.4%; Hindu 2.1%; other 9.5% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Criminal Code Act criminalizes murder and perjury with high rule-of-law scores. Migration Act provides clear residence rules; no state religion compulsion.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.legislation.nsw.gov.au/view/html/inforce/current/act-1900-040",
+                                               "note":  "Murder under state criminal codes (e.g. NSW)",
+                                               "axis":  "Life",
+                                               "cite":  "Crimes Act 1900 (NSW), s 18 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.au/Details/C2022C00278",
+                                               "note":  "No religious test for federal office",
+                                               "axis":  "Religion",
+                                               "cite":  "Constitution, s 116 (Commonwealth not to legislate in respect of religion)"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.au/Details/C2022C00133",
+                                               "note":  "Bribery of Commonwealth public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "Criminal Code Act 1995 (Cth), s 141.1"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.au/Details/C2021C00182",
+                                               "note":  "Migration Act 1958",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Migration Act 1958"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.au/Details/C2022C00133",
+                                               "note":  "Perjury provisions in Criminal Code",
+                                               "axis":  "Truth",
+                                               "cite":  "Criminal Code Act 1995 (Cth), s 137.1"
+                                           },
+                                           {
+                                               "url":  "https://www.legislation.gov.au/Details/C2021C00407",
+                                               "note":  "Australian Citizenship Act 2007",
+                                               "axis":  "One law",
+                                               "cite":  "Australian Citizenship Act 2007"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.legislation.gov.au/Details/C2022C00278",
+                          "wjpRank":  "11",
+                          "practiceGap":  "Secular constitution vs near-even Christian and unaffiliated shares."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "P",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "Y",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~87% Catholic",
+                          "officialReligion":  "Constitution guarantees freedom of religion; relations with Catholic Church governed by 1997 concordat; no formal state religion.",
+                          "officialReligionShort":  "Secular (Catholic concordat)",
+                          "overall":  "Partial",
+                          "wjpScore":  "0.66",
+                          "name":  "Poland",
+                          "practiceReligion":  "Christian 87.0% (Catholic 86.3%); unaffiliated 5.0%; other 8.0% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Kodeks karny criminalizes murder and perjury; EU membership supports rule of law. Judicial reforms and Catholic public role create partial religion and justice alignment.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19970880553",
+                                               "note":  "Murder (Zabojstwo) punishable by imprisonment",
+                                               "axis":  "Life",
+                                               "cite":  "Kodeks karny, Art. 148 (Zabojstwo)"
+                                           },
+                                           {
+                                               "url":  "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19970780483/U/D19970483Lj.pdf",
+                                               "note":  "Freedom of religion and conscience",
+                                               "axis":  "Religion",
+                                               "cite":  "Konstytucja RP, Art. 53 (Wolnosc sumienia)"
+                                           },
+                                           {
+                                               "url":  "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19970880553",
+                                               "note":  "Corruption of public officials",
+                                               "axis":  "Justice",
+                                               "cite":  "Kodeks karny, Art. 228 (Przyjmowanie korzysci)"
+                                           },
+                                           {
+                                               "url":  "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000599",
+                                               "note":  "Act on Foreigners",
+                                               "axis":  "One law",
+                                               "cite":  "Ustawa o cudzoziemcach (Dz.U. 2023 poz. 599)"
+                                           },
+                                           {
+                                               "url":  "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19970880553",
+                                               "note":  "False testimony (Zeznanie falszywe)",
+                                               "axis":  "Truth",
+                                               "cite":  "Kodeks karny, Art. 233"
+                                           }
+                                       ],
+                          "officialSource":  "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19970780483/U/D19970483Lj.pdf",
+                          "wjpRank":  "32",
+                          "practiceGap":  "Secular constitution with Catholic concordat vs overwhelming Catholic practice."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "P",
+                                       "security":  "Y",
+                                       "religion":  "N",
+                                       "child":  "Y",
+                                       "justice":  "N",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "N",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~99% Muslim",
+                          "officialReligion":  "Constitution declares secular republic; Directorate of Religious Affairs (Diyanet) administers Sunni Islam; no official state religion.",
+                          "officialReligionShort":  "Secular (laicite in constitution)",
+                          "overall":  "Weak",
+                          "wjpScore":  "0.41",
+                          "name":  "Turkey",
+                          "practiceReligion":  "Muslim 99.0% (mostly Sunni); other 1.0% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Turkish Penal Code criminalizes murder but judicial independence eroded. Diyanet and blasphemy prosecutions conflict with free exercise; refugee sojourners face strain.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5237\u0026MevzuatTur=1\u0026MevzuatTertip=5",
+                                               "note":  "Intentional killing (Kasten oldurme)",
+                                               "axis":  "Life",
+                                               "cite":  "Turk Ceza Kanunu, m. 81 (Kasten oldurme)"
+                                           },
+                                           {
+                                               "url":  "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1\u0026MevzuatTur=1\u0026MevzuatTertip=5",
+                                               "note":  "Secular republic and freedom of conscience",
+                                               "axis":  "Religion",
+                                               "cite":  "Anayasa, m. 24 (Din ve vicdan hurriyeti)"
+                                           },
+                                           {
+                                               "url":  "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6458\u0026MevzuatTur=1\u0026MevzuatTertip=5",
+                                               "note":  "Foreigners and International Protection Law",
+                                               "axis":  "One law",
+                                               "cite":  "6458 sayili Yabancilar ve Uluslararasi Koruma Kanunu"
+                                           },
+                                           {
+                                               "url":  "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1\u0026MevzuatTur=1\u0026MevzuatTertip=5",
+                                               "note":  "Legislative and executive powers",
+                                               "axis":  "Authority",
+                                               "cite":  "Anayasa, m. 7 (Yasama gucu)"
+                                           },
+                                           {
+                                               "url":  "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3713\u0026MevzuatTur=1\u0026MevzuatTertip=5",
+                                               "note":  "Anti-terror law",
+                                               "axis":  "Security",
+                                               "cite":  "3713 sayili Terorle Mucadele Kanunu"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1\u0026MevzuatTur=1\u0026MevzuatTertip=5",
+                          "wjpRank":  "118",
+                          "practiceGap":  "Constitutional secularism vs near-universal Muslim practice and Diyanet role."
+                      },
+                      {
+                          "axes":  {
+                                       "sojourner":  "N",
+                                       "security":  "Y",
+                                       "religion":  "P",
+                                       "child":  "Y",
+                                       "justice":  "P",
+                                       "authority":  "Y",
+                                       "oneLaw":  "P",
+                                       "sexual":  "P",
+                                       "truth":  "Y",
+                                       "life":  "Y"
+                                   },
+                          "practiceShort":  "~73% Jewish; ~18% Muslim",
+                          "officialReligion":  "Basic Law: Israel as Nation-State of Jewish People (2018); Jewish law inspiration referenced; freedom of religion for all faiths in practice.",
+                          "officialReligionShort":  "Jewish state (not secular)",
+                          "overall":  "Mixed",
+                          "wjpScore":  "—",
+                          "name":  "Israel",
+                          "practiceReligion":  "Jewish 73.6%; Muslim 18.1%; Christian 1.9%; Druze 1.6%; other 4.8% (Pew 2020 est.)",
+                          "practiceSource":  "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+                          "verdict":  "Penal Law criminalizes murder and perjury; courts function with relative impartiality for citizens. Nation-state law and occupation policy create sojourner and religion partiality relative to ger model.",
+                          "statutes":  [
+                                           {
+                                               "url":  "https://www.gov.il/en/departments/legalinfo/penal-law",
+                                               "note":  "Murder under Penal Law",
+                                               "axis":  "Life",
+                                               "cite":  "Penal Law, 5737-1977, s 300 (Murder)"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.il/en/departments/legalinfo/basic-laws",
+                                               "note":  "Basic Law: Human Dignity and Liberty â€” freedom",
+                                               "axis":  "Religion",
+                                               "cite":  "Basic Law: Human Dignity and Liberty (1992)"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.il/en/departments/legalinfo/basic-laws",
+                                               "note":  "Entry into Israel Law and citizenship",
+                                               "axis":  "One law",
+                                               "cite":  "Law of Return, 5710-1950"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.il/en/departments/legalinfo/",
+                                               "note":  "Prevention of Infiltration Law",
+                                               "axis":  "Sojourner",
+                                               "cite":  "Prevention of Infiltration Law (Offenses and Jurisdiction) 2012"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.il/en/departments/legalinfo/penal-law",
+                                               "note":  "False testimony and perjury",
+                                               "axis":  "Truth",
+                                               "cite":  "Penal Law, s 242 (False testimony)"
+                                           },
+                                           {
+                                               "url":  "https://www.gov.il/en/departments/legalinfo/",
+                                               "note":  "Defense (Emergency) Regulations",
+                                               "axis":  "Security",
+                                               "cite":  "Defense (Emergency) Regulations, 1945"
+                                           }
+                                       ],
+                          "officialSource":  "https://www.gov.il/en/departments/legalinfo/basic-laws",
+                          "wjpRank":  "NR",
+                          "practiceGap":  "Jewish nation-state Basic Law vs substantial Muslim and Christian Arab minorities."
+                      }
+                  ]
+}

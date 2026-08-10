@@ -1,0 +1,230 @@
+DEPORTATION PODCAST — BLUE LETTER BIBLE INDEX
+(PREFERRED: MacArthur · Chuck Smith · Matthew Henry)
+================================================================================
+Commentary catalog: https://www.blueletterbible.org/commentaries/
+
+URL PATTERNS
+  Scripture (ESV):     https://www.blueletterbible.org/esv/{book}/{ch}/{vs}/
+  Matthew Henry:       https://www.blueletterbible.org/Comm/mhc/{Abr}/{Abr}_{ch}.cfm
+  Chuck Smith C2000:   https://www.blueletterbible.org/Comm/smith_chuck/c2000_{Abr}/{Abr}_{ch}.cfm
+  Chuck Smith Notes:   https://www.blueletterbible.org/Comm/smith_chuck/SermonNotes_{Abr}/
+  MacArthur Intro:     https://www.blueletterbible.org/comm/macarthur_john/bible-introductions/{book}-intro.cfm
+
+MACARTHUR BIBLE INTRODUCTIONS ON BLB
+  Genesis — .../genesis-intro.cfm
+  Romans  — .../romans-intro.cfm
+  John    — .../john-intro.cfm
+  1 John  — .../1-john-intro.cfm
+
+HENRY NOTE: Use SELECTIVE excerpts on air. Full chapter on BLB for prep.
+
+================================================================================
+PART ONE — LAW OF THE LAND, GOVERNING AUTHORITY, OBEDIENCE
+================================================================================
+
+Genesis 9:5-6
+  ESV:        https://www.blueletterbible.org/esv/gen/9/5-6/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Gen/Gen_009.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Gen/Gen_009.cfm
+  MacArthur:  https://www.blueletterbible.org/comm/macarthur_john/bible-introductions/genesis-intro.cfm
+
+Exodus 18:13-26
+  ESV:        https://www.blueletterbible.org/esv/exo/18/13-26/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Exo/Exo_018.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Exo/Exo_018.cfm
+
+Exodus 20:1-17
+  ESV:        https://www.blueletterbible.org/esv/exo/20/1-17/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Exo/Exo_020.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Exo/Exo_020.cfm
+
+Exodus 21-23
+  ESV:        https://www.blueletterbible.org/esv/exo/21/1/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Exo/Exo_021.cfm (ch 21-23)
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Exo/Exo_021.cfm
+
+Leviticus 18:24-30 / 19:15 / 19:33-34 / 24:22
+  ESV:        https://www.blueletterbible.org/esv/lev/19/33-34/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Lev/Lev_019.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Lev/Lev_019.cfm
+
+Numbers 15:15-16 / 35:29-34
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Num/Num_015.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Num/Num_015.cfm
+
+Deuteronomy 1:16-17 / 4:5-8 / 5:1-33 / 10:17-19 / 16:18-20 / 17:8-20 / 27-28
+  ESV:        https://www.blueletterbible.org/esv/deu/28/1/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Deu/Deu_028.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Deu/Deu_028.cfm
+
+Joshua 1:7-8
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Jos/Jos_001.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Jos/Jos_001.cfm
+
+2 Samuel 23:3-4
+  Henry:      https://www.blueletterbible.org/Comm/mhc/2Sa/2Sa_023.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_2Sa/2Sa_023.cfm
+
+Psalm 72 / 82
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Psa/Psa_072.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Psa/Psa_072.cfm
+
+Proverbs 8:15-16 / 16:10-15 / 20:8 / 24:21-22 / 29:2
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Pro/Pro_008.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Pro/Pro_008.cfm
+
+Ecclesiastes 8:2-5
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Ecc/Ecc_008.cfm
+
+Isaiah 1:16-17 / 33:22
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Isa/Isa_001.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Isa/Isa_001.cfm
+
+Jeremiah 22:3
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Jer/Jer_022.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Jer/Jer_022.cfm
+
+Ezekiel 18:5-9
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Eze/Eze_018.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Eze/Eze_018.cfm
+
+Micah 6:8
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Mic/Mic_006.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Mic/Mic_006.cfm
+
+--- NEW TESTAMENT (AUTHORITY) ---
+
+Matthew 5:17-20 / 17:24-27 / 22:15-22 / 23:1-3
+  ESV:        https://www.blueletterbible.org/esv/mat/22/15-22/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Mat/Mat_022.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Mat/Mat_022.cfm
+
+Luke 20:20-26
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Luk/Luk_020.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Luk/Luk_020.cfm
+
+John 19:10-11
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Jhn/Jhn_019.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Jhn/Jhn_019.cfm
+  MacArthur:  https://www.blueletterbible.org/comm/macarthur_john/bible-introductions/john-intro.cfm
+
+Acts 4:19-20 / 5:27-29 / 23:1-5
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Act/Act_004.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Act/Act_004.cfm
+
+Romans 13:1-7  ★ KEY PASSAGE
+  ESV:        https://www.blueletterbible.org/esv/rom/13/1-7/
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Rom/Rom_013.cfm
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Rom/Rom_013.cfm
+  MacArthur:  https://www.blueletterbible.org/comm/macarthur_john/bible-introductions/romans-intro.cfm
+  Smith Notes: https://www.blueletterbible.org/Comm/smith_chuck/SermonNotes_Rom/Rom_16.cfm (13:11)
+
+Titus 3:1-2 / 1 Timothy 2:1-2 / 1 Peter 2:13-17
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Tit/Tit_003.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Tit/Tit_003.cfm
+
+================================================================================
+PART TWO — LOVE OF CHRIST AND LOVE OF NEIGHBOR
+================================================================================
+
+Exodus 22:21-24 / 23:4-9
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Exo/Exo_022.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Exo/Exo_022.cfm
+
+Leviticus 19:9-34
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Lev/Lev_019.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Lev/Lev_019.cfm
+
+Deuteronomy 10:17-19 / 15:7-11 / 24:17-22
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Deu/Deu_010.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Deu/Deu_010.cfm
+
+Isaiah 58:6-10 / Micah 6:8 / Zechariah 7:9-10
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Isa/Isa_058.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Isa/Isa_058.cfm
+
+Matthew 5:38-48 / 7:12 / 22:34-40 / 25:31-46
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Mat/Mat_005.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Mat/Mat_005.cfm
+
+Luke 6:27-36 / 10:25-37 / 15:1-32
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Luk/Luk_010.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Luk/Luk_010.cfm
+
+John 13:34-35 / 15:12-17
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Jhn/Jhn_013.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Jhn/Jhn_013.cfm
+  MacArthur:  https://www.blueletterbible.org/comm/macarthur_john/bible-introductions/john-intro.cfm
+
+Romans 12:9-21 / 13:8-10
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Rom/Rom_013.cfm
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Rom/Rom_012.cfm
+
+1 John 3:16-18 / 4:7-21
+  Henry:      https://www.blueletterbible.org/Comm/mhc/1Jo/1Jo_004.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_1Jo/1Jo_004.cfm
+  MacArthur:  https://www.blueletterbible.org/comm/macarthur_john/bible-introductions/1-john-intro.cfm
+
+================================================================================
+PART THREE — DEPORTATION, EXPULSION, EXILE, COVENANT SEPARATION
+================================================================================
+
+Genesis 3:22-24
+  ESV:        https://www.blueletterbible.org/esv/gen/3/22-24/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Gen/Gen_003.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Gen/Gen_003.cfm
+
+Genesis 6-7 / 11 / 15
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Gen/Gen_011.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Gen/Gen_011.cfm
+
+Exodus 23:20-33 / 34:10-16
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Exo/Exo_023.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Exo/Exo_023.cfm
+
+Leviticus 18:24-30 / 26:27-45
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Lev/Lev_018.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Lev/Lev_018.cfm
+
+Deuteronomy 7 / 28 / 29-30
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Deu/Deu_028.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Deu/Deu_028.cfm
+
+2 Kings 17:6-23 / 24-25
+  Henry:      https://www.blueletterbible.org/Comm/mhc/2Ki/2Ki_017.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_2Ki/2Ki_017.cfm
+
+Jeremiah 29:10-14 / Ezekiel 5 / Daniel 9
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Jer/Jer_029.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Jer/Jer_029.cfm
+
+Ezra 9-10 / Nehemiah 13
+  ESV:        https://www.blueletterbible.org/esv/ezr/10/1/
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Ezr/Ezr_010.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Ezr/Ezr_010.cfm
+
+--- FAITHFUL FOREIGNERS WELCOMED ---
+
+Exodus 12:48-49 / Ruth 1-4 / Isaiah 56:3-8
+  Henry:      https://www.blueletterbible.org/Comm/mhc/Rut/Rut_001.cfm
+  Smith C2000: https://www.blueletterbible.org/Comm/smith_chuck/c2000_Rut/Rut_001.cfm
+
+================================================================================
+COMMENTATOR ROLES (for recording prep)
+================================================================================
+
+JOHN MACARTHUR — Book-level framing before you read the passage.
+  Best on BLB for: Romans 13 context, Genesis origins, John/1 John love ethic.
+  Romans intro explicitly warns against misusing 13:1-7.
+
+CHUCK SMITH — Podcast-ready C2000 transcripts (conversational, read-aloud).
+  Best on BLB for: Romans 13 (full civil obedience + Acts 4 limit),
+  through-the-Bible coverage of every book in the list.
+
+MATTHEW HENRY — One sharp paragraph per passage (do NOT read full Henry on air).
+  Best on BLB for: Genesis 9 magistracy, Matthew 22 Caesar/God, Leviticus 19
+  sojourner, Deuteronomy 28 scattering, Ezra 10 covenant separation.
+
+================================================================================
+END OF INDEX
+================================================================================
