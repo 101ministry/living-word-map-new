@@ -156,11 +156,18 @@ function Parse-TopicBlock([string]$block, [int]$num) {
 
     $fruits = Get-FruitDisplayText $block $num
 
+    $detail = ''
+    if ($block -match '(?ms)^\d{3}\.\s*.+?\.\s*\r?\n\r?\n(.+)$') {
+        $detail = (($Matches[1].Trim() -split '~~~~~~~~~~~~')[0].Trim())
+        $detail = (Strip-Emoji $detail).TrimEnd('.')
+    }
+
     return @{
         topic = $topic
         root = $root
         fruits = $fruits
         principality = $principality
+        detail = $detail
     }
 }
 
@@ -174,13 +181,13 @@ function Build-Round2Prayer([int]$num, [hashtable]$meta) {
     @(
         "$label. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY."
         ''
-        "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of $topic from a $root."
+        "On behalf of the second generation, on behalf of the third generation, on behalf of the fourth generation, on behalf of the fifth generation, I agree WE are guilty of allowing scenarios of $topic from a root of $root."
         ''
         'I agree that we made it more important than God, loved it more than God, and preferred it instead of God.'
         ''
         'For this idolatry, adultery, and rebellion, I lay my bloodline on the altar of God.'
         ''
-        "I recognize that $topic from a $root has happened because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of $fruits with parent Principality of $principality."
+        "I recognize that $($meta.detail) "
         ''
         'For the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.'
         ''

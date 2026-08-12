@@ -147,11 +147,18 @@ function Parse-TopicBlock([string]$block, [int]$num) {
 
     $fruits = Get-FruitDisplayText $block $num
 
+    $detail = ''
+    if ($block -match '(?ms)^\d{3}\.\s*.+?\.\s*\r?\n\r?\n(.+)$') {
+        $detail = (($Matches[1].Trim() -split '~~~~~~~~~~~~')[0].Trim())
+        $detail = (Strip-Emoji $detail).TrimEnd('.')
+    }
+
     return @{
         topic = $topic
         root = $root
         fruits = $fruits
         principality = $principality
+        detail = $detail
     }
 }
 
@@ -190,7 +197,7 @@ function Build-Round3Prayer([int]$num, [hashtable]$meta) {
         ''
         'For this idolatry, adultery, and rebellion, I lay my life on the altar of God.'
         ''
-        "I recognize that $topic, from a root of $root; is happening because of agreements, blood covenants, blood contracts, hexes, vexes, interaction with the blood, and satanic ritual agreements because of $fruits with the parent $principality."
+        "I recognize that $($meta.detail) "
         ''
         'For the accusation of this record, I lay down the 6th, 7th, 8th, 9th, 10, 11th, 12th, 13th, 14th, 15th, 16th, 17th 18th, 19th and 20th generations.'
         ''
