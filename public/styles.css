@@ -92,21 +92,6 @@ html, body {
   align-items: center;
 }
 
-#search {
-  width: min(360px, 40vw);
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg-elevated);
-  color: var(--text);
-  font: inherit;
-}
-
-#search:focus {
-  outline: 2px solid rgba(201, 162, 39, 0.4);
-  border-color: var(--principality);
-}
-
 select, button {
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border);
@@ -2366,12 +2351,6 @@ a.round2-nav-link:hover {
   #language-select,
   .language-status {
     max-width: none;
-  }
-
-  #search {
-    flex: 1 1 100%;
-    width: 100%;
-    min-width: 0;
   }
 
   #view-mode,

@@ -2110,26 +2110,6 @@
     applyGraphView(400, 400);
   });
 
-  document.getElementById('search').addEventListener('input', e => {
-    const q = e.target.value.trim().toLowerCase();
-    if (!q) return;
-
-    const match =
-      principalities.find(p => p.name.toLowerCase().includes(q)) ||
-      roots.find(r => r.name.toLowerCase().includes(q)) ||
-      fruits.find(f => f.name.toLowerCase().includes(q)) ||
-      topics.find(t => t.name.toLowerCase().includes(q) || String(t.number).includes(q));
-
-    if (match) {
-      const id = match.id !== undefined && !String(match.id).startsWith('topic-')
-        ? (topics.includes(match) ? `topic-${match.id}` : match.id)
-        : match.id;
-      selectNode(typeof id === 'number' ? `topic-${id}` : id);
-      Graph.centerAt(undefined, undefined, 600);
-      Graph.zoom(2.5, 600);
-    }
-  });
-
   syncGraphSize();
   setViewSurface();
   refreshGraph();
