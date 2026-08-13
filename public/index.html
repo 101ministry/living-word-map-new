@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=22" />
+  <link rel="stylesheet" href="styles.css?v=31" />
   <link rel="stylesheet" href="corner-breaker.css?v=7" />
 </head>
 <body>
@@ -38,6 +38,8 @@
           <option value="constellation">Constellation</option>
           <option value="explore">Explore All</option>
           <option value="globe">Globe Word Map</option>
+          <option value="ask">Ask about Bloodline Repentance</option>
+          <option value="compare">Compare Principalities</option>
         </select>
         <button id="reset-view" type="button">Reset</button>
         <button id="scroll-to-videos" type="button" class="header-videos-btn">Videos</button>
@@ -105,6 +107,39 @@
           <button type="button" id="graph-zoom-in" class="graph-zoom-btn" aria-label="Zoom in">+</button>
           <span id="graph-zoom-label" class="graph-zoom-label">1.0×</span>
         </div>
+
+        <div id="ask-overlay" class="ask-overlay" hidden>
+          <div class="ask-overlay-card" role="dialog" aria-modal="true" aria-labelledby="ask-overlay-title">
+            <button type="button" id="ask-overlay-close" class="dialog-close ask-overlay-close" aria-label="Close">×</button>
+            <div class="ask-overlay-body">
+              <section id="ask-step-ask" class="ask-overlay-step">
+                <h2 id="ask-overlay-title">Ask about Bloodline Repentance</h2>
+                <p class="ask-overlay-lead">Type your question. We will point you to matching topics and teaching videos on this map.</p>
+                <form id="ask-overlay-form">
+                  <label class="ask-overlay-label" for="ask-overlay-input">Your question</label>
+                  <input id="ask-overlay-input" name="question" type="text" maxlength="600" required placeholder="e.g. Why does fear keep running in my family?" autocomplete="off" />
+                  <button type="submit" id="ask-overlay-submit" class="btn-accent">Send</button>
+                </form>
+                <p class="ask-disclaimer">
+                  Not all answers apply to what you've asked. This shouldn't stop you from asking and maybe, ask them at
+                  <a class="ask-overlay-link" href="https://repentance101ministry.com/channels/accountability" target="_blank" rel="noopener noreferrer">the Accountability Channel</a>.
+                </p>
+                <div id="ask-post-answer" class="ask-post-answer" hidden>
+                  <h3 class="ask-share-heading">Share this with your friends</h3>
+                  <p class="ask-overlay-lead">Send the question and the topics that answered it so someone else can look with you.</p>
+                  <div class="ask-overlay-actions">
+                    <button type="button" id="ask-share-btn" class="btn-accent">Share the answer</button>
+                    <button type="button" id="ask-share-copy" class="btn-ghost">Copy to clipboard</button>
+                  </div>
+                  <p id="ask-share-status" class="ask-overlay-status" aria-live="polite"></p>
+                </div>
+                <div id="ask-countdown-box" class="ask-countdown-box" hidden aria-hidden="true">
+                  <p class="ask-countdown" id="ask-countdown">30 seconds</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div id="detail-backdrop" class="detail-backdrop" hidden aria-hidden="true"></div>
@@ -121,10 +156,20 @@
             <button type="button" id="globe-back-globe" class="detail-close-btn">← Globe view</button>
           </nav>
         </div>
-        <div class="detail-empty" id="detail-empty">
-          <p class="detail-empty-title">Select a node</p>
-          <p>Click any Principality to hear its voice — themes, statements, and every topic bound to it through shared roots and fruits.</p>
-        </div>
+        <section id="ask-answer-panel" class="ask-answer-panel hidden" aria-label="Matching topics and teachings">
+          <h2>Matching topics and teachings</h2>
+          <p id="ask-answer-echo" class="ask-overlay-echo"></p>
+          <p id="ask-answer-note" class="ask-overlay-lead"></p>
+          <div id="ask-answer-topics" class="ask-results-list"></div>
+          <h3 class="ask-overlay-subhead">Teaching videos</h3>
+          <div id="ask-answer-videos" class="ask-results-list"></div>
+          <aside id="detail-discuss-invite" class="detail-discuss-invite hidden">
+            <h3>Discuss this with other people</h3>
+            <p>You are invited to talk through what you found with others in the Repentance101 community — questions, testimonies, and next steps belong in conversation, not only on a map.</p>
+            <a class="ask-overlay-link" href="https://repentance101ministry.com/" target="_blank" rel="noopener noreferrer">Come join the Repentance101 Tribe</a>
+          </aside>
+        </section>
+        <div class="detail-empty" id="detail-empty"></div>
         <article class="detail-content hidden" id="detail-content">
           <header class="detail-header">
             <span class="detail-type" id="detail-type"></span>
@@ -353,8 +398,9 @@
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
   <script src="round1-entry-gate.js?v=4"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=4"></script>
   <script src="teaching-videos.js?v=2"></script>
+  <script src="ask-overlay.js?v=10"></script>
   <script src="corner-breaker.js"></script>
 </body>
 </html>

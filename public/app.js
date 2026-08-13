@@ -1672,6 +1672,8 @@
     document.getElementById('detail-empty').classList.remove('hidden');
     document.getElementById('detail-content').classList.add('hidden');
     document.getElementById('detail-prayer-section').classList.add('hidden');
+    document.getElementById('detail-discuss-invite')?.classList.add('hidden');
+    document.getElementById('ask-answer-panel')?.classList.add('hidden');
     topicAudio.pause();
     closeDetailSheet();
   }
@@ -2059,6 +2061,18 @@
   });
 
   document.getElementById('view-mode').addEventListener('change', e => {
+    if (e.target.value === 'ask') {
+      const stayOnConstellation = state.viewMode === 'constellation';
+      e.target.value = 'constellation';
+      window.AskOverlay?.open?.(true);
+      if (stayOnConstellation) return;
+    }
+    if (e.target.value === 'compare') {
+      e.target.value = state.viewMode || 'constellation';
+      window.AskOverlay?.close?.();
+      goToCompare();
+      return;
+    }
     state.viewMode = e.target.value;
     state.selectedId = null;
     state.globeTransportPrincipalityId = null;
@@ -2178,5 +2192,6 @@
   window.LivingWordMap = {
     selectTopicByNumber,
     selectNode,
+    openDetailSheet,
   };
 })();

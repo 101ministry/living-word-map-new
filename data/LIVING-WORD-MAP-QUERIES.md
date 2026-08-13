@@ -78,6 +78,14 @@ Topic fruit emoji / range fixes (#130, #391–442, #443–573, #574–666) were 
 
 ---
 
+## 2026-08-12 — Ask overlay on constellation map
+
+| Date | Query | Status |
+|------|-------|--------|
+| Aug 12 | Public ask box on Constellation Map for Bloodline Repentance questions. Matching topics and teaching videos in the right panel; share/copy; disclaimer + Accountability Channel; Compare Principalities in the view dropdown. | Deployed — overlay on constellation; reopen from view dropdown |
+
+---
+
 ## Not in scope for this log (thumbnail chat only)
 
 - R&R Day-series poster / card-table image generation  
