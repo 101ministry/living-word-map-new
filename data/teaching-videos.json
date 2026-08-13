@@ -26,6 +26,7 @@
       "title": "Day 2 - Prayer Topics",
       "youtubeId": "pwHwDasm-4c",
       "url": "https://www.youtube.com/watch?v=pwHwDasm-4c",
+      "durationSeconds": 12000,
       "chapterTimestamps": {
         "657": "12:58",
         "656": "1:15:58",
@@ -37,10 +38,69 @@
         "651": "2:46:50",
         "650": "2:54:34",
         "649": "3:02:40"
-      }
+      },
+      "bonusChapters": [
+        { "label": "TECHNICAL AUDIO ISSUES", "start": "1:18:41" },
+        { "label": "Spirit of Touch Lust - continued", "start": "1:34:08" },
+        { "label": "Counterfeit Spirituality A.K.A. Kundalini", "start": "1:37:19" },
+        { "label": "Soul Ties", "start": "1:58:22" },
+        { "label": "TRIGGER WARNING: Somnophilia", "start": "2:15:23" },
+        { "label": "Story Time", "start": "3:16:48" }
+      ]
     },
-    { "day": 3, "part": 1, "title": "Day 3 - Prayer Topics", "youtubeId": "T6fZ_jWU1dc", "url": "https://www.youtube.com/watch?v=T6fZ_jWU1dc" },
-    { "day": 4, "part": 1, "title": "Day 4 - Prayer Topics", "youtubeId": "37jRMIrZgMU", "url": "https://www.youtube.com/watch?v=37jRMIrZgMU" },
+    {
+      "day": 3,
+      "part": 1,
+      "title": "Day 3 - Prayer Topics",
+      "youtubeId": "T6fZ_jWU1dc",
+      "url": "https://www.youtube.com/watch?v=T6fZ_jWU1dc",
+      "durationSeconds": 10000,
+      "chapterTimestamps": {
+        "648": "1:45",
+        "647": "20:10",
+        "646": "50:30",
+        "645": "56:38",
+        "644": "1:11:01",
+        "643": "1:28:04",
+        "642": "2:06:25",
+        "641": "2:16:06",
+        "640": "2:33:11",
+        "639": "2:41:39"
+      },
+      "bonusChapters": [
+        { "label": "Self images/portraits", "start": "22:38" },
+        { "label": "Did Jesus teach us to worship him, and he also worshiped himself OR is that HERESY?", "start": "28:46" },
+        { "label": "OCD/Obsessive Compulsive Disorder", "start": "1:32:46" },
+        { "label": "Snoring", "start": "2:07:56" },
+        { "label": "TRIGGER WARNING: Sex-Trafficking", "start": "2:18:00" }
+      ]
+    },
+    {
+      "day": 4,
+      "part": 1,
+      "title": "Day 4 - Prayer Topics",
+      "youtubeId": "37jRMIrZgMU",
+      "url": "https://www.youtube.com/watch?v=37jRMIrZgMU",
+      "durationSeconds": 9000,
+      "chapterTimestamps": {
+        "638": "25:49",
+        "636": "1:09:01",
+        "635": "1:10:22",
+        "633": "1:16:26",
+        "632": "1:19:12",
+        "631": "1:27:42",
+        "630": "1:30:04",
+        "628": "1:33:33",
+        "627": "2:04:57",
+        "626": "2:09:47"
+      },
+      "bonusChapters": [
+        { "label": "How do you know if a marriage is blessed", "start": "42:44" },
+        { "label": "Spiritual Ejaculation", "start": "1:39:11" },
+        { "label": "Periods", "start": "2:17:25" },
+        { "label": "Tiredness/Soul fractures", "start": "2:28:54" }
+      ]
+    },
     { "day": 5, "part": 1, "title": "Day 5 - Prayer Topics", "youtubeId": "b-EJ1SOIXqs", "url": "https://www.youtube.com/watch?v=b-EJ1SOIXqs" },
     { "day": 6, "part": 1, "title": "Day 6 - Prayer Topics", "youtubeId": "JEawzUCGXGw", "url": "https://www.youtube.com/watch?v=JEawzUCGXGw" },
     { "day": 7, "part": 1, "title": "Day 7 - Prayer Topics", "youtubeId": "STc81Y8NXR4", "url": "https://www.youtube.com/watch?v=STc81Y8NXR4" },

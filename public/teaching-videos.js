@@ -34,6 +34,14 @@
     return `${m}:${String(sec).padStart(2, '0')}`;
   }
 
+  function chapterNumLabel(ch) {
+    if (!ch.isBonus) return String(ch.topicNumber).padStart(3, '0');
+    const name = String(ch.topicName || '');
+    if (/^TRIGGER WARNING:/i.test(name)) return 'WARN';
+    if (/^TECHNICAL /i.test(name)) return 'NOTE';
+    return 'BONUS';
+  }
+
   function videoLabel(v) {
     if (v.part > 1) return `Day ${v.day} (Part ${v.part})`;
     return `Day ${v.day}`;
@@ -98,22 +106,26 @@
     }
 
     setChapterMeta(chapterMeta, activeVideo, chapters.length);
-    chapterList.innerHTML = chapters.map(ch => `
+    chapterList.innerHTML = chapters.map(ch => {
+      const numLabel = chapterNumLabel(ch);
+      const topicAttr = ch.isBonus ? '' : ` data-topic="${ch.topicNumber}"`;
+      return `
       <li>
-        <button type="button" class="teaching-chapter-btn" data-topic="${ch.topicNumber}" data-start="${ch.startSeconds}">
-          <span class="teaching-chapter-num">${String(ch.topicNumber).padStart(3, '0')}</span>
+        <button type="button" class="teaching-chapter-btn${ch.isBonus ? ' is-bonus' : ''}"${topicAttr} data-start="${ch.startSeconds}">
+          <span class="teaching-chapter-num">${numLabel}</span>
           <span class="teaching-chapter-name">${ch.topicName}</span>
           <span class="teaching-chapter-time">${formatTime(ch.startSeconds)}</span>
         </button>
-      </li>`).join('');
+      </li>`;
+    }).join('');
 
     chapterList.querySelectorAll('.teaching-chapter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const topicNum = Number(btn.dataset.topic);
+        const topicNum = btn.dataset.topic ? Number(btn.dataset.topic) : null;
         const start = Number(btn.dataset.start);
         seekTo(start);
-        highlightChapter(topicNum);
-        if (window.LivingWordMap?.selectTopicByNumber) {
+        if (topicNum) highlightChapter(topicNum);
+        if (topicNum && window.LivingWordMap?.selectTopicByNumber) {
           window.LivingWordMap.selectTopicByNumber(topicNum, { scrollTeaching: false });
         }
       });

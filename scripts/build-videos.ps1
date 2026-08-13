@@ -436,6 +436,22 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         }
     }
 
+    if ($video.PSObject.Properties.Name -contains 'bonusChapters' -and $video.bonusChapters) {
+        foreach ($bonus in @($video.bonusChapters)) {
+            $bonusStart = Parse-Timestamp ([string]$bonus.start)
+            if ($null -eq $bonusStart) { continue }
+            $label = [string]$bonus.label
+            if ($label -notmatch '(?i)^(bonus:|trigger warning:|technical )') { $label = "BONUS: $label" }
+            $chapters += [pscustomobject]@{
+                topicNumber  = $null
+                topicName    = $label
+                startSeconds = $bonusStart
+                isBonus      = $true
+            }
+        }
+        $chapters = @($chapters | Sort-Object startSeconds)
+    }
+
     $videoObj = [ordered]@{
         key          = "day-$day-part-$part"
         day          = $day
