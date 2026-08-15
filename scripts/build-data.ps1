@@ -34,7 +34,7 @@ function Slugify([string]$text) {
 # Canonical root spirits. Matching keys are space-normalized; display keeps hyphens.
 $script:CanonicalRootDisplay = [ordered]@{
     'loneliness and emotional brokenness' = 'loneliness and emotional brokenness'
-    'unbelief and distrust of god'        = 'unbelief and distrust of god'
+    'unbelief and distrust of god'        = 'unbelief and distrust of God'
     'bitterness and unforgiveness'        = 'bitterness and unforgiveness'
     'covetousness and materialism'        = 'covetousness and materialism'
     'idolatry and person worship'         = 'idolatry and person-worship'
@@ -851,12 +851,21 @@ foreach ($block in $metadataBlocks) {
         $principality = $topicPrincipalityOverrides[$num]
     }
 
+    $description = $null
+    if ($b -match '(?is)(The primary reason that .+?)(?:\r?\n~~~~~~~~~~~~|\z)') {
+        $tail = $Matches[1].Trim()
+        if ($tail -match '(?i)^The primary reason that') {
+            $description = $tail
+        }
+    }
+
     $metadataByNumber[$num] = @{
         metaName = $metaName
         root = $root
         fruit = $fruit
         fruits = $fruits
         principality = $principality
+        description = $description
     }
 }
 
@@ -1027,6 +1036,7 @@ for ($num = 1; $num -le 666; $num++) {
         principalityId = $principalityId
         principalities = @($principalityNames)
         principalityIds = @($principalityIds)
+        description = if ($meta -and $meta.description) { [string]$meta.description } else { $null }
     }
 }
 

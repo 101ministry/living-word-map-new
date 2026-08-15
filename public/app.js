@@ -1888,6 +1888,16 @@
     typeEl.className = `detail-type ${type}`;
 
     document.getElementById('detail-title').textContent = type === 'topic' ? item.name : item.name;
+
+    const descSection = document.getElementById('detail-description-section');
+    const descEl = document.getElementById('detail-description');
+    if (type === 'topic' && item.description && descSection && descEl) {
+      descSection.classList.remove('hidden');
+      descEl.innerHTML = formatTopicDescription(item.description);
+    } else if (descSection) {
+      descSection.classList.add('hidden');
+      if (descEl) descEl.innerHTML = '';
+    }
     const connCount = conn.topics.length;
     if (type === 'topic') {
       const parts = [`Topic #${item.number}`];
@@ -2156,6 +2166,28 @@
     console.error('Language catalog failed to load:', err);
   });
 
+  function formatTopicDescription(text) {
+    if (!text) return '';
+    const blocks = String(text).trim().split(/\n\s*\n/);
+    return blocks.map((block) => {
+      const lines = block.split(/\n/).map((l) => l.trim()).filter(Boolean);
+      if (!lines.length) return '';
+      if (lines[0].toLowerCase() === 'anything after this becomes' && lines.length > 1) {
+        const items = lines.slice(1).map((l) => `<li>${escapeHtml(l)}</li>`).join('');
+        return `<p class="detail-description-lead"><strong>${escapeHtml(lines[0])}</strong></p><ul class="detail-description-list">${items}</ul>`;
+      }
+      return `<p>${escapeHtml(lines.join(' '))}</p>`;
+    }).join('');
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
   function selectTopicByNumber(number, { scrollTeaching = true } = {}) {
     const topic = topics.find(t => t.number === number);
     if (!topic) return;
@@ -2174,4 +2206,13 @@
     selectNode,
     openDetailSheet,
   };
+
+  const topicDeepLink = new URLSearchParams(location.search).get('topic')
+    || (location.hash.match(/topic-?(\d+)/i) || [])[1];
+  if (topicDeepLink) {
+    const n = Number(topicDeepLink);
+    if (Number.isFinite(n)) {
+      requestAnimationFrame(() => selectTopicByNumber(n, { scrollTeaching: false }));
+    }
+  }
 })();

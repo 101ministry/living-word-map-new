@@ -40,6 +40,8 @@ function Parse-Topics666([string]$raw) {
         $num = [int]$Matches[1]
         $detail = $Matches[4].Trim()
         $detail = ($detail -split '~~~~~~~~~~~~')[0].Trim()
+        # Recognize line uses only the first detail paragraph (extra teaching blocks stay on the map description).
+        $detail = ($detail -split '(\r?\n){2,}', 2)[0].Trim()
         $detail = (Strip-NonAscii $detail).TrimEnd('.')
         $result[$num] = @{
             topicPlain  = (Strip-NonAscii $Matches[2]).Trim().TrimEnd('.')
