@@ -73,12 +73,17 @@
 #  25 | presentation | whoredom (partial)               | TOPICS-666-PRESENTATION DAY 25
 #  26 | presentation | whoredom (cont.) + infirmity     | TOPICS-666-PRESENTATION DAY 26
 #  27 | presentation | infirmity (cont.) + shedding     | TOPICS-666-PRESENTATION DAY 27
+#  28 | presentation | shedding (cont.)                 | TOPICS-666-PRESENTATION DAY 28
+#  29 | presentation | treachery-against-others         | TOPICS-666-PRESENTATION DAY 29 (+ chapterTimestamps)
+#  30 | presentation | treachery-against-others (cont.) | TOPICS-666-PRESENTATION DAY 30
+#  31 | presentation | treachery-against-others (cont.) | TOPICS-666-PRESENTATION DAY 31
+#  32 | presentation | using-and-abusing-others (start) | TOPICS-666-PRESENTATION DAY 32
 
 # --- NEXT EXPECTED (update after each new batch of links) ---
-nextDay=28
+nextDay=33
 nextMode=presentation
-nextPrincipalityId=shedding-of-innocent-blood
-nextTitleSuffix=Shedding of Innocent Blood
+nextPrincipalityId=using-and-abusing-others
+nextTitleSuffix=Using and Abusing Others
 
 # After divination, continue chart order with full-principality days unless split is indicated
 # in a new presentation file section.

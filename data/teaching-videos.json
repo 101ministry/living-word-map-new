@@ -124,6 +124,64 @@
     { "day": 24, "part": 1, "title": "Day 24 - Prayer Topics (Perversion)", "youtubeId": "M0-NXJdQrRo", "url": "https://www.youtube.com/live/M0-NXJdQrRo", "principalityId": "perversion", "description": "This recording was cut off short because of recording and livestreaming difficulty. For more information, visit Tough Questions: https://repentance101ministry.com/channels/tough-questions" },
     { "day": 25, "part": 1, "title": "Day 25 - Prayer Topics (Whoredom)", "youtubeId": "GugsJOzEqd0", "url": "https://youtu.be/GugsJOzEqd0" },
     { "day": 26, "part": 1, "title": "Day 26 - Prayer Topics (Whoredom & Infirmity)", "youtubeId": "wRQs-zhrpj4", "url": "https://www.youtube.com/live/wRQs-zhrpj4" },
-    { "day": 27, "part": 1, "title": "Day 27 - Prayer Topics (Infirmity & Shedding of Innocent Blood)", "youtubeId": "1wvnBIVAubs", "url": "https://youtu.be/1wvnBIVAubs", "durationSeconds": 11344 }
+    { "day": 27, "part": 1, "title": "Day 27 - Prayer Topics (Infirmity & Shedding of Innocent Blood)", "youtubeId": "1wvnBIVAubs", "url": "https://youtu.be/1wvnBIVAubs", "durationSeconds": 11344 },
+    {
+      "day": 28,
+      "part": 1,
+      "title": "Day 28 - Prayer Topics (Shedding of Innocent Blood)",
+      "youtubeId": "936jterzreE",
+      "url": "https://www.youtube.com/watch?v=936jterzreE"
+    },
+    {
+      "day": 29,
+      "part": 1,
+      "title": "Day 29 - Prayer Topics (Treachery Against Others)",
+      "youtubeId": "Gbpmjh2LrNw",
+      "url": "https://youtube.com/live/Gbpmjh2LrNw",
+      "chapterTimestamps": {
+        "241": "3:05",
+        "242": "13:39",
+        "243": "1:02:55",
+        "244": "1:10:00",
+        "245": "1:12:30",
+        "246": "1:24:32",
+        "247": "1:29:09",
+        "248": "1:29:21",
+        "249": "1:35:29",
+        "250": "1:41:47"
+      },
+      "bonusChapters": [
+        { "label": "Communion", "start": "3:41" },
+        { "label": "Treachery against others [continued]", "start": "5:08" },
+        { "label": "Destructive Identity", "start": "32:37" },
+        { "label": "Our Spiritual Records Last Forever", "start": "35:26" },
+        { "label": "Treachery against others [continued]", "start": "46:06" },
+        { "label": "Teddy Bear/object soul tie", "start": "55:14" },
+        { "label": "Why we are bothered to repent", "start": "1:48:30" },
+        { "label": "dreams and imagination", "start": "1:51:10" },
+        { "label": "Christian sex education by Ashton Campbell", "start": "2:27:34" }
+      ]
+    },
+    {
+      "day": 30,
+      "part": 1,
+      "title": "Day 30 - Prayer Topics (Treachery Against Others)",
+      "youtubeId": "Jfc_WjTG2a0",
+      "url": "https://youtube.com/live/Jfc_WjTG2a0"
+    },
+    {
+      "day": 31,
+      "part": 1,
+      "title": "Day 31 - Prayer Topics (Treachery Against Others)",
+      "youtubeId": "-hvwnyV0wGg",
+      "url": "https://youtube.com/live/-hvwnyV0wGg"
+    },
+    {
+      "day": 32,
+      "part": 1,
+      "title": "Day 32 - Prayer Topics (Using and Abusing Others)",
+      "youtubeId": "XFP6nxuio7o",
+      "url": "https://youtube.com/live/XFP6nxuio7o"
+    }
   ]
 }

@@ -109,13 +109,15 @@ function Extract-SpiritPhrase([string]$line) {
     if ($line -match '(?i)^familiar identity of (.+)$') {
         return Clean-SpiritTail ("familiar identity of " + $Matches[1])
     }
+    # Prefer longest name before ", from a root" so commas inside the title are kept
+    # (e.g. "lying, or cheating, from a root of...").
+    if ($line -match '(?i)^(.+),\s*from a root\b') {
+        return Clean-SpiritTail $Matches[1]
+    }
+    if ($line -match '(?i)^([a-z].+?)\s+from a root\b') {
+        return Clean-SpiritTail $Matches[1]
+    }
     if ($line -match '(?i)^([a-z][^,]+),\s*with the\b') {
-        return Clean-SpiritTail $Matches[1]
-    }
-    if ($line -match '(?i)^([a-z][^,]+),\s*from a root\b') {
-        return Clean-SpiritTail $Matches[1]
-    }
-    if ($line -match '(?i)^([a-z][^,]+)\s+from a root\b') {
         return Clean-SpiritTail $Matches[1]
     }
     return $null
@@ -154,13 +156,31 @@ function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbe
     }
 
     function Select-Unused($candidates) {
-        if (-not $candidates -or $candidates.Count -eq 0) { return $null }
-        if ($usedNumbers) {
-            $unused = @($candidates | Where-Object { -not $usedNumbers.Contains($_.number) } | Sort-Object number)
-            if ($unused.Count -gt 0) { return $unused[0] }
+        if (-not $candidates -or @($candidates).Count -eq 0) { return $null }
+
+        # Day bands for duplicate chart names (Adultery/Incest appear under Whoredom and Treachery,
+        # and "Participating In Incest" shares a norm with Incest after prefix stripping).
+        $preferredMin = $null
+        $preferredMax = $null
+        if ($day -eq 28) { $preferredMin = 217; $preferredMax = 240 }
+        elseif ($day -ge 29 -and $day -le 31) { $preferredMin = 241; $preferredMax = 278 }
+        elseif ($day -ge 32 -and $day -le 33) { $preferredMin = 279; $preferredMax = 302 }
+
+        $ordered = @($candidates | Sort-Object number)
+        if ($null -ne $preferredMin) {
+            $inBand = @($ordered | Where-Object {
+                [int]$_.number -ge $preferredMin -and [int]$_.number -le $preferredMax
+            })
+            if ($inBand.Count -gt 0) { $ordered = $inBand }
+            elseif ($day -ge 28) { $ordered = @($candidates | Sort-Object number -Descending) }
         }
-        if ($candidates.Count -eq 1) { return $candidates[0] }
-        return ($candidates | Sort-Object number | Select-Object -First 1)
+
+        if ($null -ne $usedNumbers) {
+            $unused = @($ordered | Where-Object { -not $usedNumbers.Contains([int]$_.number) })
+            if ($unused.Count -gt 0) { return $unused[0] }
+            return $null
+        }
+        return $ordered[0]
     }
 
     # Exact chart key match (required - never match on shared words alone)
