@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=32" />
+  <link rel="stylesheet" href="styles.css?v=35" />
   <link rel="stylesheet" href="corner-breaker.css?v=7" />
 </head>
 <body>
@@ -123,15 +123,6 @@
                   Not all answers apply to what you've asked. This shouldn't stop you from asking and maybe, ask them at
                   <a class="ask-overlay-link" href="https://repentance101ministry.com/channels/accountability" target="_blank" rel="noopener noreferrer">the Accountability Channel</a>.
                 </p>
-                <div id="ask-post-answer" class="ask-post-answer" hidden>
-                  <h3 class="ask-share-heading">Share this with your friends</h3>
-                  <p class="ask-overlay-lead">Send the question and the topics that answered it so someone else can look with you.</p>
-                  <div class="ask-overlay-actions">
-                    <button type="button" id="ask-share-btn" class="btn-accent">Share the answer</button>
-                    <button type="button" id="ask-share-copy" class="btn-ghost">Copy to clipboard</button>
-                  </div>
-                  <p id="ask-share-status" class="ask-overlay-status" aria-live="polite"></p>
-                </div>
                 <div id="ask-countdown-box" class="ask-countdown-box" hidden aria-hidden="true">
                   <p class="ask-countdown" id="ask-countdown">30 seconds</p>
                 </div>
@@ -162,6 +153,15 @@
           <div id="ask-answer-topics" class="ask-results-list"></div>
           <h3 class="ask-overlay-subhead">Teaching videos</h3>
           <div id="ask-answer-videos" class="ask-results-list"></div>
+          <div id="ask-post-answer" class="ask-post-answer">
+            <h3 class="ask-share-heading">Share this with your friends</h3>
+            <p class="ask-overlay-lead">Send the question and the topics that answered it so someone else can look with you.</p>
+            <div class="ask-overlay-actions">
+              <button type="button" id="ask-share-btn" class="btn-accent">Share the answer</button>
+              <button type="button" id="ask-share-copy" class="btn-ghost">Copy to clipboard</button>
+            </div>
+            <p id="ask-share-status" class="ask-overlay-status" aria-live="polite"></p>
+          </div>
           <aside id="detail-discuss-invite" class="detail-discuss-invite hidden">
             <h3>Discuss this with other people</h3>
             <p>You are invited to talk through what you found with others in the Repentance101 community — questions, testimonies, and next steps belong in conversation, not only on a map.</p>
@@ -241,6 +241,56 @@
       </aside>
     </main>
     </div>
+
+    <section class="ministry-embed-panel" id="ministry-embed-panel" aria-label="Repentance101 ministry channels">
+      <header class="ministry-embed-header">
+        <div>
+          <h2>Repentance101 Channels</h2>
+          <p class="ministry-embed-lead">
+            Jump into livestream, guidelines, or general chat on the ministry site.
+          </p>
+        </div>
+        <a
+          class="text-btn ministry-embed-open-site"
+          href="https://repentance101ministry.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Open ministry site ↗</a>
+      </header>
+
+      <div class="ministry-embed-boxes" aria-label="Ministry channel boxes">
+        <a
+          class="ministry-embed-box"
+          href="https://repentance101ministry.com/livestream"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="ministry-embed-box-kicker">Live</span>
+          <span class="ministry-embed-box-title">Want to Join the Latest Livestream?</span>
+          <span class="ministry-embed-box-note">Stream &amp; fellowship room</span>
+        </a>
+        <a
+          class="ministry-embed-box"
+          href="https://repentance101ministry.com/channels/guidelines"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="ministry-embed-box-kicker">Public</span>
+          <span class="ministry-embed-box-title">Guidelines</span>
+          <span class="ministry-embed-box-note">Ministry guidelines for everyone</span>
+        </a>
+        <a
+          class="ministry-embed-box"
+          href="https://repentance101ministry.com/channels/general"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="ministry-embed-box-kicker">Members</span>
+          <span class="ministry-embed-box-title">General Chat</span>
+          <span class="ministry-embed-box-note">Community conversation</span>
+        </a>
+      </div>
+    </section>
 
     <section class="teaching-panel" id="teaching-panel" aria-label="Teaching videos">
       <header class="teaching-header">
@@ -399,7 +449,7 @@
   <script src="round1-entry-gate.js?v=4"></script>
   <script src="app.js?v=5"></script>
   <script src="teaching-videos.js?v=3"></script>
-  <script src="ask-overlay.js?v=10"></script>
+  <script src="ask-overlay.js?v=11"></script>
   <script src="corner-breaker.js"></script>
 </body>
 </html>

@@ -341,9 +341,7 @@
     hideCountdownBox();
     state.answerVisibleAt = 0;
     state.countdownToken += 1;
-    const box = document.getElementById('ask-post-answer');
     const status = document.getElementById('ask-share-status');
-    if (box) box.hidden = true;
     if (status) status.textContent = '';
   }
 
@@ -392,10 +390,8 @@
   }
 
   function showShareSection() {
-    const box = document.getElementById('ask-post-answer');
     const status = document.getElementById('ask-share-status');
     if (status) status.textContent = '';
-    if (box) box.hidden = false;
   }
 
   function scheduleCountdownAfterAnswer() {
