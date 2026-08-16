@@ -252,9 +252,10 @@
     const rootRows = ROOT_FAMILIES.map(f =>
       `<li><span class="swatch" style="background:${f.color}"></span><span class="legend-label">${f.label}</span></li>`
     ).join('');
-    const fruitRows = FRUIT_FAMILIES.map(f =>
-      `<li><span class="swatch fruit-swatch" style="background:${f.color}"></span><span class="legend-label">${f.label}</span></li>`
-    ).join('');
+    const fruitRows = FRUIT_FAMILIES.map(f => {
+      const doorClass = f.id === 'occultism-and-counterfeit-spirituality' ? ' fruit-swatch-door' : '';
+      return `<li><span class="swatch fruit-swatch${doorClass}" style="background:${f.color}"></span><span class="legend-label">${f.label}</span></li>`;
+    }).join('');
     container.innerHTML = `
       <h2>Root colors <span class="legend-hint">text</span></h2>
       <ul class="color-key">${rootRows}</ul>

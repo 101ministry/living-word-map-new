@@ -1025,6 +1025,13 @@
   }
 
   function nodeFillColor(id) {
+    // Counterfeit Spirituality only: black disc (green door painted after).
+    if (id === 'counterfeit-spirituality') {
+      if (state.highlightIds.size && !state.highlightIds.has(id)) {
+        return 'rgba(10, 11, 15, 0.35)';
+      }
+      return '#0a0b0f';
+    }
     if (state.highlightIds.size && !state.highlightIds.has(id)) return nodeColorResolved(id, true);
     if (state.selectedId === id) return '#f0ead6';
     return nodeColorResolved(id);
@@ -1034,6 +1041,72 @@
     const type = nodeType(id);
     const rel = type === 'principality' ? 4.8 : (type === 'topic' ? 3 : 4);
     return Math.sqrt(nodeSize(id)) * rel;
+  }
+
+  function isDoorFruitNode(id) {
+    return id === 'counterfeit-spirituality'
+      || id === 'occultism-and-counterfeit-spirituality';
+  }
+
+  function doorFruitPaintRadius(id) {
+    return Math.sqrt(nodeSize(id)) * (isConstellationView() ? 5.2 : 4);
+  }
+
+  /** Counterfeit Spirituality ONLY — black circle, green door. */
+  function paintCounterfeitSpiritualityOnly(node, ctx) {
+    if (node.x == null || node.y == null) return;
+    const id = asNodeId(node);
+    const r = doorFruitPaintRadius(id);
+    const doorW = r * 0.7;
+    const doorH = r * 0.88;
+    const x = node.x - doorW / 2;
+    const y = node.y - doorH / 2;
+    const corner = Math.max(0.5, doorW * 0.1);
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, r + 0.35, 0, Math.PI * 2);
+    ctx.fillStyle = '#0a0b0f';
+    ctx.fill();
+
+    ctx.fillStyle = '#43A047';
+    roundRect(ctx, x, y, doorW, doorH, corner);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(node.x + doorW * 0.22, node.y, Math.max(0.65, doorW * 0.09), 0, Math.PI * 2);
+    ctx.fillStyle = '#0a0b0f';
+    ctx.fill();
+    ctx.restore();
+  }
+
+  /** Occultism and Counterfeit Spirituality — green circle, black door. */
+  function paintOccultismAndCounterfeit(node, ctx) {
+    if (node.x == null || node.y == null) return;
+    const id = asNodeId(node);
+    const r = doorFruitPaintRadius(id);
+    const doorW = r * 0.7;
+    const doorH = r * 0.88;
+    const x = node.x - doorW / 2;
+    const y = node.y - doorH / 2;
+    const corner = Math.max(0.5, doorW * 0.1);
+    const fruitGreen = '#2E7D32';
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, r + 0.35, 0, Math.PI * 2);
+    ctx.fillStyle = fruitGreen;
+    ctx.fill();
+
+    ctx.fillStyle = '#0a0b0f';
+    roundRect(ctx, x, y, doorW, doorH, corner);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(node.x + doorW * 0.22, node.y, Math.max(0.65, doorW * 0.09), 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(240, 234, 214, 0.55)';
+    ctx.fill();
+    ctx.restore();
   }
 
   function roundRect(ctx, x, y, w, h, radius) {
@@ -1152,6 +1225,7 @@
     .showPointerCursor(false)
     .nodeCanvasObjectMode(node => {
       const id = asNodeId(node);
+      if (isDoorFruitNode(id)) return 'after';
       if (nodeType(id) === 'principality' || state.selectedId === id) return 'after';
       return undefined;
     })
@@ -1159,6 +1233,16 @@
       const id = asNodeId(node);
       if (nodeType(id) === 'principality') {
         paintPrincipalityNode(node, ctx, globalScale);
+        return;
+      }
+      if (id === 'counterfeit-spirituality') {
+        paintCounterfeitSpiritualityOnly(node, ctx);
+        if (state.selectedId === id) paintSelectedNodeLabel(node, ctx, globalScale);
+        return;
+      }
+      if (id === 'occultism-and-counterfeit-spirituality') {
+        paintOccultismAndCounterfeit(node, ctx);
+        if (state.selectedId === id) paintSelectedNodeLabel(node, ctx, globalScale);
         return;
       }
       if (state.selectedId === id) paintSelectedNodeLabel(node, ctx, globalScale);
@@ -1526,8 +1610,17 @@
       const topicLabel = conn.topics.length === 1 ? 'topic' : 'topics';
       const pLabel = pCount === 1 ? 'principality' : 'principalities';
       const meta = `${conn.topics.length} ${topicLabel} · ${pCount} ${pLabel}`;
-      const dotColor = nodeColorResolved(id);
-      return `<div class="graph-tooltip-head"><span class="graph-tooltip-dot" style="background:${dotColor}"></span><div class="graph-tooltip-title">${escapeHtml(item.name)}</div></div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
+      let doorClass = '';
+      let dotColor = nodeColorResolved(id);
+      if (type === 'fruit' && id === 'counterfeit-spirituality') {
+        doorClass = ' graph-tooltip-dot-door-green';
+        dotColor = '#0a0b0f';
+      } else if (type === 'fruit' && id === 'occultism-and-counterfeit-spirituality') {
+        doorClass = ' graph-tooltip-dot-door-black';
+        dotColor = '#2E7D32';
+      }
+      const title = String(item.name || '').replace(/^[\u{1F7E9}\u{1F6AA}\s]+/u, '');
+      return `<div class="graph-tooltip-head"><span class="graph-tooltip-dot${doorClass}" style="background:${dotColor}"></span><div class="graph-tooltip-title">${escapeHtml(title || item.name)}</div></div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
     }
 
     if (type === 'principality') {
@@ -1608,6 +1701,13 @@
         return;
       }
       selectNode(id);
+      return;
+    }
+    // Same enlarged hit targets as hover tooltips — ForceGraph pointer areas miss some root/fruit clicks.
+    const rootOrFruit = pickRootOrFruitAtScreen(ev.clientX, ev.clientY);
+    if (rootOrFruit) {
+      ev.stopPropagation();
+      selectNode(asNodeId(rootOrFruit));
     }
   }, true);
 
