@@ -23,8 +23,8 @@ function Repair-CompiledPrayers([string]$raw) {
     }
 
     $normalized = $raw -replace "`r`n", "`n"
-    $guilePattern = '(?ms)^PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY, from a root of deception and falsehood\.\s*\n\s*\nI agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of guile\.'
-    $stuporPattern = '(?ms)^PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY, from a root of deception and falsehood\.\s*\n\s*\nI agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of stupor\.'
+    $guilePattern = '(?ms)^PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY, from a root of deception and falsehood\.\s*\n\s*\nI agree that I am guilty of(?: keeping and not casting down thought suggestions of)? interacting with the spirit of guile\.'
+    $stuporPattern = '(?ms)^PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY, from a root of deception and falsehood\.\s*\n\s*\nI agree that I am guilty of(?: keeping and not casting down thought suggestions of)? interacting with the spirit of stupor\.'
 
     if (-not $status.Has607Guile -and $normalized -notmatch $guilePattern) {
         throw 'Could not locate unnumbered guile prayer block.'
@@ -49,11 +49,11 @@ function Repair-CompiledPrayers([string]$raw) {
     }
 
     if (-not $status.Has607Guile) {
-        $out = [regex]::Replace($out, $guilePattern, "607. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.`n`nI agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of guile.")
+        $out = [regex]::Replace($out, $guilePattern, "607. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.`n`nI agree that I am guilty of interacting with the spirit of guile.")
     }
 
     if (-not $status.Has654Stupor) {
-        $out = [regex]::Replace($out, $stuporPattern, "654. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.`n`nI agree that I am guilty of keeping and not casting down thought suggestions of interacting with the spirit of stupor.")
+        $out = [regex]::Replace($out, $stuporPattern, "654. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.`n`nI agree that I am guilty of interacting with the spirit of stupor.")
     }
 
     if ($raw -match "`r`n") { return $out -replace "`n", "`r`n" }

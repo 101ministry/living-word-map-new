@@ -379,11 +379,15 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
     $part = [int]$video.part
     Write-Host "Processing Day $day$(if ($part -gt 1) { " part $part" }) ($($video.youtubeId))..."
 
-    if ($video.principalityId) {
+    if ($dayTopics.ContainsKey($day) -and @($dayTopics[$day]).Count -gt 0) {
+        $allDayTopics = @($dayTopics[$day])
+        Write-Host "  Topics: $($allDayTopics.Count) from presentation Day $day"
+    } elseif ($video.principalityId) {
         $allDayTopics = Get-TopicsForPrincipality $graphTopics ([string]$video.principalityId)
         Write-Host "  Topics: $($allDayTopics.Count) from principality $($video.principalityId)"
     } else {
-        $allDayTopics = @($dayTopics[$day])
+        $allDayTopics = @()
+        Write-Host "  Topics: 0 (no presentation day or principality mapping)"
     }
     $dayVideoList = $videosByDay["$day"]
     $partIndex = [array]::IndexOf($dayVideoList, $video)
@@ -398,7 +402,7 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         $slice = $allDayTopics[$startIdx..$endIdx]
     }
 
-    Write-Host "  Topics: $($slice.Count) mapped from presentation"
+    Write-Host "  Topics in this video part: $($slice.Count)"
 
     $duration = 3600
     $segments = @()

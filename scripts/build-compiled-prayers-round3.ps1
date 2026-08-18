@@ -191,7 +191,7 @@ function Build-Round3Prayer([int]$num, [hashtable]$meta) {
     @(
         "$label. PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY."
         ''
-        "On behalf of the sixth generation, on behalf of the seventh generation, on behalf of the eighth generation, on behalf of the nineth generation, on behalf of the tenth generation, on behalf of the eleventh generation, on behalf of the twelfth generation, on behalf of the thirteenth generation, on behalf of the fourteenth generation, on behalf of the fifteenth generation, on behalf of the sixteenth generation, on behalf of the seventeenth generation, on behalf of the eighteenth generation, on behalf of the nineteenth generation, on behalf of the twentyith generation, I agree WE are guilty of allowing scenarios of $(Get-Round3ScenarioPhrase $topic), from a root of $root."
+        "On behalf of the sixth generation, on behalf of the seventh generation, on behalf of the eighth generation, on behalf of the nineth generation, on behalf of the tenth generation, on behalf of the eleventh generation, on behalf of the twelfth generation, on behalf of the thirteenth generation, on behalf of the fourteenth generation, on behalf of the fifteenth generation, on behalf of the sixteenth generation, on behalf of the seventeenth generation, on behalf of the eighteenth generation, on behalf of the nineteenth generation, on behalf of the twentyith generation, I agree WE are guilty of allowing scenarios of $(Get-Round3ScenarioPhrase $topic) from a root of $root."
         ''
         'I agree that WE made it more important than God, loved it more than God, and preferred it instead of God.'
         ''

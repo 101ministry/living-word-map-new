@@ -81,7 +81,14 @@ foreach ($block in $blocks) {
     for ($i = 0; $i -lt $lines.Count; $i++) {
         $line = $lines[$i]
         if ($line -match '^I agree that I am guilty of keeping and not casting down thought suggestions of ') {
-            $newLine = "I agree that I am guilty of keeping and not casting down thought suggestions of $($meta.topicPlain), from a root of $($meta.rootPlain)."
+            $newLine = "I agree that I am guilty of $($meta.topicPlain) from a root of $($meta.rootPlain)."
+            if ($newLine -ne $line) {
+                $lines[$i] = $newLine
+                $changed = $true
+            }
+        }
+        elseif ($line -match '^I agree that I am guilty of ' -and $line -notmatch 'keeping and not casting') {
+            $newLine = "I agree that I am guilty of $($meta.topicPlain) from a root of $($meta.rootPlain)."
             if ($newLine -ne $line) {
                 $lines[$i] = $newLine
                 $changed = $true
