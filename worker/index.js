@@ -1,9 +1,14 @@
 /**
  * Living Word Map — Cloudflare Worker
- * Serves static assets from public/ and handles Cal.com webhooks at POST /api/cal-booking
+ * Serves static assets from public/, Cal.com webhooks at POST /api/cal-booking,
+ * Nominatim proxies at GET /api/geocode and GET /api/nominatim.
  */
 
 const WEBHOOK_PATH = '/api/cal-booking';
+const GEOCODE_PATH = '/api/geocode';
+const NOMINATIM_PATH = '/api/nominatim';
+const ACCOUNT_PATH = '/api/experimental-account';
+const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://living-word-map.norm-f37.workers.dev/)';
 
 export default {
   async fetch(request, env, ctx) {
@@ -15,6 +20,27 @@ export default {
       }
       if (request.method === 'GET') {
         return jsonResponse({ ok: true, endpoint: WEBHOOK_PATH, method: 'POST' });
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (url.pathname === GEOCODE_PATH || url.pathname === `${GEOCODE_PATH}/`) {
+      if (request.method === 'GET') {
+        return handleGeocode(request);
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (url.pathname === NOMINATIM_PATH || url.pathname === `${NOMINATIM_PATH}/`) {
+      if (request.method === 'GET') {
+        return handleNominatim(request);
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (url.pathname === ACCOUNT_PATH || url.pathname === `${ACCOUNT_PATH}/`) {
+      if (request.method === 'POST') {
+        return handleExperimentalAccount(request, env);
       }
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
@@ -169,6 +195,179 @@ async function sendBookingEmail(env, data, rawJson) {
     const errText = await res.text();
     console.error('Resend error', res.status, errText);
   }
+}
+
+async function nominatimGet(url) {
+  const res = await fetch(url.toString(), {
+    headers: {
+      Accept: 'application/json',
+      'Accept-Language': 'en',
+      'User-Agent': NOMINATIM_UA,
+    },
+  });
+  if (!res.ok) {
+    return { ok: false, status: res.status, data: null };
+  }
+  try {
+    return { ok: true, status: res.status, data: await res.json() };
+  } catch {
+    return { ok: false, status: 502, data: null };
+  }
+}
+
+async function handleNominatim(request) {
+  const url = new URL(request.url);
+  const mode = String(url.searchParams.get('mode') || '').toLowerCase();
+  const wantPolygon = url.searchParams.get('polygon') === '1';
+  const nominatim = new URL(
+    mode === 'reverse'
+      ? 'https://nominatim.openstreetmap.org/reverse'
+      : 'https://nominatim.openstreetmap.org/search',
+  );
+
+  if (mode === 'reverse') {
+    const lat = Number(url.searchParams.get('lat'));
+    const lon = Number(url.searchParams.get('lon'));
+    const zoom = Math.max(3, Math.min(12, Number(url.searchParams.get('zoom')) || 5));
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+      return jsonResponse({ error: 'Missing lat/lon' }, 400);
+    }
+    nominatim.searchParams.set('lat', String(lat));
+    nominatim.searchParams.set('lon', String(lon));
+    nominatim.searchParams.set('zoom', String(zoom));
+  } else if (mode === 'search') {
+    const q = String(url.searchParams.get('q') || '').trim();
+    const city = String(url.searchParams.get('city') || '').trim();
+    const state = String(url.searchParams.get('state') || '').trim();
+    const county = String(url.searchParams.get('county') || '').trim();
+    const country = String(url.searchParams.get('country') || '').trim();
+    const structured = Boolean(city || state || country);
+    if (!structured && (q.length < 2 || q.length > 200)) {
+      return jsonResponse({ error: 'Missing q' }, 400);
+    }
+    if (structured) {
+      if (city) nominatim.searchParams.set('city', city);
+      if (county) nominatim.searchParams.set('county', county);
+      if (state) nominatim.searchParams.set('state', state);
+      if (country) nominatim.searchParams.set('country', country);
+    } else {
+      nominatim.searchParams.set('q', q);
+    }
+    nominatim.searchParams.set('limit', '8');
+  } else {
+    return jsonResponse({ error: 'mode must be search or reverse' }, 400);
+  }
+
+  nominatim.searchParams.set('format', 'json');
+  nominatim.searchParams.set('addressdetails', '1');
+  if (wantPolygon) {
+    nominatim.searchParams.set('polygon_geojson', '1');
+    nominatim.searchParams.set('polygon_threshold', '0.002');
+  }
+
+  const got = await nominatimGet(nominatim);
+  if (!got.ok) {
+    return jsonResponse({ error: 'Nominatim upstream failed', status: got.status }, 502);
+  }
+  return jsonResponse(got.data);
+}
+
+async function handleGeocode(request) {
+  const url = new URL(request.url);
+  const q = String(url.searchParams.get('q') || '').trim();
+  if (q.length < 2) {
+    return jsonResponse({ error: 'Missing q' }, 400);
+  }
+
+  const nominatim = new URL('https://nominatim.openstreetmap.org/search');
+  nominatim.searchParams.set('q', q);
+  nominatim.searchParams.set('format', 'json');
+  nominatim.searchParams.set('addressdetails', '1');
+  nominatim.searchParams.set('limit', '1');
+
+  const got = await nominatimGet(nominatim);
+  if (!got.ok) {
+    return jsonResponse({ error: 'Geocode upstream failed', status: got.status }, 502);
+  }
+
+  const results = Array.isArray(got.data) ? got.data : [];
+
+  const hit = Array.isArray(results) ? results[0] : null;
+  if (!hit) {
+    return jsonResponse({ ok: true, found: false });
+  }
+
+  const address = hit.address || {};
+  const bbox = Array.isArray(hit.boundingbox) ? hit.boundingbox.map(Number) : null;
+
+  return jsonResponse({
+    ok: true,
+    found: true,
+    lat: Number(hit.lat),
+    lon: Number(hit.lon),
+    displayName: hit.display_name || '',
+    city: address.city || address.town || address.village || address.hamlet || '',
+    state: address.state || address.region || address.province || '',
+    country: address.country || '',
+    countryCode: String(address.country_code || '').toLowerCase(),
+    boundingbox: bbox,
+  });
+}
+
+function accountKey(name) {
+  return String(name || '')
+    .trim()
+    .replace(/\s+/g, ' ')
+    .toLowerCase();
+}
+
+async function handleExperimentalAccount(request, env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) {
+    return jsonResponse({ ok: false, error: 'not-configured' }, 501);
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400);
+  }
+
+  const name = String(body?.name || '').trim();
+  const passwordHash = String(body?.passwordHash || '');
+  const action = String(body?.action || '');
+  if (!name || !passwordHash || (action !== 'save' && action !== 'load')) {
+    return jsonResponse({ error: 'Missing name, password, or action' }, 400);
+  }
+
+  const key = `acct:${accountKey(name)}`;
+  let rec = null;
+  try {
+    rec = await kv.get(key, { type: 'json' });
+  } catch {
+    rec = null;
+  }
+
+  if (action === 'load') {
+    if (!rec) return jsonResponse({ ok: true, found: false });
+    if (rec.passwordHash !== passwordHash) return jsonResponse({ error: 'auth' }, 401);
+    return jsonResponse({ ok: true, found: true, snapshot: rec.snapshot || null });
+  }
+
+  if (rec && rec.passwordHash !== passwordHash) {
+    return jsonResponse({ error: 'auth' }, 401);
+  }
+
+  await kv.put(
+    key,
+    JSON.stringify({
+      passwordHash,
+      snapshot: body.snapshot || rec?.snapshot || null,
+      updatedAt: Date.now(),
+    }),
+  );
+  return jsonResponse({ ok: true, saved: true });
 }
 
 function jsonResponse(obj, status = 200) {

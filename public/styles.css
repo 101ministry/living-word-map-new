@@ -245,6 +245,26 @@ button:hover, select:hover {
   outline: none;
 }
 
+a.mobile-nav-link {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.header-experimental-link {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  opacity: 0.72;
+  padding: 0.35rem 0.55rem;
+  white-space: nowrap;
+}
+
+.header-experimental-link:hover,
+.header-experimental-link:focus-visible {
+  color: var(--accent);
+  opacity: 1;
+}
+
 .mobile-nav-list li + li {
   margin-top: 0.45rem;
 }

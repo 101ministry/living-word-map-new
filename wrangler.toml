@@ -10,6 +10,12 @@ binding = "ASSETS"
 # Set secrets via: wrangler secret put RESEND_API_KEY
 # Optional: CAL_WEBHOOK_SECRET, NOTIFY_EMAIL, RESEND_FROM
 
+# Optional experimental case login store:
+# wrangler kv namespace create EXPERIMENTAL_KV
+# [[kv_namespaces]]
+# binding = "EXPERIMENTAL_KV"
+# id = "<namespace id>"
+
 [vars]
 NOTIFY_EMAIL = "norm@repentance101.com"
 RESEND_FROM = "Living Word Map <notifications@repentance101.com>"

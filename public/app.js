@@ -2171,6 +2171,10 @@
   });
 
   document.getElementById('view-mode').addEventListener('change', e => {
+    if (e.target.value === 'experimental') {
+      window.location.href = 'experimental.html';
+      return;
+    }
     if (e.target.value === 'ask') {
       const stayOnConstellation = state.viewMode === 'constellation';
       e.target.value = 'constellation';
