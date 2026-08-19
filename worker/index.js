@@ -8,6 +8,8 @@ const WEBHOOK_PATH = '/api/cal-booking';
 const GEOCODE_PATH = '/api/geocode';
 const NOMINATIM_PATH = '/api/nominatim';
 const ACCOUNT_PATH = '/api/experimental-account';
+const MAP_TILE_PATH = '/api/map-tile';
+const DOWNLOADS_PREFIX = '/audio/accelerated-discipleship/';
 const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://living-word-map.norm-f37.workers.dev/)';
 
 export default {
@@ -38,6 +40,13 @@ export default {
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
 
+    if (url.pathname === MAP_TILE_PATH || url.pathname === `${MAP_TILE_PATH}/`) {
+      if (request.method === 'GET') {
+        return handleMapTile(request);
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
     if (url.pathname === ACCOUNT_PATH || url.pathname === `${ACCOUNT_PATH}/`) {
       if (request.method === 'POST') {
         return handleExperimentalAccount(request, env);
@@ -45,9 +54,63 @@ export default {
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
 
+    if (url.pathname.startsWith(DOWNLOADS_PREFIX)) {
+      return handleDownloadsAudio(request, env);
+    }
+
     return env.ASSETS.fetch(request);
   },
 };
+
+async function handleDownloadsAudio(request, env) {
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return jsonResponse({ error: 'Method not allowed' }, 405);
+  }
+  if (!env.DOWNLOADS) {
+    return new Response('Downloads storage is not configured', { status: 503 });
+  }
+
+  const url = new URL(request.url);
+  const key = decodeURIComponent(url.pathname.replace(/^\//, ''));
+  if (!/^audio\/accelerated-discipleship\/[A-Za-z0-9._-]+\.mp3$/.test(key)) {
+    return new Response('Not found', { status: 404 });
+  }
+
+  const object = await env.DOWNLOADS.get(key, {
+    range: request.headers,
+    onlyIf: request.headers,
+  });
+
+  if (object === null) {
+    return new Response('Not found', { status: 404 });
+  }
+
+  const headers = new Headers();
+  object.writeHttpMetadata(headers);
+  headers.set('etag', object.httpEtag);
+  headers.set('Accept-Ranges', 'bytes');
+  headers.set('Cache-Control', 'public, max-age=86400');
+  headers.set('Content-Type', 'audio/mpeg');
+
+  const rawName = url.searchParams.get('filename') || key.split('/').pop() || 'audio.mp3';
+  const safeName = rawName.replace(/[\r\n"]/g, '').slice(0, 180);
+  if (url.searchParams.has('download')) {
+    headers.set('Content-Disposition', `attachment; filename="${safeName}"`);
+  } else {
+    headers.set('Content-Disposition', 'inline');
+  }
+
+  const ranged = Boolean(object.range);
+  if (ranged && object.size != null && object.range.offset != null && object.range.end != null) {
+    headers.set('Content-Range', `bytes ${object.range.offset}-${object.range.end}/${object.size}`);
+  }
+
+  const status = object.body ? (ranged ? 206 : 200) : 304;
+  if (request.method === 'HEAD') {
+    return new Response(null, { status, headers });
+  }
+  return new Response(object.body, { status, headers });
+}
 
 async function handleCalWebhook(request, env, ctx) {
   const bodyText = await request.text();
@@ -368,6 +431,34 @@ async function handleExperimentalAccount(request, env) {
     }),
   );
   return jsonResponse({ ok: true, saved: true });
+}
+
+async function handleMapTile(request) {
+  const url = new URL(request.url);
+  const z = Number(url.searchParams.get('z'));
+  const x = Number(url.searchParams.get('x'));
+  const y = Number(url.searchParams.get('y'));
+  if (!Number.isInteger(z) || !Number.isInteger(x) || !Number.isInteger(y) || z < 0 || z > 16 || x < 0 || y < 0) {
+    return jsonResponse({ error: 'Bad tile' }, 400);
+  }
+  const max = 2 ** z;
+  if (x >= max || y >= max) {
+    return jsonResponse({ error: 'Bad tile' }, 400);
+  }
+  const upstream = `https://basemaps.cartocdn.com/rastertiles/voyager/${z}/${x}/${y}@2x.png`;
+  const got = await fetch(upstream, {
+    headers: { 'User-Agent': NOMINATIM_UA, Accept: 'image/png' },
+  });
+  if (!got.ok) {
+    return jsonResponse({ error: 'Tile upstream failed', status: got.status }, 502);
+  }
+  return new Response(got.body, {
+    status: 200,
+    headers: {
+      'Content-Type': 'image/png',
+      'Cache-Control': 'public, max-age=86400',
+    },
+  });
 }
 
 function jsonResponse(obj, status = 200) {

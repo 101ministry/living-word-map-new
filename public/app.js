@@ -261,6 +261,13 @@
         : 'Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.';
   }
 
+  function scrollToDownloads() {
+    setControlsDrawerOpen(false);
+    closeDetailSheet();
+    document.getElementById('downloads-panel')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   function scrollToTeachingVideos() {
     setControlsDrawerOpen(false);
     closeDetailSheet();
@@ -299,6 +306,12 @@
     document.getElementById('nav-compare')?.addEventListener('click', goToCompare);
     document.getElementById('nav-videos')?.addEventListener('click', scrollToTeachingVideos);
     document.getElementById('scroll-to-videos')?.addEventListener('click', scrollToTeachingVideos);
+    document.getElementById('nav-downloads')?.addEventListener('click', scrollToDownloads);
+    document.getElementById('scroll-to-downloads')?.addEventListener('click', scrollToDownloads);
+    document.getElementById('downloads-jump-map')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+      document.getElementById('app')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 
     document.getElementById('legend-backdrop')?.addEventListener('click', () => {
       setControlsDrawerOpen(false);

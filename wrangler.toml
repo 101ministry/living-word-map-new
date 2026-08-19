@@ -19,3 +19,8 @@ binding = "ASSETS"
 [vars]
 NOTIFY_EMAIL = "norm@repentance101.com"
 RESEND_FROM = "Living Word Map <notifications@repentance101.com>"
+
+# Large teaching audio lives in R2 (Workers static assets cap files at 25 MiB).
+[[r2_buckets]]
+binding = "DOWNLOADS"
+bucket_name = "living-word-map-downloads"

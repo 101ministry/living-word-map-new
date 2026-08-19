@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=42" />
+  <link rel="stylesheet" href="styles.css?v=43" />
 </head>
 <body>
   <div id="app">
@@ -42,6 +42,7 @@
         </select>
         <button id="reset-view" type="button">Reset</button>
         <button id="scroll-to-videos" type="button" class="header-videos-btn">Videos</button>
+        <button id="scroll-to-downloads" type="button" class="header-videos-btn">Downloads</button>
         <a href="experimental.html" class="header-experimental-link">Experimental</a>
       </div>
     </header>
@@ -59,6 +60,7 @@
           <ul class="mobile-nav-list">
             <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
             <li><button type="button" id="nav-videos" class="mobile-nav-link">Teaching Videos</button></li>
+            <li><button type="button" id="nav-downloads" class="mobile-nav-link">Downloads Section</button></li>
             <li><a href="experimental.html" class="mobile-nav-link">Experimental Builder</a></li>
           </ul>
         </nav>
@@ -317,6 +319,32 @@
         </aside>
       </div>
     </section>
+
+    <section class="downloads-panel teaching-panel" id="downloads-panel" aria-label="Downloads section">
+      <header class="teaching-header">
+        <div>
+          <h2>Downloads Section</h2>
+          <p class="teaching-subtitle">Choose a series. Play in order, or download any piece to your device.</p>
+        </div>
+        <button type="button" id="downloads-jump-map" class="text-btn">Back to map ↑</button>
+      </header>
+      <div class="downloads-series-picker" role="tablist" aria-label="Download series">
+        <button type="button" id="downloads-series-accelerated-btn" class="btn-accent downloads-series-btn is-active" role="tab" aria-selected="true" aria-controls="downloads-series-accelerated" data-series="accelerated">Accelerated Discipleship</button>
+        <button type="button" id="downloads-series-bold-love-btn" class="btn-accent downloads-series-btn" role="tab" aria-selected="false" aria-controls="downloads-series-bold-love" data-series="bold-love">Bold Love</button>
+      </div>
+      <div id="downloads-series-accelerated" class="downloads-series-panel" role="tabpanel" aria-labelledby="downloads-series-accelerated-btn">
+        <p class="downloads-series-desc">Accelerated Discipleship, split from the complete recording into the original sections.</p>
+        <div class="downloads-player-bar">
+          <button type="button" id="downloads-play-all" class="btn-accent">Play all in order</button>
+          <p id="downloads-now-playing" class="downloads-now-playing">Play in order, or download any section to your device.</p>
+        </div>
+        <audio id="downloads-audio" preload="none" controls class="downloads-audio"></audio>
+        <ul id="downloads-list" class="downloads-list"></ul>
+      </div>
+      <div id="downloads-series-bold-love" class="downloads-series-panel hidden" role="tabpanel" aria-labelledby="downloads-series-bold-love-btn" hidden>
+        <p class="downloads-placeholder">Bold Love downloads coming soon.</p>
+      </div>
+    </section>
   </div>
 
   <dialog id="compare-dialog" class="compare-dialog">
@@ -405,8 +433,10 @@
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
   <script src="round1-entry-gate.js?v=4"></script>
-  <script src="app.js?v=12"></script>
+  <script src="app.js?v=13"></script>
   <script src="teaching-videos.js?v=3"></script>
+  <script src="downloads-playlist.js?v=1"></script>
+  <script src="downloads-section.js?v=2"></script>
   <script src="ask-overlay.js?v=11"></script>
 </body>
 </html>
