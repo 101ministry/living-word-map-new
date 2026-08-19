@@ -22,7 +22,7 @@
   };
   const principalityIds = new Set(principalities.map(p => p.id));
 
-  /** Umbrella principalities â€” span many topics; sit on outer arch when selected, excluded from other selections. */
+  /** Umbrella principalities GÇö span many topics; sit on outer arch when selected, excluded from other selections. */
   const OUTER_ARCH_PRINCIPALITY_IDS = new Set([
     'destructive-attitudes-against-god-s-image',   // Destructive Attitudes Against God's Image
     'destructive-identities-against-god',  // Principality of Destructive Identities Against God (Familiar Spirits)
@@ -157,8 +157,7 @@
   }
 
   function isScrolledToTeachingArea() {
-    const marker = document.getElementById('corner-breaker-game')
-      || document.getElementById('teaching-panel');
+    const marker = document.getElementById('teaching-panel');
     if (!marker) return false;
     const rect = marker.getBoundingClientRect();
     return rect.top < window.innerHeight - 72;
@@ -172,8 +171,8 @@
     const type = state.selectedId ? nodeType(state.selectedId) : null;
     const prayerClose = type === 'topic' && isScrolledToTeachingArea();
 
-    btn.textContent = prayerClose ? 'Close prayer' : 'â† Map';
-    btn.setAttribute('aria-label', prayerClose ? 'Close prayer and return to game' : 'Back to map');
+    btn.textContent = prayerClose ? 'Close prayer' : 'GåÉ Map';
+    btn.setAttribute('aria-label', prayerClose ? 'Close prayer and return to map' : 'Back to map');
     dismissX?.classList.toggle('hidden', !prayerClose);
   }
 
@@ -324,8 +323,8 @@
     if (!statusEl || !meta) return;
 
     statusEl.textContent = lib.isComplete(state.language)
-      ? `${meta.native} â€” ${t('prayerLanguageReady')}`
-      : `${meta.native} â€” ${t('mapLanguageNote')}`;
+      ? `${meta.native} GÇö ${t('prayerLanguageReady')}`
+      : `${meta.native} GÇö ${t('mapLanguageNote')}`;
     statusEl.classList.toggle('is-fallback', !lib.isComplete(state.language));
   }
 
@@ -390,7 +389,7 @@
     labelEl.textContent = t('listenPrayer');
     statusEl.textContent = t('audioComingSoon');
     statusEl.className = 'audio-status pending';
-    btnEl.querySelector('.audio-icon').textContent = 'â–¶';
+    btnEl.querySelector('.audio-icon').textContent = 'Gû¦';
 
     if (!src) return;
 
@@ -410,15 +409,15 @@
     btnEl.onclick = () => {
       if (audioEl.paused) {
         audioEl.play();
-        btnEl.querySelector('.audio-icon').textContent = 'âšâš';
+        btnEl.querySelector('.audio-icon').textContent = 'G¥ÜG¥Ü';
       } else {
         audioEl.pause();
-        btnEl.querySelector('.audio-icon').textContent = 'â–¶';
+        btnEl.querySelector('.audio-icon').textContent = 'Gû¦';
       }
     };
 
     audioEl.onended = () => {
-      btnEl.querySelector('.audio-icon').textContent = 'â–¶';
+      btnEl.querySelector('.audio-icon').textContent = 'Gû¦';
     };
   }
 
@@ -472,7 +471,7 @@
 
     const select = document.getElementById('language-select');
     select.innerHTML = catalog.languages.map(lang => {
-      const status = lang.complete ? '' : ' â—¦';
+      const status = lang.complete ? '' : ' Gùª';
       return `<option value="${lang.code}">${languageOptionLabel(lang)}${status}</option>`;
     }).join('');
     select.value = state.language;
@@ -1052,7 +1051,7 @@
     return Math.sqrt(nodeSize(id)) * (isConstellationView() ? 5.2 : 4);
   }
 
-  /** Counterfeit Spirituality ONLY â€” black circle, green door. */
+  /** Counterfeit Spirituality ONLY GÇö black circle, green door. */
   function paintCounterfeitSpiritualityOnly(node, ctx) {
     if (node.x == null || node.y == null) return;
     const id = asNodeId(node);
@@ -1080,7 +1079,7 @@
     ctx.restore();
   }
 
-  /** Occultism and Counterfeit Spirituality â€” green circle, black door. */
+  /** Occultism and Counterfeit Spirituality GÇö green circle, black door. */
   function paintOccultismAndCounterfeit(node, ctx) {
     if (node.x == null || node.y == null) return;
     const id = asNodeId(node);
@@ -1369,7 +1368,7 @@
   }
 
   function updateZoomLabel(zoom) {
-    if (zoomLabel) zoomLabel.textContent = `${zoom.toFixed(2)}Ã—`;
+    if (zoomLabel) zoomLabel.textContent = `${zoom.toFixed(2)}+ù`;
   }
 
   function syncZoomSlider(zoom) {
@@ -1609,7 +1608,7 @@
       const pCount = conn.principalities.length;
       const topicLabel = conn.topics.length === 1 ? 'topic' : 'topics';
       const pLabel = pCount === 1 ? 'principality' : 'principalities';
-      const meta = `${conn.topics.length} ${topicLabel} Â· ${pCount} ${pLabel}`;
+      const meta = `${conn.topics.length} ${topicLabel} -+ ${pCount} ${pLabel}`;
       let doorClass = '';
       let dotColor = nodeColorResolved(id);
       if (type === 'fruit' && id === 'counterfeit-spirituality') {
@@ -1703,7 +1702,7 @@
       selectNode(id);
       return;
     }
-    // Same enlarged hit targets as hover tooltips â€” ForceGraph pointer areas miss some root/fruit clicks.
+    // Same enlarged hit targets as hover tooltips GÇö ForceGraph pointer areas miss some root/fruit clicks.
     const rootOrFruit = pickRootOrFruitAtScreen(ev.clientX, ev.clientY);
     if (rootOrFruit) {
       ev.stopPropagation();
@@ -1816,7 +1815,7 @@
       return `<div class="compare-slot">
         <img src="${src}" alt="" width="28" height="28" />
         <span>${p.name}</span>
-        <button type="button" class="compare-slot-remove" data-compare-remove="${id}" aria-label="Remove ${p.name}">Ã—</button>
+        <button type="button" class="compare-slot-remove" data-compare-remove="${id}" aria-label="Remove ${p.name}">+ù</button>
       </div>`;
     }).join('');
 
@@ -1898,7 +1897,7 @@
         ${sharedRoots.size ? `<p><strong>Roots:</strong> ${[...sharedRoots].slice(0, 8).join(', ')}</p>` : ''}
         ${sharedFruits.size ? `<p><strong>Fruits:</strong> ${[...sharedFruits].slice(0, 8).join(', ')}</p>` : ''}
         ${sharedThemes.length ? `<p><strong>Core themes:</strong> ${sharedThemes.slice(0, 8).join(', ')}</p>` : ''}
-        ${sharedManifestations.length ? `<p><strong>Manifestations:</strong> ${sharedManifestations.slice(0, 10).join(', ')}${sharedManifestations.length > 10 ? 'â€¦' : ''}</p>` : ''}`;
+        ${sharedManifestations.length ? `<p><strong>Manifestations:</strong> ${sharedManifestations.slice(0, 10).join(', ')}${sharedManifestations.length > 10 ? 'GÇª' : ''}</p>` : ''}`;
     } else {
       sharedEl.classList.add('hidden');
       sharedEl.innerHTML = '';
@@ -1916,7 +1915,7 @@
       const manifestationTags = [
         ...uniqueManifestations.slice(0, 24).map(t => `<li class="unique">${t}</li>`),
         ...sharedManifestationsInColumn.slice(0, 12).map(t => `<li class="shared">${t}</li>`),
-      ].join('') || '<li>â€”</li>';
+      ].join('') || '<li>GÇö</li>';
 
       const coreThemeTags = (p.themes || []).slice(0, 12).map(t => `<li>${t}</li>`).join('');
 
@@ -1925,12 +1924,12 @@
           <img src="${src}" alt="" width="52" height="52" />
           <div>
             <h3>${p.name}</h3>
-            <p>${conn.topicCount} topics Â· ${conn.roots.length} roots Â· ${conn.fruits.length} fruits</p>
+            <p>${conn.topicCount} topics -+ ${conn.roots.length} roots -+ ${conn.fruits.length} fruits</p>
           </div>
         </header>
         <section>
           <h4>Character</h4>
-          <p>${p.character || 'â€”'}</p>
+          <p>${p.character || 'GÇö'}</p>
         </section>
         <section>
           <h4>Voice</h4>
@@ -1939,16 +1938,16 @@
         ${coreThemeTags ? `<section><h4>Core themes</h4><ul class="compare-tag-list">${coreThemeTags}</ul></section>` : ''}
         <section>
           <h4>Manifestations</h4>
-          <p class="compare-diff-note">Gold = unique Â· Blue = shared Â· Roots/fruits define topic taxonomy separately</p>
+          <p class="compare-diff-note">Gold = unique -+ Blue = shared -+ Roots/fruits define topic taxonomy separately</p>
           <ul class="compare-tag-list">${manifestationTags}</ul>
         </section>
         <section>
           <h4>Distinct roots</h4>
-          <p>${conn.roots.filter(n => !sharedRoots.has(n)).slice(0, 6).join(', ') || 'â€”'}</p>
+          <p>${conn.roots.filter(n => !sharedRoots.has(n)).slice(0, 6).join(', ') || 'GÇö'}</p>
         </section>
         <section>
           <h4>Distinct fruits</h4>
-          <p>${conn.fruits.filter(n => !sharedFruits.has(n)).slice(0, 6).join(', ') || 'â€”'}</p>
+          <p>${conn.fruits.filter(n => !sharedFruits.has(n)).slice(0, 6).join(', ') || 'GÇö'}</p>
         </section>
       </article>`;
     }).join('');
@@ -2004,11 +2003,11 @@
       if (item.principalities?.length > 1) parts.push(`${item.principalityIds.length} principalities`);
       if (topicRootIds(item).length > 1) parts.push(`${topicRootIds(item).length} roots`);
       if (topicFruitIds(item).length > 1) parts.push(`${topicFruitIds(item).length} fruits`);
-      document.getElementById('detail-meta').textContent = parts.join(' Â· ');
+      document.getElementById('detail-meta').textContent = parts.join(' -+ ');
     } else if (type === 'root' || type === 'fruit') {
       const pCount = conn.principalities.length;
       document.getElementById('detail-meta').textContent =
-        `${connCount} topics Â· spans ${pCount} ${pCount === 1 ? 'principality' : 'principalities'}`;
+        `${connCount} topics -+ spans ${pCount} ${pCount === 1 ? 'principality' : 'principalities'}`;
     } else {
       document.getElementById('detail-meta').textContent =
         `${item.topicCount ?? connCount} topics connected`;
@@ -2060,7 +2059,7 @@
       const rootId = topicRootIds(t)[0];
       const dotColor = fruitId ? colors.resolveFruit(fruitId) : (rootId ? colors.resolveRoot(rootId) : colors.PRINCIPALITY_COLOR);
       const hasVideo = window.VIDEO_DATA?.topicIndex?.[String(t.number)];
-      const videoMark = hasVideo ? '<span class="topic-video-mark" title="Teaching video available">â–¶</span>' : '';
+      const videoMark = hasVideo ? '<span class="topic-video-mark" title="Teaching video available">Gû¦</span>' : '';
       return `<li data-node="topic-${t.id}"><span class="topic-dot" style="background:${dotColor}"></span><span class="num">${String(t.number).padStart(3, '0')}</span>${t.name}${videoMark}</li>`;
     }).join('');
     topicsSection.style.display = conn.topics.length ? '' : 'none';

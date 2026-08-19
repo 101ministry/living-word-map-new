@@ -11,17 +11,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=41" />
-  <link rel="stylesheet" href="corner-breaker.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=42" />
 </head>
 <body>
   <div id="app">
     <header class="header">
-      <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">‚ò∞</button>
+      <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">Gˇ¶</button>
       <div class="header-brand">
         <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
         <h1>Living Word Map</h1>
-        <p class="subtitle"><span id="principality-count">26</span> Principalities ¬∑ <span id="root-count">‚Äî</span> Roots ¬∑ <span id="fruit-count">‚Äî</span> Fruits ¬∑ <span id="topic-count">‚Äî</span> Topics</p>
+        <p class="subtitle"><span id="principality-count">26</span> Principalities -+ <span id="root-count">G«ˆ</span> Roots -+ <span id="fruit-count">G«ˆ</span> Fruits -+ <span id="topic-count">G«ˆ</span> Topics</p>
       </div>
       <div class="header-controls">
         <div class="language-control">
@@ -53,7 +52,7 @@
     <main class="main">
       <aside class="legend" id="legend-panel" aria-label="Legend">
         <div class="legend-drawer-header">
-          <button type="button" id="close-controls" class="legend-close-btn" aria-label="Close filters">√ó</button>
+          <button type="button" id="close-controls" class="legend-close-btn" aria-label="Close filters">+˘</button>
         </div>
         <nav class="mobile-nav" id="mobile-nav" aria-label="Quick navigation">
           <h2>Navigate</h2>
@@ -79,9 +78,9 @@
         </div>
         <div class="filter-subsection">
           <h3>Topic links</h3>
-          <label><input type="checkbox" id="show-topic-root-links" checked /> Topic ‚Üí Root</label>
-          <label><input type="checkbox" id="show-topic-fruit-links" checked /> Topic ‚Üí Fruit</label>
-          <label><input type="checkbox" id="show-topic-principality-links" checked /> Topic ‚Üí Principality</label>
+          <label><input type="checkbox" id="show-topic-root-links" checked /> Topic GÂ∆ Root</label>
+          <label><input type="checkbox" id="show-topic-fruit-links" checked /> Topic GÂ∆ Fruit</label>
+          <label><input type="checkbox" id="show-topic-principality-links" checked /> Topic GÂ∆ Principality</label>
           <label><input type="checkbox" id="show-aggregate-links" checked /> Aggregate links</label>
         </div>
         <div class="compare-panel">
@@ -104,15 +103,15 @@
         <div id="graph-hint" class="graph-hint">Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.</div>
         <div class="graph-zoom-bar" aria-label="Graph magnification">
           <label for="graph-zoom">Magnification</label>
-          <button type="button" id="graph-zoom-out" class="graph-zoom-btn" aria-label="Zoom out">‚àí</button>
+          <button type="button" id="graph-zoom-out" class="graph-zoom-btn" aria-label="Zoom out">GÍ∆</button>
           <input type="range" id="graph-zoom" min="0" max="100" value="50" aria-valuemin="0" aria-valuemax="100" />
           <button type="button" id="graph-zoom-in" class="graph-zoom-btn" aria-label="Zoom in">+</button>
-          <span id="graph-zoom-label" class="graph-zoom-label">1.0√ó</span>
+          <span id="graph-zoom-label" class="graph-zoom-label">1.0+˘</span>
         </div>
 
         <div id="ask-overlay" class="ask-overlay" hidden>
           <div class="ask-overlay-card" role="dialog" aria-modal="true" aria-labelledby="ask-overlay-title">
-            <button type="button" id="ask-overlay-close" class="dialog-close ask-overlay-close" aria-label="Close">√ó</button>
+            <button type="button" id="ask-overlay-close" class="dialog-close ask-overlay-close" aria-label="Close">+˘</button>
             <div class="ask-overlay-body">
               <section id="ask-step-ask" class="ask-overlay-step">
                 <h2 id="ask-overlay-title">Ask about Bloodline Repentance</h2>
@@ -141,12 +140,12 @@
         <div class="detail-sheet-header">
           <div class="detail-sheet-handle" aria-hidden="true"></div>
           <div class="detail-sheet-toolbar">
-            <button type="button" id="close-detail" class="detail-close-btn">‚Üê Map</button>
-            <button type="button" id="close-detail-x" class="detail-dismiss-x hidden" aria-label="Close prayer">√ó</button>
+            <button type="button" id="close-detail" class="detail-close-btn">GÂ… Map</button>
+            <button type="button" id="close-detail-x" class="detail-dismiss-x hidden" aria-label="Close prayer">+˘</button>
           </div>
           <nav id="globe-detail-nav" class="globe-detail-nav hidden" aria-label="Globe navigation">
-            <button type="button" id="globe-back-country" class="detail-close-btn">‚Üê Country map</button>
-            <button type="button" id="globe-back-globe" class="detail-close-btn">‚Üê Globe view</button>
+            <button type="button" id="globe-back-country" class="detail-close-btn">GÂ… Country map</button>
+            <button type="button" id="globe-back-globe" class="detail-close-btn">GÂ… Globe view</button>
           </nav>
         </div>
         <section id="ask-answer-panel" class="ask-answer-panel hidden" aria-label="Matching topics and teachings">
@@ -167,7 +166,7 @@
           </div>
           <aside id="detail-discuss-invite" class="detail-discuss-invite hidden">
             <h3>Discuss this with other people</h3>
-            <p>You are invited to talk through what you found with others in the Repentance101 community ‚Äî questions, testimonies, and next steps belong in conversation, not only on a map.</p>
+            <p>You are invited to talk through what you found with others in the Repentance101 community G«ˆ questions, testimonies, and next steps belong in conversation, not only on a map.</p>
             <a class="ask-overlay-link" href="https://repentance101ministry.com/" target="_blank" rel="noopener noreferrer">Come join the Repentance101 Tribe</a>
           </aside>
         </section>
@@ -189,7 +188,7 @@
           <section class="detail-section" id="detail-quote-section">
             <h3>Voice</h3>
             <blockquote id="detail-quote"></blockquote>
-            <button type="button" id="next-quote" class="text-btn">Another statement ‚Üí</button>
+            <button type="button" id="next-quote" class="text-btn">Another statement GÂ∆</button>
           </section>
           <section class="detail-section" id="detail-themes-section">
             <h3>Core Themes</h3>
@@ -197,7 +196,7 @@
           </section>
           <section class="detail-section" id="detail-manifestations-section">
             <h3>Manifestations</h3>
-            <p class="detail-section-note">From the master principality list ‚Äî additive to roots &amp; fruits.</p>
+            <p class="detail-section-note">From the master principality list G«ˆ additive to roots &amp; fruits.</p>
             <ul id="detail-manifestations" class="tag-list"></ul>
           </section>
           <section class="detail-section" id="detail-connections-section">
@@ -211,7 +210,7 @@
           <section class="detail-section hidden" id="detail-teaching-section">
             <h3>Teaching Video</h3>
             <p class="detail-section-note" id="detail-teaching-note"></p>
-            <button type="button" id="detail-watch-teaching" class="btn-accent">Watch teaching ‚Üì</button>
+            <button type="button" id="detail-watch-teaching" class="btn-accent">Watch teaching GÂÙ</button>
           </section>
           <section class="detail-section hidden" id="detail-prayer-section">
             <h3>Prayer</h3>
@@ -220,7 +219,7 @@
             <div class="audio-player" id="topic-audio-player">
               <audio id="topic-audio" preload="none"></audio>
               <button type="button" id="topic-audio-btn" class="audio-btn" disabled>
-                <span class="audio-icon">‚ñ∂</span>
+                <span class="audio-icon">G˚¶</span>
                 <span id="topic-audio-label">Listen</span>
               </button>
               <span class="audio-status" id="topic-audio-status"></span>
@@ -262,7 +261,7 @@
           href="https://repentance101ministry.com/"
           target="_blank"
           rel="noopener noreferrer"
-        >Open ministry site ‚Üó</a>
+        >Open ministry site GÂ˘</a>
       </header>
 
       <div class="ministry-embed-boxes" aria-label="Ministry channel boxes">
@@ -303,9 +302,9 @@
       <header class="teaching-header">
         <div>
           <h2 id="teaching-series-title">Teaching Videos</h2>
-          <p class="teaching-subtitle">Repentance Project 3.0 ‚Äî expounding on prayer topics. Scroll down from the map to watch; click a topic timestamp to jump in the video and on the map.</p>
+          <p class="teaching-subtitle">Repentance Project 3.0 G«ˆ expounding on prayer topics. Scroll down from the map to watch; click a topic timestamp to jump in the video and on the map.</p>
         </div>
-        <button type="button" id="teaching-jump-map" class="text-btn">Back to map ‚Üë</button>
+        <button type="button" id="teaching-jump-map" class="text-btn">Back to map GÂÊ</button>
       </header>
       <div class="teaching-layout">
         <div class="teaching-player-wrap">
@@ -317,54 +316,6 @@
           <ul id="teaching-chapters" class="teaching-chapters"></ul>
         </aside>
       </div>
-      <section id="corner-breaker-game" class="corner-breaker" aria-label="Corner Breaker mini-game">
-        <header class="corner-breaker-header">
-          <div>
-            <h3>Corner Breaker</h3>
-            <p class="corner-breaker-sub">Jump to any chapter ‚Äî watch time for game bonuses counts while the video plays (unmuted), not from the start of the video.</p>
-          </div>
-          <button type="button" id="corner-breaker-copy-score" class="corner-breaker-copy-btn">Copy score</button>
-        </header>
-        <div class="corner-breaker-stats">
-          <span>Level <strong id="corner-breaker-level">1</strong></span>
-          <span>Blocks <strong id="corner-breaker-blocks-left">64</strong></span>
-          <span>Click <strong id="corner-breaker-power">1</strong></span>
-          <span>Score <strong id="corner-breaker-coins">0</strong></span>
-          <span>Idle drip <strong id="corner-breaker-drip">‚Äî</strong></span>
-          <span>Watch time <strong id="corner-breaker-watch">0s</strong></span>
-        </div>
-        <dialog id="corner-breaker-location-dialog" class="corner-breaker-dialog">
-          <form class="corner-breaker-dialog-inner" id="corner-breaker-location-form">
-            <header class="corner-breaker-dialog-header">
-              <h4>Where are you watching from?</h4>
-              <button type="button" id="corner-breaker-location-close" class="dialog-close" aria-label="Close">√ó</button>
-            </header>
-            <p class="corner-breaker-dialog-sub">Enter your state or country to boost your click power.</p>
-            <label class="corner-breaker-dialog-label" for="corner-breaker-location-input">State or country</label>
-            <input id="corner-breaker-location-input" class="corner-breaker-dialog-input" type="text" autocomplete="address-level1" placeholder="e.g. Texas or Kenya" />
-            <div class="corner-breaker-dialog-actions">
-              <button type="submit" class="corner-breaker-dialog-submit">Continue (+30 bonus to click power)</button>
-              <button type="button" id="corner-breaker-location-decline" class="corner-breaker-dialog-decline">No, stay where I am</button>
-            </div>
-          </form>
-        </dialog>
-        <div class="corner-breaker-play-area">
-          <div id="corner-breaker-grid" class="corner-breaker-grid" role="grid" aria-label="8 by 8 block grid"></div>
-          <div class="corner-breaker-side-rail">
-            <p id="corner-breaker-mute-hint" class="corner-breaker-mute-hint hidden" aria-live="polite">
-              Unmute the video to resume incremental points.
-            </p>
-            <aside id="corner-breaker-hook-panel" class="corner-breaker-hook-panel hidden" aria-label="Bonus hook question">
-              <h4 class="corner-breaker-hook-title">Where are you watching from?</h4>
-              <p class="corner-breaker-hook-sub">Skipped the bonus? Answer here for +30 click power.</p>
-              <label class="corner-breaker-hook-label" for="corner-breaker-hook-input">State or country</label>
-              <input id="corner-breaker-hook-input" class="corner-breaker-hook-input" type="text" autocomplete="address-level1" placeholder="e.g. Texas or Kenya" />
-              <button type="button" id="corner-breaker-hook-submit" class="corner-breaker-hook-submit">Claim +30 bonus</button>
-            </aside>
-          </div>
-        </div>
-        <p id="corner-breaker-message" class="corner-breaker-message" aria-live="polite"></p>
-      </section>
     </section>
   </div>
 
@@ -375,7 +326,7 @@
           <h2>Principality Comparison</h2>
           <p class="compare-dialog-meta">Shared themes and connections appear once; unique traits stay in each column.</p>
         </div>
-        <button type="submit" class="dialog-close" aria-label="Close">√ó</button>
+        <button type="submit" class="dialog-close" aria-label="Close">+˘</button>
       </header>
       <div id="compare-shared" class="compare-shared"></div>
       <div id="compare-results" class="compare-grid"></div>
@@ -389,13 +340,13 @@
           <h2 id="core-prayer-title">Core Prayer</h2>
           <p id="core-prayer-instruction" class="prayer-dialog-meta"></p>
         </div>
-        <button type="submit" class="dialog-close" aria-label="Close">√ó</button>
+        <button type="submit" class="dialog-close" aria-label="Close">+˘</button>
       </header>
       <p class="prayer-fallback hidden" id="core-prayer-fallback"></p>
       <div class="audio-player" id="core-audio-player">
         <audio id="core-audio" preload="none"></audio>
         <button type="button" id="core-audio-btn" class="audio-btn" disabled>
-          <span class="audio-icon">‚ñ∂</span>
+          <span class="audio-icon">G˚¶</span>
           <span id="core-audio-label">Listen</span>
         </button>
         <span class="audio-status" id="core-audio-status"></span>
@@ -406,7 +357,7 @@
 
   <dialog id="round1-entry-videos-dialog" class="survey-gate-dialog round1-video-gate-dialog">
     <div class="survey-gate-dialog-inner">
-      <button type="button" id="round1-entry-videos-dismiss" class="dialog-close survey-gate-close" aria-label="Close">√ó</button>
+      <button type="button" id="round1-entry-videos-dismiss" class="dialog-close survey-gate-close" aria-label="Close">+˘</button>
       <h2>Before you get started on Round 1, have you completed the following videos:</h2>
       <ul class="round1-video-gate-list">
         <li>
@@ -436,7 +387,7 @@
         <a class="survey-gate-link" href="https://repentance101ministry.com/channels/tough-questions" target="_blank" rel="noopener noreferrer">Ask why these videos are required</a>
       </p>
       <p id="round1-entry-countdown" class="round1-entry-countdown" aria-live="polite">
-        Continuing in <span id="round1-entry-countdown-sec">28</span>s‚Ä¶
+        Continuing in <span id="round1-entry-countdown-sec">28</span>sG«™
       </p>
     </div>
   </dialog>
@@ -454,9 +405,8 @@
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
   <script src="round1-entry-gate.js?v=4"></script>
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
   <script src="teaching-videos.js?v=3"></script>
   <script src="ask-overlay.js?v=11"></script>
-  <script src="corner-breaker.js"></script>
 </body>
 </html>
