@@ -2849,7 +2849,7 @@ window.ROUND1_DATA = {
                  ],
     "version":  1,
     "calReturnMinutes":  2,
-    "calLink":  "https://cal.com/repentance101meeting/no-heart-change",
+    "calLink":  "https://cal.com/repentance101ministry",
     "topics":  {
                    "484":  {
                                "round1Preview":  "I agree that I am guilty of familiar identity of fear of disapproval from a root of fear and insecurity.\r\n\r\nI agree that I made it more important than God, loved it more than God, and preferred it instead of God.\r\n\r\nFâ€¦",

@@ -179,7 +179,7 @@ for ($n = 1; $n -le 666; $n++) {
 
 $payload = @{
     version = 1
-    calLink = 'https://cal.com/repentance101meeting/no-heart-change'
+    calLink = 'https://cal.com/repentance101ministry'
     calReturnMinutes = 2
     topicCount = 666
     order = $order
