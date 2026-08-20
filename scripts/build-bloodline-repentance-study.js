@@ -17,6 +17,7 @@ const CANON = pyToValue(
 const TITLE = "Why is Bloodline Repentance blessed by God according to the Bible?";
 const OUT_DATA = path.join(ROOT, "data", "WHY-BLOODLINE-REPENTANCE-BLESSED.html");
 const OUT_PUBLIC = path.join(ROOT, "public", "why-bloodline-repentance.html");
+const OUT_PAGE1 = path.join(ROOT, "data", "WHY-BLOODLINE-REPENTANCE-BLESSED-page1.html");
 
 const INTRO_PARAS = [
   "God blesses bloodline repentance because He already attached His mercy, His covenant, His Spirit, and the Blood of Jesus to a people and their children — not only to a private moment. The Core Prayer and Rounds 1–3 do not invent a new religion. They speak what Scripture already commands: confess, including the iniquity of the fathers; forgive as you have been forgiven; remit rather than retain; lay the life and the line on His altar; let the Blood cover the record and speak instead.",
@@ -217,13 +218,72 @@ function render() {
   return parts.join("\n");
 }
 
+function renderPage1() {
+  const nClause = clauseCount();
+  const nCanon = canonCount();
+  const parts = [];
+  parts.push("<!DOCTYPE html>");
+  parts.push('<html lang="en">');
+  parts.push("<head>");
+  parts.push('<meta charset="UTF-8" />');
+  parts.push(`<title>${esc(TITLE)} — page 1</title>`);
+  parts.push(`<style>
+html, body {
+  margin: 0; padding: 0;
+  width: 816px; height: 1056px;
+  overflow: hidden;
+  background: #f7f0e4; color: #1c1410;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 12.5px; line-height: 1.4;
+}
+.wrap { padding: 48px 52px 40px; }
+h1 {
+  font-size: 26px; line-height: 1.2; margin: 0 0 8px;
+  color: #6b3a22; border-bottom: 3px solid #c4a574; padding-bottom: 8px;
+}
+.subtitle { color: #5c4a3a; font-style: italic; margin: 0 0 16px; }
+.intro, .bless-box {
+  background: #efe4d0; border-left: 4px solid #6b3a22;
+  padding: 10px 14px; margin: 0 0 14px;
+}
+.intro p { margin: 0 0 10px; }
+.intro p:last-child { margin-bottom: 0; }
+h2 { font-size: 18px; color: #6b3a22; margin: 0 0 8px; }
+ul.bless { margin: 6px 0 0; padding-left: 18px; }
+ul.bless li { margin: 5px 0; }
+.counts { font-size: 12px; color: #5c4a3a; margin: 0; }
+.kicker { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b3a22; margin: 0 0 10px; }
+</style>`);
+  parts.push("</head><body><div class=\"wrap\">");
+  parts.push('<p class="kicker">Living Word Map · page 1</p>');
+  parts.push(`<h1>${esc(TITLE)}</h1>`);
+  parts.push('<p class="subtitle">Scripture warrant for the Core Prayer and Rounds 1–3 — how God attaches mercy to a line, not only to a moment.</p>');
+  parts.push('<div class="intro">');
+  for (const p of INTRO_PARAS) parts.push(`<p>${esc(p)}</p>`);
+  parts.push("</div>");
+  parts.push('<div class="bless-box">');
+  parts.push("<h2>How God blesses it</h2>");
+  parts.push('<ul class="bless">');
+  for (const [label, refs] of HOW_GOD_BLESSES) {
+    parts.push(`<li><strong>${esc(label)}.</strong> ${esc(refs)}</li>`);
+  }
+  parts.push("</ul></div>");
+  parts.push(
+    `<p class="counts">${CLAUSES.length} prayer lines · ${nClause} supporting references · ${CANON.length} books · ${nCanon} Genesis–Revelation entries. Download the PDF or scroll below Downloads to read the rest.</p>`
+  );
+  parts.push("</div></body></html>");
+  return parts.join("\n");
+}
+
 const htmlText = render();
 fs.mkdirSync(path.dirname(OUT_DATA), { recursive: true });
 fs.writeFileSync(OUT_DATA, htmlText, "utf8");
 fs.mkdirSync(path.dirname(OUT_PUBLIC), { recursive: true });
 fs.copyFileSync(OUT_DATA, OUT_PUBLIC);
+fs.writeFileSync(OUT_PAGE1, renderPage1(), "utf8");
 console.log("Wrote", OUT_DATA);
 console.log("Copied", OUT_PUBLIC);
+console.log("Wrote page 1", OUT_PAGE1);
 console.log(
   `Clauses ${CLAUSES.length} / clause refs ${clauseCount()} / books ${CANON.length} / canon entries ${canonCount()}`
 );
