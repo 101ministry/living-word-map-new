@@ -261,7 +261,14 @@
         : 'Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.';
   }
 
+  function closeParchmentIfOpen() {
+    if (window.ParchmentLanding?.isOpen?.()) {
+      window.ParchmentLanding.close({ showAsk: false });
+    }
+  }
+
   function scrollToDownloads() {
+    closeParchmentIfOpen();
     setControlsDrawerOpen(false);
     closeDetailSheet();
     document.getElementById('downloads-panel')
@@ -269,6 +276,7 @@
   }
 
   function scrollToTeachingVideos() {
+    closeParchmentIfOpen();
     setControlsDrawerOpen(false);
     closeDetailSheet();
     const target = (isGlobeFruitFocus() && isMobileLayout())
@@ -2193,6 +2201,7 @@
     }
     if (e.target.value === 'why-bloodline') {
       e.target.value = state.viewMode || 'constellation';
+      closeParchmentIfOpen();
       document.getElementById('study-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }

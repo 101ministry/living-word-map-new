@@ -597,7 +597,11 @@
     if (event.key === 'Escape' && !overlay.hidden) closeOverlay();
   });
 
-  if (isConstellationView()) openOverlay(true);
+  function parchmentIsOpen() {
+    return document.getElementById('pdf-landing')?.classList.contains('is-open');
+  }
+
+  if (isConstellationView() && !parchmentIsOpen()) openOverlay(true);
 
   window.AskOverlay = { open: openOverlay, close: closeOverlay };
 })();

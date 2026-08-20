@@ -4,35 +4,6 @@
   const audio = document.getElementById('downloads-audio');
   const nowPlaying = document.getElementById('downloads-now-playing');
   const playAllBtn = document.getElementById('downloads-play-all');
-  const picker = document.querySelector('.downloads-series-picker');
-  const panels = {
-    accelerated: document.getElementById('downloads-series-accelerated'),
-    'bold-love': document.getElementById('downloads-series-bold-love'),
-  };
-
-  function selectSeries(series) {
-    const buttons = picker?.querySelectorAll('.downloads-series-btn') || [];
-    buttons.forEach((btn) => {
-      const active = btn.dataset.series === series;
-      btn.classList.toggle('is-active', active);
-      btn.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-    Object.entries(panels).forEach(([key, panel]) => {
-      if (!panel) return;
-      const show = key === series;
-      panel.classList.toggle('hidden', !show);
-      panel.hidden = !show;
-    });
-    if (series !== 'accelerated' && audio && !audio.paused) {
-      audio.pause();
-    }
-  }
-
-  picker?.addEventListener('click', (event) => {
-    const btn = event.target.closest('.downloads-series-btn');
-    if (!btn?.dataset.series) return;
-    selectSeries(btn.dataset.series);
-  });
 
   if (!data?.pieces?.length || !listEl || !audio) return;
 
@@ -62,7 +33,6 @@
   function playIndex(index) {
     const piece = pieces[index];
     if (!piece) return;
-    selectSeries('accelerated');
     setActive(index);
     audio.src = audioUrl(piece, false);
     audio.play().catch(() => {});
