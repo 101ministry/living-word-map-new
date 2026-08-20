@@ -368,25 +368,7 @@
   }
 
   function startCountdown() {
-    if (overlay.hidden) return;
-    if (!state.answerVisibleAt) return;
-    if (Date.now() - state.answerVisibleAt < COUNTDOWN_DELAY_MS - 250) return;
-    const countdownBox = document.getElementById('ask-countdown-box');
-    const display = document.getElementById('ask-countdown');
-    const token = state.countdownToken;
-    stopCountdown();
-    stopBlink();
-    state.countdownRemaining = COUNTDOWN_SEC;
-    if (display) display.textContent = formatCountdown(state.countdownRemaining);
-    if (countdownBox) countdownBox.hidden = false;
-    state.countdownTimer = setInterval(() => {
-      if (state.countdownRemaining > 0) state.countdownRemaining -= 1;
-      if (display) display.textContent = formatCountdown(state.countdownRemaining);
-      if (state.countdownRemaining <= 0) {
-        stopCountdown();
-        blinkThenClose(token);
-      }
-    }, 1000);
+    return;
   }
 
   function showShareSection() {
@@ -396,13 +378,6 @@
 
   function scheduleCountdownAfterAnswer() {
     hideCountdownBox();
-    const token = ++state.countdownToken;
-    const shownAt = state.answerVisibleAt;
-    state.countdownDelayTimer = setTimeout(() => {
-      if (token !== state.countdownToken) return;
-      if (shownAt !== state.answerVisibleAt) return;
-      startCountdown();
-    }, COUNTDOWN_DELAY_MS);
   }
 
   function hideDiscussInvite() {
