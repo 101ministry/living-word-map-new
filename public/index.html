@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Living Word Map</title>
+  <title>Why is Bloodline Repentance blessed by God according to the Bible?</title>
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -11,16 +11,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=43" />
+  <link rel="stylesheet" href="styles.css?v=45" />
 </head>
 <body>
   <div id="app">
+    <section id="study-landing" class="study-landing" aria-label="Why is Bloodline Repentance blessed by God according to the Bible?">
+      <div class="study-page1-frame">
+        <div id="study-page1" class="study-doc">
+          <p class="study-load-status">Loading the first page…</p>
+        </div>
+        <div class="study-page1-fade" aria-hidden="true"></div>
+      </div>
+      <div class="study-landing-cta">
+        <a class="btn-accent" href="why-bloodline-repentance.pdf" download="Why is Bloodline Repentance blessed by God according to the Bible.pdf">Download the rest (PDF)</a>
+        <a class="text-btn study-landing-link" href="#study-full">Or scroll below Downloads to read it</a>
+        <a class="text-btn study-landing-link" href="#map">Living Word Map ↓</a>
+      </div>
+    </section>
+
     <header class="header">
       <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">☰</button>
       <div class="header-brand">
         <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
         <h1>Living Word Map</h1>
         <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
+        <a class="header-study-link" href="#study-full">Why is Bloodline Repentance blessed by God according to the Bible?</a>
       </div>
       <div class="header-controls">
         <div class="language-control">
@@ -37,6 +52,7 @@
           <option value="explore">Explore All</option>
           <option value="globe">Globe Word Map</option>
           <option value="ask">Ask about Bloodline Repentance</option>
+          <option value="why-bloodline">Why is Bloodline Repentance blessed by God according to the Bible?</option>
           <option value="compare">Compare Principalities</option>
           <option value="experimental">Experimental</option>
         </select>
@@ -49,7 +65,7 @@
 
     <div id="legend-backdrop" class="drawer-backdrop" hidden aria-hidden="true"></div>
 
-    <div class="workspace">
+    <div class="workspace" id="map">
     <main class="main">
       <aside class="legend" id="legend-panel" aria-label="Legend">
         <div class="legend-drawer-header">
@@ -58,6 +74,7 @@
         <nav class="mobile-nav" id="mobile-nav" aria-label="Quick navigation">
           <h2>Navigate</h2>
           <ul class="mobile-nav-list">
+            <li><a href="#study-full" class="mobile-nav-link">Why is Bloodline Repentance blessed by God according to the Bible?</a></li>
             <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
             <li><button type="button" id="nav-videos" class="mobile-nav-link">Teaching Videos</button></li>
             <li><button type="button" id="nav-downloads" class="mobile-nav-link">Downloads Section</button></li>
@@ -118,6 +135,10 @@
               <section id="ask-step-ask" class="ask-overlay-step">
                 <h2 id="ask-overlay-title">Ask about Bloodline Repentance</h2>
                 <p class="ask-overlay-lead">Type your question. We will point you to matching topics and teaching videos on this map.</p>
+                <p class="ask-overlay-study">
+                  <a class="ask-overlay-link" href="#study-full">Why is Bloodline Repentance blessed by God according to the Bible?</a>
+                  <span class="ask-overlay-study-note">First page on landing · download the PDF · or read below Downloads</span>
+                </p>
                 <form id="ask-overlay-form">
                   <label class="ask-overlay-label" for="ask-overlay-input">Your question</label>
                   <input id="ask-overlay-input" name="question" type="text" maxlength="600" required placeholder="e.g. Why does fear keep running in my family?" autocomplete="off" />
@@ -345,6 +366,22 @@
         <p class="downloads-placeholder">Bold Love downloads coming soon.</p>
       </div>
     </section>
+
+    <section class="study-full-panel" id="study-full" aria-label="Why is Bloodline Repentance blessed by God according to the Bible? Full study">
+      <header class="teaching-header">
+        <div>
+          <h2>Why is Bloodline Repentance blessed by God according to the Bible?</h2>
+          <p class="teaching-subtitle">Full study. Download the PDF, or keep reading here.</p>
+        </div>
+        <div class="study-full-actions">
+          <a class="btn-accent" href="why-bloodline-repentance.pdf" download="Why is Bloodline Repentance blessed by God according to the Bible.pdf">Download PDF</a>
+          <button type="button" id="study-jump-map" class="text-btn">Back to map ↑</button>
+        </div>
+      </header>
+      <div id="study-full-body" class="study-doc study-full-body">
+        <p class="study-load-status">Loading the study…</p>
+      </div>
+    </section>
   </div>
 
   <dialog id="compare-dialog" class="compare-dialog">
@@ -433,10 +470,11 @@
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
   <script src="round1-entry-gate.js?v=4"></script>
-  <script src="app.js?v=13"></script>
+  <script src="app.js?v=15"></script>
   <script src="teaching-videos.js?v=3"></script>
   <script src="downloads-playlist.js?v=1"></script>
   <script src="downloads-section.js?v=2"></script>
   <script src="ask-overlay.js?v=11"></script>
+  <script src="study-landing.js?v=1"></script>
 </body>
 </html>

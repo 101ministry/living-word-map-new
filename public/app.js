@@ -310,7 +310,11 @@
     document.getElementById('scroll-to-downloads')?.addEventListener('click', scrollToDownloads);
     document.getElementById('downloads-jump-map')?.addEventListener('click', () => {
       setControlsDrawerOpen(false);
-      document.getElementById('app')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('map')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    document.getElementById('study-jump-map')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+      document.getElementById('map')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     document.getElementById('legend-backdrop')?.addEventListener('click', () => {
@@ -2185,6 +2189,11 @@
   document.getElementById('view-mode').addEventListener('change', e => {
     if (e.target.value === 'experimental') {
       window.location.href = 'experimental.html';
+      return;
+    }
+    if (e.target.value === 'why-bloodline') {
+      e.target.value = state.viewMode || 'constellation';
+      document.getElementById('study-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }
     if (e.target.value === 'ask') {
