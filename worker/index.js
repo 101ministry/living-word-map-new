@@ -10,7 +10,7 @@ const NOMINATIM_PATH = '/api/nominatim';
 const ACCOUNT_PATH = '/api/experimental-account';
 const MAP_TILE_PATH = '/api/map-tile';
 const DOWNLOADS_PREFIX = '/audio/accelerated-discipleship/';
-const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://living-word-map.norm-f37.workers.dev/)';
+const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://map.repentance101.com/)';
 
 export default {
   async fetch(request, env, ctx) {
@@ -234,7 +234,7 @@ function formatEmailText(fields, rawJson) {
 
 async function sendBookingEmail(env, data, rawJson) {
   const fields = extractBookingFields(data);
-  const to = env.NOTIFY_EMAIL || 'norm@repentance101.com';
+  const to = env.NOTIFY_EMAIL || 'repentance101ministry.admin@gmail.com';
   const from = env.RESEND_FROM || 'Living Word Map <notifications@repentance101.com>';
   const subject = `[LWM] ${fields.trigger}: ${fields.guestName || fields.title}`;
   const text = formatEmailText(fields, rawJson);

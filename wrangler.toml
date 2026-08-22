@@ -17,8 +17,13 @@ binding = "ASSETS"
 # id = "<namespace id>"
 
 [vars]
-NOTIFY_EMAIL = "norm@repentance101.com"
+NOTIFY_EMAIL = "repentance101ministry.admin@gmail.com"
 RESEND_FROM = "Living Word Map <notifications@repentance101.com>"
+
+# Public URL (update DNS CNAME when Cloudflare shows the target after first deploy)
+[[routes]]
+pattern = "map.repentance101.com"
+custom_domain = true
 
 # Large teaching audio lives in R2 (Workers static assets cap files at 25 MiB).
 [[r2_buckets]]

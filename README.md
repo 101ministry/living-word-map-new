@@ -2,7 +2,7 @@
 
 Interactive graph of **26 Principalities**, **Roots**, **Fruits**, and **666 topics** — with character voices, manifestations, and multi-language prayers.
 
-**Open the map:** [https://living-word-map.norm-f37.workers.dev/](https://living-word-map.norm-f37.workers.dev/)
+**Open the map:** [https://map.repentance101.com/](https://map.repentance101.com/)
 
 ---
 
@@ -65,18 +65,18 @@ Some build inputs (Obsidian lore, transcripts) may still live outside this repo 
 
 ## Deployment
 
-- **Repository:** [github.com/repentance101/living-word-map](https://github.com/repentance101/living-word-map) (private)
-- **Live site:** [living-word-map.norm-f37.workers.dev](https://living-word-map.norm-f37.workers.dev/)
+- **Repository:** private GitHub repo (see `scripts/migrate-new-github-cloudflare.ps1` after account migration)
+- **Live site:** [map.repentance101.com](https://map.repentance101.com/)
 - **Host:** Cloudflare Worker serves `public/` static assets and `POST /api/cal-booking` for Cal.com webhooks
 - Push to `main` → GitHub Action runs `wrangler deploy` (requires secrets below)
 
 ### Cal.com webhook URL
 
 ```
-https://living-word-map.norm-f37.workers.dev/api/cal-booking
+https://map.repentance101.com/api/cal-booking
 ```
 
-Ping test should return **200** once the Worker is deployed. Real bookings email **norm@repentance101.com** when `RESEND_API_KEY` is set.
+Ping test should return **200** once the Worker is deployed. Real bookings email **repentance101ministry.admin@gmail.com** when `RESEND_API_KEY` is set.
 
 ### One-time Cloudflare setup
 
