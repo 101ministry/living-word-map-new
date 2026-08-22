@@ -78,12 +78,17 @@
 #  30 | presentation | treachery-against-others (cont.) | TOPICS-666-PRESENTATION DAY 30
 #  31 | presentation | treachery-against-others (cont.) | TOPICS-666-PRESENTATION DAY 31
 #  32 | presentation | using-and-abusing-others (start) | TOPICS-666-PRESENTATION DAY 32
+#  33 | presentation | using-and-abusing-others (end)   | TOPICS-666-PRESENTATION DAY 33
+#  34 | presentation | trading-floor-transactions       | TOPICS-666-PRESENTATION DAY 34
+#  35 | presentation | trading-floor-transactions (end) | TOPICS-666-PRESENTATION DAY 35
+#  36 | presentation | gluttony                         | TOPICS-666-PRESENTATION DAY 36
+#  37 | presentation | self-righteousness (start)       | TOPICS-666-PRESENTATION DAY 37
 
 # --- NEXT EXPECTED (update after each new batch of links) ---
-nextDay=33
+nextDay=38
 nextMode=presentation
-nextPrincipalityId=using-and-abusing-others
-nextTitleSuffix=Using and Abusing Others
+nextPrincipalityId=self-righteousness
+nextTitleSuffix=Self-Righteousness
 
 # After divination, continue chart order with full-principality days unless split is indicated
 # in a new presentation file section.

@@ -165,6 +165,9 @@ function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbe
         if ($day -eq 28) { $preferredMin = 217; $preferredMax = 240 }
         elseif ($day -ge 29 -and $day -le 31) { $preferredMin = 241; $preferredMax = 278 }
         elseif ($day -ge 32 -and $day -le 33) { $preferredMin = 279; $preferredMax = 302 }
+        elseif ($day -ge 34 -and $day -le 35) { $preferredMin = 303; $preferredMax = 325 }
+        elseif ($day -eq 36) { $preferredMin = 326; $preferredMax = 334 }
+        elseif ($day -ge 37) { $preferredMin = 335; $preferredMax = 354 }
 
         $ordered = @($candidates | Sort-Object number)
         if ($null -ne $preferredMin) {
@@ -476,6 +479,7 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         $chapters = @($chapters | Sort-Object startSeconds)
     }
 
+    $numberedChapters = @($chapters | Where-Object { $null -ne $_.topicNumber })
     $videoObj = [ordered]@{
         key          = "day-$day-part-$part"
         day          = $day
@@ -483,8 +487,12 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         title        = [string]$video.title
         youtubeId    = [string]$video.youtubeId
         url          = [string]$video.url
-        topicStart   = if ($chapters.Count) { $chapters[0].topicNumber } else { $null }
-        topicEnd     = if ($chapters.Count) { $chapters[-1].topicNumber } else { $null }
+        topicStart   = if ($video.PSObject.Properties.Name -contains 'topicStart' -and $null -ne $video.topicStart) {
+                          [int]$video.topicStart
+                      } elseif ($numberedChapters.Count) { $numberedChapters[0].topicNumber } else { $null }
+        topicEnd     = if ($video.PSObject.Properties.Name -contains 'topicEnd' -and $null -ne $video.topicEnd) {
+                          [int]$video.topicEnd
+                      } elseif ($numberedChapters.Count) { $numberedChapters[-1].topicNumber } else { $null }
         chapters     = $chapters
     }
     if ($video.PSObject.Properties.Name -contains 'description' -and $video.description) {

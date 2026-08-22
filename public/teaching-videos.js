@@ -42,6 +42,18 @@
     return 'BONUS';
   }
 
+  function numberedChapters(video) {
+    return (video?.chapters || []).filter((ch) => ch.topicNumber != null && !ch.isBonus);
+  }
+
+  function videoTopicRange(v) {
+    const numbered = numberedChapters(v);
+    const start = v.topicStart || numbered[0]?.topicNumber;
+    const end = v.topicEnd || numbered[numbered.length - 1]?.topicNumber;
+    if (!start || !end) return '';
+    return `<span class="teaching-video-range">#${String(start).padStart(3, '0')}–${String(end).padStart(3, '0')}</span>`;
+  }
+
   function videoLabel(v) {
     if (v.part > 1) return `Day ${v.day} (Part ${v.part})`;
     return `Day ${v.day}`;
@@ -54,9 +66,7 @@
 
   function renderPicker() {
     videoPicker.innerHTML = videos.map(v => {
-      const range = v.topicStart && v.topicEnd
-        ? `<span class="teaching-video-range">#${String(v.topicStart).padStart(3, '0')}–${String(v.topicEnd).padStart(3, '0')}</span>`
-        : '';
+      const range = videoTopicRange(v);
       const active = activeVideo && v.key === activeVideo.key ? ' is-active' : '';
       return `<button type="button" class="teaching-video-btn${active}" data-key="${v.key}">${videoLabel(v)}${range}</button>`;
     }).join('');
@@ -99,13 +109,14 @@
     }
 
     const chapters = activeVideo.chapters || [];
+    const topicCount = numberedChapters(activeVideo).length;
     if (!chapters.length) {
       chapterList.innerHTML = '<li class="teaching-chapter-empty">Topic timestamps for this video are being indexed. You can still watch the full teaching below.</li>';
-      setChapterMeta(chapterMeta, activeVideo, 0);
+      setChapterMeta(chapterMeta, activeVideo, topicCount);
       return;
     }
 
-    setChapterMeta(chapterMeta, activeVideo, chapters.length);
+    setChapterMeta(chapterMeta, activeVideo, topicCount);
     chapterList.innerHTML = chapters.map(ch => {
       const numLabel = chapterNumLabel(ch);
       const topicAttr = ch.isBonus ? '' : ` data-topic="${ch.topicNumber}"`;
