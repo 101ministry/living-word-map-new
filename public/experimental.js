@@ -71,6 +71,7 @@
     caseSelect: document.getElementById('exp-case'),
     caseName: document.getElementById('exp-case-name'),
     caseGate: document.getElementById('exp-case-gate'),
+    people: document.getElementById('exp-people'),
     editProfile: document.getElementById('exp-edit-profile'),
     reset: document.getElementById('exp-profile-reset'),
     heartDialog: document.getElementById('exp-heart-dialog'),
@@ -219,6 +220,93 @@
 
   let accountApiReady = true;
 
+  async function presenceToken() {
+    if (!state.passwordHash) return '';
+    const enc = new TextEncoder();
+    const buf = await crypto.subtle.digest('SHA-256', enc.encode(`presence:${state.passwordHash}`));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 32);
+  }
+
+  function sanitizePresenceRegions(list, mine) {
+    const regions = Array.isArray(list) ? list.filter(r => r && r.key && r.name).map(r => ({
+      key: String(r.key),
+      name: String(r.name),
+      iso2: String(r.iso2 || ''),
+      grain: String(r.grain || ''),
+      count: Math.max(1, Number(r.count) || 1),
+    })) : [];
+    if (mine && !regions.some(r => r.key === mine.key)) {
+      regions.push({ key: mine.key, name: mine.name, iso2: mine.iso2, grain: mine.grain, count: 1 });
+    }
+    return regions;
+  }
+
+  async function resolvePublicRegion() {
+    if (!state.profile || typeof GEO.publicRegionFromProfile !== 'function') return null;
+    let worldAdm = null;
+    try {
+      await Promise.all([
+        typeof GEO.loadCountryCodes === 'function' ? GEO.loadCountryCodes() : null,
+        GEO.loadWorldStates(),
+      ]);
+      worldAdm = await GEO.loadWorldStates();
+    } catch { /* name-only fallback */ }
+    return GEO.publicRegionFromProfile(state.profile, worldAdm);
+  }
+
+  async function refreshPeopleMap() {
+    const mine = await resolvePublicRegion();
+    let remote = [];
+    try {
+      const res = await fetch('/api/experimental-presence');
+      if (res.ok) {
+        const data = await res.json();
+        remote = data.regions || [];
+      }
+    } catch { /* local only */ }
+    if (typeof SCENE.setPeopleRegions === 'function') {
+      SCENE.setPeopleRegions(sanitizePresenceRegions(remote, mine));
+    }
+    return mine;
+  }
+
+  async function publishPresence() {
+    const mine = await refreshPeopleMap();
+    if (RECORD_MODE || !mine || !state.passwordHash) return;
+    try {
+      const token = await presenceToken();
+      if (!token) return;
+      const res = await fetch('/api/experimental-presence', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token,
+          key: mine.key,
+          name: mine.name,
+          iso2: mine.iso2,
+          grain: mine.grain,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (typeof SCENE.setPeopleRegions === 'function') {
+          SCENE.setPeopleRegions(sanitizePresenceRegions(data.regions || [], mine));
+        }
+      }
+    } catch { /* stay on the local highlight */ }
+  }
+
+  function setPeopleMode(on) {
+    const next = !!on;
+    document.body.classList.toggle('exp-people-on', next);
+    if (els.people) {
+      els.people.classList.toggle('is-on', next);
+      els.people.setAttribute('aria-pressed', next ? 'true' : 'false');
+    }
+    if (typeof SCENE.setPeopleView === 'function') SCENE.setPeopleView(next);
+    if (next) refreshPeopleMap();
+  }
+
   async function persistAccount() {
     const name = normalizePersonName(state.profile?.name);
     if (!name || !state.passwordHash) return;
@@ -277,6 +365,19 @@
     const wrap = document.getElementById('exp-spouse-wrap');
     if (!wrap) return;
     wrap.hidden = els.form?.married?.value !== 'yes';
+    syncRequiredFields();
+  }
+
+  function syncRequiredFields() {
+    if (!els.form) return;
+    const live = !RECORD_MODE;
+    const marriedYes = els.form.married?.value === 'yes';
+    if (els.form.personName) els.form.personName.required = live;
+    if (els.form.password) els.form.password.required = live && !state.passwordHash;
+    if (els.form.spouseName) els.form.spouseName.required = live && marriedYes;
+    ['city', 'county', 'state', 'country', 'continent'].forEach(name => {
+      if (els.form[name]) els.form[name].required = true;
+    });
   }
 
   function resetProfileForm() {
@@ -284,6 +385,7 @@
     els.form.reset();
     if (els.caseGate) els.caseGate.value = '';
     toggleSpouseField();
+    syncRequiredFields();
     if (els.geoStatus) {
       els.geoStatus.textContent = '';
       els.geoStatus.classList.remove('is-ok', 'is-warn', 'is-error');
@@ -1053,6 +1155,7 @@
     els.form.continent.value = profile.continent || '';
     if (els.form.password) els.form.password.value = '';
     toggleSpouseField();
+    syncRequiredFields();
   }
 
   function showGate(editing) {
@@ -1067,6 +1170,7 @@
           ? 'Leave blank to keep your password'
           : 'To open this case on another device';
     }
+    syncRequiredFields();
   }
 
   function showApp() {
@@ -1091,6 +1195,7 @@
       sceneReady = true;
     }
     SCENE.setProfile(state.profile);
+    publishPresence();
     updateCaseName();
     if (typeof SCENE.resize === 'function') {
       requestAnimationFrame(() => SCENE.resize());
@@ -1125,22 +1230,23 @@
       continent: fd.get('continent'),
     };
     els.geoStatus.classList.remove('is-ok', 'is-warn', 'is-error');
+    const missing = [];
     if (!RECORD_MODE) {
-      if (!personName) {
-        els.geoStatus.classList.add('is-error');
-        els.geoStatus.textContent = 'Enter the case name.';
-        return;
-      }
-      if (fields.married === 'yes' && !String(fields.spouseName || '').trim()) {
-        els.geoStatus.classList.add('is-error');
-        els.geoStatus.textContent = "Enter the spouse's name.";
-        return;
-      }
-      if (!password && !state.passwordHash) {
-        els.geoStatus.classList.add('is-error');
-        els.geoStatus.textContent = 'Choose a password so you can open this case on another device.';
-        return;
-      }
+      if (!personName) missing.push('Name');
+      if (!fields.gender) missing.push('Gender');
+      if (!fields.married) missing.push('Married?');
+      if (fields.married === 'yes' && !String(fields.spouseName || '').trim()) missing.push("Spouse's name");
+      if (!password && !state.passwordHash) missing.push('Password');
+    }
+    if (!String(fields.city || '').trim()) missing.push('City');
+    if (!String(fields.county || '').trim()) missing.push('County / parish / province');
+    if (!String(fields.state || '').trim()) missing.push('State');
+    if (!String(fields.country || '').trim()) missing.push('Country');
+    if (!String(fields.continent || '').trim()) missing.push('Continent');
+    if (missing.length) {
+      els.geoStatus.classList.add('is-error');
+      els.geoStatus.textContent = `All boxes are required. Fill in: ${missing.join(', ')}.`;
+      return;
     }
     els.submit.disabled = true;
     els.geoStatus.textContent = 'Placing your map…';
@@ -1278,6 +1384,12 @@
       radio.addEventListener('change', toggleSpouseField);
     });
   }
+  if (els.people) {
+    els.people.addEventListener('click', () => {
+      const on = !(typeof SCENE.isPeopleView === 'function' && SCENE.isPeopleView());
+      setPeopleMode(on);
+    });
+  }
   els.editProfile.addEventListener('click', () => showGate(true));
   if (els.nextTopic) {
     els.nextTopic.addEventListener('click', () => {
@@ -1298,6 +1410,7 @@
       populateLanguageSelect();
       populateCaseSelects();
       applyUiChrome();
+      syncRequiredFields();
       if (!state.profile) {
         showGate(false);
         return;

@@ -8,7 +8,9 @@ const WEBHOOK_PATH = '/api/cal-booking';
 const GEOCODE_PATH = '/api/geocode';
 const NOMINATIM_PATH = '/api/nominatim';
 const ACCOUNT_PATH = '/api/experimental-account';
+const PRESENCE_PATH = '/api/experimental-presence';
 const MAP_TILE_PATH = '/api/map-tile';
+const PRESENCE_KV_KEY = 'presence-v1';
 const DOWNLOADS_PREFIX = '/audio/accelerated-discipleship/';
 const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://map.repentance101.com/)';
 
@@ -50,6 +52,13 @@ export default {
     if (url.pathname === ACCOUNT_PATH || url.pathname === `${ACCOUNT_PATH}/`) {
       if (request.method === 'POST') {
         return handleExperimentalAccount(request, env);
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (url.pathname === PRESENCE_PATH || url.pathname === `${PRESENCE_PATH}/`) {
+      if (request.method === 'GET' || request.method === 'POST') {
+        return handleExperimentalPresence(request, env);
       }
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
@@ -431,6 +440,76 @@ async function handleExperimentalAccount(request, env) {
     }),
   );
   return jsonResponse({ ok: true, saved: true });
+}
+
+function aggregatePresence(store) {
+  const counts = new Map();
+  const tokens = store?.tokens && typeof store.tokens === 'object' ? store.tokens : {};
+  for (const rec of Object.values(tokens)) {
+    const key = String(rec?.key || '');
+    if (!key) continue;
+    const cur = counts.get(key) || {
+      key,
+      name: String(rec.name || ''),
+      iso2: String(rec.iso2 || ''),
+      grain: String(rec.grain || ''),
+      count: 0,
+    };
+    cur.count += 1;
+    counts.set(key, cur);
+  }
+  return [...counts.values()];
+}
+
+async function handleExperimentalPresence(request, env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) {
+    if (request.method === 'GET') return jsonResponse({ ok: true, regions: [], localOnly: true });
+    return jsonResponse({ ok: false, error: 'not-configured' }, 501);
+  }
+
+  let store = { tokens: {} };
+  try {
+    store = (await kv.get(PRESENCE_KV_KEY, { type: 'json' })) || { tokens: {} };
+  } catch {
+    store = { tokens: {} };
+  }
+  if (!store.tokens || typeof store.tokens !== 'object') store.tokens = {};
+
+  if (request.method === 'GET') {
+    return jsonResponse({ ok: true, regions: aggregatePresence(store) });
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400);
+  }
+
+  if (body?.city != null || body?.lat != null || body?.lon != null || body?.county != null) {
+    return jsonResponse({ error: 'city is not shared' }, 400);
+  }
+
+  const token = String(body?.token || '');
+  const key = String(body?.key || '');
+  const name = String(body?.name || '').trim();
+  const iso2 = String(body?.iso2 || '').toLowerCase();
+  const grain = String(body?.grain || '').toLowerCase();
+  if (
+    !/^[a-fA-F0-9]{16,64}$/.test(token) ||
+    !/^[a-z]{2}:(state|nation|country):[a-z0-9-]{1,64}$/.test(key) ||
+    !/^[a-z]{2}$/.test(iso2) ||
+    !/^(state|nation|country)$/.test(grain) ||
+    !name ||
+    name.length > 64
+  ) {
+    return jsonResponse({ error: 'Invalid presence' }, 400);
+  }
+
+  store.tokens[token] = { key, name, iso2, grain, updatedAt: Date.now() };
+  await kv.put(PRESENCE_KV_KEY, JSON.stringify(store));
+  return jsonResponse({ ok: true, saved: true, regions: aggregatePresence(store) });
 }
 
 async function handleMapTile(request) {

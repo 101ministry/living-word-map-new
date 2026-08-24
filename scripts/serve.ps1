@@ -84,6 +84,32 @@ function Handle-Api($context) {
     $abs = $context.Request.Url.AbsolutePath.TrimEnd('/')
     $qs = $context.Request.QueryString
 
+    if ($abs -eq '/api/map-tile') {
+        $z = 0; $x = 0; $y = 0
+        [int]::TryParse([string]$qs['z'], [ref]$z) | Out-Null
+        [int]::TryParse([string]$qs['x'], [ref]$x) | Out-Null
+        [int]::TryParse([string]$qs['y'], [ref]$y) | Out-Null
+        if ($z -lt 0 -or $z -gt 16 -or $x -lt 0 -or $y -lt 0) {
+            Send-Text $context 'Bad tile' 400 'text/plain; charset=utf-8'
+            return $true
+        }
+        $max = [int][Math]::Pow(2, $z)
+        if ($x -ge $max -or $y -ge $max) {
+            Send-Text $context 'Bad tile' 400 'text/plain; charset=utf-8'
+            return $true
+        }
+        $tileUrl = "https://basemaps.cartocdn.com/rastertiles/voyager/$z/$x/${y}@2x.png"
+        try {
+            $resp = Invoke-WebRequest -Uri $tileUrl -UserAgent $nominatimUa -UseBasicParsing -TimeoutSec 20
+            $context.Response.Headers['Cache-Control'] = 'public, max-age=86400'
+            Send-Bytes $context $resp.Content 'image/png'
+        }
+        catch {
+            Send-Text $context 'Tile upstream failed' 502 'text/plain; charset=utf-8'
+        }
+        return $true
+    }
+
     if ($abs -eq '/api/geocode') {
         $q = [string]$qs['q']
         if ([string]::IsNullOrWhiteSpace($q) -or $q.Length -lt 2) {
@@ -225,6 +251,84 @@ function Handle-Api($context) {
         }
         ($store | ConvertTo-Json -Depth 20) | Set-Content -LiteralPath $storePath -Encoding UTF8
         Send-Text $context '{"ok":true,"saved":true}' 200 'application/json; charset=utf-8'
+        return $true
+    }
+
+    if ($abs -eq '/api/experimental-presence') {
+        $storePath = Join-Path (Split-Path $root -Parent) '.experimental-presence.json'
+        $tokens = @{}
+        if (Test-Path -LiteralPath $storePath) {
+            try {
+                $parsed = Get-Content -LiteralPath $storePath -Raw -Encoding UTF8 | ConvertFrom-Json
+                if ($parsed.tokens) {
+                    $parsed.tokens.PSObject.Properties | ForEach-Object { $tokens[$_.Name] = $_.Value }
+                }
+            }
+            catch { $tokens = @{} }
+        }
+
+        function Get-PresenceRegions($tokenMap) {
+            $counts = @{}
+            foreach ($entry in $tokenMap.GetEnumerator()) {
+                $rec = $entry.Value
+                $k = [string]$rec.key
+                if ([string]::IsNullOrWhiteSpace($k)) { continue }
+                if (-not $counts.ContainsKey($k)) {
+                    $counts[$k] = @{
+                        key   = $k
+                        name  = [string]$rec.name
+                        iso2  = [string]$rec.iso2
+                        grain = [string]$rec.grain
+                        count = 0
+                    }
+                }
+                $counts[$k].count = [int]$counts[$k].count + 1
+            }
+            return @($counts.Values)
+        }
+
+        if ($context.Request.HttpMethod -eq 'GET') {
+            $out = @{ ok = $true; regions = @(Get-PresenceRegions $tokens) }
+            Send-Text $context ($out | ConvertTo-Json -Compress -Depth 6) 200 'application/json; charset=utf-8'
+            return $true
+        }
+        if ($context.Request.HttpMethod -ne 'POST') {
+            Send-Text $context '{"error":"Method not allowed"}' 405 'application/json; charset=utf-8'
+            return $true
+        }
+        $reader = New-Object System.IO.StreamReader($context.Request.InputStream, [System.Text.Encoding]::UTF8)
+        $raw = $reader.ReadToEnd()
+        $reader.Close()
+        try {
+            $body = $raw | ConvertFrom-Json
+        }
+        catch {
+            Send-Text $context '{"error":"Invalid JSON"}' 400 'application/json; charset=utf-8'
+            return $true
+        }
+        if ($null -ne $body.city -or $null -ne $body.lat -or $null -ne $body.lon -or $null -ne $body.county) {
+            Send-Text $context '{"error":"city is not shared"}' 400 'application/json; charset=utf-8'
+            return $true
+        }
+        $token = [string]$body.token
+        $key = [string]$body.key
+        $name = [string]$body.name
+        $iso2 = ([string]$body.iso2).ToLowerInvariant()
+        $grain = ([string]$body.grain).ToLowerInvariant()
+        if ($token -notmatch '^[a-fA-F0-9]{16,64}$' -or $key -notmatch '^[a-z]{2}:(state|nation|country):[a-z0-9-]{1,64}$' -or $iso2 -notmatch '^[a-z]{2}$' -or $grain -notmatch '^(state|nation|country)$' -or [string]::IsNullOrWhiteSpace($name) -or $name.Length -gt 64) {
+            Send-Text $context '{"error":"Invalid presence"}' 400 'application/json; charset=utf-8'
+            return $true
+        }
+        $tokens[$token] = @{
+            key       = $key
+            name      = $name.Trim()
+            iso2      = $iso2
+            grain     = $grain
+            updatedAt = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+        }
+        (@{ tokens = $tokens } | ConvertTo-Json -Depth 6) | Set-Content -LiteralPath $storePath -Encoding UTF8
+        $out = @{ ok = $true; saved = $true; regions = @(Get-PresenceRegions $tokens) }
+        Send-Text $context ($out | ConvertTo-Json -Compress -Depth 6) 200 'application/json; charset=utf-8'
         return $true
     }
 

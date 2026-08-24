@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=41" />
   <link rel="stylesheet" href="round2.css?v=9" />
-  <link rel="stylesheet" href="experimental.css?v=8" />
+  <link rel="stylesheet" href="experimental.css?v=11" />
   <script>
     (function () {
       var rec = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
@@ -38,6 +38,7 @@
         Or pick a <strong>case-load preview</strong> to see how that country’s map draws.
         Location stays in this browser.
       </p>
+      <p class="exp-gate-required">All boxes are required.</p>
 
       <div class="exp-gate-toolbar">
         <button type="button" id="exp-profile-reset" class="round2-btn-ghost">Reset</button>
@@ -45,7 +46,7 @@
 
       <label class="exp-field exp-live-only">
         <span>Name</span>
-        <input type="text" name="personName" maxlength="80" placeholder="The person this case is for" />
+        <input type="text" name="personName" maxlength="80" required placeholder="The person this case is for" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
 
       <fieldset class="exp-fieldset">
@@ -60,7 +61,7 @@
         <label><input type="radio" name="married" value="no" /> No</label>
         <label class="exp-field exp-live-only exp-spouse-field" id="exp-spouse-wrap" hidden>
           <span>Spouse's name</span>
-          <input type="text" name="spouseName" maxlength="80" placeholder="Spouse's name" />
+          <input type="text" name="spouseName" maxlength="80" placeholder="Spouse's name" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
         </label>
       </fieldset>
 
@@ -72,19 +73,19 @@
       </label>
       <label class="exp-field">
         <span>City</span>
-        <input type="text" name="city" required maxlength="80" placeholder="e.g. Raleigh, Lagos, São Paulo" />
+        <input type="text" name="city" required maxlength="80" placeholder="e.g. Raleigh, Lagos, São Paulo" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
       <label class="exp-field">
         <span>County / parish / province</span>
-        <input type="text" name="county" maxlength="80" placeholder="e.g. Wake, County Cork, Ontario" />
+        <input type="text" name="county" required maxlength="80" placeholder="e.g. Wake, County Cork, Ontario" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
       <label class="exp-field">
         <span>State</span>
-        <input type="text" name="state" required maxlength="80" placeholder="e.g. North Carolina, England, Queensland" />
+        <input type="text" name="state" required maxlength="80" placeholder="e.g. North Carolina, England, Queensland" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
       <label class="exp-field">
         <span>Country</span>
-        <input type="text" name="country" required maxlength="80" placeholder="e.g. United States, Kenya, Brazil" />
+        <input type="text" name="country" required maxlength="80" placeholder="e.g. United States, Kenya, Brazil" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
       <label class="exp-field">
         <span>Continent</span>
@@ -101,7 +102,7 @@
       </label>
       <label class="exp-field exp-live-only">
         <span>Password</span>
-        <input type="password" name="password" maxlength="120" placeholder="To open this case on another device" />
+        <input type="password" name="password" maxlength="120" required placeholder="To open this case on another device" autocomplete="new-password" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
 
       <p id="exp-geo-status" class="exp-geo-status" aria-live="polite"></p>
@@ -145,6 +146,7 @@
           <select id="exp-lang" class="round-lang-select" aria-label="Prayer language"></select>
         </label>
         <span id="exp-progress">Loading…</span>
+        <button type="button" id="exp-people" class="round2-btn-ghost exp-people-btn" aria-pressed="false">People</button>
         <button type="button" id="exp-edit-profile" class="round2-btn-ghost exp-edit-profile">Profile</button>
       </div>
     </header>
@@ -172,6 +174,11 @@
             <div class="exp-hud-label">builders on site</div>
             <div id="exp-hud-section" class="exp-hud-section"></div>
           </div>
+          <p id="exp-people-privacy" class="exp-people-privacy">
+            Your city stays on this device. On the shared People map, others only see
+            your state (California, not Los Angeles) or, in the United Kingdom,
+            England, Scotland, Wales, or Northern Ireland — never your city or county.
+          </p>
           <p id="exp-scene-caption" class="exp-scene-caption"></p>
         </div>
 
@@ -220,8 +227,8 @@
   <script src="round1-data.js?v=11"></script>
   <script src="round2-data.js?v=11"></script>
   <script src="round3-data.js?v=11"></script>
-  <script src="experimental-geo.js?v=8"></script>
-  <script src="experimental-scene.js?v=12"></script>
-  <script src="experimental.js?v=8"></script>
+  <script src="experimental-geo.js?v=14"></script>
+  <script src="experimental-scene.js?v=16"></script>
+  <script src="experimental.js?v=11"></script>
 </body>
 </html>

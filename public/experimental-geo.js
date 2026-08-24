@@ -51,6 +51,70 @@
     { id: 'ca-on', label: 'Canada · Ontario', city: 'Toronto', state: 'Ontario', country: 'Canada', continent: 'North America', countryCode: 'ca', lat: 43.65, lon: -79.38 },
   ];
 
+  // FAA Contractions, Appendix A — two-letter state and territory abbreviations
+  // https://www.faa.gov/air_traffic/publications/atpubs/cnt_html/appendix_a.html
+  const FAA_US_REGIONS = [
+    ['Alabama', 'AL'],
+    ['Alaska', 'AK'],
+    ['Arizona', 'AZ'],
+    ['Arkansas', 'AR'],
+    ['American Samoa', 'AS'],
+    ['California', 'CA'],
+    ['Colorado', 'CO'],
+    ['Connecticut', 'CT'],
+    ['Delaware', 'DE'],
+    ['District of Columbia', 'DC'],
+    ['Florida', 'FL'],
+    ['Georgia', 'GA'],
+    ['Guam', 'GU'],
+    ['Hawaii', 'HI'],
+    ['Idaho', 'ID'],
+    ['Illinois', 'IL'],
+    ['Indiana', 'IN'],
+    ['Iowa', 'IA'],
+    ['Kansas', 'KS'],
+    ['Kentucky', 'KY'],
+    ['Louisiana', 'LA'],
+    ['Maine', 'ME'],
+    ['Maryland', 'MD'],
+    ['Massachusetts', 'MA'],
+    ['Michigan', 'MI'],
+    ['Minnesota', 'MN'],
+    ['Mississippi', 'MS'],
+    ['Missouri', 'MO'],
+    ['Montana', 'MT'],
+    ['Nebraska', 'NE'],
+    ['Nevada', 'NV'],
+    ['New Hampshire', 'NH'],
+    ['New Jersey', 'NJ'],
+    ['New Mexico', 'NM'],
+    ['New York', 'NY'],
+    ['North Carolina', 'NC'],
+    ['North Dakota', 'ND'],
+    ['Northern Mariana Islands', 'MP'],
+    ['Ohio', 'OH'],
+    ['Oklahoma', 'OK'],
+    ['Oregon', 'OR'],
+    ['Pennsylvania', 'PA'],
+    ['Puerto Rico', 'PR'],
+    ['Rhode Island', 'RI'],
+    ['South Carolina', 'SC'],
+    ['South Dakota', 'SD'],
+    ['Tennessee', 'TN'],
+    ['Texas', 'TX'],
+    ['Trust Territories', 'TT'],
+    ['Utah', 'UT'],
+    ['Vermont', 'VT'],
+    ['Virginia', 'VA'],
+    ['Virgin Islands', 'VI'],
+    ['Washington', 'WA'],
+    ['West Virginia', 'WV'],
+    ['Wisconsin', 'WI'],
+    ['Wyoming', 'WY'],
+  ];
+  const FAA_US_BY_NAME = Object.fromEntries(FAA_US_REGIONS.map(([name, abbr]) => [normName(name), { official: name, abbr }]));
+  const FAA_US_BY_ABBR = Object.fromEntries(FAA_US_REGIONS.map(([name, abbr]) => [abbr, { official: name, abbr, key: normName(name) }]));
+
   const US_STATES = {
     alabama: { abbr: 'AL', lat: 32.8, lon: -86.8, neighbors: ['tennessee', 'georgia', 'florida', 'mississippi'] },
     alaska: { abbr: 'AK', lat: 64.2, lon: -153.5, neighbors: [] },
@@ -130,11 +194,21 @@
   }
 
   function lookupState(name) {
-    const n = normName(name);
-    if (US_STATES[n]) return { key: n, ...US_STATES[n] };
-    const byAbbr = Object.entries(US_STATES).find(([, v]) => v.abbr.toLowerCase() === n);
-    if (byAbbr) return { key: byAbbr[0], ...byAbbr[1] };
-    return null;
+    const raw = String(name || '').trim();
+    const n = normName(raw);
+    let faa = FAA_US_BY_NAME[n];
+    if (!faa && /^[A-Za-z]{2}$/.test(raw)) faa = FAA_US_BY_ABBR[raw.toUpperCase()];
+    if (!faa) return null;
+    const key = faa.key || n;
+    const extra = US_STATES[key] || {};
+    return {
+      key,
+      official: faa.official,
+      abbr: faa.abbr,
+      lat: extra.lat,
+      lon: extra.lon,
+      neighbors: extra.neighbors || [],
+    };
   }
 
   function milesBetween(lat1, lon1, lat2, lon2) {
@@ -181,9 +255,65 @@
     return out;
   }
 
+  let countryCodePack = null;
+  let countryByName = null;
+  let countryByIso2 = null;
+
+  function indexCountryCodes(pack) {
+    countryCodePack = pack || { regions: [], aliases: {} };
+    countryByName = new Map();
+    countryByIso2 = new Map();
+    (countryCodePack.regions || []).forEach(r => {
+      const iso2 = String(r.iso2 || '').toUpperCase();
+      if (!iso2) return;
+      const rec = {
+        official: r.name,
+        iso2,
+        iso3: String(r.iso3 || '').toUpperCase(),
+        continent: r.continent || '',
+      };
+      countryByIso2.set(iso2, rec);
+      countryByName.set(normName(r.name), rec);
+    });
+    Object.entries(countryCodePack.aliases || {}).forEach(([alias, code]) => {
+      const rec = countryByIso2.get(String(code || '').toUpperCase());
+      if (rec) countryByName.set(normName(alias), rec);
+    });
+  }
+
+  async function loadCountryCodes() {
+    if (countryByIso2) return countryCodePack;
+    try {
+      // SUNY International Country Codes = ISO 3166-1 alpha-2
+      // https://www.suny.edu/media/suny/content-assets/documents/international-student/InternationalCountryCodes.pdf
+      indexCountryCodes(await fetchJson('experimental/geo/country-codes.json'));
+    } catch {
+      indexCountryCodes({ regions: [], aliases: {} });
+    }
+    return countryCodePack;
+  }
+
+  function lookupCountry(nameOrCode) {
+    if (!countryByIso2) return null;
+    const raw = String(nameOrCode || '').trim();
+    if (!raw) return null;
+    if (/^[A-Za-z]{2}$/.test(raw)) return countryByIso2.get(raw.toUpperCase()) || null;
+    if (/^[A-Za-z]{3}$/.test(raw)) {
+      const want = raw.toUpperCase();
+      for (const rec of countryByIso2.values()) {
+        if (rec.iso3 === want) return rec;
+      }
+      return null;
+    }
+    return countryByName.get(normName(raw)) || null;
+  }
+
   function inferCountryCode(country, state) {
+    const hit = lookupCountry(country);
+    if (hit) return String(hit.iso2 || '').toLowerCase();
+    if (lookupState(state) || lookupState(country)) return 'us';
     const n = normName(country);
-    if (lookupState(state) || /united states|^usa$|^u\.s\.a?$/.test(n)) return 'us';
+    if (/united states|^usa$|^u\.s\.a?$/.test(n)) return 'us';
     if (/puerto rico/.test(n) || /puerto rico/.test(normName(state))) return 'pr';
     if (/^england$|united kingdom|^uk$|^britain$|great britain/.test(n)) return 'gb';
     if (n === 'uganda') return 'ug';
@@ -242,7 +372,11 @@
     const x = normName(a);
     const y = normName(b);
     if (!x || !y) return false;
-    return x === y || x.includes(y) || y.includes(x);
+    if (x === y) return true;
+    const short = x.length <= y.length ? x : y;
+    const long = x.length <= y.length ? y : x;
+    if (short.length < 4) return false;
+    return long.includes(short);
   }
 
   async function geocodeViaOpenMeteo(city, state, country) {
@@ -373,6 +507,16 @@
     'isolated_dwelling', 'retail', 'industrial',
   ]);
   const GB_NATIONS = new Set(['england', 'scotland', 'wales', 'northern ireland']);
+  const GB_NI = new Set([
+    'antrim', 'ards', 'armagh', 'ballmena', 'ballymena', 'ballymoney', 'banbridge', 'belfast',
+    'carrickfergus', 'castlereagh', 'coleraine', 'cookstown', 'craigavon', 'derry', 'down',
+    'dungannon', 'fermanagh', 'larne', 'limavady', 'lisburn', 'magherafelt', 'moyle',
+    'newry and mourne', 'newtownabbey', 'north down', 'omagh', 'strabane', 'mid ulster',
+  ]);
+  const STATE_GRAIN = new Set([
+    'us', 'ca', 'mx', 'au', 'br', 'ar', 'in', 'de', 'my', 'ng', 'za', 'ph', 'id', 'pk',
+    'cn', 'jp', 'kr', 'tr', 'it', 'es', 'fr', 'nl', 'pl', 'ua', 'ru', 'ke', 'et', 'cd',
+  ]);
 
   function hasAreaGeom(gj) {
     return gj && (gj.type === 'Polygon' || gj.type === 'MultiPolygon');
@@ -540,9 +684,52 @@
   function matchAdminFeature(pack, state, lat, lon) {
     const feats = pack?.features || [];
     if (!feats.length) return null;
-    let feat = feats.find(f => namesMatch(f.properties?.name, state));
+    const faa = lookupState(state);
+    let feat = null;
+    if (faa) {
+      feat = feats.find(f => {
+        const name = normName(f.properties?.name);
+        const postal = String(f.properties?.postal || f.properties?.iso || '').toUpperCase();
+        return name === faa.key || postal === faa.abbr || postal === `US-${faa.abbr}` || postal.endsWith(faa.abbr);
+      });
+    }
+    if (!feat) {
+      const want = normName(state);
+      feat = feats.find(f => normName(f.properties?.name) === want);
+    }
     if (!feat && Number.isFinite(lat) && Number.isFinite(lon)) {
       feat = feats.find(f => pointInGeometry(f.geometry, lon, lat));
+    }
+    return feat || null;
+  }
+
+  function matchWorldState(worldAdm, cc, state, lat, lon) {
+    const feats = worldAdm?.features || [];
+    if (!feats.length) return null;
+    const code = String(cc || '').toLowerCase();
+    const pool = code ? feats.filter(f => f.properties?.iso2 === code) : feats;
+    const faa = (code === 'us' || !code) ? lookupState(state) : null;
+    let feat = null;
+    if (faa) {
+      feat = pool.find(f => {
+        const name = normName(f.properties?.name);
+        const postal = String(f.properties?.postal || '').toUpperCase();
+        return name === faa.key || postal === faa.abbr;
+      });
+    }
+    if (!feat) {
+      const want = normName(state);
+      const postal = String(state || '').trim().toUpperCase();
+      feat = pool.find(f => {
+        const name = normName(f.properties?.name);
+        const code2 = String(f.properties?.postal || '').toUpperCase();
+        if (want && name === want) return true;
+        if (postal.length === 2 && code2 === postal) return true;
+        return false;
+      });
+    }
+    if (!feat && Number.isFinite(lat) && Number.isFinite(lon)) {
+      feat = pool.find(f => pointInGeometry(f.geometry, lon, lat));
     }
     return feat || null;
   }
@@ -678,29 +865,22 @@
 
   function countryFeature(world, cc, countryName) {
     const feats = world?.features || [];
-    const code = String(cc || '').toLowerCase();
-    let feat = feats.find(f => f.properties?.iso2 === code);
-    if (!feat && countryName) feat = feats.find(f => namesMatch(f.properties?.name, countryName));
+    const suny = lookupCountry(cc) || lookupCountry(countryName);
+    const code = String(suny?.iso2 || cc || '').toLowerCase();
+    let feat = code ? feats.find(f => f.properties?.iso2 === code) : null;
+    if (!feat && suny?.official) {
+      feat = feats.find(f => normName(f.properties?.name) === normName(suny.official));
+    }
+    if (!feat && countryName) {
+      const want = normName(countryName);
+      feat = feats.find(f => normName(f.properties?.name) === want);
+    }
     return feat || null;
   }
 
   function isoFromCountryName(world, country) {
     const feat = countryFeature(world, '', country);
     return feat?.properties?.iso2 || '';
-  }
-
-  function matchWorldState(worldAdm, cc, state, lat, lon) {
-    const feats = worldAdm?.features || [];
-    if (!feats.length) return null;
-    const code = String(cc || '').toLowerCase();
-    const pool = code ? feats.filter(f => f.properties?.iso2 === code) : feats;
-    const postal = String(state || '').trim().toUpperCase();
-    let feat = pool.find(f => namesMatch(f.properties?.name, state) || (postal && f.properties?.postal === postal));
-    if (!feat && Number.isFinite(lat) && Number.isFinite(lon)) {
-      feat = pool.find(f => pointInGeometry(f.geometry, lon, lat));
-    }
-    if (!feat && state) feat = feats.find(f => namesMatch(f.properties?.name, state));
-    return feat || null;
   }
 
   function matchUsCounty(counties, profile, lat, lon) {
@@ -785,8 +965,9 @@
 
   function wrapStateFeat(feat, pack) {
     if (!feat?.geometry) return null;
+    const faa = lookupState(feat.properties?.name) || lookupState(feat.properties?.postal);
     return wrapBound(
-      feat.properties?.name,
+      faa?.official || feat.properties?.name,
       feat.properties?.kind || pack?.kind || 'state',
       feat.geometry,
       pack ? 'local-admin' : 'world-states',
@@ -816,7 +997,11 @@
       } catch { /* ignore */ }
     }
 
-    const [world, worldAdm] = await Promise.all([loadWorldCountries(), loadWorldStates()]);
+    const [world, worldAdm] = await Promise.all([
+      loadWorldCountries(),
+      loadWorldStates(),
+      loadCountryCodes(),
+    ]);
     const countryFeat = countryFeature(world, cc, country);
     if (!cc && countryFeat) cc = countryFeat.properties.iso2;
     if (!cc) cc = isoFromCountryName(world, country);
@@ -838,6 +1023,9 @@
         ? wrapBound(countryFeat.properties.name, 'country', countryFeat.geometry, 'world-countries')
         : null,
       world,
+      statesInCountry: (worldAdm.features || []).filter(f => f.properties?.iso2 === cc),
+      countiesInState: [],
+      publicRegion: publicRegionFromProfile({ ...profile, countryCode: cc || profile.countryCode }, worldAdm),
     };
     if (!stack.state && stack.country && CITY_STATES.has(cc)) {
       stack.state = { ...stack.country, kind: 'state' };
@@ -847,7 +1035,20 @@
     let countyBound = null;
     try {
       const packed = await usCountiesPromise;
-      if (packed) countyBound = matchUsCounty(packed, profile, lat, lon);
+      if (packed) {
+        countyBound = matchUsCounty(packed, profile, lat, lon);
+        const st = lookupState(profile.state);
+        let fips = st?.abbr ? US_ABBR_FIPS[st.abbr] : '';
+        if (!fips && countyBound?.geojson) {
+          const hit = (packed.features || []).find(f => f.geometry === countyBound.geojson);
+          fips = hit?.properties?.statefp || '';
+        }
+        if (!fips && Number.isFinite(lat) && Number.isFinite(lon)) {
+          const hit = (packed.features || []).find(f => pointInGeometry(f.geometry, lon, lat));
+          fips = hit?.properties?.statefp || '';
+        }
+        if (fips) stack.countiesInState = (packed.features || []).filter(f => f.properties?.statefp === fips);
+      }
     } catch { /* ignore */ }
 
     const [cityBound, countyRev, cityRev] = await Promise.all([
@@ -884,12 +1085,126 @@
     return stack;
   }
 
+  function gbNationOfFeature(feat) {
+    const kind = String(feat?.properties?.kind || '').toLowerCase();
+    const name = normName(feat?.properties?.name);
+    if (GB_NATIONS.has(name)) return titleCase(name);
+    if (kind.includes('wales')) return 'Wales';
+    if (GB_NI.has(name)) return 'Northern Ireland';
+    if (kind.includes('unitary district') || kind.includes('island area')) return 'Scotland';
+    return 'England';
+  }
+
+  function gbNationFromProfile(profile, worldAdm) {
+    const typed = [profile?.state, profile?.county, profile?.country]
+      .map(s => normName(s))
+      .find(n => GB_NATIONS.has(n));
+    if (typed) return titleCase(typed);
+    const feats = (worldAdm?.features || []).filter(f => f.properties?.iso2 === 'gb');
+    const hint = String(profile?.state || profile?.county || '').trim();
+    const hit = feats.find(f => namesMatch(f.properties?.name, hint));
+    if (hit) return gbNationOfFeature(hit);
+    if (Number.isFinite(Number(profile?.lat)) && Number.isFinite(Number(profile?.lon))) {
+      const pin = feats.find(f => pointInGeometry(f.geometry, Number(profile.lon), Number(profile.lat)));
+      if (pin) return gbNationOfFeature(pin);
+    }
+    return 'England';
+  }
+
+  function publicRegionKey(iso2, grain, name) {
+    const cc = String(iso2 || 'xx').toLowerCase();
+    const slug = normName(name).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'region';
+    return `${cc}:${grain}:${slug}`.slice(0, 80);
+  }
+
+  function publicRegionFromProfile(profile, worldAdm) {
+    if (!profile) return null;
+    const country = String(profile.country || '').trim();
+    const suny = lookupCountry(profile.countryCode) || lookupCountry(country);
+    let cc = String(suny?.iso2 || profile.countryCode || inferCountryCode(country, profile.state) || '').toLowerCase();
+    if (cc === 'uk') cc = 'gb';
+    if (cc === 'gb') {
+      const nation = gbNationFromProfile(profile, worldAdm);
+      return {
+        grain: 'nation',
+        iso2: 'gb',
+        name: nation,
+        country: suny?.official || 'United Kingdom',
+        postal: 'GB',
+        key: publicRegionKey('gb', 'nation', nation),
+      };
+    }
+    if (CITY_STATES.has(cc) || !profile.state) {
+      const name = suny?.official || country || cc.toUpperCase();
+      return {
+        grain: 'country',
+        iso2: cc,
+        name,
+        country: name,
+        postal: suny?.iso2 || String(cc || '').toUpperCase(),
+        key: publicRegionKey(cc, 'country', suny?.iso2 || name),
+      };
+    }
+    if (STATE_GRAIN.has(cc) || ((cc === 'us' || !cc) && lookupState(profile.state))) {
+      const faa = (cc === 'us' || cc === '' || !cc) ? lookupState(profile.state) : null;
+      const name = faa?.official || String(profile.state || '').trim();
+      return {
+        grain: 'state',
+        iso2: cc || 'us',
+        name,
+        postal: faa?.abbr || '',
+        country: suny?.official || country,
+        key: publicRegionKey(cc || 'us', 'state', faa?.abbr || name),
+      };
+    }
+    const name = suny?.official || country || String(profile.state || '').trim();
+    return {
+      grain: 'country',
+      iso2: cc,
+      name,
+      country: name,
+      postal: suny?.iso2 || String(cc || '').toUpperCase(),
+      key: publicRegionKey(cc, 'country', suny?.iso2 || name),
+    };
+  }
+
+  function geometriesForPublicRegion(region, world, worldAdm) {
+    if (!region) return [];
+    if (region.grain === 'country') {
+      const feat = countryFeature(world, region.iso2, region.name);
+      return feat?.geometry ? [feat.geometry] : [];
+    }
+    if (region.grain === 'nation' && region.iso2 === 'gb') {
+      return (worldAdm?.features || [])
+        .filter(f => f.properties?.iso2 === 'gb' && gbNationOfFeature(f) === region.name)
+        .map(f => f.geometry)
+        .filter(Boolean);
+    }
+    const iso = String(region.iso2 || '').toLowerCase();
+    const feats = (worldAdm?.features || []).filter(f => !iso || f.properties?.iso2 === iso);
+    const us = iso === 'us' ? lookupState(region.postal || region.name) : null;
+    const hit = feats.find(f => {
+      const name = normName(f.properties?.name);
+      const postal = String(f.properties?.postal || '').toUpperCase();
+      if (us) return postal === us.abbr || name === us.key;
+      const wantName = normName(region.name);
+      const wantPostal = String(region.postal || region.name || '').trim().toUpperCase();
+      if (wantName && name === wantName) return true;
+      if (wantPostal.length === 2 && postal === wantPostal) return true;
+      return false;
+    });
+    return hit?.geometry ? [hit.geometry] : [];
+  }
+
   window.ExperimentalGeo = {
     SETS,
     CASE_LOAD,
     US_STATES,
     hash01,
     lookupState,
+    FAA_US_REGIONS,
+    lookupCountry,
+    loadCountryCodes,
     nearbyRegion,
     titleCase,
     inferContinent,
@@ -903,5 +1218,11 @@
     fetchAdminBoundary,
     fetchPlaceStack,
     pointInGeometry,
+    publicRegionFromProfile,
+    geometriesForPublicRegion,
+    loadWorldStates,
+    loadWorldCountries,
   };
+
+  loadCountryCodes().catch(() => {});
 })();
