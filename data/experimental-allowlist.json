@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "names": [],
+  "note": "Optional admin bypass by exact gate Name. Primary access is invite codes (data/experimental-invites.json)."
+}

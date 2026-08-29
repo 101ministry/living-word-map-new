@@ -90,6 +90,7 @@
     hudCount: document.getElementById('exp-hud-count'),
     hudSection: document.getElementById('exp-hud-section'),
     nextTopic: document.getElementById('exp-next-topic'),
+    peoplePrivacy: document.getElementById('exp-people-privacy'),
   };
 
   const prayerPackCache = Object.create(null);
@@ -129,6 +130,7 @@
       currentRound: 1,
       currentTopic: 1,
       progress: {},
+      shareProgress: undefined,
     };
   }
 
@@ -143,6 +145,7 @@
       merged.currentRound = clampRound(merged.currentRound);
       merged.currentTopic = clampTopic(merged.currentTopic);
       merged.language = normalizeLang(merged.language || base.language);
+      if (typeof merged.shareProgress !== 'boolean') merged.shareProgress = undefined;
       return merged;
     } catch {
       return defaultState();
@@ -155,10 +158,28 @@
       localStorage.setItem(LANG_STORAGE_KEY, state.language);
     } catch { /* ignore */ }
     persistAccount();
+    if (!RECORD_MODE && state.profile && els.app && !els.app.hidden) {
+      publishPresence();
+    }
   }
 
   function normalizePersonName(name) {
     return String(name || '').trim().replace(/\s+/g, ' ');
+  }
+
+  function normalizeInviteCode(raw) {
+    return String(raw || '')
+      .trim()
+      .toUpperCase()
+      .replace(/\s+/g, '');
+  }
+
+  function inviteCodeFromQuery() {
+    try {
+      return normalizeInviteCode(new URLSearchParams(location.search).get('invite'));
+    } catch {
+      return '';
+    }
   }
 
   function accountKey(name) {
@@ -205,6 +226,7 @@
       currentSet: state.currentSet,
       currentRound: state.currentRound,
       currentTopic: state.currentTopic,
+      shareProgress: state.shareProgress,
     };
   }
 
@@ -216,15 +238,115 @@
     state.currentSet = clampSet(snap.currentSet || 1, state.profile);
     state.currentRound = clampRound(snap.currentRound || 1);
     state.currentTopic = clampTopic(snap.currentTopic || 1);
+    if (typeof snap.shareProgress === 'boolean') state.shareProgress = snap.shareProgress;
+  }
+
+  async function ensureSession() {
+    if (RECORD_MODE) return true;
+    try {
+      const res = await fetch('/api/experimental-auth/me', { credentials: 'include' });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+
+  async function loginSession(name, passwordHash, shareProgress, inviteCode) {
+    try {
+      const body = { name, passwordHash, shareProgress: !!shareProgress };
+      const code = normalizeInviteCode(inviteCode);
+      if (code) body.inviteCode = code;
+      const res = await fetch('/api/experimental-auth/login', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (res.status === 403) {
+        const data = await res.json().catch(() => ({}));
+        const err = data.error || 'invite';
+        return {
+          ok: false,
+          reason: err,
+          message:
+            data.message ||
+            (err === 'allowlist'
+              ? 'This name is not on the participant list.'
+              : 'Invite code required or invalid.'),
+        };
+      }
+      if (res.status === 401) return { ok: false, reason: 'auth' };
+      if (!res.ok) return { ok: false, reason: 'network' };
+      const data = await res.json();
+      return { ok: true, shareProgress: !!data.shareProgress };
+    } catch {
+      return { ok: false, reason: 'network' };
+    }
+  }
+
+  function applyPresenceResponse(data, mine) {
+    const regions = sanitizePresenceRegions(data?.regions || [], mine);
+    const participants = Array.isArray(data?.participants)
+      ? data.participants.filter(p => p && p.regionKey && p.regionName)
+      : [];
+    if (typeof SCENE.setPeopleRegions === 'function') SCENE.setPeopleRegions(regions);
+    if (typeof SCENE.setPeopleParticipants === 'function') SCENE.setPeopleParticipants(participants);
   }
 
   let accountApiReady = true;
 
-  async function presenceToken() {
-    if (!state.passwordHash) return '';
-    const enc = new TextEncoder();
-    const buf = await crypto.subtle.digest('SHA-256', enc.encode(`presence:${state.passwordHash}`));
-    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 32);
+  async function refreshPeopleMap() {
+    const mine = await resolvePublicRegion();
+    if (RECORD_MODE) {
+      if (typeof SCENE.setPeopleRegions === 'function') {
+        SCENE.setPeopleRegions(sanitizePresenceRegions([], mine));
+      }
+      if (typeof SCENE.setPeopleParticipants === 'function') SCENE.setPeopleParticipants([]);
+      return mine;
+    }
+    try {
+      const res = await fetch('/api/experimental-presence', { credentials: 'include' });
+      if (res.ok) {
+        const data = await res.json();
+        applyPresenceResponse(data, mine);
+      } else if (typeof SCENE.setPeopleRegions === 'function') {
+        SCENE.setPeopleRegions(sanitizePresenceRegions([], mine));
+      }
+    } catch {
+      if (typeof SCENE.setPeopleRegions === 'function') {
+        SCENE.setPeopleRegions(sanitizePresenceRegions([], mine));
+      }
+    }
+    return mine;
+  }
+
+  async function publishPresence() {
+    const mine = await refreshPeopleMap();
+    if (RECORD_MODE || !mine || !state.passwordHash) return;
+    try {
+      const res = await fetch('/api/experimental-presence', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          key: mine.key,
+          name: mine.name,
+          iso2: mine.iso2,
+          grain: mine.grain,
+          progress: state.shareProgress
+            ? {
+                set: state.currentSet,
+                round: state.currentRound,
+                topic: state.currentTopic,
+              }
+            : null,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        applyPresenceResponse(data, mine);
+      }
+    } catch { /* stay on the local highlight */ }
   }
 
   function sanitizePresenceRegions(list, mine) {
@@ -252,48 +374,6 @@
       worldAdm = await GEO.loadWorldStates();
     } catch { /* name-only fallback */ }
     return GEO.publicRegionFromProfile(state.profile, worldAdm);
-  }
-
-  async function refreshPeopleMap() {
-    const mine = await resolvePublicRegion();
-    let remote = [];
-    try {
-      const res = await fetch('/api/experimental-presence');
-      if (res.ok) {
-        const data = await res.json();
-        remote = data.regions || [];
-      }
-    } catch { /* local only */ }
-    if (typeof SCENE.setPeopleRegions === 'function') {
-      SCENE.setPeopleRegions(sanitizePresenceRegions(remote, mine));
-    }
-    return mine;
-  }
-
-  async function publishPresence() {
-    const mine = await refreshPeopleMap();
-    if (RECORD_MODE || !mine || !state.passwordHash) return;
-    try {
-      const token = await presenceToken();
-      if (!token) return;
-      const res = await fetch('/api/experimental-presence', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          token,
-          key: mine.key,
-          name: mine.name,
-          iso2: mine.iso2,
-          grain: mine.grain,
-        }),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (typeof SCENE.setPeopleRegions === 'function') {
-          SCENE.setPeopleRegions(sanitizePresenceRegions(data.regions || [], mine));
-        }
-      }
-    } catch { /* stay on the local highlight */ }
   }
 
   function setPeopleMode(on) {
@@ -378,12 +458,17 @@
     ['city', 'county', 'state', 'country', 'continent'].forEach(name => {
       if (els.form[name]) els.form[name].required = true;
     });
+    els.form.querySelectorAll('input[name="shareProgress"]').forEach(radio => {
+      radio.required = live;
+    });
   }
 
   function resetProfileForm() {
     if (!els.form) return;
     els.form.reset();
     if (els.caseGate) els.caseGate.value = '';
+    const invitePrefill = inviteCodeFromQuery();
+    if (invitePrefill && els.form.inviteCode) els.form.inviteCode.value = invitePrefill;
     toggleSpouseField();
     syncRequiredFields();
     if (els.geoStatus) {
@@ -1154,6 +1239,12 @@
     els.form.country.value = profile.country || '';
     els.form.continent.value = profile.continent || '';
     if (els.form.password) els.form.password.value = '';
+    if (typeof state.shareProgress === 'boolean') {
+      const shareVal = state.shareProgress ? 'yes' : 'no';
+      els.form.querySelectorAll('input[name="shareProgress"]').forEach(radio => {
+        radio.checked = radio.value === shareVal;
+      });
+    }
     toggleSpouseField();
     syncRequiredFields();
   }
@@ -1218,6 +1309,7 @@
     const fd = new FormData(els.form);
     const personName = normalizePersonName(fd.get('personName'));
     const password = String(fd.get('password') || '');
+    const shareChoice = fd.get('shareProgress');
     const fields = {
       personName,
       gender: fd.get('gender'),
@@ -1237,6 +1329,7 @@
       if (!fields.married) missing.push('Married?');
       if (fields.married === 'yes' && !String(fields.spouseName || '').trim()) missing.push("Spouse's name");
       if (!password && !state.passwordHash) missing.push('Password');
+      if (shareChoice !== 'yes' && shareChoice !== 'no') missing.push('People map sharing choice');
     }
     if (!String(fields.city || '').trim()) missing.push('City');
     if (!String(fields.county || '').trim()) missing.push('County / parish / province');
@@ -1251,6 +1344,8 @@
     els.submit.disabled = true;
     els.geoStatus.textContent = 'Placing your map…';
     let passwordHash = state.passwordHash || '';
+    let isReturningAccount = false;
+    const inviteCodeInput = normalizeInviteCode(fd.get('inviteCode'));
     try {
       if (!RECORD_MODE && password) {
         passwordHash = await hashPassword(personName, password);
@@ -1263,6 +1358,7 @@
         }
         if (existing.ok) {
           applySnapshot(existing.snapshot);
+          isReturningAccount = true;
           passwordHash = passwordHash;
         } else if (accountKey(personName) !== accountKey(state.profile?.name)) {
           state.progress = {};
@@ -1270,11 +1366,19 @@
           state.currentRound = 1;
           state.currentTopic = 1;
         }
+      } else if (!RECORD_MODE && state.passwordHash && accountKey(personName) === accountKey(state.profile?.name)) {
+        isReturningAccount = true;
       }
     } catch (err) {
       console.error(err);
       els.geoStatus.classList.add('is-error');
       els.geoStatus.textContent = 'Could not check the password. Try again.';
+      els.submit.disabled = false;
+      return;
+    }
+    if (!RECORD_MODE && !isReturningAccount && !inviteCodeInput) {
+      els.geoStatus.classList.add('is-error');
+      els.geoStatus.textContent = 'Invite code required for first-time entry. Check Slack for your code.';
       els.submit.disabled = false;
       return;
     }
@@ -1303,6 +1407,9 @@
     if (!RECORD_MODE && personName) profile.name = personName;
     state.profile = profile;
     state.passwordHash = passwordHash;
+    if (shareChoice === 'yes' || shareChoice === 'no') {
+      state.shareProgress = shareChoice === 'yes';
+    }
     state.currentSet = clampSet(state.currentSet || 1, profile);
     saveState();
     if (profile.geocoded) {
@@ -1311,6 +1418,26 @@
     } else {
       els.geoStatus.classList.add('is-warn');
       els.geoStatus.textContent = `Using your entries: ${profile.city}, ${profile.state}, ${profile.country}. Map is schematic.`;
+    }
+    if (!RECORD_MODE && personName && passwordHash) {
+      els.geoStatus.textContent = 'Opening your session…';
+      const login = await loginSession(personName, passwordHash, state.shareProgress, inviteCodeInput);
+      if (!login.ok) {
+        els.geoStatus.classList.remove('is-ok', 'is-warn');
+        els.geoStatus.classList.add('is-error');
+        if (login.reason === 'allowlist') {
+          els.geoStatus.textContent = login.message || 'This name is not on the participant list.';
+        } else if (login.reason === 'invite') {
+          els.geoStatus.textContent = login.message || 'Invite code required or invalid.';
+        } else if (login.reason === 'auth') {
+          els.geoStatus.textContent = 'That name already has a different password.';
+        } else {
+          els.geoStatus.textContent = 'Could not open your session. Try again.';
+        }
+        els.submit.disabled = false;
+        return;
+      }
+      state.shareProgress = login.shareProgress;
     }
     try {
       await enterApp();
@@ -1413,6 +1540,14 @@
       syncRequiredFields();
       if (!state.profile) {
         showGate(false);
+        return;
+      }
+      if (!RECORD_MODE && !(await ensureSession())) {
+        showGate(true);
+        if (els.geoStatus) {
+          els.geoStatus.classList.add('is-warn');
+          els.geoStatus.textContent = 'Sign in again with your name and password to continue.';
+        }
         return;
       }
       await enterApp();

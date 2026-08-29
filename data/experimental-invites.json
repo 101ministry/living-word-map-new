@@ -1,0 +1,68 @@
+﻿{
+    "note":  "One-time invite codes for Experimental Prayer Builder. Sync invites-v1 to EXPERIMENTAL_KV for production.",
+    "codes":  {
+                  "LWM-J2N2-GGZQ":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-EV84-KMDT":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-XU6R-JHE6":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-G88U-DBAJ":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-7A2T-6AWY":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-3UP5-TVHA":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-G7XQ-5YRN":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-PBBP-QYQ9":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-JWN9-UPW4":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788038432069
+                                    }
+              }
+}

@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=41" />
   <link rel="stylesheet" href="round2.css?v=9" />
-  <link rel="stylesheet" href="experimental.css?v=11" />
+  <link rel="stylesheet" href="experimental.css?v=12" />
   <script>
     (function () {
       var rec = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
@@ -29,7 +29,7 @@
       <p class="exp-gate-lead exp-live-only">
         Eleven sets of three rounds. Read a prayer, click the next topic, then
         <strong>Yes, my heart changed</strong> — a builder walks a block onto the site.
-        Enter the case name, place, and a password so you can continue on another device.
+        Enter the case name, place, password, and your Slack invite code on first entry.
       </p>
       <p class="exp-gate-lead exp-record-only">
         Eleven sets of three rounds. Read a prayer, click the next topic, then
@@ -105,6 +105,22 @@
         <input type="password" name="password" maxlength="120" required placeholder="To open this case on another device" autocomplete="new-password" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
       </label>
 
+      <label class="exp-field exp-live-only" id="exp-invite-wrap">
+        <span>Invite code</span>
+        <input type="text" name="inviteCode" maxlength="16" placeholder="LWM-XXXX-XXXX (first time only)" autocomplete="off" spellcheck="false" autocapitalize="characters" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+        <span class="exp-field-hint">Required your first time. Leave blank if you already joined with this name and password.</span>
+      </label>
+
+      <fieldset class="exp-fieldset exp-live-only" id="exp-share-progress-wrap">
+        <legend>People map</legend>
+        <p class="exp-share-progress-lead">
+          Your city stays on this device. If you share progress, other consenting participants see your
+          state and set, round, and topic — and you only see progress from people who also opted in.
+        </p>
+        <label><input type="radio" name="shareProgress" value="yes" required /> Share my prayer progress on the People map</label>
+        <label><input type="radio" name="shareProgress" value="no" /> Keep my progress private (People map shows only my region)</label>
+      </fieldset>
+
       <p id="exp-geo-status" class="exp-geo-status" aria-live="polite"></p>
       <div class="exp-gate-actions">
         <button type="submit" class="btn-accent" id="exp-profile-submit">Enter Prayer Builder</button>
@@ -175,9 +191,9 @@
             <div id="exp-hud-section" class="exp-hud-section"></div>
           </div>
           <p id="exp-people-privacy" class="exp-people-privacy">
-            Your city stays on this device. On the shared People map, others only see
-            your state (California, not Los Angeles) or, in the United Kingdom,
-            England, Scotland, Wales, or Northern Ireland — never your city or county.
+            Your city stays on this device. On the People map, others only see your state — never your
+            city or county. Prayer progress (set, round, topic) is shared only if you opted in at entry;
+            you then see the same fields from other participants who also opted in.
           </p>
           <p id="exp-scene-caption" class="exp-scene-caption"></p>
         </div>
@@ -228,7 +244,7 @@
   <script src="round2-data.js?v=11"></script>
   <script src="round3-data.js?v=11"></script>
   <script src="experimental-geo.js?v=14"></script>
-  <script src="experimental-scene.js?v=16"></script>
-  <script src="experimental.js?v=11"></script>
+  <script src="experimental-scene.js?v=17"></script>
+  <script src="experimental.js?v=13"></script>
 </body>
 </html>

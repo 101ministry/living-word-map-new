@@ -8,9 +8,15 @@ const WEBHOOK_PATH = '/api/cal-booking';
 const GEOCODE_PATH = '/api/geocode';
 const NOMINATIM_PATH = '/api/nominatim';
 const ACCOUNT_PATH = '/api/experimental-account';
+const AUTH_PATH = '/api/experimental-auth';
 const PRESENCE_PATH = '/api/experimental-presence';
 const MAP_TILE_PATH = '/api/map-tile';
 const PRESENCE_KV_KEY = 'presence-v1';
+const ALLOWLIST_KV_KEY = 'allowlist-v1';
+const INVITES_KV_KEY = 'invites-v1';
+const SESSION_KV_PREFIX = 'sess:';
+const SESSION_COOKIE = 'lwm_exp_session';
+const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const DOWNLOADS_PREFIX = '/audio/accelerated-discipleship/';
 const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://map.repentance101.com/)';
 
@@ -54,6 +60,10 @@ export default {
         return handleExperimentalAccount(request, env);
       }
       return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (url.pathname === AUTH_PATH || url.pathname.startsWith(`${AUTH_PATH}/`)) {
+      return handleExperimentalAuth(request, env, url);
     }
 
     if (url.pathname === PRESENCE_PATH || url.pathname === `${PRESENCE_PATH}/`) {
@@ -393,6 +403,272 @@ function accountKey(name) {
     .toLowerCase();
 }
 
+function parseCookies(request) {
+  const header = request.headers.get('Cookie') || '';
+  const out = {};
+  header.split(';').forEach(part => {
+    const i = part.indexOf('=');
+    if (i > 0) {
+      out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
+    }
+  });
+  return out;
+}
+
+function sessionCookieHeader(token, maxAgeSec, secure) {
+  let value = `${SESSION_COOKIE}=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAgeSec}`;
+  if (secure) value += '; Secure';
+  return value;
+}
+
+function clearSessionCookie(secure) {
+  let value = `${SESSION_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`;
+  if (secure) value += '; Secure';
+  return value;
+}
+
+async function randomSessionToken() {
+  const bytes = new Uint8Array(32);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function getAllowlist(env) {
+  if (env.EXPERIMENTAL_ALLOWLIST) {
+    try {
+      const parsed = JSON.parse(env.EXPERIMENTAL_ALLOWLIST);
+      if (Array.isArray(parsed)) return { enabled: true, names: parsed };
+      if (parsed && typeof parsed === 'object') return parsed;
+    } catch {
+      /* fall through */
+    }
+  }
+  try {
+    const kvList = await env.EXPERIMENTAL_KV?.get(ALLOWLIST_KV_KEY, { type: 'json' });
+    if (kvList && typeof kvList === 'object') return kvList;
+  } catch {
+    /* ignore */
+  }
+  return { enabled: true, names: [] };
+}
+
+function isAllowlisted(name, allowlist) {
+  if (!allowlist?.enabled) return false;
+  const key = accountKey(name);
+  const names = Array.isArray(allowlist.names) ? allowlist.names : [];
+  return names.some(n => accountKey(n) === key);
+}
+
+function normalizeInviteCode(raw) {
+  return String(raw || '')
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, '');
+}
+
+function isValidInviteFormat(code) {
+  return /^LWM-[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{4}-[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{4}$/.test(code);
+}
+
+async function getInvitesStore(env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) return { codes: {} };
+  try {
+    const store = await kv.get(INVITES_KV_KEY, { type: 'json' });
+    if (store?.codes && typeof store.codes === 'object') return store;
+  } catch {
+    /* ignore */
+  }
+  return { codes: {} };
+}
+
+async function saveInvitesStore(env, store) {
+  await env.EXPERIMENTAL_KV.put(INVITES_KV_KEY, JSON.stringify(store));
+}
+
+/**
+ * Returning accounts, allowlist bypass, or a valid unused invite (same account re-entry) pass.
+ * New accounts must supply an unused invite code.
+ */
+async function validateInviteForLogin(env, inviteRaw, acctKey, name, acctExists) {
+  if (acctExists) return { ok: true };
+  if (isAllowlisted(name, await getAllowlist(env))) return { ok: true };
+
+  const inviteCode = normalizeInviteCode(inviteRaw);
+  if (!inviteCode) {
+    return {
+      ok: false,
+      error: 'invite',
+      message: 'Invite code required for first-time entry. Ask in Slack for a code.',
+    };
+  }
+  if (!isValidInviteFormat(inviteCode)) {
+    return { ok: false, error: 'invite', message: 'Invite code format looks wrong (LWM-XXXX-XXXX).' };
+  }
+
+  const store = await getInvitesStore(env);
+  const rec = store.codes?.[inviteCode];
+  if (!rec) {
+    return { ok: false, error: 'invite', message: 'That invite code is not recognized.' };
+  }
+  if (rec.used) {
+    if (rec.accountKey === acctKey) return { ok: true };
+    return { ok: false, error: 'invite', message: 'This invite code was already used.' };
+  }
+  return { ok: true, redeem: inviteCode };
+}
+
+async function redeemInvite(env, inviteCode, acctKey, name) {
+  const store = await getInvitesStore(env);
+  const rec = store.codes?.[inviteCode];
+  if (!rec || rec.used) return;
+  store.codes[inviteCode] = {
+    ...rec,
+    used: true,
+    accountKey: acctKey,
+    name,
+    usedAt: Date.now(),
+  };
+  await saveInvitesStore(env, store);
+}
+
+async function readSession(request, env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) return null;
+  const token = parseCookies(request)[SESSION_COOKIE];
+  if (!token || !/^[a-f0-9]{64}$/.test(token)) return null;
+  let rec = null;
+  try {
+    rec = await kv.get(`${SESSION_KV_PREFIX}${token}`, { type: 'json' });
+  } catch {
+    rec = null;
+  }
+  if (!rec?.accountKey) return null;
+  if (rec.expiresAt && rec.expiresAt < Date.now()) return null;
+  return { token, ...rec };
+}
+
+function normalizeProgress(raw, shareProgress) {
+  if (!shareProgress) return null;
+  if (!raw || typeof raw !== 'object') return null;
+  return {
+    set: Math.max(1, Math.min(11, Number(raw.set) || 1)),
+    round: Math.max(1, Math.min(3, Number(raw.round) || 1)),
+    topic: Math.max(1, Math.min(666, Number(raw.topic) || 1)),
+  };
+}
+
+function purgePresenceForAccount(store, acctKey) {
+  if (!store?.tokens || typeof store.tokens !== 'object') return;
+  for (const [tok, rec] of Object.entries(store.tokens)) {
+    if (rec?.accountKey === acctKey) delete store.tokens[tok];
+  }
+}
+
+async function handleExperimentalAuth(request, env, url) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) return jsonResponse({ ok: false, error: 'not-configured' }, 501);
+
+  const secure = url.protocol === 'https:';
+  const sub = url.pathname.slice(AUTH_PATH.length).replace(/^\//, '');
+
+  if (sub === 'me' && request.method === 'GET') {
+    const session = await readSession(request, env);
+    if (!session) return jsonResponse({ error: 'auth' }, 401);
+    return jsonResponse({
+      ok: true,
+      name: session.name || '',
+      accountKey: session.accountKey,
+      shareProgress: !!session.shareProgress,
+    });
+  }
+
+  if (sub === 'logout' && request.method === 'POST') {
+    const session = await readSession(request, env);
+    if (session?.token) {
+      await kv.delete(`${SESSION_KV_PREFIX}${session.token}`);
+      let store = { tokens: {} };
+      try {
+        store = (await kv.get(PRESENCE_KV_KEY, { type: 'json' })) || { tokens: {} };
+      } catch {
+        store = { tokens: {} };
+      }
+      if (store.tokens?.[session.token]) {
+        delete store.tokens[session.token];
+        await kv.put(PRESENCE_KV_KEY, JSON.stringify(store));
+      }
+    }
+    return jsonResponse({ ok: true }, 200, { 'Set-Cookie': clearSessionCookie(secure) });
+  }
+
+  if (sub === 'login' && request.method === 'POST') {
+    let body;
+    try {
+      body = await request.json();
+    } catch {
+      return jsonResponse({ error: 'Invalid JSON' }, 400);
+    }
+
+    const name = String(body?.name || '').trim();
+    const passwordHash = String(body?.passwordHash || '');
+    const shareProgress = body?.shareProgress === true;
+    const inviteCode = body?.inviteCode;
+    if (!name || !passwordHash) {
+      return jsonResponse({ error: 'Missing name or password' }, 400);
+    }
+
+    const acctKey = accountKey(name);
+    const acctRec = await kv.get(`acct:${acctKey}`, { type: 'json' });
+    if (acctRec && acctRec.passwordHash !== passwordHash) {
+      return jsonResponse({ error: 'auth' }, 401);
+    }
+
+    const inviteCheck = await validateInviteForLogin(env, inviteCode, acctKey, name, !!acctRec);
+    if (!inviteCheck.ok) {
+      return jsonResponse(
+        { error: inviteCheck.error || 'invite', message: inviteCheck.message || 'Invite required.' },
+        403,
+      );
+    }
+
+    const token = await randomSessionToken();
+    const expiresAt = Date.now() + SESSION_TTL_MS;
+    await kv.put(
+      `${SESSION_KV_PREFIX}${token}`,
+      JSON.stringify({
+        accountKey: acctKey,
+        name,
+        shareProgress,
+        passwordHash,
+        createdAt: Date.now(),
+        expiresAt,
+      }),
+    );
+
+    if (inviteCheck.redeem) {
+      await redeemInvite(env, inviteCheck.redeem, acctKey, name);
+    }
+
+    let store = { tokens: {} };
+    try {
+      store = (await kv.get(PRESENCE_KV_KEY, { type: 'json' })) || { tokens: {} };
+    } catch {
+      store = { tokens: {} };
+    }
+    if (!store.tokens || typeof store.tokens !== 'object') store.tokens = {};
+    purgePresenceForAccount(store, acctKey);
+    await kv.put(PRESENCE_KV_KEY, JSON.stringify(store));
+
+    return jsonResponse(
+      { ok: true, shareProgress },
+      200,
+      { 'Set-Cookie': sessionCookieHeader(token, Math.floor(SESSION_TTL_MS / 1000), secure) },
+    );
+  }
+
+  return jsonResponse({ error: 'Method not allowed' }, 405);
+}
+
 async function handleExperimentalAccount(request, env) {
   const kv = env.EXPERIMENTAL_KV;
   if (!kv) {
@@ -442,10 +718,9 @@ async function handleExperimentalAccount(request, env) {
   return jsonResponse({ ok: true, saved: true });
 }
 
-function aggregatePresence(store) {
+function aggregatePresenceEntries(entries) {
   const counts = new Map();
-  const tokens = store?.tokens && typeof store.tokens === 'object' ? store.tokens : {};
-  for (const rec of Object.values(tokens)) {
+  for (const rec of entries) {
     const key = String(rec?.key || '');
     if (!key) continue;
     const cur = counts.get(key) || {
@@ -461,12 +736,53 @@ function aggregatePresence(store) {
   return [...counts.values()];
 }
 
+function presenceEntries(store) {
+  const tokens = store?.tokens && typeof store.tokens === 'object' ? store.tokens : {};
+  return Object.values(tokens).filter(rec => rec && rec.key);
+}
+
+function filterPresenceForViewer(store, viewerSession) {
+  const all = presenceEntries(store);
+  const viewerKey = viewerSession.accountKey;
+  const viewerShares = !!viewerSession.shareProgress;
+  const mine = all.find(rec => rec.accountKey === viewerKey);
+
+  if (!viewerShares) {
+    const regions = mine
+      ? [
+          {
+            key: mine.key,
+            name: mine.name,
+            iso2: mine.iso2,
+            grain: mine.grain,
+            count: 1,
+          },
+        ]
+      : [];
+    return { regions, participants: [], shareProgress: false };
+  }
+
+  const consenting = all.filter(rec => rec.shareProgress);
+  const regions = aggregatePresenceEntries(consenting);
+  const participants = consenting.map(rec => ({
+    regionKey: rec.key,
+    regionName: rec.name,
+    iso2: rec.iso2,
+    grain: rec.grain,
+    progress: rec.progress || null,
+  }));
+  return { regions, participants, shareProgress: true };
+}
+
 async function handleExperimentalPresence(request, env) {
   const kv = env.EXPERIMENTAL_KV;
   if (!kv) {
-    if (request.method === 'GET') return jsonResponse({ ok: true, regions: [], localOnly: true });
+    if (request.method === 'GET') return jsonResponse({ ok: true, regions: [], participants: [], localOnly: true });
     return jsonResponse({ ok: false, error: 'not-configured' }, 501);
   }
+
+  const session = await readSession(request, env);
+  if (!session) return jsonResponse({ error: 'auth' }, 401);
 
   let store = { tokens: {} };
   try {
@@ -477,7 +793,8 @@ async function handleExperimentalPresence(request, env) {
   if (!store.tokens || typeof store.tokens !== 'object') store.tokens = {};
 
   if (request.method === 'GET') {
-    return jsonResponse({ ok: true, regions: aggregatePresence(store) });
+    const filtered = filterPresenceForViewer(store, session);
+    return jsonResponse({ ok: true, ...filtered });
   }
 
   let body;
@@ -491,13 +808,11 @@ async function handleExperimentalPresence(request, env) {
     return jsonResponse({ error: 'city is not shared' }, 400);
   }
 
-  const token = String(body?.token || '');
   const key = String(body?.key || '');
   const name = String(body?.name || '').trim();
   const iso2 = String(body?.iso2 || '').toLowerCase();
   const grain = String(body?.grain || '').toLowerCase();
   if (
-    !/^[a-fA-F0-9]{16,64}$/.test(token) ||
     !/^[a-z]{2}:(state|nation|country):[a-z0-9-]{1,64}$/.test(key) ||
     !/^[a-z]{2}$/.test(iso2) ||
     !/^(state|nation|country)$/.test(grain) ||
@@ -507,9 +822,23 @@ async function handleExperimentalPresence(request, env) {
     return jsonResponse({ error: 'Invalid presence' }, 400);
   }
 
-  store.tokens[token] = { key, name, iso2, grain, updatedAt: Date.now() };
+  const shareProgress = !!session.shareProgress;
+  const progress = normalizeProgress(body?.progress, shareProgress);
+
+  store.tokens[session.token] = {
+    key,
+    name,
+    iso2,
+    grain,
+    accountKey: session.accountKey,
+    shareProgress,
+    progress,
+    updatedAt: Date.now(),
+  };
   await kv.put(PRESENCE_KV_KEY, JSON.stringify(store));
-  return jsonResponse({ ok: true, saved: true, regions: aggregatePresence(store) });
+
+  const filtered = filterPresenceForViewer(store, session);
+  return jsonResponse({ ok: true, saved: true, ...filtered });
 }
 
 async function handleMapTile(request) {
@@ -540,12 +869,13 @@ async function handleMapTile(request) {
   });
 }
 
-function jsonResponse(obj, status = 200) {
+function jsonResponse(obj, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(obj), {
     status,
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
       'Cache-Control': 'no-store',
+      ...extraHeaders,
     },
   });
 }

@@ -80,6 +80,22 @@ function Send-Nominatim($context, [string]$url) {
     }
 }
 
+function Send-Json($context, $obj, [int]$statusCode, [hashtable]$extraHeaders) {
+    $text = if ($obj -is [string]) { $obj } else { $obj | ConvertTo-Json -Compress -Depth 20 }
+    $bytes = [System.Text.Encoding]::UTF8.GetBytes($text)
+    $response = $context.Response
+    $response.StatusCode = $statusCode
+    $response.ContentType = 'application/json; charset=utf-8'
+    if ($extraHeaders) {
+        foreach ($entry in $extraHeaders.GetEnumerator()) {
+            $response.Headers.Add([string]$entry.Key, [string]$entry.Value)
+        }
+    }
+    $response.ContentLength64 = $bytes.Length
+    $response.OutputStream.Write($bytes, 0, $bytes.Length)
+    $response.OutputStream.Close()
+}
+
 function Handle-Api($context) {
     $abs = $context.Request.Url.AbsolutePath.TrimEnd('/')
     $qs = $context.Request.QueryString
@@ -192,6 +208,329 @@ function Handle-Api($context) {
         return $true
     }
 
+    if ($abs -like '/api/experimental-auth*') {
+        $repoRoot = Split-Path $root -Parent
+        $allowPath = Join-Path $repoRoot 'data\experimental-allowlist.json'
+        $sessionPath = Join-Path $repoRoot '.experimental-sessions.json'
+        $presencePath = Join-Path $repoRoot '.experimental-presence.json'
+        $accountPath = Join-Path $repoRoot '.experimental-accounts.json'
+        $sessionCookie = 'lwm_exp_session'
+        $sessionTtlMs = 30L * 24L * 60L * 60L * 1000L
+
+        function Get-AccountKey([string]$name) {
+            return ($name.Trim() -replace '\s+', ' ').ToLowerInvariant()
+        }
+
+        function Get-Allowlist {
+            if (-not (Test-Path -LiteralPath $allowPath)) {
+                return @{ enabled = $true; names = @() }
+            }
+            try {
+                return Get-Content -LiteralPath $allowPath -Raw -Encoding UTF8 | ConvertFrom-Json
+            }
+            catch {
+                return @{ enabled = $true; names = @() }
+            }
+        }
+
+        function Test-Allowlisted([string]$name, $allowlist) {
+            if (-not $allowlist.enabled) { return $false }
+            $key = Get-AccountKey $name
+            foreach ($n in @($allowlist.names)) {
+                if ((Get-AccountKey ([string]$n)) -eq $key) { return $true }
+            }
+            return $false
+        }
+
+        function Normalize-InviteCode([string]$raw) {
+            if ([string]::IsNullOrWhiteSpace($raw)) { return '' }
+            return ($raw.Trim().ToUpperInvariant() -replace '\s+', '')
+        }
+
+        function Test-InviteFormat([string]$code) {
+            return $code -match '^LWM-[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{4}-[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{4}$'
+        }
+
+        function Get-InvitesStore {
+            $invitesPath = Join-Path $repoRoot 'data\experimental-invites.json'
+            $codes = @{}
+            if (Test-Path -LiteralPath $invitesPath) {
+                try {
+                    $parsed = Get-Content -LiteralPath $invitesPath -Raw -Encoding UTF8 | ConvertFrom-Json
+                    if ($parsed.codes) {
+                        $parsed.codes.PSObject.Properties | ForEach-Object { $codes[$_.Name] = $_.Value }
+                    }
+                }
+                catch { $codes = @{} }
+            }
+            return @{ codes = $codes }
+        }
+
+        function Save-InvitesStore($store) {
+            $invitesPath = Join-Path $repoRoot 'data\experimental-invites.json'
+            (@{ codes = $store.codes; note = 'One-time invite codes for Experimental Prayer Builder.' } | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $invitesPath -Encoding UTF8
+        }
+
+        function Test-InviteForLogin([string]$inviteRaw, [string]$acctKey, [string]$name, [bool]$acctExists) {
+            if ($acctExists) { return @{ ok = $true } }
+            $allowlist = Get-Allowlist
+            if (Test-Allowlisted $name $allowlist) { return @{ ok = $true } }
+
+            $inviteCode = Normalize-InviteCode $inviteRaw
+            if ([string]::IsNullOrWhiteSpace($inviteCode)) {
+                return @{ ok = $false; error = 'invite'; message = 'Invite code required for first-time entry. Ask in Slack for a code.' }
+            }
+            if (-not (Test-InviteFormat $inviteCode)) {
+                return @{ ok = $false; error = 'invite'; message = 'Invite code format looks wrong (LWM-XXXX-XXXX).' }
+            }
+            $store = Get-InvitesStore
+            if (-not $store.codes.ContainsKey($inviteCode)) {
+                return @{ ok = $false; error = 'invite'; message = 'That invite code is not recognized.' }
+            }
+            $rec = $store.codes[$inviteCode]
+            if ([bool]$rec.used) {
+                if ([string]$rec.accountKey -eq $acctKey) { return @{ ok = $true } }
+                return @{ ok = $false; error = 'invite'; message = 'This invite code was already used.' }
+            }
+            return @{ ok = $true; redeem = $inviteCode }
+        }
+
+        function Redeem-Invite([string]$inviteCode, [string]$acctKey, [string]$name) {
+            $store = Get-InvitesStore
+            if (-not $store.codes.ContainsKey($inviteCode)) { return }
+            $rec = $store.codes[$inviteCode]
+            if ([bool]$rec.used) { return }
+            $store.codes[$inviteCode] = @{
+                used       = $true
+                accountKey = $acctKey
+                name       = $name.Trim()
+                usedAt     = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+                createdAt  = $rec.createdAt
+            }
+            Save-InvitesStore $store
+        }
+
+        function Get-RequestCookies($request) {
+            $out = @{}
+            $header = [string]$request.Headers['Cookie']
+            if ([string]::IsNullOrWhiteSpace($header)) { return $out }
+            foreach ($part in ($header -split ';')) {
+                $idx = $part.IndexOf('=')
+                if ($idx -gt 0) {
+                    $k = $part.Substring(0, $idx).Trim()
+                    $v = [System.Uri]::UnescapeDataString($part.Substring($idx + 1).Trim())
+                    $out[$k] = $v
+                }
+            }
+            return $out
+        }
+
+        function Get-SessionStore {
+            $store = @{}
+            if (Test-Path -LiteralPath $sessionPath) {
+                try {
+                    $parsed = Get-Content -LiteralPath $sessionPath -Raw -Encoding UTF8 | ConvertFrom-Json
+                    if ($parsed) {
+                        $parsed.PSObject.Properties | ForEach-Object { $store[$_.Name] = $_.Value }
+                    }
+                }
+                catch { $store = @{} }
+            }
+            return $store
+        }
+
+        function Save-SessionStore($store) {
+            ($store | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $sessionPath -Encoding UTF8
+        }
+
+        function Get-SessionFromRequest($request) {
+            $cookies = Get-RequestCookies $request
+            $token = [string]$cookies[$sessionCookie]
+            if ($token -notmatch '^[a-f0-9]{64}$') { return $null }
+            $store = Get-SessionStore
+            if (-not $store.ContainsKey($token)) { return $null }
+            $rec = $store[$token]
+            $expires = [int64]$rec.expiresAt
+            if ($expires -gt 0 -and $expires -lt [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()) { return $null }
+            return @{ token = $token; rec = $rec }
+        }
+
+        function Get-PresenceTokens {
+            $tokens = @{}
+            if (Test-Path -LiteralPath $presencePath) {
+                try {
+                    $parsed = Get-Content -LiteralPath $presencePath -Raw -Encoding UTF8 | ConvertFrom-Json
+                    if ($parsed.tokens) {
+                        $parsed.tokens.PSObject.Properties | ForEach-Object { $tokens[$_.Name] = $_.Value }
+                    }
+                }
+                catch { $tokens = @{} }
+            }
+            return $tokens
+        }
+
+        function Save-PresenceTokens($tokens) {
+            (@{ tokens = $tokens } | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $presencePath -Encoding UTF8
+        }
+
+        function Remove-PresenceForAccount($tokens, [string]$acctKey) {
+            $remove = @()
+            foreach ($entry in $tokens.GetEnumerator()) {
+                if ([string]$entry.Value.accountKey -eq $acctKey) { $remove += $entry.Key }
+            }
+            foreach ($k in $remove) { $tokens.Remove($k) | Out-Null }
+        }
+
+        function Get-PresenceRegions($entries) {
+            $counts = @{}
+            foreach ($rec in $entries) {
+                $k = [string]$rec.key
+                if ([string]::IsNullOrWhiteSpace($k)) { continue }
+                if (-not $counts.ContainsKey($k)) {
+                    $counts[$k] = @{
+                        key   = $k
+                        name  = [string]$rec.name
+                        iso2  = [string]$rec.iso2
+                        grain = [string]$rec.grain
+                        count = 0
+                    }
+                }
+                $counts[$k].count = [int]$counts[$k].count + 1
+            }
+            return @($counts.Values)
+        }
+
+        function Get-FilteredPresence($tokens, $viewer) {
+            $all = @($tokens.Values | Where-Object { $_ -and $_.key })
+            $viewerKey = [string]$viewer.rec.accountKey
+            $viewerShares = [bool]$viewer.rec.shareProgress
+            $mine = $all | Where-Object { [string]$_.accountKey -eq $viewerKey } | Select-Object -First 1
+
+            if (-not $viewerShares) {
+                $regions = @()
+                if ($mine) {
+                    $regions = @(@{
+                        key   = [string]$mine.key
+                        name  = [string]$mine.name
+                        iso2  = [string]$mine.iso2
+                        grain = [string]$mine.grain
+                        count = 1
+                    })
+                }
+                return @{ regions = $regions; participants = @(); shareProgress = $false }
+            }
+
+            $consenting = @($all | Where-Object { [bool]$_.shareProgress })
+            $regions = @(Get-PresenceRegions $consenting)
+            $participants = @($consenting | ForEach-Object {
+                @{
+                    regionKey  = [string]$_.key
+                    regionName = [string]$_.name
+                    iso2       = [string]$_.iso2
+                    grain      = [string]$_.grain
+                    progress   = $_.progress
+                }
+            })
+            return @{ regions = $regions; participants = $participants; shareProgress = $true }
+        }
+
+        $sub = $abs.Substring('/api/experimental-auth'.Length).TrimStart('/')
+
+        if ($sub -eq 'me' -and $context.Request.HttpMethod -eq 'GET') {
+            $viewer = Get-SessionFromRequest $context.Request
+            if (-not $viewer) {
+                Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+                return $true
+            }
+            $out = @{
+                ok            = $true
+                name          = [string]$viewer.rec.name
+                accountKey    = [string]$viewer.rec.accountKey
+                shareProgress = [bool]$viewer.rec.shareProgress
+            }
+            Send-Json $context $out 200 $null
+            return $true
+        }
+
+        if ($sub -eq 'logout' -and $context.Request.HttpMethod -eq 'POST') {
+            $viewer = Get-SessionFromRequest $context.Request
+            if ($viewer) {
+                $sessions = Get-SessionStore
+                $sessions.Remove($viewer.token) | Out-Null
+                Save-SessionStore $sessions
+                $tokens = Get-PresenceTokens
+                if ($tokens.ContainsKey($viewer.token)) {
+                    $tokens.Remove($viewer.token) | Out-Null
+                    Save-PresenceTokens $tokens
+                }
+            }
+            Send-Json $context @{ ok = $true } 200 @{ 'Set-Cookie' = "$sessionCookie=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0" }
+            return $true
+        }
+
+        if ($sub -eq 'login' -and $context.Request.HttpMethod -eq 'POST') {
+            $reader = New-Object System.IO.StreamReader($context.Request.InputStream, [System.Text.Encoding]::UTF8)
+            $raw = $reader.ReadToEnd()
+            $reader.Close()
+            try { $body = $raw | ConvertFrom-Json }
+            catch {
+                Send-Text $context '{"error":"Invalid JSON"}' 400 'application/json; charset=utf-8'
+                return $true
+            }
+            $name = [string]$body.name
+            $hash = [string]$body.passwordHash
+            $shareProgress = [bool]$body.shareProgress
+            $inviteRaw = [string]$body.inviteCode
+            if ([string]::IsNullOrWhiteSpace($name) -or [string]::IsNullOrWhiteSpace($hash)) {
+                Send-Text $context '{"error":"Missing name or password"}' 400 'application/json; charset=utf-8'
+                return $true
+            }
+            $acctKey = Get-AccountKey $name
+            $accounts = @{}
+            if (Test-Path -LiteralPath $accountPath) {
+                try {
+                    $parsed = Get-Content -LiteralPath $accountPath -Raw -Encoding UTF8 | ConvertFrom-Json
+                    if ($parsed) { $parsed.PSObject.Properties | ForEach-Object { $accounts[$_.Name] = $_.Value } }
+                }
+                catch { $accounts = @{} }
+            }
+            $acctExists = $accounts.ContainsKey($acctKey)
+            if ($acctExists -and [string]$accounts[$acctKey].passwordHash -ne $hash) {
+                Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+                return $true
+            }
+            $inviteCheck = Test-InviteForLogin $inviteRaw $acctKey $name $acctExists
+            if (-not $inviteCheck.ok) {
+                Send-Json $context @{ error = $inviteCheck.error; message = $inviteCheck.message } 403 $null
+                return $true
+            }
+            $tokenBytes = New-Object byte[] 32
+            [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($tokenBytes)
+            $token = ([BitConverter]::ToString($tokenBytes) -replace '-', '').ToLowerInvariant()
+            $expiresAt = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds() + $sessionTtlMs
+            $sessions = Get-SessionStore
+            $sessions[$token] = @{
+                accountKey    = $acctKey
+                name          = $name.Trim()
+                shareProgress = $shareProgress
+                passwordHash  = $hash
+                createdAt     = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+                expiresAt     = $expiresAt
+            }
+            Save-SessionStore $sessions
+            if ($inviteCheck.redeem) { Redeem-Invite $inviteCheck.redeem $acctKey $name }
+            $tokens = Get-PresenceTokens
+            Remove-PresenceForAccount $tokens $acctKey
+            Save-PresenceTokens $tokens
+            $maxAge = [int]($sessionTtlMs / 1000)
+            Send-Json $context @{ ok = $true; shareProgress = $shareProgress } 200 @{ 'Set-Cookie' = "$sessionCookie=$token; Path=/; HttpOnly; SameSite=Lax; Max-Age=$maxAge" }
+            return $true
+        }
+
+        Send-Text $context '{"error":"Method not allowed"}' 405 'application/json; charset=utf-8'
+        return $true
+    }
+
     if ($abs -eq '/api/experimental-account') {
         if ($context.Request.HttpMethod -ne 'POST') {
             Send-Text $context '{"error":"Method not allowed"}' 405 'application/json; charset=utf-8'
@@ -255,11 +594,50 @@ function Handle-Api($context) {
     }
 
     if ($abs -eq '/api/experimental-presence') {
-        $storePath = Join-Path (Split-Path $root -Parent) '.experimental-presence.json'
-        $tokens = @{}
-        if (Test-Path -LiteralPath $storePath) {
+        $repoRoot = Split-Path $root -Parent
+        $sessionPath = Join-Path $repoRoot '.experimental-sessions.json'
+        $presencePath = Join-Path $repoRoot '.experimental-presence.json'
+        $sessionCookie = 'lwm_exp_session'
+
+        function Get-PresenceRequestCookies($request) {
+            $out = @{}
+            $header = [string]$request.Headers['Cookie']
+            if ([string]::IsNullOrWhiteSpace($header)) { return $out }
+            foreach ($part in ($header -split ';')) {
+                $idx = $part.IndexOf('=')
+                if ($idx -gt 0) {
+                    $k = $part.Substring(0, $idx).Trim()
+                    $v = [System.Uri]::UnescapeDataString($part.Substring($idx + 1).Trim())
+                    $out[$k] = $v
+                }
+            }
+            return $out
+        }
+
+        function Get-PresenceSession($request) {
+            $cookies = Get-PresenceRequestCookies $request
+            $token = [string]$cookies[$sessionCookie]
+            if ($token -notmatch '^[a-f0-9]{64}$') { return $null }
+            if (-not (Test-Path -LiteralPath $sessionPath)) { return $null }
             try {
-                $parsed = Get-Content -LiteralPath $storePath -Raw -Encoding UTF8 | ConvertFrom-Json
+                $store = Get-Content -LiteralPath $sessionPath -Raw -Encoding UTF8 | ConvertFrom-Json
+            }
+            catch { return $null }
+            $rec = $store.$token
+            if (-not $rec) { return $null }
+            return @{ token = $token; rec = $rec }
+        }
+
+        $viewer = Get-PresenceSession $context.Request
+        if (-not $viewer) {
+            Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+            return $true
+        }
+
+        $tokens = @{}
+        if (Test-Path -LiteralPath $presencePath) {
+            try {
+                $parsed = Get-Content -LiteralPath $presencePath -Raw -Encoding UTF8 | ConvertFrom-Json
                 if ($parsed.tokens) {
                     $parsed.tokens.PSObject.Properties | ForEach-Object { $tokens[$_.Name] = $_.Value }
                 }
@@ -267,10 +645,9 @@ function Handle-Api($context) {
             catch { $tokens = @{} }
         }
 
-        function Get-PresenceRegions($tokenMap) {
+        function Get-PresenceRegionsLocal($entries) {
             $counts = @{}
-            foreach ($entry in $tokenMap.GetEnumerator()) {
-                $rec = $entry.Value
+            foreach ($rec in $entries) {
                 $k = [string]$rec.key
                 if ([string]::IsNullOrWhiteSpace($k)) { continue }
                 if (-not $counts.ContainsKey($k)) {
@@ -287,9 +664,37 @@ function Handle-Api($context) {
             return @($counts.Values)
         }
 
+        function Get-FilteredPresenceLocal($tokenMap, $view) {
+            $all = @($tokenMap.Values | Where-Object { $_ -and $_.key })
+            $viewerKey = [string]$view.rec.accountKey
+            $viewerShares = [bool]$view.rec.shareProgress
+            $mine = $all | Where-Object { [string]$_.accountKey -eq $viewerKey } | Select-Object -First 1
+            if (-not $viewerShares) {
+                $regions = @()
+                if ($mine) {
+                    $regions = @(@{
+                        key = [string]$mine.key; name = [string]$mine.name
+                        iso2 = [string]$mine.iso2; grain = [string]$mine.grain; count = 1
+                    })
+                }
+                return @{ regions = $regions; participants = @(); shareProgress = $false }
+            }
+            $consenting = @($all | Where-Object { [bool]$_.shareProgress })
+            $regions = @(Get-PresenceRegionsLocal $consenting)
+            $participants = @($consenting | ForEach-Object {
+                @{
+                    regionKey = [string]$_.key; regionName = [string]$_.name
+                    iso2 = [string]$_.iso2; grain = [string]$_.grain; progress = $_.progress
+                }
+            })
+            return @{ regions = $regions; participants = $participants; shareProgress = $true }
+        }
+
         if ($context.Request.HttpMethod -eq 'GET') {
-            $out = @{ ok = $true; regions = @(Get-PresenceRegions $tokens) }
-            Send-Text $context ($out | ConvertTo-Json -Compress -Depth 6) 200 'application/json; charset=utf-8'
+            $filtered = Get-FilteredPresenceLocal $tokens $viewer
+            $out = @{ ok = $true }
+            foreach ($k in $filtered.Keys) { $out[$k] = $filtered[$k] }
+            Send-Json $context $out 200 $null
             return $true
         }
         if ($context.Request.HttpMethod -ne 'POST') {
@@ -299,9 +704,7 @@ function Handle-Api($context) {
         $reader = New-Object System.IO.StreamReader($context.Request.InputStream, [System.Text.Encoding]::UTF8)
         $raw = $reader.ReadToEnd()
         $reader.Close()
-        try {
-            $body = $raw | ConvertFrom-Json
-        }
+        try { $body = $raw | ConvertFrom-Json }
         catch {
             Send-Text $context '{"error":"Invalid JSON"}' 400 'application/json; charset=utf-8'
             return $true
@@ -310,25 +713,37 @@ function Handle-Api($context) {
             Send-Text $context '{"error":"city is not shared"}' 400 'application/json; charset=utf-8'
             return $true
         }
-        $token = [string]$body.token
         $key = [string]$body.key
         $name = [string]$body.name
         $iso2 = ([string]$body.iso2).ToLowerInvariant()
         $grain = ([string]$body.grain).ToLowerInvariant()
-        if ($token -notmatch '^[a-fA-F0-9]{16,64}$' -or $key -notmatch '^[a-z]{2}:(state|nation|country):[a-z0-9-]{1,64}$' -or $iso2 -notmatch '^[a-z]{2}$' -or $grain -notmatch '^(state|nation|country)$' -or [string]::IsNullOrWhiteSpace($name) -or $name.Length -gt 64) {
+        if ($key -notmatch '^[a-z]{2}:(state|nation|country):[a-z0-9-]{1,64}$' -or $iso2 -notmatch '^[a-z]{2}$' -or $grain -notmatch '^(state|nation|country)$' -or [string]::IsNullOrWhiteSpace($name) -or $name.Length -gt 64) {
             Send-Text $context '{"error":"Invalid presence"}' 400 'application/json; charset=utf-8'
             return $true
         }
-        $tokens[$token] = @{
-            key       = $key
-            name      = $name.Trim()
-            iso2      = $iso2
-            grain     = $grain
-            updatedAt = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+        $shareProgress = [bool]$viewer.rec.shareProgress
+        $progress = $null
+        if ($shareProgress -and $body.progress) {
+            $set = [Math]::Max(1, [Math]::Min(11, [int]$body.progress.set))
+            $round = [Math]::Max(1, [Math]::Min(3, [int]$body.progress.round))
+            $topic = [Math]::Max(1, [Math]::Min(666, [int]$body.progress.topic))
+            $progress = @{ set = $set; round = $round; topic = $topic }
         }
-        (@{ tokens = $tokens } | ConvertTo-Json -Depth 6) | Set-Content -LiteralPath $storePath -Encoding UTF8
-        $out = @{ ok = $true; saved = $true; regions = @(Get-PresenceRegions $tokens) }
-        Send-Text $context ($out | ConvertTo-Json -Compress -Depth 6) 200 'application/json; charset=utf-8'
+        $tokens[[string]$viewer.token] = @{
+            key           = $key
+            name          = $name.Trim()
+            iso2          = $iso2
+            grain         = $grain
+            accountKey    = [string]$viewer.rec.accountKey
+            shareProgress = $shareProgress
+            progress      = $progress
+            updatedAt     = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+        }
+        (@{ tokens = $tokens } | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $presencePath -Encoding UTF8
+        $filtered = Get-FilteredPresenceLocal $tokens $viewer
+        $out = @{ ok = $true; saved = $true }
+        foreach ($k in $filtered.Keys) { $out[$k] = $filtered[$k] }
+        Send-Json $context $out 200 $null
         return $true
     }
 

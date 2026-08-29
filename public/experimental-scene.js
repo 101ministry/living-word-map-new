@@ -43,6 +43,7 @@
   let lastAim = { x: 320, y: 240 };
   let peopleView = false;
   let peopleRegions = [];
+  let peopleParticipants = [];
   let peopleWorld = null;
   let peopleWorldAdm = null;
   let peopleLoading = false;
@@ -1614,7 +1615,24 @@
     return loc ? `${loc} \u00b7 ${layer}` : layer;
   }
 
+  function progressLabel(progress) {
+    if (!progress || typeof progress !== 'object') return '';
+    const set = Number(progress.set) || 1;
+    const round = Number(progress.round) || 1;
+    const topic = Number(progress.topic) || 1;
+    return `Set ${set} \u00b7 R${round} \u00b7 #${String(topic).padStart(3, '0')}`;
+  }
+
   function peopleCaption() {
+    if (peopleParticipants.length) {
+      const lines = peopleParticipants
+        .slice(0, 6)
+        .map(p => {
+          const prog = progressLabel(p.progress);
+          return prog ? `${p.regionName} \u00b7 ${prog}` : p.regionName;
+        });
+      return `People \u00b7 ${lines.join(' \u00b7 ')}`;
+    }
     const named = (peopleRegions || [])
       .filter(r => r && r.name)
       .sort((a, b) => (b.count || 0) - (a.count || 0))
@@ -1706,6 +1724,11 @@
 
   function setPeopleRegions(list) {
     peopleRegions = Array.isArray(list) ? list : [];
+    if (peopleView) draw();
+  }
+
+  function setPeopleParticipants(list) {
+    peopleParticipants = Array.isArray(list) ? list : [];
     if (peopleView) draw();
   }
 
@@ -1868,6 +1891,7 @@
     resize,
     setPeopleView,
     setPeopleRegions,
+    setPeopleParticipants,
     isPeopleView,
   };
 })();
