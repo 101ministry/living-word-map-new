@@ -28,8 +28,22 @@
     }
   }
 
+  function reportChoice(value) {
+    try {
+      fetch('/api/found-us', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ choice: value }),
+        keepalive: true,
+      }).catch(() => {});
+    } catch {
+      /* ignore */
+    }
+  }
+
   function applyChoice(value) {
     if (!value) return;
+    reportChoice(value);
     save(value);
     if (value === 'camp') {
       location.href = 'index.html?view=camp';

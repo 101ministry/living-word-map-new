@@ -19,6 +19,10 @@ id = "bc57f2d4b1c94fa797989141b27156ae"
 NOTIFY_EMAIL = "repentance101ministry.admin@gmail.com"
 RESEND_FROM = "Living Word Map <notifications@repentance101.com>"
 
+# Monday 9:00 AM Eastern (13:00 UTC)
+[triggers]
+crons = ["0 13 * * 1"]
+
 # Public URL (update DNS CNAME when Cloudflare shows the target after first deploy)
 [[routes]]
 pattern = "map.repentance101.com"

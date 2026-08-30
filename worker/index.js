@@ -10,7 +10,17 @@ const NOMINATIM_PATH = '/api/nominatim';
 const ACCOUNT_PATH = '/api/experimental-account';
 const AUTH_PATH = '/api/experimental-auth';
 const PRESENCE_PATH = '/api/experimental-presence';
+const FOUND_US_PATH = '/api/found-us';
 const MAP_TILE_PATH = '/api/map-tile';
+const FOUND_US_KV_KEY = 'found-us-v1';
+const FOUND_US_CHOICES = ['friend', 'church', 'norman', 'camp', 'slack'];
+const FOUND_US_LABELS = {
+  friend: 'A friend told me',
+  church: 'Someone from church',
+  norman: 'Norman told me',
+  camp: 'I heard about the Discipleship Training Camp',
+  slack: 'Invitation to join Slack Messaging',
+};
 const PRESENCE_KV_KEY = 'presence-v1';
 const ALLOWLIST_KV_KEY = 'allowlist-v1';
 const INVITES_KV_KEY = 'invites-v1';
@@ -21,6 +31,10 @@ const DOWNLOADS_PREFIX = '/audio/accelerated-discipleship/';
 const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://map.repentance101.com/)';
 
 export default {
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(sendFoundUsWeekly(env));
+  },
+
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
@@ -69,6 +83,13 @@ export default {
     if (url.pathname === PRESENCE_PATH || url.pathname === `${PRESENCE_PATH}/`) {
       if (request.method === 'GET' || request.method === 'POST') {
         return handleExperimentalPresence(request, env);
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (url.pathname === FOUND_US_PATH || url.pathname === `${FOUND_US_PATH}/`) {
+      if (request.method === 'POST') {
+        return handleFoundUsPost(request, env);
       }
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
@@ -277,6 +298,119 @@ async function sendBookingEmail(env, data, rawJson) {
     const errText = await res.text();
     console.error('Resend error', res.status, errText);
   }
+}
+
+function emptyFoundUsBucket() {
+  return { friend: 0, church: 0, norman: 0, camp: 0, slack: 0 };
+}
+
+function normalizeFoundUsStore(raw) {
+  const all = emptyFoundUsBucket();
+  const week = emptyFoundUsBucket();
+  const srcAll = raw?.all && typeof raw.all === 'object' ? raw.all : {};
+  const srcWeek = raw?.week && typeof raw.week === 'object' ? raw.week : {};
+  for (const key of FOUND_US_CHOICES) {
+    all[key] = Math.max(0, Number(srcAll[key]) || 0);
+    week[key] = Math.max(0, Number(srcWeek[key]) || 0);
+  }
+  return {
+    all,
+    week,
+    weekStartedAt: Number(raw?.weekStartedAt) || Date.now(),
+  };
+}
+
+async function loadFoundUsStore(env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) return null;
+  let raw = null;
+  try {
+    raw = await kv.get(FOUND_US_KV_KEY, { type: 'json' });
+  } catch {
+    raw = null;
+  }
+  return normalizeFoundUsStore(raw);
+}
+
+function formatFoundUsLines(bucket) {
+  return FOUND_US_CHOICES.map(
+    (key) => `${FOUND_US_LABELS[key]}: ${bucket[key] || 0}`,
+  ).join('\n');
+}
+
+function foundUsWeekTotal(bucket) {
+  return FOUND_US_CHOICES.reduce((sum, key) => sum + (bucket[key] || 0), 0);
+}
+
+async function handleFoundUsPost(request, env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) {
+    return jsonResponse({ error: 'Storage is not configured' }, 503);
+  }
+  let body = null;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400);
+  }
+  const choice = String(body?.choice || '').toLowerCase();
+  if (!FOUND_US_CHOICES.includes(choice)) {
+    return jsonResponse({ error: 'Unknown choice' }, 400);
+  }
+  const store = await loadFoundUsStore(env);
+  store.all[choice] += 1;
+  store.week[choice] += 1;
+  await kv.put(FOUND_US_KV_KEY, JSON.stringify(store));
+  return jsonResponse({ ok: true });
+}
+
+async function sendFoundUsWeekly(env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) return;
+  const store = await loadFoundUsStore(env);
+  if (!env.RESEND_API_KEY) {
+    console.error('found-us weekly: RESEND_API_KEY is not set');
+    return;
+  }
+  const to = env.NOTIFY_EMAIL || 'repentance101ministry.admin@gmail.com';
+  const from = env.RESEND_FROM || 'Living Word Map <notifications@repentance101.com>';
+  const started = new Date(store.weekStartedAt).toISOString().slice(0, 10);
+  const today = new Date().toISOString().slice(0, 10);
+  const weekTotal = foundUsWeekTotal(store.week);
+  const allTotal = foundUsWeekTotal(store.all);
+  const text = [
+    `Repentance Project 2026 — How did you find us?`,
+    ``,
+    `This week (${started} to ${today}): ${weekTotal} responses`,
+    formatFoundUsLines(store.week),
+    ``,
+    `All time: ${allTotal} responses`,
+    formatFoundUsLines(store.all),
+    ``,
+    `This is the automated Monday report from map.repentance101.com.`,
+  ].join('\n');
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from,
+      to: [to],
+      subject: `[LWM] How did you find us? — ${weekTotal} this week`,
+      text,
+    }),
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    console.error('found-us weekly Resend error', res.status, errText);
+    return;
+  }
+  store.week = emptyFoundUsBucket();
+  store.weekStartedAt = Date.now();
+  await kv.put(FOUND_US_KV_KEY, JSON.stringify(store));
 }
 
 async function nominatimGet(url) {
