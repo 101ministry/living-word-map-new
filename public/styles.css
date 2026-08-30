@@ -1050,12 +1050,20 @@ html.camp-isolated .graph-hint {
 
 html.camp-isolated,
 html.camp-isolated body {
+  height: 100%;
+  height: 100dvh;
   overflow: hidden !important;
 }
 
 html.camp-isolated #app {
   height: 100%;
+  max-height: 100dvh;
+  min-height: 0;
   overflow: hidden;
+}
+
+html.camp-isolated .header {
+  flex: 0 0 auto;
 }
 
 html.camp-isolated .main {
@@ -1079,7 +1087,9 @@ html.camp-isolated .graph-panel {
   position: absolute;
   inset: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
 }
 
 .camp-toolbar,
@@ -1297,13 +1307,18 @@ html.camp-isolated .graph-panel {
 
 @media (max-width: 760px) {
   .camp-view {
-    padding: 0.75rem 0.9rem 1.5rem;
+    padding: 0.75rem 0.9rem 2.5rem;
   }
 
   .camp-toolbar,
   .camp-focus,
   .camp-layout {
     width: 100%;
+  }
+
+  .camp-seats {
+    max-height: none;
+    min-height: 0;
   }
 
   .camp-clipboard {
@@ -1315,9 +1330,10 @@ html.camp-isolated .graph-panel {
     transform: none;
     width: min(16rem, 100%);
     height: auto;
-    max-height: 14rem;
-    margin: 0.65rem auto 1.25rem;
+    max-height: none;
+    margin: 0.85rem auto 2rem;
     border-radius: 4px 12px 12px 4px;
+    flex-shrink: 0;
   }
 }
 
@@ -3268,28 +3284,36 @@ a.round2-nav-link:hover {
 
   html.camp-isolated .workspace {
     flex: 1 1 auto;
+    min-height: 0;
     height: auto;
-    min-height: 70dvh;
-    overflow: visible;
+    max-height: none;
+    overflow: hidden;
   }
 
   html.camp-isolated .main {
-    height: auto;
+    height: 100%;
     max-height: none;
-    min-height: 70dvh;
+    min-height: 0;
+    overflow: hidden;
   }
 
   html.camp-isolated .graph-panel {
-    min-height: 70dvh;
-    height: auto;
-    overflow: visible;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
   }
 
   html.camp-isolated .graph-panel.is-camp .camp-view {
-    position: relative;
-    inset: auto;
-    min-height: 70dvh;
-    height: auto;
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+    padding: 0.75rem 0.9rem 2.5rem;
   }
 
   .graph-hint {
