@@ -30,11 +30,18 @@
     return document.querySelector('.view-nav-submenu');
   }
 
+  function closedLabel(value) {
+    if (value === 'globe' || value === 'constellation' || value === 'explore') {
+      return 'Globe Word Map';
+    }
+    return LABELS[value] || 'View';
+  }
+
   function syncLabel() {
     const t = toggle();
     const s = sel();
     if (!t || !s) return;
-    t.textContent = LABELS[s.value] || s.options[s.selectedIndex]?.text || 'View';
+    t.textContent = closedLabel(s.value) || s.options[s.selectedIndex]?.text || 'View';
   }
 
   function placeSubmenu(sub, btn) {
