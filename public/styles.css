@@ -1016,6 +1016,11 @@ a.mobile-nav-link {
   overflow: hidden;
 }
 
+.graph-panel.is-camp,
+.graph-panel.is-camp * {
+  touch-action: pan-y;
+}
+
 html.camp-isolated .graph-panel {
   overflow: hidden;
 }
@@ -1319,6 +1324,15 @@ html.camp-isolated .graph-panel {
   .camp-seats {
     max-height: none;
     min-height: 0;
+    overflow: visible;
+    overscroll-behavior: auto;
+  }
+
+  .camp-seat,
+  .camp-fruit-btn,
+  .camp-answer-btn,
+  .camp-assign-btn {
+    touch-action: pan-y;
   }
 
   .camp-clipboard {
@@ -1402,6 +1416,7 @@ html.camp-isolated .graph-panel {
   padding: 0.5rem 0.55rem;
   color: var(--text);
   cursor: pointer;
+  touch-action: pan-y;
 }
 
 .camp-seat:hover,

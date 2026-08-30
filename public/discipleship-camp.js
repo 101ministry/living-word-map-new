@@ -801,11 +801,11 @@
           else if (s.status === 'returning') badge = 'More problems';
           else if (s.status === 'away') badge = 'Out of the chair';
           else if (s.faction) badge = 'Split';
-          return `<button type="button" class="camp-seat${on}${work}${ret}${split}${away}" data-name="${escapeHtml(s.displayName)}">
+          return `<div role="button" tabindex="0" class="camp-seat${on}${work}${ret}${split}${away}" data-name="${escapeHtml(s.displayName)}">
             <span class="camp-seat-name">${escapeHtml(s.displayName)}</span>
             ${badge ? `<span class="camp-seat-badge">${badge}</span>` : ''}
             <span class="camp-seat-q">${escapeHtml(s.openingQuestion)}</span>
-          </button>`;
+          </div>`;
         })
         .join('');
       const s = this.studentByName(this.selectedName);
@@ -936,6 +936,15 @@
         if (!btn) return;
         const name = btn.getAttribute('data-name');
         this.selectedName = name;
+        this.prayerPreview = null;
+        this.render();
+      });
+      document.getElementById('camp-seats')?.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const btn = e.target.closest('.camp-seat');
+        if (!btn) return;
+        e.preventDefault();
+        this.selectedName = btn.getAttribute('data-name');
         this.prayerPreview = null;
         this.render();
       });
