@@ -164,6 +164,11 @@ body.parchment-lock {
 
 .view-nav-fly {
   position: relative;
+  display: none;
+}
+
+.view-nav-map-flat {
+  display: list-item;
 }
 
 .view-nav-fly-toggle {
@@ -220,6 +225,14 @@ body.parchment-lock {
   .view-nav-menu {
     left: auto;
     right: 0;
+  }
+
+  .view-nav-fly {
+    display: list-item;
+  }
+
+  .view-nav-map-flat {
+    display: none;
   }
 
   .view-nav-submenu {
