@@ -48,9 +48,16 @@
     const r = btn.getBoundingClientRect();
     const w = 13 * 16;
     const gap = 6;
+    const mobile = window.matchMedia('(max-width: 760px)').matches;
+    sub.style.position = 'fixed';
+    if (mobile) {
+      sub.style.top = `${r.bottom + gap}px`;
+      sub.style.left = 'auto';
+      sub.style.right = '8px';
+      return;
+    }
     const spaceRight = window.innerWidth - r.right;
     const openLeft = spaceRight < w + 12;
-    sub.style.position = 'fixed';
     sub.style.top = `${Math.max(8, r.top)}px`;
     if (openLeft) {
       sub.style.left = 'auto';

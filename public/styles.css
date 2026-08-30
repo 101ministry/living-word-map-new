@@ -217,8 +217,14 @@ body.parchment-lock {
 }
 
 @media (max-width: 760px) {
+  .view-nav-menu {
+    left: auto;
+    right: 0;
+  }
+
   .view-nav-submenu {
-    left: 0.75rem;
+    left: auto;
+    right: 0;
     top: 100%;
   }
 }
