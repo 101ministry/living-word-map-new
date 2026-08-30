@@ -92,7 +92,6 @@
       s.value = value;
     }
     window.dispatchEvent(new CustomEvent('lwm:view-mode', { detail: { value } }));
-    s?.dispatchEvent(new Event('change', { bubbles: true }));
     syncLabel();
     closeAll();
   }

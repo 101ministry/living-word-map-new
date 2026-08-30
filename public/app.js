@@ -298,15 +298,17 @@
   }
 
   function goToCompare() {
-    if (state.compareIds.length >= 2) {
-      setControlsDrawerOpen(false);
-      openCompareDialog();
-      return;
-    }
-    setControlsDrawerOpen(true);
-    requestAnimationFrame(() => {
-      document.querySelector('.compare-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    window.setTimeout(() => {
+      if (state.compareIds.length >= 2) {
+        setControlsDrawerOpen(false);
+        openCompareDialog();
+        return;
+      }
+      setControlsDrawerOpen(true);
+      requestAnimationFrame(() => {
+        document.querySelector('.compare-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }, 50);
   }
 
   function initMobileUi() {
@@ -2274,10 +2276,10 @@
       return;
     }
     if (value === 'compare') {
-      const modeSel = document.getElementById('view-mode');
-      if (modeSel) modeSel.value = state.viewMode || 'constellation';
       window.AskOverlay?.close?.();
       goToCompare();
+      const modeSel = document.getElementById('view-mode');
+      if (modeSel) modeSel.value = state.viewMode || 'constellation';
       window.ViewNav?.syncLabel?.();
       return;
     }

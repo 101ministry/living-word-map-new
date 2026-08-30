@@ -423,7 +423,7 @@ a.mobile-nav-link {
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 31;
+  z-index: 90;
   width: min(320px, 88vw);
   max-width: 88vw;
   padding: 1rem;
@@ -3115,7 +3115,7 @@ a.round2-nav-link:hover {
     display: block;
     position: fixed;
     inset: 0;
-    z-index: 30;
+    z-index: 89;
     border: none;
     padding: 0;
     background: rgba(0, 0, 0, 0.5);
