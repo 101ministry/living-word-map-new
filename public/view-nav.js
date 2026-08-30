@@ -88,9 +88,11 @@
 
   function pick(value) {
     const s = sel();
-    if (!s) return;
-    s.value = value;
-    s.dispatchEvent(new Event('change', { bubbles: true }));
+    if (s && [...s.options].some((o) => o.value === value)) {
+      s.value = value;
+    }
+    window.dispatchEvent(new CustomEvent('lwm:view-mode', { detail: { value } }));
+    s?.dispatchEvent(new Event('change', { bubbles: true }));
     syncLabel();
     closeAll();
   }

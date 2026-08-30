@@ -3230,10 +3230,10 @@ a.round2-nav-link:hover {
     max-width: none;
   }
 
-  #view-mode {
-    flex: 0 1 14rem;
-    width: 14rem;
-    max-width: 14rem;
+  #view-mode.view-nav-select {
+    flex: 0;
+    width: 1px;
+    max-width: 1px;
   }
 
   #reset-view,
@@ -3266,8 +3266,30 @@ a.round2-nav-link:hover {
     flex-shrink: 0;
   }
 
-  .graph-panel {
-    min-height: 0;
+  html.camp-isolated .workspace {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 70dvh;
+    overflow: visible;
+  }
+
+  html.camp-isolated .main {
+    height: auto;
+    max-height: none;
+    min-height: 70dvh;
+  }
+
+  html.camp-isolated .graph-panel {
+    min-height: 70dvh;
+    height: auto;
+    overflow: visible;
+  }
+
+  html.camp-isolated .graph-panel.is-camp .camp-view {
+    position: relative;
+    inset: auto;
+    min-height: 70dvh;
+    height: auto;
   }
 
   .graph-hint {

@@ -379,7 +379,11 @@
     },
 
     redrawClassroom() {
-      const roster = shuffle(this.pack?.students || []);
+      if (!this.pack) {
+        this.draw();
+        return;
+      }
+      const roster = shuffle(this.pack.students || []);
       const start = Math.min(this.size, Math.max(8, Math.min(20, this.size)));
       this.classroom = roster.slice(0, start).map(prepareStudent);
       this.bench = roster.slice(start).map(prepareStudent);

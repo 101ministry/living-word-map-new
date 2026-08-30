@@ -1580,6 +1580,9 @@
       window.TeachingVideos?.hideGlobeRail?.();
       document.documentElement.classList.add('camp-isolated');
       document.body.classList.add('camp-isolated');
+      const campEl = document.getElementById('camp-view');
+      campEl?.classList.remove('hidden');
+      campEl?.setAttribute('aria-hidden', 'false');
       window.DiscipleshipCamp?.show?.();
     } else {
       document.documentElement.classList.remove('camp-isolated');
@@ -2236,7 +2239,17 @@
   });
 
   document.getElementById('view-mode').addEventListener('change', e => {
-    if (e.target.value === 'camp') {
+    applyViewModeChoice(e.target.value);
+  });
+  window.addEventListener('lwm:view-mode', (e) => {
+    applyViewModeChoice(e.detail?.value);
+  });
+
+  function applyViewModeChoice(value) {
+    if (value == null || applyViewModeChoice._busy) return;
+    applyViewModeChoice._busy = true;
+    try {
+    if (value === 'camp') {
       window.AskOverlay?.close?.();
       state.viewMode = 'camp';
       state.selectedId = null;
@@ -2248,23 +2261,27 @@
       setViewSurface();
       return;
     }
-    if (e.target.value === 'experimental') {
+    if (value === 'experimental') {
       window.location.href = 'experimental.html';
       return;
     }
-    if (e.target.value === 'why-bloodline') {
-      e.target.value = state.viewMode || 'constellation';
+    if (value === 'why-bloodline') {
+      const modeSel = document.getElementById('view-mode');
+      if (modeSel) modeSel.value = state.viewMode || 'constellation';
       closeParchmentIfOpen();
       document.getElementById('study-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.ViewNav?.syncLabel?.();
       return;
     }
-    if (e.target.value === 'compare') {
-      e.target.value = state.viewMode || 'constellation';
+    if (value === 'compare') {
+      const modeSel = document.getElementById('view-mode');
+      if (modeSel) modeSel.value = state.viewMode || 'constellation';
       window.AskOverlay?.close?.();
       goToCompare();
+      window.ViewNav?.syncLabel?.();
       return;
     }
-    state.viewMode = e.target.value;
+    state.viewMode = value;
     state.selectedId = null;
     state.globeTransportPrincipalityId = null;
     state.globeFruitFocusId = null;
@@ -2272,7 +2289,7 @@
     applyGlobeLayout();
     showEmptyDetail();
     document.getElementById('graph-hint').classList.remove('hidden');
-    if (e.target.value === 'explore') {
+    if (value === 'explore') {
       document.getElementById('show-topics').checked = true;
       state.show.topic = true;
     } else {
@@ -2282,11 +2299,23 @@
     setViewSurface();
     refreshGraph();
     applyGraphView();
-  });
+    } finally {
+      applyViewModeChoice._busy = false;
+    }
+  }
 
   document.getElementById('reset-view').addEventListener('click', () => {
-    if (isCampView()) {
-      window.DiscipleshipCamp?.redrawClassroom?.();
+    const mode = document.getElementById('view-mode')?.value;
+    if (isCampView() || mode === 'camp' || document.documentElement.classList.contains('camp-isolated')) {
+      state.viewMode = 'camp';
+      if (document.getElementById('view-mode')) {
+        document.getElementById('view-mode').value = 'camp';
+      }
+      window.ViewNav?.syncLabel?.();
+      setViewSurface();
+      const camp = window.DiscipleshipCamp;
+      if (camp?.pack) camp.redrawClassroom();
+      else camp?.show?.();
       return;
     }
     state.selectedId = null;
