@@ -1640,6 +1640,53 @@ html.camp-isolated .graph-panel {
 
 .camp-search-row input {
   width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+.camp-prayer-read {
+  margin: 0.75rem 0 1.25rem;
+  padding: 0.85rem 0.9rem 1rem;
+  border: 1px solid rgba(201, 162, 39, 0.45);
+  border-radius: 10px;
+  background: rgba(18, 20, 28, 0.92);
+}
+
+.camp-prayer-read-title {
+  margin: 0 0 0.55rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.camp-prayer-read-body {
+  margin: 0 0 0.85rem;
+  max-height: none;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  font-size: 0.92rem;
+  color: var(--quote);
+}
+
+.camp-prayer-read .btn-accent {
+  width: 100%;
+  min-height: 2.75rem;
+}
+
+.camp-prayer-cancel {
+  display: block;
+  width: 100%;
+  margin-top: 0.45rem;
+  min-height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+  width: 100%;
   background: var(--bg-elevated);
   color: var(--text);
   border: 1px solid var(--border);

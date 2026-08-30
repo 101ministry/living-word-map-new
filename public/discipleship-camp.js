@@ -733,36 +733,59 @@
       this.roomLog.unshift(`This round is ${FOCUS_MAX}. Wait for someone in the line to come back.`);
     },
 
-    async assignTopic(student, topic) {
+    async openPrayerForReading(student, topic) {
       if (!topic?.number) return;
       if (!this.inRound(student.displayName)) return;
       const sess = this.session(student.displayName);
       if (!this.readyForPrayers(sess, student)) return;
       if (sess.assigned.some((a) => a.number === topic.number)) return;
       if (sess.assigned.length >= this.prayersNeeded(student, sess)) return;
+      this.prayerPreview = {
+        studentName: student.displayName,
+        number: topic.number,
+        name: topic.name,
+        text: 'Loading the prayer…',
+        hit: isTrueFruit(student, topic.name),
+        ready: false,
+      };
+      this.render();
+      const preview = await this.showPrayer(topic.number, topic.name, this.prayerPreview.hit);
+      if (!this.prayerPreview || this.prayerPreview.number !== topic.number) return;
+      this.prayerPreview.text = preview.text;
+      this.prayerPreview.ready = true;
+      this.render();
+      requestAnimationFrame(() => {
+        document.querySelector('.camp-prayer-read')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    },
+
+    confirmOpenPrayer() {
+      const p = this.prayerPreview;
+      const student = this.studentByName(p?.studentName);
+      if (!p?.ready || !student) return;
+      this.prayerPreview = null;
+      this.commitAssign(student, { number: p.number, name: p.name }, p);
+    },
+
+    commitAssign(student, topic, preview) {
+      if (!topic?.number) return;
+      const sess = this.session(student.displayName);
+      if (sess.assigned.some((a) => a.number === topic.number)) return;
+      if (sess.assigned.length >= this.prayersNeeded(student, sess)) return;
       sess.assigned.push({ number: topic.number, name: topic.name });
-      const hit = isTrueFruit(student, topic.name);
+      const hit = preview?.hit ?? isTrueFruit(student, topic.name);
       sess.prayerNote = hit
         ? 'They prayed it and the fruit actually quieted.'
         : 'They prayed it anyway. The words came out, but they talked as if a different fruit were the issue.';
       this.pinClipboard(student, {
         kicker: `Prayer #${String(topic.number).padStart(3, '0')} · ${topic.name}`,
         label: `#${String(topic.number).padStart(3, '0')} ${topic.name}`,
-        text: '',
+        text: preview?.text || '',
         hit: !!hit,
       });
       this.releaseStudent(student);
       const done = sess.assigned.length >= this.prayersNeeded(student, sess);
       this.render();
-      this.showPrayer(topic.number, topic.name, hit).then((preview) => {
-        this.pinClipboard(student, {
-          kicker: `Prayer #${String(topic.number).padStart(3, '0')} · ${topic.name}`,
-          label: `#${String(topic.number).padStart(3, '0')} ${topic.name}`,
-          text: preview.text,
-          hit: !!hit,
-        });
-        this.renderClipboard();
-      });
       if (done) {
         window.setTimeout(() => {
           this.selectNextInLine(student.displayName);
@@ -900,13 +923,24 @@
         <div class="camp-answer-row">${answerBtns}</div>
         ${
           prayersOpen
-            ? `<p class="camp-label">Assign prayer topics</p>
-        <p class="camp-muted">Assign all three named fruits. The slip stays yellow until three prayers are on the clipboard. Search if you named something else.</p>
+            ? `<p class="camp-label">Pray the topics</p>
+        <p class="camp-muted">Open each named fruit. Read the prayer. Then assign it. The number alone does not count — praying it with them does. Search if you named something else.</p>
         <div class="camp-assign-row">${assignBtns || '<span class="camp-muted">Name a fruit first.</span>'}</div>
         <div class="camp-search-row">
           <input id="camp-topic-search" type="search" maxlength="80" placeholder="Search unique topic title…" autocomplete="off" />
           <div id="camp-topic-hits" class="camp-assign-row"></div>
+        </div>
+        ${
+          this.prayerPreview
+            ? `<div class="camp-prayer-read">
+          <p class="camp-label">Pray this with them</p>
+          <p class="camp-prayer-read-title">#${String(this.prayerPreview.number).padStart(3, '0')} ${escapeHtml(this.prayerPreview.name)}</p>
+          <div class="camp-prayer-read-body">${escapeHtml(this.prayerPreview.text)}</div>
+          <button type="button" class="btn-accent" id="camp-prayer-commit"${this.prayerPreview.ready ? '' : ' disabled'}>Assign this prayer</button>
+          <button type="button" class="camp-prayer-cancel" id="camp-prayer-cancel">Choose another topic</button>
         </div>`
+            : '<p class="camp-muted">Pick a topic above. The prayer opens here so you can pray it before it goes on the clipboard.</p>'
+        }`
             : `<p class="camp-label">Assign prayer topics</p>
         <p class="camp-muted">Name three fruits and three answers first. Then the prayer topics open.</p>`
         }
@@ -980,9 +1014,18 @@
           if (answer) this.applyAnswer(student, answer);
           return;
         }
+        if (e.target.closest('#camp-prayer-commit')) {
+          this.confirmOpenPrayer();
+          return;
+        }
+        if (e.target.closest('#camp-prayer-cancel')) {
+          this.prayerPreview = null;
+          this.render();
+          return;
+        }
         const assignBtn = e.target.closest('[data-assign]');
         if (assignBtn) {
-          this.assignTopic(student, {
+          this.openPrayerForReading(student, {
             number: Number(assignBtn.getAttribute('data-assign')),
             name: assignBtn.getAttribute('data-name'),
           });
