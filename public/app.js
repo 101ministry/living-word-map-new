@@ -2285,6 +2285,10 @@
   });
 
   document.getElementById('reset-view').addEventListener('click', () => {
+    if (isCampView()) {
+      window.DiscipleshipCamp?.redrawClassroom?.();
+      return;
+    }
     state.selectedId = null;
     state.globeTransportPrincipalityId = null;
     state.globeFruitFocusId = null;
