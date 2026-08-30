@@ -404,6 +404,10 @@
   }
 
   function openOverlay(reset = false) {
+    if (document.getElementById('camp-view') && !document.getElementById('camp-view').classList.contains('hidden')) {
+      return;
+    }
+    if (document.querySelector('.graph-panel.is-camp')) return;
     restoreViewSelect();
     if (reset) {
       hidePostAnswer();

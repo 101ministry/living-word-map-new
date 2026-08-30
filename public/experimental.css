@@ -390,6 +390,30 @@ html.exp-record .exp-live-only {
   align-items: center;
 }
 
+.exp-map-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.55rem 1rem;
+  background: rgba(8, 9, 12, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  z-index: 100;
+}
+
+.exp-map-nav .header-experimental-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent, #c9a227);
+  opacity: 1;
+}
+
+.exp-map-nav .view-nav-toggle {
+  min-width: 18rem;
+  max-width: 26rem;
+}
+
 .header-experimental-link {
   font-size: 0.75rem;
   color: var(--text-muted);
@@ -434,4 +458,85 @@ a.mobile-nav-link {
   .round2-sidebar {
     grid-column: 1;
   }
+}
+
+.found-us-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4.5rem 1rem 2rem;
+  background: rgba(10, 11, 15, 0.55);
+}
+
+.found-us-overlay[hidden] {
+  display: none;
+}
+
+.found-us-card {
+  position: relative;
+  width: min(440px, 100%);
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.15rem 1.25rem;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 12px;
+  background: var(--bg-panel, #12141c);
+  color: var(--text, #e8e4dc);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+}
+
+.found-us-card h2 {
+  margin: 0 3.5rem 0.65rem 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--accent, #d4af37);
+}
+
+.found-us-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  color: var(--quote, #f0ead6);
+  border: 1px solid rgba(201, 162, 39, 0.42);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.found-us-lead {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted, #8a8798);
+  font-size: 0.9rem;
+}
+
+.found-us-card label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-muted, #8a8798);
+}
+
+.found-us-card select {
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.found-us-extra {
+  margin: 0 0 0.85rem;
+}
+
+.found-us-extra[hidden] {
+  display: none;
+}
+
+.found-us-extra a {
+  color: var(--accent, #d4af37);
 }

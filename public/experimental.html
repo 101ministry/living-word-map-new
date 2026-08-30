@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experimental Prayer Builder — Living Word Map</title>
+  <title>Repentance Project 2026 Prayer Builder — Living Word Map</title>
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -11,9 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=41" />
+  <link rel="stylesheet" href="styles.css?v=78" />
   <link rel="stylesheet" href="round2.css?v=9" />
-  <link rel="stylesheet" href="experimental.css?v=12" />
+  <link rel="stylesheet" href="experimental.css?v=16" />
   <script>
     (function () {
       var rec = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
@@ -22,9 +22,61 @@
   </script>
 </head>
 <body class="round2-body round2-active exp-body">
+  <div class="exp-map-nav">
+    <span class="header-experimental-link" aria-current="page">Repentance Project 2026</span>
+    <div class="view-nav" id="view-nav">
+      <select id="view-mode" class="view-nav-select" aria-label="Leave Repentance Project 2026">
+        <option value="" selected>Stay on Repentance Project 2026</option>
+        <option value="why-bloodline">Why is Bloodline Repentance important?</option>
+        <option value="globe">Globe</option>
+        <option value="constellation">Constellation</option>
+        <option value="explore">Explore All</option>
+        <option value="compare">Compare Principalities</option>
+      </select>
+      <button type="button" id="view-nav-toggle" class="view-nav-toggle" aria-expanded="false" aria-haspopup="true">Stay on Repentance Project 2026</button>
+      <ul id="view-nav-menu" class="view-nav-menu" hidden>
+        <li><button type="button" class="view-nav-item" data-view="">Stay on Repentance Project 2026</button></li>
+        <li><button type="button" class="view-nav-item" data-view="why-bloodline">Why is Bloodline Repentance important?</button></li>
+        <li class="view-nav-fly">
+          <button type="button" class="view-nav-item view-nav-fly-toggle" aria-expanded="false">Globe Word Map <span class="view-nav-rail" aria-hidden="true"></span></button>
+          <ul class="view-nav-submenu" hidden>
+            <li><button type="button" class="view-nav-item" data-view="globe">Globe</button></li>
+            <li><button type="button" class="view-nav-item" data-view="constellation">Constellation</button></li>
+            <li><button type="button" class="view-nav-item" data-view="explore">Explore All</button></li>
+          </ul>
+        </li>
+        <li><button type="button" class="view-nav-item" data-view="compare">Compare Principalities</button></li>
+      </ul>
+    </div>
+  </div>
+  <div id="found-us-overlay" class="found-us-overlay" role="dialog" aria-modal="true" aria-labelledby="found-us-title">
+    <div class="found-us-card">
+      <button type="button" id="found-us-close" class="found-us-close" aria-label="Close">×</button>
+      <h2 id="found-us-title">How did you find us?</h2>
+      <p class="found-us-lead">Tell us how you arrived, then continue into Repentance Project 2026.</p>
+      <form id="found-us-form">
+        <label for="found-us-select">How did you find us?</label>
+        <select id="found-us-select" required>
+          <option value="" selected disabled>Choose one…</option>
+          <option value="friend">A friend told me</option>
+          <option value="church">Someone from church</option>
+          <option value="norman">Norman told me</option>
+          <option value="camp">I heard about the Discipleship Training Camp</option>
+          <option value="slack">Invitation to join Slack Messaging to keep up to date with the developer and team</option>
+        </select>
+        <p id="found-us-camp" class="found-us-extra" hidden>
+          <a href="index.html?view=camp">Open the Discipleship Training Camp minigame</a>
+        </p>
+        <p id="found-us-slack" class="found-us-extra" hidden>
+          <a href="https://join.slack.com/t/repentance101/shared_invite/zt-48344b3ds-vxCbNHRk4JKiR8oDwby9BA" target="_blank" rel="noopener noreferrer">Join Slack Messaging to keep up to date with the developer and team</a>
+        </p>
+        <button type="submit" class="btn-accent" id="found-us-continue">Continue</button>
+      </form>
+    </div>
+  </div>
   <div id="exp-gate" class="exp-gate" hidden>
     <form id="exp-profile-form" class="exp-gate-card" autocomplete="off">
-      <p class="exp-gate-kicker">Experimental</p>
+      <p class="exp-gate-kicker">Repentance Project 2026</p>
       <h1>Prayer Builder</h1>
       <p class="exp-gate-lead exp-live-only">
         Eleven sets of three rounds. Read a prayer, click the next topic, then
@@ -133,7 +185,7 @@
     <header class="round2-header exp-header">
       <a href="index.html" class="round2-back-link">← Back to map</a>
       <div class="round2-header-brand">
-        <h1>Experimental Prayer Builder</h1>
+        <h1>Repentance Project 2026 Prayer Builder</h1>
         <p id="exp-phase-label" class="round2-phase-label">Set 1 of 11 · You and your bloodline · Round 1</p>
       </div>
       <div class="round2-header-meta">
@@ -181,7 +233,7 @@
       <button type="button" id="exp-next-topic" class="btn-accent exp-next-topic">Next topic</button>
     </div>
 
-    <section id="phase-prayers" class="round2-phase exp-phase" aria-label="Experimental prayers">
+    <section id="phase-prayers" class="round2-phase exp-phase" aria-label="Repentance Project 2026 prayers">
       <div class="exp-layout">
         <div class="exp-scene-wrap">
           <canvas id="exp-canvas" aria-label="Construction scene"></canvas>
@@ -245,6 +297,16 @@
   <script src="round3-data.js?v=11"></script>
   <script src="experimental-geo.js?v=14"></script>
   <script src="experimental-scene.js?v=17"></script>
-  <script src="experimental.js?v=13"></script>
+  <script src="experimental.js?v=14"></script>
+  <script src="view-nav.js?v=2"></script>
+  <script src="found-us.js?v=1"></script>
+  <script>
+    document.getElementById('view-mode')?.addEventListener('change', function (e) {
+      var v = e.target.value;
+      if (!v) return;
+      if (v === 'why-bloodline') location.href = 'index.html#study-full';
+      else location.href = 'index.html?view=' + encodeURIComponent(v);
+    });
+  </script>
 </body>
 </html>

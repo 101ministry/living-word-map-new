@@ -35,7 +35,7 @@
     parchment.classList.remove('is-open');
     parchment.setAttribute('aria-hidden', 'true');
     unlockBackground();
-    if (wasOpen && options.showAsk !== false) {
+    if (wasOpen && options.showAsk === true) {
       if (document.querySelector('.graph-panel.is-camp')) return;
       const mode = document.getElementById('view-mode')?.value;
       if (mode === 'camp') return;
@@ -87,7 +87,18 @@
   });
   window.addEventListener('resize', syncHeaderHeight);
   syncHeaderHeight();
-  if (isParchmentOpen()) lockBackground();
+  {
+    const view = new URLSearchParams(location.search).get('view')
+      || document.getElementById('view-mode')?.value
+      || 'constellation';
+    const mapView = view === 'globe' || view === 'constellation' || view === 'explore'
+      || view === 'camp' || view === 'compare';
+    if (mapView || location.hash === '#study-full') {
+      closeParchment({ showAsk: false });
+    } else if (isParchmentOpen()) {
+      lockBackground();
+    }
+  }
 
   window.ParchmentLanding = { close: closeParchment, open: openParchment, isOpen: isParchmentOpen };
 

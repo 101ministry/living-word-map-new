@@ -31,7 +31,7 @@
     return;
   }
   if (!GEO || !SCENE) {
-    showFatalError('Experimental builder scripts failed to load.');
+    showFatalError('Repentance Project 2026 builder scripts failed to load.');
     return;
   }
 
@@ -590,7 +590,7 @@
     document.documentElement.dir = rtl ? 'rtl' : 'ltr';
     document.documentElement.classList.toggle('exp-record', RECORD_MODE);
     document.body.classList.toggle('exp-record', RECORD_MODE);
-    if (els.submit) els.submit.textContent = RECORD_MODE ? 'Enter Experimental' : 'Enter Prayer Builder';
+    if (els.submit) els.submit.textContent = RECORD_MODE ? 'Enter Repentance Project 2026' : 'Enter Prayer Builder';
     updateCaseName();
   }
 
@@ -1552,7 +1552,7 @@
       }
       await enterApp();
     } catch (err) {
-      showFatalError(`Experimental builder failed to initialize: ${err.message}`);
+      showFatalError(`Repentance Project 2026 builder failed to initialize: ${err.message}`);
       console.error(err);
     }
   })();

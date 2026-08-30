@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="parchment-lock">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=72" />
+  <link rel="stylesheet" href="styles.css?v=78" />
 </head>
-<body class="parchment-lock">
+<body>
   <div id="app">
     <header class="header">
       <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">☰</button>
@@ -21,7 +21,7 @@
         <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
         <h1>Living Word Map</h1>
         <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
-        <a class="header-study-link" href="#study-full">Why is Bloodline Repentance blessed by God according to the Bible?</a>
+        <a class="header-study-link" href="#study-full">Why is Bloodline Repentance important?</a>
       </div>
       <div class="header-controls">
         <div class="language-control">
@@ -33,23 +33,39 @@
         <a href="round1.html?from=map" id="round1-entry-link" class="btn-accent round2-nav-link">Round 1 Prayers</a>
         <a href="round2.html?from=map" class="btn-accent round2-nav-link">Round 2 Prayers</a>
         <a href="round3.html" class="btn-accent round2-nav-link">Round 3 Prayers</a>
-        <select id="view-mode" aria-label="View mode">
-          <option value="constellation">Constellation</option>
-          <option value="explore">Explore All</option>
-          <option value="globe">Globe Word Map</option>
-          <option value="ask">Ask about Bloodline Repentance</option>
-          <option value="why-bloodline">Why is Bloodline Repentance blessed by God according to the Bible?</option>
-          <option value="compare">Compare Principalities</option>
-          <option value="experimental">Experimental</option>
-        </select>
+        <a href="experimental.html" class="btn-accent round2-nav-link header-experimental-link">Repentance Project 2026</a>
+        <div class="view-nav" id="view-nav">
+          <select id="view-mode" class="view-nav-select" aria-label="View mode">
+            <option value="experimental">Repentance Project 2026</option>
+            <option value="why-bloodline">Why is Bloodline Repentance important?</option>
+            <option value="globe">Globe</option>
+            <option value="constellation" selected>Constellation</option>
+            <option value="explore">Explore All</option>
+            <option value="compare">Compare Principalities</option>
+          </select>
+          <button type="button" id="view-nav-toggle" class="view-nav-toggle" aria-expanded="false" aria-haspopup="true">Constellation</button>
+          <ul id="view-nav-menu" class="view-nav-menu" hidden>
+            <li><button type="button" class="view-nav-item" data-view="experimental">Repentance Project 2026</button></li>
+            <li id="view-nav-camp-slot" hidden></li>
+            <li><button type="button" class="view-nav-item" data-view="why-bloodline">Why is Bloodline Repentance important?</button></li>
+            <li class="view-nav-fly">
+              <button type="button" class="view-nav-item view-nav-fly-toggle" aria-expanded="false">Globe Word Map <span class="view-nav-rail" aria-hidden="true"></span></button>
+              <ul class="view-nav-submenu" hidden>
+                <li><button type="button" class="view-nav-item" data-view="globe">Globe</button></li>
+                <li><button type="button" class="view-nav-item" data-view="constellation">Constellation</button></li>
+                <li><button type="button" class="view-nav-item" data-view="explore">Explore All</button></li>
+              </ul>
+            </li>
+            <li><button type="button" class="view-nav-item" data-view="compare">Compare Principalities</button></li>
+          </ul>
+        </div>
         <button id="reset-view" type="button">Reset</button>
         <button id="scroll-to-videos" type="button" class="header-videos-btn">Videos</button>
         <button id="scroll-to-downloads" type="button" class="header-videos-btn">Downloads</button>
-        <a href="experimental.html" class="header-experimental-link">Experimental</a>
       </div>
     </header>
 
-    <div id="pdf-landing" class="pdf-landing is-open" role="dialog" aria-modal="true" aria-labelledby="pdf-landing-title" aria-hidden="false">
+    <div id="pdf-landing" class="pdf-landing" role="dialog" aria-modal="true" aria-labelledby="pdf-landing-title" aria-hidden="true">
       <button type="button" id="pdf-landing-close" class="landing-close" aria-label="Close landing page">×</button>
       <div class="landing-stage">
         <div class="landing-copy">
@@ -82,11 +98,11 @@
         <nav class="mobile-nav" id="mobile-nav" aria-label="Quick navigation">
           <h2>Navigate</h2>
           <ul class="mobile-nav-list">
-            <li><a href="#study-full" class="mobile-nav-link">Why is Bloodline Repentance blessed by God according to the Bible?</a></li>
+            <li><a href="experimental.html" class="mobile-nav-link">Repentance Project 2026</a></li>
+            <li><a href="#study-full" class="mobile-nav-link">Why is Bloodline Repentance important?</a></li>
             <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
             <li><button type="button" id="nav-videos" class="mobile-nav-link">Teaching Videos</button></li>
             <li><button type="button" id="nav-downloads" class="mobile-nav-link">Downloads Section</button></li>
-            <li><a href="experimental.html" class="mobile-nav-link">Experimental Builder</a></li>
           </ul>
         </nav>
         <h2>Layers</h2>
@@ -499,10 +515,11 @@
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
   <script src="round1-entry-gate.js?v=4"></script>
-  <script src="discipleship-camp.js?v=19"></script>
-  <script src="app.js?v=22"></script>
+  <script src="discipleship-camp.js?v=22"></script>
+  <script src="view-nav.js?v=2"></script>
+  <script src="app.js?v=26"></script>
   <script src="teaching-videos.js?v=4"></script>
   <script src="ask-overlay.js?v=14"></script>
-  <script src="study-landing.js?v=12"></script>
+  <script src="study-landing.js?v=14"></script>
 </body>
 </html>

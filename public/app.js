@@ -266,9 +266,15 @@
   }
 
   function closeParchmentIfOpen() {
-    if (window.ParchmentLanding?.isOpen?.()) {
-      window.ParchmentLanding.close({ showAsk: false });
+    window.ParchmentLanding?.close?.({ showAsk: false });
+    const el = document.getElementById('pdf-landing');
+    if (el) {
+      el.classList.remove('is-open');
+      el.setAttribute('aria-hidden', 'true');
     }
+    document.documentElement.classList.remove('parchment-lock');
+    document.body.classList.remove('parchment-lock');
+    document.body.style.top = '';
   }
 
   function scrollToDownloads() {
@@ -1556,6 +1562,11 @@
     graphPanel?.classList.toggle('is-camp', camp);
     document.documentElement.classList.toggle('camp-isolated', camp);
     document.body.classList.toggle('camp-isolated', camp);
+    const graph = !globe && !camp;
+    document.documentElement.classList.toggle('is-globe-view', globe);
+    document.body.classList.toggle('is-globe-view', globe);
+    document.documentElement.classList.toggle('is-graph-view', graph);
+    document.body.classList.toggle('is-graph-view', graph);
     try {
       Graph.enableZoomInteraction(!camp);
     } catch {
@@ -1574,6 +1585,7 @@
       document.documentElement.classList.remove('camp-isolated');
       document.body.classList.remove('camp-isolated');
       window.DiscipleshipCamp?.hide?.();
+      closeParchmentIfOpen();
       if (globe) {
         globeView?.show();
         syncZoomSlider();
@@ -2250,18 +2262,6 @@
       document.getElementById('study-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }
-    if (e.target.value === 'ask') {
-      if (state.viewMode === 'camp') {
-        state.viewMode = 'constellation';
-        graphPanel?.classList.remove('is-camp');
-        window.DiscipleshipCamp?.hide?.();
-        setViewSurface();
-      }
-      const stayOnConstellation = state.viewMode === 'constellation';
-      e.target.value = 'constellation';
-      window.AskOverlay?.open?.(true);
-      if (stayOnConstellation) return;
-    }
     if (e.target.value === 'compare') {
       e.target.value = state.viewMode || 'constellation';
       window.AskOverlay?.close?.();
@@ -2296,6 +2296,7 @@
     applyGlobeLayout();
     state.viewMode = 'constellation';
     document.getElementById('view-mode').value = 'constellation';
+    window.ViewNav?.syncLabel?.();
     document.getElementById('show-topics').checked = false;
     state.show.topic = false;
     showEmptyDetail();
@@ -2306,14 +2307,34 @@
   });
 
   window.DiscipleshipCamp?.injectViewOption?.();
-  if (window.DiscipleshipCamp?.isLocalDevHost?.()) {
-    const wantCamp = /(?:^|[?&])view=camp(?:&|$)/.test(location.search) || location.hash === '#camp';
-    if (wantCamp) {
+  {
+    const modeSel = document.getElementById('view-mode');
+    const viewParam = new URLSearchParams(location.search).get('view');
+    if (viewParam === 'camp' && window.DiscipleshipCamp?.isLocalDevHost?.()) {
       state.viewMode = 'camp';
-      const modeSel = document.getElementById('view-mode');
       if (modeSel) modeSel.value = 'camp';
       window.ParchmentLanding?.close?.({ showAsk: false });
+    } else if (viewParam === 'compare') {
+      if (modeSel) modeSel.value = 'constellation';
+      window.ParchmentLanding?.close?.({ showAsk: false });
+      goToCompare();
+    } else if (viewParam === 'globe' || viewParam === 'constellation' || viewParam === 'explore') {
+      state.viewMode = viewParam;
+      if (modeSel) modeSel.value = viewParam;
+      if (viewParam === 'explore') {
+        document.getElementById('show-topics').checked = true;
+        state.show.topic = true;
+      }
+      window.ParchmentLanding?.close?.({ showAsk: false });
+    } else if (window.DiscipleshipCamp?.isLocalDevHost?.()) {
+      const wantCamp = /(?:^|[?&])view=camp(?:&|$)/.test(location.search) || location.hash === '#camp';
+      if (wantCamp) {
+        state.viewMode = 'camp';
+        if (modeSel) modeSel.value = 'camp';
+        window.ParchmentLanding?.close?.({ showAsk: false });
+      }
     }
+    window.ViewNav?.syncLabel?.();
   }
 
   syncGraphSize();

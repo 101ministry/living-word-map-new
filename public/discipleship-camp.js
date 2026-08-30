@@ -328,15 +328,22 @@
     injectViewOption() {
       if (!isLocalDevHost()) return;
       const sel = document.getElementById('view-mode');
-      if (!sel || sel.querySelector('option[value="camp"]')) return;
+      if (!sel || sel.querySelector('option[value="camp"]')) {
+        window.ViewNav?.injectCamp?.();
+        return;
+      }
       const opt = document.createElement('option');
       opt.value = 'camp';
-      opt.textContent = 'Discipleship Training Camp';
-      sel.appendChild(opt);
+      opt.textContent = 'Discipleship Training Camp minigame';
+      const after = sel.querySelector('option[value="experimental"]');
+      if (after && after.nextSibling) sel.insertBefore(opt, after.nextSibling);
+      else if (after) after.after(opt);
+      else sel.insertBefore(opt, sel.firstChild);
+      window.ViewNav?.injectCamp?.();
       const nav = document.getElementById('mobile-nav')?.querySelector('.mobile-nav-list');
       if (nav && !document.getElementById('nav-camp')) {
         const li = document.createElement('li');
-        li.innerHTML = '<button type="button" id="nav-camp" class="mobile-nav-link">Discipleship Training Camp</button>';
+        li.innerHTML = '<button type="button" id="nav-camp" class="mobile-nav-link">Discipleship Training Camp minigame</button>';
         nav.appendChild(li);
         document.getElementById('nav-camp')?.addEventListener('click', () => {
           sel.value = 'camp';
