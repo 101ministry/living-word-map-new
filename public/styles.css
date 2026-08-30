@@ -1310,7 +1310,7 @@ html.camp-isolated .graph-panel {
   color: var(--accent);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .camp-view {
     padding: 0.75rem 0.9rem 2.5rem;
   }
@@ -1335,6 +1335,21 @@ html.camp-isolated .graph-panel {
     touch-action: pan-y;
   }
 
+  .camp-assign-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .camp-assign-btn,
+  .camp-fruit-btn,
+  .camp-answer-btn {
+    min-height: 2.75rem;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
   .camp-clipboard {
     position: relative;
     top: auto;
@@ -1345,9 +1360,11 @@ html.camp-isolated .graph-panel {
     width: min(16rem, 100%);
     height: auto;
     max-height: none;
+    z-index: 1;
     margin: 0.85rem auto 2rem;
     border-radius: 4px 12px 12px 4px;
     flex-shrink: 0;
+    pointer-events: auto;
   }
 }
 

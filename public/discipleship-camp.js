@@ -745,16 +745,30 @@
       sess.prayerNote = hit
         ? 'They prayed it and the fruit actually quieted.'
         : 'They prayed it anyway. The words came out, but they talked as if a different fruit were the issue.';
-      const preview = await this.showPrayer(topic.number, topic.name, hit);
       this.pinClipboard(student, {
         kicker: `Prayer #${String(topic.number).padStart(3, '0')} · ${topic.name}`,
         label: `#${String(topic.number).padStart(3, '0')} ${topic.name}`,
-        text: preview.text,
+        text: '',
         hit: !!hit,
       });
       this.releaseStudent(student);
-      if (sess.assigned.length >= this.prayersNeeded(student, sess)) this.selectNextInLine(student.displayName);
+      const done = sess.assigned.length >= this.prayersNeeded(student, sess);
       this.render();
+      this.showPrayer(topic.number, topic.name, hit).then((preview) => {
+        this.pinClipboard(student, {
+          kicker: `Prayer #${String(topic.number).padStart(3, '0')} · ${topic.name}`,
+          label: `#${String(topic.number).padStart(3, '0')} ${topic.name}`,
+          text: preview.text,
+          hit: !!hit,
+        });
+        this.renderClipboard();
+      });
+      if (done) {
+        window.setTimeout(() => {
+          this.selectNextInLine(student.displayName);
+          this.render();
+        }, 450);
+      }
     },
 
     async showPrayer(number, name, hit) {
@@ -837,7 +851,7 @@
           const t = matchTopic(title);
           if (!t) return '';
           const on = sess.assigned.some((a) => a.number === t.number);
-          return `<button type="button" class="camp-assign-btn${on ? ' is-assigned' : ''}" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</button>`;
+          return `<div role="button" tabindex="0" class="camp-assign-btn${on ? ' is-assigned' : ''}" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</div>`;
         })
         .join('');
       const pickedIds = new Set((sess.answers || []).map((a) => a.id));
@@ -982,7 +996,7 @@
         hits.innerHTML = found
           .map(
             (t) =>
-              `<button type="button" class="camp-assign-btn" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</button>`
+              `<div role="button" tabindex="0" class="camp-assign-btn" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</div>`
           )
           .join('');
       });
