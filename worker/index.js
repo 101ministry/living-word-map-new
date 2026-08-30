@@ -77,6 +77,14 @@ export default {
       return handleDownloadsAudio(request, env);
     }
 
+    const host = url.hostname.toLowerCase();
+    const campLocalOnly =
+      url.pathname === '/discipleship-camp.js' ||
+      url.pathname.startsWith('/discipleship-trainer/');
+    if (campLocalOnly && host !== 'localhost' && host !== '127.0.0.1') {
+      return new Response('Not found', { status: 404 });
+    }
+
     return env.ASSETS.fetch(request);
   },
 };

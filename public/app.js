@@ -69,6 +69,10 @@
     return state.viewMode === 'globe';
   }
 
+  function isCampView() {
+    return state.viewMode === 'camp';
+  }
+
   function isGlobeFruitFocus() {
     return isGlobeView() && !!state.globeFruitFocusId;
   }
@@ -276,6 +280,7 @@
   }
 
   function scrollToTeachingVideos() {
+    if (isCampView()) return;
     closeParchmentIfOpen();
     setControlsDrawerOpen(false);
     closeDetailSheet();
@@ -1436,6 +1441,7 @@
 
   function setupGraphWheelZoom() {
     container.addEventListener('wheel', event => {
+      if (isCampView() || event.target.closest?.('#camp-view')) return;
       event.preventDefault();
     }, { passive: false });
   }
@@ -1545,15 +1551,37 @@
 
   function setViewSurface() {
     const globe = isGlobeView();
+    const camp = isCampView();
     graphPanel?.classList.toggle('is-globe', globe);
-    document.getElementById('graph-hint')?.classList.toggle('hidden', globe);
-    if (globe) {
-      globeView?.show();
-      syncZoomSlider();
-    } else {
+    graphPanel?.classList.toggle('is-camp', camp);
+    document.documentElement.classList.toggle('camp-isolated', camp);
+    document.body.classList.toggle('camp-isolated', camp);
+    try {
+      Graph.enableZoomInteraction(!camp);
+    } catch {
+      /* ForceGraph may not be ready */
+    }
+    document.getElementById('graph-hint')?.classList.toggle('hidden', globe || camp);
+    if (camp) {
       globeView?.hide();
-      syncGraphSize();
-      syncZoomSlider();
+      window.AskOverlay?.close?.();
+      closeParchmentIfOpen();
+      window.TeachingVideos?.hideGlobeRail?.();
+      document.documentElement.classList.add('camp-isolated');
+      document.body.classList.add('camp-isolated');
+      window.DiscipleshipCamp?.show?.();
+    } else {
+      document.documentElement.classList.remove('camp-isolated');
+      document.body.classList.remove('camp-isolated');
+      window.DiscipleshipCamp?.hide?.();
+      if (globe) {
+        globeView?.show();
+        syncZoomSlider();
+      } else {
+        globeView?.hide();
+        syncGraphSize();
+        syncZoomSlider();
+      }
     }
     applyMobileLegendAccess();
   }
@@ -1569,6 +1597,7 @@
   }
 
   function refreshGraph() {
+    if (isCampView()) return;
     if (isGlobeView()) {
       refreshGlobeView();
       return;
@@ -2195,6 +2224,22 @@
   });
 
   document.getElementById('view-mode').addEventListener('change', e => {
+    if (e.target.value === 'camp') {
+      if (!window.DiscipleshipCamp?.isLocalDevHost?.()) {
+        e.target.value = state.viewMode || 'constellation';
+        return;
+      }
+      window.AskOverlay?.close?.();
+      state.viewMode = 'camp';
+      state.selectedId = null;
+      state.globeTransportPrincipalityId = null;
+      state.globeFruitFocusId = null;
+      window.TeachingVideos?.hideGlobeRail?.();
+      applyGlobeLayout();
+      showEmptyDetail();
+      setViewSurface();
+      return;
+    }
     if (e.target.value === 'experimental') {
       window.location.href = 'experimental.html';
       return;
@@ -2206,6 +2251,12 @@
       return;
     }
     if (e.target.value === 'ask') {
+      if (state.viewMode === 'camp') {
+        state.viewMode = 'constellation';
+        graphPanel?.classList.remove('is-camp');
+        window.DiscipleshipCamp?.hide?.();
+        setViewSurface();
+      }
       const stayOnConstellation = state.viewMode === 'constellation';
       e.target.value = 'constellation';
       window.AskOverlay?.open?.(true);
@@ -2253,6 +2304,17 @@
     refreshGraph();
     applyGraphView(400, 400);
   });
+
+  window.DiscipleshipCamp?.injectViewOption?.();
+  if (window.DiscipleshipCamp?.isLocalDevHost?.()) {
+    const wantCamp = /(?:^|[?&])view=camp(?:&|$)/.test(location.search) || location.hash === '#camp';
+    if (wantCamp) {
+      state.viewMode = 'camp';
+      const modeSel = document.getElementById('view-mode');
+      if (modeSel) modeSel.value = 'camp';
+      window.ParchmentLanding?.close?.({ showAsk: false });
+    }
+  }
 
   syncGraphSize();
   setViewSurface();

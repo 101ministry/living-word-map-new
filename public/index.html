@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=57" />
+  <link rel="stylesheet" href="styles.css?v=72" />
 </head>
 <body class="parchment-lock">
   <div id="app">
@@ -126,6 +126,32 @@
       <section class="graph-panel">
         <div id="graph"></div>
         <div id="globe-view" class="globe-view hidden" aria-hidden="true" aria-label="Globe word map"></div>
+        <div id="camp-view" class="camp-view hidden" aria-hidden="true" aria-label="Discipleship Training Camp">
+          <div class="camp-toolbar">
+            <p class="camp-local-badge">Local only · not on the live map</p>
+            <h2 class="camp-title">Discipleship Training Camp</h2>
+            <p id="camp-meta" class="camp-meta"></p>
+            <label class="camp-size-label">
+              <span>In the room</span>
+              <select id="camp-size" aria-label="Classroom size">
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40" selected>40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+              </select>
+            </label>
+            <button type="button" id="camp-redraw" class="btn-accent">Draw a new classroom</button>
+          </div>
+          <p id="camp-focus" class="camp-focus" aria-label="Students you are working with"></p>
+          <div class="camp-layout">
+            <div id="camp-seats" class="camp-seats"></div>
+            <div class="camp-stage">
+              <aside id="camp-inspect" class="camp-inspect" tabindex="0"></aside>
+            </div>
+          </div>
+          <aside id="camp-clipboard" class="camp-clipboard" aria-label="Tried cases"></aside>
+        </div>
         <div id="graph-tooltip" class="graph-tooltip hidden" role="tooltip" aria-hidden="true"></div>
         <div id="graph-hint" class="graph-hint">Click a Principality to reveal its character. Drag to pan; scroll the map to zoom, or use the slider below.</div>
         <div class="graph-zoom-bar" aria-label="Graph magnification">
@@ -473,9 +499,10 @@
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
   <script src="round1-entry-gate.js?v=4"></script>
-  <script src="app.js?v=18"></script>
+  <script src="discipleship-camp.js?v=19"></script>
+  <script src="app.js?v=22"></script>
   <script src="teaching-videos.js?v=4"></script>
-  <script src="ask-overlay.js?v=13"></script>
-  <script src="study-landing.js?v=10"></script>
+  <script src="ask-overlay.js?v=14"></script>
+  <script src="study-landing.js?v=12"></script>
 </body>
 </html>

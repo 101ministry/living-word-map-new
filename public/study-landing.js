@@ -36,6 +36,9 @@
     parchment.setAttribute('aria-hidden', 'true');
     unlockBackground();
     if (wasOpen && options.showAsk !== false) {
+      if (document.querySelector('.graph-panel.is-camp')) return;
+      const mode = document.getElementById('view-mode')?.value;
+      if (mode === 'camp') return;
       requestAnimationFrame(() => window.AskOverlay?.open?.(true));
     }
   }
@@ -54,6 +57,7 @@
 
   function preventBackgroundScroll(event) {
     if (!isParchmentOpen()) return;
+    if (document.documentElement.classList.contains('camp-isolated')) return;
     if (isInsideLandingScroller(event.target)) return;
     event.preventDefault();
   }

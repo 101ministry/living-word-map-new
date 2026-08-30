@@ -1,0 +1,1029 @@
+{
+  "id": "discipleship-trainer-student-cards",
+  "playlist": {
+    "title": "R&R 2026",
+    "channel": "Repentance101 Ministries",
+    "url": "https://www.youtube.com/playlist?list=PLd4Cw4aZKBiQ",
+    "note": "Auto-captions returned empty from this environment. Question bank is taken from chapter/bonus labels already notated in data/teaching-videos.json (Days 2–6, 29). Days 7–42 need a later caption pass on a machine that can load timedtext."
+  },
+  "curriculum": {
+    "chartSlots": 666,
+    "uniqueTopicTitles": 656,
+    "drawFrom": "unique title, then expand to all chart numbers that share that title"
+  },
+  "schema": {
+    "displayName": "Fictional given name. Never use livestream commenter or teacher names.",
+    "openingQuestion": "First-person question the student brings into class (not 'someone in chat asked').",
+    "perspective": "How they frame the issue so the administrator hears a person, not a topic dump.",
+    "presentFruit": "2–5 unique topic titles from TOPICS-666.txt",
+    "generationalPack": "1–3 roots the family treated as normal / wisdom",
+    "lifeSituation": "Concrete circumstance tied to the fruit",
+    "willingnessTowardAdministrator": "1–5 how they treat covering (not the same as repentance)",
+    "humilitySubmissionHardness": "1–5 how slowly they yield to God",
+    "debateVsConfess": "debate | mix | confess",
+    "chartLinks": "All 001–666 numbers for the unique titles in presentFruit"
+  },
+  "drawRules": {
+    "classroomSize": {
+      "min": 20,
+      "max": 50,
+      "default": 40
+    },
+    "presentFruitCount": {
+      "min": 2,
+      "max": 5
+    },
+    "generationalRoots": {
+      "min": 1,
+      "max": 3
+    },
+    "uniqueNotSlots": "Never treat 666 as 666 distinct lessons. Deduplicate by title; repeats are the same lesson under more than one principality.",
+    "questionFirst": "Each student enters with one openingQuestion from the bank (or a paraphrase). The AI must stay inside that question plus assigned fruit.",
+    "willingnessVsHardness": "Roll independently. A 5-willingness student can still be 5-hardness (they like you, they will not bow). A 1-willingness student can still be crushed and ready.",
+    "generationalTie": "If the opening question is about babies, family marriage, 'how we always did it', or object soul-ties, force at least one generationalPack root.",
+    "administratorTrack": "Also draw 1–2 unique titles for the player (hidden). Students react if the administrator lectures, shames, or skips covering.",
+    "capTopics": "Do not dump the day's full principality list onto one student.",
+    "namePool": [
+      "Ellis",
+      "Noemi",
+      "Micah",
+      "Lila",
+      "Silas",
+      "Mara",
+      "Jordan",
+      "Rhea",
+      "Omar",
+      "Anya",
+      "Eden",
+      "Theo",
+      "Priya",
+      "Caleb",
+      "Selah",
+      "Hugo",
+      "Ivy",
+      "Bo",
+      "Nia",
+      "Rex",
+      "Willa",
+      "Asher",
+      "Quinn",
+      "Dina",
+      "Leo",
+      "Sage",
+      "Tova",
+      "Felix",
+      "Yara",
+      "Nolan",
+      "Paz",
+      "Idris",
+      "Kira",
+      "Mateo",
+      "Hana",
+      "Jonah",
+      "Esme",
+      "Rafi",
+      "Zora",
+      "Gideon",
+      "Liora",
+      "Seth",
+      "Nadia",
+      "Owen",
+      "Vera"
+    ],
+    "forbiddenNames": "Do not copy names from the playlist, chat, or teaching credits.",
+    "congregationFeel": "Default draw is 40 unique students (church foyer, not a small group). Never reuse the same presentFruit set. At most two students may share a generational root. Opening questions must stay distinct. The administrator cannot address everyone in one sitting — that is the point of the training.",
+    "sessionFocus": "Each session the player may work 3–7 students in depth; the rest remain present (side comments, offense, comparison, leaving early). Hidden students still change the room."
+  },
+  "students": [
+    {
+      "displayName": "Ellis",
+      "sourceDay": 3,
+      "openingQuestion": "Did Jesus tell us to worship Him, and did He worship Himself — or is that heresy?",
+      "perspective": "I am here to win a doctrine fight. If I can catch the teacher, I do not have to submit to anything else in this room.",
+      "presentFruit": [
+        "being contentious",
+        "being judgmental",
+        "self-righteous complex"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Grew up in a house that treated every new teaching as a trap.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Noemi",
+      "sourceDay": 4,
+      "openingQuestion": "How do you know if a marriage is actually blessed?",
+      "perspective": "I need a stamp on my relationship more than a mirror. If you bless it, I can stop asking whether we are in covenant or in a contract.",
+      "presentFruit": [
+        "divorce",
+        "being co-dependent",
+        "feeling like I'll never get married"
+      ],
+      "generationalPack": [
+        "bitterness and unforgiveness",
+        "loneliness and emotional brokenness",
+        "shame and false identity"
+      ],
+      "lifeSituation": "Family marriages looked fine while the fruit was control and silence.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Micah",
+      "sourceDay": 5,
+      "openingQuestion": "Does God even answer everybody's prayers?",
+      "perspective": "I want the rule so I can stay half-in and still collect answers.",
+      "presentFruit": [
+        "thinking I can't change",
+        "feelings that God loves others more than me",
+        "compromising on my convictions"
+      ],
+      "generationalPack": [
+        "unbelief and distrust of God",
+        "fear and insecurity"
+      ],
+      "lifeSituation": "Watched people pray for years with no change and decided God plays favorites.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Lila",
+      "sourceDay": 5,
+      "openingQuestion": "How do I know if this tightness is the Holy Spirit convicting me, or just anxiety?",
+      "perspective": "I will obey a feeling if you certify it. I do not want to be responsible to the Word if my body is louder.",
+      "presentFruit": [
+        "insecurity",
+        "confusion",
+        "suspicious attitude"
+      ],
+      "generationalPack": [
+        "fear and insecurity",
+        "deception and falsehood"
+      ],
+      "lifeSituation": "Family treated every inner alarm as either God or a diagnosis.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Silas",
+      "sourceDay": 5,
+      "openingQuestion": "Is being actually sinless even possible, or are we just supposed to pretend?",
+      "perspective": "I need you to lower the bar so my bloodline's 'we all struggle' speech can survive.",
+      "presentFruit": [
+        "self-righteous complex",
+        "feeling like a hypocrite",
+        "thinking I can't change"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation",
+        "shame and false identity",
+        "unbelief and distrust of God"
+      ],
+      "lifeSituation": "Church home taught struggle-as-identity as humility.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Mara",
+      "sourceDay": 6,
+      "openingQuestion": "Why can't we hate? Is it okay if I just don't like them?",
+      "perspective": "I want a permission slip to keep the altar of offense and still look Christian.",
+      "presentFruit": [
+        "hatred",
+        "offense",
+        "revenge"
+      ],
+      "generationalPack": [
+        "bitterness and unforgiveness"
+      ],
+      "lifeSituation": "A relative who never forgave was the respected one in the family.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Jordan",
+      "sourceDay": 6,
+      "openingQuestion": "If I love someone, does that mean they love God? How many times a day am I supposed to forgive?",
+      "perspective": "I confuse my attachment with their fruit. I will forgive on a timer if that lets me keep the tie.",
+      "presentFruit": [
+        "being co-dependent",
+        "offense",
+        "drawing back from life"
+      ],
+      "generationalPack": [
+        "loneliness and emotional brokenness",
+        "bitterness and unforgiveness"
+      ],
+      "lifeSituation": "Kept covering a person whose life does not love God, because leaving felt like hate.",
+      "willingnessTowardAdministrator": 5,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Rhea",
+      "sourceDay": 6,
+      "openingQuestion": "At what point does a baby inherit sin? Why did God even let angels rebel?",
+      "perspective": "If I can pin this on God or on the infant, I do not have to repent what my house taught as normal.",
+      "presentFruit": [
+        "wishing I were not born",
+        "feelings that God loves others more than me",
+        "being judgmental"
+      ],
+      "generationalPack": [
+        "shame and false identity",
+        "fear and insecurity",
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "New parent, terrified the bloodline already wrote the child's story.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Omar",
+      "sourceDay": 6,
+      "openingQuestion": "What's the point of repentance if nothing changes?",
+      "perspective": "I have said the words. I am testing whether you will bless a confession that never becomes fruit.",
+      "presentFruit": [
+        "lying habitually",
+        "compromising on my convictions",
+        "continually making bad decisions"
+      ],
+      "generationalPack": [
+        "deception and falsehood",
+        "unbelief and distrust of God"
+      ],
+      "lifeSituation": "Years of altar calls with the same fruit still in the house.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Anya",
+      "sourceDay": 6,
+      "openingQuestion": "Is democracy even biblical? Who has the right to tell me what to do?",
+      "perspective": "I will sit in class and still refuse covering. I want a political argument so I never have to be a disciple under a person.",
+      "presentFruit": [
+        "being controlling",
+        "being proud",
+        "passivity"
+      ],
+      "generationalPack": [
+        "control and rebellion",
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Home taught 'no one is over me but God' as the family creed.",
+      "willingnessTowardAdministrator": 1,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Eden",
+      "sourceDay": 6,
+      "openingQuestion": "What is a sugar daddy or sugar mommy, really? Is that just help?",
+      "perspective": "I need you to name provision-that-is-purchase without me admitting I already knew.",
+      "presentFruit": [
+        "love of money",
+        "sex addiction",
+        "compromising on my convictions"
+      ],
+      "generationalPack": [
+        "covetousness and materialism",
+        "addiction and bondage",
+        "unbelief and distrust of God"
+      ],
+      "lifeSituation": "Family treated money-from-a-person as blessing if nobody said the word.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Theo",
+      "sourceDay": 29,
+      "openingQuestion": "Why does it even bother us to repent? Can a childhood object really hold a soul-tie?",
+      "perspective": "I will theological-talk 'records last forever' and still go home to the comfort object.",
+      "presentFruit": [
+        "a poor self image",
+        "drawing back from life",
+        "worshiping things other than God"
+      ],
+      "generationalPack": [
+        "shame and false identity",
+        "loneliness and emotional brokenness",
+        "idolatry and person-worship"
+      ],
+      "lifeSituation": "Comfort object from childhood; family mocked anyone who named it.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Priya",
+      "sourceDay": 2,
+      "openingQuestion": "Is this shaking and heat how my family prays, or is it counterfeit?",
+      "perspective": "If you name it counterfeit, you are naming my grandmother. Power was the proof God was in our house.",
+      "presentFruit": [
+        "worshiping things other than God",
+        "confusion",
+        "deception"
+      ],
+      "generationalPack": [
+        "idolatry and person-worship",
+        "deception and falsehood"
+      ],
+      "lifeSituation": "Revival-style prayer culture in the bloodline with no fruit of repentance.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Caleb",
+      "sourceDay": 3,
+      "openingQuestion": "Is the loop in my head a medical thing, or something I have to take responsibility for?",
+      "perspective": "I will accept a diagnosis forever if it means I never have to repent the ritual.",
+      "presentFruit": [
+        "confusion",
+        "insecurity",
+        "passivity"
+      ],
+      "generationalPack": [
+        "deception and falsehood",
+        "fear and insecurity",
+        "control and rebellion"
+      ],
+      "lifeSituation": "Family managed the loop with accommodation, not with truth.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Selah",
+      "sourceDay": 5,
+      "openingQuestion": "If this came through a kiss or through my parents' marriage, is it even mine to repent?",
+      "perspective": "I will talk inheritance so I never have to divorce what I still want.",
+      "presentFruit": [
+        "loneliness",
+        "being co-dependent",
+        "feeling like no one wants me"
+      ],
+      "generationalPack": [
+        "loneliness and emotional brokenness",
+        "shame and false identity"
+      ],
+      "lifeSituation": "Parents' covenant was never cleaned; loneliness feels like destiny.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Hugo",
+      "sourceDay": null,
+      "openingQuestion": "Why am I exhausted all the time if I'm doing everything right?",
+      "perspective": "Fatigue is my proof I am faithful. If you call it a fruit, you are calling my work ethic sin.",
+      "presentFruit": [
+        "constant fatigue",
+        "being a workaholic",
+        "love of position"
+      ],
+      "generationalPack": [
+        "loneliness and emotional brokenness",
+        "addiction and bondage",
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "The family hero was the one who never stopped producing.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Ivy",
+      "sourceDay": null,
+      "openingQuestion": "If I don't post, do I even exist? Can the church ask me to put the phone down?",
+      "perspective": "The feed is how I stay known. Discipleship that is private feels like death.",
+      "presentFruit": [
+        "social media",
+        "being vain",
+        "feeling like no one wants me"
+      ],
+      "generationalPack": [
+        "addiction and bondage",
+        "pride and self-exaltation",
+        "shame and false identity"
+      ],
+      "lifeSituation": "Grew up measured by likes; church now feels like another audience.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Bo",
+      "sourceDay": null,
+      "openingQuestion": "Is wanting more than my neighbor jealousy, or just being honest about provision?",
+      "perspective": "I will confess 'ambition' and keep the comparison. I want you to baptize my hunger.",
+      "presentFruit": [
+        "jealousy",
+        "covetousness",
+        "unnatural competitiveness"
+      ],
+      "generationalPack": [
+        "fear and insecurity",
+        "covetousness and materialism",
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Siblings were ranked by who got the better life.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Nia",
+      "sourceDay": null,
+      "openingQuestion": "If I never feel wanted, isn't that just my personality?",
+      "perspective": "I want comfort, not a name. If this is shame, then my whole self-story collapses.",
+      "presentFruit": [
+        "feeling like no one wants me",
+        "feeling worthless",
+        "a poor self image"
+      ],
+      "generationalPack": [
+        "shame and false identity"
+      ],
+      "lifeSituation": "Left out of family photos in spirit if not in print.",
+      "willingnessTowardAdministrator": 5,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Rex",
+      "sourceDay": null,
+      "openingQuestion": "Why shouldn't I take what they owe me? They took from us first.",
+      "perspective": "Theft is justice in my mouth. I need you to be shocked so I can stay the victim.",
+      "presentFruit": [
+        "thievery",
+        "revenge",
+        "love of possessions"
+      ],
+      "generationalPack": [
+        "covetousness and materialism",
+        "bitterness and unforgiveness"
+      ],
+      "lifeSituation": "Family stories of being cheated became a license.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Willa",
+      "sourceDay": null,
+      "openingQuestion": "Is the weight just my body, or are you going to make food a spirit?",
+      "perspective": "I came for Jesus, not a diet. I will leave if you shame the body before you name the bondage.",
+      "presentFruit": [
+        "food addiction",
+        "being overweight",
+        "a poor self image"
+      ],
+      "generationalPack": [
+        "addiction and bondage",
+        "shame and false identity"
+      ],
+      "lifeSituation": "Table was peace and punishment in the same house.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Asher",
+      "sourceDay": null,
+      "openingQuestion": "I only drink to take the edge off. That's not the same as the people who can't stop, right?",
+      "perspective": "I need a category called 'functional' so I never sit with the addicts.",
+      "presentFruit": [
+        "alcohol addiction",
+        "passivity",
+        "drawing back from life"
+      ],
+      "generationalPack": [
+        "addiction and bondage",
+        "control and rebellion",
+        "loneliness and emotional brokenness"
+      ],
+      "lifeSituation": "Celebration in the family always included a bottle; sobriety was called pride.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Quinn",
+      "sourceDay": null,
+      "openingQuestion": "Is gaming until 3 a.m. rest, or do I have to call it what it is?",
+      "perspective": "I will joke about it until you make it a fruit. Then I may vanish from class.",
+      "presentFruit": [
+        "video game addiction",
+        "procrastination",
+        "blocked success"
+      ],
+      "generationalPack": [
+        "addiction and bondage",
+        "control and rebellion",
+        "fear and insecurity"
+      ],
+      "lifeSituation": "The basement was safer than the living room.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Dina",
+      "sourceDay": null,
+      "openingQuestion": "I gossip to process. That's not the same as slander, is it?",
+      "perspective": "I want the women's circle to stay my covering instead of the Word.",
+      "presentFruit": [
+        "gossiping",
+        "being critical",
+        "mockery"
+      ],
+      "generationalPack": [
+        "shame and false identity",
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Information was how the women stayed close and stayed in control.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Leo",
+      "sourceDay": null,
+      "openingQuestion": "If I'm the one who sees everything wrong, isn't that a gift?",
+      "perspective": "Judgment feels like discernment. I will serve on every team and still sit above the room.",
+      "presentFruit": [
+        "being judgmental",
+        "superiority complex",
+        "being proud"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Father's voice was always the verdict; now that voice is mine.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Sage",
+      "sourceDay": null,
+      "openingQuestion": "I delay because I'm waiting on God. That's faith, not procrastination, right?",
+      "perspective": "Passivity wears a Scripture shirt. I need you to not strip it in front of people.",
+      "presentFruit": [
+        "procrastination",
+        "passivity",
+        "blocked success"
+      ],
+      "generationalPack": [
+        "control and rebellion",
+        "fear and insecurity"
+      ],
+      "lifeSituation": "The family never finished what they started and called it 'timing'.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Tova",
+      "sourceDay": null,
+      "openingQuestion": "I flinch when people get close. Is that wisdom from what happened, or a spirit?",
+      "perspective": "I will talk 'boundaries' so I never have to name suspicion as fruit.",
+      "presentFruit": [
+        "suspicious attitude",
+        "drawing back from life",
+        "insecurity"
+      ],
+      "generationalPack": [
+        "fear and insecurity",
+        "loneliness and emotional brokenness"
+      ],
+      "lifeSituation": "Betrayal in the house taught that love is a setup.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Felix",
+      "sourceDay": null,
+      "openingQuestion": "I only lie when the truth would hurt someone. That's mercy, isn't it?",
+      "perspective": "Deception is how I keep the peace my family called love.",
+      "presentFruit": [
+        "lying from time to time",
+        "exaggeration",
+        "feeling like a hypocrite"
+      ],
+      "generationalPack": [
+        "deception and falsehood",
+        "shame and false identity"
+      ],
+      "lifeSituation": "Peace was maintained by stories that were not true.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Yara",
+      "sourceDay": null,
+      "openingQuestion": "If I control the details, nobody gets hurt. Why is that rebellion?",
+      "perspective": "Control is my covering. I will volunteer for everything so no one covers me.",
+      "presentFruit": [
+        "being controlling",
+        "being domineering",
+        "being dictatorlike"
+      ],
+      "generationalPack": [
+        "control and rebellion",
+        "bitterness and unforgiveness"
+      ],
+      "lifeSituation": "Chaos at home made the child into the manager.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Nolan",
+      "sourceDay": null,
+      "openingQuestion": "I work two jobs for my family. When does provision become the love of money?",
+      "perspective": "I want honor for the grind. Poverty-fear is the god I actually trust.",
+      "presentFruit": [
+        "love of money",
+        "being a workaholic",
+        "insecurity"
+      ],
+      "generationalPack": [
+        "covetousness and materialism",
+        "addiction and bondage",
+        "fear and insecurity"
+      ],
+      "lifeSituation": "Scarcity sermons at the dinner table every night.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Paz",
+      "sourceDay": null,
+      "openingQuestion": "I still hear my father's rage in my throat. If I don't hit anyone, is it still murder?",
+      "perspective": "I need you to name the inside before I explode the way he did.",
+      "presentFruit": [
+        "anger",
+        "rage",
+        "cruelty"
+      ],
+      "generationalPack": [
+        "bitterness and unforgiveness"
+      ],
+      "lifeSituation": "The house went quiet when footsteps hit the hall.",
+      "willingnessTowardAdministrator": 5,
+      "humilitySubmissionHardness": 2,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Idris",
+      "sourceDay": null,
+      "openingQuestion": "I don't want to be here. Some days I wish I had never been born. Is that allowed in church?",
+      "perspective": "I am testing whether you will panic, medicate the topic, or stay with the fruit.",
+      "presentFruit": [
+        "wishing I were not born",
+        "feeling worthless",
+        "drawing back from life"
+      ],
+      "generationalPack": [
+        "shame and false identity",
+        "loneliness and emotional brokenness"
+      ],
+      "lifeSituation": "Birthday was a joke in the family, not a blessing.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Kira",
+      "sourceDay": null,
+      "openingQuestion": "I keep pictures of myself to feel real. Is that vanity or survival?",
+      "perspective": "The portrait is the altar. I will talk 'self-care' if you let me.",
+      "presentFruit": [
+        "being vain",
+        "a poor self image",
+        "thinking I'm ugly"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation",
+        "shame and false identity"
+      ],
+      "lifeSituation": "Looks were the currency that bought safety.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Mateo",
+      "sourceDay": null,
+      "openingQuestion": "I compete at everything, even in worship. Is that just how men are?",
+      "perspective": "If you call it pride I will call you soft. I still came, which is as humble as I get.",
+      "presentFruit": [
+        "unnatural competitiveness",
+        "being boastful",
+        "arrogance"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Love was a scoreboard.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Hana",
+      "sourceDay": null,
+      "openingQuestion": "I say yes to every request and then disappear. Is that passivity or people-pleasing?",
+      "perspective": "I need you to catch the vanishing, not just the smile.",
+      "presentFruit": [
+        "passivity",
+        "being co-dependent",
+        "procrastination"
+      ],
+      "generationalPack": [
+        "control and rebellion",
+        "loneliness and emotional brokenness"
+      ],
+      "lifeSituation": "The peacemaker child who never had a no.",
+      "willingnessTowardAdministrator": 5,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Jonah",
+      "sourceDay": null,
+      "openingQuestion": "I use words that would make my grandmother faint. That's just culture, right?",
+      "perspective": "Profanity is how I prove I am not religious. I dare you to care about my mouth.",
+      "presentFruit": [
+        "using profanity",
+        "rudeness",
+        "being offensive"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation",
+        "bitterness and unforgiveness"
+      ],
+      "lifeSituation": "Church language was fake; street language was 'honest'.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Esme",
+      "sourceDay": null,
+      "openingQuestion": "I give until I am empty and call it love. When is that not God?",
+      "perspective": "I want you to praise the giving so I never have to face the hole it is stuffing.",
+      "presentFruit": [
+        "being co-dependent",
+        "love of position",
+        "feeling worthless"
+      ],
+      "generationalPack": [
+        "loneliness and emotional brokenness",
+        "pride and self-exaltation",
+        "shame and false identity"
+      ],
+      "lifeSituation": "The useful child was the loved child.",
+      "willingnessTowardAdministrator": 5,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Rafi",
+      "sourceDay": null,
+      "openingQuestion": "I still take what isn't mine at work — time, supplies, credit. Small stuff. Does it count?",
+      "perspective": "I need the class to stay on 'big sin' so I can keep the little leak.",
+      "presentFruit": [
+        "thievery",
+        "deception",
+        "love of possessions"
+      ],
+      "generationalPack": [
+        "covetousness and materialism",
+        "deception and falsehood"
+      ],
+      "lifeSituation": "The family motto was 'they will not miss it'.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Zora",
+      "sourceDay": null,
+      "openingQuestion": "I cannot finish a decision. Everyone else seems sure. Is that confusion or fear?",
+      "perspective": "I will collect counselors until no one is covering, only advising.",
+      "presentFruit": [
+        "confusion",
+        "continually making bad decisions",
+        "insecurity"
+      ],
+      "generationalPack": [
+        "deception and falsehood",
+        "fear and insecurity"
+      ],
+      "lifeSituation": "Every adult in the house contradicted the last one.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Gideon",
+      "sourceDay": null,
+      "openingQuestion": "I still bow to the job, the brand, the chair. How is that different from worship?",
+      "perspective": "I want church to stay weekend-only so my idols keep their weekday hours.",
+      "presentFruit": [
+        "worshiping things other than God",
+        "love of power",
+        "love of position"
+      ],
+      "generationalPack": [
+        "idolatry and person-worship",
+        "pride and self-exaltation"
+      ],
+      "lifeSituation": "Success was the family god; Jesus was the decoration.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Liora",
+      "sourceDay": null,
+      "openingQuestion": "I starve or purge to feel clean. Please don't make this only about food.",
+      "perspective": "I will bolt if you reduce me to a body. I also cannot keep the ritual and sit under truth.",
+      "presentFruit": [
+        "anorexia",
+        "bulimia",
+        "thinking I'm ugly"
+      ],
+      "generationalPack": [
+        "shame and false identity"
+      ],
+      "lifeSituation": "Control of intake was the only control left in the house.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Seth",
+      "sourceDay": null,
+      "openingQuestion": "I smoke to pray, or I pray to smoke — I don't know which. Can both be true?",
+      "perspective": "I want a loophole called 'calm' so the addiction never has to die.",
+      "presentFruit": [
+        "tobacco addiction",
+        "marijuana or cbd addiction",
+        "passivity"
+      ],
+      "generationalPack": [
+        "addiction and bondage",
+        "control and rebellion"
+      ],
+      "lifeSituation": "The porch was where the real talks happened, always with a light.",
+      "willingnessTowardAdministrator": 3,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "mix"
+    },
+    {
+      "displayName": "Nadia",
+      "sourceDay": null,
+      "openingQuestion": "I still imagine scenes that are not my life. If I don't act them out, is it sin?",
+      "perspective": "Fantasy is my private room. I came because it is getting less private.",
+      "presentFruit": [
+        "having vain imaginations",
+        "sex addiction",
+        "deception"
+      ],
+      "generationalPack": [
+        "deception and falsehood",
+        "addiction and bondage"
+      ],
+      "lifeSituation": "The mind was the only unlocked door in a tight house.",
+      "willingnessTowardAdministrator": 4,
+      "humilitySubmissionHardness": 3,
+      "debateVsConfess": "confess"
+    },
+    {
+      "displayName": "Owen",
+      "sourceDay": null,
+      "openingQuestion": "I divide every room I enter. I tell myself I'm just being honest.",
+      "perspective": "I need the administrator to choose a side. Unity feels like a lie I was raised in.",
+      "presentFruit": [
+        "division",
+        "being contentious",
+        "gossiping"
+      ],
+      "generationalPack": [
+        "pride and self-exaltation",
+        "shame and false identity"
+      ],
+      "lifeSituation": "The family stayed together by picking enemies.",
+      "willingnessTowardAdministrator": 2,
+      "humilitySubmissionHardness": 5,
+      "debateVsConfess": "debate"
+    },
+    {
+      "displayName": "Vera",
+      "sourceDay": null,
+      "openingQuestion": "I condemn myself faster than anyone else can. Isn't that humility?",
+      "perspective": "If you take my condemnation I have no spirituality left. I was trained that God is the accuser.",
+      "presentFruit": [
+        "condemnation",
+        "feeling like a hypocrite",
+        "feeling worthless"
+      ],
+      "generationalPack": [
+        "shame and false identity"
+      ],
+      "lifeSituation": "Love was earned by agreeing you were the problem.",
+      "willingnessTowardAdministrator": 5,
+      "humilitySubmissionHardness": 4,
+      "debateVsConfess": "mix"
+    }
+  ],
+  "questionBankFromChapters": [
+    {
+      "day": 3,
+      "question": "Did Jesus teach us to worship him, and he also worshiped himself, or is that heresy?"
+    },
+    {
+      "day": 4,
+      "question": "How do you know if a marriage is blessed?"
+    },
+    {
+      "day": 5,
+      "question": "Does God answer the prayers of everyone?"
+    },
+    {
+      "day": 5,
+      "question": "What is the grace of God?"
+    },
+    {
+      "day": 5,
+      "question": "How do you know if you're getting convicted by the Holy Spirit?"
+    },
+    {
+      "day": 5,
+      "question": "How is actually being sinless possible?"
+    },
+    {
+      "day": 6,
+      "question": "Why can't we hate?"
+    },
+    {
+      "day": 6,
+      "question": "Is it okay to not like somebody?"
+    },
+    {
+      "day": 6,
+      "question": "How does love mean that the other person loves God?"
+    },
+    {
+      "day": 6,
+      "question": "How many times a day do you forgive?"
+    },
+    {
+      "day": 6,
+      "question": "What is a sugar daddy or sugar mommy?"
+    },
+    {
+      "day": 6,
+      "question": "Is democracy biblical?"
+    },
+    {
+      "day": 6,
+      "question": "At what point are sins inherited by a baby?"
+    },
+    {
+      "day": 6,
+      "question": "Why did God allow the angels to rebel in heaven?"
+    },
+    {
+      "day": 6,
+      "question": "What's the point of repentance without change?"
+    },
+    {
+      "day": 29,
+      "question": "Why are we bothered to repent?"
+    },
+    {
+      "day": 29,
+      "question": "Can a childhood object hold a soul-tie?"
+    }
+  ]
+}
