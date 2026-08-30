@@ -326,7 +326,6 @@
     },
 
     injectViewOption() {
-      if (!isLocalDevHost()) return;
       const sel = document.getElementById('view-mode');
       if (!sel || sel.querySelector('option[value="camp"]')) {
         window.ViewNav?.injectCamp?.();

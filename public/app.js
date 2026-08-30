@@ -2237,10 +2237,6 @@
 
   document.getElementById('view-mode').addEventListener('change', e => {
     if (e.target.value === 'camp') {
-      if (!window.DiscipleshipCamp?.isLocalDevHost?.()) {
-        e.target.value = state.viewMode || 'constellation';
-        return;
-      }
       window.AskOverlay?.close?.();
       state.viewMode = 'camp';
       state.selectedId = null;
@@ -2310,7 +2306,7 @@
   {
     const modeSel = document.getElementById('view-mode');
     const viewParam = new URLSearchParams(location.search).get('view');
-    if (viewParam === 'camp' && window.DiscipleshipCamp?.isLocalDevHost?.()) {
+    if (viewParam === 'camp') {
       state.viewMode = 'camp';
       if (modeSel) modeSel.value = 'camp';
       window.ParchmentLanding?.close?.({ showAsk: false });
@@ -2326,13 +2322,10 @@
         state.show.topic = true;
       }
       window.ParchmentLanding?.close?.({ showAsk: false });
-    } else if (window.DiscipleshipCamp?.isLocalDevHost?.()) {
-      const wantCamp = /(?:^|[?&])view=camp(?:&|$)/.test(location.search) || location.hash === '#camp';
-      if (wantCamp) {
-        state.viewMode = 'camp';
-        if (modeSel) modeSel.value = 'camp';
-        window.ParchmentLanding?.close?.({ showAsk: false });
-      }
+    } else if (location.hash === '#camp') {
+      state.viewMode = 'camp';
+      if (modeSel) modeSel.value = 'camp';
+      window.ParchmentLanding?.close?.({ showAsk: false });
     }
     window.ViewNav?.syncLabel?.();
   }
