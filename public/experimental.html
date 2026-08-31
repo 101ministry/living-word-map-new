@@ -20,6 +20,11 @@
       document.documentElement.classList.toggle('exp-record', rec);
     })();
   </script>
+  <script>
+    (function () {
+      location.replace('repentance-project.html' + location.search + location.hash);
+    })();
+  </script>
 </head>
 <body class="round2-body round2-active exp-body">
   <div class="exp-map-nav">
@@ -308,7 +313,7 @@
   <script>
     function leaveExperimental(v) {
       if (!v) return;
-      if (v === 'why-bloodline') location.href = 'index.html#study-full';
+      if (v === 'why-bloodline') location.href = 'index.html?site=downloads#study-full';
       else location.href = 'index.html?view=' + encodeURIComponent(v);
     }
     document.getElementById('view-mode')?.addEventListener('change', function (e) {

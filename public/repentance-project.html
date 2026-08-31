@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repentance Project — Living Word Map</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=93" />
+  <link rel="stylesheet" href="round2.css?v=9" />
+  <link rel="stylesheet" href="experimental.css?v=17" />
+  <script>
+    (function () {
+      var rec = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
+      document.documentElement.classList.toggle('exp-record', rec);
+    })();
+  </script>
+</head>
+<body class="site-repentance-hub round2-body exp-body">
+  <div id="app">
+    <header class="header">
+      <div class="header-brand">
+        <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
+        <h1><a href="repentance-project.html" class="header-title-link">Living Word Map</a></h1>
+        <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">11</span> Roots · <span id="fruit-count">20</span> Fruits · <span id="topic-count">666</span> Topics</p>
+      </div>
+      <div class="header-controls">
+        <div class="language-control">
+          <label id="language-label" for="language-select">Prayer language</label>
+          <select id="language-select" aria-describedby="language-status"></select>
+          <p id="language-status" class="language-status" aria-live="polite"></p>
+        </div>
+        <nav class="site-nav" id="site-nav" aria-label="Site sections">
+          <a href="repentance-project.html" class="site-nav-btn" data-site-href="repentance-project.html" aria-current="page">Repentance Project</a>
+          <a href="index.html?site=prayer-videos" class="site-nav-btn" data-site-href="index.html" data-site-page="prayer-videos">Core Prayer &amp; Videos</a>
+          <a href="index.html?site=map" class="site-nav-btn" data-site-href="index.html" data-site-page="map">Globe Map &amp; Minigame</a>
+          <a href="index.html?site=downloads" class="site-nav-btn" data-site-href="index.html" data-site-page="downloads">Audio Downloads</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="repentance-hub-section">
+    <main class="repentance-hub" aria-label="Repentance Project">
+      <header class="repentance-hub-intro">
+        <h2>Repentance Project</h2>
+        <p>Round 1 speaks <strong>I</strong>, then lays both sides back to Adam. Round 2 speaks <strong>WE</strong> for generations 2–5. Round 3 speaks <strong>WE</strong> for generations 6–20. Choose your round — prayer language applies to every page.</p>
+      </header>
+
+      <div id="exp-gate" class="exp-gate exp-gate--hub">
+        <form id="exp-profile-form" class="exp-gate-card" autocomplete="off">
+          <p class="exp-gate-kicker">Repentance Project 2026</p>
+          <h2 class="exp-gate-title">Prayer Builder</h2>
+          <p class="exp-gate-lead exp-live-only">
+            Eleven sets of three rounds. Read a prayer, click the next topic, then
+            <strong>Yes, my heart changed</strong> — a builder walks a block onto the site.
+            Enter the case name, place, password, and your Slack invite code on first entry.
+          </p>
+          <p class="exp-gate-lead exp-record-only">
+            Eleven sets of three rounds. Read a prayer, click the next topic, then
+            <strong>Yes, my heart changed</strong> — a builder walks a block onto the site.
+            Type <em>your</em> city, region, country, and continent — any place in the world.
+            Or pick a <strong>case-load preview</strong> to see how that country’s map draws.
+            Location stays in this browser.
+          </p>
+          <p class="exp-gate-required">All boxes are required.</p>
+
+          <div class="exp-gate-toolbar">
+            <button type="button" id="exp-profile-reset" class="round2-btn-ghost">Reset</button>
+          </div>
+
+          <label class="exp-field exp-live-only">
+            <span>Name</span>
+            <input type="text" name="personName" maxlength="80" required placeholder="The person this case is for" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+          </label>
+
+          <fieldset class="exp-fieldset">
+            <legend>Gender</legend>
+            <label><input type="radio" name="gender" value="man" required /> Man</label>
+            <label><input type="radio" name="gender" value="woman" /> Woman</label>
+          </fieldset>
+
+          <fieldset class="exp-fieldset">
+            <legend>Married?</legend>
+            <label><input type="radio" name="married" value="yes" required /> Yes</label>
+            <label><input type="radio" name="married" value="no" /> No</label>
+            <label class="exp-field exp-live-only exp-spouse-field" id="exp-spouse-wrap" hidden>
+              <span>Spouse's name</span>
+              <input type="text" name="spouseName" maxlength="80" placeholder="Spouse's name" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+            </label>
+          </fieldset>
+
+          <label class="exp-field exp-record-only">
+            <span>Case-load preview</span>
+            <select id="exp-case-gate" aria-label="Preview a case-load location">
+              <option value="">Custom location…</option>
+            </select>
+          </label>
+          <label class="exp-field">
+            <span>City</span>
+            <input type="text" name="city" required maxlength="80" placeholder="e.g. Raleigh, Lagos, São Paulo" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+          </label>
+          <label class="exp-field">
+            <span>County / parish / province</span>
+            <input type="text" name="county" required maxlength="80" placeholder="e.g. Wake, County Cork, Ontario" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+          </label>
+          <label class="exp-field">
+            <span>State</span>
+            <input type="text" name="state" required maxlength="80" placeholder="e.g. North Carolina, England, Queensland" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+          </label>
+          <label class="exp-field">
+            <span>Country</span>
+            <input type="text" name="country" required maxlength="80" placeholder="e.g. United States, Kenya, Brazil" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+          </label>
+          <label class="exp-field">
+            <span>Continent</span>
+            <select name="continent" required>
+              <option value="">Choose…</option>
+              <option>Africa</option>
+              <option>Antarctica</option>
+              <option>Asia</option>
+              <option>Europe</option>
+              <option>North America</option>
+              <option value="Oceania">Oceania (Australia, New Zealand, Pacific)</option>
+              <option>South America</option>
+            </select>
+          </label>
+          <label class="exp-field exp-live-only">
+            <span>Password</span>
+            <input type="password" name="password" maxlength="120" required placeholder="To open this case on another device" autocomplete="new-password" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+          </label>
+
+          <label class="exp-field exp-live-only" id="exp-invite-wrap">
+            <span>Invite code</span>
+            <input type="text" name="inviteCode" maxlength="16" placeholder="LWM-XXXX-XXXX (first time only)" autocomplete="off" spellcheck="false" autocapitalize="characters" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+            <span class="exp-field-hint">Required your first time. Leave blank if you already joined with this name and password.</span>
+          </label>
+
+          <fieldset class="exp-fieldset exp-live-only" id="exp-share-progress-wrap">
+            <legend>People map</legend>
+            <p class="exp-share-progress-lead">
+              Your city stays on this device. If you share progress, other consenting participants see your
+              state and set, round, and topic — and you only see progress from people who also opted in.
+            </p>
+            <label><input type="radio" name="shareProgress" value="yes" required /> Share my prayer progress on the People map</label>
+            <label><input type="radio" name="shareProgress" value="no" /> Keep my progress private (People map shows only my region)</label>
+          </fieldset>
+
+          <p id="exp-geo-status" class="exp-geo-status" aria-live="polite"></p>
+          <div class="exp-gate-actions">
+            <button type="submit" class="btn-accent" id="exp-profile-submit">Enter Prayer Builder</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="repentance-hub-cards">
+        <a href="round1.html?from=map" id="round1-entry-link" class="repentance-hub-card">
+          <span class="repentance-hub-card-kicker">Round 1</span>
+          <strong>Personal confession</strong>
+          <span>666 topics · I agree…</span>
+        </a>
+        <a href="round2.html?from=map" class="repentance-hub-card">
+          <span class="repentance-hub-card-kicker">Round 2</span>
+          <strong>Generational prayer</strong>
+          <span>2nd–5th generations · WE agree…</span>
+        </a>
+        <a href="round3.html" class="repentance-hub-card">
+          <span class="repentance-hub-card-kicker">Round 3</span>
+          <strong>Extended generations</strong>
+          <span>6th–20th generations · WE agree…</span>
+        </a>
+      </div>
+    </main>
+    </div>
+  </div>
+
+  <div id="found-us-overlay" class="found-us-overlay" role="dialog" aria-modal="true" aria-labelledby="found-us-title" hidden>
+    <div class="found-us-card">
+      <button type="button" id="found-us-close" class="found-us-close" aria-label="Close">×</button>
+      <h2 id="found-us-title">How did you find us?</h2>
+      <p class="found-us-lead">Tell us how you arrived, then continue into Repentance Project 2026.</p>
+      <form id="found-us-form">
+        <label for="found-us-select">How did you find us?</label>
+        <select id="found-us-select" required>
+          <option value="" selected disabled>Choose one…</option>
+          <option value="friend">A friend told me</option>
+          <option value="church">Someone from church</option>
+          <option value="norman">Norman told me</option>
+          <option value="camp">I heard about the Discipleship Training Camp</option>
+          <option value="slack">Invitation to join Slack Messaging to keep up to date with the developer and team</option>
+        </select>
+        <p id="found-us-camp" class="found-us-extra" hidden>
+          <a href="index.html?site=map&amp;view=camp">Open the Discipleship Training Camp minigame</a>
+        </p>
+        <p id="found-us-slack" class="found-us-extra" hidden>
+          <a href="https://join.slack.com/t/repentance101/shared_invite/zt-48344b3ds-vxCbNHRk4JKiR8oDwby9BA" target="_blank" rel="noopener noreferrer">Join Slack Messaging to keep up to date with the developer and team</a>
+        </p>
+        <button type="submit" class="btn-accent" id="found-us-continue">Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="exp-app" hidden>
+    <header class="round2-header exp-header">
+      <a href="#repentance-hub-section" class="round2-back-link" data-exp-hub-back>← Repentance Project</a>
+      <div class="round2-header-brand">
+        <h1>Repentance Project 2026 Prayer Builder</h1>
+        <p id="exp-phase-label" class="round2-phase-label">Set 1 of 11 · You and your bloodline · Round 1</p>
+      </div>
+      <div class="round2-header-meta">
+        <label class="round-lang-label exp-live-only" for="exp-case-name">
+          <span>Case</span>
+          <input id="exp-case-name" class="round-lang-select" type="text" readonly tabindex="-1" aria-label="Case name" />
+        </label>
+        <label class="round-lang-label exp-record-only" for="exp-case">
+          <span>Case</span>
+          <select id="exp-case" class="round-lang-select" aria-label="Case-load location"></select>
+        </label>
+        <label class="round-lang-label" for="exp-set">
+          <span>Set</span>
+          <select id="exp-set" class="round-lang-select" aria-label="Prayer set"></select>
+        </label>
+        <label class="round-lang-label" for="exp-round">
+          <span>Round</span>
+          <select id="exp-round" class="round-lang-select" aria-label="Prayer round">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+        <label class="round-lang-label" for="exp-lang">
+          <span id="exp-lang-label">Language</span>
+          <select id="exp-lang" class="round-lang-select" aria-label="Prayer language"></select>
+        </label>
+        <span id="exp-progress">Loading…</span>
+        <button type="button" id="exp-people" class="round2-btn-ghost exp-people-btn" aria-pressed="false">People</button>
+        <button type="button" id="exp-edit-profile" class="round2-btn-ghost exp-edit-profile">Profile</button>
+      </div>
+    </header>
+
+    <div class="exp-record-bar" aria-label="Topic controls">
+      <div class="exp-record-copy exp-record-only">
+        <span class="exp-record-kicker">Record version</span>
+        <span class="exp-record-hint">Pick a set, seed how built it looks, read the prayer, then Next topic.</span>
+      </div>
+      <div class="exp-record-fills exp-record-only">
+        <button type="button" class="exp-fill-btn" data-fill="empty">Empty</button>
+        <button type="button" class="exp-fill-btn" data-fill="showcase">Showcase</button>
+        <button type="button" class="exp-fill-btn" data-fill="late">Almost done</button>
+        <button type="button" class="exp-fill-btn" data-fill="done">Round complete</button>
+      </div>
+      <button type="button" id="exp-next-topic" class="btn-accent exp-next-topic">Next topic</button>
+    </div>
+
+    <section id="phase-prayers" class="round2-phase exp-phase" aria-label="Repentance Project 2026 prayers">
+      <div class="exp-layout">
+        <div class="exp-scene-wrap">
+          <canvas id="exp-canvas" aria-label="Construction scene"></canvas>
+          <div id="exp-hud" class="exp-hud" aria-live="polite">
+            <div id="exp-hud-count" class="exp-hud-count">0</div>
+            <div class="exp-hud-label">builders on site</div>
+            <div id="exp-hud-section" class="exp-hud-section"></div>
+          </div>
+          <p id="exp-people-privacy" class="exp-people-privacy">
+            Your city stays on this device. On the People map, others only see your state — never your
+            city or county. Prayer progress (set, round, topic) is shared only if you opted in at entry;
+            you then see the same fields from other participants who also opted in.
+          </p>
+          <p id="exp-scene-caption" class="exp-scene-caption"></p>
+        </div>
+
+        <article class="round2-prayer-panel">
+          <header class="round2-prayer-header">
+            <span id="exp-topic-num" class="round2-topic-num">001</span>
+            <h2 id="exp-topic-title">Topic</h2>
+            <p id="exp-topic-meta" class="round2-topic-meta"></p>
+          </header>
+          <div id="exp-prayer-scroll" class="round2-prayer-scroll" tabindex="0">
+            <p id="exp-prayer-note" class="round2-prayer-note">PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.</p>
+            <div id="exp-prayer-text" class="round2-prayer-text"></div>
+          </div>
+        </article>
+
+        <aside class="round2-sidebar" aria-label="Topic index">
+          <div id="exp-sidebar-sections" class="round2-sidebar-sections"></div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <dialog id="exp-heart-dialog" class="round2-dialog">
+    <div class="round2-dialog-inner">
+      <button type="button" id="exp-heart-dismiss" class="round2-dialog-close" aria-label="Close dialog">×</button>
+      <h3 id="exp-heart-title">Did anything change in your heart?</h3>
+      <p id="exp-heart-sub" class="round2-dialog-sub">When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.</p>
+      <div class="round2-dialog-actions">
+        <button type="button" id="exp-heart-yes" class="btn-accent">Yes, my heart changed</button>
+        <button type="button" id="exp-heart-no" class="round2-btn-ghost">No</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="exp-advance-dialog" class="round2-dialog">
+    <div class="round2-dialog-inner">
+      <h3 id="exp-advance-title">Round complete</h3>
+      <p id="exp-advance-sub" class="round2-dialog-sub">The site is ready for the next layer.</p>
+      <div class="round2-dialog-actions">
+        <button type="button" id="exp-advance-go" class="btn-accent">Continue</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="round1-entry-videos-dialog" class="survey-gate-dialog round1-video-gate-dialog">
+    <div class="survey-gate-dialog-inner">
+      <button type="button" id="round1-entry-videos-dismiss" class="dialog-close survey-gate-close" aria-label="Close">×</button>
+      <h2>Before you get started on Round 1, have you completed the following videos:</h2>
+      <ul class="round1-video-gate-list">
+        <li>
+          <span class="round1-video-gate-part">Part 1</span>
+          <a class="survey-gate-link" href="https://youtu.be/CJrJG9xymts" target="_blank" rel="noopener noreferrer">https://youtu.be/CJrJG9xymts</a>
+        </li>
+        <li>
+          <span class="round1-video-gate-part">Part 2</span>
+          <a class="survey-gate-link" href="https://youtu.be/ECXgUl4rNAQ" target="_blank" rel="noopener noreferrer">https://youtu.be/ECXgUl4rNAQ</a>
+        </li>
+        <li>
+          <span class="round1-video-gate-part">Part 3</span>
+          <a class="survey-gate-link" href="https://youtu.be/nKMRFfGoc1I" target="_blank" rel="noopener noreferrer">https://youtu.be/nKMRFfGoc1I</a>
+        </li>
+      </ul>
+      <div class="survey-gate-actions">
+        <button type="button" id="round1-entry-videos-yes" class="btn-accent">Yes</button>
+        <button type="button" id="round1-entry-videos-no" class="btn-ghost">No</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="round1-entry-warning-dialog" class="survey-gate-dialog round1-entry-warning-dialog">
+    <div class="survey-gate-dialog-inner">
+      <p class="round1-entry-warning-text">Be aware that not completing these videos may keep your heart partially blind.</p>
+      <p id="round1-entry-tough-questions" class="round1-entry-tough-questions hidden">
+        <a class="survey-gate-link" href="https://repentance101ministry.com/channels/tough-questions" target="_blank" rel="noopener noreferrer">Ask why these videos are required</a>
+      </p>
+      <p id="round1-entry-countdown" class="round1-entry-countdown" aria-live="polite">
+        Continuing in <span id="round1-entry-countdown-sec">28</span>s…
+      </p>
+    </div>
+  </dialog>
+
+  <script src="languages.js?v=21"></script>
+  <script src="prayers.js"></script>
+  <script src="round1-data.js?v=11"></script>
+  <script src="round2-data.js?v=11"></script>
+  <script src="round3-data.js?v=11"></script>
+  <script src="experimental-geo.js?v=14"></script>
+  <script src="experimental-scene.js?v=17"></script>
+  <script src="experimental.js?v=15"></script>
+  <script src="found-us.js?v=3"></script>
+  <script src="site-nav.js?v=4"></script>
+  <script src="round1-entry-gate.js?v=5"></script>
+</body>
+</html>

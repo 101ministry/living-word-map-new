@@ -19,3 +19,49 @@ Query archive: `data/LIVING-WORD-MAP-QUERIES.md`
 If the user asks for R&R / Repentance Project **series screenshot** or **thumbnail** image generation — **do not implement here**. Tell them to use the **R&R Thumbnail Images** chat instead.
 
 Brief informational answers are fine; image generation belongs in the R&R chat.
+
+## Repentance 2026 Project Thumbnails (lowest priority)
+
+Separate from R&R series posters. Minimal 16:9 days: R&R top banner, 20 topics per day from the Telegram grouped-by-20s list, Ephesians 5:11 footer, Experimental set background (Round 1–3 then next set).
+
+**Labels:** use the **exact Telegram wording** for every topic. Never swap, soften, paraphrase, invent, or omit titles because of an image-filter. Stamp titles from the list onto the template (do not let the image model write the 20 names). Source: `C:\Users\tweed\Downloads\Telegram Desktop\grouped by 20s list of topics.txt` (fill 660–666 from `data/TOPICS-666.txt` only if the grouped file ends before 666).
+
+**Priority:** lower than every other task in this repo. Do not start or continue this work if anything else is pending. Only resume when the user is idle on all other work, or they explicitly say to generate the next day.
+
+## Riverside Share-for-Review clips
+
+When the user pastes a Riverside preview URL, fetch the transcript and reply with **Title**, **Hashtags**, and **Summary of video**.
+
+- Wrap each field in its own `text` code fence so the copy icon is available. Never nest fences, and never put backticks in the field content. The copy icon copies inner text only; the fence markers are chat formatting, not part of the paste.
+- Hashtags: topic/Scripture/content tags only. Do **not** use `#NormM`.
+- Summary: clip paragraph, then a blank line, then this shared line (no brackets):
+
+`#RepentanceProject #PrayerTopics #LivingWordMap #RR2026 #Deliverance #SpiritualWarfare #Principalities #Repentance https://map.repentance101.com`
+
+- Same clip ID twice: say duplicate and reprint. Overlapping shorter/longer cuts: note the overlap, still give the three fields.
+
+## YouTube Shorts batch uploads (R&R days)
+
+**User workflow (from Day 23 onward):** user no longer downloads transcripts one-by-one. Instead:
+
+1. **Share-for-Review links file** — a `.txt` in intake with one Riverside preview URL per line (blank lines and `#` comments ok).
+2. **Exported MP4s** — one video export per clip, dropped in the same intake folder.
+3. **Day in chat** — user states which R&R day the batch is from (e.g. “Day 23”).
+
+**Agent workflow for each batch:**
+
+1. **Read** the Share-for-Review links from the user’s links `.txt` in intake (do not skip or invent URLs).
+2. Fetch transcripts via `scripts/youtube-upload/fetch-riverside-transcripts.mjs` (clip ID + `review-token` from each URL).
+3. Pair fetched `.txt` files to exported MP4s (slug match on Riverside filename stem; `(repentance1_2)` ↔ `(1).txt` variant rules).
+4. Write unique titles, topic hashtags, summaries, `#DayN` on every sidecar when user named the day, and **`"privacy": "private"`** on all new sidecars.
+5. Move MP4 + sidecar + matched transcript into `uploads`.
+
+**Do not delete the Share-for-Review links `.txt`** after fetch, queue, or upload — keep it in intake (or archive beside the batch) for future reference. Helper/dedupe/manifest files may be cleaned; the user’s links file must stay.
+
+- Do **not** invent or infer a day from filenames or topics. Only add `#DayN` when the user states the day for that batch.
+- Keep topic hashtags; append `#DayN` (avoid duplicating if already present).
+- **Intake:** `C:\Users\tweed\Downloads\Video\R&R\shorts and text`
+- **Queue:** `C:\Users\tweed\Downloads\Video\R&R\shorts and text\uploads`
+- **Scheduler:** `scripts/youtube-upload-remaining.ps1` posts one clip every ~14 min 24 sec. Legacy sidecars (no `privacy` field) upload **public**; new sidecars must include `"privacy": "private"`.
+- **Optional extra description link:** when the user supplies one for a batch (e.g. Spotify episode), add it in the sidecar `summary` between the topic paragraph and the shared hashtag footer. Day 29 uses: `https://creators.spotify.com/pod/profile/dream-interpretation/episodes/Generational-Curses--Breaking-Cycles-e17nr32` (label e.g. `Generational Curses — Breaking Cycles (Spotify): …`).
+- Do **not** expect pre-downloaded transcript `.txt` files unless user also provides them; prefer fetching from the links file.

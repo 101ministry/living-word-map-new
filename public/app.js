@@ -325,16 +325,29 @@
     });
 
     document.getElementById('nav-compare')?.addEventListener('click', goToCompare);
-    document.getElementById('nav-videos')?.addEventListener('click', scrollToTeachingVideos);
-    document.getElementById('scroll-to-videos')?.addEventListener('click', scrollToTeachingVideos);
-    document.getElementById('nav-downloads')?.addEventListener('click', scrollToDownloads);
-    document.getElementById('scroll-to-downloads')?.addEventListener('click', scrollToDownloads);
+    document.getElementById('nav-prayer-videos')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+      window.LwmSitePages?.apply?.('prayer-videos');
+      document.getElementById('core-prayer-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    document.getElementById('nav-map')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+      window.LwmSitePages?.apply?.('map');
+      document.getElementById('map')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    document.getElementById('nav-downloads')?.addEventListener('click', () => {
+      setControlsDrawerOpen(false);
+      window.LwmSitePages?.apply?.('downloads');
+      document.getElementById('downloads-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
     document.getElementById('downloads-jump-map')?.addEventListener('click', () => {
       setControlsDrawerOpen(false);
+      window.LwmSitePages?.apply?.('map');
       document.getElementById('map')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     document.getElementById('study-jump-map')?.addEventListener('click', () => {
       setControlsDrawerOpen(false);
+      window.LwmSitePages?.apply?.('map');
       document.getElementById('map')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
@@ -368,7 +381,6 @@
 
   async function refreshLanguageUi() {
     document.getElementById('language-label').textContent = t('prayerLanguageLabel');
-    document.getElementById('open-core-prayer').textContent = t('openCorePrayer');
     document.getElementById('core-prayer-title').textContent = t('corePrayerTitle');
 
     const prayerHeading = document.querySelector('#detail-prayer-section h3');
@@ -385,13 +397,17 @@
 
     if (coreDialog.open) {
       await refreshCorePrayerDialog();
+    } else if (window.LwmSitePages?.current?.() === 'prayer-videos') {
+      await refreshCorePrayerDialog();
     }
   }
 
   async function refreshCorePrayerDialog() {
     const prayer = await lib.getCorePrayer(state.language);
-    document.getElementById('core-prayer-title').textContent = prayer?.title || t('corePrayerTitle');
-    document.getElementById('core-prayer-instruction').textContent = prayer?.instruction || t('corePrayerHint');
+    const title = prayer?.title || t('corePrayerTitle');
+    const instruction = prayer?.instruction || t('corePrayerHint');
+    document.getElementById('core-prayer-title').textContent = title;
+    document.getElementById('core-prayer-instruction').textContent = instruction;
 
     const fallbackEl = document.getElementById('core-prayer-fallback');
     const textEl = document.getElementById('core-prayer-text');
@@ -412,6 +428,34 @@
     const audioPath = lib.coreAudioPath(prayer?.fallback ? 'en' : state.language);
     setupAudioPlayer(coreAudio, document.getElementById('core-audio-btn'),
       document.getElementById('core-audio-label'), document.getElementById('core-audio-status'), audioPath);
+
+    const pageTitle = document.getElementById('core-prayer-page-title');
+    const pageInstruction = document.getElementById('core-prayer-page-instruction');
+    const pageFallback = document.getElementById('core-prayer-page-fallback');
+    const pageText = document.getElementById('core-prayer-page-text');
+    const pageAudio = document.getElementById('core-prayer-page-audio');
+    if (pageTitle) pageTitle.textContent = title;
+    if (pageInstruction) pageInstruction.textContent = instruction;
+    if (pageText) {
+      if (!prayer) {
+        pageFallback?.classList.add('hidden');
+        pageText.textContent = t('noPrayer');
+      } else {
+        if (prayer.fallback) {
+          if (pageFallback) {
+            pageFallback.textContent = t('translationComingSoon');
+            pageFallback.classList.remove('hidden');
+          }
+        } else {
+          pageFallback?.classList.add('hidden');
+        }
+        pageText.textContent = prayer.text;
+      }
+    }
+    if (pageAudio) {
+      setupAudioPlayer(pageAudio, document.getElementById('core-prayer-page-audio-btn'),
+        document.getElementById('core-prayer-page-audio-label'), document.getElementById('core-prayer-page-audio-status'), audioPath);
+    }
   }
 
   function setDocumentDirection(lang) {
@@ -496,6 +540,11 @@
     coreDialog.showModal();
   }
 
+  window.LwmSitePages = window.LwmSitePages || {};
+  window.LwmSitePages.refreshCorePrayerPage = async () => {
+    await refreshCorePrayerDialog();
+  };
+
   function languageOptionLabel(lang) {
     if (!lang?.name) return lang?.native || lang?.code || '';
     if (!lang.native || lang.name === lang.native) return lang.name;
@@ -517,6 +566,7 @@
     select.addEventListener('change', async e => {
       state.language = e.target.value;
       lib.setLanguage(state.language);
+      window.LwmSiteNav?.syncLanguageStorage?.(state.language);
       setDocumentDirection(state.language);
       try {
         await lib.loadLanguage(state.language);
@@ -529,7 +579,7 @@
     await refreshLanguageUi();
   }
 
-  document.getElementById('open-core-prayer').addEventListener('click', openCorePrayer);
+  document.getElementById('open-core-prayer')?.addEventListener('click', openCorePrayer);
 
   function topicPrincipalityIds(topic) {
     if (topic?.principalityIds?.length) return topic.principalityIds;
@@ -1839,7 +1889,14 @@
   }
 
   function showEmptyDetail() {
-    document.getElementById('detail-empty').classList.remove('hidden');
+    const empty = document.getElementById('detail-empty');
+    if (empty && !empty.dataset.ready) {
+      empty.innerHTML =
+        '<p class="detail-empty-title">Select a Principality</p>' +
+        '<p>Click a tile on the map to read character, themes, connections, and prayer topics.</p>';
+      empty.dataset.ready = '1';
+    }
+    empty?.classList.remove('hidden');
     document.getElementById('detail-content').classList.add('hidden');
     document.getElementById('detail-prayer-section').classList.add('hidden');
     document.getElementById('detail-discuss-invite')?.classList.add('hidden');
@@ -2247,11 +2304,55 @@
     applyViewModeChoice(e.detail?.value);
   });
 
+  function ensureMapSitePage() {
+    if (window.LwmSitePages?.current?.() !== 'map') {
+      window.LwmSitePages?.apply?.('map');
+    }
+  }
+
+  function syncMapViewUrl(value) {
+    if (!window.history?.replaceState) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set('site', 'map');
+    const view = String(value || '');
+    if (['camp', 'globe', 'constellation', 'explore'].includes(view)) {
+      url.searchParams.set('view', view);
+    } else {
+      url.searchParams.delete('view');
+    }
+    window.history.replaceState({}, '', url);
+  }
+
+  function refreshCampView() {
+    if (!isCampView()) return;
+    setViewSurface();
+    requestAnimationFrame(() => {
+      const camp = window.DiscipleshipCamp;
+      if (camp?.pack) camp.render?.();
+      else camp?.show?.();
+    });
+  }
+
+  window.addEventListener('lwm:site-page-map', () => {
+    requestAnimationFrame(() => refreshCampView());
+  });
+
+  window.addEventListener('lwm:site-page-leave-map', () => {
+    if (!isCampView()) return;
+    state.viewMode = 'constellation';
+    const modeSel = document.getElementById('view-mode');
+    if (modeSel) modeSel.value = 'constellation';
+    window.ViewNav?.syncLabel?.();
+    setViewSurface();
+  });
+
   function applyViewModeChoice(value) {
     if (value == null || applyViewModeChoice._busy) return;
     applyViewModeChoice._busy = true;
     try {
     if (value === 'camp') {
+      ensureMapSitePage();
+      syncMapViewUrl('camp');
       window.AskOverlay?.close?.();
       state.viewMode = 'camp';
       state.selectedId = null;
@@ -2261,21 +2362,12 @@
       applyGlobeLayout();
       showEmptyDetail();
       setViewSurface();
-      return;
-    }
-    if (value === 'experimental') {
-      window.location.href = 'experimental.html';
-      return;
-    }
-    if (value === 'why-bloodline') {
-      const modeSel = document.getElementById('view-mode');
-      if (modeSel) modeSel.value = state.viewMode || 'constellation';
-      closeParchmentIfOpen();
-      document.getElementById('study-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.ViewNav?.syncLabel?.();
+      refreshCampView();
       return;
     }
     if (value === 'compare') {
+      ensureMapSitePage();
+      syncMapViewUrl('');
       window.AskOverlay?.close?.();
       goToCompare();
       const modeSel = document.getElementById('view-mode');
@@ -2283,6 +2375,8 @@
       window.ViewNav?.syncLabel?.();
       return;
     }
+    ensureMapSitePage();
+    syncMapViewUrl(value);
     state.viewMode = value;
     state.selectedId = null;
     state.globeTransportPrincipalityId = null;
@@ -2309,6 +2403,8 @@
   document.getElementById('reset-view').addEventListener('click', () => {
     const mode = document.getElementById('view-mode')?.value;
     if (isCampView() || mode === 'camp' || document.documentElement.classList.contains('camp-isolated')) {
+      ensureMapSitePage();
+      syncMapViewUrl('camp');
       state.viewMode = 'camp';
       if (document.getElementById('view-mode')) {
         document.getElementById('view-mode').value = 'camp';

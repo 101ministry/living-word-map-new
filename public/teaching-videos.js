@@ -350,7 +350,8 @@
   }
 
   jumpBtn?.addEventListener('click', () => {
-    document.querySelector('.workspace')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.LwmSitePages?.apply?.('map');
+    document.getElementById('map')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   renderPicker();

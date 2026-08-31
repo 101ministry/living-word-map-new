@@ -98,9 +98,24 @@ export default {
       return handleDownloadsAudio(request, env);
     }
 
+    const landingRedirect = maybeRepentanceProjectLanding(url);
+    if (landingRedirect) return landingRedirect;
+
     return env.ASSETS.fetch(request);
   },
 };
+
+/** Root `/` opens Repentance Project; map and other sections use index.html?site=… */
+function maybeRepentanceProjectLanding(url) {
+  const path = url.pathname;
+  if (path !== '/' && path !== '') return null;
+  if (url.searchParams.has('site') || url.searchParams.has('view') || url.searchParams.has('topic')) {
+    return null;
+  }
+  const target = new URL('/repentance-project.html', url.origin);
+  url.searchParams.forEach((value, key) => target.searchParams.set(key, value));
+  return Response.redirect(target.toString(), 302);
+}
 
 async function handleDownloadsAudio(request, env) {
   if (request.method !== 'GET' && request.method !== 'HEAD') {

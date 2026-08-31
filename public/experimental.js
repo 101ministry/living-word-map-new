@@ -48,6 +48,24 @@
   const CAL_CONSECUTIVE_NOS = 4;
   const LANG_ALIASES = { sp: 'es' };
   const TOPIC_COUNT = DATA1.topicCount || 666;
+  const HUB_PAGE = document.body.classList.contains('site-repentance-hub');
+  const hubSection = document.getElementById('repentance-hub-section');
+  const siteShell = document.getElementById('app');
+
+  function syncHubVisibility(mode) {
+    if (!HUB_PAGE) return;
+    const inBuilder = mode === 'app';
+    if (hubSection) hubSection.hidden = inBuilder;
+    if (siteShell) siteShell.hidden = inBuilder;
+    document.body.classList.toggle('repentance-in-builder', inBuilder);
+  }
+
+  function exitToHub() {
+    els.app.hidden = true;
+    els.gate.hidden = true;
+    syncHubVisibility('hub');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   const els = {
     gate: document.getElementById('exp-gate'),
@@ -1262,11 +1280,13 @@
           : 'To open this case on another device';
     }
     syncRequiredFields();
+    syncHubVisibility('gate');
   }
 
   function showApp() {
     els.gate.hidden = true;
     els.app.hidden = false;
+    syncHubVisibility('app');
   }
 
   async function enterApp() {
@@ -1517,7 +1537,7 @@
       setPeopleMode(on);
     });
   }
-  els.editProfile.addEventListener('click', () => showGate(true));
+  els.editProfile?.addEventListener('click', () => showGate(true));
   if (els.nextTopic) {
     els.nextTopic.addEventListener('click', () => {
       requestTopicChange(state.currentTopic + 1);
@@ -1531,6 +1551,16 @@
     if (document.visibilityState === 'visible') handleCalReturn();
   });
   window.addEventListener('focus', () => handleCalReturn());
+
+  if (HUB_PAGE) {
+    document.querySelectorAll('[data-exp-hub-back]').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        if (els.app && !els.app.hidden) exitToHub();
+        else window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  }
 
   (async () => {
     try {

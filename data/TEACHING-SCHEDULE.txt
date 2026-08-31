@@ -83,12 +83,17 @@
 #  35 | presentation | trading-floor-transactions (end) | TOPICS-666-PRESENTATION DAY 35
 #  36 | presentation | gluttony                         | TOPICS-666-PRESENTATION DAY 36
 #  37 | presentation | self-righteousness (start)       | TOPICS-666-PRESENTATION DAY 37
+#  38 | presentation | self-righteousness (end)         | TOPICS-666-PRESENTATION DAY 38
+#  39 | presentation | sexual-perversion                | TOPICS-666-PRESENTATION DAY 39
+#  40 | presentation | sexual-perversion + rebellion    | TOPICS-666-PRESENTATION DAY 40
+#  41 | presentation | rebellion + destructive-attitudes | TOPICS-666-PRESENTATION DAY 41
+#  42 | presentation | destructive-attitudes            | TOPICS-666-PRESENTATION DAY 42
 
 # --- NEXT EXPECTED (update after each new batch of links) ---
-nextDay=38
+nextDay=43
 nextMode=presentation
-nextPrincipalityId=self-righteousness
-nextTitleSuffix=Self-Righteousness
+nextPrincipalityId=destructive-attitudes
+nextTitleSuffix=Destructive Attitudes
 
 # After divination, continue chart order with full-principality days unless split is indicated
 # in a new presentation file section.

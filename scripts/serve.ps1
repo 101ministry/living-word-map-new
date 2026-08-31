@@ -34,7 +34,7 @@ catch {
 
 Write-Host 'Living Word Map'
 Write-Host "Serving: $root"
-Write-Host "Open:    http://localhost:$Port/index.html"
+Write-Host "Open:    http://localhost:$Port/repentance-project.html"
 Write-Host 'Press Ctrl+C to stop.'
 Write-Host ''
 
@@ -756,7 +756,7 @@ try {
         try {
             if (Handle-Api $context) { continue }
             $path = [System.Uri]::UnescapeDataString($context.Request.Url.AbsolutePath.TrimStart('/'))
-            if ([string]::IsNullOrWhiteSpace($path)) { $path = 'index.html' }
+            if ([string]::IsNullOrWhiteSpace($path)) { $path = 'repentance-project.html' }
             $path = $path -replace '/', [System.IO.Path]::DirectorySeparatorChar
             $fullPath = [System.IO.Path]::GetFullPath((Join-Path $root $path))
 

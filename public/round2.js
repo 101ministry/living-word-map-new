@@ -119,6 +119,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       localStorage.setItem(LANG_STORAGE_KEY, state.language);
+      localStorage.setItem('lwm-language', state.language);
     } catch { /* ignore */ }
   }
 

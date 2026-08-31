@@ -76,7 +76,7 @@ Some build inputs (Obsidian lore, transcripts) may still live outside this repo 
 https://map.repentance101.com/api/cal-booking
 ```
 
-Ping test should return **200** once the Worker is deployed. Real bookings email **repentance101ministry.admin@gmail.com** when `RESEND_API_KEY` is set.
+Ping test should return **200** once the Worker is deployed. Cal.com sends booking alerts to **repentance101ministry.admin@gmail.com** (configure in Cal.com). Optional Worker copy via Resend when `RESEND_API_KEY` is set.
 
 ### One-time Cloudflare setup
 
@@ -90,7 +90,7 @@ Ping test should return **200** once the Worker is deployed. Real bookings email
 npm install
 npx wrangler login
 npx wrangler secret put RESEND_API_KEY    # from resend.com — enables booking emails
-npx wrangler secret put CAL_WEBHOOK_SECRET  # optional — same string as Cal.com webhook Secret
+npx wrangler secret put CAL_WEBHOOK_SECRET  # new Cal.com webhook Secret (after you create the webhook)
 ```
 
 4. Verify domain in [Resend](https://resend.com) for `notifications@repentance101.com` (or change `RESEND_FROM` in `wrangler.toml`).

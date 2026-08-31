@@ -249,6 +249,19 @@
     return x === y || x.includes(y) || y.includes(x);
   }
 
+  function clipPrayerAtPrincipality(text) {
+    const raw = String(text || '');
+    const re = /\bPrincipality of [A-Za-z][A-Za-z0-9\s'&()/,.-]{0,100}/i;
+    const m = raw.match(re);
+    if (!m || m.index == null) return { short: raw, rest: '' };
+    let end = m.index + m[0].length;
+    if (raw[end] === '.') end += 1;
+    const short = raw.slice(0, end).trimEnd();
+    const rest = raw.slice(end).replace(/^\s+/, '');
+    if (!rest) return { short: raw, rest: '' };
+    return { short, rest };
+  }
+
   function padTrueFruits(truth) {
     const unique = [];
     for (const t of truth || []) {
@@ -298,6 +311,8 @@
     size: 40,
     sessions: {},
     prayerPreview: null,
+    inspectQuietUntil: 0,
+    prayerCommitAt: 0,
     roomLog: [],
     loyalty: 0,
     splits: 0,
@@ -395,10 +410,11 @@
       this.turn = 0;
       this.cases = [];
       this.caseSeq = 0;
-      this.selectedName = this.classroom[0]?.displayName || null;
+      this.selectedName = null;
       this.roundNames = this.classroom.slice(0, FOCUS_MAX).map((s) => s.displayName);
       this.focusNames = this.roundNames.slice();
       this.render();
+      this.scrollToNames();
     },
 
     studentByName(name) {
@@ -561,6 +577,52 @@
           .join('');
     },
 
+    parkClipboard() {
+      const board = document.getElementById('camp-clipboard');
+      const slot = document.getElementById('camp-clip-slot');
+      const view = document.getElementById('camp-view');
+      if (!board || !view) return;
+      if (this.prayerPreview && slot) {
+        slot.appendChild(board);
+        view.classList.add('is-reading-prayer');
+      } else {
+        view.appendChild(board);
+        view.classList.remove('is-reading-prayer');
+      }
+    },
+
+    scrollCamp(targetId, duration) {
+      const el = document.getElementById(targetId);
+      const root = document.getElementById('camp-view');
+      if (!el || !root) return;
+      if (this._scrollAnim) cancelAnimationFrame(this._scrollAnim);
+      const start = root.scrollTop;
+      const extra = el.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - 8;
+      const end = Math.max(0, extra);
+      const ms = duration == null ? 900 : duration;
+      const t0 = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - t0) / ms);
+        const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        root.scrollTop = start + (end - start) * ease;
+        if (t < 1) this._scrollAnim = requestAnimationFrame(tick);
+        else this._scrollAnim = 0;
+      };
+      this._scrollAnim = requestAnimationFrame(tick);
+    },
+
+    scrollToNames() {
+      this.scrollCamp('camp-seats');
+    },
+
+    scrollToScenario() {
+      this.scrollCamp('camp-inspect');
+    },
+
+    quietInspect(ms) {
+      this.inspectQuietUntil = Date.now() + ms;
+    },
+
     toggleFocus(name) {
       if (!this.inRound(name)) return;
       const i = this.focusNames.indexOf(name);
@@ -683,10 +745,6 @@
         student.humilitySubmissionHardness = clamp(student.humilitySubmissionHardness + 1);
       }
       this.roomLog.unshift(`${student.displayName} sat back down. The three names that waited came with them.`);
-      const curStudent = this.studentByName(this.selectedName);
-      if (!current || (curStudent && current.assigned.length >= this.prayersNeeded(curStudent, current))) {
-        this.selectedName = student.displayName;
-      }
     },
 
     advanceReturns() {
@@ -716,26 +774,20 @@
 
     selectNextInLine(exceptName) {
       this.ensureLine();
-      const open = (n) => {
-        if (!n || n === exceptName || !this.inRound(n)) return null;
+      this.selectedName = null;
+      const stillOpen = this.roundNames.some((n) => {
+        if (!n || n === exceptName || !this.inRound(n)) return false;
         const s = this.studentByName(n);
-        if (!s || s.status !== 'present') return null;
-        if (this.session(n).assigned.length >= this.prayersNeeded(s, this.session(n))) return null;
-        return n;
-      };
-      for (const n of this.roundNames) {
-        const hit = open(n);
-        if (hit) {
-          this.selectedName = hit;
-          return;
-        }
+        if (!s || s.status !== 'present') return false;
+        return this.session(n).assigned.length < this.prayersNeeded(s, this.session(n));
+      });
+      if (!stillOpen) {
+        this.roomLog.unshift(`This round is ${FOCUS_MAX}. Wait for someone in the line to come back.`);
       }
-      this.roomLog.unshift(`This round is ${FOCUS_MAX}. Wait for someone in the line to come back.`);
     },
 
     async openPrayerForReading(student, topic) {
       if (!topic?.number) return;
-      if (!this.inRound(student.displayName)) return;
       const sess = this.session(student.displayName);
       if (!this.readyForPrayers(sess, student)) return;
       if (sess.assigned.some((a) => a.number === topic.number)) return;
@@ -747,13 +799,21 @@
         text: 'Loading the prayer…',
         hit: isTrueFruit(student, topic.name),
         ready: false,
+        expanded: false,
       };
+      this.quietInspect(850);
+      this.prayerCommitAt = Date.now() + 900;
       this.render();
       const preview = await this.showPrayer(topic.number, topic.name, this.prayerPreview.hit);
       if (!this.prayerPreview || this.prayerPreview.number !== topic.number) return;
       this.prayerPreview.text = preview.text;
       this.prayerPreview.ready = true;
+      this.quietInspect(850);
+      this.prayerCommitAt = Date.now() + 900;
       this.render();
+      window.setTimeout(() => {
+        if (this.prayerPreview?.ready) this.render();
+      }, 920);
       requestAnimationFrame(() => {
         document.querySelector('.camp-prayer-read')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
@@ -763,6 +823,7 @@
       const p = this.prayerPreview;
       const student = this.studentByName(p?.studentName);
       if (!p?.ready || !student) return;
+      if (Date.now() < this.prayerCommitAt) return;
       this.prayerPreview = null;
       this.commitAssign(student, { number: p.number, name: p.name }, p);
     },
@@ -790,7 +851,10 @@
         window.setTimeout(() => {
           this.selectNextInLine(student.displayName);
           this.render();
+          this.scrollToNames();
         }, 450);
+      } else {
+        this.scrollCamp('camp-pray-topics');
       }
     },
 
@@ -847,9 +911,16 @@
         .join('');
       const s = this.studentByName(this.selectedName);
       if (!s) {
-        inspect.innerHTML = '<p class="camp-muted">Draw a classroom to begin.</p>';
+        inspect.innerHTML = '';
+        inspect.hidden = true;
+        inspect.setAttribute('aria-hidden', 'true');
+        document.querySelector('.camp-stage')?.classList.add('is-idle');
+        this.parkClipboard();
         return;
       }
+      inspect.hidden = false;
+      inspect.removeAttribute('aria-hidden');
+      document.querySelector('.camp-stage')?.classList.remove('is-idle');
       const working = this.focusNames.includes(s.displayName);
       const sess = this.session(s.displayName);
       const derivedGen = rootsFromTitles(sess.picks);
@@ -868,14 +939,21 @@
           return `<button type="button" class="camp-fruit-btn${on ? ' is-picked' : ''}${gold ? ' is-gold-hit' : ''}" data-pick="${escapeHtml(title)}">${escapeHtml(title)}</button>`;
         })
         .join('');
-      const assignSource = pickSet.length ? pickSet : [];
-      const assignBtns = assignSource
+      const assignBtns = pickSet
         .map((title) => {
           const t = matchTopic(title);
           if (!t) return '';
           const on = sess.assigned.some((a) => a.number === t.number);
-          return `<div role="button" tabindex="0" class="camp-assign-btn${on ? ' is-assigned' : ''}" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</div>`;
+          const open = !on && this.prayerPreview && Number(this.prayerPreview.number) === Number(t.number);
+          return `<button type="button" class="camp-assign-btn${on ? ' is-assigned' : ''}${open ? ' is-open' : ''}" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</button>`;
         })
+        .join('');
+      const extraAssigned = sess.assigned
+        .filter((a) => !pickSet.some((title) => titlesMatch(title, a.name)))
+        .map(
+          (a) =>
+            `<span class="camp-assign-btn is-assigned">#${String(a.number).padStart(3, '0')} ${escapeHtml(a.name)}</span>`
+        )
         .join('');
       const pickedIds = new Set((sess.answers || []).map((a) => a.id));
       const answerBtns = this.deckFor(s)
@@ -895,6 +973,16 @@
       } else if (sess.seenReturn && sess.returnKind === 'worse') {
         report = `<div class="camp-report is-worse"><p class="camp-label">They came back with more</p><p>That didn’t work. ${escapeHtml(s.extraProblems.join(' ') || 'The fruit spread. Others in the room took their side.')}</p></div>`;
       }
+
+      const prayerClip = this.prayerPreview ? clipPrayerAtPrincipality(this.prayerPreview.text) : { short: '', rest: '' };
+      const prayerShown =
+        this.prayerPreview && (this.prayerPreview.expanded || !prayerClip.rest)
+          ? this.prayerPreview.text
+          : prayerClip.short;
+      const prayerMore =
+        this.prayerPreview && prayerClip.rest && !this.prayerPreview.expanded
+          ? '<button type="button" class="camp-prayer-more" id="camp-prayer-expand">Show all</button>'
+          : '';
 
       inspect.innerHTML = `
         ${report}
@@ -923,9 +1011,9 @@
         <div class="camp-answer-row">${answerBtns}</div>
         ${
           prayersOpen
-            ? `<p class="camp-label">Pray the topics</p>
-        <p class="camp-muted">Open each named fruit. Read the prayer. Then assign it. The number alone does not count — praying it with them does. Search if you named something else.</p>
-        <div class="camp-assign-row">${assignBtns || '<span class="camp-muted">Name a fruit first.</span>'}</div>
+            ? `<p class="camp-label" id="camp-pray-topics">Pray the topics</p>
+        <p class="camp-muted">Open each named fruit. Read the prayer. Then assign it. The number alone does not count — praying it with them does.</p>
+        <div class="camp-assign-row">${assignBtns || extraAssigned || '<span class="camp-muted">Name a fruit first.</span>'}${extraAssigned}</div>
         <div class="camp-search-row">
           <input id="camp-topic-search" type="search" maxlength="80" placeholder="Search unique topic title…" autocomplete="off" />
           <div id="camp-topic-hits" class="camp-assign-row"></div>
@@ -935,8 +1023,10 @@
             ? `<div class="camp-prayer-read">
           <p class="camp-label">Pray this with them</p>
           <p class="camp-prayer-read-title">#${String(this.prayerPreview.number).padStart(3, '0')} ${escapeHtml(this.prayerPreview.name)}</p>
-          <div class="camp-prayer-read-body">${escapeHtml(this.prayerPreview.text)}</div>
-          <button type="button" class="btn-accent" id="camp-prayer-commit"${this.prayerPreview.ready ? '' : ' disabled'}>Assign this prayer</button>
+          <div class="camp-prayer-read-body">${escapeHtml(prayerShown)}</div>
+          ${prayerMore}
+          <div id="camp-clip-slot"></div>
+          <button type="button" class="btn-accent" id="camp-prayer-commit"${this.prayerPreview.ready && Date.now() >= this.prayerCommitAt ? '' : ' disabled'}>Assign this prayer</button>
           <button type="button" class="camp-prayer-cancel" id="camp-prayer-cancel">Choose another topic</button>
         </div>`
             : '<p class="camp-muted">Pick a topic above. The prayer opens here so you can pray it before it goes on the clipboard.</p>'
@@ -945,6 +1035,7 @@
         <p class="camp-muted">Name three fruits and three answers first. Then the prayer topics open.</p>`
         }
       `;
+      this.parkClipboard();
     },
 
     async draw() {
@@ -978,6 +1069,7 @@
         this.selectedName = btn.getAttribute('data-clip-name');
         this.prayerPreview = null;
         this.render();
+        this.scrollToScenario();
       });
       document.getElementById('camp-seats')?.addEventListener('click', (e) => {
         const btn = e.target.closest('.camp-seat');
@@ -986,6 +1078,7 @@
         this.selectedName = name;
         this.prayerPreview = null;
         this.render();
+        this.scrollToScenario();
       });
       document.getElementById('camp-seats')?.addEventListener('keydown', (e) => {
         if (e.key !== 'Enter' && e.key !== ' ') return;
@@ -995,8 +1088,18 @@
         this.selectedName = btn.getAttribute('data-name');
         this.prayerPreview = null;
         this.render();
+        this.scrollToScenario();
       });
       document.getElementById('camp-inspect')?.addEventListener('click', (e) => {
+        if (e.target.closest('#camp-prayer-expand')) {
+          if (this.prayerPreview) this.prayerPreview.expanded = true;
+          this.render();
+          return;
+        }
+        if (Date.now() < this.inspectQuietUntil && e.target.closest('#camp-prayer-commit')) {
+          e.preventDefault();
+          return;
+        }
         const student = this.studentByName(this.selectedName);
         if (!student) return;
         if (e.target.closest('#camp-work-btn')) {
@@ -1039,7 +1142,7 @@
         hits.innerHTML = found
           .map(
             (t) =>
-              `<div role="button" tabindex="0" class="camp-assign-btn" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</div>`
+              `<button type="button" class="camp-assign-btn" data-assign="${t.number}" data-name="${escapeHtml(t.name)}">#${String(t.number).padStart(3, '0')} ${escapeHtml(t.name)}</button>`
           )
           .join('');
       });

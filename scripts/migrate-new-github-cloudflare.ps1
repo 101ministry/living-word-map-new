@@ -35,7 +35,7 @@ if (-not $DeployOnly) {
   [ ] GitHub: empty repo '$RepoName' created (no README/license — or we force-push)
   [ ] Cloudflare: account created at https://dash.cloudflare.com/sign-up
   [ ] Resend: API key ready (https://resend.com) — notifications@repentance101.com domain still verified OR update RESEND_FROM in wrangler.toml
-  [ ] Cal.com: note to update webhook after deploy
+  [ ] Cal.com: new account — create a fresh webhook after deploy (new Secret, not copied from old)
   [ ] Optional: old Cloudflare login if copying R2 audio from old bucket
 "@
 
@@ -77,7 +77,7 @@ Write-Host @"
 Set secrets when prompted (paste values; input is hidden for API keys):
 
   RESEND_API_KEY     — from Resend dashboard
-  CAL_WEBHOOK_SECRET — optional; same string as Cal.com webhook Secret
+  CAL_WEBHOOK_SECRET — new secret from Cal.com webhook (create after deploy; paste same value here)
 "@
 Pause-Continue 'Run wrangler secret put for each secret now? (Enter to continue)'
 npx wrangler secret put RESEND_API_KEY
@@ -123,8 +123,28 @@ After DNS propagates, test:
   https://map.repentance101.com/api/cal-booking  (GET should return JSON ok)
 "@
 
-Write-Step '8' 'Cal.com webhook'
-Write-Host 'Update Cal.com webhook URL to: https://map.repentance101.com/api/cal-booking'
+Write-Step '8' 'Cal.com — new account, new webhook'
+Write-Host @"
+Brand-new Cal.com account = create a new webhook (do not reuse the old one).
+
+After map.repentance101.com is live:
+
+  1. Cal.com -> Settings -> Developer -> Webhooks -> New webhook
+  2. Subscriber URL:
+       https://map.repentance101.com/api/cal-booking
+  3. Events: at minimum BOOKING_CREATED (add others if you want Resend copies for them)
+  4. Copy the webhook **Secret** Cal.com shows once
+  5. On this machine:
+       npx wrangler secret put CAL_WEBHOOK_SECRET
+     Paste that Secret when prompted (must match Cal.com exactly)
+
+  6. Test: Cal.com webhook test/ping, or GET in browser:
+       https://map.repentance101.com/api/cal-booking
+     Should return JSON with ok: true
+
+Booking notifications to repentance101ministry.admin@gmail.com are configured in Cal.com itself.
+Worker + RESEND_API_KEY is an optional extra email copy via Resend — not required if Cal.com already notifies you.
+"@
 
 Write-Step '9' 'R2 audio migration (optional)'
 Write-Host @"

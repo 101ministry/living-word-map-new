@@ -22,6 +22,7 @@ Local dev: `open.bat` → http://localhost:8765/index.html
 |------|---------|
 | **Living Word Map queries** | App, globe, deploy, topics 666, roots/fruits, prayers, teaching videos |
 | **R&R Thumbnail Images** | Day-series poster/thumbnail image generation only |
+| **Repentance 2026 Project Thumbnails** | Lowest priority in the whole repo. Minimal day thumbnails (20 topics, R&R banner, Eph 5:11, Experimental set art). Never preempt other work. |
 
 Archive of past LWM questions: `data/LIVING-WORD-MAP-QUERIES.md`
 

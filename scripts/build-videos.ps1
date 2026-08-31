@@ -167,7 +167,13 @@ function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbe
         elseif ($day -ge 32 -and $day -le 33) { $preferredMin = 279; $preferredMax = 302 }
         elseif ($day -ge 34 -and $day -le 35) { $preferredMin = 303; $preferredMax = 325 }
         elseif ($day -eq 36) { $preferredMin = 326; $preferredMax = 334 }
-        elseif ($day -ge 37) { $preferredMin = 335; $preferredMax = 354 }
+        elseif ($day -eq 37) { $preferredMin = 335; $preferredMax = 346 }
+        elseif ($day -eq 38) { $preferredMin = 347; $preferredMax = 360 }
+        elseif ($day -eq 39) { $preferredMin = 361; $preferredMax = 373 }
+        elseif ($day -eq 40) { $preferredMin = 374; $preferredMax = 384 }
+        elseif ($day -eq 41) { $preferredMin = 385; $preferredMax = 396 }
+        elseif ($day -eq 42) { $preferredMin = 397; $preferredMax = 408 }
+        elseif ($day -ge 43) { $preferredMin = 409; $preferredMax = 442 }
 
         $ordered = @($candidates | Sort-Object number)
         if ($null -ne $preferredMin) {

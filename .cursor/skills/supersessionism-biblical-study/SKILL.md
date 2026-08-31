@@ -1,12 +1,12 @@
 ---
 name: supersessionism-biblical-study
-description: Part 2 biblical study — supersessionism / replacement theology vs scriptures showing Gentiles grafted into Israel (Romans 11, covenant passages). Use for SUPERSESSIONISM-* files, replacement vs grafting passage lists, or landscape study PDFs — not for deportation Part 1 or word-map UI.
+description: Part 4 biblical study — supersessionism / replacement theology vs scriptures showing Gentiles grafted into Israel (Romans 11, covenant passages). Use for SUPERSESSIONISM-* files, replacement vs grafting passage lists, or landscape study PDFs — not for deportation Parts 1–3 or word-map UI.
 disable-model-invocation: true
 ---
 
-# Supersessionism Biblical Study (Part 2)
+# Supersessionism Biblical Study (Part 4)
 
-Separate from deportation Part 1 and from Living Word Map graph/prayers.
+Separate from deportation Parts 1–3 (`DEPORTATION-BIBLICAL-STUDY.pdf`) and from Living Word Map graph/prayers.
 
 ## Artifacts
 

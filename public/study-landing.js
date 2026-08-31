@@ -65,6 +65,7 @@
   function goToFullStudy(event) {
     event.preventDefault();
     closeParchment({ showAsk: false });
+    window.LwmSitePages?.apply?.('downloads');
     requestAnimationFrame(() => {
       document.getElementById('study-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });

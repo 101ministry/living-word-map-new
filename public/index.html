@@ -11,9 +11,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=88" />
+  <link rel="stylesheet" href="styles.css?v=96" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      if (q.has('site') || q.has('view') || q.has('topic')) return;
+      var h = (location.hash || '').slice(1);
+      if (h === 'study-full' || h === 'camp') return;
+      location.replace('repentance-project.html');
+    })();
+  </script>
 </head>
-<body>
+<body data-site-page="map">
   <div id="app">
     <header class="header">
       <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">☰</button>
@@ -21,7 +30,6 @@
         <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
         <h1>Living Word Map</h1>
         <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
-        <a class="header-study-link" href="#study-full">Why is Bloodline Repentance important?</a>
       </div>
       <div class="header-controls">
         <div class="language-control">
@@ -29,43 +37,29 @@
           <select id="language-select" aria-describedby="language-status"></select>
           <p id="language-status" class="language-status" aria-live="polite"></p>
         </div>
-        <button type="button" id="open-core-prayer" class="btn-accent">Core Prayer</button>
-        <a href="round1.html?from=map" id="round1-entry-link" class="btn-accent round2-nav-link">Round 1 Prayers</a>
-        <a href="round2.html?from=map" class="btn-accent round2-nav-link">Round 2 Prayers</a>
-        <a href="round3.html" class="btn-accent round2-nav-link">Round 3 Prayers</a>
-        <a href="experimental.html" class="btn-accent round2-nav-link header-experimental-link">Repentance Project 2026</a>
-        <div class="view-nav" id="view-nav">
-          <select id="view-mode" class="view-nav-select" aria-label="View mode">
-            <option value="experimental">Repentance Project 2026</option>
-            <option value="camp">Discipleship Training Camp minigame</option>
-            <option value="why-bloodline">Why is Bloodline Repentance important?</option>
-            <option value="globe">Globe</option>
-            <option value="constellation" selected>Constellation</option>
-            <option value="explore">Explore All</option>
-            <option value="compare">Compare Principalities</option>
-          </select>
-          <button type="button" id="view-nav-toggle" class="view-nav-toggle" aria-expanded="false" aria-haspopup="true">Globe Word Map</button>
-          <ul id="view-nav-menu" class="view-nav-menu" hidden>
-            <li><button type="button" class="view-nav-item" data-view="experimental">Repentance Project 2026</button></li>
-            <li id="view-nav-camp-slot"><button type="button" class="view-nav-item" data-view="camp">Discipleship Training Camp minigame</button></li>
-            <li><button type="button" class="view-nav-item" data-view="why-bloodline">Why is Bloodline Repentance important?</button></li>
-            <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="globe">Globe</button></li>
-            <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="constellation">Constellation</button></li>
-            <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="explore">Explore All</button></li>
-            <li class="view-nav-fly">
-              <button type="button" class="view-nav-item view-nav-fly-toggle" aria-expanded="false">Globe Word Map <span class="view-nav-rail" aria-hidden="true"></span></button>
-              <ul class="view-nav-submenu" hidden>
-                <li><button type="button" class="view-nav-item" data-view="globe">Globe</button></li>
-                <li><button type="button" class="view-nav-item" data-view="constellation">Constellation</button></li>
-                <li><button type="button" class="view-nav-item" data-view="explore">Explore All</button></li>
-              </ul>
-            </li>
-            <li><button type="button" class="view-nav-item" data-view="compare">Compare Principalities</button></li>
-          </ul>
-        </div>
-        <button id="reset-view" type="button">Reset</button>
-        <button id="scroll-to-videos" type="button" class="header-videos-btn">Videos</button>
-        <button id="scroll-to-downloads" type="button" class="header-videos-btn">Downloads</button>
+        <nav class="site-nav" id="site-nav" aria-label="Site sections">
+          <a href="repentance-project.html" class="site-nav-btn" data-site-href="repentance-project.html">Repentance Project</a>
+          <button type="button" class="site-nav-btn" data-site-page="prayer-videos">Core Prayer &amp; Videos</button>
+          <div class="view-nav site-nav-map" id="view-nav">
+            <select id="view-mode" class="view-nav-select" aria-label="Map view mode">
+              <option value="globe">Globe</option>
+              <option value="constellation" selected>Constellation</option>
+              <option value="explore">Explore All</option>
+              <option value="compare">Compare Principalities</option>
+              <option value="camp">Minigame</option>
+            </select>
+            <button type="button" id="view-nav-toggle" class="view-nav-toggle site-nav-btn" data-site-page="map" aria-expanded="false" aria-haspopup="true">Globe Map &amp; Minigame</button>
+            <ul id="view-nav-menu" class="view-nav-menu" hidden>
+              <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="globe">Globe</button></li>
+              <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="constellation">Constellation</button></li>
+              <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="explore">Explore All</button></li>
+              <li id="view-nav-camp-slot"><button type="button" class="view-nav-item" data-view="camp">Discipleship Training Camp minigame</button></li>
+              <li><button type="button" class="view-nav-item" data-view="compare">Compare Principalities</button></li>
+            </ul>
+          </div>
+          <button type="button" class="site-nav-btn" data-site-page="downloads">Audio Downloads</button>
+        </nav>
+        <button id="reset-view" type="button" class="header-reset-btn">Reset</button>
       </div>
     </header>
 
@@ -102,11 +96,11 @@
         <nav class="mobile-nav" id="mobile-nav" aria-label="Quick navigation">
           <h2>Navigate</h2>
           <ul class="mobile-nav-list">
-            <li><a href="experimental.html" class="mobile-nav-link">Repentance Project 2026</a></li>
-            <li><a href="#study-full" class="mobile-nav-link">Why is Bloodline Repentance important?</a></li>
+            <li><a href="repentance-project.html" class="mobile-nav-link">Repentance Project</a></li>
+            <li><button type="button" id="nav-prayer-videos" class="mobile-nav-link">Core Prayer &amp; Videos</button></li>
+            <li><button type="button" id="nav-map" class="mobile-nav-link">Globe Map &amp; Minigame</button></li>
+            <li><button type="button" id="nav-downloads" class="mobile-nav-link">Audio Downloads</button></li>
             <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
-            <li><button type="button" id="nav-videos" class="mobile-nav-link">Teaching Videos</button></li>
-            <li><button type="button" id="nav-downloads" class="mobile-nav-link">Downloads Section</button></li>
           </ul>
         </nav>
         <h2>Layers</h2>
@@ -376,6 +370,25 @@
       </div>
     </section>
 
+    <section class="core-prayer-panel teaching-panel" id="core-prayer-panel" aria-label="Core Prayer">
+      <header class="teaching-header">
+        <div>
+          <h2 id="core-prayer-page-title">Core Prayer</h2>
+          <p id="core-prayer-page-instruction" class="teaching-subtitle">Replace [topic] with the specific prayer topic. Speak out loud.</p>
+        </div>
+      </header>
+      <p class="prayer-fallback hidden" id="core-prayer-page-fallback"></p>
+      <div class="audio-player" id="core-prayer-page-audio-player">
+        <audio id="core-prayer-page-audio" preload="none"></audio>
+        <button type="button" id="core-prayer-page-audio-btn" class="audio-btn" disabled>
+          <span class="audio-icon">▶</span>
+          <span id="core-prayer-page-audio-label">Listen</span>
+        </button>
+        <span class="audio-status" id="core-prayer-page-audio-status"></span>
+      </div>
+      <div class="prayer-text prayer-text-scroll" id="core-prayer-page-text"></div>
+    </section>
+
     <section class="teaching-panel" id="teaching-panel" aria-label="Teaching videos">
       <header class="teaching-header">
         <div>
@@ -399,8 +412,13 @@
     <section class="downloads-panel teaching-panel" id="downloads-panel" aria-label="Downloads section">
       <header class="teaching-header">
         <div>
-          <h2>Downloads Section</h2>
+          <h2>Audio Downloads</h2>
           <p class="teaching-subtitle">Choose a series. Each one opens on its own page.</p>
+          <p class="downloads-study-link-wrap">
+            <a class="header-study-link downloads-study-link" href="why-bloodline-repentance.pdf" download="Why is Bloodline Repentance blessed by God according to the Bible.pdf">Why is Bloodline Repentance important? (PDF)</a>
+            <span class="downloads-study-or"> · </span>
+            <a class="header-study-link downloads-study-link" href="#study-full">Read on this page ↓</a>
+          </p>
         </div>
         <button type="button" id="downloads-jump-map" class="text-btn">Back to map ↑</button>
       </header>
@@ -469,43 +487,6 @@
     </form>
   </dialog>
 
-  <dialog id="round1-entry-videos-dialog" class="survey-gate-dialog round1-video-gate-dialog">
-    <div class="survey-gate-dialog-inner">
-      <button type="button" id="round1-entry-videos-dismiss" class="dialog-close survey-gate-close" aria-label="Close">×</button>
-      <h2>Before you get started on Round 1, have you completed the following videos:</h2>
-      <ul class="round1-video-gate-list">
-        <li>
-          <span class="round1-video-gate-part">Part 1</span>
-          <a class="survey-gate-link" href="https://youtu.be/CJrJG9xymts" target="_blank" rel="noopener noreferrer">https://youtu.be/CJrJG9xymts</a>
-        </li>
-        <li>
-          <span class="round1-video-gate-part">Part 2</span>
-          <a class="survey-gate-link" href="https://youtu.be/ECXgUl4rNAQ" target="_blank" rel="noopener noreferrer">https://youtu.be/ECXgUl4rNAQ</a>
-        </li>
-        <li>
-          <span class="round1-video-gate-part">Part 3</span>
-          <a class="survey-gate-link" href="https://youtu.be/nKMRFfGoc1I" target="_blank" rel="noopener noreferrer">https://youtu.be/nKMRFfGoc1I</a>
-        </li>
-      </ul>
-      <div class="survey-gate-actions">
-        <button type="button" id="round1-entry-videos-yes" class="btn-accent">Yes</button>
-        <button type="button" id="round1-entry-videos-no" class="btn-ghost">No</button>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog id="round1-entry-warning-dialog" class="survey-gate-dialog round1-entry-warning-dialog">
-    <div class="survey-gate-dialog-inner">
-      <p class="round1-entry-warning-text">Be aware that not completing these videos may keep your heart partially blind.</p>
-      <p id="round1-entry-tough-questions" class="round1-entry-tough-questions hidden">
-        <a class="survey-gate-link" href="https://repentance101ministry.com/channels/tough-questions" target="_blank" rel="noopener noreferrer">Ask why these videos are required</a>
-      </p>
-      <p id="round1-entry-countdown" class="round1-entry-countdown" aria-live="polite">
-        Continuing in <span id="round1-entry-countdown-sec">28</span>s…
-      </p>
-    </div>
-  </dialog>
-
   <script src="vendor/d3.min.js"></script>
   <script src="vendor/force-graph.min.js"></script>
   <script src="color-scheme.js?v=3"></script>
@@ -518,12 +499,13 @@
   <script src="videos.js"></script>
   <script src="topic-icons.js?v=4"></script>
   <script src="globe-view.js?v=23"></script>
-  <script src="round1-entry-gate.js?v=4"></script>
-  <script src="discipleship-camp.js?v=27"></script>
-  <script src="view-nav.js?v=6"></script>
-  <script src="app.js?v=30"></script>
-  <script src="teaching-videos.js?v=4"></script>
+  <script src="discipleship-camp.js?v=37"></script>
+  <script src="view-nav.js?v=7"></script>
+  <script src="site-pages.js?v=7"></script>
+  <script src="site-nav.js?v=4"></script>
+  <script src="app.js?v=33"></script>
+  <script src="teaching-videos.js?v=5"></script>
   <script src="ask-overlay.js?v=14"></script>
-  <script src="study-landing.js?v=14"></script>
+  <script src="study-landing.js?v=15"></script>
 </body>
 </html>

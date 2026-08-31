@@ -1,13 +1,10 @@
 (() => {
   const LABELS = {
-    experimental: 'Repentance Project 2026',
-    camp: 'Discipleship Training Camp minigame',
-    'why-bloodline': 'Why is Bloodline Repentance important?',
+    camp: 'Minigame',
     globe: 'Globe',
     constellation: 'Constellation',
     explore: 'Explore All',
     compare: 'Compare Principalities',
-    '': 'Stay on Repentance Project 2026',
   };
 
   function sel() {
@@ -22,19 +19,11 @@
     return document.getElementById('view-nav-menu');
   }
 
-  function fly() {
-    return document.querySelector('.view-nav-fly');
-  }
-
-  function submenu() {
-    return document.querySelector('.view-nav-submenu');
-  }
-
   function closedLabel(value) {
-    if (value === 'globe' || value === 'constellation' || value === 'explore') {
-      return 'Globe Word Map';
+    if (value === 'globe' || value === 'constellation' || value === 'explore' || value === 'camp' || value === 'compare') {
+      return 'Globe Map & Minigame';
     }
-    return LABELS[value] || 'View';
+    return LABELS[value] || 'Globe Map & Minigame';
   }
 
   function syncLabel() {
@@ -70,23 +59,13 @@
 
   function closeAll() {
     const m = menu();
-    const sub = submenu();
     const t = toggle();
-    const f = fly()?.querySelector('.view-nav-fly-toggle');
     if (m) m.hidden = true;
-    if (sub) {
-      sub.hidden = true;
-      sub.style.position = '';
-      sub.style.top = '';
-      sub.style.left = '';
-      sub.style.right = '';
-    }
     t?.setAttribute('aria-expanded', 'false');
-    f?.setAttribute('aria-expanded', 'false');
-    fly()?.classList.remove('is-open');
   }
 
   function pick(value) {
+    window.LwmSitePages?.apply?.('map');
     const s = sel();
     if (s && [...s.options].some((o) => o.value === value)) {
       s.value = value;
@@ -112,6 +91,7 @@
 
     toggle()?.addEventListener('click', (e) => {
       e.stopPropagation();
+      window.LwmSitePages?.apply?.('map');
       const m = menu();
       if (!m) return;
       const open = m.hidden;
@@ -119,25 +99,6 @@
         m.hidden = false;
         toggle()?.setAttribute('aria-expanded', 'true');
       } else closeAll();
-    });
-
-    fly()?.querySelector('.view-nav-fly-toggle')?.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const sub = submenu();
-      const btn = e.currentTarget;
-      if (!sub) return;
-      const willOpen = sub.hidden;
-      sub.hidden = !willOpen;
-      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      fly()?.classList.toggle('is-open', willOpen);
-      if (willOpen) placeSubmenu(sub, btn);
-      else {
-        sub.style.position = '';
-        sub.style.top = '';
-        sub.style.left = '';
-        sub.style.right = '';
-      }
     });
 
     menu()?.addEventListener('click', (e) => {

@@ -46,7 +46,7 @@
     reportChoice(value);
     save(value);
     if (value === 'camp') {
-      location.href = 'index.html?view=camp';
+      location.href = 'index.html?site=map&view=camp';
       return;
     }
     if (value === 'slack') {
