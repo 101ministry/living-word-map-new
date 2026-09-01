@@ -149,11 +149,13 @@ foreach ($item in $items) {
   }
   Copy-Item -LiteralPath $srcPath -Destination $destPath -Force
   $href = if ($item.publicRoot) { $item.file } else { "downloads/$($item.file)" }
+  $made = (Get-Item -LiteralPath $srcPath).CreationTime.ToString('yyyy-MM-dd')
   $manifest.Add([ordered]@{
     title = $item.title
     summary = $item.summary
     href = $href
     download = $item.src
+    made = $made
   })
   Write-Host "Copied $($item.title)"
 }

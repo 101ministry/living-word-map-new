@@ -4294,7 +4294,151 @@ html.is-globe-view .header-menu-btn.btn-icon {
 }
 
 .downloads-pdf-hub {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.downloads-cal-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0 0 0.75rem;
+}
+
+.downloads-cal-title {
+  margin: 0;
+  min-width: 12rem;
+  text-align: center;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.downloads-cal-nav {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(201, 162, 39, 0.45);
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.downloads-cal-nav:hover:not(:disabled),
+.downloads-cal-nav:focus-visible:not(:disabled) {
+  border-color: rgba(201, 162, 39, 0.85);
+  background: rgba(201, 162, 39, 0.12);
+}
+
+.downloads-cal-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.downloads-cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.downloads-cal-weekdays span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.downloads-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.downloads-cal-day {
+  min-height: 5.5rem;
+  padding: 0.4rem 0.4rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(18, 20, 28, 0.55);
+}
+
+.downloads-cal-day.is-empty {
+  background: transparent;
+  border-color: transparent;
+}
+
+.downloads-cal-day.has-pdfs {
+  border-color: rgba(201, 162, 39, 0.45);
+  background: var(--bg-elevated);
+}
+
+.downloads-cal-num {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.downloads-cal-day.has-pdfs .downloads-cal-num {
+  color: var(--accent);
+}
+
+.downloads-cal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.downloads-cal-link {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  color: var(--quote);
+  text-decoration: none;
+}
+
+.downloads-cal-link:hover,
+.downloads-cal-link:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.downloads-cal-legend {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .downloads-cal-weekdays {
+    display: none;
+  }
+
+  .downloads-cal-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .downloads-cal-day:not(.has-pdfs) {
+    display: none;
+  }
+
+  .downloads-cal-day.has-pdfs {
+    min-height: 0;
+  }
+
+  .downloads-cal-num::after {
+    content: none;
+  }
 }
 
 .downloads-hub {
