@@ -13,22 +13,22 @@ binding = "ASSETS"
 # Experimental case login + shared People map presence
 [[kv_namespaces]]
 binding = "EXPERIMENTAL_KV"
-id = "bc57f2d4b1c94fa797989141b27156ae"
+id = "ca6f407e33594a8daf6844d654d9c026"
 
 [vars]
 NOTIFY_EMAIL = "repentance101ministry.admin@gmail.com"
 RESEND_FROM = "Living Word Map <notifications@repentance101.com>"
 
-# Monday 9:00 AM Eastern (13:00 UTC)
-[triggers]
-crons = ["0 13 * * 1"]
+# Monday 9:00 AM Eastern (13:00 UTC) — re-enable after workers.dev subdomain is active
+# [triggers]
+# crons = ["0 13 * * 1"]
 
-# Public URL (update DNS CNAME when Cloudflare shows the target after first deploy)
+# Public URL
 [[routes]]
 pattern = "map.repentance101.com"
 custom_domain = true
 
-# Large teaching audio lives in R2 (Workers static assets cap files at 25 MiB).
-[[r2_buckets]]
-binding = "DOWNLOADS"
-bucket_name = "living-word-map-downloads"
+# R2 — enable in Dashboard → R2 (accept terms), then uncomment:
+# [[r2_buckets]]
+# binding = "DOWNLOADS"
+# bucket_name = "living-word-map-downloads"
