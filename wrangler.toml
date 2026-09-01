@@ -28,7 +28,7 @@ RESEND_FROM = "Living Word Map <notifications@repentance101.com>"
 pattern = "map.repentance101.com"
 custom_domain = true
 
-# R2 — enable in Dashboard → R2 (accept terms), then uncomment:
-# [[r2_buckets]]
-# binding = "DOWNLOADS"
-# bucket_name = "living-word-map-downloads"
+# Large teaching audio lives in R2 (Workers static assets cap files at 25 MiB).
+[[r2_buckets]]
+binding = "DOWNLOADS"
+bucket_name = "living-word-map-downloads"
