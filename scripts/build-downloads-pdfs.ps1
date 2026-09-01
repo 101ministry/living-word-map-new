@@ -19,6 +19,12 @@ $items = @(
     summary = 'Religions, discipleship costs, and biblical response from CARM articles.'
   },
   @{
+    src = 'Christianity Without Christ.pdf'
+    file = 'christianity-without-christ.pdf'
+    title = 'Christianity Without Christ'
+    summary = 'Faith without accountability, community, or Jesus at the forefront: OT lined up with NT.'
+  },
+  @{
     src = 'DEPORTATION-BIBLICAL-STUDY.pdf'
     file = 'deportation-biblical-study.pdf'
     title = 'Is Deportation Biblical?'

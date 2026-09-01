@@ -212,10 +212,10 @@
   }
 
   function applyMobileLegendAccess() {
-    const disabled = isGlobeView() && isMobileLayout();
-    document.getElementById('app')?.classList.toggle('is-globe-legend-disabled', disabled);
+    const globe = isGlobeView();
+    document.getElementById('app')?.classList.toggle('is-globe-legend-disabled', !globe);
     const btn = document.getElementById('open-controls');
-    if (disabled) {
+    if (!globe) {
       setControlsDrawerOpen(false);
       btn?.setAttribute('aria-hidden', 'true');
       btn?.setAttribute('tabindex', '-1');
@@ -226,7 +226,7 @@
   }
 
   function setControlsDrawerOpen(open) {
-    if (open && isGlobeView() && isMobileLayout()) return;
+    if (open && !isGlobeView()) return;
     const legend = document.getElementById('legend-panel');
     const backdrop = document.getElementById('legend-backdrop');
     const btn = document.getElementById('open-controls');
@@ -2295,6 +2295,11 @@
   document.getElementById('show-aggregate-links')?.addEventListener('change', e => {
     state.show.aggregateLinks = e.target.checked;
     refreshGraph();
+  });
+
+  document.getElementById('go-constellation-title')?.addEventListener('click', () => {
+    ensureMapSitePage();
+    applyViewModeChoice('constellation');
   });
 
   document.getElementById('view-mode').addEventListener('change', e => {

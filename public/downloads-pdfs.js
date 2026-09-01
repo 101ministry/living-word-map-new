@@ -15,6 +15,12 @@
         "download":  "CARM-PART6-STUDY.pdf"
     },
     {
+        "title":  "Christianity Without Christ",
+        "summary":  "Faith without accountability, community, or Jesus at the forefront: OT lined up with NT.",
+        "href":  "downloads/christianity-without-christ.pdf",
+        "download":  "Christianity Without Christ.pdf"
+    },
+    {
         "title":  "Is Deportation Biblical?",
         "summary":  "Scripture and church history on sojourners, nations, and deportation today.",
         "href":  "downloads/deportation-biblical-study.pdf",

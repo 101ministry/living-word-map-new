@@ -3199,7 +3199,7 @@ a.round2-nav-link:hover {
     grid-template-columns: minmax(0, 1fr) clamp(340px, 44vw, 480px);
   }
 
-  .header-menu-btn {
+  html.is-globe-view .header-menu-btn {
     display: inline-flex;
   }
 
@@ -3284,6 +3284,10 @@ a.round2-nav-link:hover {
 }
 
 .header-menu-btn.btn-icon {
+  display: none;
+}
+
+html.is-globe-view .header-menu-btn.btn-icon {
   display: inline-flex;
 }
 
@@ -3309,17 +3313,13 @@ a.round2-nav-link:hover {
 }
 
 @media (max-width: 768px) {
-  #app.is-globe-legend-disabled .header-menu-btn {
-    display: none !important;
-  }
-
   .header {
     flex-wrap: wrap;
     gap: 0.5rem 0.65rem;
     padding: 0.55rem 0.75rem;
   }
 
-  .header-menu-btn {
+  html.is-globe-view .header-menu-btn {
     display: inline-flex;
     order: -1;
   }
@@ -4940,7 +4940,8 @@ body[data-site-page='prayer-videos'] #ministry-embed-panel,
 body[data-site-page='prayer-videos'] #downloads-panel,
 body[data-site-page='prayer-videos'] #study-full,
 body[data-site-page='prayer-videos'] .header-reset-btn,
-body[data-site-page='prayer-videos'] #open-controls {
+body[data-site-page='prayer-videos'] #open-controls,
+body[data-site-page='downloads'] #open-controls {
   display: none !important;
 }
 
@@ -5072,8 +5073,25 @@ body[data-site-page='downloads'] #study-full {
   text-decoration: none;
 }
 
-.header-title-link:hover {
-  color: var(--accent, #d4a843);
+.header-title-btn {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+.header-title-link:hover,
+.header-title-btn:hover,
+.header-title-btn:focus-visible {
+  color: var(--quote);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .downloads-study-link-wrap {
