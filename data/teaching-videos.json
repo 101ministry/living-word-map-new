@@ -186,7 +186,35 @@
         { "label": "Life foundations/Gravel analogy", "start": "3:30:54" }
       ]
     },
-    { "day": 7, "part": 1, "title": "Day 7 - Prayer Topics", "youtubeId": "STc81Y8NXR4", "url": "https://www.youtube.com/watch?v=STc81Y8NXR4" },
+    {
+      "day": 7,
+      "part": 1,
+      "title": "Day 7 - Prayer Topics",
+      "youtubeId": "STc81Y8NXR4",
+      "url": "https://www.youtube.com/watch?v=STc81Y8NXR4",
+      "chapterTimestamps": {
+        "600": "11:55",
+        "599": "1:17:44",
+        "598": "1:24:44",
+        "597": "1:48:04",
+        "596": "2:00:05",
+        "595": "2:03:21",
+        "594": "2:07:03",
+        "593": "2:09:31",
+        "592": "2:20:30",
+        "591": "2:24:42",
+        "590": "2:29:24",
+        "589": "2:34:58"
+      },
+      "bonusChapters": [
+        { "label": "'what is lust?'", "start": "8:56" },
+        { "label": "catholic church history", "start": "50:30" },
+        { "label": "Spirit of Eroticism [continued]", "start": "1:01:10" },
+        { "label": "James 1:6 'Asking God in faith/The Greek translation explained'", "start": "1:27:56" },
+        { "label": "Topics complete", "start": "2:57:28" },
+        { "label": "Solange's dream interpretation", "start": "3:06:55" }
+      ]
+    },
     { "day": 8, "part": 1, "title": "Day 8 - Prayer Topics", "youtubeId": "lG1p-zYul8E", "url": "https://www.youtube.com/watch?v=lG1p-zYul8E" },
     { "day": 8, "part": 2, "title": "Day 8 - Prayer Topics (Part 2)", "youtubeId": "GQdgqRdvSd8", "url": "https://www.youtube.com/watch?v=GQdgqRdvSd8" },
     { "day": 9, "part": 1, "title": "Day 9 - Prayer Topics", "youtubeId": "habhVgC3Nms", "url": "https://www.youtube.com/watch?v=habhVgC3Nms" },

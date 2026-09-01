@@ -197,13 +197,33 @@
   white-space: nowrap;
 }
 
-html:not(.exp-record) .exp-record-bar {
+html:not(.exp-record):not(.exp-sample) .exp-record-bar {
   justify-content: flex-end;
 }
 
-html:not(.exp-record) .exp-record-only,
-html.exp-record .exp-live-only {
+html:not(.exp-record):not(.exp-sample) .exp-record-only,
+html.exp-record .exp-live-only,
+html.exp-sample .exp-live-only {
   display: none !important;
+}
+
+html:not(.exp-sample) .exp-sample-only {
+  display: none !important;
+}
+
+.exp-sample-banner {
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 10px;
+  background: rgba(201, 162, 39, 0.08);
+  color: var(--text-muted, #b8b4aa);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.exp-sample-banner a {
+  color: #d4af37;
 }
 
 .exp-section-builders {

@@ -1,5 +1,6 @@
 (() => {
-  const KEY = 'lwm-how-found-us';
+  const CHOICE_KEY = 'lwm-how-found-us';
+  const SEEN_KEY = 'lwm-found-us-seen';
   const SLACK =
     'https://join.slack.com/t/repentance101/shared_invite/zt-48344b3ds-vxCbNHRk4JKiR8oDwby9BA';
   const overlay = document.getElementById('found-us-overlay');
@@ -20,9 +21,29 @@
     overlay.hidden = true;
   }
 
-  function save(value) {
+  function hasSeen() {
     try {
-      localStorage.setItem(KEY, value);
+      if (sessionStorage.getItem(SEEN_KEY)) return true;
+      if (localStorage.getItem(SEEN_KEY)) return true;
+      if (localStorage.getItem(CHOICE_KEY)) return true;
+    } catch {
+      /* ignore */
+    }
+    return false;
+  }
+
+  function markSeen() {
+    try {
+      sessionStorage.setItem(SEEN_KEY, '1');
+      localStorage.setItem(SEEN_KEY, '1');
+    } catch {
+      /* ignore */
+    }
+  }
+
+  function saveChoice(value) {
+    try {
+      localStorage.setItem(CHOICE_KEY, value);
     } catch {
       /* ignore */
     }
@@ -41,10 +62,16 @@
     }
   }
 
+  function dismiss() {
+    markSeen();
+    hide();
+  }
+
   function applyChoice(value) {
     if (!value) return;
+    markSeen();
     reportChoice(value);
-    save(value);
+    saveChoice(value);
     if (value === 'camp') {
       location.href = 'index.html?site=map&view=camp';
       return;
@@ -56,19 +83,13 @@
   }
 
   select.addEventListener('change', showExtras);
-  closeBtn?.addEventListener('click', hide);
+  closeBtn?.addEventListener('click', dismiss);
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     applyChoice(select.value);
   });
 
-  let seen = '';
-  try {
-    seen = localStorage.getItem(KEY) || '';
-  } catch {
-    seen = '';
-  }
-  if (seen || document.documentElement.classList.contains('exp-record')) {
+  if (hasSeen() || document.documentElement.classList.contains('exp-record')) {
     hide();
     return;
   }

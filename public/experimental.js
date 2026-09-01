@@ -40,14 +40,30 @@
     ui: {},
     defaultLanguage: 'en',
   };
-  const STORAGE_KEY = 'lwm-experimental-v1';
+  const SAMPLE_MODE =
+    document.body.classList.contains('exp-sample') ||
+    /(?:\?|&)(?:sample=1)(?:&|$)/.test(location.search);
+  const SAMPLE_TOPIC_LIMIT = 120;
+  const RECORD_MODE = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
+  const DEMO_MODE = RECORD_MODE || SAMPLE_MODE;
+  const STORAGE_KEY = SAMPLE_MODE ? 'lwm-experimental-sample-v1' : 'lwm-experimental-v1';
   const ACCOUNTS_KEY = 'lwm-experimental-accounts-v1';
   const LANG_STORAGE_KEY = 'lwm-round-prayer-lang';
-  const RECORD_MODE = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
   const CAL_MS = (DATA1.calReturnMinutes || 2) * 60 * 1000;
   const CAL_CONSECUTIVE_NOS = 4;
   const LANG_ALIASES = { sp: 'es' };
-  const TOPIC_COUNT = DATA1.topicCount || 666;
+  const TOPIC_COUNT = SAMPLE_MODE ? SAMPLE_TOPIC_LIMIT : DATA1.topicCount || 666;
+
+  function sectionTopics(section) {
+    if (!section?.topics?.length) return [];
+    return section.topics.filter(t => t.number <= TOPIC_COUNT);
+  }
+
+  function visibleSections() {
+    return DATA1.sections
+      .map(section => ({ ...section, topics: sectionTopics(section) }))
+      .filter(section => section.topics.length > 0);
+  }
   const HUB_PAGE = document.body.classList.contains('site-repentance-hub');
   const hubSection = document.getElementById('repentance-hub-section');
   const siteShell = document.getElementById('app');
@@ -176,7 +192,7 @@
       localStorage.setItem(LANG_STORAGE_KEY, state.language);
     } catch { /* ignore */ }
     persistAccount();
-    if (!RECORD_MODE && state.profile && els.app && !els.app.hidden) {
+    if (!DEMO_MODE && state.profile && els.app && !els.app.hidden) {
       publishPresence();
     }
   }
@@ -260,7 +276,7 @@
   }
 
   async function ensureSession() {
-    if (RECORD_MODE) return true;
+    if (DEMO_MODE) return true;
     try {
       const res = await fetch('/api/experimental-auth/me', { credentials: 'include' });
       return res.ok;
@@ -315,7 +331,7 @@
 
   async function refreshPeopleMap() {
     const mine = await resolvePublicRegion();
-    if (RECORD_MODE) {
+    if (DEMO_MODE) {
       if (typeof SCENE.setPeopleRegions === 'function') {
         SCENE.setPeopleRegions(sanitizePresenceRegions([], mine));
       }
@@ -340,7 +356,7 @@
 
   async function publishPresence() {
     const mine = await refreshPeopleMap();
-    if (RECORD_MODE || !mine || !state.passwordHash) return;
+    if (DEMO_MODE || !mine || !state.passwordHash) return;
     try {
       const res = await fetch('/api/experimental-presence', {
         method: 'POST',
@@ -468,7 +484,7 @@
 
   function syncRequiredFields() {
     if (!els.form) return;
-    const live = !RECORD_MODE;
+    const live = !DEMO_MODE;
     const marriedYes = els.form.married?.value === 'yes';
     if (els.form.personName) els.form.personName.required = live;
     if (els.form.password) els.form.password.required = live && !state.passwordHash;
@@ -606,9 +622,17 @@
     const rtl = !!(CATALOG.languages || []).find(l => l.code === state.language)?.rtl;
     document.documentElement.lang = state.language;
     document.documentElement.dir = rtl ? 'rtl' : 'ltr';
-    document.documentElement.classList.toggle('exp-record', RECORD_MODE);
-    document.body.classList.toggle('exp-record', RECORD_MODE);
-    if (els.submit) els.submit.textContent = RECORD_MODE ? 'Enter Repentance Project 2026' : 'Enter Prayer Builder';
+    document.documentElement.classList.toggle('exp-record', DEMO_MODE);
+    document.body.classList.toggle('exp-record', DEMO_MODE);
+    document.documentElement.classList.toggle('exp-sample', SAMPLE_MODE);
+    document.body.classList.toggle('exp-sample', SAMPLE_MODE);
+    if (els.submit) {
+      els.submit.textContent = SAMPLE_MODE
+        ? 'Try the sample'
+        : RECORD_MODE
+          ? 'Enter Repentance Project 2026'
+          : 'Enter Prayer Builder';
+    }
     updateCaseName();
   }
 
@@ -793,13 +817,13 @@
   }
 
   function firstTopicOfSection(sectionId) {
-    const sec = DATA1.sections.find(s => s.id === sectionId);
+    const sec = visibleSections().find(s => s.id === sectionId);
     if (!sec?.topics?.length) return 1;
     return Math.min(...sec.topics.map(t => t.number));
   }
 
   function isSectionComplete(sectionId) {
-    const sec = DATA1.sections.find(s => s.id === sectionId);
+    const sec = visibleSections().find(s => s.id === sectionId);
     if (!sec?.topics?.length) return false;
     const yes = currentProgress().heartYes;
     return sec.topics.every(t => yes.includes(t.number));
@@ -807,12 +831,12 @@
 
   function completedSectionCount(set, round) {
     const yes = roundProgress(set, round).heartYes;
-    return DATA1.sections.filter(sec => sec.topics.every(t => yes.includes(t.number))).length;
+    return visibleSections().filter(sec => sec.topics.every(t => yes.includes(t.number))).length;
   }
 
   function orderedTopicNumbers() {
     const out = [];
-    DATA1.sections.forEach(section => {
+    visibleSections().forEach(section => {
       [...section.topics]
         .sort((a, b) => a.number - b.number)
         .forEach(t => out.push(t.number));
@@ -861,7 +885,7 @@
   }
 
   function sectionBuilderCount(sectionId) {
-    const sec = DATA1.sections.find(s => s.id === sectionId);
+    const sec = visibleSections().find(s => s.id === sectionId);
     if (!sec) return 0;
     const yes = currentProgress().heartYes;
     return sec.topics.filter(t => yes.includes(t.number)).length;
@@ -906,6 +930,10 @@
     DATA1.sections.forEach(section => updateSectionBuilderLabel(section.id, bump && section.id === sectionId));
   }
 
+  function samplePrefix() {
+    return SAMPLE_MODE ? 'Sample · topics 001–120 · ' : '';
+  }
+
   function crewSizeNow() {
     return Math.max(1, currentProgress().heartYes.length);
   }
@@ -947,7 +975,7 @@
 
   function buildSidebar(onDone) {
     els.sidebarSections.innerHTML = '';
-    const sections = DATA1.sections;
+    const sections = visibleSections();
     const prog = currentProgress();
     let sectionIdx = 0;
     let topicIdx = 0;
@@ -1030,7 +1058,7 @@
       if (check) check.textContent = prog.heartYes.includes(num) ? '✅' : '☐';
       row.classList.toggle('active', num === state.currentTopic);
     });
-    DATA1.sections.forEach(section => {
+    visibleSections().forEach(section => {
       const secEl = document.querySelector(`#exp-sidebar-sections .round2-sidebar-section[data-section-id="${section.id}"]`);
       const pc = secEl?.querySelector('.round2-principality-check');
       updatePrincipalityCheck(pc, section.id);
@@ -1040,7 +1068,7 @@
 
   function updatePhaseLabel() {
     const s = setMeta(state.currentSet);
-    els.phaseLabel.textContent = `Set ${state.currentSet} of 11 · ${s.name} · Round ${state.currentRound}`;
+    els.phaseLabel.textContent = `${samplePrefix()}Set ${state.currentSet} of 11 · ${s.name} · Round ${state.currentRound}`;
   }
 
   function renderCurrentTopic() {
@@ -1292,9 +1320,9 @@
   async function enterApp() {
     showApp();
     const q = readQuery();
-    if (RECORD_MODE && q.caseId) await applyCaseLoad(q.caseId, { jump: false });
+    if (DEMO_MODE && q.caseId) await applyCaseLoad(q.caseId, { jump: false });
     if (Number.isFinite(q.set) && q.set >= 1) state.currentSet = clampSet(q.set, state.profile);
-    else if (RECORD_MODE && q.caseId) state.currentSet = clampSet(7, state.profile);
+    else if (DEMO_MODE && q.caseId) state.currentSet = clampSet(7, state.profile);
     if (Number.isFinite(q.round) && q.round >= 1) state.currentRound = clampRound(q.round);
     populateLanguageSelect();
     populateSetSelect();
@@ -1315,7 +1343,11 @@
       applyFill(q.fill);
       return;
     }
-    if (RECORD_MODE && q.caseId) {
+    if (DEMO_MODE && q.caseId) {
+      applyFill('showcase');
+      return;
+    }
+    if (SAMPLE_MODE && !q.fill && !q.caseId) {
       applyFill('showcase');
       return;
     }
@@ -1343,7 +1375,7 @@
     };
     els.geoStatus.classList.remove('is-ok', 'is-warn', 'is-error');
     const missing = [];
-    if (!RECORD_MODE) {
+    if (!DEMO_MODE) {
       if (!personName) missing.push('Name');
       if (!fields.gender) missing.push('Gender');
       if (!fields.married) missing.push('Married?');
@@ -1367,7 +1399,7 @@
     let isReturningAccount = false;
     const inviteCodeInput = normalizeInviteCode(fd.get('inviteCode'));
     try {
-      if (!RECORD_MODE && password) {
+      if (!DEMO_MODE && password) {
         passwordHash = await hashPassword(personName, password);
         const existing = await loadAccount(personName, passwordHash);
         if (existing.reason === 'auth') {
@@ -1386,7 +1418,7 @@
           state.currentRound = 1;
           state.currentTopic = 1;
         }
-      } else if (!RECORD_MODE && state.passwordHash && accountKey(personName) === accountKey(state.profile?.name)) {
+      } else if (!DEMO_MODE && state.passwordHash && accountKey(personName) === accountKey(state.profile?.name)) {
         isReturningAccount = true;
       }
     } catch (err) {
@@ -1396,7 +1428,7 @@
       els.submit.disabled = false;
       return;
     }
-    if (!RECORD_MODE && !isReturningAccount && !inviteCodeInput) {
+    if (!DEMO_MODE && !isReturningAccount && !inviteCodeInput) {
       els.geoStatus.classList.add('is-error');
       els.geoStatus.textContent = 'Invite code required for first-time entry. Check Slack for your code.';
       els.submit.disabled = false;
@@ -1424,7 +1456,7 @@
       console.error(err);
       profile = GEO.profileFromFields(fields, null);
     }
-    if (!RECORD_MODE && personName) profile.name = personName;
+    if (!DEMO_MODE && personName) profile.name = personName;
     state.profile = profile;
     state.passwordHash = passwordHash;
     if (shareChoice === 'yes' || shareChoice === 'no') {
@@ -1439,7 +1471,7 @@
       els.geoStatus.classList.add('is-warn');
       els.geoStatus.textContent = `Using your entries: ${profile.city}, ${profile.state}, ${profile.country}. Map is schematic.`;
     }
-    if (!RECORD_MODE && personName && passwordHash) {
+    if (!DEMO_MODE && personName && passwordHash) {
       els.geoStatus.textContent = 'Opening your session…';
       const login = await loginSession(personName, passwordHash, state.shareProgress, inviteCodeInput);
       if (!login.ok) {
@@ -1572,7 +1604,7 @@
         showGate(false);
         return;
       }
-      if (!RECORD_MODE && !(await ensureSession())) {
+      if (!DEMO_MODE && !(await ensureSession())) {
         showGate(true);
         if (els.geoStatus) {
           els.geoStatus.classList.add('is-warn');
