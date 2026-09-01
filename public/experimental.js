@@ -49,6 +49,8 @@
   const STORAGE_KEY = SAMPLE_MODE ? 'lwm-experimental-sample-v1' : 'lwm-experimental-v1';
   const ACCOUNTS_KEY = 'lwm-experimental-accounts-v1';
   const LANG_STORAGE_KEY = 'lwm-round-prayer-lang';
+  const LANG_STORAGE_KEYS = ['lwm-language', LANG_STORAGE_KEY];
+  let applyingLanguage = false;
   const CAL_MS = (DATA1.calReturnMinutes || 2) * 60 * 1000;
   const CAL_CONSECUTIVE_NOS = 4;
   const LANG_ALIASES = { sp: 'es' };
@@ -143,6 +145,33 @@
     return LANG_ALIASES[raw] || raw;
   }
 
+  function readStoredLanguage() {
+    for (const key of LANG_STORAGE_KEYS) {
+      try {
+        const v = localStorage.getItem(key);
+        if (v) return normalizeLang(v);
+      } catch { /* ignore */ }
+    }
+    return normalizeLang(CATALOG.defaultLanguage || 'en');
+  }
+
+  function persistLanguageStorage(code) {
+    const lang = normalizeLang(code);
+    LANG_STORAGE_KEYS.forEach(key => {
+      try {
+        localStorage.setItem(key, lang);
+      } catch { /* ignore */ }
+    });
+    window.LwmSiteNav?.syncLanguageStorage?.(lang);
+  }
+
+  function syncLanguageSelects(code) {
+    const lang = normalizeLang(code);
+    if (els.langSelect && els.langSelect.value !== lang) els.langSelect.value = lang;
+    const headerSelect = document.getElementById('language-select');
+    if (headerSelect && headerSelect.value !== lang) headerSelect.value = lang;
+  }
+
   function progressKey(set, round) {
     return `${set}:${round}`;
   }
@@ -152,10 +181,7 @@
   }
 
   function defaultState() {
-    let language = 'en';
-    try {
-      language = normalizeLang(localStorage.getItem(LANG_STORAGE_KEY) || CATALOG.defaultLanguage || 'en');
-    } catch { /* ignore */ }
+    const language = readStoredLanguage();
     return {
       profile: null,
       passwordHash: '',
@@ -178,7 +204,7 @@
       merged.currentSet = clampSet(merged.currentSet, merged.profile);
       merged.currentRound = clampRound(merged.currentRound);
       merged.currentTopic = clampTopic(merged.currentTopic);
-      merged.language = normalizeLang(merged.language || base.language);
+      merged.language = readStoredLanguage() || normalizeLang(merged.language || base.language);
       if (typeof merged.shareProgress !== 'boolean') merged.shareProgress = undefined;
       return merged;
     } catch {
@@ -189,7 +215,7 @@
   function saveState() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      localStorage.setItem(LANG_STORAGE_KEY, state.language);
+      persistLanguageStorage(state.language);
     } catch { /* ignore */ }
     persistAccount();
     if (!DEMO_MODE && state.profile && els.app && !els.app.hidden) {
@@ -650,6 +676,7 @@
       state.language = 'en';
     }
     els.langSelect.value = state.language;
+    syncLanguageSelects(state.language);
   }
 
   function populateSetSelect() {
@@ -804,16 +831,25 @@
 
   async function setLanguage(code) {
     const next = normalizeLang(code);
-    state.language = next;
-    saveState();
-    applyUiChrome();
+    if (applyingLanguage) return;
+    applyingLanguage = true;
     try {
-      await loadPrayerPack(next, state.currentRound);
-    } catch (err) {
-      console.error(err);
-      activePack = null;
+      state.language = next;
+      persistLanguageStorage(next);
+      syncLanguageSelects(next);
+      if (window.PrayerLibrary?.setLanguage) window.PrayerLibrary.setLanguage(next);
+      saveState();
+      applyUiChrome();
+      try {
+        await loadPrayerPack(next, state.currentRound);
+      } catch (err) {
+        console.error(err);
+        activePack = null;
+      }
+      if (!els.app?.hidden) renderCurrentTopic();
+    } finally {
+      applyingLanguage = false;
     }
-    renderCurrentTopic();
   }
 
   function firstTopicOfSection(sectionId) {
@@ -1525,7 +1561,14 @@
     }
   });
 
-  els.langSelect.addEventListener('change', () => setLanguage(els.langSelect.value));
+  if (els.langSelect) {
+    els.langSelect.addEventListener('change', () => setLanguage(els.langSelect.value));
+  }
+
+  window.addEventListener('lwm:language-changed', e => {
+    const lang = e.detail?.language;
+    if (lang && normalizeLang(lang) !== state.language) void setLanguage(lang);
+  });
   els.setSelect.addEventListener('change', async () => {
     const id = Number(els.setSelect.value);
     if (!setUnlocked(id)) {
@@ -1599,6 +1642,9 @@
       populateLanguageSelect();
       populateCaseSelects();
       applyUiChrome();
+      try {
+        await loadPrayerPack(state.language, state.currentRound);
+      } catch { /* gate screen — pack loads again in enterApp */ }
       syncRequiredFields();
       if (!state.profile) {
         showGate(false);

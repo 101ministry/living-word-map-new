@@ -57,7 +57,7 @@
               <li><button type="button" class="view-nav-item" data-view="compare">Compare Principalities</button></li>
             </ul>
           </div>
-          <button type="button" class="site-nav-btn" data-site-page="downloads">Audio Downloads</button>
+          <button type="button" class="site-nav-btn" data-site-page="downloads">Downloads</button>
         </nav>
         <button id="reset-view" type="button" class="header-reset-btn">Reset</button>
       </div>
@@ -99,7 +99,7 @@
             <li><a href="repentance-project.html" class="mobile-nav-link">Repentance Project</a></li>
             <li><button type="button" id="nav-prayer-videos" class="mobile-nav-link">Core Prayer &amp; Videos</button></li>
             <li><button type="button" id="nav-map" class="mobile-nav-link">Globe Map &amp; Minigame</button></li>
-            <li><button type="button" id="nav-downloads" class="mobile-nav-link">Audio Downloads</button></li>
+            <li><button type="button" id="nav-downloads" class="mobile-nav-link">Downloads</button></li>
             <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
           </ul>
         </nav>
@@ -412,8 +412,8 @@
     <section class="downloads-panel teaching-panel" id="downloads-panel" aria-label="Downloads section">
       <header class="teaching-header">
         <div>
-          <h2>Audio Downloads</h2>
-          <p class="teaching-subtitle">Choose a series. Each one opens on its own page.</p>
+          <h2>Downloads</h2>
+          <p class="teaching-subtitle">Audio series on their own pages; teaching PDFs below.</p>
           <p class="downloads-study-link-wrap">
             <a class="header-study-link downloads-study-link" href="why-bloodline-repentance.pdf" download="Why is Bloodline Repentance blessed by God according to the Bible.pdf">Why is Bloodline Repentance important? (PDF)</a>
             <span class="downloads-study-or"> · </span>
@@ -422,6 +422,7 @@
         </div>
         <button type="button" id="downloads-jump-map" class="text-btn">Back to map ↑</button>
       </header>
+      <h3 class="downloads-hub-heading">Audio</h3>
       <div class="downloads-hub">
         <a class="downloads-hub-card" href="accelerated-discipleship.html">
           <strong>Accelerated Discipleship</strong>
@@ -432,6 +433,8 @@
           <span>Future tracks will sit on a separate page.</span>
         </a>
       </div>
+      <h3 class="downloads-hub-heading">Teaching PDFs</h3>
+      <div id="downloads-pdf-hub" class="downloads-hub downloads-pdf-hub" aria-label="Teaching PDF downloads"></div>
     </section>
 
     <section class="study-full-panel" id="study-full" aria-label="Why is Bloodline Repentance blessed by God according to the Bible? Full study">
@@ -506,6 +509,8 @@
   <script src="app.js?v=33"></script>
   <script src="teaching-videos.js?v=5"></script>
   <script src="ask-overlay.js?v=14"></script>
+  <script src="downloads-pdfs.js?v=1"></script>
+  <script src="downloads-pdfs-hub.js?v=1"></script>
   <script src="study-landing.js?v=15"></script>
 </body>
 </html>

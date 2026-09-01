@@ -4284,6 +4284,19 @@ a.round2-nav-link:hover {
   text-underline-offset: 0.15em;
 }
 
+.downloads-hub-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 1.25rem 0 0.5rem;
+}
+
+.downloads-pdf-hub {
+  margin-bottom: 0.5rem;
+}
+
 .downloads-hub {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
