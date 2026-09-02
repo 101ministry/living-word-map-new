@@ -14,6 +14,22 @@
   --detail-panel-width: clamp(420px, 38vw, 560px);
 }
 
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg-deep: #f2efe6;
+  --bg-panel: #ffffff;
+  --bg-elevated: #e8e4d9;
+  --border: rgba(20, 18, 12, 0.14);
+  --text: #1f1c17;
+  --text-muted: #5e5a52;
+  --principality: #7a6110;
+  --root: #2f5573;
+  --fruit: #6d3f5c;
+  --topic: #4a5363;
+  --accent: #8a6f18;
+  --quote: #2a2418;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -4339,41 +4355,30 @@ html.is-globe-view .header-menu-btn.btn-icon {
 }
 
 .downloads-cal-weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 0.35rem;
-  margin-bottom: 0.35rem;
-}
-
-.downloads-cal-weekdays span {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  text-align: center;
+  display: none;
 }
 
 .downloads-cal-grid {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
 .downloads-cal-day {
-  min-height: 5.5rem;
-  padding: 0.4rem 0.4rem 0.5rem;
+  display: none;
+  min-height: 0;
+  padding: 0.9rem 1.15rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   background: rgba(18, 20, 28, 0.55);
 }
 
 .downloads-cal-day.is-empty {
-  background: transparent;
-  border-color: transparent;
+  display: none;
 }
 
 .downloads-cal-day.has-pdfs {
+  display: block;
   border-color: rgba(201, 162, 39, 0.45);
   background: var(--bg-elevated);
 }
@@ -4398,9 +4403,10 @@ html.is-globe-view .header-menu-btn.btn-icon {
 
 .downloads-cal-link {
   display: block;
-  font-size: 0.72rem;
-  line-height: 1.25;
-  color: var(--quote);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -4417,33 +4423,9 @@ html.is-globe-view .header-menu-btn.btn-icon {
   color: var(--text-muted);
 }
 
-@media (max-width: 900px) {
-  .downloads-cal-weekdays {
-    display: none;
-  }
-
-  .downloads-cal-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
-  }
-
-  .downloads-cal-day:not(.has-pdfs) {
-    display: none;
-  }
-
-  .downloads-cal-day.has-pdfs {
-    min-height: 0;
-  }
-
-  .downloads-cal-num::after {
-    content: none;
-  }
-}
-
 .downloads-hub {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.75rem;
 }
 
@@ -5125,6 +5107,50 @@ body[data-site-page='downloads'] #study-full {
   display: block !important;
 }
 
+body[data-site-page='downloads'] .header {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+body[data-site-page='downloads'] .header-controls {
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+body[data-site-page='downloads'] .language-control {
+  flex: 1 1 100%;
+}
+
+body[data-site-page='downloads'] .site-nav {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+body[data-site-page='downloads'] .site-nav-btn,
+body[data-site-page='downloads'] .site-nav-map,
+body[data-site-page='downloads'] .site-nav-map .view-nav-toggle.site-nav-btn {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  text-align: center;
+  white-space: normal;
+  padding: 0.7rem 0.85rem;
+}
+
+body[data-site-page='downloads'] .downloads-panel,
+body[data-site-page='downloads'] .study-full-panel {
+  width: 100%;
+}
+
+body[data-site-page='downloads'] .teaching-header {
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .repentance-hub {
   max-width: 920px;
   margin: 0 auto;
@@ -5256,4 +5282,66 @@ body[data-site-page='downloads'] #study-full {
     min-width: 0;
     flex: 1 1 auto;
   }
+}
+
+.site-theme-toggle {
+  display: inline-flex;
+  font-size: 1.05rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.site-theme-toggle[aria-pressed="true"] {
+  border-color: rgba(201, 162, 39, 0.55);
+  color: var(--accent);
+  background: rgba(201, 162, 39, 0.12);
+}
+
+html[data-theme="light"] .btn-ghost:hover,
+html[data-theme="light"] .btn-ghost:focus-visible {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .btn-icon:hover {
+  border-color: rgba(20, 18, 12, 0.22);
+}
+
+html[data-theme="light"] .repentance-hub-card:hover,
+html[data-theme="light"] .repentance-hub-card:focus-visible {
+  background: rgba(138, 111, 24, 0.1);
+}
+
+html[data-theme="light"] .round2-sidebar-topic:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="light"] .round2-sidebar-topic.active {
+  background: rgba(201, 162, 39, 0.14);
+}
+
+html[data-theme="light"] .round2-dialog-close:hover,
+html[data-theme="light"] .round2-dialog-close:focus-visible {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="light"] a.round2-nav-link:hover {
+  background: rgba(138, 111, 24, 0.12);
+}
+
+html[data-theme="light"] .site-nav-btn:hover,
+html[data-theme="light"] .site-nav-btn:focus-visible,
+html[data-theme="light"] .site-nav-btn.is-active {
+  background: rgba(138, 111, 24, 0.1);
+}
+
+html[data-theme="light"] .exp-gate-card,
+html[data-theme="light"] .exp-profile-panel {
+  box-shadow: 0 12px 36px rgba(24, 20, 12, 0.08);
+}
+
+.site-theme-floating {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 80;
 }

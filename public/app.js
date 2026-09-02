@@ -391,6 +391,8 @@
 
     updateLanguageStatus();
 
+    window.LwmSiteI18n?.apply?.(state.language);
+
     if (state.selectedId && nodeType(state.selectedId) === 'topic') {
       await renderTopicPrayer(lookups.topic[state.selectedId]);
     }
@@ -1619,6 +1621,10 @@
     document.body.classList.toggle('is-globe-view', globe);
     document.documentElement.classList.toggle('is-graph-view', graph);
     document.body.classList.toggle('is-graph-view', graph);
+    const viewMode = state.viewMode || 'constellation';
+    document.documentElement.dataset.viewMode = viewMode;
+    document.body.dataset.viewMode = viewMode;
+    window.LwmSiteTheme?.apply?.();
     try {
       Graph.enableZoomInteraction(!camp);
     } catch {

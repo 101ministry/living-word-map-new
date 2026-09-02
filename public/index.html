@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=98" />
+  <link rel="stylesheet" href="styles.css?v=100" />
+  <script src="site-theme.js?v=1"></script>
   <script>
     (function () {
       var q = new URLSearchParams(location.search);
@@ -27,9 +28,9 @@
     <header class="header">
       <button type="button" id="open-controls" class="btn-icon header-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="legend-panel">☰</button>
       <div class="header-brand">
-        <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
+        <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer" data-i18n="siteTribeLink">Come Join the Repentance101 Tribe</a>
         <h1><button type="button" class="header-title-link header-title-btn" id="go-constellation-title">Living Word Map</button></h1>
-        <p class="subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
+        <p class="subtitle" id="site-subtitle"><span id="principality-count">26</span> Principalities · <span id="root-count">—</span> Roots · <span id="fruit-count">—</span> Fruits · <span id="topic-count">—</span> Topics</p>
       </div>
       <div class="header-controls">
         <div class="language-control">
@@ -38,8 +39,8 @@
           <p id="language-status" class="language-status" aria-live="polite"></p>
         </div>
         <nav class="site-nav" id="site-nav" aria-label="Site sections">
-          <a href="repentance-project.html" class="site-nav-btn" data-site-href="repentance-project.html">Repentance Project</a>
-          <button type="button" class="site-nav-btn" data-site-page="prayer-videos">Core Prayer &amp; Videos</button>
+          <a href="repentance-project.html" class="site-nav-btn" data-site-href="repentance-project.html" data-i18n="siteNavRepentance">Repentance Project</a>
+          <button type="button" class="site-nav-btn" data-site-page="prayer-videos" data-i18n="siteNavPrayerVideos">Core Prayer &amp; Videos</button>
           <div class="view-nav site-nav-map" id="view-nav">
             <select id="view-mode" class="view-nav-select" aria-label="Map view mode">
               <option value="globe">Globe</option>
@@ -48,7 +49,7 @@
               <option value="compare">Compare Principalities</option>
               <option value="camp">Minigame</option>
             </select>
-            <button type="button" id="view-nav-toggle" class="view-nav-toggle site-nav-btn" data-site-page="map" aria-expanded="false" aria-haspopup="true">Globe Map &amp; Minigame</button>
+            <button type="button" id="view-nav-toggle" class="view-nav-toggle site-nav-btn" data-site-page="map" aria-expanded="false" aria-haspopup="true" data-i18n="siteNavMap">Globe Map &amp; Minigame</button>
             <ul id="view-nav-menu" class="view-nav-menu" hidden>
               <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="globe">Globe</button></li>
               <li class="view-nav-map-flat"><button type="button" class="view-nav-item" data-view="constellation">Constellation</button></li>
@@ -57,7 +58,7 @@
               <li><button type="button" class="view-nav-item" data-view="compare">Compare Principalities</button></li>
             </ul>
           </div>
-          <button type="button" class="site-nav-btn" data-site-page="downloads">Downloads</button>
+          <button type="button" class="site-nav-btn" data-site-page="downloads" data-i18n="siteNavDownloads">Downloads</button>
         </nav>
         <button id="reset-view" type="button" class="header-reset-btn">Reset</button>
       </div>
@@ -94,13 +95,13 @@
           <button type="button" id="close-controls" class="legend-close-btn" aria-label="Close filters">×</button>
         </div>
         <nav class="mobile-nav" id="mobile-nav" aria-label="Quick navigation">
-          <h2>Navigate</h2>
+          <h2 data-i18n="siteMobileNavigate">Navigate</h2>
           <ul class="mobile-nav-list">
-            <li><a href="repentance-project.html" class="mobile-nav-link">Repentance Project</a></li>
-            <li><button type="button" id="nav-prayer-videos" class="mobile-nav-link">Core Prayer &amp; Videos</button></li>
-            <li><button type="button" id="nav-map" class="mobile-nav-link">Globe Map &amp; Minigame</button></li>
-            <li><button type="button" id="nav-downloads" class="mobile-nav-link">Downloads</button></li>
-            <li><button type="button" id="nav-compare" class="mobile-nav-link">Compare Principalities</button></li>
+            <li><a href="repentance-project.html" class="mobile-nav-link" data-i18n="siteNavRepentance">Repentance Project</a></li>
+            <li><button type="button" id="nav-prayer-videos" class="mobile-nav-link" data-i18n="siteNavPrayerVideos">Core Prayer &amp; Videos</button></li>
+            <li><button type="button" id="nav-map" class="mobile-nav-link" data-i18n="siteNavMap">Globe Map &amp; Minigame</button></li>
+            <li><button type="button" id="nav-downloads" class="mobile-nav-link" data-i18n="siteNavDownloads">Downloads</button></li>
+            <li><button type="button" id="nav-compare" class="mobile-nav-link" data-i18n="siteNavCompare">Compare Principalities</button></li>
           </ul>
         </nav>
         <h2>Layers</h2>
@@ -412,28 +413,28 @@
     <section class="downloads-panel teaching-panel" id="downloads-panel" aria-label="Downloads section">
       <header class="teaching-header">
         <div>
-          <h2>Downloads</h2>
-          <p class="teaching-subtitle">Audio series on their own pages. Teaching PDFs sit on a calendar by the day each study was made.</p>
+          <h2 data-i18n="downloadsTitle">Downloads</h2>
+          <p class="teaching-subtitle" data-i18n="downloadsSubtitle">Audio series on their own pages. Teaching PDFs sit on a calendar by the day each study was made.</p>
           <p class="downloads-study-link-wrap">
-            <a class="header-study-link downloads-study-link" href="why-bloodline-repentance.pdf" download="Why is Bloodline Repentance blessed by God according to the Bible.pdf">Why is Bloodline Repentance important? (PDF)</a>
+            <a class="header-study-link downloads-study-link" href="why-bloodline-repentance.pdf" download="Why is Bloodline Repentance blessed by God according to the Bible.pdf" data-i18n="downloadsBloodlinePdf">Why is Bloodline Repentance important? (PDF)</a>
             <span class="downloads-study-or"> · </span>
-            <a class="header-study-link downloads-study-link" href="#study-full">Read on this page ↓</a>
+            <a class="header-study-link downloads-study-link" href="#study-full" data-i18n="downloadsReadOnPage">Read on this page ↓</a>
           </p>
         </div>
-        <button type="button" id="downloads-jump-map" class="text-btn">Back to map ↑</button>
+        <button type="button" id="downloads-jump-map" class="text-btn" data-i18n="downloadsBackToMap">Back to map ↑</button>
       </header>
-      <h3 class="downloads-hub-heading">Audio</h3>
+      <h3 class="downloads-hub-heading" data-i18n="downloadsAudioHeading">Audio</h3>
       <div class="downloads-hub">
         <a class="downloads-hub-card" href="accelerated-discipleship.html">
-          <strong>Accelerated Discipleship</strong>
-          <span>Play or download the section tracks on their own page.</span>
+          <strong data-i18n="downloadsAcceleratedTitle">Accelerated Discipleship</strong>
+          <span data-i18n="downloadsAcceleratedDesc">Play or download the section tracks on their own page.</span>
         </a>
         <a class="downloads-hub-card" href="bold-love.html">
-          <strong>Bold Love</strong>
-          <span>Future tracks will sit on a separate page.</span>
+          <strong data-i18n="downloadsBoldLoveTitle">Bold Love</strong>
+          <span data-i18n="downloadsBoldLoveDesc">Future tracks will sit on a separate page.</span>
         </a>
       </div>
-      <h3 class="downloads-hub-heading">Teaching PDFs</h3>
+      <h3 class="downloads-hub-heading" data-i18n="downloadsPdfHeading">Teaching PDFs</h3>
       <div id="downloads-pdf-hub" class="downloads-pdf-hub" aria-label="Teaching PDF calendar"></div>
     </section>
 
@@ -506,11 +507,11 @@
   <script src="view-nav.js?v=7"></script>
   <script src="site-pages.js?v=7"></script>
   <script src="site-nav.js?v=4"></script>
-  <script src="app.js?v=34"></script>
+  <script src="app.js?v=35"></script>
   <script src="teaching-videos.js?v=5"></script>
   <script src="ask-overlay.js?v=14"></script>
   <script src="downloads-pdfs.js?v=3"></script>
-  <script src="downloads-pdfs-hub.js?v=3"></script>
+  <script src="downloads-pdfs-hub.js?v=4"></script>
   <script src="study-landing.js?v=15"></script>
 </body>
 </html>

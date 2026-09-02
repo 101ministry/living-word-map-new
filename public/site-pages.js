@@ -50,6 +50,7 @@
     if (next === 'downloads') {
       window.dispatchEvent(new CustomEvent('lwm:site-page-downloads'));
     }
+    window.LwmSiteTheme?.apply?.();
     if (!options.replace && window.history?.replaceState) {
       const url = new URL(window.location.href);
       url.searchParams.set('site', next);
