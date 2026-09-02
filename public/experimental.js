@@ -53,6 +53,9 @@
   let applyingLanguage = false;
   const CAL_MS = (DATA1.calReturnMinutes || 2) * 60 * 1000;
   const CAL_CONSECUTIVE_NOS = 4;
+  const HEART_ACCOUNTABILITY_EVERY = 10;
+  const HEART_ACCOUNTABILITY_MIN = 50;
+  const HEART_ACCOUNTABILITY_MAX = 1000;
   const LANG_ALIASES = { sp: 'es' };
   const TOPIC_COUNT = SAMPLE_MODE ? SAMPLE_TOPIC_LIMIT : DATA1.topicCount || 666;
 
@@ -120,6 +123,12 @@
     advanceTitle: document.getElementById('exp-advance-title'),
     advanceSub: document.getElementById('exp-advance-sub'),
     advanceGo: document.getElementById('exp-advance-go'),
+    accountabilityDialog: document.getElementById('exp-accountability-dialog'),
+    accountabilityPrompt: document.getElementById('exp-accountability-prompt'),
+    accountabilityText: document.getElementById('exp-accountability-text'),
+    accountabilityShare: document.getElementById('exp-accountability-share'),
+    accountabilityError: document.getElementById('exp-accountability-error'),
+    accountabilitySubmit: document.getElementById('exp-accountability-submit'),
     canvas: document.getElementById('exp-canvas'),
     caption: document.getElementById('exp-scene-caption'),
     hud: document.getElementById('exp-hud'),
@@ -139,6 +148,8 @@
   let calDepartedSectionFirstTopic = null;
   let awaitingCalReturn = false;
   let pendingAdvance = null;
+  let accountabilityContinuation = null;
+  let accountabilityMilestonePending = 0;
 
   function normalizeLang(code) {
     const raw = String(code || 'en').toLowerCase();
@@ -177,7 +188,7 @@
   }
 
   function emptyRound() {
-    return { heartYes: [], heartAnswered: [], consecutiveNo: 0 };
+    return { heartYes: [], heartAnswered: [], consecutiveNo: 0, consecutiveYes: 0 };
   }
 
   function defaultState() {
@@ -889,6 +900,7 @@
     prog.heartYes = chosen.slice();
     prog.heartAnswered = chosen.slice();
     prog.consecutiveNo = 0;
+    prog.consecutiveYes = 0;
     return n;
   }
 
@@ -1193,6 +1205,75 @@
     if (els.heartDialog?.open) els.heartDialog.close();
   }
 
+  function accountabilityPromptText(milestone) {
+    return `You've said ${milestone} times that heart change happened. Please describe exactly what changed. Remember, your answers are counted before Jesus. Repentance without accountability is fake.`;
+  }
+
+  function updateAccountabilitySubmitState() {
+    if (!els.accountabilitySubmit || !els.accountabilityText) return;
+    const len = els.accountabilityText.value.trim().length;
+    els.accountabilitySubmit.disabled =
+      len < HEART_ACCOUNTABILITY_MIN || len > HEART_ACCOUNTABILITY_MAX;
+  }
+
+  function showAccountabilityDialog(milestone, onDone) {
+    if (!els.accountabilityDialog || DEMO_MODE) {
+      onDone();
+      return;
+    }
+    accountabilityContinuation = onDone;
+    accountabilityMilestonePending = milestone;
+    if (els.accountabilityPrompt) {
+      els.accountabilityPrompt.textContent = accountabilityPromptText(milestone);
+    }
+    if (els.accountabilityText) {
+      els.accountabilityText.value = '';
+      els.accountabilityText.setAttribute('maxlength', String(HEART_ACCOUNTABILITY_MAX));
+    }
+    if (els.accountabilityShare) els.accountabilityShare.checked = false;
+    if (els.accountabilityError) els.accountabilityError.hidden = true;
+    updateAccountabilitySubmitState();
+    if (!els.accountabilityDialog.open) els.accountabilityDialog.showModal();
+    els.accountabilityText?.focus();
+  }
+
+  async function submitAccountabilityAnswer() {
+    if (!els.accountabilityText || !els.accountabilitySubmit) return;
+    const text = els.accountabilityText.value.trim();
+    const len = text.length;
+    if (len < HEART_ACCOUNTABILITY_MIN || len > HEART_ACCOUNTABILITY_MAX) return;
+    els.accountabilitySubmit.disabled = true;
+    if (els.accountabilityError) els.accountabilityError.hidden = true;
+    try {
+      const res = await fetch('/api/experimental-heart-accountability', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          milestone: accountabilityMilestonePending,
+          text,
+          shareAnonymously: !!els.accountabilityShare?.checked,
+          set: state.currentSet,
+          round: state.currentRound,
+          topic: clampTopic(state.currentTopic),
+        }),
+      });
+      if (!res.ok) throw new Error(`submit failed (${res.status})`);
+      if (els.accountabilityDialog?.open) els.accountabilityDialog.close();
+      accountabilityMilestonePending = 0;
+      const cont = accountabilityContinuation;
+      accountabilityContinuation = null;
+      cont?.();
+    } catch {
+      if (els.accountabilityError) {
+        els.accountabilityError.textContent =
+          'Could not save your answer. Check your connection and try again.';
+        els.accountabilityError.hidden = false;
+      }
+      updateAccountabilitySubmitState();
+    }
+  }
+
   function maybeOfferAdvance() {
     if (!roundComplete(state.currentSet, state.currentRound)) return;
     if (state.currentRound < 3) {
@@ -1257,16 +1338,27 @@
 
     let landed = false;
     let openCalSilently = false;
+    let accountabilityMilestone = 0;
     if (yes) {
       const already = prog.heartYes.includes(current);
       if (!already) prog.heartYes.push(current);
       prog.consecutiveNo = 0;
-      if (!already) landed = true;
+      if (!already) {
+        landed = true;
+        prog.consecutiveYes = (prog.consecutiveYes || 0) + 1;
+        if (
+          !DEMO_MODE &&
+          prog.consecutiveYes % HEART_ACCOUNTABILITY_EVERY === 0
+        ) {
+          accountabilityMilestone = prog.consecutiveYes;
+        }
+      }
       if (sectionId && !sectionWasComplete && isSectionComplete(sectionId)) {
         SCENE.onSectionComplete();
       }
     } else {
       prog.consecutiveNo += 1;
+      prog.consecutiveYes = 0;
       if (prog.consecutiveNo >= CAL_CONSECUTIVE_NOS) {
         openCalSilently = true;
         const t = topicData(current);
@@ -1282,15 +1374,23 @@
     syncScene();
     if (landed) SCENE.onTopicYes();
 
-    window.setTimeout(() => {
-      if (destination) goToTopic(destination);
-      if (yes) maybeOfferAdvance();
-      if (openCalSilently && DATA1.calLink) {
-        calDepartedAt = Date.now();
-        awaitingCalReturn = true;
-        window.open(DATA1.calLink, '_blank', 'noopener,noreferrer');
-      }
-    }, 50);
+    const continueAfterHeart = () => {
+      window.setTimeout(() => {
+        if (destination) goToTopic(destination);
+        if (yes) maybeOfferAdvance();
+        if (openCalSilently && DATA1.calLink) {
+          calDepartedAt = Date.now();
+          awaitingCalReturn = true;
+          window.open(DATA1.calLink, '_blank', 'noopener,noreferrer');
+        }
+      }, 50);
+    };
+
+    if (accountabilityMilestone > 0) {
+      showAccountabilityDialog(accountabilityMilestone, continueAfterHeart);
+    } else {
+      continueAfterHeart();
+    }
   }
 
   function handleCalReturn() {
@@ -1550,6 +1650,15 @@
       e.preventDefault();
       if (els.heartDialog?.open) els.heartDialog.close();
     }
+  });
+
+  els.accountabilityText?.addEventListener('input', updateAccountabilitySubmitState);
+  els.accountabilitySubmit?.addEventListener('click', () => {
+    submitAccountabilityAnswer();
+  });
+  els.accountabilityDialog?.addEventListener('cancel', e => e.preventDefault());
+  els.accountabilityDialog?.addEventListener('keydown', e => {
+    if (e.key === 'Escape') e.preventDefault();
   });
 
   els.advanceGo.addEventListener('click', () => {

@@ -747,6 +747,100 @@ function Handle-Api($context) {
         return $true
     }
 
+    if ($abs -eq '/api/experimental-heart-accountability') {
+        if ($context.Request.HttpMethod -ne 'POST') {
+            Send-Text $context '{"error":"Method not allowed"}' 405 'application/json; charset=utf-8'
+            return $true
+        }
+        $repoRoot = Split-Path $root -Parent
+        $sessionPath = Join-Path $repoRoot '.experimental-sessions.json'
+        $sessionCookie = 'lwm_exp_session'
+
+        function Get-AccountabilityCookies($request) {
+            $out = @{}
+            $header = [string]$request.Headers['Cookie']
+            if ([string]::IsNullOrWhiteSpace($header)) { return $out }
+            foreach ($part in ($header -split ';')) {
+                $idx = $part.IndexOf('=')
+                if ($idx -gt 0) {
+                    $k = $part.Substring(0, $idx).Trim()
+                    $v = [System.Uri]::UnescapeDataString($part.Substring($idx + 1).Trim())
+                    $out[$k] = $v
+                }
+            }
+            return $out
+        }
+
+        $cookies = Get-AccountabilityCookies $context.Request
+        $token = [string]$cookies[$sessionCookie]
+        if ($token -notmatch '^[a-f0-9]{64}$') {
+            Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+            return $true
+        }
+        if (-not (Test-Path -LiteralPath $sessionPath)) {
+            Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+            return $true
+        }
+        try {
+            $sessions = Get-Content -LiteralPath $sessionPath -Raw -Encoding UTF8 | ConvertFrom-Json
+        }
+        catch {
+            Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+            return $true
+        }
+        $session = $sessions.$token
+        if (-not $session) {
+            Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+            return $true
+        }
+
+        $reader = New-Object System.IO.StreamReader($context.Request.InputStream, [System.Text.Encoding]::UTF8)
+        $raw = $reader.ReadToEnd()
+        $reader.Close()
+        try { $body = $raw | ConvertFrom-Json }
+        catch {
+            Send-Text $context '{"error":"Invalid JSON"}' 400 'application/json; charset=utf-8'
+            return $true
+        }
+        $text = [string]$body.text
+        if ($null -eq $text) { $text = '' }
+        $text = $text.Trim()
+        if ($text.Length -lt 50 -or $text.Length -gt 1000) {
+            Send-Text $context '{"error":"Invalid text length"}' 400 'application/json; charset=utf-8'
+            return $true
+        }
+        $milestone = [int]$body.milestone
+        if ($milestone -lt 10 -or ($milestone % 10) -ne 0) {
+            Send-Text $context '{"error":"Invalid milestone"}' 400 'application/json; charset=utf-8'
+            return $true
+        }
+        $storePath = Join-Path $repoRoot '.heart-accountability.json'
+        $store = @{ entries = @() }
+        if (Test-Path -LiteralPath $storePath) {
+            try {
+                $parsed = Get-Content -LiteralPath $storePath -Raw -Encoding UTF8 | ConvertFrom-Json
+                if ($parsed.entries) { $store.entries = @($parsed.entries) }
+            }
+            catch { $store = @{ entries = @() } }
+        }
+        $entry = @{
+            id               = [guid]::NewGuid().ToString()
+            at               = [DateTimeOffset]::UtcNow.ToString('o')
+            accountKey       = [string]$session.accountKey
+            displayName      = [string]$session.name
+            milestone        = $milestone
+            text             = $text
+            shareAnonymously = [bool]$body.shareAnonymously
+            set              = [Math]::Max(1, [Math]::Min(11, [int]$body.set))
+            round            = [Math]::Max(1, [Math]::Min(3, [int]$body.round))
+            topic            = [Math]::Max(1, [Math]::Min(666, [int]$body.topic))
+        }
+        $store.entries += $entry
+        ($store | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $storePath -Encoding UTF8
+        Send-Text $context '{"ok":true}' 200 'application/json; charset=utf-8'
+        return $true
+    }
+
     return $false
 }
 

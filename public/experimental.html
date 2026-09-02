@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=88" />
-  <link rel="stylesheet" href="round2.css?v=9" />
+  <link rel="stylesheet" href="round2.css?v=10" />
   <link rel="stylesheet" href="experimental.css?v=16" />
   <script>
     (function () {
@@ -301,13 +301,31 @@
     </div>
   </dialog>
 
+  <dialog id="exp-accountability-dialog" class="round2-dialog exp-accountability-dialog">
+    <div class="round2-dialog-inner">
+      <p id="exp-accountability-prompt" class="round2-dialog-sub exp-accountability-prompt"></p>
+      <label class="exp-accountability-field">
+        <span class="visually-hidden">Describe what changed in your heart</span>
+        <textarea id="exp-accountability-text" class="exp-accountability-text" rows="6" minlength="50" maxlength="1000" placeholder="Describe what changed (50–1000 characters)"></textarea>
+      </label>
+      <p id="exp-accountability-error" class="exp-accountability-error" hidden role="alert"></p>
+      <label class="exp-accountability-share">
+        <input type="checkbox" id="exp-accountability-share" />
+        I agree to have my answers shared without using my name.
+      </label>
+      <div class="round2-dialog-actions">
+        <button type="button" id="exp-accountability-submit" class="btn-accent" disabled>Submit</button>
+      </div>
+    </div>
+  </dialog>
+
   <script src="languages.js?v=21"></script>
   <script src="round1-data.js?v=11"></script>
   <script src="round2-data.js?v=11"></script>
   <script src="round3-data.js?v=11"></script>
   <script src="experimental-geo.js?v=14"></script>
   <script src="experimental-scene.js?v=17"></script>
-  <script src="experimental.js?v=14"></script>
+  <script src="experimental.js?v=18"></script>
   <script src="view-nav.js?v=6"></script>
   <script src="found-us.js?v=4"></script>
   <script>

@@ -11,8 +11,13 @@ const ACCOUNT_PATH = '/api/experimental-account';
 const AUTH_PATH = '/api/experimental-auth';
 const PRESENCE_PATH = '/api/experimental-presence';
 const FOUND_US_PATH = '/api/found-us';
+const HEART_ACCOUNTABILITY_PATH = '/api/experimental-heart-accountability';
 const MAP_TILE_PATH = '/api/map-tile';
 const FOUND_US_KV_KEY = 'found-us-v1';
+const HEART_ACCOUNTABILITY_KV_KEY = 'heart-accountability-v1';
+const HEART_ACCOUNTABILITY_MIN = 50;
+const HEART_ACCOUNTABILITY_MAX = 1000;
+const HEART_ACCOUNTABILITY_EVERY = 10;
 const FOUND_US_CHOICES = ['friend', 'church', 'norman', 'camp', 'slack'];
 const FOUND_US_LABELS = {
   friend: 'A friend told me',
@@ -90,6 +95,16 @@ export default {
     if (url.pathname === FOUND_US_PATH || url.pathname === `${FOUND_US_PATH}/`) {
       if (request.method === 'POST') {
         return handleFoundUsPost(request, env);
+      }
+      return jsonResponse({ error: 'Method not allowed' }, 405);
+    }
+
+    if (
+      url.pathname === HEART_ACCOUNTABILITY_PATH ||
+      url.pathname === `${HEART_ACCOUNTABILITY_PATH}/`
+    ) {
+      if (request.method === 'POST') {
+        return handleHeartAccountabilityPost(request, env, ctx);
       }
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
@@ -377,6 +392,113 @@ async function handleFoundUsPost(request, env) {
   store.week[choice] += 1;
   await kv.put(FOUND_US_KV_KEY, JSON.stringify(store));
   return jsonResponse({ ok: true });
+}
+
+async function loadHeartAccountabilityStore(env) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) return { entries: [] };
+  try {
+    const raw = await kv.get(HEART_ACCOUNTABILITY_KV_KEY);
+    if (!raw) return { entries: [] };
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed?.entries)) return { entries: [] };
+    return parsed;
+  } catch {
+    return { entries: [] };
+  }
+}
+
+async function handleHeartAccountabilityPost(request, env, ctx) {
+  const kv = env.EXPERIMENTAL_KV;
+  if (!kv) {
+    return jsonResponse({ error: 'Storage is not configured' }, 503);
+  }
+  const session = await readSession(request, env);
+  if (!session) {
+    return jsonResponse({ error: 'auth' }, 401);
+  }
+  let body = null;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'Invalid JSON' }, 400);
+  }
+  const text = String(body?.text || '').trim();
+  if (text.length < HEART_ACCOUNTABILITY_MIN || text.length > HEART_ACCOUNTABILITY_MAX) {
+    return jsonResponse({ error: 'Invalid text length' }, 400);
+  }
+  const milestone = Number(body?.milestone);
+  if (
+    !Number.isFinite(milestone) ||
+    milestone < HEART_ACCOUNTABILITY_EVERY ||
+    milestone % HEART_ACCOUNTABILITY_EVERY !== 0
+  ) {
+    return jsonResponse({ error: 'Invalid milestone' }, 400);
+  }
+  const entry = {
+    id: crypto.randomUUID(),
+    at: new Date().toISOString(),
+    accountKey: session.accountKey || '',
+    displayName: session.name || '',
+    milestone,
+    text,
+    shareAnonymously: !!body?.shareAnonymously,
+    set: Math.max(1, Math.min(11, Number(body?.set) || 1)),
+    round: Math.max(1, Math.min(3, Number(body?.round) || 1)),
+    topic: Math.max(1, Math.min(666, Number(body?.topic) || 1)),
+  };
+  const store = await loadHeartAccountabilityStore(env);
+  store.entries.push(entry);
+  await kv.put(HEART_ACCOUNTABILITY_KV_KEY, JSON.stringify(store));
+  if (ctx) {
+    ctx.waitUntil(sendHeartAccountabilityEmail(env, entry));
+  } else {
+    await sendHeartAccountabilityEmail(env, entry);
+  }
+  return jsonResponse({ ok: true });
+}
+
+async function sendHeartAccountabilityEmail(env, entry) {
+  if (!env.RESEND_API_KEY) {
+    console.error('heart-accountability: RESEND_API_KEY is not set');
+    return;
+  }
+  const to = env.NOTIFY_EMAIL || 'repentance101ministry.admin@gmail.com';
+  const from = env.RESEND_FROM || 'Living Word Map <notifications@repentance101.com>';
+  const who = entry.displayName || 'participant';
+  const subject = `[LWM] Heart accountability · ${entry.milestone} Yes in a row — ${who}`;
+  const text = [
+    'Repentance Project 2026 — Heart change accountability',
+    '',
+    `Milestone: ${entry.milestone} consecutive Yes answers`,
+    `Submitted: ${entry.at}`,
+    `Participant: ${entry.displayName || '(no name on file)'}`,
+    `Account key: ${entry.accountKey || '(unknown)'}`,
+    `Set ${entry.set} · Round ${entry.round} · Topic ${String(entry.topic).padStart(3, '0')}`,
+    `Agreed to anonymous sharing: ${entry.shareAnonymously ? 'Yes' : 'No'}`,
+    '',
+    '--- answer ---',
+    entry.text,
+  ].join('\n');
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from,
+      to: [to],
+      subject,
+      text,
+    }),
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    console.error('heart-accountability Resend error', res.status, errText);
+  }
 }
 
 async function sendFoundUsWeekly(env) {
