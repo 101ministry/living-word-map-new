@@ -30,6 +30,22 @@ html[data-theme="light"] {
   --quote: #2a2418;
 }
 
+html[data-theme="dusk"] {
+  color-scheme: dark;
+  --bg-deep: #3a3142;
+  --bg-panel: #4a3f50;
+  --bg-elevated: #5a4c5c;
+  --border: rgba(255, 214, 168, 0.16);
+  --text: #f3e6d4;
+  --text-muted: #c9b4a6;
+  --principality: #d4af6a;
+  --root: #8aadc4;
+  --fruit: #c492aa;
+  --topic: #8a8494;
+  --accent: #e0b060;
+  --quote: #f7ecd8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5337,6 +5353,25 @@ html[data-theme="light"] .site-nav-btn.is-active {
 html[data-theme="light"] .exp-gate-card,
 html[data-theme="light"] .exp-profile-panel {
   box-shadow: 0 12px 36px rgba(24, 20, 12, 0.08);
+}
+
+html[data-theme="dusk"] .btn-ghost:hover,
+html[data-theme="dusk"] .btn-ghost:focus-visible {
+  background: rgba(255, 214, 168, 0.08);
+}
+
+html[data-theme="dusk"] .btn-icon:hover {
+  border-color: rgba(255, 214, 168, 0.32);
+}
+
+html[data-theme="dusk"] .site-nav-btn:hover,
+html[data-theme="dusk"] .site-nav-btn:focus-visible,
+html[data-theme="dusk"] .site-nav-btn.is-active {
+  background: rgba(224, 176, 96, 0.16);
+}
+
+html[data-theme="dusk"] .header {
+  background: linear-gradient(180deg, #4a3f50 0%, #3a3142 100%);
 }
 
 .site-theme-floating {

@@ -2,7 +2,6 @@
   'use strict';
 
   const STORAGE_KEY = 'lwm-theme';
-  const MAP_DARK_VIEWS = new Set(['globe', 'constellation', 'explore']);
 
   function readPreference() {
     try {
@@ -22,30 +21,23 @@
     }
   }
 
-  function readViewMode() {
-    const fromDom = document.documentElement.dataset.viewMode;
-    if (fromDom) return fromDom;
-    try {
-      return new URLSearchParams(window.location.search).get('view') || 'constellation';
-    } catch {
-      return 'constellation';
-    }
-  }
-
   function isIndexShell() {
     return Boolean(document.getElementById('map') || document.body?.hasAttribute('data-site-page'));
   }
 
-  function isMapDarkLocked() {
+  function isMapPage() {
     if (!isIndexShell()) return false;
     const sitePage = document.body?.dataset?.sitePage || 'map';
-    if (sitePage !== 'map') return false;
-    return MAP_DARK_VIEWS.has(readViewMode());
+    return sitePage === 'map';
+  }
+
+  function colorSchemeFor(theme) {
+    return theme === 'light' ? 'light' : 'dark';
   }
 
   function effectiveTheme() {
-    if (readPreference() === 'light' && !isMapDarkLocked()) return 'light';
-    return 'dark';
+    if (readPreference() !== 'light') return 'dark';
+    return isMapPage() ? 'dusk' : 'light';
   }
 
   function updateToggle(preference) {
@@ -55,8 +47,8 @@
     btn.setAttribute('aria-pressed', light ? 'true' : 'false');
     btn.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
     btn.title = light
-      ? 'Dark mode (Globe, Constellation, and Explore All stay dark)'
-      : 'Light mode';
+      ? 'Dark mode'
+      : 'Light mode (Globe Map uses a dusk brightness)';
     btn.textContent = light ? '☀' : '☾';
   }
 
@@ -94,7 +86,7 @@
     const theme = effectiveTheme();
     document.documentElement.dataset.themePreference = preference;
     document.documentElement.dataset.theme = theme;
-    document.documentElement.style.colorScheme = theme;
+    document.documentElement.style.colorScheme = colorSchemeFor(theme);
     updateToggle(preference);
   }
 
@@ -110,17 +102,11 @@
       const path = (window.location.pathname || '').split('/').pop() || 'index.html';
       const params = new URLSearchParams(window.location.search);
       const site = params.get('site');
-      const view = params.get('view') || 'constellation';
       const onIndex = path === 'index.html' || path === '';
       const onMap = onIndex && (!site || site === 'map');
-      const locked = onMap && MAP_DARK_VIEWS.has(view);
-      if (!locked) {
-        document.documentElement.dataset.theme = 'light';
-        document.documentElement.style.colorScheme = 'light';
-      } else {
-        document.documentElement.dataset.theme = 'dark';
-        document.documentElement.style.colorScheme = 'dark';
-      }
+      const theme = onMap ? 'dusk' : 'light';
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = colorSchemeFor(theme);
     } catch {
       document.documentElement.dataset.theme = 'light';
       document.documentElement.style.colorScheme = 'light';
