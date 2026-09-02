@@ -21,14 +21,18 @@
     }
   }
 
-  function isIndexShell() {
-    return Boolean(document.getElementById('map') || document.body?.hasAttribute('data-site-page'));
-  }
-
-  function isMapPage() {
-    if (!isIndexShell()) return false;
-    const sitePage = document.body?.dataset?.sitePage || 'map';
-    return sitePage === 'map';
+  function isGlobeView() {
+    if (document.documentElement.classList.contains('is-globe-view')) return true;
+    if (document.documentElement.dataset.viewMode === 'globe') return true;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const path = (window.location.pathname || '').split('/').pop() || 'index.html';
+      const onIndex = path === 'index.html' || path === '';
+      const site = params.get('site');
+      return onIndex && (!site || site === 'map') && params.get('view') === 'globe';
+    } catch {
+      return false;
+    }
   }
 
   function colorSchemeFor(theme) {
@@ -36,8 +40,9 @@
   }
 
   function effectiveTheme() {
-    if (readPreference() !== 'light') return 'dark';
-    return isMapPage() ? 'dusk' : 'light';
+    if (isGlobeView()) return 'dark';
+    if (readPreference() === 'light') return 'light';
+    return 'dusk';
   }
 
   function updateToggle(preference) {
@@ -45,10 +50,10 @@
     if (!btn) return;
     const light = preference === 'light';
     btn.setAttribute('aria-pressed', light ? 'true' : 'false');
-    btn.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+    btn.setAttribute('aria-label', light ? 'Switch to dusk theme' : 'Switch to light theme');
     btn.title = light
-      ? 'Dark mode'
-      : 'Light mode (Globe Map uses a dusk brightness)';
+      ? 'Dusk mode (Globe stays dark)'
+      : 'Light mode';
     btn.textContent = light ? '☀' : '☾';
   }
 
@@ -93,23 +98,21 @@
   function bootFromHead() {
     const preference = readPreference();
     document.documentElement.dataset.themePreference = preference;
-    if (preference !== 'light') {
-      document.documentElement.dataset.theme = 'dark';
-      document.documentElement.style.colorScheme = 'dark';
-      return;
-    }
     try {
       const path = (window.location.pathname || '').split('/').pop() || 'index.html';
       const params = new URLSearchParams(window.location.search);
       const site = params.get('site');
+      const view = params.get('view') || '';
       const onIndex = path === 'index.html' || path === '';
-      const onMap = onIndex && (!site || site === 'map');
-      const theme = onMap ? 'dusk' : 'light';
+      const onGlobe = onIndex && (!site || site === 'map') && view === 'globe';
+      let theme = 'dusk';
+      if (onGlobe) theme = 'dark';
+      else if (preference === 'light') theme = 'light';
       document.documentElement.dataset.theme = theme;
       document.documentElement.style.colorScheme = colorSchemeFor(theme);
     } catch {
-      document.documentElement.dataset.theme = 'light';
-      document.documentElement.style.colorScheme = 'light';
+      document.documentElement.dataset.theme = preference === 'light' ? 'light' : 'dusk';
+      document.documentElement.style.colorScheme = colorSchemeFor(document.documentElement.dataset.theme);
     }
   }
 
