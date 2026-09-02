@@ -20,11 +20,18 @@
       <div>
         <p class="downloads-kicker"><a href="index.html">← Back to map</a></p>
         <h2>Bold Love</h2>
-        <p class="teaching-subtitle">Future tracks will live on this page, separate from Accelerated Discipleship.</p>
+        <p class="teaching-subtitle">Sessions from the Bold Love series. Play in order, or download any day to your device.</p>
       </div>
       <a class="btn-accent" href="accelerated-discipleship.html">← Accelerated Discipleship</a>
     </header>
-    <p class="downloads-placeholder">Bold Love downloads coming soon.</p>
+    <div class="downloads-player-bar">
+      <button type="button" id="downloads-play-all" class="btn-accent">Play all in order</button>
+      <p id="downloads-now-playing" class="downloads-now-playing">Play in order, or download any session to your device.</p>
+    </div>
+    <audio id="downloads-audio" preload="none" controls class="downloads-audio"></audio>
+    <ul id="downloads-list" class="downloads-list"></ul>
   </section>
+  <script src="downloads-playlist-bold-love.js?v=1"></script>
+  <script src="downloads-section.js?v=4"></script>
 </body>
 </html>

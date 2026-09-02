@@ -32,7 +32,7 @@ const INVITES_KV_KEY = 'invites-v1';
 const SESSION_KV_PREFIX = 'sess:';
 const SESSION_COOKIE = 'lwm_exp_session';
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-const DOWNLOADS_PREFIX = '/audio/accelerated-discipleship/';
+const DOWNLOADS_PREFIXES = ['/audio/accelerated-discipleship/', '/audio/bold-love/'];
 const NOMINATIM_UA = 'LivingWordMap/1.0 (experimental prayer builder; https://map.repentance101.com/)';
 
 export default {
@@ -109,7 +109,7 @@ export default {
       return jsonResponse({ error: 'Method not allowed' }, 405);
     }
 
-    if (url.pathname.startsWith(DOWNLOADS_PREFIX)) {
+    if (DOWNLOADS_PREFIXES.some((prefix) => url.pathname.startsWith(prefix))) {
       return handleDownloadsAudio(request, env);
     }
 
@@ -142,7 +142,7 @@ async function handleDownloadsAudio(request, env) {
 
   const url = new URL(request.url);
   const key = decodeURIComponent(url.pathname.replace(/^\//, ''));
-  if (!/^audio\/accelerated-discipleship\/[A-Za-z0-9._-]+\.mp3$/.test(key)) {
+  if (!/^audio\/(accelerated-discipleship|bold-love)\/[A-Za-z0-9._-]+\.mp3$/.test(key)) {
     return new Response('Not found', { status: 404 });
   }
 

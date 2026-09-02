@@ -11,7 +11,8 @@
   let activeIndex = -1;
 
   function audioUrl(piece, download) {
-    const path = `/audio/accelerated-discipleship/${piece.file}`;
+    const prefix = data.audioPrefix || 'audio/accelerated-discipleship';
+    const path = `/${prefix}/${piece.file}`;
     if (!download) return path;
     const name = encodeURIComponent(piece.downloadName || piece.file);
     return `${path}?download=1&filename=${name}`;
