@@ -61,7 +61,7 @@
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.id = id;
-    btn.className = 'site-theme-toggle btn-icon';
+    btn.className = 'site-theme-toggle';
     btn.addEventListener('click', () => {
       writePreference(readPreference() === 'light' ? 'dark' : 'light');
       apply();
@@ -84,8 +84,13 @@
     if (!header || header.querySelector('.site-theme-toggle')) return;
     const btn = makeToggleButton('site-theme-toggle-builder');
     btn.classList.add('site-theme-toggle-builder');
+    const langLabel = header.querySelector('label[for="exp-lang"]');
+    if (langLabel) {
+      langLabel.parentNode.insertBefore(btn, langLabel);
+      return;
+    }
     const meta = header.querySelector('.round2-header-meta');
-    if (meta) header.insertBefore(btn, meta);
+    if (meta) meta.insertBefore(btn, meta.firstChild);
     else header.appendChild(btn);
   }
 
