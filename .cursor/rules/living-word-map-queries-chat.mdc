@@ -65,3 +65,16 @@ When the user pastes a Riverside preview URL, fetch the transcript and reply wit
 - **Scheduler:** `scripts/youtube-upload-remaining.ps1` posts one clip every ~14 min 24 sec. Legacy sidecars (no `privacy` field) upload **public**; new sidecars must include `"privacy": "private"`.
 - **Optional extra description link:** when the user supplies one for a batch (e.g. Spotify episode), add it in the sidecar `summary` between the topic paragraph and the shared hashtag footer. Day 29 uses: `https://creators.spotify.com/pod/profile/dream-interpretation/episodes/Generational-Curses--Breaking-Cycles-e17nr32` (label e.g. `Generational Curses — Breaking Cycles (Spotify): …`).
 - Do **not** expect pre-downloaded transcript `.txt` files unless user also provides them; prefer fetching from the links file.
+
+## Instagram Reels (Meta Graph API — not Selenium)
+
+**SHORT sections only** (`[N] SHORT` in notepad, or full metadata with Instagram hashtags). **Skip Instagram** for `[N] YOUTUBE SEGMENT` blocks (Title + YouTube 3 + Summary only).
+
+**On `go` for SHORT transcripts:** write notepad metadata as usual, then write `{clip}.mp4.instagram.json` into the Instagram queue when the paired MP4 is present (or note which export to drop).
+
+- **Queue:** `C:\Users\tweed\Downloads\Video\R&R\shorts and text\instagram-uploads`
+- **Sidecar:** `{clip}.mp4.instagram.json` — `{ "file": "clip.mp4", "caption": "title + summary + instagram hashtags + footer" }`
+- **Config (once):** `%USERPROFILE%\.living-word-map\instagram\config.json` via `node scripts/instagram-upload/upload.mjs discover --token "…"`
+- **Upload one:** `node scripts/instagram-upload/upload.mjs upload-dir --dir "...\instagram-uploads" --limit 1 --delete-after`
+- **Scheduler:** `scripts/instagram-upload-remaining.ps1` (~60 min; Meta publish limits)
+- **Backfill sidecars from notepad:** `node scripts/instagram-upload/build-from-notepad.mjs --notepad "...\upload-metadata-notepad.txt" --queue "...\instagram-uploads" --all-short`

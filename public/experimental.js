@@ -119,16 +119,15 @@
     heartSub: document.getElementById('exp-heart-sub'),
     heartYes: document.getElementById('exp-heart-yes'),
     heartNo: document.getElementById('exp-heart-no'),
+    heartExplain: document.getElementById('exp-heart-explain'),
     advanceDialog: document.getElementById('exp-advance-dialog'),
     advanceTitle: document.getElementById('exp-advance-title'),
     advanceSub: document.getElementById('exp-advance-sub'),
     advanceGo: document.getElementById('exp-advance-go'),
-    accountabilityDialog: document.getElementById('exp-accountability-dialog'),
     accountabilityPrompt: document.getElementById('exp-accountability-prompt'),
     accountabilityText: document.getElementById('exp-accountability-text'),
     accountabilityShare: document.getElementById('exp-accountability-share'),
     accountabilityError: document.getElementById('exp-accountability-error'),
-    accountabilitySubmit: document.getElementById('exp-accountability-submit'),
     canvas: document.getElementById('exp-canvas'),
     caption: document.getElementById('exp-scene-caption'),
     hud: document.getElementById('exp-hud'),
@@ -148,7 +147,6 @@
   let calDepartedSectionFirstTopic = null;
   let awaitingCalReturn = false;
   let pendingAdvance = null;
-  let accountabilityContinuation = null;
   let accountabilityMilestonePending = 0;
 
   function normalizeLang(code) {
@@ -1156,10 +1154,44 @@
     updateBuilderHud(false);
   }
 
+  function isHeartExplainMilestone(n) {
+    return n >= HEART_ACCOUNTABILITY_EVERY && n % HEART_ACCOUNTABILITY_EVERY === 0;
+  }
+
+  function heartExplainMilestoneFor(current, dest) {
+    if (isHeartExplainMilestone(dest)) return dest;
+    if (isHeartExplainMilestone(current)) return current;
+    return 0;
+  }
+
+  function syncHeartExplain(milestone) {
+    accountabilityMilestonePending = milestone;
+    const wrap = els.heartExplain;
+    const show = milestone > 0;
+    if (wrap) wrap.hidden = !show;
+    els.heartDialog?.classList.toggle('exp-heart-dialog-explain', show);
+    if (!show) {
+      if (els.accountabilityError) els.accountabilityError.hidden = true;
+      return;
+    }
+    if (els.accountabilityPrompt) {
+      els.accountabilityPrompt.textContent = accountabilityPromptText(milestone);
+    }
+    if (els.accountabilityText) {
+      els.accountabilityText.value = '';
+      els.accountabilityText.setAttribute('maxlength', String(HEART_ACCOUNTABILITY_MAX));
+    }
+    if (els.accountabilityShare) els.accountabilityShare.checked = false;
+    if (els.accountabilityError) els.accountabilityError.hidden = true;
+  }
+
   function showHeartDialogForNavigation(targetNum) {
     pendingNavigation = clampTopic(targetNum);
     pendingHeartCheck = true;
+    const current = clampTopic(state.currentTopic);
+    syncHeartExplain(heartExplainMilestoneFor(current, pendingNavigation));
     if (!els.heartDialog.open) els.heartDialog.showModal();
+    if (accountabilityMilestonePending > 0) els.accountabilityText?.focus();
   }
 
   function requestTopicChange(targetNum) {
@@ -1170,7 +1202,9 @@
         ?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       return;
     }
-    if (currentProgress().heartAnswered.includes(current)) {
+    const answered = currentProgress().heartAnswered.includes(current);
+    const needExplain = heartExplainMilestoneFor(current, target) > 0;
+    if (answered && !needExplain) {
       goToTopic(target);
       return;
     }
@@ -1209,44 +1243,32 @@
   }
 
   function accountabilityPromptText(milestone) {
-    return `You've said ${milestone} times that heart change happened. Please describe exactly what changed. Remember, your answers are counted before Jesus. Repentance without accountability is fake.`;
+    return `This is a checkpoint at topic ${milestone}. Please describe exactly what changed. Remember, your answers are counted before Jesus. Repentance without accountability is fake.`;
   }
 
-  function updateAccountabilitySubmitState() {
-    if (!els.accountabilitySubmit || !els.accountabilityText) return;
-    const len = els.accountabilityText.value.trim().length;
-    els.accountabilitySubmit.disabled =
-      len < HEART_ACCOUNTABILITY_MIN || len > HEART_ACCOUNTABILITY_MAX;
-  }
-
-  function showAccountabilityDialog(milestone, onDone) {
-    if (!els.accountabilityDialog || DEMO_MODE) {
-      onDone();
+  function setHeartExplainError(message) {
+    if (!els.accountabilityError) return;
+    if (!message) {
+      els.accountabilityError.hidden = true;
+      els.accountabilityError.textContent = '';
       return;
     }
-    accountabilityContinuation = onDone;
-    accountabilityMilestonePending = milestone;
-    if (els.accountabilityPrompt) {
-      els.accountabilityPrompt.textContent = accountabilityPromptText(milestone);
-    }
-    if (els.accountabilityText) {
-      els.accountabilityText.value = '';
-      els.accountabilityText.setAttribute('maxlength', String(HEART_ACCOUNTABILITY_MAX));
-    }
-    if (els.accountabilityShare) els.accountabilityShare.checked = false;
-    if (els.accountabilityError) els.accountabilityError.hidden = true;
-    updateAccountabilitySubmitState();
-    if (!els.accountabilityDialog.open) els.accountabilityDialog.showModal();
-    els.accountabilityText?.focus();
+    els.accountabilityError.textContent = message;
+    els.accountabilityError.hidden = false;
   }
 
-  async function submitAccountabilityAnswer() {
-    if (!els.accountabilityText || !els.accountabilitySubmit) return;
-    const text = els.accountabilityText.value.trim();
+  async function submitHeartExplainThen(onDone) {
+    const text = (els.accountabilityText?.value || '').trim();
     const len = text.length;
-    if (len < HEART_ACCOUNTABILITY_MIN || len > HEART_ACCOUNTABILITY_MAX) return;
-    els.accountabilitySubmit.disabled = true;
-    if (els.accountabilityError) els.accountabilityError.hidden = true;
+    if (len < HEART_ACCOUNTABILITY_MIN || len > HEART_ACCOUNTABILITY_MAX) {
+      setHeartExplainError(
+        `Please write between ${HEART_ACCOUNTABILITY_MIN} and ${HEART_ACCOUNTABILITY_MAX} characters.`
+      );
+      els.accountabilityText?.focus();
+      return false;
+    }
+    setHeartExplainError('');
+    if (els.heartYes) els.heartYes.disabled = true;
     try {
       const res = await fetch('/api/experimental-heart-accountability', {
         method: 'POST',
@@ -1262,18 +1284,14 @@
         }),
       });
       if (!res.ok) throw new Error(`submit failed (${res.status})`);
-      if (els.accountabilityDialog?.open) els.accountabilityDialog.close();
       accountabilityMilestonePending = 0;
-      const cont = accountabilityContinuation;
-      accountabilityContinuation = null;
-      cont?.();
+      onDone();
+      return true;
     } catch {
-      if (els.accountabilityError) {
-        els.accountabilityError.textContent =
-          'Could not save your answer. Check your connection and try again.';
-        els.accountabilityError.hidden = false;
-      }
-      updateAccountabilitySubmitState();
+      setHeartExplainError('Could not save your answer. Check your connection and try again.');
+      return false;
+    } finally {
+      if (els.heartYes) els.heartYes.disabled = false;
     }
   }
 
@@ -1341,23 +1359,17 @@
 
     let landed = false;
     let openCalSilently = false;
-    let accountabilityMilestone = 0;
+
+    const alreadyYes = prog.heartYes.includes(current);
+    if (!alreadyYes) {
+      prog.heartYes.push(current);
+      landed = true;
+    }
+
     if (yes) {
-      const already = prog.heartYes.includes(current);
-      if (!already) prog.heartYes.push(current);
       prog.consecutiveNo = 0;
-      if (!already) {
-        landed = true;
+      if (!alreadyYes) {
         prog.consecutiveYes = (prog.consecutiveYes || 0) + 1;
-        if (
-          !DEMO_MODE &&
-          prog.consecutiveYes % HEART_ACCOUNTABILITY_EVERY === 0
-        ) {
-          accountabilityMilestone = prog.consecutiveYes;
-        }
-      }
-      if (sectionId && !sectionWasComplete && isSectionComplete(sectionId)) {
-        SCENE.onSectionComplete();
       }
     } else {
       prog.consecutiveNo += 1;
@@ -1370,6 +1382,10 @@
       }
     }
 
+    if (sectionId && !sectionWasComplete && isSectionComplete(sectionId)) {
+      SCENE.onSectionComplete();
+    }
+
     saveState();
     updateSidebarTopic(current);
     renderCurrentTopic();
@@ -1377,23 +1393,34 @@
     syncScene();
     if (landed) SCENE.onTopicYes();
 
-    const continueAfterHeart = () => {
-      window.setTimeout(() => {
-        if (destination) goToTopic(destination);
-        if (yes) maybeOfferAdvance();
-        if (openCalSilently && DATA1.calLink) {
-          calDepartedAt = Date.now();
-          awaitingCalReturn = true;
-          window.open(DATA1.calLink, '_blank', 'noopener,noreferrer');
-        }
-      }, 50);
-    };
+    window.setTimeout(() => {
+      if (destination) goToTopic(destination);
+      maybeOfferAdvance();
+      if (openCalSilently && DATA1.calLink) {
+        calDepartedAt = Date.now();
+        awaitingCalReturn = true;
+        window.open(DATA1.calLink, '_blank', 'noopener,noreferrer');
+      }
+    }, 50);
+  }
 
-    if (accountabilityMilestone > 0) {
-      showAccountabilityDialog(accountabilityMilestone, continueAfterHeart);
-    } else {
-      continueAfterHeart();
-    }
+  function restartSectionList(sectionFirstTopic) {
+    const start = clampTopic(sectionFirstTopic || 1);
+    const t = topicData(start);
+    const sectionId = t?.sectionId;
+    const prog = currentProgress();
+    const nums = sectionId
+      ? (visibleSections().find(s => s.id === sectionId)?.topics || []).map(item => item.number)
+      : [start];
+    prog.heartYes = prog.heartYes.filter(n => !nums.includes(n));
+    prog.heartAnswered = prog.heartAnswered.filter(n => !nums.includes(n));
+    prog.consecutiveNo = 0;
+    prog.consecutiveYes = 0;
+    saveState();
+    goToTopic(start);
+    refreshSidebarMarks();
+    updateBuilderHud(true);
+    syncScene();
   }
 
   function handleCalReturn() {
@@ -1401,14 +1428,12 @@
     awaitingCalReturn = false;
     const elapsed = Date.now() - calDepartedAt;
     calDepartedAt = null;
+    const resetTo = calDepartedSectionFirstTopic || state.currentTopic;
+    calDepartedSectionFirstTopic = null;
     if (elapsed < CAL_MS) {
-      const resetTo = calDepartedSectionFirstTopic || state.currentTopic;
-      calDepartedSectionFirstTopic = null;
-      saveState();
-      goToTopic(resetTo);
+      restartSectionList(resetTo);
       return;
     }
-    calDepartedSectionFirstTopic = null;
     saveState();
   }
 
@@ -1642,8 +1667,18 @@
     }
   });
 
-  els.heartYes.addEventListener('click', () => advanceAfterHeart(true));
-  els.heartNo.addEventListener('click', () => advanceAfterHeart(false));
+  els.heartYes.addEventListener('click', async () => {
+    if (accountabilityMilestonePending > 0) {
+      await submitHeartExplainThen(() => advanceAfterHeart(true));
+      return;
+    }
+    advanceAfterHeart(true);
+  });
+  els.heartNo.addEventListener('click', () => {
+    accountabilityMilestonePending = 0;
+    setHeartExplainError('');
+    advanceAfterHeart(false);
+  });
   els.heartDismiss.addEventListener('click', () => {
     if (els.heartDialog?.open) els.heartDialog.close();
   });
@@ -1653,15 +1688,6 @@
       e.preventDefault();
       if (els.heartDialog?.open) els.heartDialog.close();
     }
-  });
-
-  els.accountabilityText?.addEventListener('input', updateAccountabilitySubmitState);
-  els.accountabilitySubmit?.addEventListener('click', () => {
-    submitAccountabilityAnswer();
-  });
-  els.accountabilityDialog?.addEventListener('cancel', e => e.preventDefault());
-  els.accountabilityDialog?.addEventListener('keydown', e => {
-    if (e.key === 'Escape') e.preventDefault();
   });
 
   els.advanceGo.addEventListener('click', () => {

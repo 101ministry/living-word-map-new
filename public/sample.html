@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=104" />
   <script src="site-theme.js?v=6"></script>
-  <link rel="stylesheet" href="round2.css?v=10" />
+  <link rel="stylesheet" href="round2.css?v=11" />
   <link rel="stylesheet" href="experimental.css?v=18" />
   <script>
     document.documentElement.classList.add('exp-sample', 'exp-record');
@@ -221,6 +221,19 @@
       <button type="button" id="exp-heart-dismiss" class="round2-dialog-close" aria-label="Close dialog">×</button>
       <h3 id="exp-heart-title">Did anything change in your heart?</h3>
       <p id="exp-heart-sub" class="round2-dialog-sub">When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.</p>
+      <div id="exp-heart-explain" class="exp-heart-explain" hidden>
+        <p id="exp-heart-explain-lead" class="round2-dialog-sub">If so, explain.</p>
+        <p id="exp-accountability-prompt" class="round2-dialog-sub exp-accountability-prompt"></p>
+        <label class="exp-accountability-field">
+          <span class="visually-hidden">Describe what changed in your heart</span>
+          <textarea id="exp-accountability-text" class="exp-accountability-text" rows="5" minlength="50" maxlength="1000" placeholder="Describe what changed (50–1000 characters)"></textarea>
+        </label>
+        <p id="exp-accountability-error" class="exp-accountability-error" hidden role="alert"></p>
+        <label class="exp-accountability-share">
+          <input type="checkbox" id="exp-accountability-share" />
+          I agree to have my answers shared without using my name.
+        </label>
+      </div>
       <div class="round2-dialog-actions">
         <button type="button" id="exp-heart-yes" class="btn-accent">Yes, my heart changed</button>
         <button type="button" id="exp-heart-no" class="round2-btn-ghost">No</button>
@@ -238,24 +251,6 @@
     </div>
   </dialog>
 
-  <dialog id="exp-accountability-dialog" class="round2-dialog exp-accountability-dialog">
-    <div class="round2-dialog-inner">
-      <p id="exp-accountability-prompt" class="round2-dialog-sub exp-accountability-prompt"></p>
-      <label class="exp-accountability-field">
-        <span class="visually-hidden">Describe what changed in your heart</span>
-        <textarea id="exp-accountability-text" class="exp-accountability-text" rows="6" minlength="50" maxlength="1000" placeholder="Describe what changed (50–1000 characters)"></textarea>
-      </label>
-      <p id="exp-accountability-error" class="exp-accountability-error" hidden role="alert"></p>
-      <label class="exp-accountability-share">
-        <input type="checkbox" id="exp-accountability-share" />
-        I agree to have my answers shared without using my name.
-      </label>
-      <div class="round2-dialog-actions">
-        <button type="button" id="exp-accountability-submit" class="btn-accent" disabled>Submit</button>
-      </div>
-    </div>
-  </dialog>
-
   <script src="languages.js?v=21"></script>
   <script src="prayers.js"></script>
   <script src="round1-data.js?v=11"></script>
@@ -264,7 +259,7 @@
   <script src="experimental-geo.js?v=14"></script>
   <script src="experimental-scene.js?v=17"></script>
   <script src="taxonomy-emoji.js?v=1"></script>
-  <script src="experimental.js?v=19"></script>
+  <script src="experimental.js?v=21"></script>
   <script src="site-nav.js?v=4"></script>
 </body>
 </html>

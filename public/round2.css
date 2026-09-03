@@ -550,8 +550,16 @@
   justify-content: flex-end;
 }
 
-.exp-accountability-dialog {
+#exp-heart-dialog.exp-heart-dialog-explain {
   max-width: min(520px, 92vw);
+}
+
+.exp-heart-explain {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.exp-heart-explain[hidden] {
+  display: none;
 }
 
 .exp-accountability-prompt {
