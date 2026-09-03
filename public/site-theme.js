@@ -46,38 +46,53 @@
   }
 
   function updateToggle(preference) {
-    const btn = document.getElementById('site-theme-toggle');
-    if (!btn) return;
     const light = preference === 'light';
-    btn.setAttribute('aria-pressed', light ? 'true' : 'false');
-    btn.setAttribute('aria-label', light ? 'Switch to dusk theme' : 'Switch to light theme');
-    btn.title = light
-      ? 'Dusk mode (Globe stays dark)'
-      : 'Light mode';
-    btn.textContent = light ? '☀' : '☾';
+    document.querySelectorAll('.site-theme-toggle').forEach(btn => {
+      btn.setAttribute('aria-pressed', light ? 'true' : 'false');
+      btn.setAttribute('aria-label', light ? 'Switch to dusk theme' : 'Switch to light theme');
+      btn.title = light
+        ? 'Dusk mode (Globe stays dark)'
+        : 'Light mode';
+      btn.textContent = light ? '☀' : '☾';
+    });
+  }
+
+  function makeToggleButton(id) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = id;
+    btn.className = 'site-theme-toggle btn-icon';
+    btn.addEventListener('click', () => {
+      writePreference(readPreference() === 'light' ? 'dark' : 'light');
+      apply();
+    });
+    return btn;
   }
 
   function findLanguageAnchor() {
     const headerLang = document.getElementById('language-select')?.closest('.language-control');
     if (headerLang) return headerLang;
     const roundSelect =
-      document.getElementById('exp-lang') ||
       document.getElementById('round1-lang') ||
       document.getElementById('round2-lang') ||
       document.getElementById('round3-lang');
     return roundSelect?.closest('label') || roundSelect || null;
   }
 
+  function placeBuilderToggle() {
+    const header = document.querySelector('.exp-header');
+    if (!header || header.querySelector('.site-theme-toggle')) return;
+    const btn = makeToggleButton('site-theme-toggle-builder');
+    btn.classList.add('site-theme-toggle-builder');
+    const meta = header.querySelector('.round2-header-meta');
+    if (meta) header.insertBefore(btn, meta);
+    else header.appendChild(btn);
+  }
+
   function ensureToggle() {
+    placeBuilderToggle();
     if (document.getElementById('site-theme-toggle')) return;
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.id = 'site-theme-toggle';
-    btn.className = 'site-theme-toggle btn-icon';
-    btn.addEventListener('click', () => {
-      writePreference(readPreference() === 'light' ? 'dark' : 'light');
-      apply();
-    });
+    const btn = makeToggleButton('site-theme-toggle');
 
     const anchor = findLanguageAnchor();
     if (anchor) {

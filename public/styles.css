@@ -5339,6 +5339,12 @@ body[data-site-page='downloads'] .teaching-header {
   margin-bottom: 0.15rem;
 }
 
+.exp-header .site-theme-toggle-builder {
+  margin-left: auto;
+  align-self: center;
+  margin-bottom: 0;
+}
+
 .site-theme-toggle[aria-pressed="true"] {
   border-color: rgba(201, 162, 39, 0.55);
   color: var(--accent);
