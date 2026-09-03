@@ -397,7 +397,10 @@
     els.topicNum.textContent = pad(t.number);
     els.topicTitle.textContent = t.label;
     const metaParts = [];
-    if (t.root) metaParts.push(`Root: ${t.root}`);
+    if (t.root) {
+      const rootLabel = window.LwmTaxonomyEmoji?.formatRootDisplay?.(t.root) || t.root;
+      metaParts.push(`Root: ${rootLabel}`);
+    }
     if (t.fruitDisplay) metaParts.push(`Fruit: ${t.fruitDisplay}`);
     if (t.principality) metaParts.push(`Principality: ${t.principality}`);
     els.topicMeta.textContent = metaParts.join(' · ');

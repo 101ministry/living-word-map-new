@@ -11,6 +11,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $Utf8 = [System.Text.UTF8Encoding]::new($false)
 . (Join-Path $PSScriptRoot 'lib-numbered-chart.ps1')
+. (Join-Path $PSScriptRoot 'lib-root-emoji.ps1')
 
 function Read-Utf8([string]$path) {
     return [System.IO.File]::ReadAllText($path, $Utf8)
@@ -145,7 +146,7 @@ for ($n = 1; $n -le 666; $n++) {
         if ($g.fruits) { $fruits = @($g.fruits) }
         elseif ($g.fruit) { $fruits = @($g.fruit) }
     }
-    $rootDisplay = ($roots | Where-Object { $_ } | ForEach-Object { ($_ -replace '[^\x00-\x7F\u0080-\u024F\u1E00-\u1EFF''\u2019\-(),./:;]+', ' ').Trim() }) -join ' and '
+    $rootDisplay = ($roots | Where-Object { $_ } | ForEach-Object { Format-RootForPrayer $_ }) -join ' and '
     $fruitDisplay = ($fruits | Where-Object { $_ }) -join ', '
     $principality = if ($topicToPrincipality.ContainsKey($n)) { $topicToPrincipality[$n] }
         elseif ($g -and $g.principality) { $g.principality } else { $null }
