@@ -57,19 +57,19 @@
     btn.textContent = light ? '☀' : '☾';
   }
 
+  function findLanguageAnchor() {
+    const headerLang = document.getElementById('language-select')?.closest('.language-control');
+    if (headerLang) return headerLang;
+    const roundSelect =
+      document.getElementById('exp-lang') ||
+      document.getElementById('round1-lang') ||
+      document.getElementById('round2-lang') ||
+      document.getElementById('round3-lang');
+    return roundSelect?.closest('label') || roundSelect || null;
+  }
+
   function ensureToggle() {
     if (document.getElementById('site-theme-toggle')) return;
-    let host = document.querySelector('.header-controls');
-    let floating = false;
-    if (!host) host = document.querySelector('.round2-header-meta');
-    if (!host) host = document.querySelector('.round2-header');
-    if (!host) {
-      const wrap = document.createElement('div');
-      wrap.className = 'site-theme-floating';
-      document.body.appendChild(wrap);
-      host = wrap;
-      floating = true;
-    }
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.id = 'site-theme-toggle';
@@ -78,12 +78,26 @@
       writePreference(readPreference() === 'light' ? 'dark' : 'light');
       apply();
     });
-    if (floating) host.appendChild(btn);
-    else {
-      const reset = host.querySelector('#reset-view');
-      if (reset) host.insertBefore(btn, reset);
-      else host.appendChild(btn);
+
+    const anchor = findLanguageAnchor();
+    if (anchor) {
+      const wrap = document.createElement('div');
+      wrap.className = 'site-theme-lang';
+      anchor.parentNode.insertBefore(wrap, anchor);
+      wrap.appendChild(btn);
+      wrap.appendChild(anchor);
+      return;
     }
+
+    const host = document.querySelector('.header-controls, .round2-header-meta, .teaching-header, .round2-header');
+    if (host) {
+      host.insertBefore(btn, host.firstChild);
+      return;
+    }
+    const wrap = document.createElement('div');
+    wrap.className = 'site-theme-floating';
+    wrap.appendChild(btn);
+    document.body.appendChild(wrap);
   }
 
   function apply() {

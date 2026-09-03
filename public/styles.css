@@ -3389,6 +3389,16 @@ html.is-globe-view .header-menu-btn.btn-icon {
     max-width: none;
   }
 
+  .site-theme-lang {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .site-theme-lang .language-control {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
   #language-select,
   .language-status {
     max-width: none;
@@ -5300,11 +5310,33 @@ body[data-site-page='downloads'] .teaching-header {
   }
 }
 
+.site-theme-lang {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.round2-header-meta .site-theme-lang {
+  align-items: center;
+}
+
+.round2-header-meta .site-theme-toggle {
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.site-theme-lang .language-control {
+  max-width: 13rem;
+}
+
 .site-theme-toggle {
   display: inline-flex;
   font-size: 1.05rem;
   line-height: 1;
   flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: 0.15rem;
 }
 
 .site-theme-toggle[aria-pressed="true"] {
