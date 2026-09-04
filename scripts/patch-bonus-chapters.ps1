@@ -24,20 +24,20 @@ $raw = [System.IO.File]::ReadAllText($OutputFile, [System.Text.Encoding]::UTF8)
 $json = $raw -replace '^window\.VIDEO_DATA\s*=\s*', '' -replace ';\s*$', ''
 $data = $json | ConvertFrom-Json
 
-$bonusByDay = @{}
+$bonusByVideo = @{}
 foreach ($video in $config.videos) {
     if ($video.bonusChapters) {
-        $bonusByDay[[string]$video.day] = @($video.bonusChapters)
+        $bonusByVideo["$($video.day):$($video.part)"] = @($video.bonusChapters)
     }
 }
 
 foreach ($video in $data.videos) {
-    $dayKey = [string]$video.day
-    if (-not $bonusByDay.ContainsKey($dayKey)) { continue }
+    $videoKey = "$($video.day):$($video.part)"
+    if (-not $bonusByVideo.ContainsKey($videoKey)) { continue }
 
     $topicChapters = @($video.chapters | Where-Object { -not $_.isBonus })
     $bonusChapters = @()
-    foreach ($bonus in $bonusByDay[$dayKey]) {
+    foreach ($bonus in $bonusByVideo[$videoKey]) {
         $start = Parse-Timestamp ([string]$bonus.start)
         if ($null -eq $start) { continue }
         $bonusChapters += [pscustomobject]@{

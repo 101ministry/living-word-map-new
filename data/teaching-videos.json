@@ -215,8 +215,46 @@
         { "label": "Solange's dream interpretation", "start": "3:06:55" }
       ]
     },
-    { "day": 8, "part": 1, "title": "Day 8 - Prayer Topics", "youtubeId": "lG1p-zYul8E", "url": "https://www.youtube.com/watch?v=lG1p-zYul8E" },
-    { "day": 8, "part": 2, "title": "Day 8 - Prayer Topics (Part 2)", "youtubeId": "GQdgqRdvSd8", "url": "https://www.youtube.com/watch?v=GQdgqRdvSd8" },
+    {
+      "day": 8,
+      "part": 1,
+      "title": "Day 8 - Prayer Topics",
+      "youtubeId": "lG1p-zYul8E",
+      "url": "https://www.youtube.com/watch?v=lG1p-zYul8E",
+      "topicStart": 587,
+      "topicEnd": 577,
+      "chapterTimestamps": {
+        "587": "1:19:41",
+        "586": "1:28:31",
+        "585": "1:37:05",
+        "584": "1:45:00",
+        "583": "2:17:23",
+        "582": "2:39:19",
+        "581": "2:40:24",
+        "580": "2:42:06",
+        "579": "2:43:51",
+        "578": "2:45:12",
+        "577": "2:47:26"
+      },
+      "bonusChapters": [
+        { "label": "Faith and Assurance", "start": "0:01" },
+        { "label": "Teaching on Abram and the King Moab offering firstborn sacrifice", "start": "5:55" },
+        { "label": "How much our own words deny or permit God to invade our lives", "start": "20:43" },
+        { "label": "How to glorify God, even through cancer/afflictions", "start": "28:30" },
+        { "label": "How much Norman actually loves everyone despite bluntness; as described by Deborah", "start": "42:40" },
+        { "label": "what is the fruit of JOY", "start": "48:10" },
+        { "label": "TRIGGER WARNING:", "start": "1:30:07" }
+      ]
+    },
+    {
+      "day": 8,
+      "part": 2,
+      "title": "Day 8 - Prayer Topics (Part 2)",
+      "youtubeId": "GQdgqRdvSd8",
+      "url": "https://www.youtube.com/watch?v=GQdgqRdvSd8",
+      "topicStart": 576,
+      "topicEnd": 574
+    },
     { "day": 9, "part": 1, "title": "Day 9 - Prayer Topics", "youtubeId": "habhVgC3Nms", "url": "https://www.youtube.com/watch?v=habhVgC3Nms" },
     { "day": 10, "part": 1, "title": "Day 10 - Prayer Topics", "youtubeId": "n--bMxG44nw", "url": "https://www.youtube.com/watch?v=n--bMxG44nw" },
     { "day": 11, "part": 1, "title": "Day 11 - Prayer Topics", "youtubeId": "GqgdvM0jZn0", "url": "https://www.youtube.com/watch?v=GqgdvM0jZn0" },
