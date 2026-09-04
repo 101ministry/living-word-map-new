@@ -4526,6 +4526,41 @@ html.is-globe-view .header-menu-btn.btn-icon {
   display: none;
 }
 
+.downloads-pdf-applet-pending {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--quote);
+  background: rgba(201, 162, 39, 0.1);
+  border-bottom: 1px solid var(--border);
+}
+
+.downloads-pdf-applet-pending[hidden] {
+  display: none;
+}
+
+.downloads-pdf-applet-cancel {
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.18rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.downloads-pdf-applet-cancel:hover,
+.downloads-pdf-applet-cancel:focus-visible {
+  border-color: var(--accent);
+}
+
 .downloads-pdf-applet-frame {
   flex: 1;
   width: 100%;

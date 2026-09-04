@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=105" />
+  <link rel="stylesheet" href="styles.css?v=106" />
   <script src="site-theme.js?v=6"></script>
   <script>
     (function () {
@@ -498,6 +498,10 @@
       <button type="button" id="downloads-pdf-applet-close" class="downloads-pdf-applet-btn">Close</button>
     </div>
     <p id="downloads-pdf-applet-summary" class="downloads-pdf-applet-summary"></p>
+    <p id="downloads-pdf-applet-pending" class="downloads-pdf-applet-pending" hidden>
+      <span id="downloads-pdf-applet-pending-text">Download starts in 10 seconds.</span>
+      <button type="button" id="downloads-pdf-applet-cancel" class="downloads-pdf-applet-cancel">Cancel download</button>
+    </p>
     <iframe id="downloads-pdf-applet-frame" class="downloads-pdf-applet-frame" title="PDF preview"></iframe>
   </div>
 
@@ -522,7 +526,7 @@
   <script src="teaching-videos.js?v=5"></script>
   <script src="ask-overlay.js?v=14"></script>
   <script src="downloads-pdfs.js?v=3"></script>
-  <script src="downloads-pdfs-hub.js?v=5"></script>
+  <script src="downloads-pdfs-hub.js?v=6"></script>
   <script src="study-landing.js?v=15"></script>
 </body>
 </html>

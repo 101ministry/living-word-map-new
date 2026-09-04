@@ -80,7 +80,12 @@
   const appletDl = document.getElementById('downloads-pdf-applet-dl');
   const appletFrame = document.getElementById('downloads-pdf-applet-frame');
   const appletClose = document.getElementById('downloads-pdf-applet-close');
+  const appletPending = document.getElementById('downloads-pdf-applet-pending');
+  const appletPendingText = document.getElementById('downloads-pdf-applet-pending-text');
+  const appletCancel = document.getElementById('downloads-pdf-applet-cancel');
   const appletBar = applet?.querySelector('.downloads-pdf-applet-bar');
+  const DOWNLOAD_DELAY_MS = 10000;
+  let pendingDownload = null;
 
   function ym(y, m) {
     return `${y}-${String(m).padStart(2, '0')}`;
@@ -116,7 +121,62 @@
     );
   }
 
+  function secondsLeft(endsAt) {
+    return Math.max(0, Math.ceil((endsAt - Date.now()) / 1000));
+  }
+
+  function setPendingCopy(text) {
+    if (appletPendingText) appletPendingText.textContent = text;
+  }
+
+  function clearPendingDownload(message) {
+    if (pendingDownload?.timer) window.clearTimeout(pendingDownload.timer);
+    if (pendingDownload?.tick) window.clearInterval(pendingDownload.tick);
+    pendingDownload = null;
+    if (message) {
+      setPendingCopy(message);
+      if (appletCancel) appletCancel.hidden = true;
+      if (appletPending) appletPending.hidden = false;
+      return;
+    }
+    if (appletPending) appletPending.hidden = true;
+    if (appletCancel) appletCancel.hidden = false;
+  }
+
+  function triggerPdfDownload(item) {
+    if (!item?.href) return;
+    const a = document.createElement('a');
+    a.href = item.href;
+    a.setAttribute('download', item.download || item.title || 'download.pdf');
+    a.rel = 'noopener';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  function schedulePdfDownload(item) {
+    clearPendingDownload();
+    const endsAt = Date.now() + DOWNLOAD_DELAY_MS;
+    if (appletPending) appletPending.hidden = false;
+    if (appletCancel) appletCancel.hidden = false;
+    setPendingCopy(`Download starts in ${secondsLeft(endsAt)} seconds. Cancel if the window loaded.`);
+    const tick = window.setInterval(() => {
+      if (!pendingDownload) return;
+      const left = secondsLeft(pendingDownload.endsAt);
+      if (left <= 0) return;
+      setPendingCopy(`Download starts in ${left} second${left === 1 ? '' : 's'}. Cancel if the window loaded.`);
+    }, 250);
+    const timer = window.setTimeout(() => {
+      const current = pendingDownload?.item;
+      clearPendingDownload('Download started. You can keep reading in this window.');
+      if (current) triggerPdfDownload(current);
+    }, DOWNLOAD_DELAY_MS);
+    pendingDownload = { timer, tick, item, endsAt };
+  }
+
   function closePdfApplet() {
+    clearPendingDownload();
     if (!applet) return;
     applet.hidden = true;
     applet.classList.remove('is-open');
@@ -140,6 +200,7 @@
     if (appletFrame) appletFrame.src = item.href;
     applet.hidden = false;
     applet.classList.add('is-open');
+    schedulePdfDownload(item);
   }
 
   function bindAppletDrag() {
@@ -176,7 +237,7 @@
     const canNext = currentYm < maxYm;
     const legend =
       ui('downloadsCalLegend') ||
-      'PDFs sit on the day the study was made. Tap a title to open it. Download from the window.';
+      'PDFs sit on the day the study was made. Tap a title to open it. Download starts in 10 seconds unless you cancel.';
     const prevLabel = ui('downloadsCalPrev') || 'Previous month';
     const nextLabel = ui('downloadsCalNext') || 'Next month';
 
@@ -229,6 +290,12 @@
   });
 
   appletClose?.addEventListener('click', closePdfApplet);
+  appletCancel?.addEventListener('click', () => {
+    clearPendingDownload('Download canceled. Use Download if you still want the file.');
+  });
+  appletDl?.addEventListener('click', () => {
+    clearPendingDownload('Using Download now.');
+  });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && applet && !applet.hidden) closePdfApplet();
   });
