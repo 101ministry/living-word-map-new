@@ -1,0 +1,59 @@
+Repentance Project 2026 — invite codes (16 for handout)
+Updated: 2026-09-01
+
+Excluded from this list:
+  - LWM-J2N2-GGZQ (not recognized on production — dropped)
+  - LWM-EV84-KMDT (already used)
+
+One code per person. Link pre-fills the gate.
+
+01. LWM-XU6R-JHE6
+    https://map.repentance101.com/repentance-project.html?invite=LWM-XU6R-JHE6
+
+02. LWM-G88U-DBAJ
+    https://map.repentance101.com/repentance-project.html?invite=LWM-G88U-DBAJ
+
+03. LWM-7A2T-6AWY
+    https://map.repentance101.com/repentance-project.html?invite=LWM-7A2T-6AWY
+
+04. LWM-PBBP-QYQ9
+    https://map.repentance101.com/repentance-project.html?invite=LWM-PBBP-QYQ9
+
+05. LWM-3UP5-TVHA
+    https://map.repentance101.com/repentance-project.html?invite=LWM-3UP5-TVHA
+
+06. LWM-G7XQ-5YRN
+    https://map.repentance101.com/repentance-project.html?invite=LWM-G7XQ-5YRN
+
+07. LWM-JWN9-UPW4
+    https://map.repentance101.com/repentance-project.html?invite=LWM-JWN9-UPW4
+
+08. LWM-EU8V-XB56
+    https://map.repentance101.com/repentance-project.html?invite=LWM-EU8V-XB56
+
+09. LWM-4N26-FKXJ
+    https://map.repentance101.com/repentance-project.html?invite=LWM-4N26-FKXJ
+
+10. LWM-XS8N-NCP7
+    https://map.repentance101.com/repentance-project.html?invite=LWM-XS8N-NCP7
+
+11. LWM-QSRE-NXB4
+    https://map.repentance101.com/repentance-project.html?invite=LWM-QSRE-NXB4
+
+12. LWM-BZBS-RCV2
+    https://map.repentance101.com/repentance-project.html?invite=LWM-BZBS-RCV2
+
+13. LWM-PUM7-4G2D
+    https://map.repentance101.com/repentance-project.html?invite=LWM-PUM7-4G2D
+
+14. LWM-CT8K-5P45
+    https://map.repentance101.com/repentance-project.html?invite=LWM-CT8K-5P45
+
+15. LWM-GZ8Z-8P4Y
+    https://map.repentance101.com/repentance-project.html?invite=LWM-GZ8Z-8P4Y
+
+16. LWM-S679-HRW7
+    https://map.repentance101.com/repentance-project.html?invite=LWM-S679-HRW7
+
+Sync to production before sending:
+  .\scripts\generate-experimental-invites.ps1 -SyncToKv

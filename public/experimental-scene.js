@@ -1566,53 +1566,78 @@
     });
   }
 
-  function placeCaption() {
-    const names = [
-      profile?.city,
-      placeStack?.county?.name,
-      placeStack?.state?.name || profile?.state,
-      placeStack?.country?.name || profile?.country,
-    ];
-    const out = [];
-    names.forEach(n => {
-      const t = String(n || '').trim();
-      if (!t) return;
-      if (out.some(x => x.toLowerCase() === t.toLowerCase())) return;
-      out.push(t);
-    });
-    return out.join(', ');
+  function escapeCaption(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
   }
 
-  function titleForSet() {
+  function placeCaptionParts() {
+    const county = String(placeStack?.county?.name || profile?.county || '').trim();
+    const names = [
+      { text: profile?.city, kind: 'city' },
+      { text: county, kind: 'county' },
+      { text: placeStack?.state?.name || profile?.state, kind: 'state' },
+      { text: placeStack?.country?.name || profile?.country, kind: 'country' },
+    ];
+    const out = [];
+    names.forEach(part => {
+      const t = String(part.text || '').trim();
+      if (!t) return;
+      if (out.some(x => x.text.toLowerCase() === t.toLowerCase())) return;
+      out.push({ text: t, kind: part.kind });
+    });
+    return out;
+  }
+
+  function placeCaptionHtml() {
+    return placeCaptionParts()
+      .map((part, i) => {
+        const safe = escapeCaption(part.text);
+        const bit =
+          part.kind === 'county'
+            ? `<span class="exp-caption-county" aria-label="County hidden">${safe}</span>`
+            : safe;
+        return i ? `, ${bit}` : bit;
+      })
+      .join('');
+  }
+
+  function layerLabelForSet() {
     const setInfo = GEO()?.SETS?.[focusSet - 1];
-    const loc = placeCaption();
-    const layer =
-      focusSet <= 2
+    return focusSet <= 2
+      ? focusRound === 1
+        ? 'Skeleton'
+        : focusRound === 2
+          ? 'Muscles and tendons'
+          : 'Seated in prayer'
+      : focusSet === 3
         ? focusRound === 1
-          ? 'Skeleton'
+          ? 'House blueprint'
           : focusRound === 2
-            ? 'Muscles and tendons'
-            : 'Seated in prayer'
-        : focusSet === 3
+            ? 'House frame'
+            : 'House'
+        : focusSet === 4
           ? focusRound === 1
-            ? 'House blueprint'
+            ? 'Utility blueprint'
             : focusRound === 2
-              ? 'House frame'
-              : 'House'
-          : focusSet === 4
+              ? 'Neighborhood frame'
+              : 'Neighborhood'
+          : focusSet === 5
             ? focusRound === 1
-              ? 'Utility blueprint'
+              ? 'City outline'
               : focusRound === 2
-                ? 'Neighborhood frame'
-                : 'Neighborhood'
-            : focusSet === 5
-              ? focusRound === 1
-                ? 'City outline'
-                : focusRound === 2
-                  ? 'City rising'
-                  : 'City'
-              : setInfo?.name || '';
-    return loc ? `${loc} \u00b7 ${layer}` : layer;
+                ? 'City rising'
+                : 'City'
+            : setInfo?.name || '';
+  }
+
+  function setLocationCaption() {
+    if (!captionEl) return;
+    const loc = placeCaptionHtml();
+    const layer = escapeCaption(layerLabelForSet());
+    captionEl.innerHTML = loc ? `${loc} \u00b7 ${layer}` : layer;
   }
 
   function progressLabel(progress) {
@@ -1764,7 +1789,7 @@
 
     const crew = Math.max(0, Math.round((fractions[focusRound] || 0) * 666) || crewSize - 1);
     ctx.fillStyle = 'rgba(0,0,0,0.0)';
-    if (captionEl) captionEl.textContent = titleForSet();
+    if (captionEl) setLocationCaption();
     void crew;
   }
 
@@ -1823,7 +1848,7 @@
     placeStack = null;
     const token = ++boundaryToken;
     draw();
-    if (captionEl) captionEl.textContent = titleForSet();
+    if (captionEl) setLocationCaption();
     const geo = GEO();
     if (profile && typeof geo?.fetchPlaceStack === 'function') {
       const applyStack = stack => {
@@ -1831,7 +1856,7 @@
         placeStack = stack;
         adminBoundary = stack?.county || stack?.state || stack?.city || null;
         draw();
-        if (captionEl) captionEl.textContent = titleForSet();
+        if (captionEl) setLocationCaption();
       };
       geo
         .fetchPlaceStack(profile, applyStack)
@@ -1844,7 +1869,7 @@
           if (token !== boundaryToken) return;
           adminBoundary = b;
           draw();
-          if (captionEl) captionEl.textContent = titleForSet();
+          if (captionEl) setLocationCaption();
         })
         .catch(() => {});
     }
@@ -1854,7 +1879,7 @@
     focusSet = Number(setId) || 1;
     focusRound = Number(round) || 1;
     draw();
-    if (captionEl) captionEl.textContent = titleForSet();
+    if (captionEl) setLocationCaption();
   }
 
   function syncProgress(opts) {
@@ -1864,7 +1889,7 @@
     if (opts.set) focusSet = Number(opts.set) || focusSet;
     if (opts.round) focusRound = Number(opts.round) || focusRound;
     draw();
-    if (captionEl) captionEl.textContent = titleForSet();
+    if (captionEl) setLocationCaption();
   }
 
   function onTopicYes() {

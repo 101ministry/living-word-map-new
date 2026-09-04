@@ -1,67 +1,124 @@
 ﻿{
-    "note":  "One-time invite codes for Experimental Prayer Builder. Sync invites-v1 to EXPERIMENTAL_KV for production.",
+    "note":  "One-time invite codes for Prayer Builder. Handout list: data/experimental-invites-handout.txt (16 active). Sync invites-v1 to EXPERIMENTAL_KV for production.",
     "codes":  {
-                  "LWM-J2N2-GGZQ":  {
-                                        "usedAt":  null,
+                  "LWM-EV84-KMDT":  {
+                                        "used":  true,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "usedAt":  1756776000000,
+                                        "createdAt":  1788038432069,
+                                        "note":  "Redeemed by admin (batch 1, code 2)"
+                                    },
+                  "LWM-7A2T-6AWY":  {
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
+                                        "usedAt":  null,
                                         "createdAt":  1788038432069
                                     },
-                  "LWM-EV84-KMDT":  {
+                  "LWM-XS8N-NCP7":  {
                                         "usedAt":  null,
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-JWN9-UPW4":  {
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "usedAt":  null,
                                         "createdAt":  1788038432069
                                     },
                   "LWM-XU6R-JHE6":  {
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "usedAt":  null,
+                                        "createdAt":  1788038432069
+                                    },
+                  "LWM-EU8V-XB56":  {
                                         "usedAt":  null,
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-S679-HRW7":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-CT8K-5P45":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-BZBS-RCV2":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-GZ8Z-8P4Y":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-QSRE-NXB4":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-G7XQ-5YRN":  {
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "usedAt":  null,
                                         "createdAt":  1788038432069
                                     },
                   "LWM-G88U-DBAJ":  {
-                                        "usedAt":  null,
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
-                                        "createdAt":  1788038432069
-                                    },
-                  "LWM-7A2T-6AWY":  {
                                         "usedAt":  null,
-                                        "used":  false,
-                                        "accountKey":  null,
-                                        "name":  null,
                                         "createdAt":  1788038432069
                                     },
                   "LWM-3UP5-TVHA":  {
-                                        "usedAt":  null,
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
+                                        "usedAt":  null,
                                         "createdAt":  1788038432069
                                     },
-                  "LWM-G7XQ-5YRN":  {
+                  "LWM-PUM7-4G2D":  {
                                         "usedAt":  null,
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
-                                        "createdAt":  1788038432069
+                                        "createdAt":  1788306428061
+                                    },
+                  "LWM-4N26-FKXJ":  {
+                                        "usedAt":  null,
+                                        "used":  false,
+                                        "accountKey":  null,
+                                        "name":  null,
+                                        "createdAt":  1788306428061
                                     },
                   "LWM-PBBP-QYQ9":  {
-                                        "usedAt":  null,
                                         "used":  false,
                                         "accountKey":  null,
                                         "name":  null,
-                                        "createdAt":  1788038432069
-                                    },
-                  "LWM-JWN9-UPW4":  {
                                         "usedAt":  null,
-                                        "used":  false,
-                                        "accountKey":  null,
-                                        "name":  null,
                                         "createdAt":  1788038432069
                                     }
               }

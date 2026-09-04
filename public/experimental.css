@@ -59,6 +59,101 @@
   overflow: hidden;
 }
 
+.exp-prayer-dock {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+}
+
+.exp-prayer-dock .round2-prayer-panel {
+  border-right: 0;
+}
+
+.exp-prayer-dock-note {
+  display: none;
+  margin: auto;
+  padding: 1.5rem 1.25rem;
+  max-width: 18rem;
+  text-align: center;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.exp-prayer-dock-note:not([hidden]) {
+  display: block;
+}
+
+.exp-prayer-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  padding: 0.38rem 0.7rem;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-prayer-window-title {
+  flex: 1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exp-prayer-window-btn {
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.exp-prayer-window-btn:hover,
+.exp-prayer-window-btn:focus-visible {
+  border-color: var(--accent);
+}
+
+.exp-prayer-floating {
+  position: fixed;
+  z-index: 70;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  left: auto;
+  top: auto;
+  width: min(28rem, calc(100vw - 2rem));
+  height: min(72vh, 42rem);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-deep);
+}
+
+.exp-prayer-floating .exp-prayer-window-bar {
+  cursor: move;
+}
+
+.exp-prayer-pip-body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg-deep, #12141c);
+}
+
+.exp-prayer-pip-body .round2-prayer-panel {
+  height: 100%;
+  border-right: 0;
+}
+
 .exp-scene-wrap {
   position: relative;
   min-width: 0;
@@ -91,6 +186,14 @@
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.05rem;
   color: #f7ecd0;
+}
+
+.exp-caption-county {
+  display: inline;
+  color: transparent;
+  text-shadow: 0 0 9px #f7ecd0;
+  user-select: none;
+  pointer-events: none;
 }
 
 .exp-hud {

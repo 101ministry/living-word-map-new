@@ -1,0 +1,12 @@
+{
+  "name": "lwm-youtube-upload",
+  "private": true,
+  "type": "module",
+  "description": "Local YouTube Data API v3 uploader for R&R Shorts (OAuth desktop).",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "googleapis": "^159.0.0"
+  }
+}

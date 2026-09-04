@@ -66,6 +66,7 @@
     const current = readStoredLanguage();
     populateLanguageSelect(select, current);
     updateLanguageStatus(select);
+    window.LwmSiteI18n?.apply?.(current);
 
     if (window.PrayerLibrary?.init) {
       try {
@@ -88,6 +89,7 @@
         console.warn(err);
       }
       updateLanguageStatus(select);
+      window.LwmSiteI18n?.apply?.(select.value);
       window.dispatchEvent(new CustomEvent('lwm:language-changed', { detail: { language: select.value } }));
     });
   }

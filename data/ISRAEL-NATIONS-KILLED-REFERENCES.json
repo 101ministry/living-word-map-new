@@ -1,0 +1,73 @@
+{
+  "title": "Israel: Nations and Cities — Scripture References for Judgment",
+  "subtitle": "Chronological reference chart (scripture only — no commentary)",
+  "sections": [
+    {
+      "id": "I",
+      "heading": "I. Egypt to the Promised Land (Wilderness / Transjordan)",
+      "note": "Ordered by narrative sequence. Reason column = judgment/obedience texts only.",
+      "entries": [
+        { "order": 1, "name": "Egypt (army at Red Sea)", "encounter": "Ex 14:9-31", "reason": "Ex 14:4,17-18,26-28" },
+        { "order": 2, "name": "Amalek (Rephidim)", "encounter": "Ex 17:8-16", "reason": "Ex 17:14-16; Deut 25:17-19" },
+        { "order": 3, "name": "Midianites (golden calf / Baal-Peor seduction)", "encounter": "Ex 32:1-35; Num 25:1-9", "reason": "Ex 32:27-28; Num 25:16-18" },
+        { "order": 4, "name": "Arad (Canaanite king)", "encounter": "Num 21:1-3", "reason": "Num 21:2-3" },
+        { "order": 5, "name": "Sihon — Heshbon (Amorite kingdom)", "encounter": "Num 21:21-26; Deut 2:26-32", "reason": "Num 21:23-24; Deut 2:30-34" },
+        { "order": 6, "name": "Og — Bashan (Rephaim kingdom)", "encounter": "Num 21:33-35; Deut 3:1-11", "reason": "Num 21:34-35; Deut 3:2-7" },
+        { "order": 7, "name": "Midian (war after Peor)", "encounter": "Num 31:1-18", "reason": "Num 25:16-18; Num 31:2-3,7-8,17-18" }
+      ]
+    },
+    {
+      "id": "II",
+      "heading": "II. Taking the Promised Land (Joshua's conquest, west of Jordan)",
+      "note": "Ordered by narrative sequence. Joshua 12:9-24 lists 31 kings — summarized below.",
+      "entries": [
+        { "order": 1, "name": "Jericho", "encounter": "Jos 2:1-24; Jos 6:1-27", "reason": "Jos 6:17,21; Deut 7:1-2,16; Deut 20:16-18" },
+        { "order": 2, "name": "Ai", "encounter": "Jos 7:1-5; Jos 8:1-29", "reason": "Jos 8:2,24-26; Deut 7:1-2" },
+        { "order": 3, "name": "Gibeon (Hivite cities — treaty exception)", "encounter": "Jos 9:1-27", "reason": "Jos 9:23-27 (servitude, not annihilation)" },
+        { "order": 4, "name": "Five Amorite kings (Jerusalem, Hebron, Jarmuth, Lachish, Eglon)", "encounter": "Jos 10:1-43", "reason": "Jos 10:10-11,24-27; Deut 7:1-2" },
+        { "order": 5, "name": "Makkedah, Libnah, Lachish, Eglon, Hebron, Debir", "encounter": "Jos 10:28-39", "reason": "Jos 10:28,30,32,35,37,39; Deut 7:1-2" },
+        { "order": 6, "name": "Northern coalition (Hazor, Madon, Shimron, Achshaph, etc.)", "encounter": "Jos 11:1-15", "reason": "Jos 11:6,8-11,14; Deut 7:1-2; Deut 20:16-18" },
+        { "order": 7, "name": "Joshua 12 — 31 kings west of Jordan (full list)", "encounter": "Jos 12:7-24", "reason": "Jos 12:7-8; Deut 7:1-5; Deut 20:16-18", "sub": [
+          "Jericho Jos 12:9", "Ai Jos 12:9", "Jerusalem Jos 12:10", "Hebron Jos 12:10",
+          "Jarmuth Jos 12:11", "Lachish Jos 12:11", "Eglon Jos 12:12", "Gezer Jos 12:12",
+          "Debir Jos 12:13", "Geder Jos 12:13", "Hormah Jos 12:14", "Arad Jos 12:14",
+          "Libnah Jos 12:15", "Adullam Jos 12:15", "Makkedah Jos 12:16", "Bethel Jos 12:16",
+          "Tappuah Jos 12:17", "Hepher Jos 12:17", "Aphek Jos 12:18", "Lasharon Jos 12:18",
+          "Madon Jos 12:19", "Hazor Jos 12:19", "Shimron-meron Jos 12:20", "Achshaph Jos 12:20",
+          "Taanach Jos 12:21", "Megiddo Jos 12:21", "Kedesh Jos 12:22", "Jokneam Jos 12:22",
+          "Dor Jos 12:23", "Goiim (Galilee) Jos 12:23", "Tirzah Jos 12:24"
+        ]},
+        { "order": 8, "name": "Anakim (Hebron, Debir, Gaza, Gath, Ashdod)", "encounter": "Jos 11:21-22", "reason": "Jos 11:20-21; Num 13:33; Deut 9:1-2" },
+        { "order": 9, "name": "Transjordan kings (recap: Sihon, Og)", "encounter": "Jos 12:1-6", "reason": "Jos 12:1-6; Num 21:21-35" }
+      ]
+    },
+    {
+      "id": "III",
+      "heading": "III. After the Land Was Divided Among the Tribes",
+      "note": "Selected chronological campaigns in Judges–Samuel where nations were destroyed for covenant breach / Yahweh's command.",
+      "entries": [
+        { "order": 1, "name": "Canaanites & Perizzites (Judah — Bezek)", "encounter": "Judg 1:1-7", "reason": "Judg 1:2-4,6-7; Deut 7:1-2" },
+        { "order": 2, "name": "Jerusalem (Jebusites — partial)", "encounter": "Judg 1:8", "reason": "Judg 1:8; Jos 15:63" },
+        { "order": 3, "name": "Hebron, Debir (Caleb)", "encounter": "Judg 1:10-15", "reason": "Judg 1:12-15; Jos 15:14-17" },
+        { "order": 4, "name": "Hormah, Gaza, Ashkelon, Ekron (Judah/Simeon)", "encounter": "Judg 1:17-18", "reason": "Judg 1:17-18" },
+        { "order": 5, "name": "Bethel (Joseph tribes)", "encounter": "Judg 1:22-26", "reason": "Judg 1:22-25" },
+        { "order": 6, "name": "Mesopotamia (Cushan-rishathaim)", "encounter": "Judg 3:8-10", "reason": "Judg 3:8,10" },
+        { "order": 7, "name": "Moab (Eglon)", "encounter": "Judg 3:12-30", "reason": "Judg 3:12-14,28-30" },
+        { "order": 8, "name": "Canaan — Jabin of Hazor (Sisera)", "encounter": "Judg 4:1-24; Judg 5:19-21", "reason": "Judg 4:2-3,14-16,23-24" },
+        { "order": 9, "name": "Midian (Gideon)", "encounter": "Judg 6:1-6; Judg 7:1-25; Judg 8:1-21", "reason": "Judg 6:1-2,14; Judg 7:2; Judg 8:7,21" },
+        { "order": 10, "name": "Ammon (Jephthah)", "encounter": "Judg 11:1-33", "reason": "Judg 11:12-15,29-33" },
+        { "order": 11, "name": "Philistines (Samson — partial strikes)", "encounter": "Judg 14:19; Judg 15:7-8,15; Judg 16:27-30", "reason": "Judg 14:4; Judg 15:14-16; Judg 16:28-30" },
+        { "order": 12, "name": "Benjamin (civil war — Israel vs Benjamin)", "encounter": "Judg 20:1-48", "reason": "Judg 20:12-13,18,23,28,35-48" },
+        { "order": 13, "name": "Amalek (Saul — commanded destruction)", "encounter": "1 Sam 15:1-9", "reason": "1 Sam 15:2-3,18; Ex 17:14; Deut 25:19" },
+        { "order": 14, "name": "Philistines (David — early campaigns)", "encounter": "1 Sam 17:1-54; 1 Sam 18:27", "reason": "1 Sam 17:45-47; 1 Sam 18:25-27" },
+        { "order": 15, "name": "Amalek (David at Ziklag pursuit)", "encounter": "1 Sam 30:1-20", "reason": "1 Sam 30:1-2,17-18" },
+        { "order": 16, "name": "Philistines, Moab, Ammon, Edom, Amalek (David's wars)", "encounter": "2 Sam 8:1-14", "reason": "2 Sam 8:2,6,12-14" },
+        { "order": 17, "name": "Ammon & Aramean coalition (David)", "encounter": "2 Sam 10:1-19; 2 Sam 12:26-31", "reason": "2 Sam 10:12; 2 Sam 12:26-31" },
+        { "order": 18, "name": "Gezer (Pharaoh's gift — conquest completed)", "encounter": "1 Kgs 9:16", "reason": "1 Kgs 9:16; Jos 16:10" }
+      ]
+    }
+  ],
+  "frameworkRefs": [
+    "Deut 7:1-5", "Deut 9:4-5", "Deut 20:16-18", "Ex 23:23-33", "Lev 18:24-30", "Num 33:50-56"
+  ]
+}

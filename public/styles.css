@@ -4429,11 +4429,12 @@ html.is-globe-view .header-menu-btn.btn-icon {
 
 .downloads-cal-link {
   display: block;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.4;
   color: var(--accent);
   text-decoration: none;
+  white-space: normal;
 }
 
 .downloads-cal-link:hover,
@@ -4447,6 +4448,90 @@ html.is-globe-view .header-menu-btn.btn-icon {
   margin: 0.75rem 0 0;
   font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+.downloads-pdf-applet {
+  position: fixed;
+  z-index: 80;
+  right: 1rem;
+  bottom: 1rem;
+  left: auto;
+  top: auto;
+  display: flex;
+  flex-direction: column;
+  width: min(42rem, calc(100vw - 1.25rem));
+  height: min(78vh, 46rem);
+  background: var(--bg-deep);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.downloads-pdf-applet[hidden] {
+  display: none;
+}
+
+.downloads-pdf-applet-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  padding: 0.45rem 0.65rem;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  cursor: move;
+}
+
+.downloads-pdf-applet-heading {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--quote);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.downloads-pdf-applet-btn {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.22rem 0.55rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.downloads-pdf-applet-btn:hover,
+.downloads-pdf-applet-btn:focus-visible {
+  border-color: var(--accent);
+}
+
+.downloads-pdf-applet-summary {
+  margin: 0;
+  padding: 0.45rem 0.75rem 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.downloads-pdf-applet-summary[hidden] {
+  display: none;
+}
+
+.downloads-pdf-applet-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background: #111;
 }
 
 .downloads-hub {

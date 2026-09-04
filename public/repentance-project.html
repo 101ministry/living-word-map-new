@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles.css?v=104" />
   <script src="site-theme.js?v=6"></script>
   <link rel="stylesheet" href="round2.css?v=11" />
-  <link rel="stylesheet" href="experimental.css?v=19" />
+  <link rel="stylesheet" href="experimental.css?v=21" />
   <script>
     (function () {
       var rec = /(?:\?|&)(?:record=1|mode=record)(?:&|$)/.test(location.search);
@@ -280,17 +280,25 @@
           <p id="exp-scene-caption" class="exp-scene-caption"></p>
         </div>
 
-        <article class="round2-prayer-panel">
-          <header class="round2-prayer-header">
-            <span id="exp-topic-num" class="round2-topic-num">001</span>
-            <h2 id="exp-topic-title">Topic</h2>
-            <p id="exp-topic-meta" class="round2-topic-meta"></p>
-          </header>
-          <div id="exp-prayer-scroll" class="round2-prayer-scroll" tabindex="0">
-            <p id="exp-prayer-note" class="round2-prayer-note">PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.</p>
-            <div id="exp-prayer-text" class="round2-prayer-text"></div>
-          </div>
-        </article>
+        <div id="exp-prayer-dock" class="exp-prayer-dock">
+          <p id="exp-prayer-dock-note" class="exp-prayer-dock-note" hidden>Prayer is in the pop-out window. Close that window when you are done speaking.</p>
+          <article id="exp-prayer-panel" class="round2-prayer-panel">
+            <div class="exp-prayer-window-bar">
+              <span class="exp-prayer-window-title">Prayer</span>
+              <button type="button" id="exp-prayer-popout" class="exp-prayer-window-btn">Pop out</button>
+              <button type="button" id="exp-prayer-dock-btn" class="exp-prayer-window-btn" hidden>Close</button>
+            </div>
+            <header class="round2-prayer-header">
+              <span id="exp-topic-num" class="round2-topic-num">001</span>
+              <h2 id="exp-topic-title">Topic</h2>
+              <p id="exp-topic-meta" class="round2-topic-meta"></p>
+            </header>
+            <div id="exp-prayer-scroll" class="round2-prayer-scroll" tabindex="0">
+              <p id="exp-prayer-note" class="round2-prayer-note">PLEASE NOTE: THESE PRAYERS ARE TO BE SPOKEN, NOT SIMPLY READ SILENTLY.</p>
+              <div id="exp-prayer-text" class="round2-prayer-text"></div>
+            </div>
+          </article>
+        </div>
 
         <aside class="round2-sidebar" aria-label="Topic index">
           <div id="exp-sidebar-sections" class="round2-sidebar-sections"></div>
@@ -377,9 +385,9 @@
   <script src="round2-data.js?v=11"></script>
   <script src="round3-data.js?v=11"></script>
   <script src="experimental-geo.js?v=14"></script>
-  <script src="experimental-scene.js?v=17"></script>
+  <script src="experimental-scene.js?v=18"></script>
   <script src="taxonomy-emoji.js?v=1"></script>
-  <script src="experimental.js?v=23"></script>
+  <script src="experimental.js?v=24"></script>
   <script src="found-us.js?v=4"></script>
   <script src="site-nav.js?v=4"></script>
   <script src="round1-entry-gate.js?v=5"></script>

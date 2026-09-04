@@ -3,11 +3,29 @@
   const host = document.getElementById('downloads-pdf-hub');
   if (!data || !host || !Array.isArray(data.items)) return;
 
-  const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const MONTHS = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December',
-  ];
+  function readLang() {
+    try {
+      return localStorage.getItem('lwm-language') || localStorage.getItem('lwm-round-prayer-lang') || 'en';
+    } catch {
+      return 'en';
+    }
+  }
+
+  function ui(key) {
+    return window.LwmSiteI18n?.ui?.(readLang(), key) || '';
+  }
+
+  function monthTitle(y, m, lang) {
+    const loc = String(lang || 'en').toLowerCase() === 'de' ? 'de-DE' : 'en-US';
+    return new Date(y, m - 1, 1).toLocaleString(loc, { month: 'long', year: 'numeric' });
+  }
+
+  function weekdayLabels(lang) {
+    const loc = String(lang || 'en').toLowerCase() === 'de' ? 'de-DE' : 'en-US';
+    const fmt = new Intl.DateTimeFormat(loc, { weekday: 'short' });
+    const base = new Date(2026, 0, 4);
+    return Array.from({ length: 7 }, (_, i) => fmt.format(new Date(base.getFullYear(), base.getMonth(), base.getDate() + i)));
+  }
 
   function escapeHtml(value) {
     return String(value || '')
@@ -56,6 +74,14 @@
   const minYm = minKey.slice(0, 7);
   const maxYm = maxKey.slice(0, 7);
 
+  const applet = document.getElementById('downloads-pdf-applet');
+  const appletTitle = document.getElementById('downloads-pdf-applet-title');
+  const appletSummary = document.getElementById('downloads-pdf-applet-summary');
+  const appletDl = document.getElementById('downloads-pdf-applet-dl');
+  const appletFrame = document.getElementById('downloads-pdf-applet-frame');
+  const appletClose = document.getElementById('downloads-pdf-applet-close');
+  const appletBar = applet?.querySelector('.downloads-pdf-applet-bar');
+
   function ym(y, m) {
     return `${y}-${String(m).padStart(2, '0')}`;
   }
@@ -71,20 +97,88 @@
     render();
   }
 
+  function linkLabel(item) {
+    const title = item.title || 'PDF';
+    const summary = String(item.summary || '').trim();
+    return summary ? `${title} - ${summary}` : title;
+  }
+
   function cardLink(item) {
     const href = escapeHtml(item.href || '#');
     const download = escapeHtml(item.download || item.title || 'download.pdf');
     const title = escapeHtml(item.title || 'PDF');
-    return `<a class="downloads-cal-link" href="${href}" download="${download}" title="${escapeHtml(item.summary || item.title)}">${title}</a>`;
+    const summary = escapeHtml(item.summary || '');
+    const label = escapeHtml(linkLabel(item));
+    return (
+      `<a class="downloads-cal-link" href="${href}" download="${download}" ` +
+      `data-pdf-href="${href}" data-pdf-download="${download}" data-pdf-title="${title}" data-pdf-summary="${summary}">` +
+      `${label}</a>`
+    );
+  }
+
+  function closePdfApplet() {
+    if (!applet) return;
+    applet.hidden = true;
+    applet.classList.remove('is-open');
+    if (appletFrame) appletFrame.src = 'about:blank';
+  }
+
+  function openPdfApplet(item) {
+    if (!applet || !item?.href) {
+      window.location.assign(item?.href || '#');
+      return;
+    }
+    if (appletTitle) appletTitle.textContent = item.title || 'PDF';
+    if (appletSummary) {
+      appletSummary.textContent = item.summary || '';
+      appletSummary.hidden = !item.summary;
+    }
+    if (appletDl) {
+      appletDl.href = item.href;
+      appletDl.setAttribute('download', item.download || item.title || 'download.pdf');
+    }
+    if (appletFrame) appletFrame.src = item.href;
+    applet.hidden = false;
+    applet.classList.add('is-open');
+  }
+
+  function bindAppletDrag() {
+    if (!applet || !appletBar || appletBar.dataset.dragBound === '1') return;
+    appletBar.dataset.dragBound = '1';
+    appletBar.addEventListener('pointerdown', (e) => {
+      if (e.button !== 0 || e.target.closest('a, button')) return;
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const rect = applet.getBoundingClientRect();
+      appletBar.setPointerCapture(e.pointerId);
+      const move = (ev) => {
+        applet.style.left = `${Math.max(8, rect.left + ev.clientX - startX)}px`;
+        applet.style.top = `${Math.max(8, rect.top + ev.clientY - startY)}px`;
+        applet.style.right = 'auto';
+        applet.style.bottom = 'auto';
+      };
+      const up = () => {
+        appletBar.removeEventListener('pointermove', move);
+        appletBar.removeEventListener('pointerup', up);
+      };
+      appletBar.addEventListener('pointermove', move);
+      appletBar.addEventListener('pointerup', up);
+    });
   }
 
   function render() {
+    const lang = readLang();
     const first = new Date(year, month - 1, 1);
     const daysInMonth = new Date(year, month, 0).getDate();
     const lead = first.getDay();
     const currentYm = ym(year, month);
     const canPrev = currentYm > minYm;
     const canNext = currentYm < maxYm;
+    const legend =
+      ui('downloadsCalLegend') ||
+      'PDFs sit on the day the study was made. Tap a title to open it. Download from the window.';
+    const prevLabel = ui('downloadsCalPrev') || 'Previous month';
+    const nextLabel = ui('downloadsCalNext') || 'Next month';
 
     const cells = [];
     for (let i = 0; i < lead; i += 1) {
@@ -106,13 +200,13 @@
     host.innerHTML = `
       <div class="downloads-cal">
         <div class="downloads-cal-toolbar">
-          <button type="button" class="downloads-cal-nav" data-cal-dir="-1" ${canPrev ? '' : 'disabled'} aria-label="Previous month">‹</button>
-          <h4 class="downloads-cal-title">${MONTHS[month - 1]} ${year}</h4>
-          <button type="button" class="downloads-cal-nav" data-cal-dir="1" ${canNext ? '' : 'disabled'} aria-label="Next month">›</button>
+          <button type="button" class="downloads-cal-nav" data-cal-dir="-1" ${canPrev ? '' : 'disabled'} aria-label="${escapeHtml(prevLabel)}">‹</button>
+          <h4 class="downloads-cal-title">${escapeHtml(monthTitle(year, month, lang))}</h4>
+          <button type="button" class="downloads-cal-nav" data-cal-dir="1" ${canNext ? '' : 'disabled'} aria-label="${escapeHtml(nextLabel)}">›</button>
         </div>
-        <div class="downloads-cal-weekdays">${WEEKDAYS.map((d) => `<span>${d}</span>`).join('')}</div>
+        <div class="downloads-cal-weekdays">${weekdayLabels(lang).map((d) => `<span>${escapeHtml(d)}</span>`).join('')}</div>
         <div class="downloads-cal-grid">${cells.join('')}</div>
-        <p class="downloads-cal-legend">PDFs sit on the day the study was made. Tap a title to download.</p>
+        <p class="downloads-cal-legend">${escapeHtml(legend)}</p>
       </div>
     `;
 
@@ -121,5 +215,26 @@
     });
   }
 
+  host.addEventListener('click', (e) => {
+    const link = e.target.closest('a.downloads-cal-link');
+    if (!link || !host.contains(link)) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    openPdfApplet({
+      href: link.getAttribute('data-pdf-href') || link.getAttribute('href'),
+      download: link.getAttribute('data-pdf-download') || '',
+      title: link.getAttribute('data-pdf-title') || link.textContent,
+      summary: link.getAttribute('data-pdf-summary') || '',
+    });
+  });
+
+  appletClose?.addEventListener('click', closePdfApplet);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && applet && !applet.hidden) closePdfApplet();
+  });
+  bindAppletDrag();
+
+  window.addEventListener('lwm:language-changed', render);
+  window.addEventListener('lwm:site-i18n-applied', render);
   render();
 })();
