@@ -32,8 +32,6 @@
   };
   const STORAGE_KEY = 'lwm-round3-progress-v1';
   const LANG_STORAGE_KEY = 'lwm-round-prayer-lang';
-  const CAL_MS = (DATA.calReturnMinutes || 2) * 60 * 1000;
-  const CAL_CONSECUTIVE_NOS = 4;
   /** User code "sp" maps to existing Spanish "es". */
   const LANG_ALIASES = { sp: 'es' };
 
@@ -64,9 +62,6 @@
 
   let pendingHeartCheck = false;
   let pendingNavigation = null;
-  let calDepartedAt = null;
-  let calDepartedSectionFirstTopic = null;
-  let awaitingCalReturn = false;
 
   function normalizeLang(code) {
     const raw = String(code || 'en').toLowerCase();
@@ -136,7 +131,12 @@
 
   function applyUiChrome() {
     if (els.langLabel) els.langLabel.textContent = ui('languageLabel', 'Language');
-    if (els.heartTitle) els.heartTitle.textContent = ui('heartTitle', 'Did anything change in your heart?');
+    if (els.heartTitle) {
+      els.heartTitle.textContent = ui(
+        'heartTitle',
+        'Did you say this and have something kick off in your body?'
+      );
+    }
     if (els.heartSub) {
       els.heartSub.textContent = ui(
         'heartSub',
@@ -454,20 +454,11 @@
       state.visited.push(current);
     }
 
-    let openCalSilently = false;
     if (yes) {
       if (!state.heartYes.includes(current)) state.heartYes.push(current);
       state.consecutiveNo = 0;
     } else {
       state.consecutiveNo += 1;
-      if (state.consecutiveNo >= CAL_CONSECUTIVE_NOS) {
-        openCalSilently = true;
-        const t = topicData(current);
-        calDepartedSectionFirstTopic = t?.sectionId
-          ? firstTopicOfSection(t.sectionId)
-          : current;
-        state.consecutiveNo = 0;
-      }
     }
 
     saveState();
@@ -477,31 +468,7 @@
       if (destination) {
         goToTopic(destination);
       }
-
-      if (openCalSilently && DATA.calLink) {
-        calDepartedAt = Date.now();
-        awaitingCalReturn = true;
-        window.open(DATA.calLink, '_blank', 'noopener,noreferrer');
-      }
     }, 50);
-  }
-
-  function handleCalReturn() {
-    if (!awaitingCalReturn || !calDepartedAt) return;
-    awaitingCalReturn = false;
-    const elapsed = Date.now() - calDepartedAt;
-    calDepartedAt = null;
-
-    if (elapsed < CAL_MS) {
-      const resetTo = calDepartedSectionFirstTopic || state.currentTopic;
-      calDepartedSectionFirstTopic = null;
-      saveState();
-      goToTopic(resetTo);
-      return;
-    }
-
-    calDepartedSectionFirstTopic = null;
-    saveState();
   }
 
   els.heartYes.addEventListener('click', () => advanceAfterHeart(true));
@@ -524,11 +491,6 @@
       setLanguage(els.langSelect.value);
     });
   }
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') handleCalReturn();
-  });
-  window.addEventListener('focus', () => handleCalReturn());
 
   (async () => {
     try {

@@ -51,8 +51,6 @@
   const LANG_STORAGE_KEY = 'lwm-round-prayer-lang';
   const LANG_STORAGE_KEYS = ['lwm-language', LANG_STORAGE_KEY];
   let applyingLanguage = false;
-  const CAL_MS = (DATA1.calReturnMinutes || 2) * 60 * 1000;
-  const CAL_CONSECUTIVE_NOS = 4;
   const HEART_ACCOUNTABILITY_EVERY = 10;
   const HEART_ACCOUNTABILITY_MIN = 50;
   const HEART_ACCOUNTABILITY_MAX = 1000;
@@ -143,9 +141,6 @@
   let sceneReady = false;
   let pendingHeartCheck = false;
   let pendingNavigation = null;
-  let calDepartedAt = null;
-  let calDepartedSectionFirstTopic = null;
-  let awaitingCalReturn = false;
   let pendingAdvance = null;
   let accountabilityMilestonePending = 0;
 
@@ -645,15 +640,27 @@
 
   function applyUiChrome() {
     if (els.langLabel) els.langLabel.textContent = ui('languageLabel', 'Language');
-    if (els.heartTitle) els.heartTitle.textContent = ui('heartTitle', 'Did anything change in your heart?');
+    if (els.heartTitle) {
+      els.heartTitle.textContent = ui(
+        'heartTitle',
+        'Did you say this and have something kick off in your body?'
+      );
+    }
     if (els.heartSub) {
       els.heartSub.textContent = ui(
         'heartSub',
         'When you choose the next topic in the list, answer here first. You can scroll back through the prayer behind this box before you respond.'
       );
     }
-    if (els.heartYes) els.heartYes.textContent = ui('heartYes', 'Yes, my heart changed');
+    if (els.heartYes) els.heartYes.textContent = ui('heartYes', 'Yes');
     if (els.heartNo) els.heartNo.textContent = ui('heartNo', 'No');
+    const meet = document.getElementById('exp-norman-meet');
+    if (meet) {
+      const href = DATA1.calLink || 'https://cal.com/repentance101ministry';
+      const before = ui('normanMeetBefore', 'Got a question about this? Set up a ');
+      const linkText = ui('normanMeetLink', 'meeting with Norman');
+      meet.innerHTML = `${escapeHtml(before)}<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkText)}</a>`;
+    }
     const rtl = !!(CATALOG.languages || []).find(l => l.code === state.language)?.rtl;
     document.documentElement.lang = state.language;
     document.documentElement.dir = rtl ? 'rtl' : 'ltr';
@@ -859,12 +866,6 @@
     } finally {
       applyingLanguage = false;
     }
-  }
-
-  function firstTopicOfSection(sectionId) {
-    const sec = visibleSections().find(s => s.id === sectionId);
-    if (!sec?.topics?.length) return 1;
-    return Math.min(...sec.topics.map(t => t.number));
   }
 
   function isSectionComplete(sectionId) {
@@ -1243,7 +1244,7 @@
   }
 
   function accountabilityPromptText(milestone) {
-    return `This is a checkpoint at topic ${milestone}. Please describe exactly what changed. Remember, your answers are counted before Jesus. Repentance without accountability is fake.`;
+    return `This is a checkpoint at topic ${milestone}. If something kicked off in your body, describe exactly what happened. Remember, your answers are counted before Jesus. Repentance without accountability is fake.`;
   }
 
   function setHeartExplainError(message) {
@@ -1358,7 +1359,6 @@
     if (!prog.heartAnswered.includes(current)) prog.heartAnswered.push(current);
 
     let landed = false;
-    let openCalSilently = false;
 
     const alreadyYes = prog.heartYes.includes(current);
     if (!alreadyYes) {
@@ -1374,12 +1374,6 @@
     } else {
       prog.consecutiveNo += 1;
       prog.consecutiveYes = 0;
-      if (prog.consecutiveNo >= CAL_CONSECUTIVE_NOS) {
-        openCalSilently = true;
-        const t = topicData(current);
-        calDepartedSectionFirstTopic = t?.sectionId ? firstTopicOfSection(t.sectionId) : current;
-        prog.consecutiveNo = 0;
-      }
     }
 
     if (sectionId && !sectionWasComplete && isSectionComplete(sectionId)) {
@@ -1396,45 +1390,7 @@
     window.setTimeout(() => {
       if (destination) goToTopic(destination);
       maybeOfferAdvance();
-      if (openCalSilently && DATA1.calLink) {
-        calDepartedAt = Date.now();
-        awaitingCalReturn = true;
-        window.open(DATA1.calLink, '_blank', 'noopener,noreferrer');
-      }
     }, 50);
-  }
-
-  function restartSectionList(sectionFirstTopic) {
-    const start = clampTopic(sectionFirstTopic || 1);
-    const t = topicData(start);
-    const sectionId = t?.sectionId;
-    const prog = currentProgress();
-    const nums = sectionId
-      ? (visibleSections().find(s => s.id === sectionId)?.topics || []).map(item => item.number)
-      : [start];
-    prog.heartYes = prog.heartYes.filter(n => !nums.includes(n));
-    prog.heartAnswered = prog.heartAnswered.filter(n => !nums.includes(n));
-    prog.consecutiveNo = 0;
-    prog.consecutiveYes = 0;
-    saveState();
-    goToTopic(start);
-    refreshSidebarMarks();
-    updateBuilderHud(true);
-    syncScene();
-  }
-
-  function handleCalReturn() {
-    if (!awaitingCalReturn || !calDepartedAt) return;
-    awaitingCalReturn = false;
-    const elapsed = Date.now() - calDepartedAt;
-    calDepartedAt = null;
-    const resetTo = calDepartedSectionFirstTopic || state.currentTopic;
-    calDepartedSectionFirstTopic = null;
-    if (elapsed < CAL_MS) {
-      restartSectionList(resetTo);
-      return;
-    }
-    saveState();
   }
 
   function fillProfileForm(profile) {
@@ -1759,11 +1715,6 @@
   document.querySelectorAll('.exp-fill-btn').forEach(btn => {
     btn.addEventListener('click', () => applyFill(btn.dataset.fill));
   });
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') handleCalReturn();
-  });
-  window.addEventListener('focus', () => handleCalReturn());
 
   if (HUB_PAGE) {
     document.querySelectorAll('[data-exp-hub-back]').forEach(el => {
