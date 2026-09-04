@@ -54,6 +54,7 @@
   const HEART_ACCOUNTABILITY_EVERY = 10;
   const HEART_ACCOUNTABILITY_MIN = 50;
   const HEART_ACCOUNTABILITY_MAX = 1000;
+  const BODY_KICKOFF_QUESTION = 'Did you say this and have something kick off in your body?';
   const LANG_ALIASES = { sp: 'es' };
   const TOPIC_COUNT = SAMPLE_MODE ? SAMPLE_TOPIC_LIMIT : DATA1.topicCount || 666;
 
@@ -638,14 +639,20 @@
     return pack[key] || CATALOG.ui?.en?.[key] || fallback || key;
   }
 
+  function applyHeartQuestion() {
+    if (!els.heartTitle) return;
+    const fromPack = (CATALOG.ui?.[state.language] || {}).heartTitle;
+    const usesOldHeartWording =
+      fromPack &&
+      /heart|corazón|cuore|lòng|ใจ|sercu/i.test(fromPack) &&
+      !/kick off|Körper/i.test(fromPack);
+    els.heartTitle.textContent =
+      !fromPack || usesOldHeartWording ? BODY_KICKOFF_QUESTION : fromPack;
+  }
+
   function applyUiChrome() {
     if (els.langLabel) els.langLabel.textContent = ui('languageLabel', 'Language');
-    if (els.heartTitle) {
-      els.heartTitle.textContent = ui(
-        'heartTitle',
-        'Did you say this and have something kick off in your body?'
-      );
-    }
+    applyHeartQuestion();
     if (els.heartSub) {
       els.heartSub.textContent = ui(
         'heartSub',
@@ -1191,6 +1198,7 @@
     pendingHeartCheck = true;
     const current = clampTopic(state.currentTopic);
     syncHeartExplain(heartExplainMilestoneFor(current, pendingNavigation));
+    applyHeartQuestion();
     if (!els.heartDialog.open) els.heartDialog.showModal();
     if (accountabilityMilestonePending > 0) els.accountabilityText?.focus();
   }
