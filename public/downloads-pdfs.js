@@ -17,6 +17,13 @@
         "made":  "2026-08-10"
     },
     {
+        "title":  "3 Ways to Copy Jesus Flawlessly",
+        "summary":  "Acceptable, good, and perfect will of God: seek/knock/ask, the cross, and tongues.",
+        "href":  "downloads/3-ways-to-copy-jesus-flawlessly.pdf",
+        "download":  "3 Ways to Copy Jesus Flawlessly.pdf",
+        "made":  "2026-09-01"
+    },
+    {
         "title":  "Christianity Without Christ",
         "summary":  "Faith without accountability, community, or Jesus at the forefront: OT lined up with NT.",
         "href":  "downloads/christianity-without-christ.pdf",

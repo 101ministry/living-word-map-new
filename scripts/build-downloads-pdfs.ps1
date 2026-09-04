@@ -19,6 +19,13 @@ $items = @(
     summary = 'Religions, discipleship costs, and biblical response from CARM articles.'
   },
   @{
+    src = '3 Ways to Copy Jesus Flawlessly.pdf'
+    file = '3-ways-to-copy-jesus-flawlessly.pdf'
+    title = '3 Ways to Copy Jesus Flawlessly'
+    summary = 'Acceptable, good, and perfect will of God: seek/knock/ask, the cross, and tongues.'
+    made = '2026-09-01'
+  },
+  @{
     src = 'Christianity Without Christ.pdf'
     file = 'christianity-without-christ.pdf'
     title = 'Christianity Without Christ'
@@ -149,7 +156,7 @@ foreach ($item in $items) {
   }
   Copy-Item -LiteralPath $srcPath -Destination $destPath -Force
   $href = if ($item.publicRoot) { $item.file } else { "downloads/$($item.file)" }
-  $made = (Get-Item -LiteralPath $srcPath).CreationTime.ToString('yyyy-MM-dd')
+  $made = if ($item.made) { $item.made } else { (Get-Item -LiteralPath $srcPath).CreationTime.ToString('yyyy-MM-dd') }
   $manifest.Add([ordered]@{
     title = $item.title
     summary = $item.summary
