@@ -53,19 +53,7 @@
   });
 
   const latest = items.reduce((a, b) => (a.when.key > b.when.key ? a : b));
-  const monthCounts = new Map();
-  items.forEach((item) => {
-    const key = item.when.key.slice(0, 7);
-    monthCounts.set(key, (monthCounts.get(key) || 0) + 1);
-  });
-  let startYm = latest.when.key.slice(0, 7);
-  let startCount = 0;
-  monthCounts.forEach((count, key) => {
-    if (count > startCount) {
-      startCount = count;
-      startYm = key;
-    }
-  });
+  const startYm = latest.when.key.slice(0, 7);
   let year = Number(startYm.slice(0, 4));
   let month = Number(startYm.slice(5, 7));
 
