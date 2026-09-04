@@ -3,6 +3,13 @@
   description: "Studies and prayers from the ministry library. Tap to download.",
   items: [
     {
+        "title":  "10 Principles",
+        "summary":  "Walk toward Jesus instead of sinking in common-sense logic: principalities, forgiveness, secret life, and Holy Spirit only.",
+        "href":  "downloads/10-principles.pdf",
+        "download":  "10 Principles.pdf",
+        "made":  "2026-09-04"
+    },
+    {
         "title":  "A Grumpy 2 Corinthians 9",
         "summary":  "2 Corinthians 9 on cheerful giving through the grumpy heart and the refuser.",
         "href":  "downloads/grumpy-2-corinthians-9.pdf",

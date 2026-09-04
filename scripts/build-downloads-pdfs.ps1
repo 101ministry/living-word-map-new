@@ -7,6 +7,13 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
 $items = @(
   @{
+    src = '10 Principles.pdf'
+    file = '10-principles.pdf'
+    title = '10 Principles'
+    summary = 'Walk toward Jesus instead of sinking in common-sense logic: principalities, forgiveness, secret life, and Holy Spirit only.'
+    made = '2026-09-04'
+  },
+  @{
     src = 'A Grumpy 2 Corinthians 9.pdf'
     file = 'grumpy-2-corinthians-9.pdf'
     title = 'A Grumpy 2 Corinthians 9'
