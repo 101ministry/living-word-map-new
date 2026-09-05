@@ -2443,9 +2443,10 @@ html.camp-isolated .graph-panel {
 }
 
 .graph-tooltip-meta {
-  font-size: 0.76rem;
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  color: #d8d4c8;
   line-height: 1.4;
+  text-shadow: none;
 }
 
 .graph-tooltip-head + .graph-tooltip-meta {
@@ -2685,20 +2686,13 @@ html.camp-isolated .graph-panel {
 .detail-header:has(.detail-type.root) h2,
 .detail-header:has(.detail-type.topic) h2,
 .detail-header:has(.detail-type.principality) h2 {
-  text-shadow:
-    0 0 12px rgba(240, 234, 214, 0.5),
-    0 0 4px rgba(255, 255, 255, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.85);
 }
 
 .graph-tooltip,
 .tooltip-kap {
-  text-shadow:
-    0 0 10px rgba(240, 234, 214, 0.55),
-    0 0 3px rgba(255, 255, 255, 0.75);
-  box-shadow:
-    0 0 14px rgba(240, 234, 214, 0.2),
-    0 8px 24px rgba(0, 0, 0, 0.45);
+  text-shadow: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 /* Detail panel connection chips — high-contrast glow for low vision (not graph links). */
@@ -2708,31 +2702,19 @@ html.camp-isolated .graph-panel {
   line-height: 1.4;
   padding: 0.38rem 0.65rem;
   border-width: 1px;
-  text-shadow:
-    0 0 10px rgba(240, 234, 214, 0.7),
-    0 0 3px rgba(255, 255, 255, 0.6),
-    0 1px 2px rgba(0, 0, 0, 0.92);
-  box-shadow:
-    0 0 14px rgba(240, 234, 214, 0.14),
-    inset 0 0 10px rgba(255, 255, 255, 0.05);
+  text-shadow: none;
+  box-shadow: none;
 }
 
 .detail-panel .connection-chips .chip:hover {
   border-color: var(--accent);
-  box-shadow:
-    0 0 18px rgba(212, 175, 55, 0.28),
-    0 0 10px rgba(240, 234, 214, 0.22),
-    inset 0 0 12px rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.35);
 }
 
 .detail-panel .tag-list li {
   color: var(--quote);
-  text-shadow:
-    0 0 8px rgba(240, 234, 214, 0.55),
-    0 0 2px rgba(255, 255, 255, 0.45);
-  box-shadow:
-    0 0 10px rgba(240, 234, 214, 0.1),
-    inset 0 0 8px rgba(255, 255, 255, 0.04);
+  text-shadow: none;
+  box-shadow: none;
 }
 
 .detail-meta {
