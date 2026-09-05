@@ -1175,14 +1175,32 @@
     if (typeof SCENE.resize === 'function') requestAnimationFrame(() => SCENE.resize());
   }
 
+  function ensurePrayerTopBar(panel) {
+    if (!panel) return null;
+    let bar = panel.querySelector('#exp-prayer-top-bar');
+    if (!bar) {
+      bar = panel.ownerDocument.createElement('div');
+      bar.id = 'exp-prayer-top-bar';
+      bar.className = 'exp-prayer-top-bar';
+      const btn = panel.ownerDocument.createElement('button');
+      btn.type = 'button';
+      btn.id = 'exp-prayer-top';
+      btn.className = 'exp-prayer-top-btn';
+      btn.textContent = '↑ Top';
+      bar.appendChild(btn);
+      panel.appendChild(bar);
+    }
+    return bar;
+  }
+
   function setPrayerPopoutChrome(out) {
     const panel = prayerPanelEl();
     const pop = panel?.querySelector('#exp-prayer-popout');
     const closeBtn = panel?.querySelector('#exp-prayer-dock-btn');
     if (pop) pop.hidden = !!out;
     if (closeBtn) closeBtn.hidden = !out;
-    const topBtn = panel?.querySelector('#exp-prayer-top');
-    if (topBtn) topBtn.hidden = !out;
+    const topBar = ensurePrayerTopBar(panel);
+    if (topBar) topBar.hidden = !out;
   }
 
   function setPrayerDockNote(show) {
@@ -1794,7 +1812,8 @@
     void popOutPrayer();
   });
   document.getElementById('exp-prayer-dock-btn')?.addEventListener('click', () => dockPrayer());
-  document.getElementById('exp-prayer-top')?.addEventListener('click', () => {
+  document.getElementById('exp-prayer-panel')?.addEventListener('click', e => {
+    if (!e.target.closest('#exp-prayer-top')) return;
     const scroller = prayerPanelEl()?.querySelector('#exp-prayer-scroll');
     scroller?.scrollTo({ top: 0, behavior: 'smooth' });
   });
