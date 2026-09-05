@@ -145,7 +145,9 @@
 
   function highlightChapter(topicNumber) {
     chapterList.querySelectorAll('.teaching-chapter-btn').forEach(btn => {
-      btn.classList.toggle('is-active', Number(btn.dataset.topic) === topicNumber);
+      const on = Number(btn.dataset.topic) === Number(topicNumber);
+      btn.classList.toggle('is-active', on);
+      if (on) btn.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     });
   }
 
@@ -346,6 +348,26 @@
       seekTo(entry.startSeconds || 0);
     }
     highlightChapter(topicNumber);
+    return true;
+  }
+
+  function openTopicOnPrayerPage(topicNumber) {
+    const n = Number(topicNumber);
+    if (!Number.isFinite(n) || !topicEntry(n)) return false;
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('site', 'prayer-videos');
+      url.searchParams.set('watch', String(n));
+      window.history.replaceState({ sitePage: 'prayer-videos' }, '', url);
+    } catch { /* ignore */ }
+    window.LwmSitePages?.apply?.('prayer-videos', { replace: true });
+    const go = () => {
+      openTopicVideo(n);
+      document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    requestAnimationFrame(() => {
+      window.setTimeout(go, 40);
+    });
     return true;
   }
 
@@ -579,6 +601,7 @@
 
   window.TeachingVideos = {
     openTopicVideo,
+    openTopicOnPrayerPage,
     openTopicVideoInRail,
     selectVideoByKey(key) {
       const v = videos.find(x => x.key === key);
@@ -600,4 +623,14 @@
     resetVerifiedWatch,
     getActiveVideo: getActiveVideoInfo,
   };
+
+  const watchParam = Number(new URLSearchParams(window.location.search).get('watch'));
+  if (Number.isFinite(watchParam) && watchParam > 0 && topicEntry(watchParam)) {
+    const cue = () => openTopicVideo(watchParam);
+    if (document.body.dataset.sitePage === 'prayer-videos') {
+      window.setTimeout(cue, 80);
+    } else {
+      window.addEventListener('lwm:site-page-prayer', cue, { once: true });
+    }
+  }
 })();

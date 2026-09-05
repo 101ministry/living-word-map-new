@@ -71,6 +71,7 @@
     const params = new URLSearchParams(window.location.search);
     const site = params.get('site');
     if (site) return normalize(site);
+    if (params.get('watch')) return 'prayer-videos';
     if (params.get('view') || params.get('topic')) return 'map';
     if (location.hash === '#study-full') return 'downloads';
     return 'map';

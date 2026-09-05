@@ -2215,13 +2215,9 @@
           ? ` at ${window.TeachingVideos?.formatTime(videoEntry.startSeconds) || ''}`
           : '';
         teachingNote.textContent = `Teaching video: ${dayLabel}${timeLabel}`;
+        watchTeachingBtn.textContent = 'Watch teaching';
         watchTeachingBtn.onclick = () => {
-          if (isGlobeFruitFocus()) {
-            window.TeachingVideos?.openTopicVideoInRail?.(item.number);
-          } else {
-            window.TeachingVideos?.openTopicVideo(item.number);
-            document.getElementById('teaching-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          window.TeachingVideos?.openTopicOnPrayerPage?.(item.number);
         };
       } else if (teachingSection) {
         teachingSection.classList.add('hidden');
@@ -2230,14 +2226,6 @@
       prayerSection.classList.add('hidden');
       topicAudio.pause();
       teachingSection?.classList.add('hidden');
-    }
-
-    if (isGlobeFruitFocus() && teachingSection) {
-      teachingSection.classList.add('hidden');
-    }
-
-    if (isGlobeFruitFocus() && type === 'topic') {
-      window.TeachingVideos?.openTopicVideoInRail?.(item.number);
     }
 
     applyGraphView();
