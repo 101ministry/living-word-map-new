@@ -1181,6 +1181,8 @@
     const closeBtn = panel?.querySelector('#exp-prayer-dock-btn');
     if (pop) pop.hidden = !!out;
     if (closeBtn) closeBtn.hidden = !out;
+    const topBtn = panel?.querySelector('#exp-prayer-top');
+    if (topBtn) topBtn.hidden = !out;
   }
 
   function setPrayerDockNote(show) {
@@ -1792,6 +1794,10 @@
     void popOutPrayer();
   });
   document.getElementById('exp-prayer-dock-btn')?.addEventListener('click', () => dockPrayer());
+  document.getElementById('exp-prayer-top')?.addEventListener('click', () => {
+    const scroller = prayerPanelEl()?.querySelector('#exp-prayer-scroll');
+    scroller?.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   if (els.langSelect) {
     els.langSelect.addEventListener('change', () => setLanguage(els.langSelect.value));

@@ -123,6 +123,33 @@
   border-color: var(--accent);
 }
 
+.exp-prayer-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  margin: 1.15rem 0 0.35rem;
+  padding: 0.22rem 0.55rem;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exp-prayer-top-btn[hidden] {
+  display: none;
+}
+
+.exp-prayer-top-btn:hover,
+.exp-prayer-top-btn:focus-visible {
+  border-color: var(--accent);
+}
+
 .exp-prayer-floating {
   position: fixed;
   z-index: 70;
