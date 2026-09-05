@@ -226,7 +226,6 @@
   }
 
   function setControlsDrawerOpen(open) {
-    if (open && !isGlobeView()) return;
     const legend = document.getElementById('legend-panel');
     const backdrop = document.getElementById('legend-backdrop');
     const btn = document.getElementById('open-controls');
@@ -298,6 +297,7 @@
   }
 
   function goToCompare() {
+    ensureMapSitePage();
     window.setTimeout(() => {
       if (state.compareIds.length >= 2) {
         setControlsDrawerOpen(false);
@@ -306,7 +306,7 @@
       }
       setControlsDrawerOpen(true);
       requestAnimationFrame(() => {
-        document.querySelector('.compare-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.querySelector('.compare-panel')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     }, 50);
   }
