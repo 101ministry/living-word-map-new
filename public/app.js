@@ -953,7 +953,7 @@
     for (const node of nodes) {
       const id = asNodeId(node);
       if (nodeType(id) !== 'principality' || node.x == null || node.y == null) continue;
-      const half = nodeRadius(id) * 1.08;
+      const half = nodeRadius(id) * 1.45;
       const dx = coords.x - node.x;
       const dy = coords.y - node.y;
       if (Math.abs(dx) <= half && Math.abs(dy) <= half) {
@@ -962,6 +962,30 @@
           bestDist = dist;
           best = node;
         }
+      }
+    }
+    return best;
+  }
+
+  function pickTopicAtScreen(clientX, clientY) {
+    const coords = graphPointerCoords(clientX, clientY);
+    if (!coords) return null;
+
+    const { nodes } = Graph.graphData();
+    let best = null;
+    let bestDist = Infinity;
+    const pad = isConstellationView() ? 2.1 : 2.6;
+
+    for (const node of nodes) {
+      const id = asNodeId(node);
+      if (nodeType(id) !== 'topic' || node.x == null || node.y == null) continue;
+      const radius = Math.max(nodeRadius(id) * pad, 10);
+      const dx = coords.x - node.x;
+      const dy = coords.y - node.y;
+      const dist = dx * dx + dy * dy;
+      if (dist <= radius * radius && dist < bestDist) {
+        bestDist = dist;
+        best = node;
       }
     }
     return best;
@@ -1256,10 +1280,13 @@
     const boxY = node.y - nodeRadius(id) - boxH - 6 / globalScale;
 
     ctx.save();
-    ctx.shadowColor = 'rgba(240, 234, 214, 0.5)';
-    ctx.shadowBlur = 10 / globalScale;
+    const light = document.documentElement.getAttribute('data-theme') === 'light';
+    if (!light) {
+      ctx.shadowColor = 'rgba(240, 234, 214, 0.5)';
+      ctx.shadowBlur = 10 / globalScale;
+    }
     ctx.fillStyle = 'rgba(10, 11, 15, 0.94)';
-    ctx.strokeStyle = 'rgba(240, 234, 214, 0.35)';
+    ctx.strokeStyle = light ? 'rgba(138, 111, 24, 0.55)' : 'rgba(240, 234, 214, 0.35)';
     ctx.lineWidth = Math.max(0.5, 1 / globalScale);
     roundRect(ctx, boxX, boxY, boxW, boxH, 5 / globalScale);
     ctx.fill();
@@ -1267,8 +1294,10 @@
     ctx.shadowBlur = 0;
 
     ctx.fillStyle = '#f0ead6';
-    ctx.shadowColor = 'rgba(255, 255, 255, 0.65)';
-    ctx.shadowBlur = 6 / globalScale;
+    if (!light) {
+      ctx.shadowColor = 'rgba(255, 255, 255, 0.65)';
+      ctx.shadowBlur = 6 / globalScale;
+    }
     lines.forEach((ln, i) => {
       ctx.fillText(ln, node.x, boxY + padY + lineHeight * (i + 0.5));
     });
@@ -1403,6 +1432,7 @@
     .onZoom(() => syncZoomSlider());
 
   window.__principalityIconRefresh = () => Graph.refresh();
+  window.addEventListener('lwm:theme-changed', () => Graph.refresh());
 
   if (globeHost && window.GlobeView) {
     globeView = window.GlobeView.create(globeHost, {
@@ -1790,6 +1820,12 @@
 
   container.addEventListener('mousemove', ev => {
     if (!(ev.target instanceof HTMLCanvasElement)) return;
+    const topicHit = pickTopicAtScreen(ev.clientX, ev.clientY);
+    if (topicHit) {
+      showGraphTooltip(buildGraphTooltipHtml(asNodeId(topicHit)), ev.clientX, ev.clientY);
+      container.style.cursor = 'pointer';
+      return;
+    }
     const rootHit = pickRootOrFruitAtScreen(ev.clientX, ev.clientY);
     if (rootHit) {
       showGraphTooltip(buildGraphTooltipHtml(asNodeId(rootHit)), ev.clientX, ev.clientY);
@@ -1834,6 +1870,12 @@
     if (rootOrFruit) {
       ev.stopPropagation();
       selectNode(asNodeId(rootOrFruit));
+      return;
+    }
+    const topicHit = pickTopicAtScreen(ev.clientX, ev.clientY);
+    if (topicHit) {
+      ev.stopPropagation();
+      selectNode(asNodeId(topicHit));
     }
   }, true);
 

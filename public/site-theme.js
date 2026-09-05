@@ -127,6 +127,7 @@
     document.documentElement.dataset.theme = theme;
     document.documentElement.style.colorScheme = colorSchemeFor(theme);
     updateToggle(preference);
+    window.dispatchEvent(new CustomEvent('lwm:theme-changed', { detail: { theme, preference } }));
   }
 
   function bootFromHead() {

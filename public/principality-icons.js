@@ -139,10 +139,12 @@
         ctx.lineWidth = Math.max(2, size * 0.06);
         ctx.strokeRect(px - 2, py - 2, size + 4, size + 4);
       }
+      const light = document.documentElement.getAttribute('data-theme') === 'light';
       if (selected) {
-        ctx.strokeStyle = '#f0ead6';
-        ctx.lineWidth = Math.max(2, size * 0.05);
-        ctx.strokeRect(px - 1, py - 1, size + 2, size + 2);
+        ctx.strokeStyle = light ? '#8a6f18' : '#f0ead6';
+        ctx.lineWidth = Math.max(1.5, size * (light ? 0.035 : 0.05));
+        const pad = light ? 0 : 1;
+        ctx.strokeRect(px - pad, py - pad, size + pad * 2, size + pad * 2);
       }
 
       ctx.restore();
