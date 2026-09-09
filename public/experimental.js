@@ -1230,6 +1230,16 @@
     if (closeBtn) closeBtn.hidden = !out;
     const topBar = ensurePrayerTopBar(panel);
     if (topBar) topBar.hidden = !out;
+    const bar = panel?.querySelector('.exp-prayer-window-bar');
+    const header = panel?.querySelector('.round2-prayer-header');
+    if (!bar || !header) return;
+    if (out) {
+      const before = (pop && !pop.hidden ? pop : null) || closeBtn;
+      if (before) bar.insertBefore(header, before);
+      else bar.appendChild(header);
+    } else if (header.parentElement === bar) {
+      bar.insertAdjacentElement('afterend', header);
+    }
   }
 
   function setPrayerDockNote(show) {

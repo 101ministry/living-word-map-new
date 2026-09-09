@@ -219,48 +219,63 @@
 
 .exp-prayer-pip-body .exp-prayer-window-bar,
 .exp-prayer-floating .exp-prayer-window-bar {
-  padding: 0.12rem 0.55rem;
-  border-bottom: 0;
+  padding: 0.1rem 0.4rem 0.1rem 0.5rem;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .exp-prayer-pip-body .exp-prayer-window-title,
 .exp-prayer-floating .exp-prayer-window-title {
+  flex: 0 0 auto;
   font-size: 0.64rem;
 }
 
 .exp-prayer-pip-body .exp-prayer-window-btn,
 .exp-prayer-floating .exp-prayer-window-btn {
+  flex: 0 0 auto;
   font-size: 0.7rem;
   padding: 0.08rem 0.42rem;
 }
 
-.exp-prayer-pip-body .round2-prayer-header,
-.exp-prayer-floating .round2-prayer-header {
-  padding: 0 0.65rem 0.22rem;
+.exp-prayer-pip-body .exp-prayer-window-bar .round2-prayer-header,
+.exp-prayer-floating .exp-prayer-window-bar .round2-prayer-header {
+  flex: 1;
+  min-width: 0;
+  padding: 0.06rem 0.25rem;
+  border-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.4rem;
+  row-gap: 0.02rem;
 }
 
-.exp-prayer-pip-body .round2-topic-num,
-.exp-prayer-floating .round2-topic-num {
+.exp-prayer-pip-body .exp-prayer-window-bar .round2-topic-num,
+.exp-prayer-floating .exp-prayer-window-bar .round2-topic-num {
   margin-bottom: 0;
   font-size: 0.7rem;
 }
 
-.exp-prayer-pip-body .round2-prayer-header h2,
-.exp-prayer-floating .round2-prayer-header h2 {
-  margin: 0 0 0.08rem;
-  font-size: 1.05rem;
+.exp-prayer-pip-body .exp-prayer-window-bar .round2-prayer-header h2,
+.exp-prayer-floating .exp-prayer-window-bar .round2-prayer-header h2 {
+  margin: 0;
+  font-size: 1.02rem;
   line-height: 1.15;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.exp-prayer-pip-body .round2-topic-meta,
-.exp-prayer-floating .round2-topic-meta {
-  font-size: 0.7rem;
+.exp-prayer-pip-body .exp-prayer-window-bar .round2-topic-meta,
+.exp-prayer-floating .exp-prayer-window-bar .round2-topic-meta {
+  flex: 1 1 100%;
+  font-size: 0.68rem;
   line-height: 1.25;
 }
 
-.exp-prayer-pip-body .round2-topic-video,
-.exp-prayer-floating .round2-topic-video {
-  margin: 0.15rem 0 0;
+.exp-prayer-pip-body .exp-prayer-window-bar .round2-topic-video,
+.exp-prayer-floating .exp-prayer-window-bar .round2-topic-video {
+  flex: 1 1 100%;
+  margin: 0.04rem 0 0;
 }
 
 .exp-prayer-pip-body .exp-prayer-top-bar,
