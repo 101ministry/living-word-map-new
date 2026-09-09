@@ -30,15 +30,31 @@ Separate from R&R series posters. Minimal 16:9 days: R&R top banner, 20 topics p
 
 ## Riverside Share-for-Review clips
 
-When the user pastes a Riverside preview URL, fetch the transcript and reply with **Title**, **Hashtags**, and **Summary of video**.
+When the user pastes a Riverside preview URL, fetch the transcript, give copy fields, and **publish to YouTube via Riverside MCP** unless they say not to.
 
-- Wrap each field in its own `text` code fence so the copy icon is available. Never nest fences, and never put backticks in the field content. The copy icon copies inner text only; the fence markers are chat formatting, not part of the paste.
+**Default publish (MCP):** private Short or regular YouTube upload to the connected Repentance101 Ministries channel (`social_get_connected_platforms` → `social_upload_create`). Use `composeSettings` (1080p defaults) when the edit is not yet exported. Check status once after accept; do not claim live until COMPLETED. Instagram is **not** published via MCP until connected — user pastes IG captions manually in Riverside.
+
+**YouTube daily limit (100):** Keep a running count of MCP YouTube publishes in this chat (unique edit/clip IDs accepted by `social_upload_create`, including retries that later succeeded — count each unique video once; failed-then-retried = one video). After every publish, report `YouTube today: N/100`. Warn at 80, 90, 95. At 100, **stop publishing** and ask the user before any more pushes. Do not count Instagram-only copy or skipped duplicates.
+
+**SHORT vs SEGMENT:**
+- **SHORT** (default when unclear, or user says short): Instagram = **one** `text` fence in this order, blank lines between sections:
+  1. Title
+  2. Instagram hashtags (max 20; leading space on the hashtag line)
+  3. `@JeremyRiddle` (tag line, alone — right after hashtags)
+  4. Summary paragraph
+  5. Blank line, then the shared footer line
+  Also MCP-publish as `YOUTUBE_SHORTS` private with title + description (summary + 3 topic hashtags + footer). Do **not** put `@JeremyRiddle` in the YouTube description unless asked.
+- **SEGMENT / YouTube-only** (user says segment, or longer cut meant for YT only): **no Instagram block**. MCP-publish to YouTube (`YOUTUBE` unless they ask Shorts) private with title + description (summary + up to 3 topic hashtags + footer). Optional separate copy fences for title/hashtags/summary if useful for Riverside’s YT share UI — still no labels.
+- If the user says the **next N are segments** (or shorts), treat that many following preview links accordingly, then revert to SHORT default unless they extend the batch.
+- Large mixed batches: default each link to **SHORT** unless the user labels that link (or a following run) as **segment**. When they say segments are coming / “segments start here,” switch to SEGMENT mode until they say shorts again.
+
+- Never nest fences; never put backticks in field content. No labels (`TITLE`, `HASHTAGS`, `SUMMARY`) inside copy boxes.
 - Hashtags: topic/Scripture/content tags only. Do **not** use `#NormM`.
-- Summary: clip paragraph, then a blank line, then this shared line (no brackets):
+- Shared summary footer line (no brackets):
 
 `#RepentanceProject #PrayerTopics #LivingWordMap #RR2026 #Deliverance #SpiritualWarfare #Principalities #Repentance https://map.repentance101.com`
 
-- Same clip ID twice: say duplicate and reprint. Overlapping shorter/longer cuts: note the overlap, still give the three fields.
+- Same clip ID twice: say duplicate and reprint (skip re-publish unless asked). Overlapping shorter/longer cuts: note the overlap, still give fields and publish each unless duplicate.
 
 ## YouTube Shorts batch uploads (R&R days)
 

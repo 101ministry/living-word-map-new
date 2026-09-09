@@ -40,23 +40,27 @@
   }
 
   function formatSource(piece) {
-    if (!piece.sourceFile) return 'Spoken label from the complete recording';
+    if (!piece.sourceFile) return '';
     return piece.sourceFile.replace(/\+/g, ' ').replace(/\.mp3$/i, '');
   }
 
-  listEl.innerHTML = pieces.map((piece, index) => `
+  listEl.innerHTML = pieces.map((piece, index) => {
+    const source = formatSource(piece);
+    const sourceHtml = source ? `<span class="downloads-source">${source}</span>` : '';
+    return `
     <li class="downloads-row" data-index="${index}">
       <span class="downloads-num">${piece.id}</span>
       <div class="downloads-meta">
         <strong>${piece.title}</strong>
-        <span class="downloads-source">${formatSource(piece)}</span>
+        ${sourceHtml}
       </div>
       <div class="downloads-actions">
         <button type="button" class="downloads-play-btn" data-play="${index}">Play</button>
         <a class="downloads-save-btn" href="${audioUrl(piece, true)}" download="${piece.downloadName || piece.file}">Download</a>
       </div>
     </li>
-  `).join('');
+  `;
+  }).join('');
 
   listEl.addEventListener('click', (event) => {
     const btn = event.target.closest('[data-play]');

@@ -88,12 +88,16 @@
 #  40 | presentation | sexual-perversion + rebellion    | TOPICS-666-PRESENTATION DAY 40
 #  41 | presentation | rebellion + destructive-attitudes | TOPICS-666-PRESENTATION DAY 41
 #  42 | presentation | destructive-attitudes            | TOPICS-666-PRESENTATION DAY 42
+#  43 | presentation | destructive-attitudes            | TOPICS-666-PRESENTATION DAY 43 (409-420)
+#  44 | presentation | destructive-attitudes            | TOPICS-666-PRESENTATION DAY 44 (433-442; 421-432 not in this livestream)
+#  45 | presentation | destructive-identities           | TOPICS-666-PRESENTATION DAY 45 (443-453)
+#  46 | presentation | destructive-identities           | TOPICS-666-PRESENTATION DAY 46 (454-464)
 
 # --- NEXT EXPECTED (update after each new batch of links) ---
-nextDay=43
+nextDay=47
 nextMode=presentation
-nextPrincipalityId=destructive-attitudes
-nextTitleSuffix=Destructive Attitudes
+nextPrincipalityId=destructive-identities
+nextTitleSuffix=Destructive Identities
 
 # After divination, continue chart order with full-principality days unless split is indicated
 # in a new presentation file section.

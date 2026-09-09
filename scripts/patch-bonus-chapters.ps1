@@ -15,7 +15,7 @@ function Parse-Timestamp([string]$text) {
 }
 
 function Format-BonusLabel([string]$label) {
-    if ($label -notmatch '(?i)^(bonus:|trigger warning:|technical )') { return "BONUS: $label" }
+    if ($label -notmatch '(?i)^(bonus:|trigger warning:|technical |black screen)') { return "BONUS: $label" }
     return $label
 }
 

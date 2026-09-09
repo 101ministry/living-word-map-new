@@ -26,6 +26,7 @@ function Normalize-TopicText([string]$text) {
 function Normalize-TopicKey([string]$text) {
     if (-not $text) { return '' }
     $t = $text.ToLower()
+    $t = $t -replace '\s+', ' '
     $t = $t -replace '[\u201c\u201d\u2018\u2019''"]', ' '
     $t = $t -replace '^(spirit of|familiar identity of|interacting with the spirit of)\s+', ''
     $t = $t -replace '^(being in|being|having|using|going to|reading|playing with|participating in)\s+', ''
@@ -36,7 +37,7 @@ function Normalize-TopicKey([string]$text) {
 
 function Get-TopicKind([string]$text) {
     if (-not $text) { return 'plain' }
-    $t = $text.ToLower().Trim()
+    $t = ($text.ToLower() -replace '\s+', ' ').Trim()
     if ($t -match '^(spirit of|interacting with the spirit of)\b') { return 'spirit' }
     if ($t -match '^spirit [a-z]' -and $t -notmatch '^spirit of\b') { return 'spirit' }
     if ($t -match '^(being in|being)\b') { return 'being' }
@@ -173,7 +174,11 @@ function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbe
         elseif ($day -eq 40) { $preferredMin = 374; $preferredMax = 384 }
         elseif ($day -eq 41) { $preferredMin = 385; $preferredMax = 396 }
         elseif ($day -eq 42) { $preferredMin = 397; $preferredMax = 408 }
-        elseif ($day -ge 43) { $preferredMin = 409; $preferredMax = 442 }
+        elseif ($day -eq 43) { $preferredMin = 409; $preferredMax = 420 }
+        elseif ($day -eq 44) { $preferredMin = 433; $preferredMax = 442 }
+        elseif ($day -eq 45) { $preferredMin = 443; $preferredMax = 453 }
+        elseif ($day -eq 46) { $preferredMin = 454; $preferredMax = 464 }
+        elseif ($day -ge 47) { $preferredMin = 465; $preferredMax = 573 }
 
         $ordered = @($candidates | Sort-Object number)
         if ($null -ne $preferredMin) {
@@ -218,6 +223,12 @@ function Match-ChartTopic([string]$phrase, $allTopics, [int]$day = 0, $usedNumbe
         if ($picked) { return $picked }
         return $null
     }
+    if ($phraseKind -eq 'familiar') {
+        $famMatch = @($pool | Where-Object { $_.kind -eq 'familiar' -and $_.norm -eq $norm })
+        $picked = Select-Unused $famMatch
+        if ($picked) { return $picked }
+        return $null
+    }
 
     return $null
 }
@@ -240,6 +251,8 @@ function Parse-Presentation([string]$path, $allTopics) {
             continue
         }
         if ($null -eq $currentDay) { continue }
+        # Compiled prayer body (second paragraph of each pair in later days)
+        if ($line -match '(?i);\s*is happening because of agreements') { continue }
 
         $phrase = Extract-SpiritPhrase $line
         if (-not $phrase) { continue }
@@ -474,7 +487,7 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
             $bonusStart = Parse-Timestamp ([string]$bonus.start)
             if ($null -eq $bonusStart) { continue }
             $label = [string]$bonus.label
-            if ($label -notmatch '(?i)^(bonus:|trigger warning:|technical )') { $label = "BONUS: $label" }
+            if ($label -notmatch '(?i)^(bonus:|trigger warning:|technical |black screen)') { $label = "BONUS: $label" }
             $chapters += [pscustomobject]@{
                 topicNumber  = $null
                 topicName    = $label

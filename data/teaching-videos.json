@@ -253,7 +253,19 @@
       "youtubeId": "GQdgqRdvSd8",
       "url": "https://www.youtube.com/watch?v=GQdgqRdvSd8",
       "topicStart": 576,
-      "topicEnd": 574
+      "topicEnd": 574,
+      "chapterTimestamps": {
+        "576": "15:31",
+        "575": "23:12",
+        "574": "31:54"
+      },
+      "bonusChapters": [
+        { "label": "Spirit of Fetish [continued]", "start": "14:07" },
+        { "label": "BLACK SCREEN", "start": "39:16" },
+        { "label": "Spirits of Disembodied unsaved family members, relatives, ancestors, or celebrities [continued]", "start": "46:09" },
+        { "label": "BONUS: Can the kingdom of darkness hear our thoughts?", "start": "49:02" },
+        { "label": "BONUS: How thoughts are used by the kingdom of darkness as arrows fired at others", "start": "51:35" }
+      ]
     },
     { "day": 9, "part": 1, "title": "Day 9 - Prayer Topics", "youtubeId": "habhVgC3Nms", "url": "https://www.youtube.com/watch?v=habhVgC3Nms" },
     { "day": 10, "part": 1, "title": "Day 10 - Prayer Topics", "youtubeId": "n--bMxG44nw", "url": "https://www.youtube.com/watch?v=n--bMxG44nw" },
@@ -403,6 +415,42 @@
       "title": "Day 42 - Prayer Topics (Destructive Attitudes)",
       "youtubeId": "9I7fJa-P23M",
       "url": "https://youtube.com/live/9I7fJa-P23M"
+    },
+    {
+      "day": 43,
+      "part": 1,
+      "title": "Day 43 - Prayer Topics (Destructive Attitudes)",
+      "youtubeId": "PdH6Rq_TJH0",
+      "url": "https://youtube.com/live/PdH6Rq_TJH0",
+      "topicStart": 409,
+      "topicEnd": 420
+    },
+    {
+      "day": 44,
+      "part": 1,
+      "title": "Day 44 - Prayer Topics (Destructive Attitudes)",
+      "youtubeId": "h7CJLpSPhdE",
+      "url": "https://youtube.com/live/h7CJLpSPhdE",
+      "topicStart": 433,
+      "topicEnd": 442
+    },
+    {
+      "day": 45,
+      "part": 1,
+      "title": "Day 45 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "X8pdAySeRs8",
+      "url": "https://youtube.com/live/X8pdAySeRs8",
+      "topicStart": 443,
+      "topicEnd": 453
+    },
+    {
+      "day": 46,
+      "part": 1,
+      "title": "Day 46 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "-ldtxzyPaNA",
+      "url": "https://youtube.com/live/-ldtxzyPaNA",
+      "topicStart": 454,
+      "topicEnd": 464
     }
   ]
 }
