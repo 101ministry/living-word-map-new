@@ -117,6 +117,36 @@
   color: var(--text-muted);
 }
 
+.exp-prayer-set {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.round2-prayer-panel > .round2-prayer-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.45rem;
+}
+
+.round2-prayer-panel > .round2-prayer-header h2 {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.round2-prayer-panel > .round2-prayer-header .exp-prayer-set-end {
+  margin-left: auto;
+}
+
+.round2-prayer-panel > .round2-prayer-header .round2-topic-meta {
+  flex: 1 1 100%;
+}
+
 .exp-prayer-window-btn {
   font: inherit;
   font-size: 0.78rem;
@@ -263,6 +293,14 @@
   line-height: 1.15;
   flex: 1 1 auto;
   min-width: 0;
+}
+
+.exp-prayer-pip-body .exp-prayer-window-bar .exp-prayer-set-end,
+.exp-prayer-floating .exp-prayer-window-bar .exp-prayer-set-end {
+  flex: 0 0 auto;
+  margin-left: auto;
+  align-self: center;
+  font-size: 0.82rem;
 }
 
 .exp-prayer-pip-body .exp-prayer-window-bar .round2-topic-meta,

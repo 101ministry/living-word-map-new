@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles.css?v=104" />
   <script src="site-theme.js?v=7"></script>
   <link rel="stylesheet" href="round2.css?v=12" />
-  <link rel="stylesheet" href="experimental.css?v=27" />
+  <link rel="stylesheet" href="experimental.css?v=28" />
   <script>
     document.documentElement.classList.add('exp-sample', 'exp-record');
   </script>
@@ -203,6 +203,7 @@
           <p id="exp-prayer-dock-note" class="exp-prayer-dock-note" hidden>Prayer is in the pop-out window. Close that window when you are done speaking.</p>
           <article id="exp-prayer-panel" class="round2-prayer-panel">
             <div class="exp-prayer-window-bar">
+              <span class="exp-prayer-set" data-prayer-set>Set 1</span>
               <span class="exp-prayer-window-title">Prayer</span>
               <button type="button" id="exp-prayer-popout" class="exp-prayer-window-btn">Pop out</button>
               <button type="button" id="exp-prayer-dock-btn" class="exp-prayer-window-btn" hidden>Close</button>
@@ -210,6 +211,7 @@
             <header class="round2-prayer-header">
               <span id="exp-topic-num" class="round2-topic-num">001</span>
               <h2 id="exp-topic-title">Topic</h2>
+              <span class="exp-prayer-set exp-prayer-set-end" data-prayer-set>Set 1</span>
               <p id="exp-topic-meta" class="round2-topic-meta"></p>
             </header>
             <div id="exp-prayer-scroll" class="round2-prayer-scroll" tabindex="0">
@@ -272,7 +274,7 @@
   <script src="experimental-geo.js?v=14"></script>
   <script src="experimental-scene.js?v=18"></script>
   <script src="taxonomy-emoji.js?v=2"></script>
-  <script src="experimental.js?v=32"></script>
+  <script src="experimental.js?v=33"></script>
   <script src="site-nav.js?v=4"></script>
 </body>
 </html>

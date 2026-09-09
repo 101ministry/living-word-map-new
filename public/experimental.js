@@ -1146,7 +1146,15 @@
 
   function updatePhaseLabel() {
     const s = setMeta(state.currentSet);
+    const setText = `Set ${state.currentSet}`;
     els.phaseLabel.textContent = `${samplePrefix()}Set ${state.currentSet} of 11 · ${s.name} · Round ${state.currentRound}`;
+    const panel = prayerPanelEl();
+    panel?.querySelectorAll('[data-prayer-set]').forEach(el => {
+      el.textContent = setText;
+    });
+    if (prayerPipWindow && !prayerPipWindow.closed) {
+      try { prayerPipWindow.document.title = `Prayer · ${setText}`; } catch { /* ignore */ }
+    }
   }
 
   function renderCurrentTopic() {
@@ -1327,7 +1335,7 @@
       return;
     }
     try {
-      win.document.title = 'Prayer';
+      win.document.title = `Prayer · Set ${state.currentSet}`;
       copyStylesInto(win.document);
       win.document.body.appendChild(panel);
       prayerPipWindow = win;
