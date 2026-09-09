@@ -241,8 +241,7 @@
   }
 
   function topicCheckGlyph(num) {
-    if (state.heartYes.includes(num)) return '✅';
-    if (state.heartAnswered.includes(num)) return '☑';
+    if (state.heartAnswered.includes(num) || state.heartYes.includes(num)) return '✅';
     return '';
   }
 

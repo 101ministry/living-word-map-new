@@ -885,8 +885,7 @@
 
   function topicCheckGlyph(num) {
     const prog = currentProgress();
-    if (prog.heartYes.includes(num)) return '✅';
-    if (prog.heartAnswered.includes(num)) return '☑';
+    if (prog.heartAnswered.includes(num) || prog.heartYes.includes(num)) return '✅';
     return '';
   }
 
