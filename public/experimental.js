@@ -1173,7 +1173,7 @@
     document.querySelectorAll('#exp-sidebar-sections .round2-sidebar-topic').forEach(el => {
       el.classList.toggle('active', Number(el.dataset.topic) === state.currentTopic);
     });
-    if (els.prayerScroll) els.prayerScroll.scrollTop = 0;
+    scrollPrayerToTop();
     updateBuilderHud(false);
   }
 
@@ -1181,6 +1181,23 @@
     if (prayerPanelRef?.isConnected) return prayerPanelRef;
     prayerPanelRef = document.getElementById('exp-prayer-panel');
     return prayerPanelRef;
+  }
+
+  function scrollPrayerToTop() {
+    const panel = prayerPanelEl();
+    const scroller = panel?.querySelector('#exp-prayer-scroll') || els.prayerScroll;
+    if (scroller) {
+      scroller.scrollTop = 0;
+      try { scroller.scrollTo(0, 0); } catch { /* ignore */ }
+    }
+    const win = prayerPipWindow;
+    if (win && !win.closed) {
+      try {
+        win.scrollTo(0, 0);
+        if (win.document?.documentElement) win.document.documentElement.scrollTop = 0;
+        if (win.document?.body) win.document.body.scrollTop = 0;
+      } catch { /* ignore */ }
+    }
   }
 
   function resizeBuilderScene() {
@@ -1234,6 +1251,10 @@
     if (theme) targetDoc.documentElement.setAttribute('data-theme', theme);
     targetDoc.documentElement.className = document.documentElement.className;
     targetDoc.body.className = `${document.body.className || ''} exp-prayer-pip-body`.trim();
+    targetDoc.documentElement.style.height = '100%';
+    targetDoc.body.style.height = '100%';
+    targetDoc.body.style.margin = '0';
+    targetDoc.body.style.overflow = 'hidden';
   }
 
   function bindPrayerFloatDrag(panel) {
@@ -1274,28 +1295,36 @@
     resizeBuilderScene();
   }
 
-  async function popOutPrayer() {
+  function popOutPrayer() {
     const panel = prayerPanelEl();
     if (!panel || prayerPipWindow || prayerIsFloating) return;
-    if (window.documentPictureInPicture?.requestWindow) {
-      try {
-        const win = await window.documentPictureInPicture.requestWindow({
-          width: 440,
-          height: 640,
-        });
-        copyStylesInto(win.document);
-        win.document.body.appendChild(panel);
-        prayerPipWindow = win;
-        setPrayerPopoutChrome(true);
-        setPrayerDockNote(true);
-        win.addEventListener('pagehide', () => dockPrayer(), { once: true });
-        resizeBuilderScene();
-        return;
-      } catch {
-        /* user dismissed the prompt, or the browser refused PiP */
-      }
+    const win = window.open(
+      '',
+      'lwmPrayerPopout',
+      'width=480,height=720,left=64,top=64,resizable=yes,scrollbars=yes,menubar=no,toolbar=no,location=no,status=no'
+    );
+    if (!win) {
+      floatPrayerPanel();
+      return;
     }
-    floatPrayerPanel();
+    try {
+      win.document.title = 'Prayer';
+      copyStylesInto(win.document);
+      win.document.body.appendChild(panel);
+      prayerPipWindow = win;
+      setPrayerPopoutChrome(true);
+      setPrayerDockNote(true);
+      const returnPrayer = () => dockPrayer();
+      win.addEventListener('beforeunload', returnPrayer);
+      win.addEventListener('pagehide', returnPrayer);
+      win.focus();
+      resizeBuilderScene();
+      requestAnimationFrame(() => scrollPrayerToTop());
+    } catch {
+      prayerPipWindow = null;
+      try { win.close(); } catch { /* ignore */ }
+      floatPrayerPanel();
+    }
   }
 
   function dockPrayer() {
@@ -1818,7 +1847,7 @@
     }
   });
   document.getElementById('exp-prayer-popout')?.addEventListener('click', () => {
-    void popOutPrayer();
+    popOutPrayer();
   });
   document.getElementById('exp-prayer-dock-btn')?.addEventListener('click', () => dockPrayer());
   document.getElementById('exp-prayer-panel')?.addEventListener('click', e => {
