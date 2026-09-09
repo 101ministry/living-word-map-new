@@ -596,8 +596,20 @@
     return roundProgress(state.currentSet, state.currentRound);
   }
 
+  function completedTopicIds(prog) {
+    const ids = new Set();
+    const p = prog || currentProgress();
+    (p.heartAnswered || []).forEach(n => ids.add(Number(n)));
+    (p.heartYes || []).forEach(n => ids.add(Number(n)));
+    return ids;
+  }
+
+  function completedTopicCount(prog) {
+    return completedTopicIds(prog).size;
+  }
+
   function roundComplete(set, round) {
-    return roundProgress(set, round).heartYes.length >= TOPIC_COUNT;
+    return completedTopicCount(roundProgress(set, round)) >= TOPIC_COUNT;
   }
 
   function setComplete(set) {
@@ -884,21 +896,19 @@
   }
 
   function topicCheckGlyph(num) {
-    const prog = currentProgress();
-    if (prog.heartAnswered.includes(num) || prog.heartYes.includes(num)) return '✅';
-    return '';
+    return completedTopicIds().has(Number(num)) ? '✅' : '';
   }
 
   function isSectionComplete(sectionId) {
     const sec = visibleSections().find(s => s.id === sectionId);
     if (!sec?.topics?.length) return false;
-    const yes = currentProgress().heartYes;
-    return sec.topics.every(t => yes.includes(t.number));
+    const done = completedTopicIds();
+    return sec.topics.every(t => done.has(t.number));
   }
 
   function completedSectionCount(set, round) {
-    const yes = roundProgress(set, round).heartYes;
-    return visibleSections().filter(sec => sec.topics.every(t => yes.includes(t.number))).length;
+    const done = completedTopicIds(roundProgress(set, round));
+    return visibleSections().filter(sec => sec.topics.every(t => done.has(t.number))).length;
   }
 
   function orderedTopicNumbers() {
@@ -955,8 +965,8 @@
   function sectionBuilderCount(sectionId) {
     const sec = visibleSections().find(s => s.id === sectionId);
     if (!sec) return 0;
-    const yes = currentProgress().heartYes;
-    return sec.topics.filter(t => yes.includes(t.number)).length;
+    const done = completedTopicIds();
+    return sec.topics.filter(t => done.has(t.number)).length;
   }
 
   function bumpEl(el) {
@@ -979,7 +989,7 @@
   }
 
   function updateBuilderHud(bump) {
-    const total = currentProgress().heartYes.length;
+    const total = completedTopicCount();
     if (els.hudCount) {
       const prev = Number(els.hudCount.dataset.count || 0);
       els.hudCount.dataset.count = String(total);
@@ -1003,14 +1013,14 @@
   }
 
   function crewSizeNow() {
-    return Math.max(1, currentProgress().heartYes.length);
+    return Math.max(1, completedTopicCount());
   }
 
   function fractionsForSet(setId) {
     return {
-      1: roundProgress(setId, 1).heartYes.length / TOPIC_COUNT,
-      2: roundProgress(setId, 2).heartYes.length / TOPIC_COUNT,
-      3: roundProgress(setId, 3).heartYes.length / TOPIC_COUNT,
+      1: completedTopicCount(roundProgress(setId, 1)) / TOPIC_COUNT,
+      2: completedTopicCount(roundProgress(setId, 2)) / TOPIC_COUNT,
+      3: completedTopicCount(roundProgress(setId, 3)) / TOPIC_COUNT,
     };
   }
 
@@ -1166,8 +1176,8 @@
     if (els.prayerNote) els.prayerNote.textContent = prayerNoteForTopic(t.number);
     const fallback = state.currentRound === 2 ? '(No Round 2 prayer text.)' : state.currentRound === 3 ? '(No Round 3 prayer text.)' : '(No Round 1 prayer text.)';
     els.prayerText.textContent = prayerTextForTopic(t.number) || fallback;
-    const yes = currentProgress().heartYes.length;
-    els.progress.textContent = `Topic ${t.number} / ${TOPIC_COUNT} · ${yes} built`;
+    const built = completedTopicCount();
+    els.progress.textContent = `Topic ${t.number} / ${TOPIC_COUNT} · ${built} built`;
 
     document.querySelectorAll('#exp-sidebar-sections .round2-sidebar-topic').forEach(el => {
       el.classList.toggle('active', Number(el.dataset.topic) === state.currentTopic);
@@ -1557,6 +1567,7 @@
     const sectionId = topicData(current)?.sectionId;
     const sectionWasComplete = sectionId ? isSectionComplete(sectionId) : true;
 
+    const alreadyComplete = prog.heartAnswered.includes(current) || prog.heartYes.includes(current);
     if (!prog.heartAnswered.includes(current)) prog.heartAnswered.push(current);
 
     let landed = false;
@@ -1586,7 +1597,7 @@
     renderCurrentTopic();
     updateBuilderHud(true);
     syncScene();
-    if (landed) SCENE.onTopicYes();
+    if (landed || !alreadyComplete) SCENE.onTopicYes();
 
     window.setTimeout(() => {
       if (destination) goToTopic(destination);
