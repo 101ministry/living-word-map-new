@@ -105,6 +105,13 @@ $items = @(
     summary = 'Modern diseases, disorders, and cancers matching the Hebrew descriptions.'
   },
   @{
+    src = 'Soul Ties Prayer - update 9-9-2026.pdf'
+    file = 'soul-ties-prayer.pdf'
+    title = 'Soul Ties Prayer - update 9/9/2026'
+    summary = 'Renouncing occult soul ties, sending spirits to the pit, and a writ of divorce unto Jesus Christ.'
+    made = '2026-09-09'
+  },
+  @{
     src = 'Spirit Spouses - Identify, Root Out, and Divorce.pdf'
     file = 'spirit-spouses-identify-root-out-divorce.pdf'
     title = 'Spirit Spouses - Identify, Root Out, Divorce'

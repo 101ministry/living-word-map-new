@@ -115,6 +115,13 @@
         "made":  "2026-07-31"
     },
     {
+        "title":  "Soul Ties Prayer - update 9/9/2026",
+        "summary":  "Renouncing occult soul ties, sending spirits to the pit, and a writ of divorce unto Jesus Christ.",
+        "href":  "downloads/soul-ties-prayer.pdf",
+        "download":  "Soul Ties Prayer - update 9-9-2026.pdf",
+        "made":  "2026-09-09"
+    },
+    {
         "title":  "Spirit Spouses - Identify, Root Out, Divorce",
         "summary":  "Spirit husbands/wives, soul ties, and breaking illegal covenant marriage.",
         "href":  "downloads/spirit-spouses-identify-root-out-divorce.pdf",
