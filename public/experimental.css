@@ -217,6 +217,63 @@
   overflow: auto;
 }
 
+.exp-prayer-pip-body .exp-prayer-window-bar,
+.exp-prayer-floating .exp-prayer-window-bar {
+  padding: 0.12rem 0.55rem;
+  border-bottom: 0;
+}
+
+.exp-prayer-pip-body .exp-prayer-window-title,
+.exp-prayer-floating .exp-prayer-window-title {
+  font-size: 0.64rem;
+}
+
+.exp-prayer-pip-body .exp-prayer-window-btn,
+.exp-prayer-floating .exp-prayer-window-btn {
+  font-size: 0.7rem;
+  padding: 0.08rem 0.42rem;
+}
+
+.exp-prayer-pip-body .round2-prayer-header,
+.exp-prayer-floating .round2-prayer-header {
+  padding: 0 0.65rem 0.22rem;
+}
+
+.exp-prayer-pip-body .round2-topic-num,
+.exp-prayer-floating .round2-topic-num {
+  margin-bottom: 0;
+  font-size: 0.7rem;
+}
+
+.exp-prayer-pip-body .round2-prayer-header h2,
+.exp-prayer-floating .round2-prayer-header h2 {
+  margin: 0 0 0.08rem;
+  font-size: 1.05rem;
+  line-height: 1.15;
+}
+
+.exp-prayer-pip-body .round2-topic-meta,
+.exp-prayer-floating .round2-topic-meta {
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.exp-prayer-pip-body .round2-topic-video,
+.exp-prayer-floating .round2-topic-video {
+  margin: 0.15rem 0 0;
+}
+
+.exp-prayer-pip-body .exp-prayer-top-bar,
+.exp-prayer-floating .exp-prayer-top-bar {
+  padding: 0.1rem 0.55rem 0.12rem;
+}
+
+.exp-prayer-pip-body .exp-prayer-top-btn,
+.exp-prayer-floating .exp-prayer-top-btn {
+  padding: 0.06rem 0.4rem;
+  font-size: 0.68rem;
+}
+
 .exp-scene-wrap {
   position: relative;
   min-width: 0;
