@@ -1326,7 +1326,6 @@
 
   function heartExplainMilestoneFor(current, dest) {
     if (isHeartExplainMilestone(dest)) return dest;
-    if (isHeartExplainMilestone(current)) return current;
     return 0;
   }
 
