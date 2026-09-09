@@ -44,6 +44,17 @@
   display: none;
 }
 
+.exp-norman-meet-compact {
+  display: none;
+  margin-right: auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e8c56a;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  white-space: nowrap;
+}
+
 .exp-phase {
   flex: 1;
   min-height: 0;
@@ -644,6 +655,14 @@ a.mobile-nav-link {
   .round2-prayer-panel,
   .round2-sidebar {
     grid-column: 1;
+  }
+
+  .exp-norman-meet {
+    display: none !important;
+  }
+
+  .exp-norman-meet-compact {
+    display: inline;
   }
 }
 

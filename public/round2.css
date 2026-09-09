@@ -433,17 +433,18 @@
   color: var(--text);
 }
 
-.round2-sidebar-topic.visited .round2-topic-check {
-  opacity: 0.5;
+.round2-sidebar-topic.visited .round2-topic-check,
+.round2-sidebar-topic.done .round2-topic-check {
+  opacity: 1;
 }
 
 .round2-sidebar-topic.done .round2-topic-check {
-  opacity: 1;
   color: #6fcf97;
 }
 
 .round2-topic-check {
-  opacity: 0.2;
+  opacity: 0;
+  min-height: 1em;
   user-select: none;
 }
 

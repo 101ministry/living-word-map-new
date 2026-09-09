@@ -240,6 +240,12 @@
     return sec.topics.every(t => state.heartYes.includes(t.number));
   }
 
+  function topicCheckGlyph(num) {
+    if (state.heartYes.includes(num)) return '✅';
+    if (state.heartAnswered.includes(num)) return '☑';
+    return '';
+  }
+
   function updatePrincipalityCheck(el, sectionId) {
     if (!el) return;
     const complete = isSectionComplete(sectionId);
@@ -290,7 +296,7 @@
           if (item.number === state.currentTopic) row.classList.add('active');
 
           row.innerHTML = `
-            <span class="round2-topic-check">${state.heartYes.includes(item.number) ? '✅' : '☐'}</span>
+            <span class="round2-topic-check">${topicCheckGlyph(item.number)}</span>
             <span class="round2-sidebar-topic-num">${pad(item.number)}</span>
             <span class="round2-sidebar-topic-label">${escapeHtml(item.label)}</span>`;
           row.addEventListener('click', () => requestTopicChange(item.number));
@@ -330,7 +336,7 @@
       row.classList.toggle('visited', state.heartAnswered.includes(num));
       row.classList.toggle('done', state.heartYes.includes(num));
       const check = row.querySelector('.round2-topic-check');
-      if (check) check.textContent = state.heartYes.includes(num) ? '✅' : '☐';
+      if (check) check.textContent = topicCheckGlyph(num);
       row.classList.toggle('active', num === state.currentTopic);
     });
     DATA.sections.forEach(section => {
@@ -411,11 +417,9 @@
     const row = document.querySelector(`.round2-sidebar-topic[data-topic="${num}"]`);
     if (!row) return;
     row.classList.add('visited');
-    if (state.heartYes.includes(num)) {
-      row.classList.add('done');
-      const check = row.querySelector('.round2-topic-check');
-      if (check) check.textContent = '✅';
-    }
+    if (state.heartYes.includes(num)) row.classList.add('done');
+    const check = row.querySelector('.round2-topic-check');
+    if (check) check.textContent = topicCheckGlyph(num);
     const t = topicData(num);
     if (t?.sectionId) {
       const secEl = document.querySelector(`.round2-sidebar-section[data-section-id="${t.sectionId}"]`);

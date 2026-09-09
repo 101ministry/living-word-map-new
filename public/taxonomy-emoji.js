@@ -32,10 +32,13 @@
   function formatRootDisplay(raw) {
     const text = String(raw || '').trim();
     if (!text) return '';
+    // Strip a leading emoji or mojibake (UTF-8 misread as Latin-1, e.g. ðŸŸ£ for 🟣).
+    const plain = text.replace(/^[^A-Za-z]+/, '').replace(/\s+/g, ' ').trim();
+    if (!plain) return text;
+    const emoji = ROOT_EMOJI[rootKey(plain)];
+    if (emoji) return `${emoji} ${plain}`;
     if (ROOT_EMOJI_RE.test(text)) return text;
-    const key = rootKey(text);
-    const emoji = ROOT_EMOJI[key];
-    return emoji ? `${emoji} ${text}` : text;
+    return plain;
   }
 
   window.LwmTaxonomyEmoji = { formatRootDisplay };

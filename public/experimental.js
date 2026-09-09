@@ -664,12 +664,17 @@
     }
     if (els.heartYes) els.heartYes.textContent = ui('heartYes', 'Yes');
     if (els.heartNo) els.heartNo.textContent = ui('heartNo', 'No');
+    const href = DATA1.calLink || 'https://cal.com/repentance101ministry';
     const meet = document.getElementById('exp-norman-meet');
     if (meet) {
-      const href = DATA1.calLink || 'https://cal.com/repentance101ministry';
       const before = ui('normanMeetBefore', 'Got a question about this? Set up a ');
       const linkText = ui('normanMeetLink', 'meeting with Norman');
       meet.innerHTML = `${escapeHtml(before)}<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkText)}</a>`;
+    }
+    const meetCompact = document.getElementById('exp-norman-meet-compact');
+    if (meetCompact) {
+      meetCompact.href = href;
+      meetCompact.textContent = ui('normanMeetCompact', 'Meet Norman');
     }
     const rtl = !!(CATALOG.languages || []).find(l => l.code === state.language)?.rtl;
     document.documentElement.lang = state.language;
@@ -878,6 +883,13 @@
     }
   }
 
+  function topicCheckGlyph(num) {
+    const prog = currentProgress();
+    if (prog.heartYes.includes(num)) return '✅';
+    if (prog.heartAnswered.includes(num)) return '☑';
+    return '';
+  }
+
   function isSectionComplete(sectionId) {
     const sec = visibleSections().find(s => s.id === sectionId);
     if (!sec?.topics?.length) return false;
@@ -1080,7 +1092,7 @@
           if (prog.heartYes.includes(item.number)) row.classList.add('done');
           if (item.number === state.currentTopic) row.classList.add('active');
           row.innerHTML = `
-            <span class="round2-topic-check">${prog.heartYes.includes(item.number) ? '✅' : '☐'}</span>
+            <span class="round2-topic-check">${topicCheckGlyph(item.number)}</span>
             <span class="round2-sidebar-topic-num">${pad(item.number)}</span>
             <span class="round2-sidebar-topic-label">${escapeHtml(item.label)}</span>`;
           row.addEventListener('click', () => requestTopicChange(item.number));
@@ -1112,7 +1124,7 @@
       row.classList.toggle('visited', prog.heartAnswered.includes(num));
       row.classList.toggle('done', prog.heartYes.includes(num));
       const check = row.querySelector('.round2-topic-check');
-      if (check) check.textContent = prog.heartYes.includes(num) ? '✅' : '☐';
+      if (check) check.textContent = topicCheckGlyph(num);
       row.classList.toggle('active', num === state.currentTopic);
     });
     visibleSections().forEach(section => {
@@ -1371,11 +1383,9 @@
     const row = document.querySelector(`#exp-sidebar-sections .round2-sidebar-topic[data-topic="${num}"]`);
     if (!row) return;
     row.classList.add('visited');
-    if (prog.heartYes.includes(num)) {
-      row.classList.add('done');
-      const check = row.querySelector('.round2-topic-check');
-      if (check) check.textContent = '✅';
-    }
+    if (prog.heartYes.includes(num)) row.classList.add('done');
+    const check = row.querySelector('.round2-topic-check');
+    if (check) check.textContent = topicCheckGlyph(num);
     const t = topicData(num);
     if (t?.sectionId) {
       const secEl = document.querySelector(`#exp-sidebar-sections .round2-sidebar-section[data-section-id="${t.sectionId}"]`);
@@ -1515,7 +1525,7 @@
     let landed = false;
 
     const alreadyYes = prog.heartYes.includes(current);
-    if (!alreadyYes) {
+    if (yes && !alreadyYes) {
       prog.heartYes.push(current);
       landed = true;
     }
