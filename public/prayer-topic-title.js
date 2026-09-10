@@ -49,6 +49,13 @@
     return out;
   }
 
+  function honorificFatherYou(text) {
+    return String(text || '')
+      .replace(/Father, I ask that you\b/g, 'Father, I ask that You')
+      .replace(/I thank you for\b/g, 'I thank You for')
+      .replace(/\bdiscipline you have put\b/g, 'discipline You have put');
+  }
+
   function isEnglishLang(code) {
     const lang = String(code || 'en').toLowerCase();
     return lang === 'en' || lang.startsWith('en-');
@@ -57,6 +64,6 @@
   root.LwmAlignPrayerTopicTitle = alignPrayerTopicToTitle;
   root.LwmAlignPrayerTopicTitleIfEnglish = function (text, label, lang) {
     if (!isEnglishLang(lang)) return text || '';
-    return alignPrayerTopicToTitle(text, label);
+    return honorificFatherYou(alignPrayerTopicToTitle(text, label));
   };
 })(typeof window !== 'undefined' ? window : globalThis);
