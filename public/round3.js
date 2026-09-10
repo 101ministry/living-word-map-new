@@ -190,11 +190,13 @@
   function prayerTextForTopic(num) {
     const t = topicData(num);
     if (!t) return '';
+    let text = '';
     if (activePack?.topics) {
       const entry = activePack.topics[String(num)] || activePack.topics[pad(num)];
-      if (entry?.text) return entry.text;
+      if (entry?.text) text = entry.text;
     }
-    return t.round3Text || '';
+    if (!text) text = t.round3Text || '';
+    return window.LwmAlignPrayerTopicTitleIfEnglish?.(text, t.label, state.language) || text;
   }
 
   function prayerNoteForTopic(num) {

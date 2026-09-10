@@ -855,13 +855,17 @@
   function prayerTextForTopic(num) {
     const t = topicData(num);
     if (!t) return '';
+    let text = '';
     if (activePack?.topics) {
       const entry = activePack.topics[String(num)] || activePack.topics[pad(num)];
-      if (entry?.text) return entry.text;
+      if (entry?.text) text = entry.text;
     }
-    if (state.currentRound === 2) return t.round2Text || '';
-    if (state.currentRound === 3) return t.round3Text || '';
-    return t.round1Text || '';
+    if (!text) {
+      if (state.currentRound === 2) text = t.round2Text || '';
+      else if (state.currentRound === 3) text = t.round3Text || '';
+      else text = t.round1Text || '';
+    }
+    return window.LwmAlignPrayerTopicTitleIfEnglish?.(text, t.label, state.language) || text;
   }
 
   function prayerNoteForTopic(num) {
