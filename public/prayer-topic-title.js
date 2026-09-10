@@ -3,6 +3,11 @@
     return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
+  function replacePhrase(text, phrase, label) {
+    if (!phrase) return text;
+    return text.replace(new RegExp(escapeRe(phrase), 'gi'), label);
+  }
+
   function slotReplace(text, phrase, label) {
     const pe = escapeRe(phrase);
     let out = text;
@@ -30,6 +35,7 @@
     const variants = [phrase];
     const stripped = phrase.replace(/^(interacting with(?: the spirit of)?|familiar identity of)\s+/i, '').trim();
     if (stripped && stripped.toLowerCase() !== phrase.toLowerCase()) variants.push(stripped);
+    if (label.toLowerCase() !== phrase.toLowerCase()) variants.push(label.toLowerCase());
     variants.sort((a, b) => b.length - a.length);
     let out = text;
     const seen = new Set();
@@ -37,7 +43,8 @@
       const key = p.toLowerCase();
       if (!key || seen.has(key)) return;
       seen.add(key);
-      out = slotReplace(out, p, label);
+      if (p.length >= 10 || /\s/.test(p)) out = replacePhrase(out, p, label);
+      else out = slotReplace(out, p, label);
     });
     return out;
   }
