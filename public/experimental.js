@@ -1249,18 +1249,84 @@
     const closeBtn = panel?.querySelector('#exp-prayer-dock-btn');
     if (pop) pop.hidden = !!out;
     if (closeBtn) closeBtn.hidden = !out;
+    const themeBtn = panel?.querySelector('#exp-prayer-theme');
+    if (themeBtn) themeBtn.hidden = !out;
+    bindPrayerThemeButton(panel);
+    syncPrayerWindowTheme();
     const topBar = ensurePrayerTopBar(panel);
     if (topBar) topBar.hidden = !out;
     const bar = panel?.querySelector('.exp-prayer-window-bar');
     const header = panel?.querySelector('.round2-prayer-header');
     if (!bar || !header) return;
     if (out) {
-      const before = (pop && !pop.hidden ? pop : null) || closeBtn;
+      const before = (pop && !pop.hidden ? pop : null)
+        || panel.querySelector('#exp-prayer-theme')
+        || closeBtn;
       if (before) bar.insertBefore(header, before);
       else bar.appendChild(header);
     } else if (header.parentElement === bar) {
       bar.insertAdjacentElement('afterend', header);
     }
+  }
+
+  function prayerThemePreference() {
+    const pref = window.LwmSiteTheme?.readPreference?.() || document.documentElement.dataset.themePreference;
+    return pref === 'light' ? 'light' : 'dark';
+  }
+
+  function applyPrayerWindowTheme(doc) {
+    if (!doc?.documentElement) return;
+    const pref = prayerThemePreference();
+    const theme = pref === 'light' ? 'light' : 'dark';
+    doc.documentElement.setAttribute('data-theme', theme);
+    doc.documentElement.dataset.themePreference = pref;
+    doc.documentElement.style.colorScheme = theme;
+    const btn = doc.getElementById('exp-prayer-theme');
+    if (btn) {
+      const light = pref === 'light';
+      btn.setAttribute('aria-pressed', light ? 'true' : 'false');
+      btn.setAttribute('aria-label', light ? 'Switch to Globe dark' : 'Switch to light theme');
+      btn.title = light ? 'Globe dark' : 'Light mode';
+      btn.textContent = light ? '☀' : '☾';
+    }
+  }
+
+  function syncPrayerWindowTheme() {
+    if (prayerPipWindow && !prayerPipWindow.closed) {
+      try { applyPrayerWindowTheme(prayerPipWindow.document); } catch { /* ignore */ }
+    }
+    const panel = prayerPanelEl();
+    if (panel) {
+      panel.classList.toggle(
+        'exp-prayer-globe-dark',
+        panel.classList.contains('exp-prayer-floating') && prayerThemePreference() === 'dark'
+      );
+    }
+    const liveBtn = panel?.querySelector('#exp-prayer-theme') || document.getElementById('exp-prayer-theme');
+    if (liveBtn && (!prayerPipWindow || prayerPipWindow.closed)) {
+      const light = prayerThemePreference() === 'light';
+      liveBtn.setAttribute('aria-pressed', light ? 'true' : 'false');
+      liveBtn.textContent = light ? '☀' : '☾';
+    }
+  }
+
+  function bindPrayerThemeButton(root) {
+    const doc = root && root.querySelector ? root : document;
+    const btn = doc.getElementById?.('exp-prayer-theme') || doc.querySelector?.('#exp-prayer-theme') || document.getElementById('exp-prayer-theme');
+    if (!btn || btn.dataset.themeBound === '1') return;
+    btn.dataset.themeBound = '1';
+    btn.addEventListener('click', () => {
+      if (typeof window.LwmSiteTheme?.togglePreference === 'function') {
+        window.LwmSiteTheme.togglePreference();
+      } else {
+        try {
+          const next = prayerThemePreference() === 'light' ? 'dark' : 'light';
+          localStorage.setItem('lwm-theme', next);
+        } catch { /* ignore */ }
+        window.LwmSiteTheme?.apply?.();
+      }
+      syncPrayerWindowTheme();
+    });
   }
 
   function setPrayerDockNote(show) {
@@ -1278,8 +1344,7 @@
     [...document.querySelectorAll('style')].forEach(style => {
       targetDoc.head.appendChild(style.cloneNode(true));
     });
-    const theme = document.documentElement.getAttribute('data-theme');
-    if (theme) targetDoc.documentElement.setAttribute('data-theme', theme);
+    applyPrayerWindowTheme(targetDoc);
     targetDoc.documentElement.className = document.documentElement.className;
     targetDoc.body.className = `${document.body.className || ''} exp-prayer-pip-body`.trim();
     targetDoc.documentElement.style.height = '100%';
@@ -1939,6 +2004,7 @@
       setPeopleMode(on);
     });
   }
+  window.addEventListener('lwm:theme-changed', () => syncPrayerWindowTheme());
   els.editProfile?.addEventListener('click', () => showGate(true));
   if (els.nextTopic) {
     els.nextTopic.addEventListener('click', () => {

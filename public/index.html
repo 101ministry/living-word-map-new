@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=108" />
-  <script src="site-theme.js?v=7"></script>
+  <link rel="stylesheet" href="styles.css?v=110" />
+  <script src="site-theme.js?v=8"></script>
   <script>
     (function () {
       var q = new URLSearchParams(location.search);
@@ -141,6 +141,13 @@
       <section class="graph-panel">
         <div id="graph"></div>
         <div id="globe-view" class="globe-view hidden" aria-hidden="true" aria-label="Globe word map"></div>
+        <div id="map-layer-dock" class="map-layer-dock" aria-label="Map layers">
+          <p class="map-layer-dock-title">Show</p>
+          <label><input type="checkbox" id="dock-show-principalities" checked /> Principalities</label>
+          <label><input type="checkbox" id="dock-show-roots" checked /> Roots</label>
+          <label><input type="checkbox" id="dock-show-fruits" checked /> Fruits</label>
+          <label><input type="checkbox" id="dock-show-topics" /> Topics</label>
+        </div>
         <div id="camp-view" class="camp-view hidden" aria-hidden="true" aria-label="Discipleship Training Camp">
           <div class="camp-toolbar">
             <p class="camp-local-badge">Discipleship Training Camp minigame</p>
@@ -522,7 +529,7 @@
   <script src="site-pages.js?v=8"></script>
   <script src="site-i18n.js?v=1"></script>
   <script src="site-nav.js?v=5"></script>
-  <script src="app.js?v=38"></script>
+  <script src="app.js?v=39"></script>
   <script src="teaching-videos.js?v=6"></script>
   <script src="ask-overlay.js?v=14"></script>
   <script src="downloads-pdfs.js?v=7"></script>

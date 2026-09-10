@@ -159,9 +159,17 @@
     window.addEventListener('lwm:site-page-leave-map', apply);
     window.addEventListener('lwm:site-page-prayer', apply);
     window.addEventListener('lwm:site-page-downloads', apply);
+    window.addEventListener('storage', e => {
+      if (e.key === STORAGE_KEY) apply();
+    });
   }
 
-  window.LwmSiteTheme = { apply, readPreference, bind };
+  window.LwmSiteTheme = { apply, readPreference, togglePreference, bind };
+
+  function togglePreference() {
+    writePreference(readPreference() === 'light' ? 'dark' : 'light');
+    apply();
+  }
 
   bootFromHead();
   if (document.readyState === 'loading') {

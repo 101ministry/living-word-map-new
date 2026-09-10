@@ -225,13 +225,33 @@
   cursor: move;
 }
 
+.exp-prayer-floating.exp-prayer-globe-dark {
+  --bg-deep: #0a0b0f;
+  --bg-panel: #12141c;
+  --bg-elevated: #1a1d28;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e8e4dc;
+  --text-muted: #8a8798;
+  --accent: #d4af37;
+  --quote: #f0ead6;
+  color: var(--text);
+  background: var(--bg-deep);
+}
+
+.exp-prayer-theme-btn {
+  min-width: 1.85rem;
+  padding: 0.08rem 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .exp-prayer-pip-body {
   margin: 0;
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: var(--bg-deep, #12141c);
+  background: var(--bg-deep);
 }
 
 .exp-prayer-pip-body .round2-prayer-panel {

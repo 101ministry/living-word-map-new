@@ -2299,21 +2299,50 @@
   document.getElementById('open-compare')?.addEventListener('click', openCompareDialog);
   document.getElementById('clear-compare')?.addEventListener('click', clearCompare);
 
+  const LAYER_DOCK_IDS = [
+    ['dock-show-principalities', 'show-principalities', 'principality'],
+    ['dock-show-roots', 'show-roots', 'root'],
+    ['dock-show-fruits', 'show-fruits', 'fruit'],
+    ['dock-show-topics', 'show-topics', 'topic'],
+  ];
+
+  function syncLayerDockFromLegend() {
+    LAYER_DOCK_IDS.forEach(([dockId, legendId]) => {
+      const dock = document.getElementById(dockId);
+      const legend = document.getElementById(legendId);
+      if (dock && legend) dock.checked = legend.checked;
+    });
+  }
+
+  LAYER_DOCK_IDS.forEach(([dockId, legendId, key]) => {
+    document.getElementById(dockId)?.addEventListener('change', e => {
+      const legend = document.getElementById(legendId);
+      if (legend) legend.checked = e.target.checked;
+      state.show[key] = e.target.checked;
+      if (key === 'topic' && e.target.checked) state.viewMode = 'explore';
+      refreshGraph();
+    });
+  });
+
   document.getElementById('show-principalities').addEventListener('change', e => {
     state.show.principality = e.target.checked;
+    syncLayerDockFromLegend();
     refreshGraph();
   });
   document.getElementById('show-roots').addEventListener('change', e => {
     state.show.root = e.target.checked;
+    syncLayerDockFromLegend();
     refreshGraph();
   });
   document.getElementById('show-fruits').addEventListener('change', e => {
     state.show.fruit = e.target.checked;
+    syncLayerDockFromLegend();
     refreshGraph();
   });
   document.getElementById('show-topics').addEventListener('change', e => {
     state.show.topic = e.target.checked;
     if (e.target.checked) state.viewMode = 'explore';
+    syncLayerDockFromLegend();
     refreshGraph();
   });
   document.getElementById('show-topic-root-links')?.addEventListener('change', e => {
@@ -2433,6 +2462,7 @@
       document.getElementById('show-topics').checked = false;
       state.show.topic = false;
     }
+    syncLayerDockFromLegend();
     setViewSurface();
     refreshGraph();
     applyGraphView();
@@ -2467,6 +2497,7 @@
     window.ViewNav?.syncLabel?.();
     document.getElementById('show-topics').checked = false;
     state.show.topic = false;
+    syncLayerDockFromLegend();
     showEmptyDetail();
     document.getElementById('graph-hint').classList.remove('hidden');
     setViewSurface();
@@ -2493,6 +2524,7 @@
         document.getElementById('show-topics').checked = true;
         state.show.topic = true;
       }
+      syncLayerDockFromLegend();
       window.ParchmentLanding?.close?.({ showAsk: false });
     } else if (location.hash === '#camp') {
       state.viewMode = 'camp';
@@ -2504,6 +2536,7 @@
 
   syncGraphSize();
   setViewSurface();
+  syncLayerDockFromLegend();
   refreshGraph();
   bindZoomSlider();
   setupGraphWheelZoom();
