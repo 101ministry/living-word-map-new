@@ -101,17 +101,17 @@
         "made":  "2026-08-27"
     },
     {
-        "title":  "Rebellion + Desertion = Curses (Part 1)",
+        "title":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 1)",
         "summary":  "Deuteronomy 28:15-68: disease and affliction terms (Hebrew to English).",
         "href":  "downloads/rebellion-desertion-curses.pdf",
-        "download":  "Rebellion + Desertion = Curses.pdf",
+        "download":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 1).pdf",
         "made":  "2026-07-31"
     },
     {
-        "title":  "Rebellion + Desertion = Curses (Part 2)",
+        "title":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 2)",
         "summary":  "Modern diseases, disorders, and cancers matching the Hebrew descriptions.",
         "href":  "downloads/rebellion-desertion-curses-part2.pdf",
-        "download":  "Rebellion-Desertion-Curses-Part2.pdf",
+        "download":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 2).pdf",
         "made":  "2026-07-31"
     },
     {
