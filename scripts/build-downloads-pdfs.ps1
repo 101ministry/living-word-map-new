@@ -108,7 +108,7 @@ $items = @(
     src = 'Soul Ties Prayer - update 9-9-2026.pdf'
     file = 'soul-ties-prayer.pdf'
     title = 'Soul Ties Prayer - update 9/9/2026'
-    summary = 'Renouncing occult soul ties, sending spirits to the pit, and a writ of divorce unto Jesus Christ.'
+    summary = 'Renouncing occult soul ties, illegal sexual bonds, sending spirits to the pit, and a writ of divorce unto Jesus Christ.'
     made = '2026-09-09'
   },
   @{
