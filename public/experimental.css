@@ -2,6 +2,56 @@
   background: var(--bg-deep);
 }
 
+.lwm-autoscroll-origin {
+  position: fixed;
+  z-index: 2147483000;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.lwm-autoscroll-origin::before,
+.lwm-autoscroll-origin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transform: translateX(-50%);
+}
+
+.lwm-autoscroll-origin::before {
+  top: 4px;
+  border-bottom: 7px solid #222;
+}
+
+.lwm-autoscroll-origin::after {
+  bottom: 4px;
+  border-top: 7px solid #222;
+}
+
+html.lwm-autoscrolling,
+html.lwm-autoscrolling body {
+  cursor: all-scroll;
+}
+
+html.lwm-autoscrolling.lwm-autoscroll-up,
+html.lwm-autoscrolling.lwm-autoscroll-up body {
+  cursor: n-resize;
+}
+
+html.lwm-autoscrolling.lwm-autoscroll-down,
+html.lwm-autoscrolling.lwm-autoscroll-down body {
+  cursor: s-resize;
+}
+
 #exp-app {
   display: flex;
   flex-direction: column;

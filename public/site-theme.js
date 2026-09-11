@@ -164,7 +164,127 @@
     });
   }
 
-  window.LwmSiteTheme = { apply, readPreference, togglePreference, bind };
+  window.LwmSiteTheme = { apply, readPreference, togglePreference, bind, bindAutoscroll };
+
+  function isEditableTarget(el) {
+    if (!el || el.nodeType !== 1) return false;
+    const tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || el.isContentEditable;
+  }
+
+  function isDocumentScroller(el, doc) {
+    return el === doc.scrollingElement || el === doc.documentElement || el === doc.body;
+  }
+
+  function canScrollY(el) {
+    if (!el) return false;
+    const win = el.ownerDocument.defaultView;
+    const style = win.getComputedStyle(el);
+    const overflowY = style.overflowY;
+    if (overflowY !== 'auto' && overflowY !== 'scroll' && overflowY !== 'overlay') return false;
+    return el.scrollHeight > el.clientHeight + 1;
+  }
+
+  function nestedScroller(start) {
+    const doc = start?.ownerDocument || document;
+    let el = start;
+    while (el && el !== doc.body && el !== doc.documentElement) {
+      if (canScrollY(el) && !isDocumentScroller(el, doc)) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+
+  function bindAutoscroll(doc) {
+    const d = doc || document;
+    if (!d?.documentElement || d.documentElement.dataset.lwmAutoscroll === '1') return;
+    d.documentElement.dataset.lwmAutoscroll = '1';
+
+    const DEAD = 14;
+    let session = null;
+
+    function setCursor(mode) {
+      d.documentElement.classList.remove('lwm-autoscroll-up', 'lwm-autoscroll-down');
+      if (mode === 'up') d.documentElement.classList.add('lwm-autoscroll-up');
+      if (mode === 'down') d.documentElement.classList.add('lwm-autoscroll-down');
+    }
+
+    function stop() {
+      if (!session) return;
+      if (session.frame) d.defaultView.cancelAnimationFrame(session.frame);
+      session.origin.remove();
+      d.documentElement.classList.remove('lwm-autoscrolling', 'lwm-autoscroll-up', 'lwm-autoscroll-down');
+      session = null;
+    }
+
+    function tick() {
+      if (!session) return;
+      const dy = session.mouseY - session.originY;
+      let mode = '';
+      if (dy > DEAD) {
+        session.scroller.scrollTop += Math.min(48, (dy - DEAD) * 0.18);
+        mode = 'down';
+      } else if (dy < -DEAD) {
+        session.scroller.scrollTop += Math.max(-48, (dy + DEAD) * 0.18);
+        mode = 'up';
+      }
+      setCursor(mode);
+      session.frame = d.defaultView.requestAnimationFrame(tick);
+    }
+
+    function start(scroller, x, y) {
+      const origin = d.createElement('div');
+      origin.className = 'lwm-autoscroll-origin';
+      origin.setAttribute('aria-hidden', 'true');
+      origin.style.left = `${x}px`;
+      origin.style.top = `${y}px`;
+      d.body.appendChild(origin);
+      d.documentElement.classList.add('lwm-autoscrolling');
+      session = {
+        scroller,
+        origin,
+        originX: x,
+        originY: y,
+        mouseY: y,
+        frame: 0,
+        ignoreUntilUp: true,
+      };
+      session.frame = d.defaultView.requestAnimationFrame(tick);
+    }
+
+    d.addEventListener('mousedown', e => {
+      if (session) {
+        if (session.ignoreUntilUp && e.button === 1) return;
+        e.preventDefault();
+        stop();
+        return;
+      }
+      if (e.button !== 1) return;
+      if (isEditableTarget(e.target)) return;
+      if (e.target.closest?.('#globe-view, .globe-view')) return;
+      const scroller = nestedScroller(e.target);
+      if (!scroller) return;
+      e.preventDefault();
+      start(scroller, e.clientX, e.clientY);
+    }, true);
+
+    d.addEventListener('mouseup', e => {
+      if (session && e.button === 1) session.ignoreUntilUp = false;
+    }, true);
+
+    d.addEventListener('mousemove', e => {
+      if (!session) return;
+      session.mouseY = e.clientY;
+    }, true);
+
+    d.addEventListener('keydown', e => {
+      if (e.key === 'Escape') stop();
+    }, true);
+
+    d.addEventListener('auxclick', e => {
+      if (e.button === 1 && (session || nestedScroller(e.target))) e.preventDefault();
+    }, true);
+  }
 
   function togglePreference() {
     writePreference(readPreference() === 'light' ? 'dark' : 'light');
@@ -172,6 +292,7 @@
   }
 
   bootFromHead();
+  bindAutoscroll(document);
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bind);
   } else {
