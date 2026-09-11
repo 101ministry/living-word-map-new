@@ -1090,6 +1090,7 @@
       phase: 'globe',
       selectedId: null,
       magnification: 1,
+      middleZooming: false,
       panX: 0,
       panY: 0,
       fruitRotation: 0,
@@ -1588,6 +1589,14 @@
     }
 
     function onPointerDown(e) {
+      if (e.button === 1) {
+        state.middleZooming = true;
+        state.lastY = e.clientY;
+        host.setPointerCapture?.(e.pointerId);
+        e.preventDefault();
+        return;
+      }
+      if (e.button !== 0) return;
       if (state.phase === 'transport') {
         const onBlocker = e.target.closest?.('.globe-station.root, .globe-topic-station, .globe-topic-node-hit, .globe-transport-close');
         const onMetro = e.target.closest?.('.globe-fruit-metro');
@@ -1620,6 +1629,15 @@
     }
 
     function onPointerMove(e) {
+      if (state.middleZooming) {
+        const dy = e.clientY - state.lastY;
+        state.lastY = e.clientY;
+        if (dy) {
+          const factor = Math.pow(1.12, -dy / 48);
+          setMagnification(state.magnification * factor);
+        }
+        return;
+      }
       if (state.fruitSpinning && state.phase === 'transport') {
         const dx = e.clientX - state.fruitSpinLastX;
         if (Math.abs(dx) > 3) state.fruitSpinMoved = true;
@@ -1653,6 +1671,11 @@
     }
 
     function onPointerUp(e) {
+      if (state.middleZooming) {
+        state.middleZooming = false;
+        if (e?.pointerId != null) host.releasePointerCapture?.(e.pointerId);
+        return;
+      }
       if (state.fruitSpinning) {
         state.fruitSpinning = false;
         if (state.fruitSpinMoved) state.fruitDidSpin = true;
