@@ -164,76 +164,7 @@
     });
   }
 
-  function isEditableTarget(el) {
-    if (!el || el.nodeType !== 1) return false;
-    const tag = el.tagName;
-    return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || el.isContentEditable;
-  }
-
-  function canScrollY(el) {
-    if (!el) return false;
-    const style = el.ownerDocument.defaultView.getComputedStyle(el);
-    const overflowY = style.overflowY;
-    if (overflowY !== 'auto' && overflowY !== 'scroll' && overflowY !== 'overlay') return false;
-    return el.scrollHeight > el.clientHeight + 1;
-  }
-
-  function scrollableAncestor(start) {
-    const doc = start?.ownerDocument || document;
-    let el = start;
-    while (el && el !== doc.body && el !== doc.documentElement) {
-      if (canScrollY(el)) return el;
-      el = el.parentElement;
-    }
-    const root = doc.scrollingElement || doc.documentElement;
-    if (root && root.scrollHeight > root.clientHeight + 1) return root;
-    return null;
-  }
-
-  function bindMiddleMouseScroll(doc) {
-    const d = doc || document;
-    if (!d?.documentElement || d.documentElement.dataset.lwmMiddleScroll === '1') return;
-    d.documentElement.dataset.lwmMiddleScroll = '1';
-
-    let dragging = false;
-    let lastY = 0;
-    let scroller = null;
-
-    function stopDrag() {
-      dragging = false;
-      scroller = null;
-      d.documentElement.classList.remove('lwm-middle-scrolling');
-    }
-
-    d.addEventListener('mousedown', e => {
-      if (e.button !== 1) return;
-      if (isEditableTarget(e.target)) return;
-      if (e.target.closest?.('#globe-view, .globe-view')) return;
-      const next = scrollableAncestor(e.target);
-      if (!next) return;
-      e.preventDefault();
-      dragging = true;
-      lastY = e.clientY;
-      scroller = next;
-      d.documentElement.classList.add('lwm-middle-scrolling');
-    }, true);
-
-    d.addEventListener('mousemove', e => {
-      if (!dragging || !scroller) return;
-      scroller.scrollTop -= (e.clientY - lastY);
-      lastY = e.clientY;
-    }, true);
-
-    d.addEventListener('mouseup', e => {
-      if (e.button === 1 || dragging) stopDrag();
-    }, true);
-
-    d.addEventListener('auxclick', e => {
-      if (e.button === 1 && !isEditableTarget(e.target)) e.preventDefault();
-    }, true);
-  }
-
-  window.LwmSiteTheme = { apply, readPreference, togglePreference, bind, bindMiddleMouseScroll };
+  window.LwmSiteTheme = { apply, readPreference, togglePreference, bind };
 
   function togglePreference() {
     writePreference(readPreference() === 'light' ? 'dark' : 'light');
@@ -241,7 +172,6 @@
   }
 
   bootFromHead();
-  bindMiddleMouseScroll(document);
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bind);
   } else {

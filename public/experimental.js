@@ -1406,7 +1406,6 @@
     try {
       win.document.title = `Prayer · Set ${state.currentSet}`;
       copyStylesInto(win.document);
-      window.LwmSiteTheme?.bindMiddleMouseScroll?.(win.document);
       win.document.body.appendChild(panel);
       prayerPipWindow = win;
       setPrayerPopoutChrome(true);

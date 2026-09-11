@@ -2638,11 +2638,10 @@ html[data-theme="light"] .map-layer-dock {
   font-weight: 600;
 }
 
-html.lwm-middle-scrolling,
-html.lwm-middle-scrolling * {
-  cursor: ns-resize !important;
-  user-select: none !important;
-}
+.detail-panel {
+  border-left: 1px solid var(--border);
+  background: var(--bg-panel);
+  overflow-y: auto;
   overscroll-behavior: auto;
   padding: 1.35rem 1.5rem;
   font-size: 1rem;

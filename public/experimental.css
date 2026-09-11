@@ -2,12 +2,6 @@
   background: var(--bg-deep);
 }
 
-html.lwm-middle-scrolling,
-html.lwm-middle-scrolling * {
-  cursor: ns-resize !important;
-  user-select: none !important;
-}
-
 #exp-app {
   display: flex;
   flex-direction: column;
