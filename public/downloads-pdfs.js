@@ -101,25 +101,25 @@
         "made":  "2026-08-27"
     },
     {
-        "title":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 1)",
+        "title":  "Rebellion + Desertion = Curses (Part 1)",
         "summary":  "Deuteronomy 28:15-68: disease and affliction terms (Hebrew to English).",
         "href":  "downloads/rebellion-desertion-curses.pdf",
-        "download":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 1).pdf",
+        "download":  "Rebellion + Desertion = Curses.pdf",
         "made":  "2026-07-31"
     },
     {
-        "title":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 2)",
+        "title":  "Rebellion + Desertion = Curses (Part 2)",
         "summary":  "Modern diseases, disorders, and cancers matching the Hebrew descriptions.",
         "href":  "downloads/rebellion-desertion-curses-part2.pdf",
-        "download":  "Rebellion + Desertion + Deuteronomy 28 TODAY (Part 2).pdf",
+        "download":  "Rebellion-Desertion-Curses-Part2.pdf",
         "made":  "2026-07-31"
     },
     {
-        "title":  "Soul Ties Prayer - update 9/9/2026",
-        "summary":  "Renouncing occult soul ties, illegal sexual bonds, sending spirits to the pit, and a writ of divorce unto Jesus Christ.",
+        "title":  "Soul Ties Prayer - update 9/11/2026",
+        "summary":  "Renouncing occult soul ties, contracts, and covenants; sending spirits to the abyss; writ of divorce unto Jesus Christ (Micah 5:12-15).",
         "href":  "downloads/soul-ties-prayer.pdf",
-        "download":  "Soul Ties Prayer - update 9-9-2026.pdf",
-        "made":  "2026-09-09"
+        "download":  "Soul Ties Prayer - update 9-11-2026.pdf",
+        "made":  "2026-09-11"
     },
     {
         "title":  "Spirit Spouses - Identify, Root Out, Divorce",
