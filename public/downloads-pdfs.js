@@ -115,11 +115,11 @@
         "made":  "2026-07-31"
     },
     {
-        "title":  "Soul Ties Prayer - update 9/11/2026",
-        "summary":  "Renouncing occult soul ties, contracts, and covenants; sending spirits to the abyss; writ of divorce unto Jesus Christ (Micah 5:12-15).",
+        "title":  "Soul Ties Prayer - update 9/9/2026",
+        "summary":  "Renouncing occult soul ties, illegal sexual bonds, sending spirits to the pit, and a writ of divorce unto Jesus Christ.",
         "href":  "downloads/soul-ties-prayer.pdf",
-        "download":  "Soul Ties Prayer - update 9-11-2026.pdf",
-        "made":  "2026-09-11"
+        "download":  "Soul Ties Prayer - update 9-9-2026.pdf",
+        "made":  "2026-09-09"
     },
     {
         "title":  "Spirit Spouses - Identify, Root Out, Divorce",

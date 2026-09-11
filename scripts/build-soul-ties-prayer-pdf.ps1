@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 $Root = Split-Path $PSScriptRoot -Parent
 $OutHtml = Join-Path $Root 'data\Soul-Ties-Prayer.html'
 $OutPdfTemp = Join-Path $Root 'data\soul-ties-prayer.pdf'
-$OutPdf     = Join-Path $Root 'data\Soul Ties Prayer - update 9-11-2026.pdf'
+$OutPdf     = Join-Path $Root 'data\Soul Ties Prayer - update 9-9-2026.pdf'
 
 if (-not (Test-Path $OutHtml)) {
     Write-Error "HTML not found: $OutHtml"
