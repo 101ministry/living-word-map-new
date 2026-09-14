@@ -136,6 +136,13 @@
         "made":  "2026-08-10"
     },
     {
+        "title":  "The PATH of understanding",
+        "summary":  "Event, suggestion of thoughts, judgment, and opinion: the same initial route for biblical understanding or sin-nature understanding.",
+        "href":  "downloads/the-path-of-understanding.pdf",
+        "download":  "The PATH of understanding.pdf",
+        "made":  "2026-09-14"
+    },
+    {
         "title":  "The Power of Vibrating for Evil",
         "summary":  "Ephesians 6:12, word-agreement, election, and the twelve-gate zodiac covenant.",
         "href":  "downloads/power-of-vibrating-for-evil.pdf",

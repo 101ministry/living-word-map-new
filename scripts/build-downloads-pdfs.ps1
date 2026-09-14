@@ -124,6 +124,13 @@ $items = @(
     summary = 'Replace vs graft: passages on Israel and the church side by side.'
   },
   @{
+    src = 'The PATH of understanding.pdf'
+    file = 'the-path-of-understanding.pdf'
+    title = 'The PATH of understanding'
+    summary = 'Event, suggestion of thoughts, judgment, and opinion: the same initial route for biblical understanding or sin-nature understanding.'
+    made = '2026-09-14'
+  },
+  @{
     src = 'THE-POWER-OF-VIBRATING-FOR-EVIL.pdf'
     file = 'power-of-vibrating-for-evil.pdf'
     title = 'The Power of Vibrating for Evil'
