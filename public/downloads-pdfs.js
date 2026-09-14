@@ -115,11 +115,11 @@
         "made":  "2026-07-31"
     },
     {
-        "title":  "Soul Ties Prayer - update 9/9/2026",
-        "summary":  "Renouncing occult soul ties, illegal sexual bonds, sending spirits to the pit, and a writ of divorce unto Jesus Christ.",
+        "title":  "Courts of Heaven Petition for Renouncing and Breaking Evil Soul-ties from Soul Hunters (especially expert ones!)",
+        "summary":  "Courts of Heaven petition: renouncing occult and sexual soul ties, soul hunters, monitoring spirits, and a writ of divorce unto Jesus Christ.",
         "href":  "downloads/soul-ties-prayer.pdf",
-        "download":  "Soul Ties Prayer - update 9-9-2026.pdf",
-        "made":  "2026-09-09"
+        "download":  "Soul Ties Prayer - update 9-14-2026.pdf",
+        "made":  "2026-09-14"
     },
     {
         "title":  "Spirit Spouses - Identify, Root Out, Divorce",
