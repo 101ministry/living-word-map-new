@@ -26,6 +26,13 @@ $items = @(
     summary = 'Religions, discipleship costs, and biblical response from CARM articles.'
   },
   @{
+    src = 'Cancelling Dreams.pdf'
+    file = 'cancelling-dreams.pdf'
+    title = 'Cancelling Dreams'
+    summary = 'Cancel witchcraft agreements from a dream; if sexual, cancel altar and spirit-spouse covenants, assign angels, and tell someone so shame cannot hide it.'
+    made = '2026-09-16'
+  },
+  @{
     src = '3 Ways to Copy Jesus Flawlessly.pdf'
     file = '3-ways-to-copy-jesus-flawlessly.pdf'
     title = '3 Ways to Copy Jesus Flawlessly'

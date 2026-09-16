@@ -24,6 +24,13 @@
         "made":  "2026-08-10"
     },
     {
+        "title":  "Cancelling Dreams",
+        "summary":  "Cancel witchcraft agreements from a dream; if sexual, cancel altar and spirit-spouse covenants, assign angels, and tell someone so shame cannot hide it.",
+        "href":  "downloads/cancelling-dreams.pdf",
+        "download":  "Cancelling Dreams.pdf",
+        "made":  "2026-09-16"
+    },
+    {
         "title":  "3 Ways to Copy Jesus Flawlessly",
         "summary":  "Acceptable, good, and perfect will of God: seek/knock/ask, the cross, and tongues.",
         "href":  "downloads/3-ways-to-copy-jesus-flawlessly.pdf",
