@@ -304,7 +304,34 @@
         { "label": "BONUS: what is a 'Soul Fracture'", "start": "2:25:50" }
       ]
     },
-    { "day": 10, "part": 1, "title": "Day 10 - Prayer Topics", "youtubeId": "n--bMxG44nw", "url": "https://www.youtube.com/watch?v=n--bMxG44nw" },
+    {
+      "day": 10,
+      "part": 1,
+      "title": "Day 10 - Prayer Topics",
+      "youtubeId": "n--bMxG44nw",
+      "url": "https://www.youtube.com/watch?v=n--bMxG44nw",
+      "chapterTimestamps": {
+        "12": "3:50",
+        "13": "29:27",
+        "14": "1:05:05",
+        "15": "1:06:17",
+        "16": "1:11:05",
+        "17": "1:17:14",
+        "18": "1:43:41",
+        "19": "1:45:47",
+        "20": "1:49:06",
+        "21": "1:54:58"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: The importance of stewardship", "start": "1:55:43" },
+        { "label": "BONUS: What's the number 1 benefit to the enemy to keep you in prison", "start": "2:18:00" },
+        { "label": "BONUS: The Kingdom of Heaven vs The Kingdom of God", "start": "2:39:05" },
+        { "label": "BONUS: 1 John:3", "start": "2:43:23" },
+        { "label": "BONUS: 'if you've thought about it, you've done it'", "start": "3:07:33" },
+        { "label": "BONUS: SPIRIT SPOUSE ORIGINS: Hybrid crossbreeding D.N.A, Nephilim, mythical creatures", "start": "3:16:08" },
+        { "label": "BONUS: WHAT HAPPENS IF YOU DON'T DO THE 3 VIDEOS", "start": "3:21:01" }
+      ]
+    },
     { "day": 11, "part": 1, "title": "Day 11 - Prayer Topics", "youtubeId": "GqgdvM0jZn0", "url": "https://www.youtube.com/watch?v=GqgdvM0jZn0" },
     { "day": 12, "part": 1, "title": "Day 12 - Prayer Topics", "youtubeId": "gHrsjZt3r2Y", "url": "https://www.youtube.com/watch?v=gHrsjZt3r2Y" },
     { "day": 13, "part": 1, "title": "Day 13 - Prayer Topics", "youtubeId": "UkEO0Wgvxd8", "url": "https://www.youtube.com/watch?v=UkEO0Wgvxd8" },
@@ -487,6 +514,69 @@
       "url": "https://youtube.com/live/-ldtxzyPaNA",
       "topicStart": 454,
       "topicEnd": 464
+    },
+    {
+      "day": 47,
+      "part": 1,
+      "title": "Day 47 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "Yy8qoTzI_5E",
+      "url": "https://youtube.com/live/Yy8qoTzI_5E",
+      "topicStart": 465,
+      "topicEnd": 475
+    },
+    {
+      "day": 48,
+      "part": 1,
+      "title": "Day 48 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "irMXPhOx8ic",
+      "url": "https://youtube.com/live/irMXPhOx8ic",
+      "topicStart": 476,
+      "topicEnd": 486
+    },
+    {
+      "day": 49,
+      "part": 1,
+      "title": "Day 49 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "AhAvetCcrag",
+      "url": "https://youtube.com/live/AhAvetCcrag",
+      "topicStart": 487,
+      "topicEnd": 497
+    },
+    {
+      "day": 50,
+      "part": 1,
+      "title": "Day 50 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "H2ieKaHGKNs",
+      "url": "https://www.youtube.com/watch?v=H2ieKaHGKNs",
+      "topicStart": 498,
+      "topicEnd": 509
+    },
+    {
+      "day": 52,
+      "part": 1,
+      "title": "Day 52 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "EJ74orYX_QM",
+      "url": "https://www.youtube.com/watch?v=EJ74orYX_QM",
+      "topicStart": 522,
+      "topicEnd": 532
+    },
+    {
+      "day": 53,
+      "part": 1,
+      "title": "Day 53 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "yiClQgw8oco",
+      "url": "https://youtube.com/live/yiClQgw8oco",
+      "topicStart": 533,
+      "topicEnd": 543
+    },
+    {
+      "day": 54,
+      "part": 1,
+      "title": "Day 54 - Prayer Topics (Destructive Identities)",
+      "youtubeId": "KDZmt2mtuNc",
+      "url": "https://youtube.com/live/KDZmt2mtuNc",
+      "topicStart": 544,
+      "topicEnd": 554
     }
   ]
 }

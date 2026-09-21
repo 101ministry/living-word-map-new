@@ -87,11 +87,25 @@
         "made":  "2026-08-08"
     },
     {
+        "title":  "How the Prayers Connect (BSB Day Series)",
+        "summary":  "Spoken prayer headings, then each Bible book, with connecting verses written out in the Berean Standard Bible. Days 1-82: downloads/prayer-connect/",
+        "href":  "downloads/how-the-prayers-connect-bsb-day-series.pdf",
+        "download":  "How the Prayers Connect BSB Day Series.pdf",
+        "made":  "2026-09-21"
+    },
+    {
         "title":  "Humility - God\u0027s Definition",
         "summary":  "What humility looks like in Scripture, Old Testament and New.",
         "href":  "downloads/humility-gods-definition.pdf",
         "download":  "Humility-Gods-Definition.pdf",
         "made":  "2026-08-28"
+    },
+    {
+        "title":  "Incubus - the Jealous & Destructive",
+        "summary":  "Possessive man: world, mythology with hear-clips, Bible (BSB), and teaching videos for the Topics 666 named in the study.",
+        "href":  "downloads/incubus-jealous-destructive.pdf?v=2",
+        "download":  "Incubus - the Jealous and Destructive.pdf",
+        "made":  "2026-09-21"
     },
     {
         "title":  "Israel: Nations \u0026 Cities Killed",
@@ -134,6 +148,13 @@
         "href":  "downloads/spirit-spouses-identify-root-out-divorce.pdf",
         "download":  "Spirit Spouses - Identify, Root Out, and Divorce.pdf",
         "made":  "2026-08-08"
+    },
+    {
+        "title":  "Succubus - Tales from the World, from Mythology, from the Bible",
+        "summary":  "Forbidden-woman pattern: world, mythology with hear-clips, Bible (BSB), and teaching videos for the Topics 666 named in the study.",
+        "href":  "downloads/succubus-tales-world-mythology-bible.pdf?v=2",
+        "download":  "Succubus - Tales from the World, from Mythology, from the Bible.pdf",
+        "made":  "2026-09-21"
     },
     {
         "title":  "Supersessionism vs Scripture",

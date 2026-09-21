@@ -9,3 +9,12 @@ node_modules/
 scripts/youtube-upload/node_modules/
 scripts/youtube-upload/client_secret.json
 scripts/youtube-upload/token.json
+audiobits/
+data/waster-spirit-transcript/*.m4a
+data/waster-spirit-transcript/*.mp3
+data/waster-spirit-transcript/chunks/
+data/waster-spirit-transcript/partials/
+data/waster-spirit-transcript/test-15s.json
+data/Ashton Campbell Spotify/audio/
+data/Ashton Campbell Spotify/work/chunks/
+data/bsb-cache/

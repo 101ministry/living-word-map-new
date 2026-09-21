@@ -90,6 +90,13 @@ $items = @(
     notBefore = '2026-09-23T01:00:00-04:00'
   },
   @{
+    src = 'How the Prayers Connect BSB Day Series.pdf'
+    file = 'how-the-prayers-connect-bsb-day-series.pdf'
+    title = 'How the Prayers Connect (BSB Day Series)'
+    summary = 'Spoken prayer headings, then each Bible book, with connecting verses written out in the Berean Standard Bible. Days 1-82: downloads/prayer-connect/'
+    made = '2026-09-21'
+  },
+  @{
     src = 'Humility-Gods-Definition.pdf'
     file = 'humility-gods-definition.pdf'
     title = 'Humility - God''s Definition'
