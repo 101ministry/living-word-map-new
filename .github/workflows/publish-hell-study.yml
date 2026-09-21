@@ -1,0 +1,37 @@
+name: Publish How Did Jesus Know About Hell PDF
+
+on:
+  schedule:
+    # Wednesday 23 Sep 2026, 1:00 AM Eastern (EDT = UTC-4)
+    - cron: "0 5 23 9 *"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Copy PDF and add catalog entry
+        run: node scripts/publish-hell-pdf.mjs
+
+      - name: Commit if the catalog or PDF changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "public/downloads/how-did-jesus-know-about-hell.pdf" public/downloads-pdfs.js
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Publish How Did Jesus Know About Hell teaching PDF."
+            git push
+          fi

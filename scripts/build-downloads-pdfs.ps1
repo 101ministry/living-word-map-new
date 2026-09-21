@@ -82,6 +82,14 @@ $items = @(
     summary = 'Matthew 18 steps: private correction before public accusation.'
   },
   @{
+    src = 'How Did Jesus Know About Hell.pdf'
+    file = 'how-did-jesus-know-about-hell.pdf'
+    title = 'How Did Jesus Know About Hell?'
+    summary = 'What Scripture records about hell, and Repentance101''s stance that Jesus went there: three days, 259,200 seconds, and love for the Father afterward.'
+    made = '2026-09-23'
+    notBefore = '2026-09-23T01:00:00-04:00'
+  },
+  @{
     src = 'Humility-Gods-Definition.pdf'
     file = 'humility-gods-definition.pdf'
     title = 'Humility - God''s Definition'
@@ -172,6 +180,13 @@ $items = @(
 
 $manifest = New-Object System.Collections.Generic.List[object]
 foreach ($item in $items) {
+  if ($item.notBefore) {
+    $nb = [datetimeoffset]::Parse($item.notBefore)
+    if ([datetimeoffset]::Now -lt $nb) {
+      Write-Host "Skipping $($item.title) until $($item.notBefore)"
+      continue
+    }
+  }
   $srcPath = Join-Path $Data $item.src
   if (-not (Test-Path -LiteralPath $srcPath)) {
     Write-Warning "Missing source PDF: $($item.src)"
