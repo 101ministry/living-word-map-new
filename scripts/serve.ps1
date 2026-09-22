@@ -208,6 +208,166 @@ function Handle-Api($context) {
         return $true
     }
 
+    if ($abs -like '/api/project-videos*') {
+        $repoRoot = Split-Path $root -Parent
+        $videoAcctPath = Join-Path $repoRoot '.project-video-accounts.json'
+        $videoSessPath = Join-Path $repoRoot '.project-video-sessions.json'
+        $videoCookie = 'lwm_video_session'
+        $sessionTtlMs = 30L * 24L * 60L * 60L * 1000L
+        $setMeta = @(
+            @{ id = 1; name = 'You and your bloodline'; short = 'You' },
+            @{ id = 2; name = "Spouse's bloodline"; short = 'Spouse' },
+            @{ id = 3; name = 'House'; short = 'House' },
+            @{ id = 4; name = 'Neighborhood / metro'; short = 'Metro' },
+            @{ id = 5; name = 'City / metropolis'; short = 'City' },
+            @{ id = 6; name = 'County / parish / province'; short = 'County' },
+            @{ id = 7; name = 'State'; short = 'State' },
+            @{ id = 8; name = 'Country'; short = 'Country' },
+            @{ id = 9; name = 'Time zone, all countries'; short = 'TZ world' },
+            @{ id = 10; name = 'Continent'; short = 'Continent' },
+            @{ id = 11; name = 'World'; short = 'World' }
+        )
+
+        function Get-VideoAccountKey([string]$name) {
+            return ($name.Trim() -replace '\s+', ' ').ToLowerInvariant()
+        }
+
+        function Get-VideoJsonMap([string]$path) {
+            $map = @{}
+            if (Test-Path -LiteralPath $path) {
+                try {
+                    $parsed = Get-Content -LiteralPath $path -Raw -Encoding UTF8 | ConvertFrom-Json
+                    if ($parsed) { $parsed.PSObject.Properties | ForEach-Object { $map[$_.Name] = $_.Value } }
+                }
+                catch { $map = @{} }
+            }
+            return $map
+        }
+
+        function Save-VideoJsonMap([string]$path, $map) {
+            ($map | ConvertTo-Json -Depth 8) | Set-Content -LiteralPath $path -Encoding UTF8
+        }
+
+        function Get-VideoSessionFromRequest($req) {
+            $header = [string]$req.Headers['Cookie']
+            if ([string]::IsNullOrWhiteSpace($header)) { return $null }
+            $token = $null
+            foreach ($part in $header.Split(';')) {
+                $pair = $part.Trim()
+                $i = $pair.IndexOf('=')
+                if ($i -gt 0 -and $pair.Substring(0, $i) -eq $videoCookie) {
+                    $token = [Uri]::UnescapeDataString($pair.Substring($i + 1))
+                }
+            }
+            if ([string]::IsNullOrWhiteSpace($token) -or $token -notmatch '^[a-f0-9]{64}$') { return $null }
+            $sessions = Get-VideoJsonMap $videoSessPath
+            if (-not $sessions.ContainsKey($token)) { return $null }
+            $rec = $sessions[$token]
+            $exp = 0L
+            [long]::TryParse([string]$rec.expiresAt, [ref]$exp) | Out-Null
+            if ($exp -and $exp -lt [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()) { return $null }
+            return @{ token = $token; rec = $rec }
+        }
+
+        function Get-VideoCatalog {
+            $sets = @()
+            foreach ($set in $setMeta) {
+                $videos = @()
+                1..34 | ForEach-Object {
+                    $n = $_
+                    $isBridge = ($n -eq 34 -and $set.id -lt 11)
+                    $videos += @{
+                        n         = $n
+                        title     = if ($isBridge) { "Continue to Set $($set.id + 1)" } else { "Set $($set.id) · Video $('{0:d2}' -f $n)" }
+                        role      = if ($isBridge) { 'next-set' } else { 'video' }
+                        nextSet   = if ($isBridge) { $set.id + 1 } else { $null }
+                        youtubeId = $null
+                    }
+                }
+                $sets += @{ id = $set.id; name = $set.name; short = $set.short; videos = $videos }
+            }
+            return $sets
+        }
+
+        $sub = $abs.Substring('/api/project-videos'.Length).TrimStart('/')
+
+        if ($sub -eq 'me' -and $context.Request.HttpMethod -eq 'GET') {
+            $viewer = Get-VideoSessionFromRequest $context.Request
+            if (-not $viewer) {
+                Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+                return $true
+            }
+            Send-Json $context @{ ok = $true; name = [string]$viewer.rec.name } 200 $null
+            return $true
+        }
+
+        if ($sub -eq 'logout' -and $context.Request.HttpMethod -eq 'POST') {
+            $viewer = Get-VideoSessionFromRequest $context.Request
+            if ($viewer) {
+                $sessions = Get-VideoJsonMap $videoSessPath
+                $sessions.Remove($viewer.token) | Out-Null
+                Save-VideoJsonMap $videoSessPath $sessions
+            }
+            Send-Json $context @{ ok = $true } 200 @{ 'Set-Cookie' = "$videoCookie=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0" }
+            return $true
+        }
+
+        if ($sub -eq 'catalog' -and $context.Request.HttpMethod -eq 'GET') {
+            $viewer = Get-VideoSessionFromRequest $context.Request
+            if (-not $viewer) {
+                Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+                return $true
+            }
+            Send-Json $context @{ ok = $true; sets = Get-VideoCatalog } 200 $null
+            return $true
+        }
+
+        if ($sub -eq 'login' -and $context.Request.HttpMethod -eq 'POST') {
+            $reader = New-Object System.IO.StreamReader($context.Request.InputStream, [System.Text.Encoding]::UTF8)
+            $raw = $reader.ReadToEnd()
+            $reader.Close()
+            try { $body = $raw | ConvertFrom-Json }
+            catch {
+                Send-Text $context '{"error":"Invalid JSON"}' 400 'application/json; charset=utf-8'
+                return $true
+            }
+            $name = ([string]$body.name).Trim()
+            $hash = [string]$body.passwordHash
+            if ($name.Length -lt 2 -or [string]::IsNullOrWhiteSpace($hash)) {
+                Send-Text $context '{"error":"Missing name or password"}' 400 'application/json; charset=utf-8'
+                return $true
+            }
+            $acctKey = Get-VideoAccountKey $name
+            $accounts = Get-VideoJsonMap $videoAcctPath
+            if ($accounts.ContainsKey($acctKey) -and [string]$accounts[$acctKey].passwordHash -ne $hash) {
+                Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
+                return $true
+            }
+            if (-not $accounts.ContainsKey($acctKey)) {
+                $accounts[$acctKey] = @{ passwordHash = $hash; createdAt = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds() }
+                Save-VideoJsonMap $videoAcctPath $accounts
+            }
+            $tokenBytes = New-Object byte[] 32
+            [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($tokenBytes)
+            $token = ([BitConverter]::ToString($tokenBytes) -replace '-', '').ToLowerInvariant()
+            $expiresAt = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds() + $sessionTtlMs
+            $sessions = Get-VideoJsonMap $videoSessPath
+            $sessions[$token] = @{
+                accountKey = $acctKey
+                name       = $name
+                createdAt  = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+                expiresAt  = $expiresAt
+            }
+            Save-VideoJsonMap $videoSessPath $sessions
+            $maxAge = [int]($sessionTtlMs / 1000)
+            Send-Json $context @{ ok = $true } 200 @{ 'Set-Cookie' = "$videoCookie=$token; Path=/; HttpOnly; SameSite=Lax; Max-Age=$maxAge" }
+            return $true
+        }
+
+        Send-Text $context '{"error":"Method not allowed"}' 405 'application/json; charset=utf-8'
+        return $true
+    }
+
     if ($abs -like '/api/experimental-auth*') {
         $repoRoot = Split-Path $root -Parent
         $allowPath = Join-Path $repoRoot 'data\experimental-allowlist.json'

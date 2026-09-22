@@ -6,6 +6,8 @@ node_modules/
 .wrangler/
 .experimental-accounts.json
 .experimental-presence.json
+.project-video-accounts.json
+.project-video-sessions.json
 scripts/youtube-upload/node_modules/
 scripts/youtube-upload/client_secret.json
 scripts/youtube-upload/token.json

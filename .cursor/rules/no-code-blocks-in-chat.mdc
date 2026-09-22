@@ -1,0 +1,16 @@
+---
+description: Chat replies never show code. Only name or quote the prompts actually being used.
+alwaysApply: true
+---
+
+# No code in chat; prompts only
+
+User-facing replies must not show source, diffs, fences, file patches, or command listings.
+
+Show only the **prompts in use**: UI copy, captions, YouTube descriptions, spoken-note text, form labels, or the one-line status of a running job. Quote those words in plain language when the user needs to see what the viewer or form will read.
+
+Do not paste scripts, HTML, CSS, JSON, Worker handlers, or “here is the code.” Edit files silently. One terminal box is allowed when a job must run (stitch, build, upload).
+
+On 20s-series day pings (`81-100 Day 5`, etc.): do not use file-edit tools. Run one shell: `run-20s-day.ps1 -Day N`. Reply with status, the YouTube URL, and the local path only.
+
+If a topic MP3 is missing, say which numbers are missing. Do not dump scripts.

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video portion — Repentance Project</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=107" />
+  <script src="site-theme.js?v=9"></script>
+  <link rel="stylesheet" href="project-videos.css?v=3" />
+</head>
+<body class="site-repentance-hub pv-page">
+  <div id="app">
+    <header class="header">
+      <div class="header-brand">
+        <a href="https://repentance101ministry.com/" class="header-tribe-link" target="_blank" rel="noopener noreferrer">Come Join the Repentance101 Tribe</a>
+        <h1><a href="index.html?site=map&amp;view=constellation" class="header-title-link">Living Word Map</a></h1>
+        <p class="subtitle">26 Principalities · 11 Roots · 20 Fruits · 666 Topics</p>
+      </div>
+      <div class="header-controls">
+        <div class="language-control">
+          <label id="language-label" for="language-select">Prayer language</label>
+          <select id="language-select" aria-describedby="language-status"></select>
+          <p id="language-status" class="language-status" aria-live="polite"></p>
+        </div>
+        <nav class="site-nav" id="site-nav" aria-label="Site sections">
+          <a href="repentance-project.html" class="site-nav-btn" data-site-href="repentance-project.html" aria-current="page">Repentance Project</a>
+          <a href="index.html?site=prayer-videos" class="site-nav-btn" data-site-href="index.html" data-site-page="prayer-videos">Core Prayer &amp; Videos</a>
+          <a href="index.html?site=map" class="site-nav-btn" data-site-href="index.html" data-site-page="map">Globe Map &amp; Minigame</a>
+          <a href="index.html?site=downloads" class="site-nav-btn" data-site-href="index.html" data-site-page="downloads">PDF &amp; Audio Downloads</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="repentance-hub" aria-label="Repentance Project videos">
+      <header class="pv-intro">
+        <div class="pv-intro-copy">
+          <h2>Enter Video portion</h2>
+          <p>
+            Eleven sets as thumbnail buttons. Each set holds 33 videos; video 34 in sets 1–10 opens the next set.
+            Create a username and password here — no Slack invite. After you sign in, these placeholders become the real set pages.
+          </p>
+          <p><a href="repentance-project.html" class="pv-back">← Repentance Project</a></p>
+        </div>
+        <form id="pv-auth-form" class="pv-auth-card" autocomplete="off">
+          <p class="pv-auth-kicker">Video access</p>
+          <h3 id="pv-auth-title">Username and password</h3>
+          <p class="pv-auth-lead" id="pv-auth-lead">First visit creates your login. Return with the same name and password to open the sets.</p>
+          <div id="pv-auth-fields">
+            <label>
+              <span>Username</span>
+              <input type="text" name="username" maxlength="80" required placeholder="Choose a name" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" name="password" maxlength="120" required placeholder="At least 6 characters" autocomplete="new-password" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other" data-protonpass-ignore />
+            </label>
+            <div class="pv-auth-actions">
+              <button type="submit" class="btn-accent" id="pv-auth-submit">Create or sign in</button>
+            </div>
+          </div>
+          <div id="pv-signed-wrap" hidden>
+            <p class="pv-signed" id="pv-signed-line"></p>
+            <div class="pv-auth-actions">
+              <button type="button" class="btn-ghost" id="pv-logout">Sign out</button>
+            </div>
+          </div>
+          <p id="pv-status" class="pv-status" aria-live="polite"></p>
+        </form>
+      </header>
+
+      <nav class="pv-crumb" id="pv-crumb" hidden></nav>
+      <p class="pv-section-lead" id="pv-section-lead"></p>
+      <div id="pv-view" class="pv-grid" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <script src="languages.js?v=23"></script>
+  <script src="site-nav.js?v=4"></script>
+  <script src="project-videos.js?v=3"></script>
+</body>
+</html>
