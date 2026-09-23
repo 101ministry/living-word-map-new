@@ -1,4 +1,4 @@
-window.DOWNLOADS_PDFS = {
+﻿window.DOWNLOADS_PDFS = {
   "title": "Teaching PDFs",
   "description": "Studies and prayers from the ministry library. Tap to download.",
   "items": [
@@ -169,6 +169,13 @@ window.DOWNLOADS_PDFS = {
       "href": "downloads/supersessionism-biblical-study.pdf",
       "download": "SUPERSESSIONISM-BIBLICAL-STUDY.pdf",
       "made": "2026-08-10"
+    },
+    {
+      "title": "The Minions of the Spirit Spouse",
+      "summary": "Topics 442-573 counted in league with succubus (561) and incubus (503): 96 support the lure, 105 support the jailer, 69 serve both.",
+      "href": "downloads/minions-of-the-spirit-spouse.pdf",
+      "download": "The Minions of the Spirit Spouse.pdf",
+      "made": "2026-09-23"
     },
     {
       "title": "The PATH of understanding",
