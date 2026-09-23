@@ -191,12 +191,24 @@
   padding: 0;
   overflow: hidden;
   background: #121018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
 }
 
-.pv-thumb-art svg {
+.pv-thumb-art svg,
+.pv-thumb-art img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.pv-thumb-art img {
+  object-fit: cover;
 }
 
 .pv-thumb.is-bridge .pv-thumb-art {

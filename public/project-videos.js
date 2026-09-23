@@ -92,6 +92,27 @@
     }));
   }
 
+  const YOUTUBE_IDS = {
+    '1-1': 'v4wEVDFUqD4',
+    '1-2': 'MiCbASoOMjE',
+    '1-3': '_rBrRF3sexg',
+    '1-4': 'W1LEVjlKo08',
+    '1-5': 'mgw-W3harTI',
+    '1-6': '6ZWSKaOfxjk',
+    '1-7': 'M8EKE2MUbkc',
+    '1-8': 'KSqcJEYjGvc',
+    '1-9': 'vV1b8xfFPqg',
+    '1-10': 'GgyzJiULZP8',
+    '1-11': '5jOEOVpsKn0',
+    '1-12': 'Sj9tzlt2MKQ',
+    '1-13': 'MocVZ4nufmM',
+    '1-14': 'AEOXKvUj8yo',
+    '1-15': 'GNKGbUyUbjo',
+    '1-16': 'PiMwpcBgP_E',
+    '1-17': 'L5u8JRXbOvY',
+    '1-18': '5ncAiLk9fdQ',
+  };
+
   function namedCatalog() {
     return SET_META.map((set) => ({
       id: set.id,
@@ -101,12 +122,19 @@
       videos: Array.from({ length: 34 }, (_, i) => {
         const n = i + 1;
         const isBridge = n === 34 && set.id < 11;
+        const youtubeId = YOUTUBE_IDS[`${set.id}-${n}`] || null;
+        const round = set.id === 1 && n >= 1 && n <= 18 ? 1 : null;
         return {
           n,
-          title: isBridge ? `Continue to Set ${set.id + 1}` : `Set ${set.id} · Video ${String(n).padStart(2, '0')}`,
+          round,
+          title: isBridge
+            ? `Continue to Set ${set.id + 1}`
+            : round
+              ? `Set ${set.id} · Round ${round} · Video ${String(n).padStart(2, '0')}`
+              : `Set ${set.id} · Video ${String(n).padStart(2, '0')}`,
           role: isBridge ? 'next-set' : 'video',
           nextSet: isBridge ? set.id + 1 : null,
-          youtubeId: null,
+          youtubeId,
         };
       }),
     }));
@@ -357,11 +385,21 @@
       .map((vid) => {
         const bridge = vid.role === 'next-set';
         const locked = !state.name;
-        const label = bridge ? `Next · Set ${vid.nextSet}` : `Video ${String(vid.n).padStart(2, '0')}`;
+        const ready = !locked && !!vid.youtubeId;
+        const label = bridge
+          ? `Next · Set ${vid.nextSet}`
+          : vid.round
+            ? `Round ${vid.round} · Video ${String(vid.n).padStart(2, '0')}`
+            : `Video ${String(vid.n).padStart(2, '0')}`;
         const title = locked && !bridge ? `Placeholder ${String(vid.n).padStart(2, '0')}` : vid.title;
+        const art = ready
+          ? `<img src="https://i.ytimg.com/vi/${encodeURIComponent(vid.youtubeId)}/hqdefault.jpg" alt="">`
+          : bridge
+            ? '→'
+            : String(vid.n);
         return `
-      <button type="button" class="pv-thumb${bridge ? ' is-bridge' : ''}${locked ? ' is-locked' : ''}" data-video="${vid.n}">
-        <div class="pv-thumb-art">${bridge ? '→' : vid.n}</div>
+      <button type="button" class="pv-thumb${bridge ? ' is-bridge' : ''}${locked ? ' is-locked' : ''}${ready ? ' is-ready' : ''}" data-video="${vid.n}">
+        <div class="pv-thumb-art">${art}</div>
         <div class="pv-thumb-body">
           <span class="pv-thumb-kicker">${label}</span>
           <span class="pv-thumb-title">${escapeHtml(title)}</span>
@@ -386,7 +424,7 @@
       const src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(vid.youtubeId)}?rel=0`;
       els.view.innerHTML = `
         <div class="pv-stage"><iframe src="${src}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${escapeHtml(vid.title)}"></iframe></div>
-        <p class="pv-placeholder-copy"><strong>${escapeHtml(vid.title)}</strong>Set ${setId} · ${escapeHtml(set.name)}</p>`;
+        <p class="pv-placeholder-copy"><strong>${escapeHtml(vid.title)}</strong>Set ${setId} · ${escapeHtml(set.name)}${vid.round ? ` · Round ${vid.round}` : ''}</p>`;
       return;
     }
     els.view.innerHTML = `

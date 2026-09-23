@@ -270,18 +270,49 @@ function Handle-Api($context) {
         }
 
         function Get-VideoCatalog {
+            $ids = @{
+                '1-1'  = 'v4wEVDFUqD4'
+                '1-2'  = 'MiCbASoOMjE'
+                '1-3'  = '_rBrRF3sexg'
+                '1-4'  = 'W1LEVjlKo08'
+                '1-5'  = 'mgw-W3harTI'
+                '1-6'  = '6ZWSKaOfxjk'
+                '1-7'  = 'M8EKE2MUbkc'
+                '1-8'  = 'KSqcJEYjGvc'
+                '1-9'  = 'vV1b8xfFPqg'
+                '1-10' = 'GgyzJiULZP8'
+                '1-11' = '5jOEOVpsKn0'
+                '1-12' = 'Sj9tzlt2MKQ'
+                '1-13' = 'MocVZ4nufmM'
+                '1-14' = 'AEOXKvUj8yo'
+                '1-15' = 'GNKGbUyUbjo'
+                '1-16' = 'PiMwpcBgP_E'
+                '1-17' = 'L5u8JRXbOvY'
+                '1-18' = '5ncAiLk9fdQ'
+            }
             $sets = @()
             foreach ($set in $setMeta) {
                 $videos = @()
                 1..34 | ForEach-Object {
                     $n = $_
                     $isBridge = ($n -eq 34 -and $set.id -lt 11)
+                    $key = "$($set.id)-$n"
+                    $yt = $ids[$key]
+                    $round = if ($set.id -eq 1 -and $n -ge 1 -and $n -le 18) { 1 } else { $null }
+                    $title = if ($isBridge) {
+                        "Continue to Set $($set.id + 1)"
+                    } elseif ($round) {
+                        "Set $($set.id) · Round $round · Video $('{0:d2}' -f $n)"
+                    } else {
+                        "Set $($set.id) · Video $('{0:d2}' -f $n)"
+                    }
                     $videos += @{
                         n         = $n
-                        title     = if ($isBridge) { "Continue to Set $($set.id + 1)" } else { "Set $($set.id) · Video $('{0:d2}' -f $n)" }
+                        round     = $round
+                        title     = $title
                         role      = if ($isBridge) { 'next-set' } else { 'video' }
                         nextSet   = if ($isBridge) { $set.id + 1 } else { $null }
-                        youtubeId = $null
+                        youtubeId = if ($yt) { $yt } else { $null }
                     }
                 }
                 $sets += @{ id = $set.id; name = $set.name; short = $set.short; videos = $videos }
