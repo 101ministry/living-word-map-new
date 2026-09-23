@@ -1,12 +1,24 @@
 .repentance-hub-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'title video'
+    'lead video';
   gap: 0.75rem 1.25rem;
   align-items: start;
   margin-bottom: 0.25rem;
 }
 
+.repentance-hub-intro h2 {
+  grid-area: title;
+}
+
+.repentance-hub-intro p {
+  grid-area: lead;
+}
+
 .rp-video-enter {
+  grid-area: video;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,13 +58,17 @@
   line-height: 1.35;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .repentance-hub-intro {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'video'
+      'lead';
   }
 
   .rp-video-enter {
     width: 100%;
-    min-height: 0;
+    min-height: 4.25rem;
   }
 }

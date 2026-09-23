@@ -5440,14 +5440,14 @@ body[data-site-page='downloads'] .teaching-header {
   line-height: 1.35;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .repentance-hub-intro {
     grid-template-columns: 1fr;
   }
 
   .rp-video-enter {
     width: 100%;
-    min-height: 0;
+    min-height: 4.25rem;
   }
 }
 

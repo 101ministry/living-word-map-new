@@ -100,9 +100,9 @@
       const href = link.getAttribute('href') || '';
       const target = href.split('/').pop();
       const here =
-        (path === 'repentance-project.html' && target === 'repentance-project.html') ||
         (path === 'index.html' && target === 'index.html' && link.dataset.sitePage === new URLSearchParams(location.search).get('site')) ||
-        (path === '' && target === 'repentance-project.html');
+        (target !== 'index.html' && path === target) ||
+        ((path === '' || path === 'repentance-project.html') && target === 'repentance-project.html' && path !== 'project-videos.html');
       link.classList.toggle('is-active', here);
       if (here) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
