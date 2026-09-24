@@ -344,11 +344,6 @@ function Handle-Api($context) {
         }
 
         if ($sub -eq 'catalog' -and $context.Request.HttpMethod -eq 'GET') {
-            $viewer = Get-VideoSessionFromRequest $context.Request
-            if (-not $viewer) {
-                Send-Text $context '{"error":"auth"}' 401 'application/json; charset=utf-8'
-                return $true
-            }
             Send-Json $context @{ ok = $true; sets = Get-VideoCatalog } 200 $null
             return $true
         }

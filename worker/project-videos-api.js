@@ -92,8 +92,6 @@ export async function handleProjectVideos(request, env, url) {
   }
 
   if (sub === 'catalog' && request.method === 'GET') {
-    const session = await readVideoSession(request, env);
-    if (!session) return jsonResponse({ error: 'auth' }, 401);
     return jsonResponse({ ok: true, sets: buildProjectVideoCatalog() });
   }
 

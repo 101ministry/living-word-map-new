@@ -76,20 +76,39 @@
     return bytesToB64(new Uint8Array(bits));
   }
 
+  function slotCount(setId) {
+    return setId === 1 ? 68 : 34;
+  }
+
+  function roundOf(n) {
+    if (n >= 1 && n <= 34) return 1;
+    if (n >= 35 && n <= 68) return 2;
+    if (n >= 69 && n <= 102) return 3;
+    return null;
+  }
+
   function lockedCatalog() {
-    return SET_META.map((set) => ({
-      id: set.id,
-      name: set.name,
-      short: set.short,
-      locked: true,
-      videos: Array.from({ length: 34 }, (_, i) => ({
-        n: i + 1,
-        title: `Video ${String(i + 1).padStart(2, '0')}`,
-        role: i === 33 && set.id < 11 ? 'next-set' : 'video',
-        nextSet: i === 33 && set.id < 11 ? set.id + 1 : null,
-        youtubeId: null,
-      })),
-    }));
+    return SET_META.map((set) => {
+      const slots = slotCount(set.id);
+      return {
+        id: set.id,
+        name: set.name,
+        short: set.short,
+        locked: true,
+        videos: Array.from({ length: slots }, (_, i) => {
+          const n = i + 1;
+          const isBridge = set.id < 11 && n === slots && slots === 34;
+          return {
+            n,
+            round: roundOf(n),
+            title: `Video ${String(n).padStart(2, '0')}`,
+            role: isBridge ? 'next-set' : 'video',
+            nextSet: isBridge ? set.id + 1 : null,
+            youtubeId: null,
+          };
+        }),
+      };
+    });
   }
 
   const YOUTUBE_IDS = {
@@ -111,33 +130,63 @@
     '1-16': 'PiMwpcBgP_E',
     '1-17': 'L5u8JRXbOvY',
     '1-18': '5ncAiLk9fdQ',
+    '1-19': 'GiUW3A8roII',
+    '1-20': 'mjKW1I0xRhw',
+    '1-21': 'TY9aW4hKJF0',
+    '1-22': 'yzAIYf6WX5s',
+    '1-23': 'Enh_lw0zEUc',
+    '1-24': 'SXV-JEfTXbA',
+    '1-25': 'ig3wrFFGpzw',
+    '1-26': 'HUDihpWJAkE',
+    '1-27': 'LG1LNdmXfy4',
+    '1-28': 'Uw3L4c8_NE8',
+    '1-29': 'PJtVJBLMbFQ',
+    '1-30': 'KD2K-5q2QgY',
+    '1-31': '1ATfVJLQ9_o',
+    '1-32': 'B65mkcnyWG0',
+    '1-33': 'wu2HzKyk93o',
+    '1-34': 'Mr1oULT7fT0',
+    '1-35': 'khHlnPG86ns',
+    '1-36': '4qjewE4c9nE',
+    '1-37': 'w_p4Jloj1F8',
+    '1-38': 'oPS7fIvWBNA',
+    '1-39': 'yt4FF0_UMHU',
+    '1-40': 'cBEuc34UcTU',
+    '1-41': '_Xh6LPTHNbM',
+    '1-42': 'tuMBM016eBc',
+    '1-43': 'RDxAQCMCAFY',
+    '1-44': '3sR7qfu3DOA',
+    '1-45': 'PW8ai91oOm0',
+    '1-46': 'HzqY_Uf8YVw',
+    '1-47': 'ipUYW_M2xUc',
   };
 
   function namedCatalog() {
-    return SET_META.map((set) => ({
-      id: set.id,
-      name: set.name,
-      short: set.short,
-      locked: false,
-      videos: Array.from({ length: 34 }, (_, i) => {
-        const n = i + 1;
-        const isBridge = n === 34 && set.id < 11;
-        const youtubeId = YOUTUBE_IDS[`${set.id}-${n}`] || null;
-        const round = set.id === 1 && n >= 1 && n <= 18 ? 1 : null;
-        return {
-          n,
-          round,
-          title: isBridge
-            ? `Continue to Set ${set.id + 1}`
-            : round
-              ? `Set ${set.id} · Round ${round} · Video ${String(n).padStart(2, '0')}`
-              : `Set ${set.id} · Video ${String(n).padStart(2, '0')}`,
-          role: isBridge ? 'next-set' : 'video',
-          nextSet: isBridge ? set.id + 1 : null,
-          youtubeId,
-        };
-      }),
-    }));
+    return SET_META.map((set) => {
+      const slots = slotCount(set.id);
+      return {
+        id: set.id,
+        name: set.name,
+        short: set.short,
+        locked: false,
+        videos: Array.from({ length: slots }, (_, i) => {
+          const n = i + 1;
+          const isBridge = set.id < 11 && n === slots && slots === 34;
+          const youtubeId = YOUTUBE_IDS[`${set.id}-${n}`] || null;
+          const round = roundOf(n);
+          return {
+            n,
+            round,
+            title: isBridge
+              ? `Continue to Set ${set.id + 1}`
+              : `Set ${set.id} · Round ${round} · Video ${String(n).padStart(2, '0')}`,
+            role: isBridge ? 'next-set' : 'video',
+            nextSet: isBridge ? set.id + 1 : null,
+            youtubeId,
+          };
+        }),
+      };
+    });
   }
 
   function readLocalAccounts() {
@@ -162,7 +211,7 @@
     const setId = Number(params.get('set') || 0) || null;
     const videoN = Number(params.get('video') || 0) || null;
     state.setId = setId >= 1 && setId <= 11 ? setId : null;
-    state.videoN = videoN >= 1 && videoN <= 34 ? videoN : null;
+    state.videoN = videoN >= 1 && videoN <= 102 ? videoN : null;
   }
 
   function writeHash() {
@@ -278,22 +327,14 @@
       els.form.querySelector('[name=password]').required = !in_;
     }
     els.signedLine.textContent = in_ ? `Signed in as ${state.name}` : '';
-    els.lead.textContent = in_
-      ? 'Sets below are open. Video 34 in sets 1–10 continues into the next set.'
-      : 'First visit creates your login. Return with the same name and password to open the sets.';
+    els.lead.textContent = 'Sets below are open. Set 1 Round 2 continues after video 34 in the same set.';
   }
 
   async function refreshCatalog() {
-    if (!state.name) {
-      state.catalog = lockedCatalog();
+    const remote = await remoteCatalog();
+    if (remote) {
+      state.catalog = remote;
       return;
-    }
-    if (state.remote) {
-      const remote = await remoteCatalog();
-      if (remote) {
-        state.catalog = remote;
-        return;
-      }
     }
     state.catalog = namedCatalog();
   }
@@ -322,17 +363,21 @@
   function renderSectionLead() {
     if (!els.sectionLead) return;
     if (!state.setId) {
-      els.sectionLead.textContent = state.name
-        ? 'Choose a set. Each holds 33 videos; video 34 in sets 1–10 opens the next set.'
-        : 'Placeholder sets. Each thumbnail is that set’s picture. Sign in above to open the real video slots.';
+      els.sectionLead.textContent =
+        'Choose a set. Set 1 holds Round 1 then Round 2 (videos 35 onward) in the same set.';
       return;
     }
     if (state.videoN) {
       els.sectionLead.textContent = '';
       return;
     }
-    const next = state.setId < 11 ? ` Video 34 opens Set ${state.setId + 1}.` : ' This is the last set.';
-    els.sectionLead.textContent = `Set ${state.setId} of 11 · 33 videos.${next}`;
+    const next =
+      state.setId === 1
+        ? ' Round 1 is videos 1–34. Round 2 is 35–68.'
+        : state.setId < 11
+          ? ` Video 34 opens Set ${state.setId + 1}.`
+          : ' This is the last set.';
+    els.sectionLead.textContent = `Set ${state.setId} of 11.${next}`;
   }
 
   function setArt(id) {
@@ -354,7 +399,7 @@
 
   function renderSets() {
     const sets = state.catalog || lockedCatalog();
-    const locked = !state.name;
+    const locked = false;
     els.view.className = 'pv-grid';
     els.view.innerHTML = sets
       .map(
@@ -364,7 +409,7 @@
         <div class="pv-thumb-body">
           <span class="pv-thumb-kicker">Set ${set.id} of 11</span>
           <span class="pv-thumb-title">${escapeHtml(set.name)}</span>
-          <span class="pv-thumb-note">${set.id < 11 ? '33 videos · 34 opens next set' : '33 videos · last set'}</span>
+          <span class="pv-thumb-note">${set.id === 1 ? 'Round 1 then Round 2 in this set' : set.id < 11 ? '33 videos · 34 opens next set' : '33 videos · last set'}</span>
         </div>
       </button>`,
       )
@@ -384,7 +429,7 @@
     els.view.innerHTML = set.videos
       .map((vid) => {
         const bridge = vid.role === 'next-set';
-        const locked = !state.name;
+        const locked = false;
         const ready = !locked && !!vid.youtubeId;
         const label = bridge
           ? `Next · Set ${vid.nextSet}`
@@ -431,11 +476,7 @@
       <div class="pv-stage">
         <div class="pv-placeholder-copy">
           <strong>${escapeHtml(vid.title)}</strong>
-          ${
-            state.name
-              ? 'This slot is ready for the Unlisted teaching upload. After the video ID is attached, it plays here for signed-in viewers.'
-              : 'Create a username and password above. After you sign in, this placeholder is replaced with the real video for this slot.'
-          }
+          This slot is ready for the Unlisted teaching upload. After the video ID is attached, it plays here.
         </div>
       </div>`;
   }
@@ -514,9 +555,9 @@
   });
 
   (async function init() {
-    let session = await remoteMe();
-    if (!session) session = localSession();
-    applyAuth(session);
+    applyAuth({ name: 'open', remote: false });
+    if (els.form) els.form.hidden = true;
+    if (els.signedWrap) els.signedWrap.hidden = true;
     await refreshCatalog();
     parseHash();
     render();

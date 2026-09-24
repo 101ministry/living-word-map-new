@@ -58,6 +58,13 @@
   line-height: 1.35;
 }
 
+.rp-video-enter--gate {
+  grid-area: auto;
+  width: 100%;
+  min-height: 4.5rem;
+  margin: 0 0 0.35rem;
+}
+
 @media (max-width: 900px) {
   .repentance-hub-intro {
     grid-template-columns: 1fr;
