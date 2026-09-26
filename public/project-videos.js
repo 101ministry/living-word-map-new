@@ -3,16 +3,16 @@
 
   const SET_META = [
     { id: 1, name: 'You and your bloodline', short: 'You' },
-    { id: 2, name: "Spouse's bloodline", short: 'Spouse' },
-    { id: 3, name: 'House', short: 'House' },
-    { id: 4, name: 'Neighborhood / metro', short: 'Metro' },
-    { id: 5, name: 'City / metropolis', short: 'City' },
-    { id: 6, name: 'County / parish / province', short: 'County' },
-    { id: 7, name: 'State', short: 'State' },
-    { id: 8, name: 'Country', short: 'Country' },
-    { id: 9, name: 'Time zone, all countries', short: 'TZ world' },
-    { id: 10, name: 'Continent', short: 'Continent' },
-    { id: 11, name: 'World', short: 'World' },
+    { id: 2, name: 'Start each topic with "On behalf of my spouse\'s bloodline"', short: 'Spouse' },
+    { id: 3, name: 'Start each topic with "On behalf of the people in my house"', short: 'House' },
+    { id: 4, name: 'Start each topic with "On behalf of every person in my neighborhood and metro"', short: 'Metro' },
+    { id: 5, name: 'Start each topic with "On behalf of every person in my city or metropolis"', short: 'City' },
+    { id: 6, name: 'Start each topic with "On behalf of every person in my county or parish"', short: 'County' },
+    { id: 7, name: 'Start each topic with "On behalf of every person in my state"', short: 'State' },
+    { id: 8, name: 'Start each topic with "On behalf of every person in my country"', short: 'Country' },
+    { id: 9, name: 'Start each topic with "On behalf of every person in my timezone of countries"', short: 'TZ world' },
+    { id: 10, name: 'Start each topic with "On behalf of every person in my continent"', short: 'Continent' },
+    { id: 11, name: 'Start each topic with "On behalf of every person in the world"', short: 'World' },
   ];
 
   const LOCAL_ACCT = 'lwm-video-accounts-v1';
@@ -77,13 +77,13 @@
   }
 
   function slotCount(setId) {
-    return setId === 1 ? 68 : 34;
+    return setId <= 3 ? 100 : 34;
   }
 
   function roundOf(n) {
     if (n >= 1 && n <= 34) return 1;
-    if (n >= 35 && n <= 68) return 2;
-    if (n >= 69 && n <= 102) return 3;
+    if (n >= 35 && n <= 66) return 2;
+    if (n >= 67 && n <= 100) return 3;
     return null;
   }
 
@@ -159,6 +159,259 @@
     '1-45': 'PW8ai91oOm0',
     '1-46': 'HzqY_Uf8YVw',
     '1-47': 'ipUYW_M2xUc',
+    '1-48': 'YdRKP8qrDGo',
+    '1-49': 'JWgIuFMmzWM',
+    '1-50': 'rrLo4V6ZmPo',
+    '1-51': 'jdljeQaVVYw',
+    '1-52': 'iZYHdJ0RzQI',
+    '1-53': 'h_IU3e4stss',
+    '1-54': 'XOEXybHHJ1M',
+    '1-55': 'qg7T0M4L_WA',
+    '1-56': '51MW3xs1IY4',
+    '1-57': 'y9sd2l2Rq-c',
+    '1-58': 'XrMwrcPO04I',
+    '1-59': 'jJUYttcM0Xg',
+    '1-60': 'q-lhpBMHMro',
+    '1-61': 'Jqj3CAnXOic',
+    '1-62': 'y8O8KnoavEE',
+    '1-63': 'qZSo_044eqY',
+    '1-64': 'T4wpqDuL_TQ',
+    '1-65': 'HjVWG3hgBu8',
+    '1-66': 'EcOLcp3cwhs',
+    '1-67': 'Ns5yrd9zatM',
+    '1-68': 'TGlkeIn8ebk',
+    '1-69': '_KoCwoSWUQ0',
+    '1-70': 'Bun7iqFabVI',
+    '1-71': 'EMB-mUFDT88',
+    '1-72': 'i_v_da1nLYE',
+    '1-73': 'qvHZAwkgWhk',
+    '1-74': 'u3Jr3cpTFa0',
+    '1-75': '9-BWo4PKkLA',
+    '1-76': 'xdZJKR31eWY',
+    '1-77': 'Bs8i6DqBISs',
+    '1-78': 'ilkzUebq-XU',
+    '1-79': 'JZkLrAHQ6eY',
+    '1-80': '3SkiBwrV5yY',
+    '1-81': '5-pOgdX7SBQ',
+    '1-82': 'dtPRCVvXesg',
+    '1-83': 'wL6_fomtNvE',
+    '1-84': 'de_xWkzcR68',
+    '1-85': '920-oIh8MNY',
+    '1-86': 'LDBUgU1EvnM',
+    '1-87': 'uAHwOw0sXwM',
+    '1-88': 'CTIdaQtxgmU',
+    '1-89': '1EB6m0pd7Rg',
+    '1-90': '1Sdi7tK994c',
+    '1-91': '2fuVcQuomXs',
+    '1-92': 'J412dFY9Gpc',
+    '1-93': '2r9OMazS3Tc',
+    '1-94': 'HC7YL8lN5rw',
+    '1-95': 'tiqONk3NXcc',
+    '1-96': 'Jc7o_s3CgcU',
+    '1-97': 'W2WDMoyOGfo',
+    '1-98': 'th_sAGsLXQY',
+    '1-99': 'qfB6UFx08RQ',
+    '1-100': 'WBOV3nD43lU',
+    '2-1': 'xRE8IqQaQ44',
+    '2-2': 'ZWvwSE14wNo',
+    '2-3': 'bd5w7fWfxLk',
+    '2-4': '8zeBP0VXj70',
+    '2-5': '6vvDA-0uEoI',
+    '2-6': 'x_0CnoPmgF4',
+    '2-7': 'zXyMd7k56lU',
+    '2-8': 'ndr5serQ5_E',
+    '2-9': 'SXopUKx5o_o',
+    '2-10': 'Xhh4QNWJCHA',
+    '2-11': '26c0umCVpOM',
+    '2-12': 'qFJRGesZrEU',
+    '2-13': 'pemEmVBlqFI',
+    '2-14': 'pZge5VudrFw',
+    '2-15': 'GgsgVd_kebc',
+    '2-16': '_29bGTj20e8',
+    '2-17': 'k4aH4LIGuFk',
+    '2-18': 'u5tJXazWYhI',
+    '2-19': 'eVLW3njC3fY',
+    '2-20': 'vC3yEDwxGQg',
+    '2-21': 'KHfTePNBslY',
+    '2-22': 'rQ770HmQHpw',
+    '2-23': 'EVKprx9Y1_I',
+    '2-24': '7woan5QZPeM',
+    '2-25': 'YG9x-onZr08',
+    '2-26': 'pR9xEcmlWk0',
+    '2-27': '6JozP7qHqvM',
+    '2-28': 'mvsFr6VL8J4',
+    '2-29': 'E69opIhBmbE',
+    '2-30': 'hkfie20NgiU',
+    '2-31': 'bTuC5bsyS8E',
+    '2-32': 'ltYR0DTZErE',
+    '2-33': 'D6anB3lrCB0',
+    '2-34': 'OeZath2H6-o',
+    '2-35': 'R_ZBbMVfeGQ',
+    '2-36': '5sLQ70rR_Qw',
+    '2-37': 'Z9puiVoJL_4',
+    '2-38': 'dHz-FW2rmTk',
+    '2-39': 'aJksnEWbKPU',
+    '2-40': 'G6Q2K9sof4I',
+    '2-41': 'B6gdXXT7mH0',
+    '2-42': 'I1iiKcWiGwU',
+    '2-43': 'HB70LFO6l3w',
+    '2-44': 'Ge1Wuq9bGyk',
+    '2-45': 'iugya6sQrKU',
+    '2-46': 'srRiEUEVECU',
+    '2-47': 'YSxJVDYZ23o',
+    '2-48': 'yRi1-h0TobU',
+    '2-49': 'pNIVzbNLHOA',
+    '2-50': 'HxjdxDRk318',
+    '2-51': 'N4tpICD_r8g',
+    '2-52': '8m3hEp_WK48',
+    '2-53': 'OuUxx-IX5nQ',
+    '2-54': 'XBaHXffKJ2Y',
+    '2-55': 'N4cHiju-26o',
+    '2-56': 'lajYPnqomJg',
+    '2-57': 'FLQWiPtAUA0',
+    '2-58': '0J7-_Q7vq8k',
+    '2-59': 'Gp53WOqOriM',
+    '2-60': 'HoRHMoi77LQ',
+    '2-61': 'dWtPhmr9U38',
+    '2-62': '0hgqw-o1404',
+    '2-63': 'dOX3L6k9mQU',
+    '2-64': 'IYXCAxgKsD4',
+    '2-65': 'VzUPqubcjvs',
+    '2-66': 'JsCHV1KVGyU',
+    '2-67': 'Hr4eO39PJhk',
+    '2-68': 'n7DiCOfnuME',
+    '2-69': 'fbKBMA_Xtjs',
+    '2-70': 'KvnPax9eeh4',
+    '2-71': 'bzWvK6fbw6U',
+    '2-72': 'jreYLWmtDQE',
+    '2-73': '132qGupuAXE',
+    '2-74': 'gtFY3mfq2uk',
+    '2-75': 'fFba7s-1es0',
+    '2-76': 'cVkEKIHdOAI',
+    '2-77': 'x920SLPGVU0',
+    '2-78': 'vEqD7Vg4T4s',
+    '2-79': 'Pq1UTNcR5O0',
+    '2-80': 'XRIevu1LMLM',
+    '2-81': 'dUbM8DHpg8M',
+    '2-82': '3OwDDurJfDk',
+    '2-83': 'es3zi0jQCbg',
+    '2-84': 'oH9S8MZuC0o',
+    '2-85': 'BvpW0Oer-7E',
+    '2-86': 'fXgsyNsdzX4',
+    '2-87': 'PbCgyxBGse8',
+    '2-88': 'ijZykkJFzOI',
+    '2-89': 'VVdHKUVzq8U',
+    '2-90': '4egHjJntTWk',
+    '2-91': 'hcrEh27oojw',
+    '2-92': '9PoSvMFadvk',
+    '2-93': 'MGze7-80x-w',
+    '2-94': '2jnS2HAK6vo',
+    '2-95': '5VXstuImjCY',
+    '2-96': 'Olvn1kjNbzg',
+    '2-97': '4kR-rMnfIVc',
+    '2-98': 'HTxrfVxhSP4',
+    '2-99': 'aL4p_NAtnoY',
+    '2-100': '6q3BAL7Iqp4',
+    '3-1': 'jy4hFczEgaA',
+    '3-2': 'WHoC5butpb0',
+    '3-3': '7RftD1C6vJ0',
+    '3-4': 'nRr8Y6SPT4c',
+    '3-5': '6tK0OZJys8Y',
+    '3-6': '7mEr2weQJtQ',
+    '3-7': 'dUoRcgqWLJg',
+    '3-8': '9x7b0kXZqs4',
+    '3-9': '0-Nvrugm2sI',
+    '3-10': '9aa6yNp02T4',
+    '3-11': 'y13ZIkWPIjo',
+    '3-12': 'gNspvkX_oiw',
+    '3-13': '6xicay8_ZG0',
+    '3-14': 'DEOHvwBjKDk',
+    '3-15': 'Kwza-rgX67c',
+    '3-16': 'R0nwBPDiqsw',
+    '3-17': 'BitDZQIIqO8',
+    '3-18': 'cqzSe_npyZ8',
+    '3-19': 'iSJf6_LL0VM',
+    '3-20': 'b8PHk294mjk',
+    '3-21': 'ju9VpeI4TIw',
+    '3-22': '5jxLgJkzh20',
+    '3-23': 'G0pesMBHLQU',
+    '3-24': 'i83_eVFp3vM',
+    '3-25': 'ft-l8biP9yU',
+    '3-26': 'LRX9TgARm6k',
+    '3-27': 'BML_4tguh_A',
+    '3-28': '52FQzdJ2aZ8',
+    '3-29': 'bnkYhW9oqqo',
+    '3-30': 'ZPRH9pc_Kls',
+    '3-31': 'bAaadoRAgdw',
+    '3-32': 'IBgHy_Uz8YQ',
+    '3-33': 'Vivgoos_tDM',
+    '3-34': 'gDHHAQnHxOY',
+    '3-35': 'Da3v-7ZVSA4',
+    '3-36': 'Y5wZzhSsjsc',
+    '3-37': 'yT8LWMBzM84',
+    '3-38': 'm3q5WH2zpOc',
+    '3-39': 'esCP47DKJm0',
+    '3-40': 'vQBfwUhROrQ',
+    '3-41': 'y7fX8RQIF4o',
+    '3-42': 'PoIj2A9TeWU',
+    '3-43': 'R6qcI3EXXhI',
+    '3-44': 'yEASm4CYqtA',
+    '3-45': '4g1L8qA-o5o',
+    '3-46': 'itulPtjjUAo',
+    '3-47': 'Y35AJDM9xBU',
+    '3-48': 'xiBqxGlfEDc',
+    '3-49': 'pdTORbUjias',
+    '3-50': 'GTCT08RXIFU',
+    '3-51': 'W4jl-hDqxHk',
+    '3-52': 'cu2-ctjkxx8',
+    '3-53': 't5jHnOEAKY0',
+    '3-54': 'xQLqkQQDc34',
+    '3-55': 'FxIhE6ar4MU',
+    '3-56': 'PQ3CDA_spxI',
+    '3-57': '1r9AYZwV35Q',
+    '3-58': 'YeSQaB3cCkE',
+    '3-59': '9eNjzQBWctY',
+    '3-60': 'NAONZu9tlzo',
+    '3-61': 't-wRraGBYx8',
+    '3-62': 'V_-sDqci8R0',
+    '3-63': '_OW-k_pmO4c',
+    '3-64': '8K2IBiR3o0c',
+    '3-65': 'f3nt8Y2g5yg',
+    '3-66': '7lrfcFkogXg',
+    '3-67': 'y0vkQBuHyyc',
+    '3-68': 'a8BLLgHTX2o',
+    '3-69': '3TUHIdtrDHg',
+    '3-70': 'xfHGO3Hsjbg',
+    '3-71': 'gEferZay6d8',
+    '3-72': 'YXOAKGbMFeI',
+    '3-73': 'itdr8uFmyBo',
+    '3-74': '8MeU1XEIC_o',
+    '3-75': 'sKXnG9J9Wa0',
+    '3-76': 'nJpzFSPv9Iw',
+    '3-77': '1oW2f6cInmo',
+    '3-78': 'Jl-vXBUNyso',
+    '3-79': 'AbvWv1do1Is',
+    '3-80': 'KCqsWlGfKkQ',
+    '3-81': 'KNOIJS4e2Y0',
+    '3-82': 'EguC_9gUsTA',
+    '3-83': 'PA-BHoBLZQI',
+    '3-84': 'IMRhBJDtri0',
+    '3-85': '4N5EL7Ljag8',
+    '3-86': '9a-IYeMaIOs',
+    '3-87': 'g0goBJFocsg',
+    '3-88': 'ndQIuq1zFhs',
+    '3-89': 'LdoIOWzMj9M',
+    '3-90': 'JmUbGro9g9Y',
+    '3-91': 'KuxbiknJxoE',
+    '3-92': '7pmxgbkC3S0',
+    '3-93': 'Kr9veMSJvAc',
+    '3-94': 'xiPhd0yRcPE',
+    '3-95': 'd-u5gxj5ZVo',
+    '3-96': 'u9TMe_ZZlYU',
+    '3-97': '84PiG1HYsmI',
+    '3-98': 'XBkrbtvXLpU',
+    '3-99': 'ZMLgDoCi3u8',
+    '3-100': '9HfdkzNojIA',
   };
 
   function namedCatalog() {
@@ -211,7 +464,7 @@
     const setId = Number(params.get('set') || 0) || null;
     const videoN = Number(params.get('video') || 0) || null;
     state.setId = setId >= 1 && setId <= 11 ? setId : null;
-    state.videoN = videoN >= 1 && videoN <= 102 ? videoN : null;
+    state.videoN = videoN >= 1 && videoN <= 100 ? videoN : null;
   }
 
   function writeHash() {
@@ -327,7 +580,7 @@
       els.form.querySelector('[name=password]').required = !in_;
     }
     els.signedLine.textContent = in_ ? `Signed in as ${state.name}` : '';
-    els.lead.textContent = 'Sets below are open. Set 1 Round 2 continues after video 34 in the same set.';
+    els.lead.textContent = 'Sets below are open. Sets 1–3 are complete through video 100 in each set.';
   }
 
   async function refreshCatalog() {
@@ -364,7 +617,7 @@
     if (!els.sectionLead) return;
     if (!state.setId) {
       els.sectionLead.textContent =
-        'Choose a set. Set 1 holds Round 1 then Round 2 (videos 35 onward) in the same set.';
+        'Choose a set. Set 1 is videos 1–100. Set 2 is 101–200. Set 3 is 201–300 (each shown as 1–100 in that set).';
       return;
     }
     if (state.videoN) {
@@ -372,29 +625,18 @@
       return;
     }
     const next =
-      state.setId === 1
-        ? ' Round 1 is videos 1–34. Round 2 is 35–68.'
+      state.setId <= 3
+        ? ' Round 1 is videos 1–34. Round 2 is 35–66. Round 3 is 67–100.'
         : state.setId < 11
           ? ` Video 34 opens Set ${state.setId + 1}.`
           : ' This is the last set.';
     els.sectionLead.textContent = `Set ${state.setId} of 11.${next}`;
   }
 
-  function setArt(id) {
-    const arts = {
-      1: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#14121a"/><circle cx="80" cy="28" r="10" fill="#e2d0b4"/><path d="M62 82c2-22 10-32 18-32s16 10 18 32" fill="#d4af37"/><path d="M70 58h20" stroke="#7a3b32" stroke-width="3" stroke-linecap="round"/></svg>`,
-      2: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#14121a"/><circle cx="64" cy="30" r="9" fill="#e2d0b4"/><circle cx="96" cy="30" r="9" fill="#e8dcc8"/><path d="M50 82c2-20 8-28 14-28s12 8 14 28" fill="#d4af37"/><path d="M82 82c2-20 8-28 14-28s12 8 14 28" fill="#c9a227"/><path d="M78 56h6" stroke="#f0ead6" stroke-width="2"/></svg>`,
-      3: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#1a1620"/><path d="M28 78V46h104v32" fill="#e2d0b4"/><path d="M22 48l58-28 58 28" fill="#7a3b32"/><rect x="72" y="56" width="16" height="22" fill="#d4af37"/><rect x="40" y="52" width="14" height="12" fill="#8ec4e6"/><rect x="106" y="52" width="14" height="12" fill="#8ec4e6"/></svg>`,
-      4: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#16141c"/><rect x="0" y="70" width="160" height="8" fill="#3a342c"/><g fill="#e2d0b4"><rect x="12" y="48" width="28" height="22"/><rect x="50" y="42" width="30" height="28"/><rect x="90" y="46" width="26" height="24"/><rect x="124" y="50" width="24" height="20"/></g><g fill="#7a3b32"><path d="M10 48l16-10 16 10"/><path d="M48 42l17-12 17 12"/><path d="M88 46l15-10 15 10"/><path d="M122 50l14-8 14 8"/></g></svg>`,
-      5: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#121018"/><g fill="#c4b496"><rect x="10" y="38" width="18" height="44"/><rect x="32" y="22" width="22" height="60"/><rect x="58" y="30" width="16" height="52"/><rect x="78" y="14" width="26" height="68"/><rect x="108" y="28" width="20" height="54"/><rect x="132" y="40" width="18" height="42"/></g><g fill="#d4af37" opacity=".7"><rect x="36" y="28" width="4" height="6"/><rect x="86" y="22" width="4" height="6"/><rect x="114" y="34" width="4" height="6"/></g></svg>`,
-      6: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#141820"/><path d="M24 22h112v50H24z" fill="none" stroke="#8a7a62" stroke-width="2"/><path d="M48 30l28-4 36 10-8 28-40 8z" fill="rgba(212,175,55,.2)" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 3"/></svg>`,
-      7: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#141820"/><path d="M30 24l48-8 54 18-10 40-52 10-40-16z" fill="rgba(226,208,180,.18)" stroke="#e2d0b4" stroke-width="2"/><path d="M70 28l22 6-4 22-24 6z" fill="rgba(212,175,55,.35)" stroke="#d4af37" stroke-width="1.5"/></svg>`,
-      8: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#12161c"/><path d="M22 48c8-18 28-28 52-26 18 2 28 10 40 8 16-2 28 8 26 20-2 14-16 22-38 24-22 2-42-6-56-4-14 2-28-4-24-22z" fill="#3d5c48" stroke="#d4af37" stroke-width="1.5"/></svg>`,
-      9: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#10141c"/><ellipse cx="80" cy="45" rx="40" ry="38" fill="#1c2838" stroke="#d4af37" stroke-width="2"/><g stroke="#c9a227" stroke-width="1.4" opacity=".85"><path d="M80 7v76"/><path d="M58 10c-10 10-16 22-16 35s6 25 16 35"/><path d="M102 10c10 10 16 22 16 35s-6 25-16 35"/><path d="M42 45h76"/></g></svg>`,
-      10: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#10141c"/><path d="M18 58c10-22 32-36 62-34 22 2 40 14 58 8 8 10 10 24 4 36-18 8-40 6-62 10-24 4-46-2-62-20z" fill="#35543f" stroke="#d4af37" stroke-width="1.5"/><path d="M40 48c12-8 28-6 40-14" fill="none" stroke="#e2d0b4" stroke-width="1" opacity=".5"/></svg>`,
-      11: `<svg viewBox="0 0 160 90" aria-hidden="true"><rect width="160" height="90" fill="#0c1018"/><circle cx="80" cy="45" r="34" fill="#1a3048" stroke="#d4af37" stroke-width="2"/><ellipse cx="80" cy="45" rx="14" ry="34" fill="none" stroke="#c9a227" stroke-width="1"/><path d="M46 45h68" stroke="#c9a227" stroke-width="1"/><path d="M52 28c10 4 28 6 56-2" fill="none" stroke="#6d8f6a" stroke-width="4"/><path d="M50 58c16-6 30 4 58 0" fill="none" stroke="#6d8f6a" stroke-width="5"/></svg>`,
-    };
-    return arts[id] || '';
+  function setArt(id, name) {
+    const n = String(id).padStart(2, '0');
+    const alt = escapeHtml(name || `Set ${id}`);
+    return `<img src="project-videos/set-${n}.jpg" alt="${alt}">`;
   }
 
   function renderSets() {
@@ -405,11 +647,11 @@
       .map(
         (set) => `
       <button type="button" class="pv-thumb${locked ? ' is-locked' : ''}" data-set="${set.id}">
-        <div class="pv-thumb-art">${setArt(set.id)}</div>
+        <div class="pv-thumb-art pv-thumb-art--set">${setArt(set.id, set.name)}</div>
         <div class="pv-thumb-body">
           <span class="pv-thumb-kicker">Set ${set.id} of 11</span>
-          <span class="pv-thumb-title">${escapeHtml(set.name)}</span>
-          <span class="pv-thumb-note">${set.id === 1 ? 'Round 1 then Round 2 in this set' : set.id < 11 ? '33 videos · 34 opens next set' : '33 videos · last set'}</span>
+          <span class="pv-thumb-title">${escapeHtml(set.id === 1 ? set.name : `Set ${set.id} · ${set.name}`)}</span>
+          <span class="pv-thumb-note">${set.id <= 3 ? '100 videos · three rounds' : set.id < 11 ? '33 videos · 34 opens next set' : '33 videos · last set'}</span>
         </div>
       </button>`,
       )
