@@ -1775,7 +1775,11 @@
         doorClass = ' graph-tooltip-dot-door-black';
         dotColor = '#2E7D32';
       }
-      const title = String(item.name || '').replace(/^[\u{1F7E9}\u{1F6AA}\s]+/u, '');
+      const title = String(item.name || '')
+        .replace(/^[🟨🟩⬛🟥🟧🟦⬜🟪🟫◻️🔵⚫⚪⭕🔴⛔❔\s]+/u, '')
+        .replace(/^and\s+/i, '')
+        .replace(/^[🟨🟩⬛🟥🟧🟦⬜🟪🟫◻️🔵⚫⚪⭕🔴⛔❔\s]+/u, '')
+        .trim();
       return `<div class="graph-tooltip-head"><span class="graph-tooltip-dot${doorClass}" style="background:${dotColor}"></span><div class="graph-tooltip-title">${escapeHtml(title || item.name)}</div></div><div class="graph-tooltip-meta">${escapeHtml(meta)}</div>`;
     }
 

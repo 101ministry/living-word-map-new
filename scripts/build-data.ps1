@@ -154,9 +154,9 @@ function Resolve-PrincipalityFromFruit([string]$fruit) {
 function Expand-FruitPhrases([string[]]$items) {
     $expanded = [System.Collections.Generic.List[string]]::new()
     foreach ($item in $items) {
-        $f = $item.Trim().TrimEnd('.')
+        $f = Strip-FruitDecorators $item
         if (-not $f) { continue }
-        if ($f -match '(?i)^Sexual Corruption of Human and Hybrid DNA$') {
+        if ($f -match '(?i)Sexual Corruption of Human and Hybrid DNA') {
             [void]$expanded.Add('Sexual Corruption')
             [void]$expanded.Add('Human and Hybrid DNA')
         } else {
@@ -212,7 +212,8 @@ function Normalize-FruitBlob([string]$text) {
     $t = $t -replace '~+', ''
     $t = $t -replace '(?i),\s*which I will forgive\.?$', ''
     $t = $t -replace '(?i),?\s*or an Occultic Trickery\.?$', ''
-    $t = $t -replace '(?i)^Death and Social Destruction\b', 'Death and Self-Destruction'
+    $t = $t -replace '(?i)^Death and Social Destruction\b', 'Death and Self Destruction'
+    $t = $t -replace '(?i)^Death and Self-Destruction\b', 'Death and Self Destruction'
     $t = $t -replace '(?i)\bAnti-Holy Spirit\b', 'Anti-Christ Spirit'
     $t = $t -replace '(?i)^Physical Division and Relational Destruction\b', 'Division and Relational Destruction'
     $t = $t -replace '(?i)\s+with (?:the parent Principality of|(?:the )?Using and Abusing Others|Treachery|Destructive Acts).*$', ''
@@ -248,9 +249,12 @@ function Get-KnownFruitBlobMap() {
             'Division and Relational Destruction'
             'Mental Oppression and Confusion'
         )
-        'neglect from lack of stewardship, spiritual oppression and confusion' = @(
-            'Neglect and Lack of Stewardship'
-            'Mental Oppression and Confusion'
+        'sexual corruption of human and hybrid dna, counterfeit spirituality, confusing preferences with stewardship, anger and violence' = @(
+            'Sexual Corruption'
+            'Human and Hybrid DNA'
+            'Counterfeit Spirituality'
+            'Confusing Preferences with Stewardship'
+            'Anger and Violence'
         )
     }
 }
@@ -268,14 +272,24 @@ function Resolve-KnownFruitBlob([string]$text) {
     return @()
 }
 
+function Strip-FruitDecorators([string]$text) {
+    if (-not $text) { return $text }
+    $t = ($text -replace '\s+', ' ').Trim().TrimEnd('.')
+    $t = [regex]::Replace($t, '[^\p{L}\p{N}\p{P}\p{Zs}]+', '')
+    $t = ($t -replace '\s+', ' ').Trim()
+    $t = $t -replace '(?i)^and\s+', ''
+    return $t.Trim()
+}
+
 function Normalize-FruitLabel([string]$label) {
     if (-not $label) { return $null }
-    $t = ($label -replace '\s+', ' ').Trim().TrimEnd('.')
+    $t = Strip-FruitDecorators $label
     if ($t -match "(?i)^destructive attitudes against god'?s images?$") { return $null }
     if (Test-IsPrayerBoilerplateFruit $t) { return $null }
 
     $exact = @{
-        'Death and Social Destruction' = 'Death and Self-Destruction'
+        'Death and Social Destruction' = 'Death and Self Destruction'
+        'Death and Self-Destruction' = 'Death and Self Destruction'
         'Anti-Holy Spirit' = 'Anti-Christ Spirit / Separation From God'
         'Anti-Christ Spirit' = 'Anti-Christ Spirit / Separation From God'
         'Separation from God' = 'Anti-Christ Spirit / Separation From God'
@@ -313,6 +327,7 @@ function Parse-FruitList([string]$text) {
     if (-not $text) { return @() }
     $t = Normalize-FruitBlob $text
     $t = $t -replace '\s*\(think [^)]+\)', ''
+    $t = $t -replace ',\s+and\s+', ', '
     $t = $t -replace '\s+with the parent Principality of.+$', ''
     $t = $t -replace '\s+with (?:the )?Using and Abusing.+$', ''
     $t = $t -replace '(?i)\s+with Treachery.+$', ''

@@ -309,111 +309,111 @@ SET 4, ROUND 1 - 3 LINKS
 
 SET 5, ROUND 1 - 3 LINKS
 
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
+401 https://youtu.be/LqdF9CBlq2I
+402 https://youtu.be/etWPDqcEt3M
+403 https://youtu.be/Ksibfu5IdH0
+404 https://youtu.be/Y_veD6eMIi4
+405 https://youtu.be/IwNhQG6nzyw
+406 https://youtu.be/Lj0S562TTwE
+407 https://youtu.be/LxcfUHccPd0
+408 https://youtu.be/fLnpWis1DLc
+409 https://youtu.be/PYx7ANOwNrU
+410 https://youtu.be/VUEleMj2Puw
+411 https://youtu.be/8VgrUfMvsyU
+412 https://youtu.be/yukQv2QvU4w
+413 https://youtu.be/UbrLJK_WCsA
+414 https://youtu.be/PTtbe3XkSwY
+415 https://youtu.be/8w1H_koJuGc
+416 https://youtu.be/JUTMtF-K-9I
+417 https://youtu.be/Smqe0IXRPh0
+418 https://youtu.be/A-MDj9GY7IA
+419 https://youtu.be/9UnVP4JN_5g
+420 https://youtu.be/rtqeKb1LOdo
+421 https://youtu.be/01Ifuzxan4E
+422 https://youtu.be/h-P9IaNaZ9g
+423 https://youtu.be/fthNq5fQdpc
+424 https://youtu.be/Ob2c8Yj884I
+425 https://youtu.be/bbkf77Aoyto
+426 https://youtu.be/ej11l_-8rhI
+427 https://youtu.be/d_XUcRpNr28
+428 https://youtu.be/xg2pWuvY4wI
+429 https://youtu.be/zR-aFvGYa9s
+430 https://youtu.be/hfxAcvWigc8
+431 https://youtu.be/CYTWw64vO_Y
+432 https://youtu.be/OCk_rp3MPrU
+433 https://youtu.be/6Uxc09jPwDE
+434 https://youtu.be/QKlpdM8r91g
+435 https://youtu.be/ouU7hnjgpQU
+436 https://youtu.be/jG4hij5yHgE
+437 https://youtu.be/VF3bmdiF1Ew
+438 https://youtu.be/z_x1yGxRKWk
+439 https://youtu.be/tfb9O6yudWA
+440 https://youtu.be/AAYVFcPVL5I
+441 https://youtu.be/fOBBVb7y-CY
+442 https://youtu.be/ayNlXf55LLs
+443 https://youtu.be/4ZRDgOB-Pyc
+444 https://youtu.be/Q0eXqNMF9KY
+445 https://youtu.be/qjaMX6a6mjc
+446 https://youtu.be/AavgZvRtEGo
+447 https://youtu.be/8OmCtpC8cX4
+448 https://youtu.be/LX9Uf9uc0MY
+449 https://youtu.be/X_qeuFSWY-Y
+450 https://youtu.be/HZRwN-dikR0
+451 https://youtu.be/veScjJSkjuw
+452 https://youtu.be/2DpLxTFmy9c
+453 https://youtu.be/qwqc7uwY_GE
+454 https://youtu.be/Vb8WCnivBPo
+455 https://youtu.be/Fc_deWA0bL8
+456 https://youtu.be/Hjxw_hLrDzQ
+457 https://youtu.be/4NhMkWmFdb4
+458 https://youtu.be/JW_GMLfW958
+459 https://youtu.be/AzZzbBvHPkQ
+460 https://youtu.be/zgPEm9TVqY0
+461 https://youtu.be/VCP6Zc91RAQ
+462 https://youtu.be/p4XxCB-nIUU
+463 https://youtu.be/dVneMurEj7o
+464 https://youtu.be/l-kWMVSLA9c
+465 https://youtu.be/LiqUfFL4zFk
+466 https://youtu.be/S0Ipj9zZOss
+467 https://youtu.be/wPx8yymU3Zc
+468 https://youtu.be/qoQdYWl6IYI
+469 https://youtu.be/7dGHoMnxsnk
+470 https://youtu.be/MfOnssJDFT8
+471 https://youtu.be/4VkbkRVL94Y
+472 https://youtu.be/6m2abutjbDQ
+473 https://youtu.be/ju7XSXOitSI
+474 https://youtu.be/wBVxMDg-a2o
+475 https://youtu.be/QoPOlwtSEU4
+476 https://youtu.be/lNWVVUpLnLA
+477 https://youtu.be/S77Kq_TQ2i4
+478 https://youtu.be/zkqBEbfngkM
+479 https://youtu.be/DEjRmChm_dE
+480 https://youtu.be/k21ePo107Ug
+481 https://youtu.be/BdLiTSOZA9Q
+482 https://youtu.be/1kTwlxlJJfc
+483 https://youtu.be/B6Uqb6suINo
+484 https://youtu.be/gxd-0-wTrvE
+485 https://youtu.be/aqf1SN-QTek
+486 https://youtu.be/blfftE8dHp8
+487 https://youtu.be/NhdIw0JVEwI
+488 https://youtu.be/DQ-SC8XoDuU
+489 https://youtu.be/5_UNaAHq4ro
+490 https://youtu.be/jHbMJEGGm6M
+491 https://youtu.be/Z7YBuN0A3CM
+492 https://youtu.be/Abl4yZiPchY
+493 https://youtu.be/WxWjLFXhiv4
+494 https://youtu.be/RO37e6sDlg0
+495 https://youtu.be/MeHzsyebuJ4
+496 https://youtu.be/HQQKnmnKcbY
+497 https://youtu.be/6NF9rhwoHmY
+498 https://youtu.be/L4wbezz6af8
+499 https://youtu.be/-aloqbMv01c
+500 https://youtu.be/JKdPitrBEys
 
 SET 6, ROUND 1 - 3 LINKS
 
-501
-502
+501 https://youtu.be/luV7hOEPRPs
+502 https://youtu.be/3BRwZZMFJt0
 503
 504
 505
