@@ -7,6 +7,14 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
 $items = @(
   @{
+    src = 'Are We Protecting the Gods of Bible.pdf'
+    file = 'are-we-protecting-the-gods-of-the-bible.pdf'
+    title = 'Are We Protecting the Gods of Bible?'
+    summary = 'Named gods of Scripture, the cult acts still sheltered as culture, and the fraternal temple blessing that hides shrine sex.'
+    made = '2026-10-05'
+    notBefore = '2026-10-05T03:00:00-04:00'
+  },
+  @{
     src = '10 Principles.pdf'
     file = '10-principles.pdf'
     title = '10 Principles'
