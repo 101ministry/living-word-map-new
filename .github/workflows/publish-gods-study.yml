@@ -1,9 +1,6 @@
 name: Publish Are We Protecting the Gods of Bible PDF
 
 on:
-  schedule:
-    # Monday 5 Oct 2026, 3:00 AM Eastern (EDT = UTC-4)
-    - cron: "0 7 5 10 *"
   workflow_dispatch:
 
 jobs:

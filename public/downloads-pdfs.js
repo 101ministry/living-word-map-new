@@ -1,4 +1,4 @@
-﻿window.DOWNLOADS_PDFS = {
+window.DOWNLOADS_PDFS = {
   "title": "Teaching PDFs",
   "description": "Studies and prayers from the ministry library. Tap to download.",
   "items": [
@@ -22,6 +22,13 @@
       "href": "downloads/grumpy-2-corinthians-9.pdf",
       "download": "A Grumpy 2 Corinthians 9.pdf",
       "made": "2026-08-10"
+    },
+    {
+      "title": "Are We Protecting the Gods of Bible?",
+      "summary": "Named gods of Scripture, the cult acts still sheltered as culture, and the fraternal temple blessing that hides shrine sex.",
+      "href": "downloads/are-we-protecting-the-gods-of-the-bible.pdf",
+      "download": "Are We Protecting the Gods of Bible.pdf",
+      "made": "2026-10-01"
     },
     {
       "title": "Cancelling Dreams",

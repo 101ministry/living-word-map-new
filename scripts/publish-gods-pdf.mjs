@@ -13,7 +13,7 @@ const item = {
     "Named gods of Scripture, the cult acts still sheltered as culture, and the fraternal temple blessing that hides shrine sex.",
   href: "downloads/are-we-protecting-the-gods-of-the-bible.pdf",
   download: "Are We Protecting the Gods of Bible.pdf",
-  made: "2026-10-05",
+  made: "2026-10-01",
 };
 
 if (!fs.existsSync(src)) {
