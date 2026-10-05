@@ -1,0 +1,38 @@
+---
+description: A ping with topic range ##-## plus a Day means stitch those prayers, build the 20s-series day MP4, and YouTube-upload unlisted.
+alwaysApply: true
+---
+
+# 20s series day ping → unlisted YouTube
+
+When the user pings a **topic range** (`##-##` / `001-020`) and a **Day** (`Day 1`, `Day 3`), that is the whole job. Do not wait for extra confirmation.
+
+## Do this
+
+Run **one** terminal command only (the user can stand that box; not file diffs):
+
+`powershell -ExecutionPolicy Bypass -File "...\prayer\stitched\_work\run-20s-day.ps1" -Day N`
+
+Optional `-From` `-To` if the range is not the default 20 for that Day.
+
+Do **not** patch stitch scripts or write description files in the editor. The wrapper stitches, builds, describes, copies, and uploads **unlisted**.
+
+YouTube description (default for every day video): header, spoken-note paragraph, then one line per topic with a blank line between:
+
+`001. Anger / root of Bitterness and Unforgiveness / fruit of Anger and Violence / Principality of Jealousy`
+
+Telegram topic wording + taxonomy from `TOPICS-666.txt`. ASCII hyphens in the header, not middle dots. Built by `yt-day-description.ps1`.
+
+Reply with the YouTube URL and local path.
+
+## Range → Day
+
+- If they name the Day, **use that Day**. Do not invent a different one.
+- If they only send `021-040` (a standard 20-topic block), Day = `ceil(end / 20)` (021–040 → Day 2).
+- Missing topic MP3s: stop and say which numbers are missing. Do not skip or synthesize voice.
+
+## Do not mix with R&R
+
+This is **not** Riverside MCP / Shorts / public stagger. Those stay on the notepad path. This path is the long 20s-series day file, local MP4, unlisted.
+
+Example pings: `21-40 Day 2` · `041-060` · `3. export 61-80 for Day 4`

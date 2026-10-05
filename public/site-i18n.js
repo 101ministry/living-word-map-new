@@ -11,13 +11,19 @@
   function applySubtitle(lang) {
     const sub = document.getElementById('site-subtitle');
     if (!sub) return;
-    const tpl = ui(lang, 'siteSubtitle');
-    if (!tpl) return;
+    const tplRaw = ui(lang, 'siteSubtitle');
+    const dot = '\u00b7';
+    const tpl = String(tplRaw || `{p} Principalities ${dot} {r} Roots ${dot} {f} Fruits ${dot} {t} Topics`)
+      .replace(/\u00c2\u00b7/g, dot)
+      .replace(/Â·/g, dot);
     const p = document.getElementById('principality-count')?.textContent?.trim() || '—';
     const r = document.getElementById('root-count')?.textContent?.trim() || '—';
     const f = document.getElementById('fruit-count')?.textContent?.trim() || '—';
     const t = document.getElementById('topic-count')?.textContent?.trim() || '—';
-    sub.textContent = tpl.replace('{p}', p).replace('{r}', r).replace('{f}', f).replace('{t}', t);
+    const line = tpl.replace('{p}', p).replace('{r}', r).replace('{f}', f).replace('{t}', t);
+    const textEl = document.getElementById('site-subtitle-text');
+    if (textEl) textEl.textContent = line;
+    else sub.textContent = line;
   }
 
   function apply(lang) {

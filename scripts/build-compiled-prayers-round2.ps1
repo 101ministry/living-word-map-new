@@ -191,15 +191,15 @@ function Build-Round2Prayer([int]$num, [hashtable]$meta) {
         ''
         'For the accusation of this record, I lay down the 2nd, 3rd, 4th, and 5th generations.'
         ''
-        "I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what I copied in my own life AND FORGIVE every person who taught me how to serve this master through what they thought, spoke about, or did with actions. If they have repented and I don't know about it, I STILL go through my memories and forgive every way I remembered people the way Jesus doesn't. I forgive them for being irresponsible about the way they have been influenced by the kingdom of darkness against me, themselves, and others besides me."
+        "I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what my bloodline copied into our lives AND FORGIVE everyone who taught us how to serve this master through what they thought, spoke about, or did with actions. If people from other bloodlines have repented and we don't know about it, I STILL, on behalf of my bloodline go through our memories and forgive every way we remembered people the way Jesus doesn't. Representing my bloodline, I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12."
         ''
-        'I ask You Father to forgive me since I have forgiven others. I ask You to judge between my bloodline and other bloodlines so that the judgment is pure and holy. '
+        'I ask You Father to forgive my bloodline since I have forgiven other bloodlines. I ask You to judge between me and them so that the judgment is pure and holy.'
         ''
         "I no longer want to serve $topic. In fact, I am asking for the forgiveness of God on this and for the Blood of Jesus to cover the record and speak instead."
         ''
         "I also ask for a spiritual decree of divorce from this record. I don't have room in my life for you anymore. We don't have room for unconfessed records in this bloodline."
         ''
-        'Father, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put me into to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.'
+        'Father, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the discipline you have put into me to lay my life down for others, and for the people You have put in my life to help me walk out a life of repentance.'
         ''
         'In the name of Jesus, Amen'
         ''

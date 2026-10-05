@@ -149,7 +149,7 @@ CLAUSES = [
             ("Isa 14:21", "Prepare slaughter for children for the iniquity of their fathers."),
             ("Jer 32:18", "Recompensest the iniquity of the fathers into the bosom of their children."),
             ("Lam 5:7", "Our fathers have sinned… we have borne their iniquities."),
-            ("Ezek 18:1-20", "Sour grapes proverb corrected — the living soul must repent."),
+            ("Ezek 18:1-32", "Sour grapes proverb; the soul that sinneth; turn and live."),
             ("Luke 3:23-38", "Genealogy of Jesus back to Adam."),
             ("Rom 5:12-21", "By one man sin entered; by One Man grace."),
             ("1 Cor 15:21-22, 45-49", "In Adam all die; in Christ all made alive."),

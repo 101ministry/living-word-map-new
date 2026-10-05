@@ -160,6 +160,8 @@ function readMetaPrivacy(metaPath) {
 function resolvePrivacy({ metaPath, cliPrivacy, fallback = "private" }) {
   return readMetaPrivacy(metaPath) || (cliPrivacy || fallback).toLowerCase();
 }
+
+function hashtagsToTags(hashtagLine) {
   return (hashtagLine || "")
     .split(/\s+/)
     .map((t) => t.replace(/^#/, "").trim())

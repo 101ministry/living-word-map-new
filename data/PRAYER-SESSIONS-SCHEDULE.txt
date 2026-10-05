@@ -1,0 +1,21 @@
+# PRAYER SESSIONS SCHEDULE — Repentance Project 2026
+# Spoken prayer audio (not the YouTube topic-explanation videos).
+# Raw Restream .m4a files live in audiobits/prayer-sessions/ (gitignored).
+#
+# Default pace: 20 topics per night.
+# Sept 9–12: 30 topics per night to make up missed days.
+# Restream titled Sept 9 as "Day 4"; canonical day number is 5.
+
+# date       | day | topics | local file
+# 2026-09-01 |   1 |    20 | 2026-09-01-prayer-sessions-day-1.m4a
+# 2026-09-02 |   2 |    20 | 2026-09-02-prayer-sessions-day-2.m4a
+# 2026-09-03 |   3 |    20 | 2026-09-03-prayer-sessions-day-3.m4a
+# 2026-09-04 |   4 |    20 | 2026-09-04-prayer-sessions-day-4.m4a
+# 2026-09-09 |   5 |    30 | 2026-09-09-prayer-sessions-day-5.m4a
+# 2026-09-10 |   6 |    30 | 2026-09-10-prayer-sessions-day-6.m4a
+# 2026-09-11 |   7 |    30 | 2026-09-11-prayer-sessions-day-7.m4a
+# 2026-09-12 |   8 |    30 | (not on Restream yet — pull after tonight)
+
+nextDay=8
+nextDate=2026-09-12
+nextTopicCount=30

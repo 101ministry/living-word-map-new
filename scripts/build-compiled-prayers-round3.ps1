@@ -1,4 +1,4 @@
-﻿# Builds generational (round 3) compiled prayers from topics 666.txt metadata.
+# Builds generational (round 3) compiled prayers from topics 666.txt metadata.
 param(
     [string]$TopicsFile = "$PSScriptRoot\..\data\TOPICS-666.txt",
     [string]$ChartFile = "$PSScriptRoot\..\data\ROOT-SPIRITS-CHART-NUMBERED.txt",
@@ -199,9 +199,9 @@ function Build-Round3Prayer([int]$num, [hashtable]$meta) {
         ''
         "I recognize that $($meta.detail) "
         ''
-        'For the accusation of this record, I lay down the 6th, 7th, 8th, 9th, 10, 11th, 12th, 13th, 14th, 15th, 16th, 17th 18th, 19th and 20th generations.'
+        'For the accusation of this record, I lay down the 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 14th, 15th, 16th, 17th 18th, 19th and 20th generations.'
         ''
-        "I refuse to blame anyone anymore for teaching me a bad habit. I take accountability for what my bloodline copied into our lives AND FORGIVE everyone who taught us how to serve this master through what they thought, spoke about, or did with actions. If people from other bloodlines have repented and we don't know about it, I STILL, on behalf of my bloodline go through our memories and forgive every way we remembered people the way Jesus doesn't. Representing my bloodline, I forgive them for not capturing every vain imagination and bringing it to Jesus as given in 2 Corinthians 10:3-5, and not warring against people as given in Ephesians 6:12."
+        "I refuse to blame anyone in the 6th through 20th generations for teaching US a bad habit. I take accountability for what my bloodline copied into our lives AND FORGIVE everyone who taught us how to serve this master through what they thought, spoke about, or did with actions. If people from other bloodlines, and ours from the 6th through 20th generations have repented and we don't know about it, I STILL, on behalf of my bloodline go through our memories and forgive every way we remembered people the way Jesus doesn't. Representing my bloodline, I forgive them for being irresponsible, for being influenced by the kingdom of darkness, and for believing it was people fighting against them instead of wrestling against the principalities as given in Ephesians 6:12 and 2 Corinthians 10:5."
         ''
         'I ask You Father to forgive my bloodline since I have forgiven other bloodlines. I ask You to judge between me and them so that the judgment is pure and holy.'
         ''
@@ -209,7 +209,7 @@ function Build-Round3Prayer([int]$num, [hashtable]$meta) {
         ''
         "I also ask for a spiritual decree of divorce from this record. We don't have room in my bloodline for unconfessed records. I cast off of my head the crown of iniquity that had been attached to my head. You are banned from my life, my mind, my heart, and my body."
         ''
-        'Father, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance, because of walking in discipleship.'
+        'Father, I ask that you give me the courage and strength to be responsible for every other temptation and accusation that the enemy has against me, so that I too can come to the point where he no longer has any more open accusations against me. I thank you for the people You have put in my life to help me walk out a life of repentance, because of walking in discipleship and for walking out spiritual authority on the earth.'
         ''
         'In the name of Jesus, Amen'
         ''

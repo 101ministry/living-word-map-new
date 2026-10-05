@@ -16,7 +16,9 @@ param(
     [string]$Meta,
     [ValidateSet("private", "unlisted", "public")]
     [string]$Privacy = "private",
-    [switch]$NoShorts
+    [switch]$NoShorts,
+    [string]$ClientSecret,
+    [string]$Token
 )
 
 $ErrorActionPreference = "Stop"
@@ -46,6 +48,8 @@ if ($DescriptionFile) { $argv += @("--description-file", $DescriptionFile) }
 if ($Meta) { $argv += @("--meta", $Meta) }
 if ($Privacy) { $argv += @("--privacy", $Privacy) }
 if ($NoShorts) { $argv += "--no-shorts" }
+if ($ClientSecret) { $argv += @("--client-secret", $ClientSecret) }
+if ($Token) { $argv += @("--token", $Token) }
 
 & $node @argv
 exit $LASTEXITCODE

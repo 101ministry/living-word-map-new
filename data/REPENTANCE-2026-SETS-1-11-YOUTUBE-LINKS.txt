@@ -414,181 +414,181 @@ SET 6, ROUND 1 - 3 LINKS
 
 501 https://youtu.be/luV7hOEPRPs
 502 https://youtu.be/3BRwZZMFJt0
-503
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
+503 https://youtu.be/U4PpGG0A9t8
+504 https://youtu.be/_N3iJGaQhes
+505 https://youtu.be/JxzMwfvsppw
+506 https://youtu.be/d5N9hirkgpI
+507 https://youtu.be/wrCysGHZEOc
+508 https://youtu.be/XVrul7dySkA
+509 https://youtu.be/j7zXokhCCZQ
+510 https://youtu.be/dsjSvUSeQmM
+511 https://youtu.be/9czFmcwkn5Y
+512 https://youtu.be/HYRZqhMZBSA
+513 https://youtu.be/YknXCTpfqSo
+514 https://youtu.be/xxvoeoDmYHg
+515 https://youtu.be/u7LQ2NrhYME
+516 https://youtu.be/Ab2ddITsOkM
+517 https://youtu.be/zFA6MjL7sIA
+518 https://youtu.be/O6GO0zy88Vg
+519 https://youtu.be/w-ndiCq9oQc
+520 https://youtu.be/nRzv1Igzq1A
+521 https://youtu.be/uRZ_SZpdIU8
+522 https://youtu.be/768_7zADwz4
+523 https://youtu.be/AcnxGB_ZZxo
+524 https://youtu.be/q8ZjhrDRXwQ
+525 https://youtu.be/3dBjYcb6J-w
+526 https://youtu.be/K3X-dv-G_1s
+527 https://youtu.be/Il-NBJrF5OA
+528 https://youtu.be/MgfwAm6lDLY
+529 https://youtu.be/27qv6gwpt_k
+530 https://youtu.be/AKLNLCnrwh0
+531 https://youtu.be/b5q0GDHJoak
+532 https://youtu.be/nxJCE8HIb-I
+533 https://youtu.be/SWGi_nj4FOM
+534 https://youtu.be/SHH9nyzb2ss
+535 https://youtu.be/43XJ15oSZoM
+536 https://youtu.be/TNLcLr40Lmg
+537 https://youtu.be/jYbSfURWsDE
+538 https://youtu.be/8O9wKgwBMYA
+539 https://youtu.be/c74mK8XmT0M
+540 https://youtu.be/-eFbNJdRcEQ
+541 https://youtu.be/EdyGl0XI214
+542 https://youtu.be/UpPLVHSSSxc
+543 https://youtu.be/IOuI4MnSiyo
+544 https://youtu.be/LoR_XO_BFqs
+545 https://youtu.be/BcSQmSEX64w
+546 https://youtu.be/gVivnJjlX_4
+547 https://youtu.be/XmeMNEtW5Nc
+548 https://youtu.be/j63TKcLpjow
+549 https://youtu.be/qAdQLy7YeGY
+550 https://youtu.be/uBuddGVj950
+551 https://youtu.be/5Dec3FrDSkg
+552 https://youtu.be/gAOBY_rbIgo
+553 https://youtu.be/J4RyhJ2OqVw
+554 https://youtu.be/qhSy378rLls
+555 https://youtu.be/fwxwwNowjG0
+556 https://youtu.be/kMv-XcPXc8A
+557 https://youtu.be/HE0z9af7UAw
+558 https://youtu.be/ABdZvLEvShM
+559 https://youtu.be/UD_Uf66JR8A
+560 https://youtu.be/bBfFJK15ZSo
+561 https://youtu.be/TXLNSwLnask
+562 https://youtu.be/wtT2gkBMkyw
+563 https://youtu.be/NGTdDwFEJlo
+564 https://youtu.be/xxy9yxIg-CQ
+565 https://youtu.be/fyGBDESU2VQ
+566 https://youtu.be/gZat4Tw979Y
+567 https://youtu.be/KRxY6kNerNc
+568 https://youtu.be/h3ubtjR1vZk
+569 https://youtu.be/qLzxbju9AQ4
+570 https://youtu.be/TCx8Vtul2n4
+571 https://youtu.be/U7F_T5SMD1g
+572 https://youtu.be/y7drUr0RLX0
+573 https://youtu.be/q1SB3avmoRg
+574 https://youtu.be/mS1KWFNE_cY
+575 https://youtu.be/4eqoLEOVbGk
+576 https://youtu.be/ReIOx0DZ4Pw
+577 https://youtu.be/6sjKQ7PUuTM
+578 https://youtu.be/LHTUsxmlxiI
+579 https://youtu.be/WgCfyoBCAMQ
+580 https://youtu.be/MQvZMUMD_R4
+581 https://youtu.be/HEdWnSurI7o
+582 https://youtu.be/R0_gIgB7H_U
+583 https://youtu.be/T5EAKr5-O_c
+584 https://youtu.be/-CMhYbayS5g
+585 https://youtu.be/QEyqRHQUops
+586 https://youtu.be/4Z57r6Z8Hd4
+587 https://youtu.be/BStc4BB_oK8
+588 https://youtu.be/tG0195ztCPM
+589 https://youtu.be/7rbc_rZLoSo
+590 https://youtu.be/kaYD0GKSJqs
+591 https://youtu.be/BEk2JaZCYrM
+592 https://youtu.be/JDaRzmWvdhY
+593 https://youtu.be/BtVM13ZMZxM
+594 https://youtu.be/2m8iJeF13R8
+595 https://youtu.be/chHucCBbeX4
+596 https://youtu.be/fP2T0GsfFc0
+597 https://youtu.be/hDXp3VIYjTA
+598 https://youtu.be/L1KsHeFqB2c
+599 https://youtu.be/muyosFFayXM
+600 https://youtu.be/zHo1Ckqcw64
 
 SET 7, ROUND 1 - 3 LINKS
 
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641
-642
-643
-644
-645
-646
-647
-648
-649
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664
-665
-666
-667
-668
-669
-670
-671
-672
-673
-674
+601 https://youtu.be/zM6iJeQutJM
+602 https://youtu.be/9buu4sg1Qb8
+603 https://youtu.be/CId9NeLiyAw
+604 https://youtu.be/vlaQ3aND5uw
+605 https://youtu.be/UpStXAIq2fQ
+606 https://youtu.be/Mq-VxqSNvP0
+607 https://youtu.be/Sds0mXeiYJg
+608 https://youtu.be/APPFfUyuiVk
+609 https://youtu.be/aSLEL3Q4btk
+610 https://youtu.be/B-RsP019zdg
+611 https://youtu.be/4uamuA6xuQQ
+612 https://youtu.be/MG4VSfRl6w8
+613 https://youtu.be/Ka_y0fXTnvU
+614 https://youtu.be/NaR2w8jB8Qc
+615 https://youtu.be/pXlBwzCfMgo
+616 https://youtu.be/otSpW2AykPI
+617 https://youtu.be/PZraT0AOYS0
+618 https://youtu.be/dkAFfWr9kc8
+619 https://youtu.be/XVRR8BgmxiI
+620 https://youtu.be/_ZxSZzV-yp0
+621 https://youtu.be/rgYmt94waTM
+622 https://youtu.be/C2GqYUsTqi8
+623 https://youtu.be/Vvy-7cNl4Nc
+624 https://youtu.be/-YO4WeA8vmg
+625 https://youtu.be/VIogmwAv4hg
+626 https://youtu.be/33Hk0gBofQo
+627 https://youtu.be/3JdZX1io_co
+628 https://youtu.be/lOM21w1FJmo
+629 https://youtu.be/CzTKuBz_oGw
+630 https://youtu.be/xYtqs-RqEHA
+631 https://youtu.be/z2cucQEgBEo
+632 https://youtu.be/Jtruxtkm5AY
+633 https://youtu.be/523Zlk2B3-U
+634 https://youtu.be/jsKZn8-WeW0
+635 https://youtu.be/Q9K8t9SLvS0
+636 https://youtu.be/az5YZnu40g8
+637 https://youtu.be/3SiWU_i8ulI
+638 https://youtu.be/CCqrTyNBDtA
+639 https://youtu.be/ys0y6VBgIKA
+640 https://youtu.be/6i3HesADNZY
+641 https://youtu.be/p9IVdyxo4Y4
+642 https://youtu.be/Rz5ezHtYgBI
+643 https://youtu.be/79ai3vrRGEw
+644 https://youtu.be/Qo2Y67f0ztE
+645 https://youtu.be/mcBYuL3PHRg
+646 https://youtu.be/ECFezNh9A0U
+647 https://youtu.be/XCifVHS2RQU
+648 https://youtu.be/mN6GXeSX3iE
+649 https://youtu.be/SpND7tvKlBU
+650 https://youtu.be/nItbrMNA7aw
+651 https://youtu.be/KUxAlPnRIVI
+652 https://youtu.be/gg13t1eUjdo
+653 https://youtu.be/_Dxhq6mIv44
+654 https://youtu.be/4i4IASpHOK8
+655 https://youtu.be/0PI20iyEPtA
+656 https://youtu.be/IIb0bDcs-nA
+657 https://youtu.be/X9L2tVy74fc
+658 https://youtu.be/18wWnSuJH3I
+659 https://youtu.be/0PEdbCmi1wE
+660 https://youtu.be/8PvcLf4H1v4
+661 https://youtu.be/jaIATizg740
+662 https://youtu.be/UhrlU9mwzMw
+663 https://youtu.be/YP60ZA9PKrs
+664 https://youtu.be/XhiDGQI6dyA
+665 https://youtu.be/B4mvJp-Pijk
+666 https://youtu.be/kILE1U520cM
+667 https://youtu.be/sU8w68Jq-L0
+668 https://youtu.be/2yehRQiX02M
+669 https://youtu.be/csMTz_7E8Hg
+670 https://youtu.be/YrY1jZoDk84
+671 https://youtu.be/vuZO-wNnfcc
+672 https://youtu.be/bYhEmNpqBIc
+673 https://youtu.be/JfxBEZyD03g
+674 https://youtu.be/VhM-1QcwjWQ
 675
 676
 677

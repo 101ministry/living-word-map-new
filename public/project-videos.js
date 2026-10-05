@@ -77,7 +77,7 @@
   }
 
   function slotCount(setId) {
-    return setId <= 5 ? 100 : 34;
+    return setId <= 7 ? 100 : 34;
   }
 
   function roundOf(n) {
@@ -612,6 +612,180 @@
     '5-98': 'L4wbezz6af8',
     '5-99': '-aloqbMv01c',
     '5-100': 'JKdPitrBEys',
+    '6-1': 'luV7hOEPRPs',
+    '6-2': '3BRwZZMFJt0',
+    '6-3': 'U4PpGG0A9t8',
+    '6-4': '_N3iJGaQhes',
+    '6-5': 'JxzMwfvsppw',
+    '6-6': 'd5N9hirkgpI',
+    '6-7': 'wrCysGHZEOc',
+    '6-8': 'XVrul7dySkA',
+    '6-9': 'j7zXokhCCZQ',
+    '6-10': 'dsjSvUSeQmM',
+    '6-11': '9czFmcwkn5Y',
+    '6-12': 'HYRZqhMZBSA',
+    '6-13': 'YknXCTpfqSo',
+    '6-14': 'xxvoeoDmYHg',
+    '6-15': 'u7LQ2NrhYME',
+    '6-16': 'Ab2ddITsOkM',
+    '6-17': 'zFA6MjL7sIA',
+    '6-18': 'O6GO0zy88Vg',
+    '6-19': 'w-ndiCq9oQc',
+    '6-20': 'nRzv1Igzq1A',
+    '6-21': 'uRZ_SZpdIU8',
+    '6-22': '768_7zADwz4',
+    '6-23': 'AcnxGB_ZZxo',
+    '6-24': 'q8ZjhrDRXwQ',
+    '6-25': '3dBjYcb6J-w',
+    '6-26': 'K3X-dv-G_1s',
+    '6-27': 'Il-NBJrF5OA',
+    '6-28': 'MgfwAm6lDLY',
+    '6-29': '27qv6gwpt_k',
+    '6-30': 'AKLNLCnrwh0',
+    '6-31': 'b5q0GDHJoak',
+    '6-32': 'nxJCE8HIb-I',
+    '6-33': 'SWGi_nj4FOM',
+    '6-34': 'SHH9nyzb2ss',
+    '6-35': '43XJ15oSZoM',
+    '6-36': 'TNLcLr40Lmg',
+    '6-37': 'jYbSfURWsDE',
+    '6-38': '8O9wKgwBMYA',
+    '6-39': 'c74mK8XmT0M',
+    '6-40': '-eFbNJdRcEQ',
+    '6-41': 'EdyGl0XI214',
+    '6-42': 'UpPLVHSSSxc',
+    '6-43': 'IOuI4MnSiyo',
+    '6-44': 'LoR_XO_BFqs',
+    '6-45': 'BcSQmSEX64w',
+    '6-46': 'gVivnJjlX_4',
+    '6-47': 'XmeMNEtW5Nc',
+    '6-48': 'j63TKcLpjow',
+    '6-49': 'qAdQLy7YeGY',
+    '6-50': 'uBuddGVj950',
+    '6-51': '5Dec3FrDSkg',
+    '6-52': 'gAOBY_rbIgo',
+    '6-53': 'J4RyhJ2OqVw',
+    '6-54': 'qhSy378rLls',
+    '6-55': 'fwxwwNowjG0',
+    '6-56': 'kMv-XcPXc8A',
+    '6-57': 'HE0z9af7UAw',
+    '6-58': 'ABdZvLEvShM',
+    '6-59': 'UD_Uf66JR8A',
+    '6-60': 'bBfFJK15ZSo',
+    '6-61': 'TXLNSwLnask',
+    '6-62': 'wtT2gkBMkyw',
+    '6-63': 'NGTdDwFEJlo',
+    '6-64': 'xxy9yxIg-CQ',
+    '6-65': 'fyGBDESU2VQ',
+    '6-66': 'gZat4Tw979Y',
+    '6-67': 'KRxY6kNerNc',
+    '6-68': 'h3ubtjR1vZk',
+    '6-69': 'qLzxbju9AQ4',
+    '6-70': 'TCx8Vtul2n4',
+    '6-71': 'U7F_T5SMD1g',
+    '6-72': 'y7drUr0RLX0',
+    '6-73': 'q1SB3avmoRg',
+    '6-74': 'mS1KWFNE_cY',
+    '6-75': '4eqoLEOVbGk',
+    '6-76': 'ReIOx0DZ4Pw',
+    '6-77': '6sjKQ7PUuTM',
+    '6-78': 'LHTUsxmlxiI',
+    '6-79': 'WgCfyoBCAMQ',
+    '6-80': 'MQvZMUMD_R4',
+    '6-81': 'HEdWnSurI7o',
+    '6-82': 'R0_gIgB7H_U',
+    '6-83': 'T5EAKr5-O_c',
+    '6-84': '-CMhYbayS5g',
+    '6-85': 'QEyqRHQUops',
+    '6-86': '4Z57r6Z8Hd4',
+    '6-87': 'BStc4BB_oK8',
+    '6-88': 'tG0195ztCPM',
+    '6-89': '7rbc_rZLoSo',
+    '6-90': 'kaYD0GKSJqs',
+    '6-91': 'BEk2JaZCYrM',
+    '6-92': 'JDaRzmWvdhY',
+    '6-93': 'BtVM13ZMZxM',
+    '6-94': '2m8iJeF13R8',
+    '6-95': 'chHucCBbeX4',
+    '6-96': 'fP2T0GsfFc0',
+    '6-97': 'hDXp3VIYjTA',
+    '6-98': 'L1KsHeFqB2c',
+    '6-99': 'muyosFFayXM',
+    '6-100': 'zHo1Ckqcw64',
+    '7-1': 'zM6iJeQutJM',
+    '7-2': '9buu4sg1Qb8',
+    '7-3': 'CId9NeLiyAw',
+    '7-4': 'vlaQ3aND5uw',
+    '7-5': 'UpStXAIq2fQ',
+    '7-6': 'Mq-VxqSNvP0',
+    '7-7': 'Sds0mXeiYJg',
+    '7-8': 'APPFfUyuiVk',
+    '7-9': 'aSLEL3Q4btk',
+    '7-10': 'B-RsP019zdg',
+    '7-11': '4uamuA6xuQQ',
+    '7-12': 'MG4VSfRl6w8',
+    '7-13': 'Ka_y0fXTnvU',
+    '7-14': 'NaR2w8jB8Qc',
+    '7-15': 'pXlBwzCfMgo',
+    '7-16': 'otSpW2AykPI',
+    '7-17': 'PZraT0AOYS0',
+    '7-18': 'dkAFfWr9kc8',
+    '7-19': 'XVRR8BgmxiI',
+    '7-20': '_ZxSZzV-yp0',
+    '7-21': 'rgYmt94waTM',
+    '7-22': 'C2GqYUsTqi8',
+    '7-23': 'Vvy-7cNl4Nc',
+    '7-24': '-YO4WeA8vmg',
+    '7-25': 'VIogmwAv4hg',
+    '7-26': '33Hk0gBofQo',
+    '7-27': '3JdZX1io_co',
+    '7-28': 'lOM21w1FJmo',
+    '7-29': 'CzTKuBz_oGw',
+    '7-30': 'xYtqs-RqEHA',
+    '7-31': 'z2cucQEgBEo',
+    '7-32': 'Jtruxtkm5AY',
+    '7-33': '523Zlk2B3-U',
+    '7-34': 'jsKZn8-WeW0',
+    '7-35': 'Q9K8t9SLvS0',
+    '7-36': 'az5YZnu40g8',
+    '7-37': '3SiWU_i8ulI',
+    '7-38': 'CCqrTyNBDtA',
+    '7-39': 'ys0y6VBgIKA',
+    '7-40': '6i3HesADNZY',
+    '7-41': 'p9IVdyxo4Y4',
+    '7-42': 'Rz5ezHtYgBI',
+    '7-43': '79ai3vrRGEw',
+    '7-44': 'Qo2Y67f0ztE',
+    '7-45': 'mcBYuL3PHRg',
+    '7-46': 'ECFezNh9A0U',
+    '7-47': 'XCifVHS2RQU',
+    '7-48': 'mN6GXeSX3iE',
+    '7-49': 'SpND7tvKlBU',
+    '7-50': 'nItbrMNA7aw',
+    '7-51': 'KUxAlPnRIVI',
+    '7-52': 'gg13t1eUjdo',
+    '7-53': '_Dxhq6mIv44',
+    '7-54': '4i4IASpHOK8',
+    '7-55': '0PI20iyEPtA',
+    '7-56': 'IIb0bDcs-nA',
+    '7-57': 'X9L2tVy74fc',
+    '7-58': '18wWnSuJH3I',
+    '7-59': '0PEdbCmi1wE',
+    '7-60': '8PvcLf4H1v4',
+    '7-61': 'jaIATizg740',
+    '7-62': 'UhrlU9mwzMw',
+    '7-63': 'YP60ZA9PKrs',
+    '7-64': 'XhiDGQI6dyA',
+    '7-65': 'B4mvJp-Pijk',
+    '7-66': 'kILE1U520cM',
+    '7-67': 'sU8w68Jq-L0',
+    '7-68': '2yehRQiX02M',
+    '7-69': 'csMTz_7E8Hg',
+    '7-70': 'YrY1jZoDk84',
+    '7-71': 'vuZO-wNnfcc',
+    '7-72': 'bYhEmNpqBIc',
+    '7-73': 'JfxBEZyD03g',
+    '7-74': 'VhM-1QcwjWQ',
   };
 
   function namedCatalog() {
@@ -780,7 +954,7 @@
       els.form.querySelector('[name=password]').required = !in_;
     }
     els.signedLine.textContent = in_ ? `Signed in as ${state.name}` : '';
-    els.lead.textContent = 'Sets below are open. Sets 1–5 are complete through video 100 in each set.';
+    els.lead.textContent = 'Sets below are open. Sets 1–6 are complete through video 100. Set 7 has videos 1–74 ready (topics 601–674).';
   }
 
   async function refreshCatalog() {
@@ -817,7 +991,7 @@
     if (!els.sectionLead) return;
     if (!state.setId) {
       els.sectionLead.textContent =
-        'Choose a set. Set 1 is 1–100. Set 2 is 101–200. Set 3 is 201–300. Set 4 is 301–400. Set 5 is 401–500 (each shown as 1–100 in that set).';
+        'Choose a set. Set 1 is 1–100. Set 2 is 101–200. Set 3 is 201–300. Set 4 is 301–400. Set 5 is 401–500. Set 6 is 501–600. Set 7 is 601–700 (each shown as 1–100 in that set).';
       return;
     }
     if (state.videoN) {
@@ -825,7 +999,7 @@
       return;
     }
     const next =
-      state.setId <= 5
+      state.setId <= 7
         ? ' Round 1 is videos 1–34. Round 2 is 35–66. Round 3 is 67–100.'
         : state.setId < 11
           ? ` Video 34 opens Set ${state.setId + 1}.`
@@ -851,7 +1025,7 @@
         <div class="pv-thumb-body">
           <span class="pv-thumb-kicker">Set ${set.id} of 11</span>
           <span class="pv-thumb-title">${escapeHtml(set.id === 1 ? set.name : `Set ${set.id} · ${set.name}`)}</span>
-          <span class="pv-thumb-note">${set.id <= 5 ? '100 videos · three rounds' : set.id < 11 ? '33 videos · 34 opens next set' : '33 videos · last set'}</span>
+          <span class="pv-thumb-note">${set.id <= 7 ? '100 videos · three rounds' : set.id < 11 ? '33 videos · 34 opens next set' : '33 videos · last set'}</span>
         </div>
       </button>`,
       )
