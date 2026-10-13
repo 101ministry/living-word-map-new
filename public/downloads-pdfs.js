@@ -178,6 +178,13 @@ window.DOWNLOADS_PDFS = {
       "made": "2026-08-10"
     },
     {
+      "title": "The Greek: Yoke or Temple of Unbelief",
+      "summary": "2 Corinthians 6:14-18 for a child, a teenager, then an adult: a mismatched yoke is one life answering the Spirit and the other answering familiar spirit suggestions.",
+      "href": "downloads/the-greek-yoke-or-temple-of-unbelief.pdf",
+      "download": "The Greek - Yoke or Temple of Unbelief.pdf",
+      "made": "2026-10-13"
+    },
+    {
       "title": "The Minions of the Spirit Spouse",
       "summary": "Topics 442-573 counted in league with succubus (561) and incubus (503): 96 support the lure, 105 support the jailer, 69 serve both.",
       "href": "downloads/minions-of-the-spirit-spouse.pdf",
