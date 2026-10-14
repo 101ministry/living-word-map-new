@@ -10,7 +10,7 @@ $items = @(
     src = 'am-i-acceptable-with-my-unchanged-crown.pdf'
     file = 'am-i-acceptable-with-my-unchanged-crown.pdf'
     title = 'Am I Acceptable with My Unchanged Crown?'
-    summary = 'Day 14 crown passages if iniquity were prized: the reversed reading, the life that follows, and why that crown is not acceptable for heaven.'
+    summary = 'Teen-plain take on Day 14: what the crown verses would sound like if sin mattered more, and why that crown still is not okay for heaven.'
     made = '2026-10-14'
   },
   @{

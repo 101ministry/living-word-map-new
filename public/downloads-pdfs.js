@@ -4,7 +4,7 @@ window.DOWNLOADS_PDFS = {
   "items": [
     {
       "title": "Am I Acceptable with My Unchanged Crown?",
-      "summary": "Day 14 crown passages if iniquity were prized: the reversed reading, the life that follows, and why that crown is not acceptable for heaven.",
+      "summary": "Teen-plain take on Day 14: what the crown verses would sound like if sin mattered more, and why that crown still is not okay for heaven.",
       "href": "downloads/am-i-acceptable-with-my-unchanged-crown.pdf",
       "download": "Am I Acceptable with My Unchanged Crown.pdf",
       "made": "2026-10-14"
