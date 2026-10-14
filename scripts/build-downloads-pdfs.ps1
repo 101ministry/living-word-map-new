@@ -7,6 +7,13 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
 $items = @(
   @{
+    src = 'am-i-acceptable-with-my-unchanged-crown.pdf'
+    file = 'am-i-acceptable-with-my-unchanged-crown.pdf'
+    title = 'Am I Acceptable with My Unchanged Crown?'
+    summary = 'Day 14 crown passages if iniquity were prized: the reversed reading, the life that follows, and why that crown is not acceptable for heaven.'
+    made = '2026-10-14'
+  },
+  @{
     src = 'Are We Protecting the Gods of Bible.pdf'
     file = 'are-we-protecting-the-gods-of-the-bible.pdf'
     title = 'Are We Protecting the Gods of Bible?'

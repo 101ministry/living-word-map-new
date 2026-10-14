@@ -3,6 +3,13 @@ window.DOWNLOADS_PDFS = {
   "description": "Studies and prayers from the ministry library. Tap to download.",
   "items": [
     {
+      "title": "Am I Acceptable with My Unchanged Crown?",
+      "summary": "Day 14 crown passages if iniquity were prized: the reversed reading, the life that follows, and why that crown is not acceptable for heaven.",
+      "href": "downloads/am-i-acceptable-with-my-unchanged-crown.pdf",
+      "download": "Am I Acceptable with My Unchanged Crown.pdf",
+      "made": "2026-10-14"
+    },
+    {
       "title": "10 Principles",
       "summary": "Walk toward Jesus instead of sinking in common-sense logic: principalities, forgiveness, secret life, and Holy Spirit only.",
       "href": "downloads/10-principles.pdf",
