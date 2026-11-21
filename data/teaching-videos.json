@@ -360,13 +360,208 @@
         { "label": "BONUS: Does God and Jesus trust people? Do they tell us to?", "start": "2:45:14" }
       ]
     },
-    { "day": 12, "part": 1, "title": "Day 12 - Prayer Topics", "youtubeId": "gHrsjZt3r2Y", "url": "https://www.youtube.com/watch?v=gHrsjZt3r2Y" },
-    { "day": 13, "part": 1, "title": "Day 13 - Prayer Topics", "youtubeId": "UkEO0Wgvxd8", "url": "https://www.youtube.com/watch?v=UkEO0Wgvxd8" },
-    { "day": 14, "part": 1, "title": "Day 14 - Prayer Topics (Bondage)", "youtubeId": "OcPrvIJWmME", "url": "https://www.youtube.com/live/OcPrvIJWmME", "principalityId": "bondage" },
-    { "day": 15, "part": 1, "title": "Day 15 - Prayer Topics (Idolatry)", "youtubeId": "S_IjMCQp1Y4", "url": "https://www.youtube.com/live/S_IjMCQp1Y4", "principalityId": "idolatry" },
-    { "day": 16, "part": 1, "title": "Day 16 - Prayer Topics (Error)", "youtubeId": "f0DhOMgGEM4", "url": "https://www.youtube.com/live/f0DhOMgGEM4", "principalityId": "error" },
-    { "day": 17, "part": 1, "title": "Day 17 - Prayer Topics (Fear)", "youtubeId": "hdcD2V9xBpA", "url": "https://www.youtube.com/live/hdcD2V9xBpA", "principalityId": "fear" },
-    { "day": 18, "part": 1, "title": "Day 18 - Prayer Topics (Divination)", "youtubeId": "1GEEXa2oYoE", "url": "https://www.youtube.com/live/1GEEXa2oYoE", "principalityId": "divination" },
+    {
+      "day": 12,
+      "part": 1,
+      "title": "Day 12 - Prayer Topics",
+      "youtubeId": "gHrsjZt3r2Y",
+      "url": "https://www.youtube.com/watch?v=gHrsjZt3r2Y",
+      "topicStart": 34,
+      "topicEnd": 44,
+      "chapterTimestamps": {
+        "34": "23:47",
+        "35": "48:56",
+        "36": "53:47",
+        "37": "1:00:46",
+        "38": "1:39:54",
+        "39": "1:51:00",
+        "40": "1:52:00",
+        "41": "1:54:14",
+        "42": "2:01:10",
+        "43": "2:05:35",
+        "44": "2:07:31"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: 'How do I walk with the Holy Spirit?'/reclaiming territory for the Holy Spirit", "start": "2:11:20" },
+        { "label": "BONUS: 'How do you know if you have a vision'", "start": "2:34:17" }
+      ]
+    },
+    {
+      "day": 13,
+      "part": 1,
+      "title": "Day 13 - Prayer Topics",
+      "youtubeId": "UkEO0Wgvxd8",
+      "url": "https://www.youtube.com/watch?v=UkEO0Wgvxd8",
+      "topicStart": 41,
+      "topicEnd": 55,
+      "chapterTimestamps": {
+        "41": "3:25",
+        "45": "5:41",
+        "46": "22:05",
+        "47": "29:28",
+        "48": "32:05",
+        "49": "1:04:11",
+        "50": "1:21:42",
+        "51": "1:21:42",
+        "52": "2:04:37",
+        "53": "2:10:39",
+        "54": "2:14:47",
+        "55": "2:28:34"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: What does it mean, to be meek?", "start": "50:50" },
+        { "label": "BONUS: Are you using feelings and thought synonymously?", "start": "2:33:27" },
+        { "label": "BONUS: Understanding mistreatment from parents/step parents", "start": "3:22:38" }
+      ]
+    },
+    {
+      "day": 14,
+      "part": 1,
+      "title": "Day 14 - Prayer Topics (Bondage)",
+      "youtubeId": "OcPrvIJWmME",
+      "url": "https://www.youtube.com/live/OcPrvIJWmME",
+      "principalityId": "bondage",
+      "topicStart": 56,
+      "topicEnd": 70,
+      "chapterTimestamps": {
+        "56": "12:55",
+        "57": "1:00:19",
+        "58": "1:33:41",
+        "59": "1:34:06",
+        "60": "2:44:36",
+        "61": "2:46:29",
+        "62": "2:46:32",
+        "63": "2:46:38",
+        "64": "2:46:42",
+        "65": "2:46:46",
+        "66": "2:46:47",
+        "67": "2:46:51",
+        "68": "2:46:54",
+        "69": "2:46:57",
+        "70": "2:47:00"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: Circumcision", "start": "00:01" },
+        { "label": "Having Vain imaginations [continued]", "start": "29:53" },
+        { "label": "TRIGGER WARNING:", "start": "56:12" },
+        { "label": "The Chronicles of Caesar", "start": "1:56:00" },
+        { "label": "BONUS: Romans 3; we can infact, on this Earth, live sinless", "start": "3:22:32" }
+      ]
+    },
+    {
+      "day": 15,
+      "part": 1,
+      "title": "Day 15 - Prayer Topics (Idolatry)",
+      "youtubeId": "S_IjMCQp1Y4",
+      "url": "https://www.youtube.com/live/S_IjMCQp1Y4",
+      "principalityId": "idolatry",
+      "topicStart": 71,
+      "topicEnd": 82,
+      "chapterTimestamps": {
+        "71": "21:35",
+        "72": "24:59",
+        "73": "25:33",
+        "74": "36:03",
+        "75": "38:30",
+        "76": "1:36:15",
+        "77": "1:36:15",
+        "78": "1:41:09",
+        "79": "1:51:55",
+        "80": "2:01:40",
+        "81": "2:22:40",
+        "82": "2:44:13"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: Imaginations and sex addiction", "start": "00:01" },
+        { "label": "BONUS: Tithing", "start": "2:48:56" }
+      ]
+    },
+    {
+      "day": 16,
+      "part": 1,
+      "title": "Day 16 - Prayer Topics (Error)",
+      "youtubeId": "f0DhOMgGEM4",
+      "url": "https://www.youtube.com/live/f0DhOMgGEM4",
+      "principalityId": "error",
+      "topicStart": 83,
+      "topicEnd": 93,
+      "chapterTimestamps": {
+        "83": "25:51",
+        "84": "34:44",
+        "85": "1:11:51",
+        "86": "1:12:15",
+        "87": "1:13:56",
+        "88": "1:26:01",
+        "89": "1:31:23",
+        "90": "1:38:51",
+        "91": "1:42:36",
+        "92": "1:55:18",
+        "93": "2:21:03"
+      },
+      "bonusChapters": [
+        { "label": "TRIGGER WARNING:", "start": "2:07:11" }
+      ]
+    },
+    {
+      "day": 17,
+      "part": 1,
+      "title": "Day 17 - Prayer Topics (Fear)",
+      "youtubeId": "hdcD2V9xBpA",
+      "url": "https://www.youtube.com/live/hdcD2V9xBpA",
+      "principalityId": "fear",
+      "topicStart": 94,
+      "topicEnd": 107,
+      "chapterTimestamps": {
+        "94": "9:11",
+        "95": "41:10",
+        "96": "42:48",
+        "97": "45:18",
+        "98": "56:38",
+        "99": "1:00:22",
+        "100": "1:10:51",
+        "101": "1:19:06",
+        "102": "1:23:12",
+        "103": "1:26:15",
+        "104": "1:37:43",
+        "105": "1:43:28",
+        "106": "1:43:33",
+        "107": "1:43:35"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: Spirit Spouse story", "start": "28:40" },
+        { "label": "A fear of poverty [continued]", "start": "39:08" },
+        { "label": "BONUS: 'Is dragon ball Z something that is Godly or biblical?'", "start": "1:47:00" }
+      ]
+    },
+    {
+      "day": 18,
+      "part": 1,
+      "title": "Day 18 - Prayer Topics (Divination)",
+      "youtubeId": "1GEEXa2oYoE",
+      "url": "https://www.youtube.com/live/1GEEXa2oYoE",
+      "principalityId": "divination",
+      "topicStart": 108,
+      "topicEnd": 118,
+      "chapterTimestamps": {
+        "108": "8:00",
+        "109": "51:01",
+        "110": "1:22:57",
+        "111": "1:31:15",
+        "112": "1:34:10",
+        "113": "1:36:07",
+        "114": "1:50:41",
+        "115": "2:08:35",
+        "116": "2:42:29",
+        "117": "2:45:10",
+        "118": "2:45:16"
+      },
+      "bonusChapters": [
+        { "label": "BONUS: 'Is divination in the bloodline a big cause of Infertility?'", "start": "1:57:38" },
+        { "label": "BONUS: 'How the Zodiac causes illness and diseases'", "start": "2:09:46" },
+        { "label": "BONUS: 'How you view your father affects how you view God'", "start": "2:19:16" },
+        { "label": "Playing with magic the gathering cards [continued]", "start": "2:41:43" }
+      ]
+    },
     { "day": 19, "part": 1, "title": "Day 19 - Prayer Topics (Heaviness)", "youtubeId": "UAqhMThOKkk", "url": "https://www.youtube.com/live/UAqhMThOKkk", "principalityId": "heaviness" },
     { "day": 20, "part": 1, "title": "Day 20 - Prayer Topics (Anti-Christ)", "youtubeId": "RO70j6QGA6s", "url": "https://www.youtube.com/live/RO70j6QGA6s", "principalityId": "anti-christ" },
     { "day": 21, "part": 1, "title": "Day 21 - Prayer Topics (Deaf & Dumb)", "youtubeId": "1mlOYv9Jlbc", "url": "https://www.youtube.com/live/1mlOYv9Jlbc", "principalityId": "deaf-dumb" },

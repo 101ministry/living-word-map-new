@@ -424,6 +424,23 @@ foreach ($video in ($config.videos | Sort-Object { [int]$_.day }, { [int]$_.part
         $slice = $allDayTopics[$startIdx..$endIdx]
     }
 
+    if ($video.chapterTimestamps) {
+        $slice = @()
+        foreach ($prop in @($video.chapterTimestamps.PSObject.Properties)) {
+            $num = 0
+            if (-not [int]::TryParse([string]$prop.Name, [ref]$num)) { continue }
+            $name = $topicByNumber[$num]
+            if (-not $name) { $name = "Topic $num" }
+            $slice += [pscustomobject]@{
+                phrase = $name
+                number = $num
+                name   = $name
+            }
+        }
+        $slice = @($slice | Sort-Object number)
+        Write-Host "  Using chapter timestamps: $($slice.Count) topics"
+    }
+
     Write-Host "  Topics in this video part: $($slice.Count)"
 
     $duration = 3600
