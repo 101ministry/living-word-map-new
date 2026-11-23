@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attitudes &amp; Identities — Topic Wheel</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=117" />
+  <link rel="stylesheet" href="topic-wheel.css?v=2" />
+  <script src="site-theme.js?v=9"></script>
+</head>
+<body class="topic-wheel-page">
+  <header class="topic-wheel-header">
+    <a class="topic-wheel-back" href="index.html">Living Word Map</a>
+    <h1>Attitudes &amp; Identities</h1>
+    <p>Spin one of the 11 roots. The wheel that opens next holds the topics for that root. Those teachings are new, and separate from Core Prayer &amp; Videos.</p>
+  </header>
+  <main class="topic-wheel-main">
+    <div class="topic-wheel-stage">
+      <p id="wheel-step" class="topic-wheel-step">Root wheel</p>
+      <div class="topic-wheel-disk">
+        <div class="topic-wheel-pointer" aria-hidden="true"></div>
+        <canvas id="wheel" width="640" height="640" aria-label="Topic wheel"></canvas>
+      </div>
+      <div class="topic-wheel-actions">
+        <button type="button" id="wheel-spin" class="btn-accent">Spin</button>
+        <button type="button" id="wheel-back" class="text-btn" hidden>Back to roots</button>
+      </div>
+    </div>
+    <section class="topic-wheel-result" aria-live="polite">
+      <p class="topic-wheel-kicker">New teaching</p>
+      <h2 id="wheel-topic">Spin the wheel</h2>
+      <p id="wheel-root-name" class="topic-wheel-root"></p>
+      <p id="wheel-teaching" class="topic-wheel-note">When a topic lands, its new teaching starts here. Nothing on this page plays the videos already on the Video page.</p>
+    </section>
+  </main>
+  <script src="topic-wheel.js?v=2"></script>
+</body>
+</html>

@@ -329,6 +329,10 @@ body.parchment-lock {
   cursor: pointer;
 }
 
+a.view-nav-item {
+  text-decoration: none;
+}
+
 .view-nav-item:hover,
 .view-nav-item:focus-visible {
   background: rgba(37, 99, 235, 0.85);
@@ -2628,8 +2632,15 @@ html.camp-isolated .graph-panel {
 }
 
 .map-layer-dock label.tier-layer,
-.filters label.tier-layer {
+.filters label.tier-layer,
+.map-layer-dock a.topic-wheel-link {
   padding-left: 1.15rem;
+}
+
+.map-layer-dock a.topic-wheel-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.78rem;
 }
 
 .graph-panel.is-camp .map-layer-dock,
