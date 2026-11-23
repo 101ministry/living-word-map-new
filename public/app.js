@@ -47,6 +47,7 @@
       root: true,
       fruit: true,
       topic: false,
+      attitudesIdentities: false,
       topicRoot: true,
       topicFruit: true,
       topicPrincipality: true,
@@ -628,11 +629,57 @@
     return topicPrincipalityIds(topic).map(pid => lookups.principality[pid]).filter(Boolean);
   }
 
+  const TIER_ONE_ROOTS = [
+    'unbelief-and-distrust-of-god',
+    'shame-and-false-identity',
+    'fear-and-insecurity',
+    'loneliness-and-emotional-brokenness',
+    'control-and-rebellion',
+    'deception-and-falsehood',
+    'pride-and-self-exaltation',
+    'bitterness-and-unforgiveness',
+    'addiction-and-bondage',
+    'covetousness-and-materialism',
+    'idolatry-and-person-worship',
+  ];
+
+  const TIER_TWO_ROOTS = [
+    'addiction-and-bondage',
+    'bitterness-and-unforgiveness',
+    'control-and-rebellion',
+    'fear-and-insecurity',
+    'pride-and-self-exaltation',
+    'idolatry-and-person-worship',
+    'unbelief-and-distrust-of-god',
+    'loneliness-and-emotional-brokenness',
+    'deception-and-falsehood',
+    'shame-and-false-identity',
+    'covetousness-and-materialism',
+  ];
+
+  function canonicalNodeId(id) {
+    const text = String(id ?? '');
+    const cut = text.indexOf('::');
+    return cut === -1 ? text : text.slice(0, cut);
+  }
+
+  function tierFluffActive() {
+    return isConstellationView()
+      && state.show.attitudesIdentities
+      && state.show.root
+      && state.show.topic;
+  }
+
+  function isIdentityTopic(topic) {
+    const n = Number(topic?.number);
+    return n >= 443 && n <= 573;
+  }
+
   function nodeType(idOrNode) {
     if (typeof idOrNode === 'object' && idOrNode != null && idOrNode.type) {
       return idOrNode.type;
     }
-    const id = typeof idOrNode === 'object' && idOrNode != null ? idOrNode.id : idOrNode;
+    const id = canonicalNodeId(typeof idOrNode === 'object' && idOrNode != null ? idOrNode.id : idOrNode);
     if (id.startsWith('topic-')) return 'topic';
     if (lookups.principality[id]) return 'principality';
     if (lookups.root[id]) return 'root';
@@ -641,6 +688,7 @@
   }
 
   function nodeLabel(id) {
+    id = canonicalNodeId(id);
     const type = nodeType(id);
     const item = lookups[type]?.[id];
     if (!item) return id;
@@ -650,6 +698,7 @@
   }
 
   function nodeColorResolved(id, dimmed = false) {
+    id = canonicalNodeId(id);
     const { fill } = colors.colorForNode(id, lookups);
     if (dimmed) {
       if (fill.startsWith('rgba')) return fill.replace(/[\d.]+\)$/, '0.15)');
@@ -797,6 +846,56 @@
     anchorTopicNodes(nodes, principalityRing);
   }
 
+  function placeFluff(cx, cy, members) {
+    members.forEach((node, i) => {
+      const angle = i * 2.399963 + ((hashId(node.id) % 40) - 20) * 0.01;
+      const radius = 18 + Math.sqrt(i + 1) * 8.4;
+      const wobble = ((hashId(node.id) % 9) - 4);
+      node.x = cx + Math.cos(angle) * radius + wobble;
+      node.y = cy + Math.sin(angle) * radius + ((hashId(node.id + 'y') % 17) - 8);
+      node.fx = node.x;
+      node.fy = node.y;
+    });
+  }
+
+  function seedTierFluffLayout(nodes) {
+    const identitiesFirst = false;
+    const order = TIER_ONE_ROOTS;
+    const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+    order.forEach((rootId, i) => {
+      const stem = byId[rootId];
+      if (!stem) return;
+      const angle = (i / order.length) * Math.PI * 2 - Math.PI / 2;
+      const radius = 480;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+      stem.x = x;
+      stem.y = y;
+      stem.fx = x;
+      stem.fy = y;
+      const members = [];
+      const rest = [];
+      topics.forEach(topic => {
+        if (!topicRootIds(topic).includes(rootId)) return;
+        const node = byId[`topic-${topic.id}`];
+        if (!node) return;
+        if (identitiesFirst && isIdentityTopic(topic)) members.push(node);
+        else rest.push(node);
+      });
+      placeFluff(x, y, members.concat(rest));
+    });
+
+    nodes.forEach(node => {
+      if (node.fx == null) {
+        node.x = 0;
+        node.y = 0;
+        node.fx = null;
+        node.fy = null;
+      }
+    });
+  }
+
   function seedExploreLayout(nodes) {
     const extent = graphExtent();
     const principalityRing = extent * 0.34;
@@ -851,6 +950,7 @@
     Graph.d3Force('charge', d3.forceManyBody()
       .strength(node => {
         const type = nodeType(node);
+        if (tierFluffActive()) return 0;
         if (isConstellation) {
           if (type === 'principality') return -900;
           if (type === 'topic') return -40;
@@ -882,6 +982,7 @@
           return 44;
         })
         .strength(link => {
+          if (tierFluffActive()) return 0;
           if (isConstellation) {
             if (link.type === 'root_principality' || link.type === 'fruit_principality') return 0.08;
             if (link.type === 'root_fruit') return 0.05;
@@ -907,7 +1008,7 @@
         const pad = nodeType(id) === 'principality' ? 10 : (nodeType(id) === 'topic' ? 1.5 : 5);
         return nodeRadius(id) + pad;
       })
-      .strength(isConstellation ? 0.95 : 0.45)
+      .strength(tierFluffActive() ? 0 : (isConstellation ? 0.95 : 0.45))
       .iterations(isConstellation ? 4 : 1));
   }
 
@@ -930,7 +1031,7 @@
       const type = nodeType(id);
       if (type !== 'root' && type !== 'fruit') continue;
       if (node.x == null || node.y == null) continue;
-      const radius = nodeRadius(id) * (isConstellationView() ? 1.55 : 1.25);
+      const radius = nodeRadius(id) * (tierFluffActive() ? 4.2 : (isConstellationView() ? 1.55 : 1.25));
       const dx = coords.x - node.x;
       const dy = coords.y - node.y;
       const dist = dx * dx + dy * dy;
@@ -1021,11 +1122,13 @@
     }
 
     const topicLimit = isConstellationView() ? 0 : (state.show.topic ? topics.length : 0);
-    const visibleTopics = state.selectedId && isConstellationView()
-      ? topics.filter(t => topicMatchesNode(t, state.selectedId))
-      : topics.slice(0, topicLimit);
+    const visibleTopics = tierFluffActive()
+      ? topics
+      : (state.selectedId && isConstellationView()
+        ? topics.filter(t => topicMatchesNode(t, state.selectedId))
+        : topics.slice(0, topicLimit));
 
-    if (state.selectedId && isConstellationView()) {
+    if ((state.selectedId && isConstellationView()) || tierFluffActive()) {
       visibleTopics.forEach(t => {
         const tid = `topic-${t.id}`;
         topicNodes.push({ id: tid, type: 'topic' });
@@ -1053,11 +1156,22 @@
     }
 
     edges.forEach(e => {
+      if (tierFluffActive() && e.type === 'has_root') return;
       if (!allowedLinkTypes.has(e.type)) return;
       if (nodeIds.has(e.source) && nodeIds.has(e.target)) {
         links.push({ source: e.source, target: e.target, type: e.type });
       }
     });
+
+    if (tierFluffActive()) {
+      topics.forEach(t => {
+        const tid = `topic-${t.id}`;
+        topicRootIds(t).forEach(rid => {
+          if (!nodeIds.has(rid) || !nodeIds.has(tid)) return;
+          links.push({ source: tid, target: rid, type: 'has_root' });
+        });
+      });
+    }
 
     // Drop topic nodes with no visible edges (otherwise they float when layer/link filters hide all connections).
     if (state.show.topic && !isConstellationView()) {
@@ -1099,7 +1213,17 @@
       }
     }
 
-    if (state.selectedId && isConstellationView() && nodeIds.has(state.selectedId)) {
+    if (state.selectedId && tierFluffActive() && nodeType(state.selectedId) === 'root') {
+      const rootId = canonicalNodeId(state.selectedId);
+      const related = new Set([rootId, `${rootId}::t2`]);
+      links.forEach(l => {
+        const s = typeof l.source === 'object' ? l.source.id : l.source;
+        const t = typeof l.target === 'object' ? l.target.id : l.target;
+        if (canonicalNodeId(s) === rootId && String(t).startsWith('topic-')) related.add(t);
+        if (canonicalNodeId(t) === rootId && String(s).startsWith('topic-')) related.add(s);
+      });
+      state.highlightIds = related;
+    } else if (state.selectedId && isConstellationView() && nodeIds.has(canonicalNodeId(state.selectedId))) {
       const related = new Set([state.selectedId]);
       links.forEach(l => {
         const s = typeof l.source === 'object' ? l.source.id : l.source;
@@ -1138,6 +1262,7 @@
   }
 
   function nodeFillColor(id) {
+    id = canonicalNodeId(id);
     // Counterfeit Spirituality only: black disc (green door painted after).
     if (id === 'counterfeit-spirituality') {
       if (state.highlightIds.size && !state.highlightIds.has(id)) {
@@ -1334,6 +1459,26 @@
     ctx.strokeRect(x, y, size, size);
   }
 
+  function topicInteriorActive(node) {
+    if (!tierFluffActive() || !state.selectedId) return false;
+    if (nodeType(state.selectedId) !== 'root' || nodeType(node) !== 'topic') return false;
+    return state.highlightIds.has(node.id);
+  }
+
+  function paintTopicInterior(node, ctx, globalScale) {
+    if (node.x == null || node.y == null) return;
+    const rootId = canonicalNodeId(state.selectedId);
+    const fill = nodeColorResolved(rootId);
+    const r = Math.max(2.2, nodeRadius(node.id) * 0.58);
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = fill;
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(10, 11, 15, 0.65)';
+    ctx.lineWidth = Math.max(0.7, 1.15 / globalScale);
+    ctx.stroke();
+  }
+
   const Graph = ForceGraph()(container)
     .backgroundColor('#0a0b0f')
     .nodeId('id')
@@ -1344,11 +1489,13 @@
     .nodeCanvasObjectMode(node => {
       const id = asNodeId(node);
       if (isDoorFruitNode(id)) return 'after';
-      if (nodeType(id) === 'principality' || state.selectedId === id) return 'after';
+      if (nodeType(id) === 'principality' || state.selectedId === id || canonicalNodeId(state.selectedId) === canonicalNodeId(id)) return 'after';
+      if (topicInteriorActive(node)) return 'after';
       return undefined;
     })
     .nodeCanvasObject((node, ctx, globalScale) => {
       const id = asNodeId(node);
+      if (topicInteriorActive(node)) paintTopicInterior(node, ctx, globalScale);
       if (nodeType(id) === 'principality') {
         paintPrincipalityNode(node, ctx, globalScale);
         return;
@@ -1389,7 +1536,7 @@
     .linkColor(l => {
       const s = typeof l.source === 'object' ? l.source.id : l.source;
       const t = typeof l.target === 'object' ? l.target.id : l.target;
-      if (state.highlightIds.size && !(state.highlightIds.has(s) && state.highlightIds.has(t))) {
+      if (!tierFluffActive() && state.highlightIds.size && !(state.highlightIds.has(s) && state.highlightIds.has(t))) {
         return 'rgba(255,255,255,0.03)';
       }
       if (l.type) {
@@ -1425,6 +1572,7 @@
       selectNode(id);
     })
     .onBackgroundClick(() => {
+      if (tierFluffActive()) return;
       if (state.viewMode === 'constellation' && state.selectedId) {
         closeConstellationDetail();
       }
@@ -1612,7 +1760,7 @@
     showEmptyDetail();
     document.getElementById('graph-hint').classList.remove('hidden');
     refreshGraph();
-    if (isGlobeView()) return;
+    if (isGlobeView() || tierFluffActive()) return;
     setTimeout(() => {
       fitConstellationFull(ZOOM_MS);
       setTimeout(() => fitConstellationRing(ZOOM_MS), ZOOM_MS + 80);
@@ -1707,12 +1855,16 @@
     }
     syncGraphSize();
     const { nodes, links } = buildVisibleGraph();
-    if (isConstellationView()) {
+    if (tierFluffActive()) {
+      seedTierFluffLayout(nodes);
+    } else if (isConstellationView()) {
       seedNightSkyLayout(nodes);
     } else if (state.show.topic) {
       seedExploreLayout(nodes);
     }
+    const keepZoom = tierFluffActive() && typeof Graph.zoom === 'function' ? Graph.zoom() : null;
     Graph.graphData({ nodes, links });
+    if (keepZoom != null) Graph.zoom(keepZoom, 0);
     configureGraphSimulation();
     configureGraphForces();
   }
@@ -1870,7 +2022,10 @@
       return;
     }
     // Same enlarged hit targets as hover tooltips — ForceGraph pointer areas miss some root/fruit clicks.
-    const rootOrFruit = pickRootOrFruitAtScreen(ev.clientX, ev.clientY);
+    const rootOrFruit = pickRootOrFruitAtScreen(ev.clientX, ev.clientY)
+      || (state.hoveredNodeId && (nodeType(state.hoveredNodeId) === 'root' || nodeType(state.hoveredNodeId) === 'fruit')
+        ? { id: state.hoveredNodeId }
+        : null);
     if (rootOrFruit) {
       ev.stopPropagation();
       selectNode(asNodeId(rootOrFruit));
@@ -1942,11 +2097,17 @@
 
   function showEmptyDetail() {
     const empty = document.getElementById('detail-empty');
-    if (empty && !empty.dataset.ready) {
-      empty.innerHTML =
-        '<p class="detail-empty-title">Select a Principality</p>' +
-        '<p>Click a tile on the map to read character, themes, connections, and prayer topics.</p>';
-      empty.dataset.ready = '1';
+    if (empty) {
+      if (state.show.attitudesIdentities) {
+        empty.innerHTML =
+          '<p class="detail-empty-title">Select a Root Cause</p>' +
+          '<p>Click a root to see the topics connected to it.</p>';
+      } else if (!empty.dataset.ready) {
+        empty.innerHTML =
+          '<p class="detail-empty-title">Select a Principality</p>' +
+          '<p>Click a tile on the map to read character, themes, connections, and prayer topics.</p>';
+        empty.dataset.ready = '1';
+      }
     }
     empty?.classList.remove('hidden');
     document.getElementById('detail-content').classList.add('hidden');
@@ -2140,6 +2301,7 @@
   }
 
   async function selectNode(id) {
+    id = canonicalNodeId(id);
     const type = nodeType(id);
     const item = lookups[type]?.[id];
     if (!item && type !== 'topic') return;
@@ -2230,8 +2392,17 @@
       btn.addEventListener('click', () => selectNode(btn.dataset.node));
     });
 
+    const tierRoot = type === 'root'
+      && isConstellationView()
+      && state.show.attitudesIdentities;
+    if (tierRoot) {
+      typeEl.textContent = 'Root Cause of Attitudes & Identities';
+      document.getElementById('detail-meta').textContent =
+        `${conn.topics.length} topics with this root`;
+    }
+
     const topicsSection = document.getElementById('detail-topics-section');
-    const topicList = conn.topics;
+    let topicList = conn.topics.slice();
     document.getElementById('detail-topic-count').textContent = `(${conn.topics.length})`;
     const topicsEl = document.getElementById('detail-topics');
     topicsEl.innerHTML = topicList.map(t => {
@@ -2265,6 +2436,7 @@
         watchTeachingBtn.onclick = () => {
           window.TeachingVideos?.openTopicOnPrayerPage?.(item.number);
         };
+        if (watchTeachingBtn) watchTeachingBtn.hidden = false;
       } else if (teachingSection) {
         teachingSection.classList.add('hidden');
       }
@@ -2272,9 +2444,10 @@
       prayerSection.classList.add('hidden');
       topicAudio.pause();
       teachingSection?.classList.add('hidden');
+      if (watchTeachingBtn) watchTeachingBtn.hidden = false;
     }
 
-    applyGraphView();
+    if (type !== 'fruit' && type !== 'root') applyGraphView();
     if (isGlobeView()) refreshGlobeView();
     if (!isGlobeFruitFocus()) openDetailSheet();
     updateDetailCloseAffordance();
@@ -2343,6 +2516,37 @@
     syncLayerDockFromLegend();
     refreshGraph();
   });
+  function applyAttitudesIdentities(checked) {
+    state.show.attitudesIdentities = checked;
+    ['dock-show-attitudes-identities', 'show-attitudes-identities'].forEach(id => {
+      const box = document.getElementById(id);
+      if (box) box.checked = checked;
+    });
+    if (checked) {
+      state.show.root = true;
+      state.show.topic = true;
+      state.show.fruit = false;
+      const rootsBox = document.getElementById('show-roots');
+      const topicsBox = document.getElementById('show-topics');
+      const fruitsBox = document.getElementById('show-fruits');
+      if (rootsBox) rootsBox.checked = true;
+      if (topicsBox) topicsBox.checked = true;
+      if (fruitsBox) fruitsBox.checked = false;
+      syncLayerDockFromLegend();
+      if (state.viewMode !== 'constellation') {
+        applyViewModeChoice('constellation');
+        fitNodesToView(null, 90, 600);
+        return;
+      }
+    }
+    refreshGraph();
+    if (!state.selectedId) showEmptyDetail();
+    if (checked) fitNodesToView(null, 90, 600);
+  }
+
+  document.getElementById('dock-show-attitudes-identities')?.addEventListener('change', e => applyAttitudesIdentities(e.target.checked));
+  document.getElementById('show-attitudes-identities')?.addEventListener('change', e => applyAttitudesIdentities(e.target.checked));
+
   document.getElementById('show-topics').addEventListener('change', e => {
     state.show.topic = e.target.checked;
     if (e.target.checked) state.viewMode = 'explore';
@@ -2462,6 +2666,11 @@
     if (value === 'explore') {
       document.getElementById('show-topics').checked = true;
       state.show.topic = true;
+    } else if (value === 'constellation' && state.show.attitudesIdentities) {
+      state.show.root = true;
+      state.show.topic = true;
+      document.getElementById('show-roots').checked = true;
+      document.getElementById('show-topics').checked = true;
     } else {
       document.getElementById('show-topics').checked = false;
       state.show.topic = false;

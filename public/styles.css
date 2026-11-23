@@ -2627,6 +2627,11 @@ html.camp-isolated .graph-panel {
   color: var(--text);
 }
 
+.map-layer-dock label.tier-layer,
+.filters label.tier-layer {
+  padding-left: 1.15rem;
+}
+
 .graph-panel.is-camp .map-layer-dock,
 .main.is-globe-fruit-focus .map-layer-dock {
   display: none;
