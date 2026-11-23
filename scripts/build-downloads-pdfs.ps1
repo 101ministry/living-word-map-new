@@ -7,6 +7,13 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
 $items = @(
   @{
+    src = 'Love-Apathy-Bitterness.pdf'
+    file = 'love-apathy-bitterness.pdf'
+    title = 'Love >> Apathy >> Bitterness'
+    summary = '1 Corinthians 13 set in three equal columns: love, the apathy that stands in for it, and the bitterness that replaces it. Each column reads from top to bottom.'
+    made = '2026-11-23'
+  },
+  @{
     src = 'am-i-acceptable-with-my-unchanged-crown.pdf'
     file = 'am-i-acceptable-with-my-unchanged-crown.pdf'
     title = 'Am I Acceptable with My Unchanged Crown?'

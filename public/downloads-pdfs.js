@@ -3,6 +3,13 @@ window.DOWNLOADS_PDFS = {
   "description": "Studies and prayers from the ministry library. Tap to download.",
   "items": [
     {
+      "title": "Love >> Apathy >> Bitterness",
+      "summary": "1 Corinthians 13 set in three equal columns: love, the apathy that stands in for it, and the bitterness that replaces it. Each column reads from top to bottom.",
+      "href": "downloads/love-apathy-bitterness.pdf",
+      "download": "Love-Apathy-Bitterness.pdf",
+      "made": "2026-11-23"
+    },
+    {
       "title": "Am I Acceptable with My Unchanged Crown?",
       "summary": "Teen-plain take on Day 14: what the crown verses would sound like if sin mattered more, and why that crown still is not okay for heaven.",
       "href": "downloads/am-i-acceptable-with-my-unchanged-crown.pdf",
