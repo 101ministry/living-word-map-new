@@ -117,8 +117,32 @@
 }
 
 .topic-wheel-note {
-  margin: 0;
+  margin: 0.8rem 0 0;
   line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.wheel-log {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.wheel-log li {
+  padding: 0.28rem 0;
+  line-height: 1.35;
+}
+
+.wheel-log li.is-root {
+  margin-top: 0.7rem;
+  font-weight: 600;
+}
+
+.wheel-log li.is-done {
+  text-decoration: line-through;
+  color: var(--text-muted);
 }
 
 @media (max-width: 800px) {

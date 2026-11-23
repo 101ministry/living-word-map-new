@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=117" />
-  <link rel="stylesheet" href="topic-wheel.css?v=2" />
+  <link rel="stylesheet" href="topic-wheel.css?v=3" />
   <script src="site-theme.js?v=9"></script>
 </head>
 <body class="topic-wheel-page">
@@ -31,12 +31,13 @@
       </div>
     </div>
     <section class="topic-wheel-result" aria-live="polite">
-      <p class="topic-wheel-kicker">New teaching</p>
+      <p class="topic-wheel-kicker">Selections</p>
       <h2 id="wheel-topic">Spin the wheel</h2>
       <p id="wheel-root-name" class="topic-wheel-root"></p>
-      <p id="wheel-teaching" class="topic-wheel-note">When a topic lands, its new teaching starts here. Nothing on this page plays the videos already on the Video page.</p>
+      <ol id="wheel-log" class="wheel-log"></ol>
+      <p id="wheel-teaching" class="topic-wheel-note">Chosen topics stay in this list. The order is also saved in data/TOPIC-WHEEL-LOG.txt.</p>
     </section>
   </main>
-  <script src="topic-wheel.js?v=2"></script>
+  <script src="topic-wheel.js?v=3"></script>
 </body>
 </html>

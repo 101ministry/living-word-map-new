@@ -96,9 +96,51 @@ function Send-Json($context, $obj, [int]$statusCode, [hashtable]$extraHeaders) {
     $response.OutputStream.Close()
 }
 
+function Get-TopicWheelLogPath {
+    return Join-Path $PSScriptRoot '..\data\TOPIC-WHEEL-LOG.txt'
+}
+
 function Handle-Api($context) {
     $abs = $context.Request.Url.AbsolutePath.TrimEnd('/')
     $qs = $context.Request.QueryString
+
+    if ($abs -eq '/api/topic-wheel-log') {
+        $path = Get-TopicWheelLogPath
+        if ($context.Request.HttpMethod -eq 'GET') {
+            $text = ''
+            if (Test-Path -LiteralPath $path) {
+                $text = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
+            }
+            Send-Text $context $text 200 'text/plain; charset=utf-8'
+            return $true
+        }
+        if ($context.Request.HttpMethod -eq 'POST') {
+            $reader = New-Object System.IO.StreamReader($context.Request.InputStream, [System.Text.Encoding]::UTF8)
+            $raw = $reader.ReadToEnd()
+            $reader.Close()
+            $body = $raw | ConvertFrom-Json
+            $kind = [string]$body.kind
+            $root = ([string]$body.root) -replace '[\r\n\t]', ' '
+            $name = ([string]$body.name) -replace '[\r\n\t]', ' '
+            if ($kind -ne 'ROOT' -and $kind -ne 'TOPIC') {
+                Send-Text $context '{"error":"Bad kind"}' 400 'application/json; charset=utf-8'
+                return $true
+            }
+            if ([string]::IsNullOrWhiteSpace($root) -or ($kind -eq 'TOPIC' -and [string]::IsNullOrWhiteSpace($name))) {
+                Send-Text $context '{"error":"Missing name"}' 400 'application/json; charset=utf-8'
+                return $true
+            }
+            $when = (Get-Date).ToString('yyyy-MM-dd HH:mm')
+            $line = if ($kind -eq 'ROOT') { "$when`tROOT`t$root" } else { "$when`tTOPIC`t$root`t$name" }
+            $dir = Split-Path -Parent $path
+            if (-not (Test-Path -LiteralPath $dir)) { New-Item -ItemType Directory -Path $dir | Out-Null }
+            [System.IO.File]::AppendAllText($path, $line + "`r`n", [System.Text.UTF8Encoding]::new($false))
+            Send-Text $context '{"ok":true}' 200 'application/json; charset=utf-8'
+            return $true
+        }
+        Send-Text $context 'Method not allowed' 405 'text/plain; charset=utf-8'
+        return $true
+    }
 
     if ($abs -eq '/api/map-tile') {
         $z = 0; $x = 0; $y = 0
