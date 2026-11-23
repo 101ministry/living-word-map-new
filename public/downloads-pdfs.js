@@ -5,7 +5,7 @@ window.DOWNLOADS_PDFS = {
     {
       "title": "Love >> Apathy >> Bitterness",
       "summary": "1 Corinthians 13 set in three equal columns: love, the apathy that stands in for it, and the bitterness that replaces it. Each column reads from top to bottom.",
-      "href": "downloads/love-apathy-bitterness.pdf",
+      "href": "downloads/love-apathy-bitterness.pdf?v=2",
       "download": "Love-Apathy-Bitterness.pdf",
       "made": "2026-11-23"
     },

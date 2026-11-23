@@ -1,4 +1,5 @@
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, mkdirSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -6,6 +7,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const columns = [
   {
+    mark: '✅',
     head: 'Love',
     items: [
       'PATIENT',
@@ -26,6 +28,7 @@ const columns = [
     ],
   },
   {
+    mark: '😐',
     head: 'Apathy',
     items: [
       'Indifferent to timing or delay',
@@ -46,6 +49,7 @@ const columns = [
     ],
   },
   {
+    mark: '❌',
     head: 'Bitterness',
     items: [
       'CONDITIONAL FORGIVENESS',
@@ -67,100 +71,69 @@ const columns = [
   },
 ];
 
-const W = 792;
-const H = 612;
-const margin = 36;
-const gap = 28;
-const colW = (W - margin * 2 - gap * 2) / 3;
-
 function esc(s) {
-  return s.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
-function widthOf(text, size) {
-  let w = 0;
-  for (const ch of text) {
-    const c = ch.charCodeAt(0);
-    w += c < 32 || c > 126 ? 0.5 : 0.5;
-  }
-  return w * size;
-}
+const cols = columns
+  .map(
+    (col) => `<section>
+      <h2><span class="mark">${col.mark}</span> ${esc(col.head)}</h2>
+      <ol>
+        ${col.items.map((item) => `<li><span class="mark">${col.mark}</span> ${esc(item)}</li>`).join('')}
+      </ol>
+    </section>`
+  )
+  .join('');
 
-function wrap(text, size, max) {
-  const words = text.split(' ');
-  const lines = [];
-  let line = '';
-  for (const word of words) {
-    const next = line ? `${line} ${word}` : word;
-    if (widthOf(next, size) <= max && line) line = next;
-    else if (!line) line = word;
-    else {
-      lines.push(line);
-      line = word;
-    }
-  }
-  if (line) lines.push(line);
-  return lines;
-}
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Love &gt;&gt; Apathy &gt;&gt; Bitterness</title>
+<style>
+  @page { size: landscape; margin: 0.45in 0.5in; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: #1c140f; font-family: "Segoe UI", Calibri, sans-serif; }
+  h1 { margin: 0 0 0.35in; font-size: 22pt; font-weight: 700; letter-spacing: 0.01em; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 0.42in; }
+  h2 { margin: 0 0 0.16in; font-size: 13pt; }
+  ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: space-between; min-height: 6.3in; }
+  li { font-size: 9.5pt; line-height: 1.25; }
+  .mark { display: inline-block; width: 1.15em; }
+</style>
+</head>
+<body>
+  <h1>Love &gt;&gt; Apathy &gt;&gt; Bitterness</h1>
+  <div class="cols">${cols}</div>
+</body>
+</html>`;
 
-const ops = [];
-function text(x, y, size, str, font = 'F1') {
-  ops.push(`BT /${font} ${size} Tf 1 0 0 1 ${x.toFixed(2)} ${y.toFixed(2)} Tm (${esc(str)}) Tj ET`);
-}
+const work = join(root, 'data', '_pdf-edge-profile');
+mkdirSync(work, { recursive: true });
+const htmlPath = join(work, 'love-apathy-bitterness.html');
+const pdfPath = join(root, 'data', 'Love-Apathy-Bitterness.pdf');
+writeFileSync(htmlPath, html, 'utf8');
 
-ops.push('0.15 0.12 0.1 rg');
-text(margin, H - 42, 18, 'Love  >>  Apathy  >>  Bitterness', 'F2');
-ops.push('0.45 0.38 0.28 RG 0.8 w');
-ops.push(`${margin} ${H - 52} m ${W - margin} ${H - 52} l S`);
+const edge = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
+const run = spawnSync(
+  edge,
+  [
+    '--headless',
+    '--disable-gpu',
+    `--user-data-dir=${join(work, 'edge-profile')}`,
+    `--print-to-pdf=${pdfPath}`,
+    '--no-pdf-header-footer',
+    htmlPath,
+  ],
+  { stdio: 'inherit' }
+);
+if (run.status !== 0) process.exit(run.status || 1);
 
-const top = H - 86;
-const bottom = 32;
-const slot = (top - bottom) / columns[0].items.length;
-
-columns.forEach((col, i) => {
-  const x = margin + i * (colW + gap);
-  ops.push('0.22 0.16 0.12 rg');
-  text(x, top + 8, 12, col.head, 'F2');
-  col.items.forEach((item, n) => {
-    const lines = wrap(item, 9, colW - 4);
-    const y0 = top - n * slot - 6;
-    ops.push('0.12 0.1 0.08 rg');
-    lines.forEach((line, li) => text(x, y0 - li * 11, 9, line));
-  });
-});
-
-const stream = ops.join('\n');
-const objects = [];
-function add(body) {
-  objects.push(body);
-  return objects.length;
-}
-
-add('<< /Type /Catalog /Pages 2 0 R >>');
-add('<< /Type /Pages /Kids [3 0 R] /Count 1 >>');
-add('<< /Type /Page /Parent 2 0 R /MediaBox [0 0 792 612] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>');
-add(`<< /Length ${Buffer.byteLength(stream)} >>\nstream\n${stream}\nendstream`);
-add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>');
-add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>');
-
-let pdf = '%PDF-1.4\n';
-const offsets = [0];
-objects.forEach((body, i) => {
-  offsets.push(Buffer.byteLength(pdf));
-  pdf += `${i + 1} 0 obj\n${body}\nendobj\n`;
-});
-const xref = Buffer.byteLength(pdf);
-pdf += `xref\n0 ${objects.length + 1}\n`;
-pdf += '0000000000 65535 f \n';
-for (let i = 1; i <= objects.length; i++) {
-  pdf += `${String(offsets[i]).padStart(10, '0')} 00000 n \n`;
-}
-pdf += `trailer << /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
-
-const bytes = Buffer.from(pdf, 'latin1');
-const dests = [
-  join(root, 'data', 'Love-Apathy-Bitterness.pdf'),
-  join(root, 'public', 'downloads', 'love-apathy-bitterness.pdf'),
-];
-for (const dest of dests) writeFileSync(dest, bytes);
+const { readFileSync } = await import('node:fs');
+const bytes = readFileSync(pdfPath);
+writeFileSync(join(root, 'public', 'downloads', 'love-apathy-bitterness.pdf'), bytes);
 console.log(`Wrote ${bytes.length} bytes`);
