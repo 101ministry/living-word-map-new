@@ -53,9 +53,22 @@
     logEl.scrollTop = logEl.scrollHeight;
   }
 
+  const useLocalFile = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
+  function savedNote() {
+    return useLocalFile
+      ? 'Chosen topics stay in this list. The order is also saved in data/TOPIC-WHEEL-LOG.txt.'
+      : 'Chosen topics stay in this list on this browser, so you can try the wheel. This is separate from the teaching log on the local map.';
+  }
+
   async function record(kind, root, name) {
     history.push({ kind, root, name: name || '' });
     renderLog();
+    if (!useLocalFile) {
+      try { localStorage.setItem('lwm-topic-wheel-log', history.map(row => [row.kind, row.root, row.name].join('\t')).join('\n')); } catch { /* ignore */ }
+      noteEl.textContent = savedNote();
+      return;
+    }
     try {
       const res = await fetch('/api/topic-wheel-log', {
         method: 'POST',
@@ -63,6 +76,7 @@
         body: JSON.stringify({ kind, root, name: name || '' }),
       });
       if (!res.ok) throw new Error('save failed');
+      noteEl.textContent = savedNote();
     } catch {
       noteEl.textContent = 'This spin is on the panel, but it was not saved to data/TOPIC-WHEEL-LOG.txt. Restart the local server and spin again if the file must keep it.';
     }
@@ -117,7 +131,7 @@
     spinBtn.textContent = 'Spin';
     topicEl.textContent = 'Spin for a root';
     rootEl.textContent = 'A selected root keeps a light ring.';
-    noteEl.textContent = 'Chosen topics stay in this list. The order is also saved in data/TOPIC-WHEEL-LOG.txt.';
+    noteEl.textContent = savedNote();
     renderLog();
     draw();
   }
@@ -197,7 +211,9 @@
 
   Promise.all([
     fetch('attitudes-identities-topics.json').then(res => res.json()),
-    fetch('/api/topic-wheel-log').then(res => (res.ok ? res.text() : '')).catch(() => ''),
+    (useLocalFile
+      ? fetch('/api/topic-wheel-log').then(res => (res.ok ? res.text() : '')).catch(() => '')
+      : Promise.resolve((() => { try { return localStorage.getItem('lwm-topic-wheel-log') || ''; } catch { return ''; } })())),
   ]).then(([data, logText]) => {
     const order = [];
     const map = new Map();
