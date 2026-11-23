@@ -14,6 +14,27 @@ $items = @(
     made = '2026-11-23'
   },
   @{
+    src = 'Authority - a Governmental Presentation.pdf'
+    file = 'authority-a-governmental-presentation.pdf'
+    title = 'Governmental Authority'
+    summary = 'Six places where setting Jesus as the foundation gives priestly government over other powers, with the prophecy, the parable, and the epistle for each, written for a child, a teenager, and an adult.'
+    made = '2026-11-18'
+  },
+  @{
+    src = 'Why I do not Fear God the way the AntiChrist spirit does.pdf'
+    file = 'why-i-do-not-fear-god-the-way-the-antichrist-spirit-does.pdf'
+    title = 'Fear the LORD'
+    summary = 'Yirah, the fear of the LORD, set beside every fear topic and every antichrist topic, in English and Spanish, for a child, a teenager, and an adult.'
+    made = '2026-11-05'
+  },
+  @{
+    src = 'How-to-Defeat-a-Spiritual-Gibeonite-In-My-Home.pdf'
+    file = 'how-to-defeat-a-spiritual-gibeonite-in-my-home.pdf'
+    title = 'Defeat Gibeonite'
+    summary = 'The Gibeonite pattern set beside marriage, the armor of God, the fruit of the Spirit, and 1 Corinthians 13, written for a child, a teenager, and an adult.'
+    made = '2026-11-03'
+  },
+  @{
     src = 'am-i-acceptable-with-my-unchanged-crown.pdf'
     file = 'am-i-acceptable-with-my-unchanged-crown.pdf'
     title = 'Am I Acceptable with My Unchanged Crown?'

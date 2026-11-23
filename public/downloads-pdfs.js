@@ -10,6 +10,27 @@ window.DOWNLOADS_PDFS = {
       "made": "2026-11-23"
     },
     {
+      "title": "Governmental Authority",
+      "summary": "Six places where setting Jesus as the foundation gives priestly government over other powers, with the prophecy, the parable, and the epistle for each, written for a child, a teenager, and an adult.",
+      "href": "downloads/authority-a-governmental-presentation.pdf",
+      "download": "Authority - a Governmental Presentation.pdf",
+      "made": "2026-11-18"
+    },
+    {
+      "title": "Fear the LORD",
+      "summary": "Yirah, the fear of the LORD, set beside every fear topic and every antichrist topic, in English and Spanish, for a child, a teenager, and an adult.",
+      "href": "downloads/why-i-do-not-fear-god-the-way-the-antichrist-spirit-does.pdf",
+      "download": "Why I do not Fear God the way the AntiChrist spirit does.pdf",
+      "made": "2026-11-05"
+    },
+    {
+      "title": "Defeat Gibeonite",
+      "summary": "The Gibeonite pattern set beside marriage, the armor of God, the fruit of the Spirit, and 1 Corinthians 13, written for a child, a teenager, and an adult.",
+      "href": "downloads/how-to-defeat-a-spiritual-gibeonite-in-my-home.pdf",
+      "download": "How-to-Defeat-a-Spiritual-Gibeonite-In-My-Home.pdf",
+      "made": "2026-11-03"
+    },
+    {
       "title": "Am I Acceptable with My Unchanged Crown?",
       "summary": "Teen-plain take on Day 14: what the crown verses would sound like if sin mattered more, and why that crown still is not okay for heaven.",
       "href": "downloads/am-i-acceptable-with-my-unchanged-crown.pdf",
